@@ -18,25 +18,6 @@
 #!   Insert documentation for your function here
 
 # Declare the category
-# DeclareCategory("IsOrientedMatroid", IsComponentObjectRep and IsAttributeStoringRep );
-
-# # Declare the representation and its attribute accessor functions
-# DeclareRepresentation(
-#     "IsOrientedMatroidRep", 
-#     IsOrientedMatroid,
-#     ["covectors","lattice","rank","groundset"]
-# );
-
-# DeclareAttribute("Rank", IsHyperplaneArrangement);
-# DeclareAttribute("Covectors", IsHyperplaneArrangement);
-# DeclareAttribute("IntersectionLattice",IsHyperplaneArrangement);
-# DeclareAttribute("MSetInvL",IsHyperplaneArrangement);
-
-# # Declare constructor
-# DeclareOperation("OrientedMatroid", [IsList]);
-
-# # Declare display function for HyperplaneArrangement objects
-# DeclareOperation("ViewObject", [IsOrientedMatroid]);
 
 # some auxillary functions
 ##

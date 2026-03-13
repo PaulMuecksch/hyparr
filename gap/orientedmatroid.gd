@@ -27,10 +27,10 @@ DeclareRepresentation(
     ["covectors","lattice","rank","groundset"]
 );
 
-DeclareAttribute("Rank", IsHyperplaneArrangement);
+DeclareAttribute("OMRank", IsHyperplaneArrangement);
 DeclareAttribute("Covectors", IsHyperplaneArrangement);
-DeclareAttribute("IntersectionLattice",IsHyperplaneArrangement);
-DeclareAttribute("MSetInvL",IsHyperplaneArrangement);
+# DeclareAttribute("IntersectionLattice",IsHyperplaneArrangement);
+# DeclareAttribute("MSetInvL",IsHyperplaneArrangement);
 
 # Declare constructor
 DeclareOperation("OrientedMatroid", [IsList]);

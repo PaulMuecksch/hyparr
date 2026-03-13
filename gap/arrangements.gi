@@ -424,7 +424,7 @@ local dim,x,y;
 end);
 
 ############################################################
-## The arrangment of the monomial group G(p,q,l)
+## The arrangement of the monomial group G(p,q,l)
 ############################################################
 
 InstallGlobalFunction(AGpql,
