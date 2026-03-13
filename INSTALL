@@ -1,0 +1,10 @@
+How to get and install HypArr.
+
+1. Get the latest version of GAP on www.gap-system.org. Fining is one of the packages distributed with GAP. Choose
+your appropriate archive: Unix or Windows.
+
+2. Install GAP the way you like it.  At the end you should have a working GAP
+distribution. The Windows archive contains precompiled binaries of the required packages,
+so in case of using the windows distribution, start GAP and go to step 6.
+
+6. Load the HypARr package using the command LoadPackage("hyparr");
