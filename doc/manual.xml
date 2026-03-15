@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Book SYSTEM "gapdoc.dtd">
+
+<Book Name="HypArr">
+
+<TitlePage>
+  <Title>HypArr</Title>
+  <Subtitle>Computations with Hyperplane Arrangements</Subtitle>
+
+  <Version>0.1</Version>
+  <Date>2026</Date>
+
+  <Author>
+    <Name>Paul Muecksch</Name>
+  </Author>
+
+  <Abstract>
+    The <Package>HypArr</Package> package provides functionality for
+    constructing and working with hyperplane arrangements in the
+    GAP system. It supports computation of intersection lattices,
+    oriented matroids, algebraic and topological invariants.
+  </Abstract>
+
+</TitlePage>
+
+<TableOfContents/>
+
+<Body>
+
+<Chapter Label="Introduction">
+  <Include File="intro.xml"/>
+</Chapter>
+
+<Chapter Label="ConstructingArrangements">
+  <Heading>Constructing Hyperplane Arrangements</Heading>
+  <Include File="constructors.xml"/>
+</Chapter>
+
+<Chapter Label="Attributes">
+  <Heading>Basic Attributes</Heading>
+  <Include File="attributes.xml"/>
+</Chapter>
+
+<Chapter Label="Operations">
+  <Heading>Operations on Arrangements</Heading>
+  <Include File="operations.xml"/>
+</Chapter>
+
+<!-- 
+<Chapter Label="Examples">
+  <Heading>Intersection Lattices</Heading>
+  <Include File="examples.xml"/>
+</Chapter> -->
+
+</Body>
+
+<Bibliography Databases="bibliography.xml"/>
+
+</Book>

@@ -1,0 +1,11 @@
+<Section Label="BasicAttributes">
+
+<Heading>Basic Attributes</Heading>
+
+This section describes attributes of hyperplane arrangements.
+
+<#GAPDoc Label="Roots"/>
+
+<#GAPDoc Label="Dimension"/>
+
+</Section>

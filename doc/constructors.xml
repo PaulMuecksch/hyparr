@@ -1,0 +1,42 @@
+<Section Label="CreatingArrangements">
+
+<Heading>Creating Hyperplane Arrangements</Heading>
+
+This section describes functions for constructing hyperplane
+arrangements.
+
+In the <Package>HypArr</Package> package, an arrangement is defined
+by a list of vectors representing linear forms.
+
+Each vector
+
+<M>(r_1,\dots,r_n)</M>
+
+represents the hyperplane
+
+<Display>
+r_1 x_1 + \cdots + r_n x_n = 0.
+</Display>
+
+</Section>
+
+
+<Section Label="ConstructorFromRoots">
+
+<Heading>Constructor from Defining Linear Forms</Heading>
+
+<#GAPDoc Label="HyperplaneArrangement"/>
+
+</Section>
+
+
+<Section Label="ReflectionArrangements">
+
+<Heading>Arrangements from Reflection Groups</Heading>
+
+The package provides constructors for certain important families of
+hyperplane arrangements arising from complex reflection groups.
+
+<#GAPDoc Label="AGpql"/>
+
+</Section>

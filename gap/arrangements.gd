@@ -6,17 +6,15 @@
 #! HypArr is a package for computations with hyperplane arrangements,
 #! oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
 #!
-#! @Chapter Functionality
-#!
-#!
-#! @Section Example Methods
-#!
-#! This section will describe the example
-#! methods of HypArr
+#! @Chapter Hyperplane arrangements
+##
+#############################################################################
 
-#! @Description
-#!   Insert documentation for your function here
-# DeclareGlobalFunction( "HypARr_Example" );
+#################################
+##
+## Global Variable
+##
+#################################
 
 # Declare the category
 DeclareCategory("IsHyperplaneArrangement", IsComponentObjectRep and IsAttributeStoringRep );
@@ -28,16 +26,30 @@ DeclareRepresentation(
     ["roots","dimension","lattice"]
 );
 
+#################################
+##
+#! @Section Attributes
+##
+#################################
+
 DeclareAttribute("Dimension", IsHyperplaneArrangement);
 DeclareAttribute("Roots", IsHyperplaneArrangement);
 DeclareAttribute("IntersectionLattice",IsHyperplaneArrangement);
 DeclareAttribute("MSetInvL",IsHyperplaneArrangement);
 
-# Declare constructor
-DeclareOperation("HyperplaneArrangement", [IsList]);
-
+#################################
+##
+#! @Section Display
+##
+#################################
 # Declare display function for HyperplaneArrangement objects
 DeclareOperation("ViewObject", [IsHyperplaneArrangement]);
+
+#################################
+##
+## @Section Global methods
+##
+#################################
 
 # some auxillary functions
 DeclareGlobalFunction( "HypArr_PWLinInd" );
@@ -51,6 +63,18 @@ DeclareGlobalFunction( "HArrResHvec" );
 DeclareGlobalFunction( "HArrResHind" );
 DeclareGlobalFunction( "HArrResX" );
 DeclareGlobalFunction( "Essentialization");;
+
+#################################
+##
+#! @Section Constructors
+##
+#################################
+
+#! @Description
+#!  Creates a hyperplane arrangement from the list of vectors <A>r</A> giving defining linear forms.
+#! @Returns a hyperplane arrangement
+#! @Arguments r
+DeclareOperation("HyperplaneArrangement", [IsList]);
 
 ##
 ##  This program is free software: you can redistribute it and/or modify
