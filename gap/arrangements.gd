@@ -116,7 +116,9 @@ DeclareGlobalFunction( "tnow");
 #! gap> A := AGpql(2,1,3);
 #!  <HyperplaneArrangement: 9 hyperplanes in 3-space>
 #! gap> Roots(A);
-#! [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+#! [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
+#!   [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+#!   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
 #! 
 #! @EndExampleSession
 DeclareGlobalFunction( "AGpql" );
@@ -126,15 +128,21 @@ DeclareGlobalFunction( "HArrResHvec" );
 #! @Arguments A
 #! @Returns A hyperplane arrangement.
 #! @Description
-#! Computes the restriction of the arrangement <A>A</A> to the
+#! Computes the <E>restriction</E> of the arrangement <A>A</A> to the
 #!  <A>k</A>-th hyperplane of <C>Roots(A)</C>.
 DeclareGlobalFunction( "HArrResHind" );
+
+#! @Arguments A, S
+#! @Returns A hyperplane arrangement.
+#! @Description
+#! Computes the <E>restriction</E> of the arrangement <A>A</A> to the
+#! subspace spanned by the vectors in <C>S</C>.
 DeclareGlobalFunction( "HArrResX" );
 
 #! @Arguments A
 #! @Returns A hyperplane arrangement.
 #! @Description
-#! Returns the <E>essentialization</E> of the hyperplane arrangement
+#! Computes the <E>essentialization</E> of the hyperplane arrangement
 ## <A>A</A>.
 #! An arrangement is called essential if the intersection of all its
 #! hyperplanes is the origin.  If this is not the case, the function
