@@ -1,0 +1,17 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XAGpql[102X 2.1-5 
+  [2XDimension[102X, for IsHyperplaneArrangement 2.1-1 
+  [2XEssentialization[102X 2.1-8 
+  [2XHArrResHind[102X 2.1-6 
+  [2XHArrResX[102X 2.1-7 
+  [2XHypARr_Example[102X 4.1-1 
+  [2XHyperplaneArrangement[102X, for IsList 2.2-1 
+  [2XIntersectionLattice[102X, for IsHyperplaneArrangement 2.1-3 
+  [2XMSetInvL[102X, for IsHyperplaneArrangement 2.1-4 
+  [2XRoots[102X, for IsHyperplaneArrangement 2.1-2 
+  
+  
+  -------------------------------------------------------

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (HypArr) - Chapter 2: Hyperplane arrangements</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2.html">[MathJax off]</a></p>
+<p><a id="X7EF7AC44814961EC" name="X7EF7AC44814961EC"></a></p>
+<div class="ChapSects"><a href="chap2_mj.html#X7EF7AC44814961EC">2 <span class="Heading">Hyperplane arrangements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7C701DBF7BAE649A">2.1 <span class="Heading">Attributes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CCC1A2A7C3F2CC5">2.1-1 Dimension</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8419FA5F7A08DF56">2.1-2 Roots</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8555074B83058460">2.1-3 IntersectionLattice</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X852CC1A8795FCD15">2.1-4 MSetInvL</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X858205A37B7EB5FA">2.1-5 AGpql</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CC338E67CE223FE">2.1-6 HArrResHind</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X784AA86286AA9DD8">2.1-7 HArrResX</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8221BCFC7DE0069A">2.1-8 Essentialization</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X86EC0F0A78ECBC10">2.2 <span class="Heading">Constructors</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X860548D886CE5BA2">2.2-1 HyperplaneArrangement</a></span>
+</div></div>
+</div>
+
+<h3>2 <span class="Heading">Hyperplane arrangements</span></h3>
+
+<p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
+
+<h4>2.1 <span class="Heading">Attributes</span></h4>
+
+<p><a id="X7CCC1A2A7C3F2CC5" name="X7CCC1A2A7C3F2CC5"></a></p>
+
+<h5>2.1-1 Dimension</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Dimension</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a non-negative integer.</p>
+
+<p>Returns the dimension of the ambient vector space in which the hyperplane arrangement <span class="SimpleMath">\(\mathcal{A}\)</span> is defined.</p>
+
+<p><a id="X8419FA5F7A08DF56" name="X8419FA5F7A08DF56"></a></p>
+
+<h5>2.1-2 Roots</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Roots</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list of vectors defining the hyperplanes of <var class="Arg">A</var>.</p>
+
+<p>Returns the list of defining linear forms (also called <em>roots</em>) of the hyperplanes in the arrangement <var class="Arg">A</var>. Each vector represents a hyperplane by the linear equation</p>
+
+<p class="center">\[
+    r_1 x_1 + \cdots + r_n x_n = 0.
+ \]</p>
+
+<p><a id="X8555074B83058460" name="X8555074B83058460"></a></p>
+
+<h5>2.1-3 IntersectionLattice</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IntersectionLattice</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list of lists describing the intersections of <var class="Arg">A</var>.</p>
+
+<p>Computes the intersection lattice of the hyperplane arrangement <var class="Arg">A</var>.</p>
+
+<p>The lattice is represented level-by-level. The entry <span class="SimpleMath">\(L[k]\)</span> contains all intersections of <span class="SimpleMath">\(k-1\)</span> hyperplanes.</p>
+
+<p>Each lattice element is stored as a list of indices referring to hyperplanes in <code class="code">Roots(A)</code>.</p>
+
+<p>For example, the list <code class="code">[1,3]</code> represents the intersection of the first and third hyperplane of the arrangement.</p>
+
+<p>The algorithm incrementally constructs the lattice by adding hyperplanes one by one.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);</span>
+ gap&gt; IntersectionLattice(A);
+ [ [ [ 1 ], [ 2 ], [ 3 ] ],
+   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
+   [ [ 1, 2, 3 ] ] ]
+</pre></div>
+
+<p><a id="X852CC1A8795FCD15" name="X852CC1A8795FCD15"></a></p>
+
+<h5>2.1-4 MSetInvL</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MSetInvL</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list encoding multiset invariants of the intersection lattice.</p>
+
+<p>Computes multiset invariants of the intersection lattice of the hyperplane arrangement <var class="Arg">A</var>.</p>
+
+<p>For each level of the lattice, the function records how many intersections occur with a given number of defining hyperplanes.</p>
+
+<p>These invariants can be used to compare arrangements or detect combinatorial similarities between intersection lattices.</p>
+
+<p><a id="X858205A37B7EB5FA" name="X858205A37B7EB5FA"></a></p>
+
+<h5>2.1-5 AGpql</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AGpql</code>( <var class="Arg">Intgers</var>, <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Constructs the reflection arrangement associated to the monomial complex reflection group <span class="SimpleMath">\(G(p,q,l)\)</span>. The hyperplanes are defined by equations of the form</p>
+
+<p class="center">\[
+     x_i = \zeta^k x_j
+  \]</p>
+
+<p>where <span class="SimpleMath">\(\zeta\)</span> is a primitive <span class="SimpleMath">\(p\)</span>-th root of unity.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,1,3);</span>
+ &lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Roots(A);</span>
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+
+</pre></div>
+
+<p><a id="X7CC338E67CE223FE" name="X7CC338E67CE223FE"></a></p>
+
+<h5>2.1-6 HArrResHind</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResHind</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Computes the restriction of the arrangement <var class="Arg">A</var> to the <var class="Arg">k</var>-th hyperplane of <code class="code">Roots(A)</code>.</p>
+
+<p><a id="X784AA86286AA9DD8" name="X784AA86286AA9DD8"></a></p>
+
+<h5>2.1-7 HArrResX</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResX</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p><a id="X8221BCFC7DE0069A" name="X8221BCFC7DE0069A"></a></p>
+
+<h5>2.1-8 Essentialization</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Essentialization</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Returns the <em>essentialization</em> of the hyperplane arrangement An arrangement is called essential if the intersection of all its hyperplanes is the origin. If this is not the case, the function restricts the arrangement to a complementary subspace so that the resulting arrangement becomes essential.</p>
+
+<p><a id="X86EC0F0A78ECBC10" name="X86EC0F0A78ECBC10"></a></p>
+
+<h4>2.2 <span class="Heading">Constructors</span></h4>
+
+<p><a id="X860548D886CE5BA2" name="X860548D886CE5BA2"></a></p>
+
+<h5>2.2-1 HyperplaneArrangement</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HyperplaneArrangement</code>( <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement</p>
+
+<p>Constructs a hyperplane arrangement from a list <var class="Arg">R</var> of vectors representing defining linear forms of hyperplanes.</p>
+
+<p>Each vector <span class="SimpleMath">\(r = [r_1,\dots,r_n]\)</span> corresponds to the hyperplane</p>
+
+<p class="center">\[
+     r_1 x_1 + \cdots + r_n x_n = 0.
+  \]</p>
+
+<p>The vectors must lie in the same vector space.</p>
+
+<p>Linearly dependent defining forms are removed automatically, so the resulting arrangement only stores pairwise linearly independent hyperplanes.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Roots(A);</span>
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]
+</pre></div>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

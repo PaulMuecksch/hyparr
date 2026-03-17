@@ -1,0 +1,65 @@
+<!--
+hyparr.xml		HypArr package documentation
+                                                                   Paul Muecksch
+
+  Copyright (C) 2026,	Leibniz University Hannover
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Book SYSTEM "gapdoc.dtd">
+
+<?LaTeX ExtraPreamble="\usepackage{graphicx,amsfonts}"?>
+
+<Book Name="HypArr">
+
+<TitlePage>
+    <Title><Package>HypArr</Package></Title>
+    <Subtitle>Hyperplane Arrangements</Subtitle>
+    <Version>0.1</Version>
+    
+
+    <Author>
+        Paul Mücksch
+    <Email>
+        paul.muecksch+uni@gmail.com
+    </Email>
+    <Homepage>
+        https://paulmuecksch.github.io/
+    </Homepage>
+    </Author>
+
+    <Copyright>
+        &copyright; 2026 by the authors<P/>
+    
+        This package may be distributed under the terms and conditions of the
+        GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.<P/>
+    </Copyright>
+<!-- 
+    <Acknowledgements>
+    </Acknowledgements> -->
+
+    <Date>March 2026</Date>
+
+</TitlePage>
+
+<!--  TableOfContents  . . . . . .  generate a table of contents   -->
+<TableOfContents/>
+
+<Body>
+<#Include SYSTEM "intro.xml">
+<#Include SYSTEM "constructors.xml">
+<!-- <#Include SYSTEM "attributes.xml"> -->
+<!-- <#Include SYSTEM "operations.xml"> -->
+
+</Body>
+
+
+<Bibliography Databases="hyparr"/>
+
+<!--  And finally an index as well   -->
+<TheIndex/>
+
+</Book>

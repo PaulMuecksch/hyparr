@@ -1,5 +1,5 @@
 #
-# MilnorFiberOM: Computations with oriented matroids and Milnor fibers of hyperplane arrangements 
+# HypArr: Computations with hyperplane arrangements  
 #
 # This file contains package meta data. For additional information on
 # the meaning and correct usage of these fields, please consult the
@@ -8,11 +8,11 @@
 #
 SetPackageInfo( rec(
 
-PackageName := "hyparr",
+PackageName := "HypArr",
 Subtitle := "Computations with hyperplane arrangements.",
 Version := "0.1",
-Date := "13/03/2026", # dd/mm/yyyy format
-License := "GPL-2.0-or-later",
+Date := "17/03/2026", # dd/mm/yyyy format
+License := "GPL-3.0-or-later",
 
 Persons := [
   rec(

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<#Include SYSTEM "_Chapter_Introduction.xml">
+<#Include SYSTEM "_Chapter_Hyperplane_arrangements.xml">
+<#Include SYSTEM "_Chapter_Oriented_Matroids.xml">
+<#Include SYSTEM "_Chapter_Functionality.xml">

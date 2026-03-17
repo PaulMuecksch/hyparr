@@ -4,8 +4,8 @@
 
 This section describes attributes of hyperplane arrangements.
 
-<#GAPDoc Label="Roots"/>
+<#Include Label="Roots">
 
-<#GAPDoc Label="Dimension"/>
+<#Include Label="Dimension">
 
 </Section>

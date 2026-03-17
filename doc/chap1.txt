@@ -1,0 +1,11 @@
+  
+  [1X1 [33X[0;0YIntroduction[133X[101X
+  
+  [33X[0;0YHypArr  is a package for computations with hyperplane arrangements, oriented
+  matroids,  and their topological invariants, in particular Milnor fibers and
+  complements.[133X
+  
+  [33X[0;0YHypArr  is a package for computations with hyperplane arrangements, oriented
+  matroids,  and their topological invariants, in particular Milnor fibers and
+  complements.[133X
+  

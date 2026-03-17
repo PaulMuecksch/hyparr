@@ -25,7 +25,7 @@ r_1 x_1 + \cdots + r_n x_n = 0.
 
 <Heading>Constructor from Defining Linear Forms</Heading>
 
-<#GAPDoc Label="HyperplaneArrangement"/>
+<#Include Label="HyperplaneArrangement">
 
 </Section>
 
@@ -37,6 +37,6 @@ r_1 x_1 + \cdots + r_n x_n = 0.
 The package provides constructors for certain important families of
 hyperplane arrangements arising from complex reflection groups.
 
-<#GAPDoc Label="AGpql"/>
+<#Include Label="AGpql">
 
 </Section>

@@ -54,46 +54,6 @@ local test,l2,i,j,k,l;
 end);
 
 # Implement the hyperplane arrangement constructor
-################################################################################
-##
-##
-##  <#GAPDoc Label="HyperplaneArrangement">
-##  <ManSection>
-##  <Func Name="HyperplaneArrangement" Arg="R"/>
-##
-##  <Returns>
-##    A hyperplane arrangement object.
-##  </Returns>
-##
-##  <Description>
-##
-##  Constructs a hyperplane arrangement from a list <A>R</A> of vectors
-##  representing defining linear forms of hyperplanes.
-##
-##  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the hyperplane
-##
-##  <Display>
-##     r_1 x_1 + \cdots + r_n x_n = 0.
-##  </Display>
-##
-##  The vectors must lie in the same vector space.
-##
-##  Linearly dependent defining forms are removed automatically, so the
-##  resulting arrangement only stores pairwise linearly independent
-##  hyperplanes.
-##
-##  </Description>
-##
-##  <Example><![CDATA[
-##  gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);
-##  <HyperplaneArrangement: 3 hyperplanes in 3-space>
-##  gap> Roots(A);
-##  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]
-##  ]]></Example>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
 
 InstallMethod(HyperplaneArrangement,
     "for list of linear forms",
@@ -131,60 +91,12 @@ function(A)
 
 end);
 
-#################################
-##
-#! @Section Attributes
-##
-#################################
-
 # Some basic attributes of hyperplane arrangements
 
-##  <#GAPDoc Label="Roots">
-##  <ManSection>
-##  <Attr Name="Roots" Arg="A"/>
-##
-##  <Returns>
-##    A list of vectors defining the hyperplanes of <A>A</A>.
-##  </Returns>
-##
-##  <Description>
-##
-##  Returns the list of defining linear forms (also called
-##  <E>roots</E>) of the hyperplanes in the arrangement <A>A</A>.
-##
-##  Each vector represents a hyperplane by the linear equation
-##
-##  <Display>
-##     r_1 x_1 + \cdots + r_n x_n = 0.
-##  </Display>
-##
-##  </Description>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
 InstallMethod(Roots,
     [IsHyperplaneArrangement],
     A -> A!.roots);
-##
-##  <#GAPDoc Label="Dimension">
-##  <ManSection>
-##  <Attr Name="Dimension" Arg="A"/>
-##
-##  <Returns>
-##    A positive integer.
-##  </Returns>
-##
-##  <Description>
-##
-##  Returns the dimension of the ambient vector space in which the
-##  hyperplane arrangement <A>A</A> is defined.
-##
-##  </Description>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
+    
 InstallMethod(Dimension,
     [IsHyperplaneArrangement],
     A -> A!.dimension);
@@ -300,45 +212,7 @@ end);;
 
 
 #####################################################################
-##
-##  <#GAPDoc Label="IntersectionLattice">
-##  <ManSection>
-##  <Func Name="IntersectionLattice" Arg="A"/>
-##
-##  <Returns>
-##    A list describing the intersection lattice of <A>A</A>.
-##  </Returns>
-##
-##  <Description>
-##
-##  Computes the intersection lattice of the hyperplane arrangement
-##  <A>A</A>.
-##
-##  The lattice is represented level-by-level.  The entry <M>L[k]</M>
-##  contains all intersections of <M>k-1</M> hyperplanes.
-##
-##  Each lattice element is stored as a list of indices referring to
-##  hyperplanes in <C>Roots(A)</C>.
-##
-##  For example, the list <C>[1,3]</C> represents the intersection of the
-##  first and third hyperplane of the arrangement.
-##
-##  The algorithm incrementally constructs the lattice by adding
-##  hyperplanes one by one.
-##
-##  </Description>
-##
-##  <Example><![CDATA[
-##  gap> A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);
-##  gap> IntersectionLattice(A);
-##  [ [ [ 1 ], [ 2 ], [ 3 ] ],
-##    [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
-##    [ [ 1, 2, 3 ] ] ]
-##  ]]></Example>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
+
 InstallMethod(IntersectionLattice,
     [IsHyperplaneArrangement],
 function(A)
@@ -367,31 +241,6 @@ function(A)
 
 end);
 
-##
-##  <#GAPDoc Label="MSetInvL">
-##  <ManSection>
-##  <Func Name="MSetInvL" Arg="A"/>
-##
-##  <Returns>
-##    A list encoding multiset invariants of the intersection lattice.
-##  </Returns>
-##
-##  <Description>
-##
-##  Computes multiset invariants of the intersection lattice of the
-##  hyperplane arrangement <A>A</A>.
-##
-##  For each level of the lattice, the function records how many
-##  intersections occur with a given number of defining hyperplanes.
-##
-##  These invariants can be used to compare arrangements or detect
-##  combinatorial similarities between intersection lattices.
-##
-##  </Description>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
 InstallMethod(MSetInvL,
     [IsHyperplaneArrangement],
 function(A)
@@ -410,7 +259,6 @@ function(A)
 	return I;
 end);
 
-####################################################################################################
 ####################################################################################################
 
 ####################################################################################################
@@ -457,25 +305,7 @@ local k,Am,T,i,z;;
     return HyperplaneArrangement(Am);
 end);
 
-##
-##  <#GAPDoc Label="HArrResHind">
-##  <ManSection>
-##  <Func Name="HArrResHind" Arg="A, k"/>
-##
-##  <Returns>
-##    A hyperplane arrangement.
-##  </Returns>
-##
-##  <Description>
-##
-##  Computes the restriction of the arrangement <A>A</A> to the
-##  <A>k</A>-th hyperplane of <C>Roots(A)</C>.
-##
-##  </Description>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
+
 InstallGlobalFunction( HArrResHind,
 function(A,k)
 
@@ -511,30 +341,7 @@ end);
 
 
 ####################################################################################################
-##
-##  <#GAPDoc Label="Essentialization">
-##  <ManSection>
-##  <Func Name="Essentialization" Arg="A"/>
-##
-##  <Returns>
-##    A hyperplane arrangement.
-##  </Returns>
-##
-##  <Description>
-##
-##  Returns the <E>essentialization</E> of the hyperplane arrangement
-##  <A>A</A>.
-##
-##  An arrangement is called essential if the intersection of all its
-##  hyperplanes is the origin.  If this is not the case, the function
-##  restricts the arrangement to a complementary subspace so that the
-##  resulting arrangement becomes essential.
-##
-##  </Description>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
+
 InstallGlobalFunction(Essentialization,
 function(A)
 local C;
@@ -583,39 +390,6 @@ local dim,x,y;
 	
 end);
 
-############################################################
-##
-##  <#GAPDoc Label="AGpql">
-##  <ManSection>
-##  <Func Name="AGpql" Arg="p, q, l"/>
-##
-##  <Returns>
-##    A hyperplane arrangement.
-##  </Returns>
-##
-##  <Description>
-##
-##  Constructs the reflection arrangement associated to the monomial
-##  complex reflection group <M>G(p,q,l)</M>.
-##
-##  The hyperplanes are defined by equations of the form
-##
-##  <Display>
-##     x_i = \zeta^k x_j
-##  </Display>
-##
-##  where <M>\zeta</M> is a primitive <M>p</M>-th root of unity.
-##
-##  </Description>
-##
-##  <Example><![CDATA[
-##  gap> A := AGpql(2,1,3);
-##  <HyperplaneArrangement: ... >
-##  ]]></Example>
-##
-##  </ManSection>
-##  <#/GAPDoc>
-##
 ############################################################
 
 InstallGlobalFunction(AGpql,
