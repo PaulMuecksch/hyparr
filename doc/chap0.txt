@@ -1,6 +1,6 @@
   
   
-                                    [1X hyparr [101X
+                                    [1X HypArr [101X
   
   
                   [1X Computations with hyperplane arrangements. [101X
@@ -9,14 +9,14 @@
                                       0.1
   
   
-                                 13 March 2026
+                                 17 March 2026
   
   
-                                 Paul Muecksch
+                                  Paul Mücksch
   
   
   
-  Paul Muecksch
+  Paul Mücksch
       Email:    [7Xmailto:paul.muecksch+uni@gmail.com[107X
       Homepage: [7Xhttps://paulmuecksch.github.io[107X
       Address:  [33X[0;14YWelfengarten 1, 30167 Hannover, Germany[133X

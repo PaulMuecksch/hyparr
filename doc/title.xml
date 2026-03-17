@@ -3,7 +3,7 @@
 <!-- This is an automatically generated file. -->
 <TitlePage>
   <Title>
-    hyparr
+    HypArr
   </Title>
   <Subtitle>
     Computations with hyperplane arrangements.
@@ -12,7 +12,7 @@
     0.1
   </Version>
   <Author>
-    Paul Muecksch<Alt Only="LaTeX"><Br/></Alt>
+    Paul Mücksch<Alt Only="LaTeX"><Br/></Alt>
 <Address>
 Welfengarten 1, 30167 Hannover, Germany<Br/>
 </Address>
@@ -21,6 +21,6 @@ Welfengarten 1, 30167 Hannover, Germany<Br/>
 
   </Author>
   <Date>
-    13 March 2026
+    17 March 2026
   </Date>
   </TitlePage>

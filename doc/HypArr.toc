@@ -1,0 +1,18 @@
+\contentsline {chapter}{\numberline {1}\textcolor {Chapter }{Introduction}}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}\textcolor {Chapter }{Hyperplane arrangements}}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}\textcolor {Chapter }{Attributes}}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}\textcolor {Chapter }{Dimension (for IsHyperplaneArrangement)}}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}\textcolor {Chapter }{Roots (for IsHyperplaneArrangement)}}{4}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}\textcolor {Chapter }{IntersectionLattice (for IsHyperplaneArrangement)}}{4}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}\textcolor {Chapter }{MSetInvL (for IsHyperplaneArrangement)}}{5}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}\textcolor {Chapter }{AGpql}}{5}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}\textcolor {Chapter }{HArrResHind}}{5}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}\textcolor {Chapter }{HArrResX}}{5}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}\textcolor {Chapter }{Essentialization}}{5}{subsection.2.1.8}%
+\contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Constructors}}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{6}{subsection.2.2.1}%
+\contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Oriented Matroids}}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}\textcolor {Chapter }{Functionality}}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}\textcolor {Chapter }{Example Methods}}{8}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}\textcolor {Chapter }{HypARr{\textunderscore }Example}}{8}{subsection.4.1.1}%
+\contentsline {chapter}{Index}{9}{section*.2}%

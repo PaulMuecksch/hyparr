@@ -10,7 +10,7 @@
   [6XReturns:[106X  [33X[0;10Ya non-negative integer.[133X
   
   [33X[0;0YReturns  the  dimension  of the ambient vector space in which the hyperplane
-  arrangement [22XmathcalA[122X is defined.[133X
+  arrangement [3XA[103X is defined.[133X
   
   [1X2.1-2 Roots[101X
   

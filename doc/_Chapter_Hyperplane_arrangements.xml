@@ -13,7 +13,7 @@
 </Returns>
  <Description>
  Returns the dimension of the ambient vector space in which the
- hyperplane arrangement <M>\mathcal{A}</M> is defined.
+ hyperplane arrangement <A>A</A> is defined.
  </Description>
 </ManSection>
 

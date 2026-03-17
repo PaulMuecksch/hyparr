@@ -17,7 +17,7 @@ License := "GPL-3.0-or-later",
 Persons := [
   rec(
     FirstNames := "Paul",
-    LastName := "Muecksch",
+    LastName := "Mücksch",
     WWWHome := "https://paulmuecksch.github.io",
     Email := "paul.muecksch+uni@gmail.com",
     IsAuthor := true,
