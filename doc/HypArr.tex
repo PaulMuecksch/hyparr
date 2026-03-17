@@ -266,7 +266,9 @@ reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the for
   !gapprompt@gap>| !gapinput@A := AGpql(2,1,3);|
    <HyperplaneArrangement: 9 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@Roots(A);|
-  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
+    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+    [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
   
 \end{Verbatim}
  }
@@ -284,21 +286,22 @@ A hyperplane arrangement.
 
 
 
- Computes the restriction of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the \mbox{\texttt{\mdseries\slshape k}}\texttt{\symbol{45}}th hyperplane of \texttt{Roots(A)}. }
+ Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the \mbox{\texttt{\mdseries\slshape k}}\texttt{\symbol{45}}th hyperplane of \texttt{Roots(A)}. }
 
  
 
 \subsection{\textcolor{Chapter }{HArrResX}}
 \logpage{[ 2, 1, 7 ]}\nobreak
 \hyperdef{L}{X784AA86286AA9DD8}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResX({\mdseries\slshape arg})\index{HArrResX@\texttt{HArrResX}}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResX({\mdseries\slshape A, S})\index{HArrResX@\texttt{HArrResX}}
 \label{HArrResX}
 }\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
 
 
- 
 
- }
+ Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the subspace spanned by the vectors in \texttt{S}. }
 
  
 
@@ -313,7 +316,7 @@ A hyperplane arrangement.
 
 
 
- Returns the \emph{essentialization} of the hyperplane arrangement An arrangement is called essential if the
+ Computes the \emph{essentialization} of the hyperplane arrangement An arrangement is called essential if the
 intersection of all its hyperplanes is the origin. If this is not the case,
 the function restricts the arrangement to a complementary subspace so that the
 resulting arrangement becomes essential. }
