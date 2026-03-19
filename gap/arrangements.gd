@@ -23,7 +23,7 @@ DeclareCategory("IsHyperplaneArrangement", IsComponentObjectRep and IsAttributeS
 DeclareRepresentation(
     "IsHyperplaneArrangementRep", 
     IsHyperplaneArrangement,
-    ["roots","dimension","lattice"]
+    ["roots","dimension","lattice","charpoly"]
 );
 
 #################################
@@ -77,17 +77,30 @@ DeclareAttribute("Roots", IsHyperplaneArrangement);
 DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement );
 
 #! @Arguments A
+#! @Returns a univariate polynomial with integral coefficients.
+#! @Description
+#! Returns <A>\chi</A> the <E>characterisitc polynomial</E> of the arrangement.
+DeclareAttribute("CharPoly", IsHyperplaneArrangement);
+
+#! @Arguments A
 #! @Returns A list encoding multiset invariants of the intersection lattice.
 #! @Description
 #! Computes multiset invariants of the intersection lattice of the
-#!  hyperplane arrangement <A>A</A>.
+#! hyperplane arrangement <A>A</A>.
 #!
-#!  For each level of the lattice, the function records how many
-#!  intersections occur with a given number of defining hyperplanes.
+#! For each level of the lattice, the function records how many
+#! intersections occur with a given number of defining hyperplanes.
 #!
-#!  These invariants can be used to compare arrangements or detect
-#!  combinatorial similarities between intersection lattices.
+#! These invariants can be used to compare arrangements or detect
+#! combinatorial similarities between intersection lattices.
 DeclareAttribute("MSetInvL", IsHyperplaneArrangement );
+
+#! @Arguments A
+#! @Returns true or false.
+#! @Description
+#! Determines, if the hyperplane arrangement is defined over the reals, i.e.,
+#! if the entries of the defining linear forms are real.
+DeclareProperty("IsReal", IsHyperplaneArrangement );
 
 #################################
 ##
@@ -101,6 +114,7 @@ DeclareGlobalFunction( "HypArr_wg" );
 DeclareGlobalFunction( "HypArr_wg3" );
 DeclareGlobalFunction( "HypArr_AddHToL" );
 DeclareGlobalFunction( "tnow");
+DeclareGlobalFunction("cj");
 
 #! @Arguments Intgers p,q,l
 #! @Returns A hyperplane arrangement.
@@ -148,7 +162,7 @@ DeclareGlobalFunction( "HArrResX" );
 #! hyperplanes is the origin.  If this is not the case, the function
 #! restricts the arrangement to a complementary subspace so that the
 #! resulting arrangement becomes essential.
-DeclareGlobalFunction( "Essentialization");;
+DeclareGlobalFunction( "Essentialization");
 
 #################################
 ##

@@ -101,6 +101,11 @@ InstallMethod(Dimension,
     [IsHyperplaneArrangement],
     A -> A!.dimension);
 
+
+InstallMethod(IsReal,
+    [IsHyperplaneArrangement],
+    A -> not(ForAny(Roots(A),r->ForAny(r,x->x<>cj(x)))) );
+
 #####################################################################
 # HypArr_AddHToL(R, Lo, Hn)
 #
@@ -241,8 +246,8 @@ function(A)
 
 end);
 
-InstallMethod(MSetInvL,
-    [IsHyperplaneArrangement],
+InstallMethod( MSetInvL,
+    [ IsHyperplaneArrangement ] ,
 function(A)
     local L,I,i;
     
@@ -257,6 +262,32 @@ function(A)
 	od;
     # SetMSetInvL(A, I);
 	return I;
+end);
+
+#####################################################################
+
+InstallMethod( CharPoly,
+    [ IsHyperplaneArrangement ],
+function(A)
+    local dim,t,r,q,v,rn,An,AA,x,z,ns;
+	
+	r:=ShallowCopy(Roots(A));
+	q:=Size(r);
+	dim:=Dimension(A);
+
+	t:=X(Rationals,"t");
+
+	if dim=0 then
+		return 0*t;
+	elif q=2 then
+		return t^dim-2*t^(dim-1)+t^(dim-2);
+	elif q=1 then
+		return t^dim-t^(dim-1);
+	else
+		AA := HyperplaneArrangement(r{[2..q]});
+		An := HArrResHind(A,1);
+	    return CharPoly(AA) - CharPoly(An);
+    fi;;
 end);
 
 ####################################################################################################
@@ -310,7 +341,7 @@ InstallGlobalFunction( HArrResHind,
 function(A,k)
 
     # Restrict the arrangement A to the hyperplane indexed by k
-    return HArrResHvec(A,A.roots[k]);;
+    return HArrResHvec(A,Roots(A)[k]);;
 
 end);
 
@@ -414,6 +445,13 @@ local C,c,v,i,roots;
 
 	return HyperplaneArrangement(roots);
 
+end);
+
+
+## the complex conjugation
+InstallGlobalFunction(cj, 
+function(x)
+	return ComplexConjugate(x);
 end);
 
 

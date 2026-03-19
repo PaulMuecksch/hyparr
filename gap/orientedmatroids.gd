@@ -3,19 +3,10 @@
 #
 #! @Chapter Oriented Matroids
 #!
-#! HypArr is a package for computations with hyperplane arrangements,
-#! oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
-#!
-#! @Chapter Functionality
-#!
-#!
-#! @Section Example Methods
-#!
-#! This section will describe the example
-#! methods of HypArr
+#! Oriented matroids are a abstraction of real hyperplane arrangements.
+#! The following describes functions to handle oriented matroids and compute associated cell complexes
+#! and invariants.
 
-#! @Description
-#!   Insert documentation for your function here
 
 # Declare the category
 DeclareCategory("IsOrientedMatroid", IsComponentObjectRep and IsAttributeStoringRep );
@@ -24,25 +15,50 @@ DeclareCategory("IsOrientedMatroid", IsComponentObjectRep and IsAttributeStoring
 DeclareRepresentation(
     "IsOrientedMatroidRep", 
     IsOrientedMatroid,
-    ["covectors","lattice","rank","groundset"]
+    ["cocircuits","covectors","lattice","rank","groundset","lforms"]
 );
 
-DeclareAttribute("OMRank", IsHyperplaneArrangement);
-DeclareAttribute("Covectors", IsHyperplaneArrangement);
+#################################
+##
+#! @Section Attributes
+##
+#################################
+
+DeclareAttribute("OMRank", IsOrientedMatroid);
+DeclareAttribute("OMGroundset", IsOrientedMatroid);
+DeclareAttribute("OMIntersectionLattice", IsOrientedMatroid);
+DeclareAttribute("OMCocircuits", IsOrientedMatroid);
+DeclareAttribute("OMCovectors", IsOrientedMatroid);
 # DeclareAttribute("IntersectionLattice",IsHyperplaneArrangement);
 # DeclareAttribute("MSetInvL",IsHyperplaneArrangement);
 
-# Declare constructor
+#! @Arguments l
+#! @Returns An oriented matroid OM.
+#! @Description
+#!  Constructs am oriented matroid from a list <A>R</A> of vectors
+#!  representing defining linear forms of real hyperplanes.
+#!
+#!  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the linear form
+#!  <Display>
+#!     r_1 x_1 + \cdots + r_n x_n = 0.
+#!  </Display>
+#!  The vectors must lie in the same real vector space.
+#!
+#!  Linearly dependent defining forms are removed automatically, so the
+#!  resulting arrangement only stores pairwise linearly independent
+#!  hyperplanes.
+#!
+#! @BeginExampleSession
+#! gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);
+#! <HyperplaneArrangement: 3 hyperplanes in 3-space>
+#! gap> Roots(A);
+#! [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]
+#! @EndExampleSession]
+#! @EndExampleSession
 DeclareOperation("OrientedMatroid", [IsList]);
 
 # Declare display function for HyperplaneArrangement objects
 DeclareOperation("ViewObject", [IsOrientedMatroid]);
-
-# some auxillary functions
-##
-
-
-
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
