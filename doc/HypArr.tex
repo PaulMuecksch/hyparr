@@ -137,10 +137,6 @@
 matroids, and their topological invariants, in particular Milnor fibers and
 complements. 
 
- HypArr is a package for computations with hyperplane arrangements, oriented
-matroids, and their topological invariants, in particular Milnor fibers and
-complements. 
-
  }
 
    
@@ -225,8 +221,23 @@ by one.
 
  
 
-\subsection{\textcolor{Chapter }{MSetInvL (for IsHyperplaneArrangement)}}
+\subsection{\textcolor{Chapter }{CharPoly (for IsHyperplaneArrangement)}}
 \logpage{[ 2, 1, 4 ]}\nobreak
+\hyperdef{L}{X8426CC4D7A8491A5}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CharPoly({\mdseries\slshape A})\index{CharPoly@\texttt{CharPoly}!for IsHyperplaneArrangement}
+\label{CharPoly:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a univariate polynomial with integral coefficients. 
+
+
+
+ Returns \mbox{\texttt{\mdseries\slshape \texttt{\symbol{92}}chi}} the \emph{characterisitc polynomial} of the arrangement. }
+
+ 
+
+\subsection{\textcolor{Chapter }{MSetInvL (for IsHyperplaneArrangement)}}
+\logpage{[ 2, 1, 5 ]}\nobreak
 \hyperdef{L}{X852CC1A8795FCD15}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MSetInvL({\mdseries\slshape A})\index{MSetInvL@\texttt{MSetInvL}!for IsHyperplaneArrangement}
 \label{MSetInvL:for IsHyperplaneArrangement}
@@ -247,8 +258,41 @@ similarities between intersection lattices. }
 
  
 
+\subsection{\textcolor{Chapter }{IsReal (for IsHyperplaneArrangement)}}
+\logpage{[ 2, 1, 6 ]}\nobreak
+\hyperdef{L}{X7E907A097A17195F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsReal({\mdseries\slshape A})\index{IsReal@\texttt{IsReal}!for IsHyperplaneArrangement}
+\label{IsReal:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines, if the hyperplane arrangement is defined over the reals, i.e., if
+the entries of the defining linear forms are real. }
+
+ 
+
+\subsection{\textcolor{Chapter }{SalvettiComplex (for IsHyperplaneArrangement)}}
+\logpage{[ 2, 1, 7 ]}\nobreak
+\hyperdef{L}{X8333113D7A7A3A91}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape A})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsHyperplaneArrangement}
+\label{SalvettiComplex:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+FacePoset 
+
+
+
+ Constructs the Salvetti Complex 
+
+ }
+
+ 
+
 \subsection{\textcolor{Chapter }{AGpql}}
-\logpage{[ 2, 1, 5 ]}\nobreak
+\logpage{[ 2, 1, 8 ]}\nobreak
 \hyperdef{L}{X858205A37B7EB5FA}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape Intgers, p, q, l})\index{AGpql@\texttt{AGpql}}
 \label{AGpql}
@@ -276,7 +320,7 @@ reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the for
  
 
 \subsection{\textcolor{Chapter }{HArrResHind}}
-\logpage{[ 2, 1, 6 ]}\nobreak
+\logpage{[ 2, 1, 9 ]}\nobreak
 \hyperdef{L}{X7CC338E67CE223FE}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResHind({\mdseries\slshape A})\index{HArrResHind@\texttt{HArrResHind}}
 \label{HArrResHind}
@@ -291,7 +335,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{HArrResX}}
-\logpage{[ 2, 1, 7 ]}\nobreak
+\logpage{[ 2, 1, 10 ]}\nobreak
 \hyperdef{L}{X784AA86286AA9DD8}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResX({\mdseries\slshape A, S})\index{HArrResX@\texttt{HArrResX}}
 \label{HArrResX}
@@ -306,7 +350,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{Essentialization}}
-\logpage{[ 2, 1, 8 ]}\nobreak
+\logpage{[ 2, 1, 11 ]}\nobreak
 \hyperdef{L}{X8221BCFC7DE0069A}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{Essentialization({\mdseries\slshape A})\index{Essentialization@\texttt{Essentialization}}
 \label{Essentialization}
@@ -364,55 +408,365 @@ arrangement only stores pairwise linearly independent hyperplanes.
  }
 
    
-\chapter{\textcolor{Chapter }{Oriented Matroids}}\label{Chapter_Oriented_Matroids}
+\chapter{\textcolor{Chapter }{Milnor fibers}}\label{Chapter_Milnor_fibers}
 \logpage{[ 3, 0, 0 ]}
-\hyperdef{L}{X8388FBA579602CDB}{}
+\hyperdef{L}{X80236F007DAFE4C2}{}
 {
   
 
- HypArr is a package for computations with hyperplane arrangements, oriented
-matroids, and their topological invariants, in particular Milnor fibers and
-complements. 
+ Milnor fiber is the fiber over 1 of the Milnor fibration of the hyperplane
+arrangement. The following describes functions to construct regular cell
+complex having the homotopy type of the Milnor fiber and thus enables
+computation of homotopy invaraints using e.g. the HAP package. 
+\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Milnor_fibers_Section_Attributes}
+\logpage{[ 3, 1, 0 ]}
+\hyperdef{L}{X7C701DBF7BAE649A}{}
+{
+  
 
- HypArr is a package for computations with hyperplane arrangements, oriented
-matroids, and their topological invariants, in particular Milnor fibers and
-complements. 
+\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}
+\logpage{[ 3, 1, 1 ]}\nobreak
+\hyperdef{L}{X794B90A67B153E6F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape })\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsOrientedMatroid}
+\label{MilnorFiberComplex:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
+\logpage{[ 3, 1, 2 ]}\nobreak
+\hyperdef{L}{X7D30E85086B93DB0}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape })\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
+\label{MilnorFiberComplex:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{rkSubDivCodim1}}
+\logpage{[ 3, 1, 3 ]}\nobreak
+\hyperdef{L}{X7DC3AC827C8CCA76}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{rkSubDivCodim1({\mdseries\slshape })\index{rkSubDivCodim1@\texttt{rkSubDivCodim1}}
+\label{rkSubDivCodim1}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{RUp}}
+\logpage{[ 3, 1, 4 ]}\nobreak
+\hyperdef{L}{X7C28F77282F05C26}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RUp({\mdseries\slshape })\index{RUp@\texttt{RUp}}
+\label{RUp}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{MCpxOF}}
+\logpage{[ 3, 1, 5 ]}\nobreak
+\hyperdef{L}{X82D58964872AF645}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MCpxOF({\mdseries\slshape })\index{MCpxOF@\texttt{MCpxOF}}
+\label{MCpxOF}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ }
 
  }
 
    
-\chapter{\textcolor{Chapter }{Functionality}}\label{Chapter_Functionality}
+\chapter{\textcolor{Chapter }{Oriented Matroids}}\label{Chapter_Oriented_Matroids}
 \logpage{[ 4, 0, 0 ]}
-\hyperdef{L}{X87F1120883F5B4D0}{}
+\hyperdef{L}{X8388FBA579602CDB}{}
 {
   
+
+ Oriented matroids are a abstraction of real hyperplane arrangements. The
+following describes functions to handle oriented matroids and compute
+associated cell complexes and invariants. 
+\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Oriented_Matroids_Section_Attributes}
+\logpage{[ 4, 1, 0 ]}
+\hyperdef{L}{X7C701DBF7BAE649A}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{OMRank (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 1 ]}\nobreak
+\hyperdef{L}{X7E30B85C7CE42908}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRank({\mdseries\slshape })\index{OMRank@\texttt{OMRank}!for IsOrientedMatroid}
+\label{OMRank:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
 
  
-\section{\textcolor{Chapter }{Example Methods}}\label{Chapter_Functionality_Section_Example_Methods}
-\logpage{[ 4, 1, 0 ]}
-\hyperdef{L}{X7ED1D62579C10890}{}
+
+\subsection{\textcolor{Chapter }{OMGroundset (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 2 ]}\nobreak
+\hyperdef{L}{X78C0E4A0861CAD2F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundset({\mdseries\slshape })\index{OMGroundset@\texttt{OMGroundset}!for IsOrientedMatroid}
+\label{OMGroundset:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMLForms (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 3 ]}\nobreak
+\hyperdef{L}{X86AAB8F480E92ABB}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMLForms({\mdseries\slshape })\index{OMLForms@\texttt{OMLForms}!for IsOrientedMatroid}
+\label{OMLForms:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMGeomLattice (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 4 ]}\nobreak
+\hyperdef{L}{X81CC016D818B3068}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGeomLattice({\mdseries\slshape })\index{OMGeomLattice@\texttt{OMGeomLattice}!for IsOrientedMatroid}
+\label{OMGeomLattice:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMCocircuits (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 5 ]}\nobreak
+\hyperdef{L}{X83F110A97A80B140}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCocircuits({\mdseries\slshape })\index{OMCocircuits@\texttt{OMCocircuits}!for IsOrientedMatroid}
+\label{OMCocircuits:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{TopeGraph (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 6 ]}\nobreak
+\hyperdef{L}{X7B35E88A79675D1E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TopeGraph({\mdseries\slshape })\index{TopeGraph@\texttt{TopeGraph}!for IsOrientedMatroid}
+\label{TopeGraph:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMCovectors (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 7 ]}\nobreak
+\hyperdef{L}{X7B2D2370811476C9}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCovectors({\mdseries\slshape })\index{OMCovectors@\texttt{OMCovectors}!for IsOrientedMatroid}
+\label{OMCovectors:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{SalvettiComplex (for IsOrientedMatroid)}}
+\logpage{[ 4, 1, 8 ]}\nobreak
+\hyperdef{L}{X7ED4D5138012EB6C}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape })\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsOrientedMatroid}
+\label{SalvettiComplex:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{FPGroundset (for IsFacePoset)}}
+\logpage{[ 4, 1, 9 ]}\nobreak
+\hyperdef{L}{X85AB2A797ABE8967}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundset({\mdseries\slshape })\index{FPGroundset@\texttt{FPGroundset}!for IsFacePoset}
+\label{FPGroundset:for IsFacePoset}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{FPOrder (for IsFacePoset)}}
+\logpage{[ 4, 1, 10 ]}\nobreak
+\hyperdef{L}{X7E28E057841D6ECD}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPOrder({\mdseries\slshape })\index{FPOrder@\texttt{FPOrder}!for IsFacePoset}
+\label{FPOrder:for IsFacePoset}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ Computes }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Properties}}\label{Chapter_Oriented_Matroids_Section_Properties}
+\logpage{[ 4, 2, 0 ]}
+\hyperdef{L}{X871597447BB998A1}{}
 {
   
 
- This section will describe the example methods of HypArr 
-
- This section will describe the example methods of HypArr 
-
-\subsection{\textcolor{Chapter }{HypARr{\textunderscore}Example}}
-\logpage{[ 4, 1, 1 ]}\nobreak
-\hyperdef{L}{X7F57601A8251E180}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HypARr{\textunderscore}Example({\mdseries\slshape arg})\index{HypARr{\textunderscore}Example@\texttt{HypARr{\textunderscore}Example}}
-\label{HypARruScoreExample}
+\subsection{\textcolor{Chapter }{cosn}}
+\logpage{[ 4, 2, 1 ]}\nobreak
+\hyperdef{L}{X84A29EA5835B9497}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{cosn({\mdseries\slshape })\index{cosn@\texttt{cosn}}
+\label{cosn}
 }\hfill{\scriptsize (function)}}\\
 
 
- Insert documentation for your function here }
+ Computes }
 
  
 
- This section will describe the example methods of HypArr }
+\subsection{\textcolor{Chapter }{CCToFloat}}
+\logpage{[ 4, 2, 2 ]}\nobreak
+\hyperdef{L}{X81F884357C562D53}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CCToFloat({\mdseries\slshape z})\index{CCToFloat@\texttt{CCToFloat}}
+\label{CCToFloat}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+a float 
+
+
+
+ Compute the float representation of the real part of a cyclotomic (complex)
+number }
 
  
+
+\subsection{\textcolor{Chapter }{pos}}
+\logpage{[ 4, 2, 3 ]}\nobreak
+\hyperdef{L}{X7E82F08287360E7C}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{pos({\mdseries\slshape })\index{pos@\texttt{pos}}
+\label{pos}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMOperation}}
+\logpage{[ 4, 2, 4 ]}\nobreak
+\hyperdef{L}{X7A515BDC8582FFE6}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMOperation({\mdseries\slshape })\index{OMOperation@\texttt{OMOperation}}
+\label{OMOperation}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{OrderCovec}}
+\logpage{[ 4, 2, 5 ]}\nobreak
+\hyperdef{L}{X801F6A9B7A0A53F5}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrderCovec({\mdseries\slshape })\index{OrderCovec@\texttt{OrderCovec}}
+\label{OrderCovec}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{LowerOrderIdeal}}
+\logpage{[ 4, 2, 6 ]}\nobreak
+\hyperdef{L}{X85EA1E1A87E7EA5D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LowerOrderIdeal({\mdseries\slshape })\index{LowerOrderIdeal@\texttt{LowerOrderIdeal}}
+\label{LowerOrderIdeal}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{IsOMEquiv}}
+\logpage{[ 4, 2, 7 ]}\nobreak
+\hyperdef{L}{X80CB9A9C8135A314}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsOMEquiv({\mdseries\slshape })\index{IsOMEquiv@\texttt{IsOMEquiv}}
+\label{IsOMEquiv}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ 
+
+\subsection{\textcolor{Chapter }{SeparatingSet}}
+\logpage{[ 4, 2, 8 ]}\nobreak
+\hyperdef{L}{X793FF1428136B222}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SeparatingSet({\mdseries\slshape })\index{SeparatingSet@\texttt{SeparatingSet}}
+\label{SeparatingSet}
+}\hfill{\scriptsize (function)}}\\
+
+
+ Computes }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Constructors}}\label{Chapter_Oriented_Matroids_Section_Constructors}
+\logpage{[ 4, 3, 0 ]}
+\hyperdef{L}{X86EC0F0A78ECBC10}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{OrientedMatroid (for IsList)}}
+\logpage{[ 4, 3, 1 ]}\nobreak
+\hyperdef{L}{X82EE52377B03CC80}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape r, or, A})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsList}
+\label{OrientedMatroid:for IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+An oriented matroid OM. 
+
+
+
+ Constructs am oriented matroid from a list \mbox{\texttt{\mdseries\slshape R}} of vectors representing defining linear forms of real hyperplanes or a real
+hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}. 
+
+ Each vector $r = [r_1,\dots,r_n]$ corresponds to the linear form 
+\[ r_1 x_1 + \cdots + r_n x_n = 0. \]
+ The vectors must lie in the same real vector space. 
+
+ Linearly dependent defining forms are removed automatically, so the resulting
+arrangement only stores pairwise linearly independent hyperplanes. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); OM:=OrientedMatroid(A);|
+  <OrientedMatroid: 6 elements, rank 3>
+\end{Verbatim}
+ }
+
+ }
 
  }
 

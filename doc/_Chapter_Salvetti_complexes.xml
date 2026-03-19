@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Salvetti_complexes">
+<Heading>Salvetti complexes</Heading>
+
+<P/>
+ The Salvetti complex is a finite regular CW-complex
+ having the homotopy type of the complement of a complexified real arrangement.
+ It is constructed from the associated oriented matroid.
+<Section Label="Chapter_Salvetti_complexes_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="" Name="FPOrderFunction" Label="for IsFacePoset"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="FPGroundset" Label="for IsFacePoset"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Salvetti_complexes_Section_Constructors">
+<Heading>Constructors</Heading>
+
+<ManSection>
+  <Oper Arg="OM" Name="FacePoset" Label="for IsList"/>
+ <Returns>FacePoset.
+</Returns>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="OM" Name="SalvettiComplex" Label="for IsOrientedMatroid"/>
+ <Returns>SalvettiComplex.
+</Returns>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

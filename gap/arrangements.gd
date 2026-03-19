@@ -23,7 +23,7 @@ DeclareCategory("IsHyperplaneArrangement", IsComponentObjectRep and IsAttributeS
 DeclareRepresentation(
     "IsHyperplaneArrangementRep", 
     IsHyperplaneArrangement,
-    ["roots","dimension","lattice","charpoly"]
+    ["roots","dimension","lattice","charpoly","salcpx"]
 );
 
 #################################
@@ -101,6 +101,12 @@ DeclareAttribute("MSetInvL", IsHyperplaneArrangement );
 #! Determines, if the hyperplane arrangement is defined over the reals, i.e.,
 #! if the entries of the defining linear forms are real.
 DeclareProperty("IsReal", IsHyperplaneArrangement );
+
+#! @Arguments A
+#! @Returns FacePoset
+#! @Description Constructs the Salvetti Complex
+#! 
+DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 #################################
 ##

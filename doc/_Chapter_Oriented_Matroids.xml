@@ -5,11 +5,203 @@
 <Heading>Oriented Matroids</Heading>
 
 <P/>
- HypArr is a package for computations with hyperplane arrangements,
- oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
+ Oriented matroids are a abstraction of real hyperplane arrangements.
+ The following describes functions to handle oriented matroids and compute associated cell complexes
+ and invariants.
+<Section Label="Chapter_Oriented_Matroids_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="" Name="OMRank" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="OMGroundset" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="OMLForms" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="OMGeomLattice" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="OMCocircuits" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="TopeGraph" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="OMCovectors" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="SalvettiComplex" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="FPGroundset" Label="for IsFacePoset"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="FPOrder" Label="for IsFacePoset"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Oriented_Matroids_Section_Properties">
+<Heading>Properties</Heading>
+
+<ManSection>
+  <Func Arg="" Name="cosn" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="z" Name="CCToFloat" />
+ <Returns>a float
+</Returns>
+ <Description>
+ Compute the float representation of the real part of a cyclotomic (complex) number 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="pos" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="OMOperation" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="OrderCovec" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="LowerOrderIdeal" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="IsOMEquiv" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="SeparatingSet" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Oriented_Matroids_Section_Constructors">
+<Heading>Constructors</Heading>
+
+<ManSection>
+  <Oper Arg="r or A" Name="OrientedMatroid" Label="for IsList"/>
+ <Returns>An oriented matroid OM.
+</Returns>
+ <Description>
+  Constructs am oriented matroid from a list <A>R</A> of vectors
+  representing defining linear forms of real hyperplanes
+  or a real hyperplane arrangement <A>A</A>.
 <P/>
- HypArr is a package for computations with hyperplane arrangements,
- oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
+  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the linear form
+  <Display>
+     r_1 x_1 + \cdots + r_n x_n = 0.
+  </Display>
+  The vectors must lie in the same real vector space.
 <P/>
+  Linearly dependent defining forms are removed automatically, so the
+  resulting arrangement only stores pairwise linearly independent
+  hyperplanes.
+<P/>
+<Example><![CDATA[
+gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));
+<OrientedMatroid: 6 elements, rank 3>
+gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(A);
+<OrientedMatroid: 6 elements, rank 3>
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
 </Chapter>
 

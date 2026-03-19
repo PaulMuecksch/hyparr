@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (HypArr) - Chapter 4: Functionality</title>
+<title>GAP (HypArr) - Chapter 4: Oriented Matroids</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -20,33 +20,211 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapInd.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap4_mj.html">[MathJax on]</a></p>
-<p><a id="X87F1120883F5B4D0" name="X87F1120883F5B4D0"></a></p>
-<div class="ChapSects"><a href="chap4.html#X87F1120883F5B4D0">4 <span class="Heading">Functionality</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7ED1D62579C10890">4.1 <span class="Heading">Example Methods</span></a>
+<p><a id="X8388FBA579602CDB" name="X8388FBA579602CDB"></a></p>
+<div class="ChapSects"><a href="chap4.html#X8388FBA579602CDB">4 <span class="Heading">Oriented Matroids</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7C701DBF7BAE649A">4.1 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7F57601A8251E180">4.1-1 HypARr_Example</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7E30B85C7CE42908">4.1-1 OMRank</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X78C0E4A0861CAD2F">4.1-2 OMGroundset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X86AAB8F480E92ABB">4.1-3 OMLForms</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X81CC016D818B3068">4.1-4 OMGeomLattice</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X83F110A97A80B140">4.1-5 OMCocircuits</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7B35E88A79675D1E">4.1-6 TopeGraph</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7B2D2370811476C9">4.1-7 OMCovectors</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7ED4D5138012EB6C">4.1-8 SalvettiComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X85AB2A797ABE8967">4.1-9 FPGroundset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7E28E057841D6ECD">4.1-10 FPOrder</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X871597447BB998A1">4.2 <span class="Heading">Properties</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X84A29EA5835B9497">4.2-1 cosn</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X81F884357C562D53">4.2-2 CCToFloat</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7E82F08287360E7C">4.2-3 pos</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7A515BDC8582FFE6">4.2-4 OMOperation</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X801F6A9B7A0A53F5">4.2-5 OrderCovec</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X85EA1E1A87E7EA5D">4.2-6 LowerOrderIdeal</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X80CB9A9C8135A314">4.2-7 IsOMEquiv</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X793FF1428136B222">4.2-8 SeparatingSet</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X86EC0F0A78ECBC10">4.3 <span class="Heading">Constructors</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X82EE52377B03CC80">4.3-1 OrientedMatroid</a></span>
 </div></div>
 </div>
 
-<h3>4 <span class="Heading">Functionality</span></h3>
+<h3>4 <span class="Heading">Oriented Matroids</span></h3>
 
-<p><a id="X7ED1D62579C10890" name="X7ED1D62579C10890"></a></p>
+<p>Oriented matroids are a abstraction of real hyperplane arrangements. The following describes functions to handle oriented matroids and compute associated cell complexes and invariants.</p>
 
-<h4>4.1 <span class="Heading">Example Methods</span></h4>
+<p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
 
-<p>This section will describe the example methods of HypArr</p>
+<h4>4.1 <span class="Heading">Attributes</span></h4>
 
-<p>This section will describe the example methods of HypArr</p>
+<p><a id="X7E30B85C7CE42908" name="X7E30B85C7CE42908"></a></p>
 
-<p><a id="X7F57601A8251E180" name="X7F57601A8251E180"></a></p>
+<h5>4.1-1 OMRank</h5>
 
-<h5>4.1-1 HypARr_Example</h5>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMRank</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HypARr_Example</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Insert documentation for your function here</p>
+<p><a id="X78C0E4A0861CAD2F" name="X78C0E4A0861CAD2F"></a></p>
 
-<p>This section will describe the example methods of HypArr</p>
+<h5>4.1-2 OMGroundset</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGroundset</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X86AAB8F480E92ABB" name="X86AAB8F480E92ABB"></a></p>
+
+<h5>4.1-3 OMLForms</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMLForms</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X81CC016D818B3068" name="X81CC016D818B3068"></a></p>
+
+<h5>4.1-4 OMGeomLattice</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGeomLattice</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X83F110A97A80B140" name="X83F110A97A80B140"></a></p>
+
+<h5>4.1-5 OMCocircuits</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMCocircuits</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X7B35E88A79675D1E" name="X7B35E88A79675D1E"></a></p>
+
+<h5>4.1-6 TopeGraph</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TopeGraph</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X7B2D2370811476C9" name="X7B2D2370811476C9"></a></p>
+
+<h5>4.1-7 OMCovectors</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMCovectors</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X7ED4D5138012EB6C" name="X7ED4D5138012EB6C"></a></p>
+
+<h5>4.1-8 SalvettiComplex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalvettiComplex</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X85AB2A797ABE8967" name="X85AB2A797ABE8967"></a></p>
+
+<h5>4.1-9 FPGroundset</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPGroundset</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X7E28E057841D6ECD" name="X7E28E057841D6ECD"></a></p>
+
+<h5>4.1-10 FPOrder</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPOrder</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X871597447BB998A1" name="X871597447BB998A1"></a></p>
+
+<h4>4.2 <span class="Heading">Properties</span></h4>
+
+<p><a id="X84A29EA5835B9497" name="X84A29EA5835B9497"></a></p>
+
+<h5>4.2-1 cosn</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; cosn</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X81F884357C562D53" name="X81F884357C562D53"></a></p>
+
+<h5>4.2-2 CCToFloat</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CCToFloat</code>( <var class="Arg">z</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: a float</p>
+
+<p>Compute the float representation of the real part of a cyclotomic (complex) number</p>
+
+<p><a id="X7E82F08287360E7C" name="X7E82F08287360E7C"></a></p>
+
+<h5>4.2-3 pos</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; pos</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X7A515BDC8582FFE6" name="X7A515BDC8582FFE6"></a></p>
+
+<h5>4.2-4 OMOperation</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMOperation</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X801F6A9B7A0A53F5" name="X801F6A9B7A0A53F5"></a></p>
+
+<h5>4.2-5 OrderCovec</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrderCovec</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X85EA1E1A87E7EA5D" name="X85EA1E1A87E7EA5D"></a></p>
+
+<h5>4.2-6 LowerOrderIdeal</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LowerOrderIdeal</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X80CB9A9C8135A314" name="X80CB9A9C8135A314"></a></p>
+
+<h5>4.2-7 IsOMEquiv</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsOMEquiv</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X793FF1428136B222" name="X793FF1428136B222"></a></p>
+
+<h5>4.2-8 SeparatingSet</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SeparatingSet</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Computes</p>
+
+<p><a id="X86EC0F0A78ECBC10" name="X86EC0F0A78ECBC10"></a></p>
+
+<h4>4.3 <span class="Heading">Constructors</span></h4>
+
+<p><a id="X82EE52377B03CC80" name="X82EE52377B03CC80"></a></p>
+
+<h5>4.3-1 OrientedMatroid</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrientedMatroid</code>( <var class="Arg">r</var>, <var class="Arg">or</var>, <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: An oriented matroid OM.</p>
+
+<p>Constructs am oriented matroid from a list <var class="Arg">R</var> of vectors representing defining linear forms of real hyperplanes or a real hyperplane arrangement <var class="Arg">A</var>.</p>
+
+<p>Each vector <span class="SimpleMath">r = [r_1,dots,r_n]</span> corresponds to the linear form</p>
+
+<p class="pcenter">
+     r_1 x_1 + \cdots + r_n x_n = 0.
+  </p>
+
+<p>The vectors must lie in the same real vector space.</p>
+
+<p>Linearly dependent defining forms are removed automatically, so the resulting arrangement only stores pairwise linearly independent hyperplanes.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));</span>
+&lt;OrientedMatroid: 6 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); OM:=OrientedMatroid(A);</span>
+&lt;OrientedMatroid: 6 elements, rank 3&gt;
+</pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapInd.html">[Next Chapter]</a>&nbsp;  </div>

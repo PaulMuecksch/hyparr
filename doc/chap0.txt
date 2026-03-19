@@ -34,17 +34,46 @@
       2.1-1 Dimension
       2.1-2 Roots
       2.1-3 IntersectionLattice
-      2.1-4 MSetInvL
-      2.1-5 AGpql
-      2.1-6 HArrResHind
-      2.1-7 HArrResX
-      2.1-8 Essentialization
+      2.1-4 CharPoly
+      2.1-5 MSetInvL
+      2.1-6 IsReal
+      2.1-7 SalvettiComplex
+      2.1-8 AGpql
+      2.1-9 HArrResHind
+      2.1-10 HArrResX
+      2.1-11 Essentialization
     2.2 [33X[0;0YConstructors[133X
       2.2-1 HyperplaneArrangement
-  3 [33X[0;0YOriented Matroids[133X
-  4 [33X[0;0YFunctionality[133X
-    4.1 [33X[0;0YExample Methods[133X
-      4.1-1 HypARr_Example
+  3 [33X[0;0YMilnor fibers[133X
+    3.1 [33X[0;0YAttributes[133X
+      3.1-1 MilnorFiberComplex
+      3.1-2 MilnorFiberComplex
+      3.1-3 rkSubDivCodim1
+      3.1-4 RUp
+      3.1-5 MCpxOF
+  4 [33X[0;0YOriented Matroids[133X
+    4.1 [33X[0;0YAttributes[133X
+      4.1-1 OMRank
+      4.1-2 OMGroundset
+      4.1-3 OMLForms
+      4.1-4 OMGeomLattice
+      4.1-5 OMCocircuits
+      4.1-6 TopeGraph
+      4.1-7 OMCovectors
+      4.1-8 SalvettiComplex
+      4.1-9 FPGroundset
+      4.1-10 FPOrder
+    4.2 [33X[0;0YProperties[133X
+      4.2-1 cosn
+      4.2-2 CCToFloat
+      4.2-3 pos
+      4.2-4 OMOperation
+      4.2-5 OrderCovec
+      4.2-6 LowerOrderIdeal
+      4.2-7 IsOMEquiv
+      4.2-8 SeparatingSet
+    4.3 [33X[0;0YConstructors[133X
+      4.3-1 OrientedMatroid
   
   
   [32X

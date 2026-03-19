@@ -55,7 +55,10 @@ PackageDoc := rec(
 
 Dependencies := rec(
   GAP := ">= 4.10",
-  NeededOtherPackages := [ ],
+  NeededOtherPackages := [
+                             ["grape", ">= 4.9.3"]
+                            #[ "gapdoc",     ">=0.0" ],
+                           ],
   SuggestedOtherPackages := [ ],
   ExternalConditions := [ ],
 ),

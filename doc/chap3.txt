@@ -1,11 +1,41 @@
   
-  [1X3 [33X[0;0YOriented Matroids[133X[101X
+  [1X3 [33X[0;0YMilnor fibers[133X[101X
   
-  [33X[0;0YHypArr  is a package for computations with hyperplane arrangements, oriented
-  matroids,  and their topological invariants, in particular Milnor fibers and
-  complements.[133X
+  [33X[0;0YMilnor  fiber  is the fiber over 1 of the Milnor fibration of the hyperplane
+  arrangement.  The  following  describes  functions to construct regular cell
+  complex  having  the  homotopy  type  of  the  Milnor fiber and thus enables
+  computation of homotopy invaraints using e.g. the HAP package.[133X
   
-  [33X[0;0YHypArr  is a package for computations with hyperplane arrangements, oriented
-  matroids,  and their topological invariants, in particular Milnor fibers and
-  complements.[133X
+  
+  [1X3.1 [33X[0;0YAttributes[133X[101X
+  
+  [1X3.1-1 MilnorFiberComplex[101X
+  
+  [33X[1;0Y[29X[2XMilnorFiberComplex[102X(  ) [32X attribute[133X
+  
+  [33X[0;0YComputes[133X
+  
+  [1X3.1-2 MilnorFiberComplex[101X
+  
+  [33X[1;0Y[29X[2XMilnorFiberComplex[102X(  ) [32X attribute[133X
+  
+  [33X[0;0YComputes[133X
+  
+  [1X3.1-3 rkSubDivCodim1[101X
+  
+  [33X[1;0Y[29X[2XrkSubDivCodim1[102X(  ) [32X function[133X
+  
+  [33X[0;0YComputes[133X
+  
+  [1X3.1-4 RUp[101X
+  
+  [33X[1;0Y[29X[2XRUp[102X(  ) [32X function[133X
+  
+  [33X[0;0YComputes[133X
+  
+  [1X3.1-5 MCpxOF[101X
+  
+  [33X[1;0Y[29X[2XMCpxOF[102X(  ) [32X function[133X
+  
+  [33X[0;0YComputes[133X
   

@@ -66,18 +66,50 @@ gap> A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);
 
 
 <ManSection>
+  <Attr Arg="A" Name="CharPoly" Label="for IsHyperplaneArrangement"/>
+ <Returns>a univariate polynomial with integral coefficients.
+</Returns>
+ <Description>
+ Returns <A>\chi</A> the <E>characterisitc polynomial</E> of the arrangement.
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="A" Name="MSetInvL" Label="for IsHyperplaneArrangement"/>
  <Returns>A list encoding multiset invariants of the intersection lattice.
 </Returns>
  <Description>
  Computes multiset invariants of the intersection lattice of the
-  hyperplane arrangement <A>A</A>.
+ hyperplane arrangement <A>A</A>.
 <P/>
-  For each level of the lattice, the function records how many
-  intersections occur with a given number of defining hyperplanes.
+ For each level of the lattice, the function records how many
+ intersections occur with a given number of defining hyperplanes.
 <P/>
-  These invariants can be used to compare arrangements or detect
-  combinatorial similarities between intersection lattices.
+ These invariants can be used to compare arrangements or detect
+ combinatorial similarities between intersection lattices.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="A" Name="IsReal" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if the hyperplane arrangement is defined over the reals, i.e.,
+ if the entries of the defining linear forms are real.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="SalvettiComplex" Label="for IsHyperplaneArrangement"/>
+ <Returns>FacePoset
+</Returns>
+ <Description>
+Constructs the Salvetti Complex
+<P/>
  </Description>
 </ManSection>
 

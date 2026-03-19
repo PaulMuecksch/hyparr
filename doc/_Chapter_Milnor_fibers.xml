@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Milnor_fibers">
+<Heading>Milnor fibers</Heading>
+
+<P/>
+ Milnor fiber is the fiber over 1 of the Milnor fibration of the hyperplane arrangement.
+ The following describes functions to construct regular cell complex having the homotopy type of
+ the Milnor fiber and thus enables computation of homotopy invaraints using e.g. the HAP package.
+<Section Label="Chapter_Milnor_fibers_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="" Name="MilnorFiberComplex" Label="for IsOrientedMatroid"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="MilnorFiberComplex" Label="for IsHyperplaneArrangement"/>
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="rkSubDivCodim1" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="RUp" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="" Name="MCpxOF" />
+ <Description>
+ Computes 
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

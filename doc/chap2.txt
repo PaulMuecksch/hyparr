@@ -53,7 +53,14 @@
     [4X[28X   [ [ 1, 2, 3 ] ] ][128X[104X
   [4X[32X[104X
   
-  [1X2.1-4 MSetInvL[101X
+  [1X2.1-4 CharPoly[101X
+  
+  [33X[1;0Y[29X[2XCharPoly[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya univariate polynomial with integral coefficients.[133X
+  
+  [33X[0;0YReturns [3X\chi[103X the [13Xcharacterisitc polynomial[113X of the arrangement.[133X
+  
+  [1X2.1-5 MSetInvL[101X
   
   [33X[1;0Y[29X[2XMSetInvL[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA list encoding multiset invariants of the intersection lattice.[133X
@@ -67,7 +74,22 @@
   [33X[0;0YThese invariants can be used to compare arrangements or detect combinatorial
   similarities between intersection lattices.[133X
   
-  [1X2.1-5 AGpql[101X
+  [1X2.1-6 IsReal[101X
+  
+  [33X[1;0Y[29X[2XIsReal[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines,  if  the hyperplane arrangement is defined over the reals, i.e.,
+  if the entries of the defining linear forms are real.[133X
+  
+  [1X2.1-7 SalvettiComplex[101X
+  
+  [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YFacePoset[133X
+  
+  [33X[0;0YConstructs the Salvetti Complex[133X
+  
+  [1X2.1-8 AGpql[101X
   
   [33X[1;0Y[29X[2XAGpql[102X( [3XIntgers[103X, [3Xp[103X, [3Xq[103X, [3Xl[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -93,7 +115,7 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X2.1-6 HArrResHind[101X
+  [1X2.1-9 HArrResHind[101X
   
   [33X[1;0Y[29X[2XHArrResHind[102X( [3XA[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -101,7 +123,7 @@
   [33X[0;0YComputes  the  [13Xrestriction[113X  of  the  arrangement [3XA[103X to the [3Xk[103X-th hyperplane of
   [10XRoots(A)[110X.[133X
   
-  [1X2.1-7 HArrResX[101X
+  [1X2.1-10 HArrResX[101X
   
   [33X[1;0Y[29X[2XHArrResX[102X( [3XA[103X, [3XS[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -109,7 +131,7 @@
   [33X[0;0YComputes the [13Xrestriction[113X of the arrangement [3XA[103X to the subspace spanned by the
   vectors in [10XS[110X.[133X
   
-  [1X2.1-8 Essentialization[101X
+  [1X2.1-11 Essentialization[101X
   
   [33X[1;0Y[29X[2XEssentialization[102X( [3XA[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X

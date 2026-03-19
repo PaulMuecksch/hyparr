@@ -1,28 +1,55 @@
 #
 # HypArr: Computations with milnor fibers
 #
-#! @Chapter Introduction
+#! @Chapter Milnor fibers
 #!
-#! HypArr is a package for computations with hyperplane arrangements,
-#! oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
-#!
-#! @Chapter Functionality
-#!
-#!
-#! @Section Example Methods
-#!
-#! This section will describe the example
-#! methods of HypArr
+#! Milnor fiber is the fiber over 1 of the Milnor fibration of the hyperplane arrangement.
+#! The following describes functions to construct regular cell complex having the homotopy type of
+#! the Milnor fiber and thus enables computation of homotopy invaraints using e.g. the HAP package.
 
-#! @Description
-#!   Insert documentation for your function here
-# DeclareGlobalFunction( "HypARr_Example" );
 
-# Declare the category
-
-# some auxillary functions
+#################################
 ##
+#! @Section Attributes
+##
+#################################
 
+#! @Arguments 
+#! @Returns 
+#! @Description
+#! Computes 
+DeclareAttribute("MilnorFiberComplex", IsOrientedMatroid);
+
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#! Computes 
+DeclareAttribute("MilnorFiberComplex", IsHyperplaneArrangement);
+
+#################################
+##
+## @Section Global methods
+##
+#################################
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#! Computes 
+DeclareGlobalFunction("rkSubDivCodim1");
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#! Computes 
+DeclareGlobalFunction("RUp");
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#! Computes 
+DeclareGlobalFunction("MCpxOF");
 
 
 

@@ -31,11 +31,14 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CCC1A2A7C3F2CC5">2.1-1 Dimension</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8419FA5F7A08DF56">2.1-2 Roots</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8555074B83058460">2.1-3 IntersectionLattice</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X852CC1A8795FCD15">2.1-4 MSetInvL</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X858205A37B7EB5FA">2.1-5 AGpql</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CC338E67CE223FE">2.1-6 HArrResHind</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X784AA86286AA9DD8">2.1-7 HArrResX</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8221BCFC7DE0069A">2.1-8 Essentialization</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8426CC4D7A8491A5">2.1-4 CharPoly</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X852CC1A8795FCD15">2.1-5 MSetInvL</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E907A097A17195F">2.1-6 IsReal</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8333113D7A7A3A91">2.1-7 SalvettiComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X858205A37B7EB5FA">2.1-8 AGpql</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7CC338E67CE223FE">2.1-9 HArrResHind</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X784AA86286AA9DD8">2.1-10 HArrResX</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8221BCFC7DE0069A">2.1-11 Essentialization</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X86EC0F0A78ECBC10">2.2 <span class="Heading">Constructors</span></a>
 </span>
@@ -98,9 +101,18 @@
    [ [ 1, 2, 3 ] ] ]
 </pre></div>
 
+<p><a id="X8426CC4D7A8491A5" name="X8426CC4D7A8491A5"></a></p>
+
+<h5>2.1-4 CharPoly</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CharPoly</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a univariate polynomial with integral coefficients.</p>
+
+<p>Returns <var class="Arg">\chi</var> the <em>characterisitc polynomial</em> of the arrangement.</p>
+
 <p><a id="X852CC1A8795FCD15" name="X852CC1A8795FCD15"></a></p>
 
-<h5>2.1-4 MSetInvL</h5>
+<h5>2.1-5 MSetInvL</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MSetInvL</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A list encoding multiset invariants of the intersection lattice.</p>
@@ -111,9 +123,27 @@
 
 <p>These invariants can be used to compare arrangements or detect combinatorial similarities between intersection lattices.</p>
 
+<p><a id="X7E907A097A17195F" name="X7E907A097A17195F"></a></p>
+
+<h5>2.1-6 IsReal</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsReal</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if the hyperplane arrangement is defined over the reals, i.e., if the entries of the defining linear forms are real.</p>
+
+<p><a id="X8333113D7A7A3A91" name="X8333113D7A7A3A91"></a></p>
+
+<h5>2.1-7 SalvettiComplex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalvettiComplex</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: FacePoset</p>
+
+<p>Constructs the Salvetti Complex</p>
+
 <p><a id="X858205A37B7EB5FA" name="X858205A37B7EB5FA"></a></p>
 
-<h5>2.1-5 AGpql</h5>
+<h5>2.1-8 AGpql</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AGpql</code>( <var class="Arg">Intgers</var>, <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
@@ -139,7 +169,7 @@
 
 <p><a id="X7CC338E67CE223FE" name="X7CC338E67CE223FE"></a></p>
 
-<h5>2.1-6 HArrResHind</h5>
+<h5>2.1-9 HArrResHind</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResHind</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
@@ -148,7 +178,7 @@
 
 <p><a id="X784AA86286AA9DD8" name="X784AA86286AA9DD8"></a></p>
 
-<h5>2.1-7 HArrResX</h5>
+<h5>2.1-10 HArrResX</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResX</code>( <var class="Arg">A</var>, <var class="Arg">S</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
@@ -157,7 +187,7 @@
 
 <p><a id="X8221BCFC7DE0069A" name="X8221BCFC7DE0069A"></a></p>
 
-<h5>2.1-8 Essentialization</h5>
+<h5>2.1-11 Essentialization</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Essentialization</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>

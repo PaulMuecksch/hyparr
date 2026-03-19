@@ -12,3 +12,5 @@
 
 ReadPackage("hyparr","gap/arrangements.gi");
 ReadPackage("hyparr","gap/orientedmatroid.gi");
+ReadPackage("hyparr","gap/milnorfiber.gi");
+
