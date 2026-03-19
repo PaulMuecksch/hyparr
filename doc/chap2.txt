@@ -87,7 +87,8 @@
   [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YFacePoset[133X
   
-  [33X[0;0YConstructs the Salvetti Complex[133X
+  [33X[0;0YConstructs  the  Salvetti  Complex.  If  [10XIsReal(A)[110X is false, then it returns
+  [10Xfail[110X.[133X
   
   
   [1X2.2 [33X[0;0YGlobal methods[133X[101X
@@ -114,7 +115,7 @@
   
   [1X2.2-2 AGpql[101X
   
-  [33X[1;0Y[29X[2XAGpql[102X( [3XIntgers[103X, [3Xp[103X, [3Xq[103X, [3Xl[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XAGpql[102X( [3Xp[103X, [3Xq[103X, [3Xl[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
   
   [33X[0;0YConstructs  the  reflection  arrangement  associated to the monomial complex

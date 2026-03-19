@@ -25,8 +25,7 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7C701DBF7BAE649A">3.1 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X794B90A67B153E6F">3.1-1 MilnorFiberComplex</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7D30E85086B93DB0">3.1-2 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7D30E85086B93DB0">3.1-1 MilnorFiberComplex</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X80841F8D80722081">3.2 <span class="Heading">Global methods</span></a>
 </span>
@@ -45,18 +44,23 @@
 
 <h4>3.1 <span class="Heading">Attributes</span></h4>
 
-<p><a id="X794B90A67B153E6F" name="X794B90A67B153E6F"></a></p>
+<p><a id="X7D30E85086B93DB0" name="X7D30E85086B93DB0"></a></p>
 
 <h5>3.1-1 MilnorFiberComplex</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Computes</p>
+<p>Returns: FacePoset</p>
 
-<p><a id="X7D30E85086B93DB0" name="X7D30E85086B93DB0"></a></p>
+<p>Computes the face poset of the regular cell complex having the homotopy type of Milnor fiber of the arrangement <var class="Arg">A</var>.</p>
 
-<h5>3.1-2 MilnorFiberComplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
+</pre></div>
+
 <p>Computes</p>
 
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>

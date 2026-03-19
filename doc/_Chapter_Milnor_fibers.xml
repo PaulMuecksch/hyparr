@@ -12,16 +12,20 @@
 <Heading>Attributes</Heading>
 
 <ManSection>
-  <Attr Arg="" Name="MilnorFiberComplex" Label="for IsOrientedMatroid"/>
- <Description>
- Computes 
- </Description>
-</ManSection>
-
-
-<ManSection>
   <Attr Arg="" Name="MilnorFiberComplex" Label="for IsHyperplaneArrangement"/>
+ <Returns>FacePoset
+</Returns>
  <Description>
+ Computes the face poset of the regular cell complex
+ having the homotopy type of Milnor fiber of the arrangement <A>A</A>. 
+<Example><![CDATA[
+gap> A:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> MCpx:=MilnorFiberComplex(A);
+<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+]]></Example>
+
+
  Computes 
  </Description>
 </ManSection>

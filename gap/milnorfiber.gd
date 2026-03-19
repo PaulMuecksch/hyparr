@@ -14,10 +14,19 @@
 ##
 #################################
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments A
+#! @Returns FacePoset
 #! @Description
-#! Computes 
+#! Computes the face poset of the regular cell complex
+#! having the homotopy type of Milnor fiber of the arrangement <A>A</A>. 
+#! @BeginExampleSession
+#! gap> A:=AGpql(2,2,3);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> MCpx:=MilnorFiberComplex(A);
+#! <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+#! @EndExampleSession
+
+
 DeclareAttribute("MilnorFiberComplex", IsOrientedMatroid);
 
 #! @Arguments 

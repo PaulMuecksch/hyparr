@@ -19,8 +19,7 @@
   [2XIsReal[102X, for IsHyperplaneArrangement 2.1-6 
   [2XLowerOrderIdeal[102X 4.2-6 
   [2XMCpxOF[102X 3.2-3 
-  [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 3.1-2 
-      for IsOrientedMatroid 3.1-1 
+  [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 3.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.1-5 
   [2XOMCocircuits[102X, for IsOrientedMatroid 4.1-5 
   [2XOMCovectors[102X, for IsOrientedMatroid 4.1-7 

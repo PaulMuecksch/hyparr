@@ -108,8 +108,8 @@ gap> A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);
  <Returns>FacePoset
 </Returns>
  <Description>
-Constructs the Salvetti Complex
-<P/>
+ Constructs the Salvetti Complex.
+ If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
  </Description>
 </ManSection>
 
@@ -146,7 +146,7 @@ gap> Print(DrawLatex3Arr(A));
 
 
 <ManSection>
-  <Func Arg="Intgers p,q,l" Name="AGpql" />
+  <Func Arg="p,q,l" Name="AGpql" />
  <Returns>A hyperplane arrangement.
 </Returns>
  <Description>

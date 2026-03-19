@@ -50,7 +50,6 @@
   \item \texttt  {MCpxOF}, \hyperpage{9}
   \item \texttt  {MilnorFiberComplex}
     \subitem for IsHyperplaneArrangement, \hyperpage{8}
-    \subitem for IsOrientedMatroid, \hyperpage{8}
   \item \texttt  {MSetInvL}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
 

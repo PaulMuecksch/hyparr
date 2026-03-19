@@ -141,7 +141,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalvettiComplex</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: FacePoset</p>
 
-<p>Constructs the Salvetti Complex</p>
+<p>Constructs the Salvetti Complex. If <code class="code">IsReal(A)</code> is false, then it returns <code class="code">fail</code>.</p>
 
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
 
@@ -174,7 +174,7 @@
 
 <h5>2.2-2 AGpql</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AGpql</code>( <var class="Arg">Intgers</var>, <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AGpql</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
 
 <p>Constructs the reflection arrangement associated to the monomial complex reflection group <span class="SimpleMath">G(p,q,l)</span>. The hyperplanes are defined by equations of the form</p>

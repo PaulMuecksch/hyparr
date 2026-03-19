@@ -104,8 +104,9 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 
 #! @Arguments A
 #! @Returns FacePoset
-#! @Description Constructs the Salvetti Complex
-#! 
+#! @Description 
+#! Constructs the Salvetti Complex.
+#! If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 #################################
@@ -145,7 +146,7 @@ DeclareGlobalFunction("ctf");
 #! @EndExampleSession
 DeclareGlobalFunction("DrawLatex3Arr");
 
-#! @Arguments Intgers p,q,l
+#! @Arguments p,q,l
 #! @Returns A hyperplane arrangement.
 #! @Description
 #!  Constructs the reflection arrangement associated to the monomial

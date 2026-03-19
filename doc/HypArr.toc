@@ -18,8 +18,7 @@
 \contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{6}{subsection.2.3.1}%
 \contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Milnor fibers}}{8}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\textcolor {Chapter }{Attributes}}{8}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{8}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{8}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{8}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}\textcolor {Chapter }{Global methods}}{8}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}\textcolor {Chapter }{rkSubDivCodim1}}{8}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}\textcolor {Chapter }{RUp}}{8}{subsection.3.2.2}%

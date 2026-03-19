@@ -285,9 +285,7 @@ FacePoset
 
 
 
- Constructs the Salvetti Complex 
-
- }
+ Constructs the Salvetti Complex. If \texttt{IsReal(A)} is false, then it returns \texttt{fail}. }
 
  }
 
@@ -330,7 +328,7 @@ real 3\texttt{\symbol{45}}arrangement.
 \subsection{\textcolor{Chapter }{AGpql}}
 \logpage{[ 2, 2, 2 ]}\nobreak
 \hyperdef{L}{X858205A37B7EB5FA}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape Intgers, p, q, l})\index{AGpql@\texttt{AGpql}}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape p, q, l})\index{AGpql@\texttt{AGpql}}
 \label{AGpql}
 }\hfill{\scriptsize (function)}}\\
 \textbf{\indent Returns:\ }
@@ -460,26 +458,25 @@ computation of homotopy invaraints using e.g. the HAP package.
 {
   
 
-\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}
-\logpage{[ 3, 1, 1 ]}\nobreak
-\hyperdef{L}{X794B90A67B153E6F}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape })\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsOrientedMatroid}
-\label{MilnorFiberComplex:for IsOrientedMatroid}
-}\hfill{\scriptsize (attribute)}}\\
-
-
- Computes }
-
- 
-
 \subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
-\logpage{[ 3, 1, 2 ]}\nobreak
+\logpage{[ 3, 1, 1 ]}\nobreak
 \hyperdef{L}{X7D30E85086B93DB0}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape })\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
 \label{MilnorFiberComplex:for IsHyperplaneArrangement}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+FacePoset 
 
 
+
+ Computes the face poset of the regular cell complex having the homotopy type
+of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+\end{Verbatim}
  Computes }
 
  }
