@@ -9,7 +9,7 @@
 SetPackageInfo( rec(
 
 PackageName := "HypArr",
-Subtitle := "Computations with hyperplane arrangements.",
+Subtitle := "Computations with hyperplane arrangements",
 Version := "0.1",
 Date := "19/03/2026", # dd/mm/yyyy format
 License := "GPL-3.0-or-later",
@@ -58,7 +58,8 @@ PackageDoc := rec(
 Dependencies := rec(
   GAP := ">= 4.10",
   NeededOtherPackages := [
-                             ["grape", ">= 4.0"]
+                             ["grape", ">= 4.0"],
+                             ["hap", ">= 1.5"]
                             #[ "gapdoc",     ">=0.0" ],
                            ],
   SuggestedOtherPackages := [ ],

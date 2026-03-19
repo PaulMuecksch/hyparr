@@ -133,3 +133,26 @@ local ks,sigma, ns, T, QT, TopesSigma;
 
     return List(ks,k->[TopesSigma{Positions(List(TopesSigma,R->Length(SeparatingSet(T,R))=k),true)},T,sigma]);;
 end);
+
+InstallGlobalFunction(FPtoCWCpx,
+function(FP)
+local PSet,OF,FaceCpxC, MFCpx, d, IncFs, F, CWFCpx;;
+    PSet := FPGroundset(FP);;
+    OF := FPOrder(FP);;
+    FaceCpxC := [];;
+    FaceCpxC[1] := List(PSet[1],x->[1,0]);;
+    for d in [2..Length(PSet)] do
+        Add(FaceCpxC,[]);;
+        # FacCpxC[d]:=[];;
+        for F in PSet[d] do
+            IncFs:=Positions(List(PSet[d-1],x->OF(x,F)),true);;
+            Add(FaceCpxC[d],Concatenation([Length(IncFs)],IncFs));;
+        od;;
+    od;;
+
+    Add(FaceCpxC,[]);;
+
+    CWFCpx:=RegularCWComplex(FaceCpxC);;
+
+    return CWFCpx;;
+end);

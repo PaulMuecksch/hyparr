@@ -95,7 +95,7 @@
 
 \hypersetup{pdftitle= HypArr }
 \markright{\scriptsize \mbox{}\hfill  HypArr  \hfill\mbox{}}
-{\Huge \textbf{ Computations with hyperplane arrangements. \mbox{}}}\\
+{\Huge \textbf{ Computations with hyperplane arrangements \mbox{}}}\\
 \vfill
 
 {\Huge  0.1 \mbox{}}\\[1cm]
@@ -448,20 +448,47 @@ arrangement only stores pairwise linearly independent hyperplanes.
 {
   
 
- Milnor fiber is the fiber over 1 of the Milnor fibration of the hyperplane
-arrangement. The following describes functions to construct regular cell
-complex having the homotopy type of the Milnor fiber and thus enables
-computation of homotopy invaraints using e.g. the HAP package. 
+ The Milnor fiber is the typical fiber $f^{-1}$ of the Milnor fibration 
+\[f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times,
+z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
+ of the hyperplane arrangement $\mathcal{A}$, where $\alpha_H$ are defining linear forms. 
+
+ The following describes functions to construct regular cell complex having the
+homotopy type of the Milnor fiber and thus enables computation of homotopy
+invaraints using e.g. the HAP package. 
 \section{\textcolor{Chapter }{Attributes}}\label{Chapter_Milnor_fibers_Section_Attributes}
 \logpage{[ 3, 1, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {
   
 
-\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
+\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}
 \logpage{[ 3, 1, 1 ]}\nobreak
+\hyperdef{L}{X794B90A67B153E6F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape OM})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsOrientedMatroid}
+\label{MilnorFiberComplex:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+FacePoset 
+
+
+
+ Computes the face poset of the regular cell complex of the combinatorial
+Milnor fiber of the oriented matroid \mbox{\texttt{\mdseries\slshape OM}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
+\logpage{[ 3, 1, 2 ]}\nobreak
 \hyperdef{L}{X7D30E85086B93DB0}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape })\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape A})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
 \label{MilnorFiberComplex:for IsHyperplaneArrangement}
 }\hfill{\scriptsize (attribute)}}\\
 \textbf{\indent Returns:\ }
@@ -472,12 +499,12 @@ FacePoset
  Computes the face poset of the regular cell complex having the homotopy type
 of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
-  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]);|
+  <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(O);|
+  <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
 \end{Verbatim}
- Computes }
+ }
 
  }
 
@@ -488,39 +515,31 @@ of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}.
 {
   
 
-\subsection{\textcolor{Chapter }{rkSubDivCodim1}}
+\subsection{\textcolor{Chapter }{FPtoCWCpx}}
 \logpage{[ 3, 2, 1 ]}\nobreak
-\hyperdef{L}{X7DC3AC827C8CCA76}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{rkSubDivCodim1({\mdseries\slshape })\index{rkSubDivCodim1@\texttt{rkSubDivCodim1}}
-\label{rkSubDivCodim1}
+\hyperdef{L}{X7BBA6F967E493B5D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}}
+\label{FPtoCWCpx}
 }\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+HAP CW Complex 
 
 
- Computes }
 
- 
-
-\subsection{\textcolor{Chapter }{RUp}}
-\logpage{[ 3, 2, 2 ]}\nobreak
-\hyperdef{L}{X7C28F77282F05C26}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RUp({\mdseries\slshape })\index{RUp@\texttt{RUp}}
-\label{RUp}
-}\hfill{\scriptsize (function)}}\\
-
-
- Computes }
-
- 
-
-\subsection{\textcolor{Chapter }{MCpxOF}}
-\logpage{[ 3, 2, 3 ]}\nobreak
-\hyperdef{L}{X82D58964872AF645}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MCpxOF({\mdseries\slshape })\index{MCpxOF@\texttt{MCpxOF}}
-\label{MCpxOF}
-}\hfill{\scriptsize (function)}}\\
-
-
- Computes }
+ Converts a \textsc{HypArr} \texttt{FacePoset} into a \textsc{HAP} CW\texttt{\symbol{45}}complex for computing topological invariants. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+  !gapprompt@gap>| !gapinput@MCW := FPtoCWCpx(MCpx);|
+  Regular CW-complex of dimension 2
+  !gapprompt@gap>| !gapinput@Homology(MCW,0);|
+  [ 0 ]
+  !gapprompt@gap>| !gapinput@Homology(MCW,1);|
+  [ 0, 0, 0, 0, 0, 0, 0 ]
+\end{Verbatim}
+ }
 
  }
 

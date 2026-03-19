@@ -28,33 +28,38 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7C701DBF7BAE649A">3.1 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7D30E85086B93DB0">3.1-1 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X794B90A67B153E6F">3.1-1 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7D30E85086B93DB0">3.1-2 MilnorFiberComplex</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X80841F8D80722081">3.2 <span class="Heading">Global methods</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7DC3AC827C8CCA76">3.2-1 rkSubDivCodim1</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7C28F77282F05C26">3.2-2 RUp</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X82D58964872AF645">3.2-3 MCpxOF</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7BBA6F967E493B5D">3.2-1 FPtoCWCpx</a></span>
 </div></div>
 </div>
 
 <h3>3 <span class="Heading">Milnor fibers</span></h3>
 
-<p>Milnor fiber is the fiber over 1 of the Milnor fibration of the hyperplane arrangement. The following describes functions to construct regular cell complex having the homotopy type of the Milnor fiber and thus enables computation of homotopy invaraints using e.g. the HAP package.</p>
+<p>The Milnor fiber is the typical fiber <span class="SimpleMath">\(f^{-1}\)</span> of the Milnor fibration</p>
+
+<p class="center">\[f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times, z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]</p>
+
+<p>of the hyperplane arrangement <span class="SimpleMath">\(\mathcal{A}\)</span>, where <span class="SimpleMath">\(\alpha_H\)</span> are defining linear forms.</p>
+
+<p>The following describes functions to construct regular cell complex having the homotopy type of the Milnor fiber and thus enables computation of homotopy invaraints using e.g. the HAP package.</p>
 
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
 
 <h4>3.1 <span class="Heading">Attributes</span></h4>
 
-<p><a id="X7D30E85086B93DB0" name="X7D30E85086B93DB0"></a></p>
+<p><a id="X794B90A67B153E6F" name="X794B90A67B153E6F"></a></p>
 
 <h5>3.1-1 MilnorFiberComplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: FacePoset</p>
 
-<p>Computes the face poset of the regular cell complex having the homotopy type of Milnor fiber of the arrangement <var class="Arg">A</var>.</p>
+<p>Computes the face poset of the regular cell complex of the combinatorial Milnor fiber of the oriented matroid <var class="Arg">OM</var>.</p>
 
 
 <div class="example"><pre>
@@ -64,32 +69,49 @@
 &lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
 </pre></div>
 
-<p>Computes</p>
+<p><a id="X7D30E85086B93DB0" name="X7D30E85086B93DB0"></a></p>
+
+<h5>3.1-2 MilnorFiberComplex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: FacePoset</p>
+
+<p>Computes the face poset of the regular cell complex having the homotopy type of Milnor fiber of the arrangement <var class="Arg">A</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
+&lt;OrientedMatroid: 3 elements, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(O);</span>
+&lt;FacePoset of dimension 1 with f-vector [ 3, 6 ]&gt;
+</pre></div>
 
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
 
 <h4>3.2 <span class="Heading">Global methods</span></h4>
 
-<p><a id="X7DC3AC827C8CCA76" name="X7DC3AC827C8CCA76"></a></p>
+<p><a id="X7BBA6F967E493B5D" name="X7BBA6F967E493B5D"></a></p>
 
-<h5>3.2-1 rkSubDivCodim1</h5>
+<h5>3.2-1 FPtoCWCpx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; rkSubDivCodim1</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Computes</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPtoCWCpx</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: HAP CW Complex</p>
 
-<p><a id="X7C28F77282F05C26" name="X7C28F77282F05C26"></a></p>
+<p>Converts a <strong class="button">HypArr</strong> <code class="code">FacePoset</code> into a <strong class="button">HAP</strong> CW-complex for computing topological invariants.</p>
 
-<h5>3.2-2 RUp</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RUp</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Computes</p>
-
-<p><a id="X82D58964872AF645" name="X82D58964872AF645"></a></p>
-
-<h5>3.2-3 MCpxOF</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MCpxOF</code>(  )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Computes</p>
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCW := FPtoCWCpx(MCpx);</span>
+Regular CW-complex of dimension 2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Homology(MCW,0);</span>
+[ 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Homology(MCW,1);</span>
+[ 0, 0, 0, 0, 0, 0, 0 ]
+</pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4_mj.html">[Next Chapter]</a>&nbsp;  </div>

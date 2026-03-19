@@ -11,6 +11,7 @@
   [2XEssentialization[102X 2.2-5 
   [2XFPGroundset[102X, for IsFacePoset 4.1-9 
   [2XFPOrder[102X, for IsFacePoset 4.1-10 
+  [2XFPtoCWCpx[102X 3.2-1 
   [2XHArrResHind[102X 2.2-3 
   [2XHArrResX[102X 2.2-4 
   [2XHyperplaneArrangement[102X, for IsList 2.3-1 
@@ -18,8 +19,8 @@
   [2XIsOMEquiv[102X 4.2-7 
   [2XIsReal[102X, for IsHyperplaneArrangement 2.1-6 
   [2XLowerOrderIdeal[102X 4.2-6 
-  [2XMCpxOF[102X 3.2-3 
-  [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 3.1-1 
+  [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 3.1-2 
+      for IsOrientedMatroid 3.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.1-5 
   [2XOMCocircuits[102X, for IsOrientedMatroid 4.1-5 
   [2XOMCovectors[102X, for IsOrientedMatroid 4.1-7 
@@ -31,9 +32,7 @@
   [2XOrderCovec[102X 4.2-5 
   [2XOrientedMatroid[102X, for IsList 4.3-1 
   [2Xpos[102X 4.2-3 
-  [2XrkSubDivCodim1[102X 3.2-1 
   [2XRoots[102X, for IsHyperplaneArrangement 2.1-2 
-  [2XRUp[102X 3.2-2 
   [2XSalvettiComplex[102X, for IsHyperplaneArrangement 2.1-7 
       for IsOrientedMatroid 4.1-8 
   [2XSeparatingSet[102X 4.2-8 
