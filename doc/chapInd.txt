@@ -11,7 +11,7 @@
   [2XEssentialization[102X 2.2-5 
   [2XFPGroundset[102X, for IsFacePoset 4.1-9 
   [2XFPOrder[102X, for IsFacePoset 4.1-10 
-  [2XFPtoCWCpx[102X 3.2-1 
+  [2XFPtoCWCpx[102X 3.1-3 
   [2XHArrResHind[102X 2.2-3 
   [2XHArrResX[102X 2.2-4 
   [2XHyperplaneArrangement[102X, for IsList 2.3-1 

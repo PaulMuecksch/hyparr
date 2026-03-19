@@ -18,8 +18,8 @@
   [6XReturns:[106X  [33X[0;10YA list of vectors defining the hyperplanes of [3XA[103X.[133X
   
   [33X[0;0YReturns  the  list  of  defining  linear  forms  (also  called [13Xroots[113X) of the
-  hyperplanes in the arrangement [3XA[103X. Each vector represents a hyperplane by the
-  linear equation[133X
+  hyperplanes in the arrangement [22XmathcalA[122X. Each vector represents a hyperplane
+  by the linear equation[133X
   
   
   [24X[33X[0;6Yr_1 x_1 + \cdots + r_n x_n = 0.[133X
@@ -31,10 +31,10 @@
   [33X[1;0Y[29X[2XIntersectionLattice[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA list of lists describing the intersections of [3XA[103X.[133X
   
-  [33X[0;0YComputes the intersection lattice of the hyperplane arrangement [3XA[103X.[133X
+  [33X[0;0YComputes the intersection lattice of the hyperplane arrangement [22XmathcalA[122X.[133X
   
   [33X[0;0YThe  lattice  is  represented  level-by-level.  The  entry [22XL[k][122X contains all
-  intersections of [22Xk-1[122X hyperplanes.[133X
+  intersections of rank [22Xk[122X.[133X
   
   [33X[0;0YEach lattice element is stored as a list of indices referring to hyperplanes
   in [10XRoots(A)[110X.[133X
@@ -58,7 +58,15 @@
   [33X[1;0Y[29X[2XCharPoly[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya univariate polynomial with integral coefficients.[133X
   
-  [33X[0;0YReturns [3X\chi[103X the [13Xcharacterisitc polynomial[113X of the arrangement.[133X
+  [33X[0;0YReturns   [22Xχ_mathcalA}[122X  the  [13Xcharacterisitc  polynomial[113X  of  the  arrangement
+  [22XmathcalA[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XCharPoly(A);[127X[104X
+    [4X[28Xt^3-6*t^2+11*t-6[128X[104X
+  [4X[32X[104X
   
   [1X2.1-5 MSetInvL[101X
   
@@ -95,22 +103,25 @@
   
   [1X2.2-1 DrawLatex3Arr[101X
   
-  [33X[1;0Y[29X[2XDrawLatex3Arr[102X( [3XA[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XDrawLatex3Arr[102X( [3XA[103X[, [3Xps[103X[, [3Xip[103X[, [3XHind[103X[, [3Xdisthv[103X[, [3XMarkHs[103X]]]]] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA string.[133X
   
   [33X[0;0YGenerates tikz-code for a nice projective picture of the real 3-arrangement.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
     [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XPrint(DrawLatex3Arr(A));[127X[104X
     [4X[28X\begin{tikzpicture}[scale=\sc][128X[104X
-    [4X[28X\draw (-2.8284271247461898,2.8284271247461898) -- (2.8284271247461898,-2.8284271247461898);  % H_1 [128X[104X
-    [4X[28X\draw (2.8284271247461898,2.8284271247461898) -- (-2.8284271247461898,-2.8284271247461898);  % H_2 [128X[104X
-    [4X[28X\draw (-1.,3.872983346207417) -- (-1.,-3.872983346207417);  % H_3 [128X[104X
-    [4X[28X\draw (1.,3.872983346207417) -- (1.,-3.872983346207417);  % H_4 [128X[104X
-    [4X[28X\draw (3.872983346207417,-1.) -- (-3.872983346207417,-1.);  % H_5 [128X[104X
-    [4X[28X\draw (3.872983346207417,1.) -- (-3.872983346207417,1.);  % H_6 [128X[104X
+    [4X[28X\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 [128X[104X
+    [4X[28X\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 [128X[104X
+    [4X[28X\draw (-1.,3.872) -- (-1.,-3.872);  % H_3 [128X[104X
+    [4X[28X\draw (1.,3.872) -- (1.,-3.872);  % H_4 [128X[104X
+    [4X[28X\draw (3.872,-1.) -- (-3.872,-1.);  % H_5 [128X[104X
+    [4X[28X\draw (3.872,1.) -- (-3.872,1.);  % H_6 [128X[104X
+    [4X[28X[128X[104X
     [4X[28X\end{tikzpicture}[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.2-2 AGpql[101X

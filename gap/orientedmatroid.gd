@@ -166,7 +166,7 @@ DeclareGlobalFunction("SeparatingSet");
 #! @Arguments r or A
 #! @Returns An oriented matroid OM.
 #! @Description
-#!  Constructs am oriented matroid from a list <A>R</A> of vectors
+#!  Constructs am oriented matroid from a list <A>r</A> of vectors
 #!  representing defining linear forms of real hyperplanes
 #!  or a real hyperplane arrangement <A>A</A>.
 #!
@@ -175,10 +175,6 @@ DeclareGlobalFunction("SeparatingSet");
 #!     r_1 x_1 + \cdots + r_n x_n = 0.
 #!  </Display>
 #!  The vectors must lie in the same real vector space.
-#!
-#!  Linearly dependent defining forms are removed automatically, so the
-#!  resulting arrangement only stores pairwise linearly independent
-#!  hyperplanes.
 #!
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));

@@ -43,7 +43,7 @@ DeclareAttribute("Dimension", IsHyperplaneArrangement);
 #! @Returns A list of vectors defining the hyperplanes of <A>A</A>.
 #! @Description
 #! Returns the list of defining linear forms (also called
-#! <E>roots</E>) of the hyperplanes in the arrangement <A>A</A>.
+#! <E>roots</E>) of the hyperplanes in the arrangement <M>\mathcal{A}</M>.
 #! Each vector represents a hyperplane by the linear equation
 #! <Display>
 #!    r_1 x_1 + \cdots + r_n x_n = 0.
@@ -53,10 +53,10 @@ DeclareAttribute("Roots", IsHyperplaneArrangement);
 #! @Arguments A
 #! @Returns A list of lists describing the intersections of <A>A</A>.
 #! @Description
-#! Computes the intersection lattice of the hyperplane arrangement <A>A</A>.
+#! Computes the intersection lattice of the hyperplane arrangement <M>\mathcal{A}</M>.
 #!
 #! The lattice is represented level-by-level.  The entry <M>L[k]</M>
-#! contains all intersections of <M>k-1</M> hyperplanes.
+#! contains all intersections of rank <M>k</M>.
 #!
 #! Each lattice element is stored as a list of indices referring to
 #! hyperplanes in <C>Roots(A)</C>.
@@ -79,7 +79,13 @@ DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement );
 #! @Arguments A
 #! @Returns a univariate polynomial with integral coefficients.
 #! @Description
-#! Returns <A>\chi</A> the <E>characterisitc polynomial</E> of the arrangement.
+#! Returns <M>\chi_{\mathcal{A}}</M> the <E>characterisitc polynomial</E> of the arrangement <M>\mathcal{A}</M>.
+#! @BeginExampleSession
+#! gap> A:=AGpql(2,2,3);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> CharPoly(A);
+#! t^3-6*t^2+11*t-6
+#! @EndExampleSession
 DeclareAttribute("CharPoly", IsHyperplaneArrangement);
 
 #! @Arguments A
@@ -126,23 +132,27 @@ DeclareGlobalFunction("cj");
 DeclareGlobalFunction("RotTozMat");
 DeclareGlobalFunction("ctf");
 
-#! @Arguments A
+DeclareGlobalFunction("FloatStringCutoff");
+
+#! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
 #! @Returns A string.
 #! @Description
 #! Generates tikz-code 
 #! for a nice projective picture of the real 3-arrangement.
 #! @BeginExampleSession
-# gap> A:=AGpql(2,2,3);
+#! gap> A:=AGpql(2,2,3);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> Print(DrawLatex3Arr(A));
 #! \begin{tikzpicture}[scale=\sc]
-#! \draw (-2.8284271247461898,2.8284271247461898) -- (2.8284271247461898,-2.8284271247461898);  % H_1 
-#! \draw (2.8284271247461898,2.8284271247461898) -- (-2.8284271247461898,-2.8284271247461898);  % H_2 
-#! \draw (-1.,3.872983346207417) -- (-1.,-3.872983346207417);  % H_3 
-#! \draw (1.,3.872983346207417) -- (1.,-3.872983346207417);  % H_4 
-#! \draw (3.872983346207417,-1.) -- (-3.872983346207417,-1.);  % H_5 
-#! \draw (3.872983346207417,1.) -- (-3.872983346207417,1.);  % H_6 
+#! \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
+#! \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
+#! \draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
+#! \draw (1.,3.872) -- (1.,-3.872);  % H_4 
+#! \draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
+#! \draw (3.872,1.) -- (-3.872,1.);  % H_6 
+#! 
 #! \end{tikzpicture}
+#! 
 #! @EndExampleSession
 DeclareGlobalFunction("DrawLatex3Arr");
 

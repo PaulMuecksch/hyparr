@@ -13,7 +13,7 @@
 
 #################################
 ##
-#! @Section Attributes
+#! @Section Complexes
 ##
 #################################
 
@@ -23,10 +23,10 @@
 #! Computes the face poset of the regular cell complex
 #! of the combinatorial Milnor fiber of the oriented matroid <A>OM</A>. 
 #! @BeginExampleSession
-#! gap> A:=AGpql(2,2,3);
-#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
-#! gap> MCpx:=MilnorFiberComplex(A);
-#! <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+#! gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);
+#! <OrientedMatroid: 3 elements, rank 2>
+#! gap> MCpx:=MilnorFiberComplex(O);
+#! <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
 #! @EndExampleSession
 DeclareAttribute("MilnorFiberComplex", IsOrientedMatroid);
 
@@ -36,16 +36,16 @@ DeclareAttribute("MilnorFiberComplex", IsOrientedMatroid);
 #! Computes the face poset of the regular cell complex
 #! having the homotopy type of Milnor fiber of the arrangement <A>A</A>. 
 #! @BeginExampleSession
-#! gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);
-#! <OrientedMatroid: 3 elements, rank 2>
-#! gap> MCpx:=MilnorFiberComplex(O);
-#! <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
+#! gap> A:=AGpql(2,2,3);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> MCpx:=MilnorFiberComplex(A);
+#! <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
 #! @EndExampleSession
 DeclareAttribute("MilnorFiberComplex", IsHyperplaneArrangement);
 
 #################################
 ##
-#! @Section Global methods
+# @Section Global methods
 ##
 #################################
 
@@ -59,8 +59,8 @@ DeclareGlobalFunction("MCpxOF");
 #! @Arguments FP
 #! @Returns HAP CW Complex
 #! @Description
-#! Converts a <B>HypArr</B> <C>FacePoset</C> into a <B>HAP</B> CW-complex
-#! for computing topological invariants.
+#! Converts a <B>HypArr</B> <C>FacePoset</C> into a <B>HAP</B> <C>RegularCWComplex</C>
+#! for further computations of topological invariants.
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>

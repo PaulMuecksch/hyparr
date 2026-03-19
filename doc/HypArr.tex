@@ -178,7 +178,7 @@ A list of vectors defining the hyperplanes of \mbox{\texttt{\mdseries\slshape A}
 
 
 
- Returns the list of defining linear forms (also called \emph{roots}) of the hyperplanes in the arrangement \mbox{\texttt{\mdseries\slshape A}}. Each vector represents a hyperplane by the linear equation 
+ Returns the list of defining linear forms (also called \emph{roots}) of the hyperplanes in the arrangement $\mathcal{A}$. Each vector represents a hyperplane by the linear equation 
 \[ r_1 x_1 + \cdots + r_n x_n = 0. \]
  }
 
@@ -195,10 +195,10 @@ A list of lists describing the intersections of \mbox{\texttt{\mdseries\slshape 
 
 
 
- Computes the intersection lattice of the hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}. 
+ Computes the intersection lattice of the hyperplane arrangement $\mathcal{A}$. 
 
  The lattice is represented
-level\texttt{\symbol{45}}by\texttt{\symbol{45}}level. The entry $L[k]$ contains all intersections of $k-1$ hyperplanes. 
+level\texttt{\symbol{45}}by\texttt{\symbol{45}}level. The entry $L[k]$ contains all intersections of rank $k$. 
 
  Each lattice element is stored as a list of indices referring to hyperplanes
 in \texttt{Roots(A)}. 
@@ -232,7 +232,14 @@ a univariate polynomial with integral coefficients.
 
 
 
- Returns \mbox{\texttt{\mdseries\slshape \texttt{\symbol{92}}chi}} the \emph{characterisitc polynomial} of the arrangement. }
+ Returns $\chi_{\mathcal{A}}$ the \emph{characterisitc polynomial} of the arrangement $\mathcal{A}$. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@CharPoly(A);|
+  t^3-6*t^2+11*t-6
+\end{Verbatim}
+ }
 
  
 
@@ -299,7 +306,7 @@ FacePoset
 \subsection{\textcolor{Chapter }{DrawLatex3Arr}}
 \logpage{[ 2, 2, 1 ]}\nobreak
 \hyperdef{L}{X82C8EAF88340865B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DrawLatex3Arr({\mdseries\slshape A})\index{DrawLatex3Arr@\texttt{DrawLatex3Arr}}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DrawLatex3Arr({\mdseries\slshape A[, ps[, ip[, Hind[, disthv[, MarkHs]]]]]})\index{DrawLatex3Arr@\texttt{DrawLatex3Arr}}
 \label{DrawLatex3Arr}
 }\hfill{\scriptsize (function)}}\\
 \textbf{\indent Returns:\ }
@@ -310,16 +317,19 @@ A string.
  Generates tikz\texttt{\symbol{45}}code for a nice projective picture of the
 real 3\texttt{\symbol{45}}arrangement. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@Print(DrawLatex3Arr(A));|
   \begin{tikzpicture}[scale=\sc]
-  \draw (-2.8284271247461898,2.8284271247461898) -- (2.8284271247461898,-2.8284271247461898);  % H_1 
-  \draw (2.8284271247461898,2.8284271247461898) -- (-2.8284271247461898,-2.8284271247461898);  % H_2 
-  \draw (-1.,3.872983346207417) -- (-1.,-3.872983346207417);  % H_3 
-  \draw (1.,3.872983346207417) -- (1.,-3.872983346207417);  % H_4 
-  \draw (3.872983346207417,-1.) -- (-3.872983346207417,-1.);  % H_5 
-  \draw (3.872983346207417,1.) -- (-3.872983346207417,1.);  % H_6 
+  \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
+  \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
+  \draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
+  \draw (1.,3.872) -- (1.,-3.872);  % H_4 
+  \draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
+  \draw (3.872,1.) -- (-3.872,1.);  % H_6 
+  
   \end{tikzpicture}
+  
 \end{Verbatim}
  }
 
@@ -456,9 +466,9 @@ z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
  The following describes functions to construct regular cell complex having the
 homotopy type of the Milnor fiber and thus enables computation of homotopy
 invaraints using e.g. the HAP package. 
-\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Milnor_fibers_Section_Attributes}
+\section{\textcolor{Chapter }{Complexes}}\label{Chapter_Milnor_fibers_Section_Complexes}
 \logpage{[ 3, 1, 0 ]}
-\hyperdef{L}{X7C701DBF7BAE649A}{}
+\hyperdef{L}{X79C388D385DB7CD1}{}
 {
   
 
@@ -476,10 +486,10 @@ FacePoset
  Computes the face poset of the regular cell complex of the combinatorial
 Milnor fiber of the oriented matroid \mbox{\texttt{\mdseries\slshape OM}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
-  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]);|
+  <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(O);|
+  <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
 \end{Verbatim}
  }
 
@@ -499,24 +509,17 @@ FacePoset
  Computes the face poset of the regular cell complex having the homotopy type
 of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]);|
-  <OrientedMatroid: 3 elements, rank 2>
-  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(O);|
-  <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
 \end{Verbatim}
  }
 
- }
-
  
-\section{\textcolor{Chapter }{Global methods}}\label{Chapter_Milnor_fibers_Section_Global_methods}
-\logpage{[ 3, 2, 0 ]}
-\hyperdef{L}{X80841F8D80722081}{}
-{
-  
 
 \subsection{\textcolor{Chapter }{FPtoCWCpx}}
-\logpage{[ 3, 2, 1 ]}\nobreak
+\logpage{[ 3, 1, 3 ]}\nobreak
 \hyperdef{L}{X7BBA6F967E493B5D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}}
 \label{FPtoCWCpx}
@@ -526,7 +529,7 @@ HAP CW Complex
 
 
 
- Converts a \textsc{HypArr} \texttt{FacePoset} into a \textsc{HAP} CW\texttt{\symbol{45}}complex for computing topological invariants. 
+ Converts a \textsc{HypArr} \texttt{FacePoset} into a \textsc{HAP} \texttt{RegularCWComplex} for further computations of topological invariants. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
@@ -806,15 +809,12 @@ An oriented matroid OM.
 
 
 
- Constructs am oriented matroid from a list \mbox{\texttt{\mdseries\slshape R}} of vectors representing defining linear forms of real hyperplanes or a real
+ Constructs am oriented matroid from a list \mbox{\texttt{\mdseries\slshape r}} of vectors representing defining linear forms of real hyperplanes or a real
 hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}. 
 
  Each vector $r = [r_1,\dots,r_n]$ corresponds to the linear form 
 \[ r_1 x_1 + \cdots + r_n x_n = 0. \]
  The vectors must lie in the same real vector space. 
-
- Linearly dependent defining forms are removed automatically, so the resulting
-arrangement only stores pairwise linearly independent hyperplanes. 
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]

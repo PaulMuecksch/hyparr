@@ -129,7 +129,7 @@
   [33X[1;0Y[29X[2XOrientedMatroid[102X( [3Xr[103X, [3Xor[103X, [3XA[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn oriented matroid OM.[133X
   
-  [33X[0;0YConstructs  am  oriented  matroid  from  a  list  [3XR[103X  of vectors representing
+  [33X[0;0YConstructs  am  oriented  matroid  from  a  list  [3Xr[103X  of vectors representing
   defining  linear  forms of real hyperplanes or a real hyperplane arrangement
   [3XA[103X.[133X
   
@@ -141,9 +141,6 @@
   [124X
   
   [33X[0;0YThe vectors must lie in the same real vector space.[133X
-  
-  [33X[0;0YLinearly   dependent  defining  forms  are  removed  automatically,  so  the
-  resulting arrangement only stores pairwise linearly independent hyperplanes.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));[127X[104X

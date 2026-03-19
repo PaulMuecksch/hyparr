@@ -7,8 +7,7 @@
 \makelabel{hyparr:Global methods}{2.2}{X80841F8D80722081}
 \makelabel{hyparr:Constructors}{2.3}{X86EC0F0A78ECBC10}
 \makelabel{hyparr:Milnor fibers}{3}{X80236F007DAFE4C2}
-\makelabel{hyparr:Attributes}{3.1}{X7C701DBF7BAE649A}
-\makelabel{hyparr:Global methods}{3.2}{X80841F8D80722081}
+\makelabel{hyparr:Complexes}{3.1}{X79C388D385DB7CD1}
 \makelabel{hyparr:Oriented Matroids}{4}{X8388FBA579602CDB}
 \makelabel{hyparr:Attributes}{4.1}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Global methods}{4.2}{X80841F8D80722081}
@@ -29,7 +28,7 @@
 \makelabel{hyparr:HyperplaneArrangement for IsList}{2.3.1}{X860548D886CE5BA2}
 \makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{3.1.1}{X794B90A67B153E6F}
 \makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{3.1.2}{X7D30E85086B93DB0}
-\makelabel{hyparr:FPtoCWCpx}{3.2.1}{X7BBA6F967E493B5D}
+\makelabel{hyparr:FPtoCWCpx}{3.1.3}{X7BBA6F967E493B5D}
 \makelabel{hyparr:OMRank for IsOrientedMatroid}{4.1.1}{X7E30B85C7CE42908}
 \makelabel{hyparr:OMGroundset for IsOrientedMatroid}{4.1.2}{X78C0E4A0861CAD2F}
 \makelabel{hyparr:OMLForms for IsOrientedMatroid}{4.1.3}{X86AAB8F480E92ABB}

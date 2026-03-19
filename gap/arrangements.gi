@@ -537,7 +537,17 @@ function(T)
 		return CCToFloat(T);
 	fi;
 end);
-	
+
+InstallGlobalFunction(FloatStringCutoff,
+function(x)
+local posdot;
+	posdot := Position(x,'.');;
+	if Length(x)-posdot >= 4 then
+		return Concatenation(x{[1..posdot]},x{[posdot+1..posdot+3]});
+	else
+		return x;;
+	fi;;
+end);
 
 InstallGlobalFunction(DrawLatex3Arr,
 function(arg) # function(A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]])
@@ -655,6 +665,11 @@ local A,s,ip,Hind,disthv,
 				y1:=String(yc1);
 				x2:=String(xc2);
 				y2:=String(yc2);
+
+				x1:=FloatStringCutoff(x1);;
+				x2:=FloatStringCutoff(x2);;
+				y1:=FloatStringCutoff(y1);;
+				y2:=FloatStringCutoff(y2);;
 
                 if Mind=1 and Position(RR,vv) in MarkHs then
                     sp:=Concatenation(sp,"\\draw[color=red] (",x1,",",y1,") -- (",x2,",",y2,");  % H_",String(Position(RR,vv))," \n");;

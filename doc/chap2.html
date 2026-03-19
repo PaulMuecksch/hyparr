@@ -71,7 +71,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Roots</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A list of vectors defining the hyperplanes of <var class="Arg">A</var>.</p>
 
-<p>Returns the list of defining linear forms (also called <em>roots</em>) of the hyperplanes in the arrangement <var class="Arg">A</var>. Each vector represents a hyperplane by the linear equation</p>
+<p>Returns the list of defining linear forms (also called <em>roots</em>) of the hyperplanes in the arrangement <span class="SimpleMath">mathcalA</span>. Each vector represents a hyperplane by the linear equation</p>
 
 <p class="pcenter">
     r_1 x_1 + \cdots + r_n x_n = 0.
@@ -84,9 +84,9 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IntersectionLattice</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A list of lists describing the intersections of <var class="Arg">A</var>.</p>
 
-<p>Computes the intersection lattice of the hyperplane arrangement <var class="Arg">A</var>.</p>
+<p>Computes the intersection lattice of the hyperplane arrangement <span class="SimpleMath">mathcalA</span>.</p>
 
-<p>The lattice is represented level-by-level. The entry <span class="SimpleMath">L[k]</span> contains all intersections of <span class="SimpleMath">k-1</span> hyperplanes.</p>
+<p>The lattice is represented level-by-level. The entry <span class="SimpleMath">L[k]</span> contains all intersections of rank <span class="SimpleMath">k</span>.</p>
 
 <p>Each lattice element is stored as a list of indices referring to hyperplanes in <code class="code">Roots(A)</code>.</p>
 
@@ -110,7 +110,15 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CharPoly</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a univariate polynomial with integral coefficients.</p>
 
-<p>Returns <var class="Arg">\chi</var> the <em>characterisitc polynomial</em> of the arrangement.</p>
+<p>Returns <span class="SimpleMath">χ_mathcalA}</span> the <em>characterisitc polynomial</em> of the arrangement <span class="SimpleMath">mathcalA</span>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CharPoly(A);</span>
+t^3-6*t^2+11*t-6
+</pre></div>
 
 <p><a id="X852CC1A8795FCD15" name="X852CC1A8795FCD15"></a></p>
 
@@ -151,23 +159,26 @@
 
 <h5>2.2-1 DrawLatex3Arr</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DrawLatex3Arr</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DrawLatex3Arr</code>( <var class="Arg">A</var>[, <var class="Arg">ps</var>[, <var class="Arg">ip</var>[, <var class="Arg">Hind</var>[, <var class="Arg">disthv</var>[, <var class="Arg">MarkHs</var>]]]]] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A string.</p>
 
 <p>Generates tikz-code for a nice projective picture of the real 3-arrangement.</p>
 
 
 <div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(DrawLatex3Arr(A));</span>
 \begin{tikzpicture}[scale=\sc]
-\draw (-2.8284271247461898,2.8284271247461898) -- (2.8284271247461898,-2.8284271247461898);  % H_1 
-\draw (2.8284271247461898,2.8284271247461898) -- (-2.8284271247461898,-2.8284271247461898);  % H_2 
-\draw (-1.,3.872983346207417) -- (-1.,-3.872983346207417);  % H_3 
-\draw (1.,3.872983346207417) -- (1.,-3.872983346207417);  % H_4 
-\draw (3.872983346207417,-1.) -- (-3.872983346207417,-1.);  % H_5 
-\draw (3.872983346207417,1.) -- (-3.872983346207417,1.);  % H_6 
+\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
+\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
+\draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
+\draw (1.,3.872) -- (1.,-3.872);  % H_4 
+\draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
+\draw (3.872,1.) -- (-3.872,1.);  % H_6 
+
 \end{tikzpicture}
+
 </pre></div>
 
 <p><a id="X858205A37B7EB5FA" name="X858205A37B7EB5FA"></a></p>
