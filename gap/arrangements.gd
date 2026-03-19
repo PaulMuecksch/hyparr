@@ -122,6 +122,16 @@ DeclareGlobalFunction( "HypArr_AddHToL" );
 DeclareGlobalFunction( "tnow");
 DeclareGlobalFunction("cj");
 
+DeclareGlobalFunction("RotTozMat");
+DeclareGlobalFunction("ctf");
+
+#! @Arguments A
+#! @Returns A string.
+#! @Description
+#! Generates tikz-code 
+#! for a nice projective picture of the real 3-arrangement.
+DeclareGlobalFunction("DrawLatex3Arr");
+
 #! @Arguments Intgers p,q,l
 #! @Returns A hyperplane arrangement.
 #! @Description

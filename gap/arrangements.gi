@@ -460,3 +460,261 @@ end);
 InstallGlobalFunction(tnow,function()
     return Runtimes().user_time;;
 end);
+
+####################################################################################################
+## Drawing LaTeX Pictures
+## 
+####################################################################################################
+
+# Rotating normal of a distinguished hyperplane to the z-axis
+InstallGlobalFunction(RotTozMat,
+function(t)
+local nt,i,nv,P,r,v,v1,v2,v3,B,calpha,salpha,DD,Dnt;;
+
+	# normal for the plane spanned by t and the z-axis
+	r:=HypArr_wg([t,[0,0,1]]);;
+
+	# length of t
+	nt:=Sqrt(t*t);;
+
+	# matrix giving the dilation in direction t
+	Dnt:=IdentityMat(3);;
+	Dnt[3][3]:=nt;;
+
+	# t not on the z axis
+	if r<>[0,0,0] then
+	calpha:=t[3]/nt;;
+	salpha:=Sqrt(1-calpha^2);;
+	else
+	return Dnt;;
+	fi;;
+	# axis of rotation given by r<>0
+
+	# look for the fist non-zero entry
+	i:=1;;
+	while r[i]=0 do
+	i:=i+1;;
+	od;
+
+	# swith 1 with the non-zero index
+	if i=1 then
+	P:=IdentityMat(3);;
+	elif i>3 then 
+	return fail; 
+	else
+	P:=PermutationMat((1,i),3);;
+	fi;;
+	v:=P*ShallowCopy(r);;
+
+	# normalized vector
+	v1:=1/Sqrt(v*v)*v;;
+
+	# orthogonal basis for v^\perp
+	v2:=[-v[2]/v[1],1,0];;
+	v2:=1/Sqrt(v2*v2)*v2;;
+	v3:=[-v[3]/v[1],0,1];;
+	v3:=1/Sqrt(v3*v3)*v3;;
+	B:=TransposedMat([v1,v2,v3]);;
+
+	# cos and sin of alpha
+	#cq := 1/2*(zeta^p + zeta^(-p));;
+	#sq := 1/(2*E(4))*(zeta^p - zeta^(-p));;
+
+
+
+	# Rotation matrix DD with resp to B
+	DD:=[[1,0,0],[0,calpha,-salpha],[0,salpha,calpha]];;
+	# Matrix D with resp to the standard basis
+	#D := B*DD*(B^(-1));;
+	return Dnt*P*B*DD*(B^(-1));;
+end);
+
+InstallGlobalFunction(ctf, 
+function(T)
+	if IsList(T) then
+		return List(T,x->ctf(x));
+	else 
+		return CCToFloat(T);
+	fi;
+end);
+	
+
+InstallGlobalFunction(DrawLatex3Arr,
+function(arg) # function(A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]])
+local A,s,ip,Hind,disthv,
+	#TM,
+	R,RR,r1,r2,v,vv,v2d,sp,t,cs,cf,
+	a,b,c,
+	x1,x2,y1,y2,
+	xc1,xc2,yc1,yc2,
+	p, p1,p2,p3, i, j ,n, k, sg,
+	rinf,xyinf,
+	px,py,sv,
+    Mind, MarkHs;
+	
+	if IsList(arg) then
+		if Length(arg)=0 then
+			return fail;
+		else 
+			if IsReal(arg[1]) then
+				A:=arg[1];;
+			else
+				return fail;
+			fi;
+			s:=1;;
+			ip:=0;;
+			Hind:=0;;
+			disthv:=[0,0,1];;
+			Mind:=0;;
+			if Length(arg)=2 then
+				s:=arg[2];;
+			elif Length(arg)=3 then
+				s:=arg[2];;
+				ip:=arg[3];;
+			elif Length(arg)=4 then
+				s:=arg[2];;
+				ip:=arg[3];;
+				Hind:=arg[4];;			
+			elif Length(arg)=5 then
+				s:=arg[2];;
+				ip:=arg[3];;
+				Hind:=arg[4];;
+				disthv:=arg[5];;			
+			elif Length(arg)=6 then
+				s:=arg[2];;
+				ip:=arg[3];;
+				Hind:=arg[4];;
+				disthv:=arg[5];;
+                Mind:=1;;
+                MarkHs:=arg[6];;
+			fi;
+		fi;;
+	fi;;
+	
+	R:=List(ShallowCopy(Roots(A)),x->RotTozMat(disthv)*x);;
+
+	sp:="\\begin{tikzpicture}[scale=\\sc]\n";;
+	
+	RR:=ctf(R);;
+	
+	r1:=4.0;;
+	
+	for vv in RR do
+		if AbsoluteValue(vv[1]^2 + vv[2]^2) < 0.0001 then
+			rinf:=String(18/17*r1);;
+			#xyinf:=String(Sqrt(2.0)/2*18/17*r1+0.35);;
+			xyinf := String(Sqrt(2.0)/2*18/17*r1);;
+            
+            
+            if Mind=1 and Position(RR,vv) in MarkHs then
+			if Hind=1 then
+                sp:=Concatenation(sp,
+                    "\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
+                    "\\node [above right] at (",xyinf,",",xyinf,") {$\\infty =$ \\small $",String(Position(RR,vv))," $};  % H_",String(Position(RR,vv))," \n");;
+			else
+				sp:=Concatenation(sp,
+					"\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
+					"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty$};  % H_",String(Position(RR,vv))," \n");;
+			fi;;
+			else
+			if Hind=1 then
+                sp:=Concatenation(sp,
+                    "\\draw (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
+                    "\\node [above right] at (",xyinf,",",xyinf,") {$\\infty =$ \\small $",String(Position(RR,vv))," $};  % H_",String(Position(RR,vv))," \n");;
+			else
+				sp:=Concatenation(sp,
+					"\\draw (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
+					"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty$};  % H_",String(Position(RR,vv))," \n");;
+			fi;;
+			fi;;
+		else
+			t:=1/Sqrt( vv[1]^2 + vv[2]^2 );;
+		
+			v:=t*vv;;
+		
+			r2:=-s*v[3];;
+		
+			if v[2]^2*r2^2 - (r2^2 - r1^2*v[1]^2) > 0.00001 or v[1]^2*r2^2 - (r2^2 - r1^2*v[2]^2) > 0.00001 then
+				if AbsoluteValue(v[1]) > 0.0001 then 
+					yc1:= v[2]*r2 + Sqrt( v[2]^2*r2^2 - (r2^2 - r1^2*v[1]^2) );;
+					yc2:= v[2]*r2 - Sqrt( v[2]^2*r2^2 - (r2^2 - r1^2*v[1]^2) );;
+					xc1:= (r2 - v[2]*yc1)/v[1];
+					xc2:= (r2 - v[2]*yc2)/v[1];
+				elif AbsoluteValue(v[2]) > 0.0001 then
+					xc1:= v[1]*r2 + Sqrt( v[1]^2*r2^2 - (r2^2 - r1^2*v[2]^2) );;
+					xc2:= v[1]*r2 - Sqrt( v[1]^2*r2^2 - (r2^2 - r1^2*v[2]^2) );;
+					yc1:= (r2 - v[1]*xc1)/v[2];
+					yc2:= (r2 - v[1]*xc2)/v[2];
+				fi;
+	
+				if AbsoluteValue(xc1) < 0.0001 then xc1:=0.0;; fi;;
+				if AbsoluteValue(xc2) < 0.0001 then xc2:=0.0;; fi;;
+				if AbsoluteValue(yc1) < 0.0001 then yc1:=0.0;; fi;;
+				if AbsoluteValue(yc2) < 0.0001 then yc2:=0.0;; fi;;
+				x1:=String(xc1);
+				y1:=String(yc1);
+				x2:=String(xc2);
+				y2:=String(yc2);
+
+                if Mind=1 and Position(RR,vv) in MarkHs then
+                    sp:=Concatenation(sp,"\\draw[color=red] (",x1,",",y1,") -- (",x2,",",y2,");  % H_",String(Position(RR,vv))," \n");;
+                else
+                    sp:=Concatenation(sp,"\\draw (",x1,",",y1,") -- (",x2,",",y2,");  % H_",String(Position(RR,vv))," \n");;
+				fi;;
+
+                if Hind=1 then
+					#\node at (4.,0.) {\tiny$1$};
+										
+					if AbsoluteValue(v[1]) > 0.0001 then 
+						yc1:= v[2]*r2 + Sqrt( v[2]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[1]^2) );;
+						yc2:= v[2]*r2 - Sqrt( v[2]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[1]^2) );;
+						xc1:= (r2 - v[2]*yc1)/v[1];
+						xc2:= (r2 - v[2]*yc2)/v[1];
+					elif AbsoluteValue(v[2]) > 0.0001 then
+						xc1:= v[1]*r2 + Sqrt( v[1]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[2]^2) );;
+						xc2:= v[1]*r2 - Sqrt( v[1]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[2]^2) );;
+						yc1:= (r2 - v[1]*xc1)/v[2];
+						yc2:= (r2 - v[1]*xc2)/v[2];
+					fi;
+	
+					if AbsoluteValue(xc1) < 0.0001 then xc1:=0.0;; fi;;
+					if AbsoluteValue(xc2) < 0.0001 then xc2:=0.0;; fi;;
+					if AbsoluteValue(yc1) < 0.0001 then yc1:=0.0;; fi;;
+					if AbsoluteValue(yc2) < 0.0001 then yc2:=0.0;; fi;;
+					x1:=String(xc1);
+					y1:=String(yc1);
+					x2:=String(xc2);
+					y2:=String(yc2);
+					
+					if x1>=0 then
+						sp:=Concatenation(sp,"\\node at (",x2,",",y2,") {\\small $",String(Position(RR,vv)),"$}; \n");;
+					else
+						sp:=Concatenation(sp,"\\node at (",x1,",",y1,") {\\small $",String(Position(RR,vv)),"$}; \n");;
+					fi;
+				fi;;
+			else
+				sp:=Concatenation(sp,"% H_",String(Position(RR,vv))," out of draw area \n");;
+			fi;
+		fi;
+		
+	od;
+	sp:=Concatenation(sp, "\n");;
+	if ip=1 then
+		for sv in IntersectionLattice(A)[2] do
+			a:=ctf(NullspaceMat(TransposedMat(R{sv}))[1]);;
+			if AbsoluteValue(a[3]) > 0.0001 and a[1]^2+a[2]^2 < (r1/s)^2 then
+				px:=String(s*a[1]/a[3]);;
+				py:=String(s*a[2]/a[3]);;
+				if AbsoluteValue(s*a[1]/a[3]) < 0.0001 then px:="0.0";; fi;;
+				if AbsoluteValue(s*a[2]/a[3]) < 0.0001 then py:="0.0";; fi;;
+				sp:=Concatenation(sp, "\\fill[red] (",px,",",py,") circle[radius=2pt];  % P",String(sv)," \n");;
+			fi;	
+		od;;
+		sp:=Concatenation(sp, "\n");;
+	fi;
+	
+	sp:=Concatenation(sp, "\\end{tikzpicture}\n");;
+
+	return sp;
+	
+end);;
