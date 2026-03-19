@@ -105,7 +105,7 @@ DeclareProperty("OMIsLinear", IsOrientedMatroid);
 
 #################################
 ##
-## @Section Global methods
+#! @Section Global methods
 ##
 #################################
 

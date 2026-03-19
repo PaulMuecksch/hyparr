@@ -110,7 +110,7 @@ DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 #################################
 ##
-## @Section Global methods
+#! @Section Global methods
 ##
 #################################
 
@@ -130,6 +130,19 @@ DeclareGlobalFunction("ctf");
 #! @Description
 #! Generates tikz-code 
 #! for a nice projective picture of the real 3-arrangement.
+#! @BeginExampleSession
+# gap> A:=AGpql(2,2,3);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> Print(DrawLatex3Arr(A));
+#! \begin{tikzpicture}[scale=\sc]
+#! \draw (-2.8284271247461898,2.8284271247461898) -- (2.8284271247461898,-2.8284271247461898);  % H_1 
+#! \draw (2.8284271247461898,2.8284271247461898) -- (-2.8284271247461898,-2.8284271247461898);  % H_2 
+#! \draw (-1.,3.872983346207417) -- (-1.,-3.872983346207417);  % H_3 
+#! \draw (1.,3.872983346207417) -- (1.,-3.872983346207417);  % H_4 
+#! \draw (3.872983346207417,-1.) -- (-3.872983346207417,-1.);  % H_5 
+#! \draw (3.872983346207417,1.) -- (-3.872983346207417,1.);  % H_6 
+#! \end{tikzpicture}
+#! @EndExampleSession
 DeclareGlobalFunction("DrawLatex3Arr");
 
 #! @Arguments Intgers p,q,l

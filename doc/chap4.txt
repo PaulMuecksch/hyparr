@@ -69,7 +69,7 @@
   [33X[0;0YComputes[133X
   
   
-  [1X4.2 [33X[0;0YProperties[133X[101X
+  [1X4.2 [33X[0;0YGlobal methods[133X[101X
   
   [1X4.2-1 cosn[101X
   

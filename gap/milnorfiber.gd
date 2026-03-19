@@ -20,7 +20,6 @@
 #! Computes 
 DeclareAttribute("MilnorFiberComplex", IsOrientedMatroid);
 
-
 #! @Arguments 
 #! @Returns 
 #! @Description
@@ -29,7 +28,7 @@ DeclareAttribute("MilnorFiberComplex", IsHyperplaneArrangement);
 
 #################################
 ##
-## @Section Global methods
+#! @Section Global methods
 ##
 #################################
 

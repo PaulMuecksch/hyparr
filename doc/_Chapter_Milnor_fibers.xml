@@ -27,6 +27,12 @@
 </ManSection>
 
 
+</Section>
+
+
+<Section Label="Chapter_Milnor_fibers_Section_Global_methods">
+<Heading>Global methods</Heading>
+
 <ManSection>
   <Func Arg="" Name="rkSubDivCodim1" />
  <Description>

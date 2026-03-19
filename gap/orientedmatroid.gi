@@ -84,7 +84,7 @@ InstallMethod(ViewObj,
 function(FP)
 local GSet;
     GSet := FPGroundset(FP);;
-    Print("<FacePoset of rank ",
+    Print("<FacePoset of dimension ",
           Length(GSet)-1," with f-vector ",List(GSet,x->Length(x)),">");
 end);
 

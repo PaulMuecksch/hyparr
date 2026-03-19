@@ -21,19 +21,22 @@
   
   [33X[0;0YComputes[133X
   
-  [1X3.1-3 rkSubDivCodim1[101X
+  
+  [1X3.2 [33X[0;0YGlobal methods[133X[101X
+  
+  [1X3.2-1 rkSubDivCodim1[101X
   
   [33X[1;0Y[29X[2XrkSubDivCodim1[102X(  ) [32X function[133X
   
   [33X[0;0YComputes[133X
   
-  [1X3.1-4 RUp[101X
+  [1X3.2-2 RUp[101X
   
   [33X[1;0Y[29X[2XRUp[102X(  ) [32X function[133X
   
   [33X[0;0YComputes[133X
   
-  [1X3.1-5 MCpxOF[101X
+  [1X3.2-3 MCpxOF[101X
   
   [33X[1;0Y[29X[2XMCpxOF[102X(  ) [32X function[133X
   

@@ -94,8 +94,9 @@
 </Section>
 
 
-<Section Label="Chapter_Oriented_Matroids_Section_Properties">
-<Heading>Properties</Heading>
+
+<Section Label="Chapter_Oriented_Matroids_Section_Global_methods">
+<Heading>Global methods</Heading>
 
 <ManSection>
   <Func Arg="" Name="cosn" />
