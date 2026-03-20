@@ -30,7 +30,7 @@ gap> OMRank(OM);
 
 
 <ManSection>
-  <Attr Arg="OM" Name="OMGroundset" Label="for IsOrientedMatroid"/>
+  <Attr Arg="OM" Name="OMGroundSet" Label="for IsOrientedMatroid"/>
  <Returns>A list
 </Returns>
  <Description>
@@ -38,7 +38,7 @@ gap> OMRank(OM);
 <Example><![CDATA[
 gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
 <OrientedMatroid: 6 elements, rank 3>
-gap> OMGroundset(OM);
+gap> OMGroundSet(OM);
 [ 1, 2, 3, 4, 5, 6 ]
 ]]></Example>
 
@@ -178,7 +178,7 @@ gap> OMCovectors(O);
  3. Defines an order function on the cells to capture the face poset structure, using <C>OMOperation</C> and <C>OrderCovec</C>.
 <P/>
  4. Returns an object of type <C>FacePosetFamily</C> representing the Salvetti complex, with its ground set stored in 
-   <C>grgroundset</C> and the order function in <C>orderfunction</C>.
+   <C>grGroundSet</C> and the order function in <C>orderfunction</C>.
 <P/>
 <Example><![CDATA[
 gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
@@ -193,7 +193,7 @@ gap> SalvettiComplex(O);
 
 
 <ManSection>
-  <Attr Arg="FP" Name="FPGroundset" Label="for IsFacePoset"/>
+  <Attr Arg="FP" Name="FPGroundSet" Label="for IsFacePoset"/>
  <Returns>A list
 </Returns>
  <Description>
@@ -201,7 +201,7 @@ gap> SalvettiComplex(O);
 <Example><![CDATA[
 gap> S := SalvettiComplex(O);
 <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
-gap> FPGroundset(S);
+gap> FPGroundSet(S);
 [
   [ 
     [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 

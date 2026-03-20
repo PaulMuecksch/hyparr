@@ -7,7 +7,7 @@
   [2XDimension[102X, for IsHyperplaneArrangement 2.1-1 
   [2XDrawLatex3Arr[102X 2.2-1 
   [2XEssentialization[102X 2.2-5 
-  [2XFPGroundset[102X, for IsFacePoset 4.1-9 
+  [2XFPGroundSet[102X, for IsFacePoset 4.1-9 
   [2XFPOrder[102X, for IsFacePoset 4.1-10 
   [2XFPtoCWCpx[102X 3.1-3 
   [2XHArrResHind[102X 2.2-3 
@@ -23,7 +23,7 @@
   [2XOMCocircuits[102X, for IsOrientedMatroid 4.1-5 
   [2XOMCovectors[102X, for IsOrientedMatroid 4.1-7 
   [2XOMGeomLattice[102X, for IsOrientedMatroid 4.1-4 
-  [2XOMGroundset[102X, for IsOrientedMatroid 4.1-2 
+  [2XOMGroundSet[102X, for IsOrientedMatroid 4.1-2 
   [2XOMIsLinear[102X, for IsOrientedMatroid 4.2-1 
   [2XOMLForms[102X, for IsOrientedMatroid 4.1-3 
   [2XOMOperation[102X 4.3-1 

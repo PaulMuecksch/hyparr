@@ -595,11 +595,11 @@ An integer
 
  
 
-\subsection{\textcolor{Chapter }{OMGroundset (for IsOrientedMatroid)}}
+\subsection{\textcolor{Chapter }{OMGroundSet (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 2 ]}\nobreak
 \hyperdef{L}{X78C0E4A0861CAD2F}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundset({\mdseries\slshape OM})\index{OMGroundset@\texttt{OMGroundset}!for IsOrientedMatroid}
-\label{OMGroundset:for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundSet({\mdseries\slshape OM})\index{OMGroundSet@\texttt{OMGroundSet}!for IsOrientedMatroid}
+\label{OMGroundSet:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
 \textbf{\indent Returns:\ }
 A list 
@@ -610,7 +610,7 @@ A list
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
   <OrientedMatroid: 6 elements, rank 3>
-  !gapprompt@gap>| !gapinput@OMGroundset(OM);|
+  !gapprompt@gap>| !gapinput@OMGroundSet(OM);|
   [ 1, 2, 3, 4, 5, 6 ]
 \end{Verbatim}
  }
@@ -773,7 +773,7 @@ cells of the complex.
  3. Defines an order function on the cells to capture the face poset structure,
 using \texttt{OMOperation} and \texttt{OrderCovec}. 
 
- 4. Returns an object of type \texttt{FacePosetFamily} representing the Salvetti complex, with its ground set stored in \texttt{grgroundset} and the order function in \texttt{orderfunction}. 
+ 4. Returns an object of type \texttt{FacePosetFamily} representing the Salvetti complex, with its ground set stored in \texttt{grGroundSet} and the order function in \texttt{orderfunction}. 
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
@@ -786,11 +786,11 @@ using \texttt{OMOperation} and \texttt{OrderCovec}.
 
  
 
-\subsection{\textcolor{Chapter }{FPGroundset (for IsFacePoset)}}
+\subsection{\textcolor{Chapter }{FPGroundSet (for IsFacePoset)}}
 \logpage{[ 4, 1, 9 ]}\nobreak
 \hyperdef{L}{X85AB2A797ABE8967}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundset({\mdseries\slshape FP})\index{FPGroundset@\texttt{FPGroundset}!for IsFacePoset}
-\label{FPGroundset:for IsFacePoset}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundSet({\mdseries\slshape FP})\index{FPGroundSet@\texttt{FPGroundSet}!for IsFacePoset}
+\label{FPGroundSet:for IsFacePoset}
 }\hfill{\scriptsize (attribute)}}\\
 \textbf{\indent Returns:\ }
 A list 
@@ -801,7 +801,7 @@ A list
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@S := SalvettiComplex(O);|
   <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
-  !gapprompt@gap>| !gapinput@FPGroundset(S);|
+  !gapprompt@gap>| !gapinput@FPGroundSet(S);|
   [
     [ 
       [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 

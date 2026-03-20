@@ -19,7 +19,7 @@
 
   \indexspace
 
-  \item \texttt  {FPGroundset}
+  \item \texttt  {FPGroundSet}
     \subitem for IsFacePoset, \hyperpage{12}
   \item \texttt  {FPOrder}
     \subitem for IsFacePoset, \hyperpage{13}
@@ -60,7 +60,7 @@
     \subitem for IsOrientedMatroid, \hyperpage{12}
   \item \texttt  {OMGeomLattice}
     \subitem for IsOrientedMatroid, \hyperpage{11}
-  \item \texttt  {OMGroundset}
+  \item \texttt  {OMGroundSet}
     \subitem for IsOrientedMatroid, \hyperpage{10}
   \item \texttt  {OMIsLinear}
     \subitem for IsOrientedMatroid, \hyperpage{13}

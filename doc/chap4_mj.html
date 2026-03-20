@@ -29,14 +29,14 @@
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7E30B85C7CE42908">4.1-1 OMRank</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X78C0E4A0861CAD2F">4.1-2 OMGroundset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X78C0E4A0861CAD2F">4.1-2 OMGroundSet</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X86AAB8F480E92ABB">4.1-3 OMLForms</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X81CC016D818B3068">4.1-4 OMGeomLattice</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X83F110A97A80B140">4.1-5 OMCocircuits</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B35E88A79675D1E">4.1-6 TopeGraph</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B2D2370811476C9">4.1-7 OMCovectors</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7ED4D5138012EB6C">4.1-8 SalvettiComplex</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X85AB2A797ABE8967">4.1-9 FPGroundset</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X85AB2A797ABE8967">4.1-9 FPGroundSet</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7E28E057841D6ECD">4.1-10 FPOrder</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X871597447BB998A1">4.2 <span class="Heading">Properties</span></a>
@@ -87,9 +87,9 @@
 
 <p><a id="X78C0E4A0861CAD2F" name="X78C0E4A0861CAD2F"></a></p>
 
-<h5>4.1-2 OMGroundset</h5>
+<h5>4.1-2 OMGroundSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGroundset</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGroundSet</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A list</p>
 
 <p>Returns the ground set of the oriented matroid OM.</p>
@@ -98,7 +98,7 @@
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,2,3); OM := OrientedMatroid(A);</span>
 &lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMGroundset(OM);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMGroundSet(OM);</span>
 [ 1, 2, 3, 4, 5, 6 ]
 </pre></div>
 
@@ -217,7 +217,7 @@ true
 
 <p>3. Defines an order function on the cells to capture the face poset structure, using <code class="code">OMOperation</code> and <code class="code">OrderCovec</code>.</p>
 
-<p>4. Returns an object of type <code class="code">FacePosetFamily</code> representing the Salvetti complex, with its ground set stored in <code class="code">grgroundset</code> and the order function in <code class="code">orderfunction</code>.</p>
+<p>4. Returns an object of type <code class="code">FacePosetFamily</code> representing the Salvetti complex, with its ground set stored in <code class="code">grGroundSet</code> and the order function in <code class="code">orderfunction</code>.</p>
 
 
 <div class="example"><pre>
@@ -229,9 +229,9 @@ true
 
 <p><a id="X85AB2A797ABE8967" name="X85AB2A797ABE8967"></a></p>
 
-<h5>4.1-9 FPGroundset</h5>
+<h5>4.1-9 FPGroundSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPGroundset</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPGroundSet</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A list</p>
 
 <p>Returns the ground set of the face poset FP.</p>
@@ -240,7 +240,7 @@ true
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := SalvettiComplex(O);</span>
 &lt;FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FPGroundset(S);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FPGroundSet(S);</span>
 [
   [ 
     [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 

@@ -54,14 +54,14 @@
   4 [33X[0;0YOriented Matroids[133X
     4.1 [33X[0;0YAttributes[133X
       4.1-1 OMRank
-      4.1-2 OMGroundset
+      4.1-2 OMGroundSet
       4.1-3 OMLForms
       4.1-4 OMGeomLattice
       4.1-5 OMCocircuits
       4.1-6 TopeGraph
       4.1-7 OMCovectors
       4.1-8 SalvettiComplex
-      4.1-9 FPGroundset
+      4.1-9 FPGroundSet
       4.1-10 FPOrder
     4.2 [33X[0;0YProperties[133X
       4.2-1 OMIsLinear

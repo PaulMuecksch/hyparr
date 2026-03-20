@@ -22,9 +22,9 @@
     [4X[28X3[128X[104X
   [4X[32X[104X
   
-  [1X4.1-2 OMGroundset[101X
+  [1X4.1-2 OMGroundSet[101X
   
-  [33X[1;0Y[29X[2XOMGroundset[102X( [3XOM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOMGroundSet[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA list[133X
   
   [33X[0;0YReturns the ground set of the oriented matroid OM.[133X
@@ -32,7 +32,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA := AGpql(2,2,3); OM := OrientedMatroid(A);[127X[104X
     [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XOMGroundset(OM);[127X[104X
+    [4X[25Xgap>[125X [27XOMGroundSet(OM);[127X[104X
     [4X[28X[ 1, 2, 3, 4, 5, 6 ][128X[104X
   [4X[32X[104X
   
@@ -149,7 +149,7 @@
   structure, using [10XOMOperation[110X and [10XOrderCovec[110X.[133X
   
   [33X[0;0Y4.  Returns  an  object  of  type  [10XFacePosetFamily[110X representing the Salvetti
-  complex, with its ground set stored in [10Xgrgroundset[110X and the order function in
+  complex, with its ground set stored in [10XgrGroundSet[110X and the order function in
   [10Xorderfunction[110X.[133X
   
   [4X[32X  Example  [32X[104X
@@ -159,9 +159,9 @@
     [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
   [4X[32X[104X
   
-  [1X4.1-9 FPGroundset[101X
+  [1X4.1-9 FPGroundSet[101X
   
-  [33X[1;0Y[29X[2XFPGroundset[102X( [3XFP[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XFPGroundSet[102X( [3XFP[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA list[133X
   
   [33X[0;0YReturns the ground set of the face poset FP.[133X
@@ -169,7 +169,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XS := SalvettiComplex(O);[127X[104X
     [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
-    [4X[25Xgap>[125X [27XFPGroundset(S);[127X[104X
+    [4X[25Xgap>[125X [27XFPGroundSet(S);[127X[104X
     [4X[28X[[128X[104X
     [4X[28X  [ [128X[104X
     [4X[28X    [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], [128X[104X
