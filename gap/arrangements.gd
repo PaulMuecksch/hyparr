@@ -99,6 +99,12 @@ DeclareAttribute("CharPoly", IsHyperplaneArrangement);
 #!
 #! These invariants can be used to compare arrangements or detect
 #! combinatorial similarities between intersection lattices.
+#! @BeginExampleSession
+#! gap> A:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);
+#! <HyperplaneArrangement: 4 hyperplanes in 3-space>
+#! gap> MSetInvL(A);
+#! [ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ]
+#! @EndExampleSession
 DeclareAttribute("MSetInvL", IsHyperplaneArrangement );
 
 #! @Arguments A
@@ -113,6 +119,12 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 #! @Description
 #! Constructs the Salvetti Complex.
 #! If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
+#! @BeginExampleSession
+#! gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! gap> SalvettiComplex(A);
+#! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+#! @EndExampleSession
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 #################################

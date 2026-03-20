@@ -96,6 +96,14 @@ t^3-6*t^2+11*t-6
 <P/>
  These invariants can be used to compare arrangements or detect
  combinatorial similarities between intersection lattices.
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);
+<HyperplaneArrangement: 4 hyperplanes in 3-space>
+gap> MSetInvL(A);
+[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ]
+]]></Example>
+
+
  </Description>
 </ManSection>
 
@@ -118,6 +126,14 @@ t^3-6*t^2+11*t-6
  <Description>
  Constructs the Salvetti Complex.
  If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+gap> SalvettiComplex(A);
+<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+]]></Example>
+
+
  </Description>
 </ManSection>
 

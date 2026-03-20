@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Global methods}}{5}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{DrawLatex3Arr}}{5}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}\textcolor {Chapter }{AGpql}}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrResHind}}{6}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrResHind}}{7}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{HArrResX}}{7}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}\textcolor {Chapter }{Essentialization}}{7}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Constructors}}{7}{section.2.3}%

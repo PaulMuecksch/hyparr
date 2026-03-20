@@ -261,7 +261,14 @@ arrangement \mbox{\texttt{\mdseries\slshape A}}.
 occur with a given number of defining hyperplanes. 
 
  These invariants can be used to compare arrangements or detect combinatorial
-similarities between intersection lattices. }
+similarities between intersection lattices. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MSetInvL(A);|
+  [ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ]
+\end{Verbatim}
+ }
 
  
 
@@ -292,7 +299,14 @@ FacePoset
 
 
 
- Constructs the Salvetti Complex. If \texttt{IsReal(A)} is false, then it returns \texttt{fail}. }
+ Constructs the Salvetti Complex. If \texttt{IsReal(A)} is false, then it returns \texttt{fail}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);|
+  <HyperplaneArrangement: 3 hyperplanes in 2-space>
+  !gapprompt@gap>| !gapinput@SalvettiComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+\end{Verbatim}
+ }
 
  }
 

@@ -82,6 +82,13 @@
   [33X[0;0YThese invariants can be used to compare arrangements or detect combinatorial
   similarities between intersection lattices.[133X
   
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XMSetInvL(A);[127X[104X
+    [4X[28X[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ][128X[104X
+  [4X[32X[104X
+  
   [1X2.1-6 IsReal[101X
   
   [33X[1;0Y[29X[2XIsReal[102X( [3XA[103X ) [32X property[133X
@@ -97,6 +104,13 @@
   
   [33X[0;0YConstructs  the  Salvetti  Complex.  If  [10XIsReal(A)[110X is false, then it returns
   [10Xfail[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[25Xgap>[125X [27XSalvettiComplex(A);[127X[104X
+    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
+  [4X[32X[104X
   
   
   [1X2.2 [33X[0;0YGlobal methods[133X[101X

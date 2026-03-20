@@ -133,6 +133,14 @@ t^3-6*t^2+11*t-6
 
 <p>These invariants can be used to compare arrangements or detect combinatorial similarities between intersection lattices.</p>
 
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MSetInvL(A);</span>
+[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ]
+</pre></div>
+
 <p><a id="X7E907A097A17195F" name="X7E907A097A17195F"></a></p>
 
 <h5>2.1-6 IsReal</h5>
@@ -150,6 +158,14 @@ t^3-6*t^2+11*t-6
 <p>Returns: FacePoset</p>
 
 <p>Constructs the Salvetti Complex. If <code class="code">IsReal(A)</code> is false, then it returns <code class="code">fail</code>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SalvettiComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]&gt;
+</pre></div>
 
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
 
