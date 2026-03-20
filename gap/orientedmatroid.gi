@@ -142,11 +142,12 @@ end);
 InstallMethod(OMCocircuits, 
     [ IsOrientedMatroid ],
 function(OM)
-    local L,r,n,T,LHs,CoCircs,m,mX,vm,D;
+    local L,Lk,r,n,T,LHs,CoCircs,m,mX,vm,D;
     L:=OMGeomLattice(OM);;
-    r:=Length(L);
-    n:=Length(L[1]);;
-    LHs:=L[r-1];;
+    Lk:=GLkFlats(L);;
+    r:=GLRank(L);
+    n:=Length(GLAtoms(L));;
+    LHs:=Lk(r-1);;
     CoCircs := [];;
     T:=NullspaceMat(TransposedMat(OMLForms(OM)));;
 
@@ -170,17 +171,18 @@ end);
 InstallMethod(OMCovectors, 
     [ IsOrientedMatroid ],
 function(OM)
-local ACs,GSet,L,r,n,m,mm,CsRkk,CsRkkp,k,Csinm,c,cn,i,cp,Fcn;;
-    L:=OMGeomLattice(OM);;
-    r:=Length(L);
-    n:=Length(L[1]);;
-    GSet:=List([1..n]);;
+local ACs,GSet,L,Lk,r,n,m,mm,CsRkk,CsRkkp,k,Csinm,c,cn,i,cp,Fcn;;
+    L := OMGeomLattice(OM);;
+    Lk:=GLkFlats(L);;
+    r:=GLRank(L);
+    n:=Length(GLAtoms(L));;
+    GSet:=GLAtoms(L);;
     CsRkk:=OMCocircuits(OM);;
-    ACs := Concatenation([[List([1..n],x->0)]],[CsRkk]);;
+    ACs := Concatenation([[List(GSet,x->0)]],[CsRkk]);;
     for k in Reversed([1..r-2]) do
         CsRkkp:=[];;
-        for m in L[k] do
-            for mm in L[k+2]{Positions(List(L[k+2],x->IsSubset(x,m)),true)} do
+        for m in Lk(k) do
+            for mm in Lk(k+2){Positions(List(Lk(k+2),x->IsSubset(x,m)),true)} do
             Csinm := CsRkk{Positions(List(CsRkk,c->IsSubset(Positions(c,0),m) and IsSubset(mm,Positions(c,0))),true)};
             c:=Csinm[1];;
             for i in List([1..Length(Csinm)/2-1],x->2*x+1) do

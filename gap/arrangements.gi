@@ -5,11 +5,11 @@
 # #
 
 
-
-# # generation of a hyperplane arrangement A given by a set of linear forms r
-
 BindGlobal("HyperplaneArrangementFamily",
     NewFamily("HyperplaneArrangementFamily"));
+
+BindGlobal("GeomLatticeFamily",
+    NewFamily("GeomLatticeFamily"));
 
 # test if the linear forms given by l are pairwise linear independent
 # if not return a pw linear ind. subset of l
@@ -84,12 +84,19 @@ end);
 InstallMethod(ViewObj,
     [IsHyperplaneArrangement],
 function(A)
-
     Print("<HyperplaneArrangement: ",
           Length(Roots(A)), " hyperplanes in ",
           Dimension(A), "-space>");
-
 end);
+
+InstallMethod(ViewObj,
+    [IsGeomLattice],
+function(L)
+    Print("<Geometric lattice: ",
+          Length(GLAtoms(L)), " atoms, rank ",
+          GLRank(L), ">");
+end);
+
 
 # Some basic attributes of hyperplane arrangements
 
@@ -105,6 +112,33 @@ InstallMethod(Dimension,
 InstallMethod(IsReal,
     [IsHyperplaneArrangement],
     A -> not(ForAny(Roots(A),r->ForAny(r,x->x<>cj(x)))) );
+
+
+# Some basic attributes of geometric lattices
+
+InstallMethod(GLGroundSet,
+    [IsGeomLattice],
+    L -> L!.grGroundSet);
+    
+InstallMethod(GLAtoms,
+    [IsGeomLattice],
+    L -> L!.atoms);
+
+InstallMethod(GLRank,
+    [IsGeomLattice],
+    L -> L!.rank);
+
+InstallMethod(GLkFlats,
+    [IsGeomLattice],
+function(L)
+local kFlatsFct, gset;
+	gset := GLGroundSet(L);;
+	kFlatsFct := function(k)
+		return gset[k];;
+	end;;
+	return kFlatsFct;;
+end);
+
 
 #####################################################################
 # HypArr_AddHToL(R, Lo, Hn)
@@ -222,7 +256,7 @@ InstallMethod(IntersectionLattice,
     [IsHyperplaneArrangement],
 function(A)
 
-    local R, Rt, r, Ls;
+    local R, Rt, r, Ls, type;
 
     # R  = list of defining linear forms (roots) of the arrangement
     R := ShallowCopy(Roots(A));
@@ -241,6 +275,17 @@ function(A)
         Add(Rt, r);
     od;
 
+	type := NewType(GeomLatticeFamily,
+                    IsGeomLatticeRep);
+
+    return Objectify(type,
+        rec(
+            grGroundSet := Ls,
+			rank := Length(Ls),
+			atoms := Concatenation(Ls[1])
+        )
+    );
+
     # The resulting lattice structure
     return Ls;
 
@@ -255,12 +300,11 @@ function(A)
         return A!.MSetInvL;
     fi;
 
-    L:=IntersectionLattice(A);;
+    L:=GLGroundSet(IntersectionLattice(A));;
 	I:=[];
 	for i in [1..Length(L)] do
 		Add(I,List(Set(List(L[i],x->Length(x))),x->[x,Length(Positions(List(L[i],x->Length(x)),x))]));
 	od;
-    # SetMSetInvL(A, I);
 	return I;
 end);
 
@@ -288,6 +332,27 @@ function(A)
 		An := HArrResHind(A,1);
 	    return CharPoly(AA) - CharPoly(An);
     fi;;
+end);
+
+## Factorization of an rational Polynomial
+
+BindGlobal("facQ",
+function(g)
+	return Reversed(Factors(PolynomialRing(Rationals,"t"),g));
+end);
+
+InstallMethod(ExpArr,
+	[ IsHyperplaneArrangement ],
+function(A)
+local expA;;
+	if IsBound(A!.exp) then
+		return A!.exp;;
+	fi;;
+    expA:=List(facQ(CharPoly(A)),x->-Value(x,0));;
+    if Length(expA)<>Dimension(A) then
+        return fail;
+    fi;;
+    return expA;;
 end);
 
 ####################################################################################################
@@ -419,31 +484,6 @@ local dim,x,y;
 	
 end);
 
-############################################################
-
-InstallGlobalFunction(AGpql,
-function(p,q,l)
-local C,c,v,i,roots;
-
-	if q<>p then
-		roots:=IdentityMat(l);
-	else
-		roots:=[];
-	fi;
-	
-	C := Combinations([1..l],2);
-	for c in C do
-		for i in [1..(Order(E(p)))] do
-			v :=0*[1..l];
-			v[c[1]]:=1;
-			v[c[2]]:=-E(p)^i;
-			Add(roots,v);
-		od;
-	od;
-
-	return HyperplaneArrangement(roots);
-
-end);
 
 
 ## the complex conjugation
@@ -451,7 +491,6 @@ InstallGlobalFunction(cj,
 function(x)
 	return ComplexConjugate(x);
 end);
-
 
 #####################################################################################
 ## Timer
@@ -716,7 +755,7 @@ local A,s,ip,Hind,disthv,
 	od;
 	sp:=Concatenation(sp, "\n");;
 	if ip=1 then
-		for sv in IntersectionLattice(A)[2] do
+		for sv in GLGroundSet(IntersectionLattice(A))[2] do
 			a:=ctf(NullspaceMat(TransposedMat(R{sv}))[1]);;
 			if AbsoluteValue(a[3]) > 0.0001 and a[1]^2+a[2]^2 < (r1/s)^2 then
 				px:=String(s*a[1]/a[3]);;

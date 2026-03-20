@@ -35,15 +35,15 @@
       2.1-2 Roots
       2.1-3 IntersectionLattice
       2.1-4 CharPoly
-      2.1-5 MSetInvL
-      2.1-6 IsReal
-      2.1-7 SalvettiComplex
+      2.1-5 ExpArr
+      2.1-6 MSetInvL
+      2.1-7 IsReal
+      2.1-8 SalvettiComplex
     2.2 [33X[0;0YGlobal methods[133X
       2.2-1 DrawLatex3Arr
-      2.2-2 AGpql
-      2.2-3 HArrResHind
-      2.2-4 HArrResX
-      2.2-5 Essentialization
+      2.2-2 HArrResHind
+      2.2-3 HArrResX
+      2.2-4 Essentialization
     2.3 [33X[0;0YConstructors[133X
       2.3-1 HyperplaneArrangement
   3 [33X[0;0YMilnor fibers[133X
@@ -73,6 +73,10 @@
       4.3-5 SeparatingSet
     4.4 [33X[0;0YConstructors[133X
       4.4-1 OrientedMatroid
+  5 [33X[0;0YSpecial arrangements[133X
+    5.1 [33X[0;0YGlobal methods[133X
+      5.1-1 AGpql
+      5.1-2 SsS3
   
   
   [32X

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Special_arrangements">
+<Heading>Special arrangements</Heading>
+
+<P/>
+ The following describes functions to construct some special arrangements.
+<P/>
+<Section Label="Chapter_Special_arrangements_Section_Global_methods">
+<Heading>Global methods</Heading>
+
+<ManSection>
+  <Func Arg="p,q,l" Name="AGpql" />
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+  Constructs the reflection arrangement associated to the monomial
+  complex reflection group <M>G(p,q,l)</M>.
+  The hyperplanes are defined by equations of the form
+  <Display>
+     x_i = \zeta^k x_j
+  </Display>
+  where <M>\zeta</M> is a primitive <M>p</M>-th root of unity.
+<Example><![CDATA[
+gap> A := AGpql(2,1,3);
+ <HyperplaneArrangement: 9 hyperplanes in 3-space>
+gap> Roots(A);
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
+  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="n" Name="SsS3" />
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+  Generates the irreducible supersolvable simplicial arrangement
+  of rank 3 with n hyperplanes.
+  n must either even oder congruent 1 mod 4. 
+<Example><![CDATA[
+gap> A:=SsS3(9); Roots(A);
+<HyperplaneArrangement: 9 hyperplanes in 3-space>
+[ [ 0, 0, 1 ], [ 0, 1, 0 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 0 ], [ -1, 0, 0 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 0 ], [ 1/2*E(8)-1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ], 
+  [ 1/2*E(8)-1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

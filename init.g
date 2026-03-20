@@ -11,6 +11,7 @@
 #############################################################################
 
 ReadPackage("hyparr","gap/arrangements.gd");
+ReadPackage("hyparr","gap/specialarrs.gd");
 ReadPackage("hyparr","gap/orientedmatroid.gd");
 ReadPackage("hyparr","gap/milnorfiber.gd");
 

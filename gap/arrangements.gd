@@ -19,17 +19,28 @@
 # Declare the category
 DeclareCategory("IsHyperplaneArrangement", IsComponentObjectRep and IsAttributeStoringRep );
 
+DeclareCategory("IsGeomLattice", IsComponentObjectRep and IsAttributeStoringRep );
+
 # Declare the representation and its attribute accessor functions
 DeclareRepresentation(
     "IsHyperplaneArrangementRep",
     IsHyperplaneArrangement,
-    ["roots","dimension","lattice","charpoly","salcpx"]
+    ["roots","dimension","lattice","charpoly","salcpx","exp"]
+);
+
+DeclareRepresentation(
+    "IsGeomLatticeRep",
+    IsGeomLattice,
+    ["grGroundSet", "rank", "kFlats", "atoms"]
 );
 
 #################################
 ##
 #! @Section Attributes
 ##
+#################################
+
+#! @Subsection Attributes of arrangements
 #################################
 
 #! @Arguments A
@@ -69,10 +80,8 @@ DeclareAttribute("Roots", IsHyperplaneArrangement);
 #!
 #! @BeginExampleSession
 #! gap> A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);
-#!  gap> IntersectionLattice(A);
-#!  [ [ [ 1 ], [ 2 ], [ 3 ] ],
-#!    [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
-#!    [ [ 1, 2, 3 ] ] ]
+#! gap> IntersectionLattice(A);
+#! <Geometric lattice: 3 atoms, rank 2>
 #! @EndExampleSession
 DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement );
 
@@ -87,6 +96,21 @@ DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement );
 #! t^3-6*t^2+11*t-6
 #! @EndExampleSession
 DeclareAttribute("CharPoly", IsHyperplaneArrangement);
+
+
+#! @Arguments A
+#! @Returns a list of integers or fail
+#! @Description
+#! Returns <E>exponents</E> of the arrangement $\mathcal{A}$ if
+#! all the characteristic polynomial factors over the integers.
+#! @BeginExampleSession
+#! gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! gap> ExpArr(A);
+#! [ 1, 2 ]
+#! @EndExampleSession
+DeclareAttribute("ExpArr", IsHyperplaneArrangement);
+
 
 #! @Arguments A
 #! @Returns A list encoding multiset invariants of the intersection lattice.
@@ -126,6 +150,35 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 #! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
 #! @EndExampleSession
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
+
+
+
+#! @Subsection Attributes of geometric lattices
+#################################
+
+#! @Arguments L
+#! @Returns list of lists
+#! @Description
+#! Returns the ground set of the geometric lattice <A>L</A>.
+DeclareAttribute("GLGroundSet", IsGeomLattice);
+
+#! @Arguments L
+#! @Returns list
+#! @Description
+#! Returns the set of atoms of <A>L</A>.
+DeclareAttribute("GLAtoms", IsGeomLattice);
+
+#! @Arguments L
+#! @Returns a non-negative integer
+#! @Description
+#! Returns the rank of <A>L</A>.
+DeclareAttribute("GLRank", IsGeomLattice);
+
+#! @Arguments L
+#! @Returns a function
+#! @Description
+#! Returns a function extracting the flats of rank $k$ in <A>L</A>.
+DeclareAttribute("GLkFlats", IsGeomLattice);
 
 #################################
 ##
@@ -174,27 +227,6 @@ DeclareGlobalFunction("FloatStringCutoff");
 #! @EndLatexOnly
 #! 
 DeclareGlobalFunction("DrawLatex3Arr");
-
-#! @Arguments p,q,l
-#! @Returns A hyperplane arrangement.
-#! @Description
-#!  Constructs the reflection arrangement associated to the monomial
-#!  complex reflection group <M>G(p,q,l)</M>.
-#!  The hyperplanes are defined by equations of the form
-#!  <Display>
-#!     x_i = \zeta^k x_j
-#!  </Display>
-#!  where <M>\zeta</M> is a primitive <M>p</M>-th root of unity.
-#! @BeginExampleSession
-#! gap> A := AGpql(2,1,3);
-#!  <HyperplaneArrangement: 9 hyperplanes in 3-space>
-#! gap> Roots(A);
-#! [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
-#!   [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
-#!   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-#!
-#! @EndExampleSession
-DeclareGlobalFunction( "AGpql" );
 
 DeclareGlobalFunction( "HArrResHvec" );
 
@@ -261,6 +293,10 @@ DeclareOperation("HyperplaneArrangement", [ IsList ]);
 #################################
 # Declare display function for HyperplaneArrangement objects
 DeclareOperation("ViewObject", [ IsHyperplaneArrangement ]);
+
+
+# Declare display function for GeomLattice objects
+DeclareOperation("ViewObject", [ IsGeomLattice ]);
 
 ##
 ##  This program is free software: you can redistribute it and/or modify

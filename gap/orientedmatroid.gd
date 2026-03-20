@@ -337,8 +337,11 @@ DeclareGlobalFunction("SeparatingSet");
 #! @EndExampleSession
 DeclareOperation("OrientedMatroid", [IsList]);
 
-# Declare display function for HyperplaneArrangement objects
+# Declare display function for OrientedMatroid objects
 DeclareOperation("ViewObject", [IsOrientedMatroid]);
+
+# Declare display function for FacePoset objects
+DeclareOperation("ViewObject", [IsFacePoset]);
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

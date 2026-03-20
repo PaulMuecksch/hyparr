@@ -242,8 +242,30 @@ a univariate polynomial with integral coefficients.
 
  
 
-\subsection{\textcolor{Chapter }{MSetInvL (for IsHyperplaneArrangement)}}
+\subsection{\textcolor{Chapter }{ExpArr (for IsHyperplaneArrangement)}}
 \logpage{[ 2, 1, 5 ]}\nobreak
+\hyperdef{L}{X83DFD7407D949CD9}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{ExpArr({\mdseries\slshape A})\index{ExpArr@\texttt{ExpArr}!for IsHyperplaneArrangement}
+\label{ExpArr:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list of integers or fail 
+
+
+
+ Returns \emph{exponents} of the arrangement $\mathcal{A}$ if all the characteristic polynomial factors over the integers. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);|
+  <HyperplaneArrangement: 3 hyperplanes in 2-space>
+  !gapprompt@gap>| !gapinput@ExpArr(A);|
+  [ 1, 2 ]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{MSetInvL (for IsHyperplaneArrangement)}}
+\logpage{[ 2, 1, 6 ]}\nobreak
 \hyperdef{L}{X852CC1A8795FCD15}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MSetInvL({\mdseries\slshape A})\index{MSetInvL@\texttt{MSetInvL}!for IsHyperplaneArrangement}
 \label{MSetInvL:for IsHyperplaneArrangement}
@@ -272,7 +294,7 @@ similarities between intersection lattices.
  
 
 \subsection{\textcolor{Chapter }{IsReal (for IsHyperplaneArrangement)}}
-\logpage{[ 2, 1, 6 ]}\nobreak
+\logpage{[ 2, 1, 7 ]}\nobreak
 \hyperdef{L}{X7E907A097A17195F}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsReal({\mdseries\slshape A})\index{IsReal@\texttt{IsReal}!for IsHyperplaneArrangement}
 \label{IsReal:for IsHyperplaneArrangement}
@@ -288,7 +310,7 @@ the entries of the defining linear forms are real. }
  
 
 \subsection{\textcolor{Chapter }{SalvettiComplex (for IsHyperplaneArrangement)}}
-\logpage{[ 2, 1, 7 ]}\nobreak
+\logpage{[ 2, 1, 8 ]}\nobreak
 \hyperdef{L}{X8333113D7A7A3A91}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape A})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsHyperplaneArrangement}
 \label{SalvettiComplex:for IsHyperplaneArrangement}
@@ -357,36 +379,8 @@ real 3\texttt{\symbol{45}}arrangement.
 
  
 
-\subsection{\textcolor{Chapter }{AGpql}}
-\logpage{[ 2, 2, 2 ]}\nobreak
-\hyperdef{L}{X858205A37B7EB5FA}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape p, q, l})\index{AGpql@\texttt{AGpql}}
-\label{AGpql}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-A hyperplane arrangement. 
-
-
-
- Constructs the reflection arrangement associated to the monomial complex
-reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the form 
-\[ x_i = \zeta^k x_j \]
- where $\zeta$ is a primitive $p$\texttt{\symbol{45}}th root of unity. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A := AGpql(2,1,3);|
-   <HyperplaneArrangement: 9 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@Roots(A);|
-  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
-    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
-    [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-  
-\end{Verbatim}
- }
-
- 
-
 \subsection{\textcolor{Chapter }{HArrResHind}}
-\logpage{[ 2, 2, 3 ]}\nobreak
+\logpage{[ 2, 2, 2 ]}\nobreak
 \hyperdef{L}{X7CC338E67CE223FE}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResHind({\mdseries\slshape A})\index{HArrResHind@\texttt{HArrResHind}}
 \label{HArrResHind}
@@ -401,7 +395,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{HArrResX}}
-\logpage{[ 2, 2, 4 ]}\nobreak
+\logpage{[ 2, 2, 3 ]}\nobreak
 \hyperdef{L}{X784AA86286AA9DD8}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResX({\mdseries\slshape A, S})\index{HArrResX@\texttt{HArrResX}}
 \label{HArrResX}
@@ -416,7 +410,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{Essentialization}}
-\logpage{[ 2, 2, 5 ]}\nobreak
+\logpage{[ 2, 2, 4 ]}\nobreak
 \hyperdef{L}{X8221BCFC7DE0069A}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{Essentialization({\mdseries\slshape A})\index{Essentialization@\texttt{Essentialization}}
 \label{Essentialization}
@@ -1011,6 +1005,78 @@ hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}.
   <OrientedMatroid: 6 elements, rank 3>
   !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); OM:=OrientedMatroid(A);|
   <OrientedMatroid: 6 elements, rank 3>
+\end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Special arrangements}}\label{Chapter_Special_arrangements}
+\logpage{[ 5, 0, 0 ]}
+\hyperdef{L}{X7C9F5AAF83133F9A}{}
+{
+  
+
+ The following describes functions to construct some special arrangements. 
+
+ 
+\section{\textcolor{Chapter }{Global methods}}\label{Chapter_Special_arrangements_Section_Global_methods}
+\logpage{[ 5, 1, 0 ]}
+\hyperdef{L}{X80841F8D80722081}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{AGpql}}
+\logpage{[ 5, 1, 1 ]}\nobreak
+\hyperdef{L}{X858205A37B7EB5FA}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape p, q, l})\index{AGpql@\texttt{AGpql}}
+\label{AGpql}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Constructs the reflection arrangement associated to the monomial complex
+reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the form 
+\[ x_i = \zeta^k x_j \]
+ where $\zeta$ is a primitive $p$\texttt{\symbol{45}}th root of unity. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,1,3);|
+   <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@Roots(A);|
+  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
+    [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{SsS3}}
+\logpage{[ 5, 1, 2 ]}\nobreak
+\hyperdef{L}{X81AD6CA97F71ED33}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SsS3({\mdseries\slshape n})\index{SsS3@\texttt{SsS3}}
+\label{SsS3}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Generates the irreducible supersolvable simplicial arrangement of rank 3 with
+n hyperplanes. n must either even oder congruent 1 mod 4. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=SsS3(9); Roots(A);|
+  <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  [ [ 0, 0, 1 ], [ 0, 1, 0 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 0 ], [ -1, 0, 0 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 0 ], [ 1/2*E(8)-1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ], 
+    [ 1/2*E(8)-1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ] ]
 \end{Verbatim}
  }
 

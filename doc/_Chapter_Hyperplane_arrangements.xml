@@ -84,6 +84,25 @@ t^3-6*t^2+11*t-6
 
 
 <ManSection>
+  <Attr Arg="A" Name="ExpArr" Label="for IsHyperplaneArrangement"/>
+ <Returns>a list of integers or fail
+</Returns>
+ <Description>
+ Returns <E>exponents</E> of the arrangement <Math>\mathcal{A}</Math> if
+ all the characteristic polynomial factors over the integers.
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+gap> ExpArr(A);
+[ 1, 2 ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="A" Name="MSetInvL" Label="for IsHyperplaneArrangement"/>
  <Returns>A list encoding multiset invariants of the intersection lattice.
 </Returns>
@@ -175,33 +194,6 @@ gap> Print(DrawLatex3Arr(A));
  \includegraphics{./other/DrawLatex3Arr_Example.pdf}
 ]]></Alt>
 <P/>
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Func Arg="p,q,l" Name="AGpql" />
- <Returns>A hyperplane arrangement.
-</Returns>
- <Description>
-  Constructs the reflection arrangement associated to the monomial
-  complex reflection group <M>G(p,q,l)</M>.
-  The hyperplanes are defined by equations of the form
-  <Display>
-     x_i = \zeta^k x_j
-  </Display>
-  where <M>\zeta</M> is a primitive <M>p</M>-th root of unity.
-<Example><![CDATA[
-gap> A := AGpql(2,1,3);
- <HyperplaneArrangement: 9 hyperplanes in 3-space>
-gap> Roots(A);
-[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
-  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
-  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-
-]]></Example>
-
-
  </Description>
 </ManSection>
 
