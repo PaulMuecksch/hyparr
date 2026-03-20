@@ -29,10 +29,21 @@
 
   \indexspace
 
+  \item \texttt  {GLAtoms}
+    \subitem for IsGeomLattice, \hyperpage{6}
+  \item \texttt  {GLGroundSet}
+    \subitem for IsGeomLattice, \hyperpage{6}
+  \item \texttt  {GLkFlats}
+    \subitem for IsGeomLattice, \hyperpage{6}
+  \item \texttt  {GLRank}
+    \subitem for IsGeomLattice, \hyperpage{6}
+
+  \indexspace
+
   \item \texttt  {HArrResHind}, \hyperpage{7}
   \item \texttt  {HArrResX}, \hyperpage{7}
   \item \texttt  {HyperplaneArrangement}
-    \subitem for IsList, \hyperpage{7}
+    \subitem for IsList, \hyperpage{8}
 
   \indexspace
 

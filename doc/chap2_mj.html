@@ -36,6 +36,10 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X852CC1A8795FCD15">2.1-6 MSetInvL</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7E907A097A17195F">2.1-7 IsReal</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X8333113D7A7A3A91">2.1-8 SalvettiComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X83B4DD0E8325942E">2.1-9 GLGroundSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7A01B73E7BE22EDB">2.1-10 GLAtoms</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X83CB7161847F6FF7">2.1-11 GLRank</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X79CA2563782654EE">2.1-12 GLkFlats</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X80841F8D80722081">2.2 <span class="Heading">Global methods</span></a>
 </span>
@@ -85,7 +89,7 @@
 <h5>2.1-3 IntersectionLattice</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IntersectionLattice</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list of lists describing the intersections of <var class="Arg">A</var>.</p>
+<p>Returns: An object of type <code class="code">IsGeomLattice</code>.</p>
 
 <p>Computes the intersection lattice of the hyperplane arrangement <span class="SimpleMath">\(\mathcal{A}\)</span>.</p>
 
@@ -100,10 +104,8 @@
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);</span>
- gap&gt; IntersectionLattice(A);
- [ [ [ 1 ], [ 2 ], [ 3 ] ],
-   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
-   [ [ 1, 2, 3 ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IntersectionLattice(A);</span>
+&lt;Geometric lattice: 3 atoms, rank 2&gt;
 </pre></div>
 
 <p><a id="X8426CC4D7A8491A5" name="X8426CC4D7A8491A5"></a></p>
@@ -145,7 +147,7 @@ t^3-6*t^2+11*t-6
 <h5>2.1-6 MSetInvL</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MSetInvL</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list encoding multiset invariants of the intersection lattice.</p>
+<p>Returns: An object of type IsGeomLattice.</p>
 
 <p>Computes multiset invariants of the intersection lattice of the hyperplane arrangement <var class="Arg">A</var>.</p>
 
@@ -186,6 +188,42 @@ t^3-6*t^2+11*t-6
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SalvettiComplex(A);</span>
 &lt;FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]&gt;
 </pre></div>
+
+<p><a id="X83B4DD0E8325942E" name="X83B4DD0E8325942E"></a></p>
+
+<h5>2.1-9 GLGroundSet</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLGroundSet</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: list of lists</p>
+
+<p>Returns the ground set of the geometric lattice <var class="Arg">L</var>.</p>
+
+<p><a id="X7A01B73E7BE22EDB" name="X7A01B73E7BE22EDB"></a></p>
+
+<h5>2.1-10 GLAtoms</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLAtoms</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: list</p>
+
+<p>Returns the set of atoms of <var class="Arg">L</var>.</p>
+
+<p><a id="X83CB7161847F6FF7" name="X83CB7161847F6FF7"></a></p>
+
+<h5>2.1-11 GLRank</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLRank</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a non-negative integer</p>
+
+<p>Returns the rank of <var class="Arg">L</var>.</p>
+
+<p><a id="X79CA2563782654EE" name="X79CA2563782654EE"></a></p>
+
+<h5>2.1-12 GLkFlats</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLkFlats</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a function</p>
+
+<p>Returns a function extracting the flats of rank <span class="SimpleMath">\(k\)</span> in <var class="Arg">L</var>.</p>
 
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
 

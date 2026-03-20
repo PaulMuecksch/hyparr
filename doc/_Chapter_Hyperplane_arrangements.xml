@@ -7,6 +7,7 @@
 <Section Label="Chapter_Hyperplane_arrangements_Section_Attributes">
 <Heading>Attributes</Heading>
 
+
 <ManSection>
   <Attr Arg="A" Name="Dimension" Label="for IsHyperplaneArrangement"/>
  <Returns>a non-negative integer.
@@ -35,7 +36,7 @@
 
 <ManSection>
   <Attr Arg="A" Name="IntersectionLattice" Label="for IsHyperplaneArrangement"/>
- <Returns>A list of lists describing the intersections of <A>A</A>.
+ <Returns>An object of type <C>IsGeomLattice</C>.
 </Returns>
  <Description>
  Computes the intersection lattice of the hyperplane arrangement <M>\mathcal{A}</M>.
@@ -54,10 +55,8 @@
 <P/>
 <Example><![CDATA[
 gap> A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);
- gap> IntersectionLattice(A);
- [ [ [ 1 ], [ 2 ], [ 3 ] ],
-   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
-   [ [ 1, 2, 3 ] ] ]
+gap> IntersectionLattice(A);
+<Geometric lattice: 3 atoms, rank 2>
 ]]></Example>
 
 
@@ -104,7 +103,7 @@ gap> ExpArr(A);
 
 <ManSection>
   <Attr Arg="A" Name="MSetInvL" Label="for IsHyperplaneArrangement"/>
- <Returns>A list encoding multiset invariants of the intersection lattice.
+ <Returns>An object of type IsGeomLattice.
 </Returns>
  <Description>
  Computes multiset invariants of the intersection lattice of the
@@ -153,6 +152,47 @@ gap> SalvettiComplex(A);
 ]]></Example>
 
 
+ </Description>
+</ManSection>
+
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLGroundSet" Label="for IsGeomLattice"/>
+ <Returns>list of lists
+</Returns>
+ <Description>
+ Returns the ground set of the geometric lattice <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLAtoms" Label="for IsGeomLattice"/>
+ <Returns>list
+</Returns>
+ <Description>
+ Returns the set of atoms of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLRank" Label="for IsGeomLattice"/>
+ <Returns>a non-negative integer
+</Returns>
+ <Description>
+ Returns the rank of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLkFlats" Label="for IsGeomLattice"/>
+ <Returns>a function
+</Returns>
+ <Description>
+ Returns a function extracting the flats of rank <Math>k</Math> in <A>L</A>.
  </Description>
 </ManSection>
 

@@ -26,6 +26,10 @@
 \makelabel{hyparr:MSetInvL for IsHyperplaneArrangement}{2.1.6}{X852CC1A8795FCD15}
 \makelabel{hyparr:IsReal for IsHyperplaneArrangement}{2.1.7}{X7E907A097A17195F}
 \makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement}{2.1.8}{X8333113D7A7A3A91}
+\makelabel{hyparr:GLGroundSet for IsGeomLattice}{2.1.9}{X83B4DD0E8325942E}
+\makelabel{hyparr:GLAtoms for IsGeomLattice}{2.1.10}{X7A01B73E7BE22EDB}
+\makelabel{hyparr:GLRank for IsGeomLattice}{2.1.11}{X83CB7161847F6FF7}
+\makelabel{hyparr:GLkFlats for IsGeomLattice}{2.1.12}{X79CA2563782654EE}
 \makelabel{hyparr:DrawLatex3Arr}{2.2.1}{X82C8EAF88340865B}
 \makelabel{hyparr:HArrResHind}{2.2.2}{X7CC338E67CE223FE}
 \makelabel{hyparr:HArrResX}{2.2.3}{X784AA86286AA9DD8}

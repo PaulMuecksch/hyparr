@@ -39,6 +39,10 @@
       2.1-6 MSetInvL
       2.1-7 IsReal
       2.1-8 SalvettiComplex
+      2.1-9 GLGroundSet
+      2.1-10 GLAtoms
+      2.1-11 GLRank
+      2.1-12 GLkFlats
     2.2 [33X[0;0YGlobal methods[133X
       2.2-1 DrawLatex3Arr
       2.2-2 HArrResHind

@@ -9,13 +9,17 @@
 \contentsline {subsection}{\numberline {2.1.6}\textcolor {Chapter }{MSetInvL (for IsHyperplaneArrangement)}}{5}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}\textcolor {Chapter }{IsReal (for IsHyperplaneArrangement)}}{5}{subsection.2.1.7}%
 \contentsline {subsection}{\numberline {2.1.8}\textcolor {Chapter }{SalvettiComplex (for IsHyperplaneArrangement)}}{6}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}\textcolor {Chapter }{GLGroundSet (for IsGeomLattice)}}{6}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}\textcolor {Chapter }{GLAtoms (for IsGeomLattice)}}{6}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.11}\textcolor {Chapter }{GLRank (for IsGeomLattice)}}{6}{subsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.1.12}\textcolor {Chapter }{GLkFlats (for IsGeomLattice)}}{6}{subsection.2.1.12}%
 \contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Global methods}}{6}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{DrawLatex3Arr}}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}\textcolor {Chapter }{HArrResHind}}{7}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrResX}}{7}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{Essentialization}}{7}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Constructors}}{7}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{7}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Constructors}}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{8}{subsection.2.3.1}%
 \contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Milnor fibers}}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\textcolor {Chapter }{Complexes}}{9}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{9}{subsection.3.1.1}%

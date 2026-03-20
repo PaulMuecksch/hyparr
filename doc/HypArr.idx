@@ -6,11 +6,15 @@
 \indexentry{MSetInvL@\texttt  {MSetInvL}!for IsHyperplaneArrangement|hyperpage}{5}
 \indexentry{IsReal@\texttt  {IsReal}!for IsHyperplaneArrangement|hyperpage}{5}
 \indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsHyperplaneArrangement|hyperpage}{6}
+\indexentry{GLGroundSet@\texttt  {GLGroundSet}!for IsGeomLattice|hyperpage}{6}
+\indexentry{GLAtoms@\texttt  {GLAtoms}!for IsGeomLattice|hyperpage}{6}
+\indexentry{GLRank@\texttt  {GLRank}!for IsGeomLattice|hyperpage}{6}
+\indexentry{GLkFlats@\texttt  {GLkFlats}!for IsGeomLattice|hyperpage}{6}
 \indexentry{DrawLatex3Arr@\texttt  {DrawLatex3Arr}|hyperpage}{6}
 \indexentry{HArrResHind@\texttt  {HArrResHind}|hyperpage}{7}
 \indexentry{HArrResX@\texttt  {HArrResX}|hyperpage}{7}
 \indexentry{Essentialization@\texttt  {Essentialization}|hyperpage}{7}
-\indexentry{HyperplaneArrangement@\texttt  {HyperplaneArrangement}!for IsList|hyperpage}{7}
+\indexentry{HyperplaneArrangement@\texttt  {HyperplaneArrangement}!for IsList|hyperpage}{8}
 \indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{9}
 \indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{9}
 \indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{10}

@@ -62,7 +62,7 @@ DeclareAttribute("Dimension", IsHyperplaneArrangement);
 DeclareAttribute("Roots", IsHyperplaneArrangement);
 
 #! @Arguments A
-#! @Returns A list of lists describing the intersections of <A>A</A>.
+#! @Returns An object of type <C>IsGeomLattice</C>.
 #! @Description
 #! Computes the intersection lattice of the hyperplane arrangement <M>\mathcal{A}</M>.
 #!
@@ -113,7 +113,7 @@ DeclareAttribute("ExpArr", IsHyperplaneArrangement);
 
 
 #! @Arguments A
-#! @Returns A list encoding multiset invariants of the intersection lattice.
+#! @Returns An object of type IsGeomLattice.
 #! @Description
 #! Computes multiset invariants of the intersection lattice of the
 #! hyperplane arrangement <A>A</A>.
