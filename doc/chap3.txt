@@ -1,7 +1,7 @@
   
   [1X3 [33X[0;0YMilnor fibers[133X[101X
   
-  [33X[0;0YThe Milnor fiber is the typical fiber [22Xf^-1[122X of the Milnor fibration[133X
+  [33X[0;0YThe Milnor fiber is the typical fiber [22Xf^-1(1)[122X of the Milnor fibration[133X
   
   
   [24X[33X[0;6Yf:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times,

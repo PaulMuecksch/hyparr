@@ -3,7 +3,7 @@
 #
 #! @Chapter Milnor fibers
 #!
-#! The Milnor fiber is the typical fiber <M>f^{-1}</M> of the Milnor fibration 
+#! The Milnor fiber is the typical fiber <M>f^{-1}(1)</M> of the Milnor fibration 
 #! <Display>f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times, z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)</Display>
 #! of the hyperplane arrangement <M>\mathcal{A}</M>, where <M>\alpha_H</M> are defining linear forms.
 #!
