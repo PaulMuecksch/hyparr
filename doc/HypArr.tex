@@ -133,9 +133,8 @@
 {
   
 
- HypArr is a package for computations with hyperplane arrangements, oriented
-matroids, and their topological invariants, in particular Milnor fibers and
-complements. 
+ HypArr is a package for computations with hyperplane arrangements (see \cite{OrTer92_Arr}), oriented matroids, and their topological invariants, in particular Milnor
+fibers and complements. 
 
  }
 
@@ -299,7 +298,7 @@ FacePoset
 
 
 
- Constructs the Salvetti Complex. If \texttt{IsReal(A)} is false, then it returns \texttt{fail}. 
+ Constructs the Salvetti Complex \cite{Salvetti1987_SalCpx}. If \texttt{IsReal(A)} is false, then it returns \texttt{fail}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);|
   <HyperplaneArrangement: 3 hyperplanes in 2-space>
@@ -487,8 +486,8 @@ z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
  of the hyperplane arrangement $\mathcal{A}$, where $\alpha_H$ are defining linear forms. 
 
  The following describes functions to construct regular cell complex having the
-homotopy type of the Milnor fiber and thus enables computation of homotopy
-invaraints using e.g. the HAP package. 
+homotopy type of the Milnor fiber from \cite{MueYos25_MilnorOM} and thus enables computation of homotopy invaraints using e.g. the HAP
+package. 
 \section{\textcolor{Chapter }{Complexes}}\label{Chapter_Milnor_fibers_Section_Complexes}
 \logpage{[ 3, 1, 0 ]}
 \hyperdef{L}{X79C388D385DB7CD1}{}
@@ -580,7 +579,7 @@ HAP CW Complex
 
  Oriented matroids are a abstraction of real hyperplane arrangements. The
 following describes functions to handle oriented matroids and compute
-associated cell complexes and invariants. 
+associated cell complexes and invariants. See \cite{BLSWZ1999_OrientedMatroids} 
 \section{\textcolor{Chapter }{Attributes}}\label{Chapter_Oriented_Matroids_Section_Attributes}
 \logpage{[ 4, 1, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
@@ -775,7 +774,7 @@ A Salvetti complex object
 
 
 
- Constructs the Salvetti complex associated with the oriented matroid OM. 
+ Constructs the Salvetti complex \cite{Salvetti1987_SalCpx} associated with the oriented matroid OM. 
 
  The construction proceeds as follows: 
 
@@ -1019,7 +1018,16 @@ hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}.
 
  }
 
- \def\indexname{Index\logpage{[ "Ind", 0, 0 ]}
+ \def\bibname{References\logpage{[ "Bib", 0, 0 ]}
+\hyperdef{L}{X7A6F98FD85F02BFE}{}
+}
+
+\bibliographystyle{alpha}
+\bibliography{hyparr}
+
+\addcontentsline{toc}{chapter}{References}
+
+\def\indexname{Index\logpage{[ "Ind", 0, 0 ]}
 \hyperdef{L}{X83A0356F839C696F}{}
 }
 

@@ -102,8 +102,8 @@
   [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YFacePoset[133X
   
-  [33X[0;0YConstructs  the  Salvetti  Complex.  If  [10XIsReal(A)[110X is false, then it returns
-  [10Xfail[110X.[133X
+  [33X[0;0YConstructs  the  Salvetti  Complex  [Sal87].  If [10XIsReal(A)[110X is false, then it
+  returns [10Xfail[110X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);[127X[104X

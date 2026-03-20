@@ -124,7 +124,7 @@ gap> MSetInvL(A);
  <Returns>FacePoset
 </Returns>
  <Description>
- Constructs the Salvetti Complex.
+ Constructs the Salvetti Complex <Cite Key="Salvetti1987_SalCpx"/>.
  If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
 <Example><![CDATA[
 gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);

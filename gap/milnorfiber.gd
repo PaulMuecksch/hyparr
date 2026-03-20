@@ -8,7 +8,7 @@
 #! of the hyperplane arrangement <M>\mathcal{A}</M>, where <M>\alpha_H</M> are defining linear forms.
 #!
 #! The following describes functions to construct regular cell complex having the homotopy type of
-#! the Milnor fiber and thus enables computation of homotopy invaraints using e.g. the HAP package.
+#! the Milnor fiber from <Cite Key="MueYos25_MilnorOM"/> and thus enables computation of homotopy invaraints using e.g. the HAP package.
 
 
 #################################

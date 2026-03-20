@@ -3,7 +3,7 @@
   
   [33X[0;0YOriented  matroids  are  a  abstraction of real hyperplane arrangements. The
   following  describes  functions  to  handle  oriented  matroids  and compute
-  associated cell complexes and invariants.[133X
+  associated cell complexes and invariants. See [BLVS+99][133X
   
   
   [1X4.1 [33X[0;0YAttributes[133X[101X
@@ -136,7 +136,8 @@
   [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA Salvetti complex object[133X
   
-  [33X[0;0YConstructs the Salvetti complex associated with the oriented matroid OM.[133X
+  [33X[0;0YConstructs the Salvetti complex [Sal87] associated with the oriented matroid
+  OM.[133X
   
   [33X[0;0YThe construction proceeds as follows:[133X
   

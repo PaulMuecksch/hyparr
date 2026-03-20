@@ -5,7 +5,7 @@
 #!
 #! Oriented matroids are a abstraction of real hyperplane arrangements.
 #! The following describes functions to handle oriented matroids and compute associated cell complexes
-#! and invariants.
+#! and invariants. See <Cite Key="BLSWZ1999_OrientedMatroids"/>
 
 
 # Declare the category
@@ -147,7 +147,7 @@ DeclareAttribute("OMCovectors", IsOrientedMatroid);
 #! @Arguments OM
 #! @Returns A Salvetti complex object
 #! @Description
-#! Constructs the Salvetti complex associated with the oriented matroid OM.
+#! Constructs the Salvetti complex <Cite Key="Salvetti1987_SalCpx"/> associated with the oriented matroid OM.
 #!
 #! The construction proceeds as follows:
 #!

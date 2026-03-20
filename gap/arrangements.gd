@@ -3,7 +3,7 @@
 #
 #! @Chapter Introduction
 #!
-#! HypArr is a package for computations with hyperplane arrangements,
+#! HypArr is a package for computations with hyperplane arrangements (see <Cite Key="OrTer92_Arr"/>),
 #! oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
 #!
 #! @Chapter Hyperplane arrangements
@@ -117,7 +117,7 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 #! @Arguments A
 #! @Returns FacePoset
 #! @Description
-#! Constructs the Salvetti Complex.
+#! Constructs the Salvetti Complex <Cite Key="Salvetti1987_SalCpx"/>.
 #! If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
 #! @BeginExampleSession
 #! gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);

@@ -6,12 +6,18 @@
     [<#Include SYSTEM "_entities.xml">
 ]
 >
+
 <?LaTeX ExtraPreamble="\usepackage{graphicx,amsfonts}"?>
+
+
 <Book Name="HypArr">
 <#Include SYSTEM "title.xml">
 <TableOfContents/>
 <Body>
 <#Include SYSTEM "_AutoDocMainFile.xml">
 </Body>
+
+<Bibliography Databases="hyparr"/>
+
 <TheIndex/>
 </Book>
