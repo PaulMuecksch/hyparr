@@ -39,7 +39,7 @@ function(r)
 
     return Objectify(type,
         rec(
-            groundset := [1..Length(l)],
+            GroundSet := [1..Length(l)],
             lforms := l,
             rank := dim
         )
@@ -64,7 +64,7 @@ function(A)
 
     return Objectify(type,
         rec(
-            groundset := [1..Length(l)],
+            GroundSet := [1..Length(l)],
             lforms := l,
             rank := dim
         )
@@ -75,7 +75,7 @@ InstallMethod(ViewObj,
     [ IsOrientedMatroid ],
 function(OM)
     Print("<OrientedMatroid: ",
-          Length(OMGroundset(OM)), " elements, rank ",
+          Length(OMGroundSet(OM)), " elements, rank ",
           OMRank(OM), ">");
 end);
 
@@ -83,24 +83,24 @@ InstallMethod(ViewObj,
     [ IsFacePoset ],
 function(FP)
 local GSet;
-    GSet := FPGroundset(FP);;
+    GSet := FPGroundSet(FP);;
     Print("<FacePoset of dimension ",
           Length(GSet)-1," with f-vector ",List(GSet,x->Length(x)),">");
 end);
 
 
-InstallMethod(FPGroundset,
+InstallMethod(FPGroundSet,
     [ IsFacePoset ],
-    FP -> FP!.grgroundset);
+    FP -> FP!.grGroundSet);
 
 InstallMethod(FPOrder,
     [ IsFacePoset ],
     FP -> FP!.orderfunction);
 
 
-InstallMethod(OMGroundset,
+InstallMethod(OMGroundSet,
     [ IsOrientedMatroid ],
-    OM -> OM!.groundset);
+    OM -> OM!.GroundSet);
 
 InstallMethod(OMRank,
     [ IsOrientedMatroid ],
@@ -276,7 +276,7 @@ local SalCpx,SalOF, FCpx,Topes,d,T, k,type;
 
     return Objectify(type,
         rec(
-            grgroundset := SalCpx,
+            grGroundSet := SalCpx,
             orderfunction := SalOF
         )
     );
@@ -323,7 +323,7 @@ local OM,SalCpx,SalOF, FCpx,Topes,d,T, k,type;
 
     return Objectify(type,
         rec(
-            grgroundset := SalCpx,
+            grGroundSet := SalCpx,
             orderfunction := SalOF
         )
     );

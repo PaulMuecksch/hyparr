@@ -15,7 +15,7 @@ DeclareCategory("IsOrientedMatroid", IsComponentObjectRep and IsAttributeStoring
 DeclareRepresentation(
     "IsOrientedMatroidRep", 
     IsOrientedMatroid,
-    ["rank","groundset","lforms","cocircuits","covectors","lattice","topegraph","salcpx"]
+    ["rank","GroundSet","lforms","cocircuits","covectors","lattice","topegraph","salcpx"]
 );
 
 # Declare the category
@@ -25,7 +25,7 @@ DeclareCategory("IsFacePoset", IsComponentObjectRep and IsAttributeStoringRep );
 DeclareRepresentation(
     "IsFacePosetRep", 
     IsFacePoset,
-    ["grgroundset","orderfunction"]
+    ["grGroundSet","orderfunction"]
 );
 
 #################################
@@ -54,10 +54,10 @@ DeclareAttribute("OMRank", IsOrientedMatroid);
 #! @BeginExampleSession
 #! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
 #! <OrientedMatroid: 6 elements, rank 3>
-#! gap> OMGroundset(OM);
+#! gap> OMGroundSet(OM);
 #! [ 1, 2, 3, 4, 5, 6 ]
 #! @EndExampleSession
-DeclareAttribute("OMGroundset", IsOrientedMatroid);
+DeclareAttribute("OMGroundSet", IsOrientedMatroid);
 
 #! @Arguments OM
 #! @Returns A list of linear forms or <C>fail</C>
@@ -158,7 +158,7 @@ DeclareAttribute("OMCovectors", IsOrientedMatroid);
 #! 3. Defines an order function on the cells to capture the face poset structure, using <C>OMOperation</C> and <C>OrderCovec</C>.
 #!
 #! 4. Returns an object of type <C>FacePosetFamily</C> representing the Salvetti complex, with its ground set stored in 
-#!   <C>grgroundset</C> and the order function in <C>orderfunction</C>.
+#!   <C>grGroundSet</C> and the order function in <C>orderfunction</C>.
 #!
 #! @BeginExampleSession
 #! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
@@ -176,7 +176,7 @@ DeclareAttribute("SalvettiComplex", IsOrientedMatroid);
 #! @BeginExampleSession
 #! gap> S := SalvettiComplex(O);
 #! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
-#! gap> FPGroundset(S);
+#! gap> FPGroundSet(S);
 #! [
 #!   [ 
 #!     [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 
@@ -210,7 +210,7 @@ DeclareAttribute("SalvettiComplex", IsOrientedMatroid);
 #!   ]
 #! ]
 #! @EndExampleSession
-DeclareAttribute("FPGroundset", IsFacePoset);
+DeclareAttribute("FPGroundSet", IsFacePoset);
 
 #! @Arguments FP
 #! @Returns A function

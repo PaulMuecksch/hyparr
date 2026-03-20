@@ -14,7 +14,7 @@ function(OM)
 local SCpx, MCpx, MCpx2, Topes, TopesP,d, k, type, MCpxOF;
     Topes:=OMCovectors(OM)[1];;
     TopesP:=Topes{Positions(List(Topes,T->Product(T)=1),true)};;
-    SCpx:=FPGroundset(SalvettiComplex(OM));
+    SCpx:=FPGroundSet(SalvettiComplex(OM));
     d:=Length(SCpx);;
 
     MCpx:=List([1..d-1],x->[]);;
@@ -47,7 +47,7 @@ local SCpx, MCpx, MCpx2, Topes, TopesP,d, k, type, MCpxOF;
 
     return Objectify(type,
         rec(
-            grgroundset := MCpx,
+            grGroundSet := MCpx,
             orderfunction := MCpxOF
         )
     );
@@ -61,7 +61,7 @@ local SCpx, MCpx, MCpx2, Topes, TopesP,d, k, OM, type, MCpxOF;
     OM := OrientedMatroid(A);
     Topes:=OMCovectors(OM)[1];
     TopesP:=Topes{Positions(List(Topes,T->Product(T)=1),true)};
-    SCpx:=FPGroundset(SalvettiComplex(OM));
+    SCpx:=FPGroundSet(SalvettiComplex(OM));
     d:=Length(SCpx);
 
     MCpx:=List([1..d-1],x->[]);
@@ -94,7 +94,7 @@ local SCpx, MCpx, MCpx2, Topes, TopesP,d, k, OM, type, MCpxOF;
 
     return Objectify(type,
         rec(
-            grgroundset := MCpx,
+            grGroundSet := MCpx,
             orderfunction := MCpxOF
         )
     );
@@ -137,7 +137,7 @@ end);
 InstallGlobalFunction(FPtoCWCpx,
 function(FP)
 local PSet,OF,FaceCpxC, MFCpx, d, IncFs, F, CWFCpx;;
-    PSet := FPGroundset(FP);;
+    PSet := FPGroundSet(FP);;
     OF := FPOrder(FP);;
     FaceCpxC := [];;
     FaceCpxC[1] := List(PSet[1],x->[1,0]);;
