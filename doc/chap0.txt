@@ -63,17 +63,16 @@
       4.1-8 SalvettiComplex
       4.1-9 FPGroundset
       4.1-10 FPOrder
-    4.2 [33X[0;0YGlobal methods[133X
-      4.2-1 cosn
-      4.2-2 CCToFloat
-      4.2-3 pos
-      4.2-4 OMOperation
-      4.2-5 OrderCovec
-      4.2-6 LowerOrderIdeal
-      4.2-7 IsOMEquiv
-      4.2-8 SeparatingSet
-    4.3 [33X[0;0YConstructors[133X
-      4.3-1 OrientedMatroid
+    4.2 [33X[0;0YProperties[133X
+      4.2-1 OMIsLinear
+    4.3 [33X[0;0YGlobal methods[133X
+      4.3-1 OMOperation
+      4.3-2 OrderCovec
+      4.3-3 LowerOrderIdeal
+      4.3-4 IsOMEquiv
+      4.3-5 SeparatingSet
+    4.4 [33X[0;0YConstructors[133X
+      4.4-1 OrientedMatroid
   
   
   [32X

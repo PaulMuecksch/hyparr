@@ -58,8 +58,8 @@
   [33X[1;0Y[29X[2XCharPoly[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya univariate polynomial with integral coefficients.[133X
   
-  [33X[0;0YReturns   [22Xχ_mathcalA}[122X  the  [13Xcharacterisitc  polynomial[113X  of  the  arrangement
-  [22XmathcalA[122X.[133X
+  [33X[0;0YReturns  [23X\chi_{\mathcal{A}}[123X the [13Xcharacterisitc polynomial[113X of the arrangement
+  [23X\mathcal{A}[123X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
@@ -108,20 +108,21 @@
   
   [33X[0;0YGenerates tikz-code for a nice projective picture of the real 3-arrangement.[133X
   
+  [33X[0;0YThe example below will look as follows (only in pdf).[133X
+  
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
     [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XPrint(DrawLatex3Arr(A));[127X[104X
-    [4X[28X\begin{tikzpicture}[scale=\sc][128X[104X
-    [4X[28X\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 [128X[104X
-    [4X[28X\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 [128X[104X
-    [4X[28X\draw (-1.,3.872) -- (-1.,-3.872);  % H_3 [128X[104X
-    [4X[28X\draw (1.,3.872) -- (1.,-3.872);  % H_4 [128X[104X
-    [4X[28X\draw (3.872,-1.) -- (-3.872,-1.);  % H_5 [128X[104X
-    [4X[28X\draw (3.872,1.) -- (-3.872,1.);  % H_6 [128X[104X
+    [4X[28X\begin{tikzpicture}[scale=1.0][128X[104X
+    [4X[28X\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1[128X[104X
+    [4X[28X\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2[128X[104X
+    [4X[28X\draw (-1.,3.872) -- (-1.,-3.872);  % H_3[128X[104X
+    [4X[28X\draw (1.,3.872) -- (1.,-3.872);  % H_4[128X[104X
+    [4X[28X\draw (3.872,-1.) -- (-3.872,-1.);  % H_5[128X[104X
+    [4X[28X\draw (3.872,1.) -- (-3.872,1.);  % H_6[128X[104X
     [4X[28X[128X[104X
     [4X[28X\end{tikzpicture}[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.2-2 AGpql[101X
@@ -144,8 +145,8 @@
     [4X[25Xgap>[125X [27XA := AGpql(2,1,3);[127X[104X
     [4X[28X <HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XRoots(A);[127X[104X
-    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [128X[104X
-    [4X[28X  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], [128X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],[128X[104X
+    [4X[28X  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],[128X[104X
     [4X[28X  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X

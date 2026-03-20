@@ -6,6 +6,7 @@
     [<#Include SYSTEM "_entities.xml">
 ]
 >
+<?LaTeX ExtraPreamble="\usepackage{graphicx,amsfonts}"?>
 <Book Name="HypArr">
 <#Include SYSTEM "title.xml">
 <TableOfContents/>

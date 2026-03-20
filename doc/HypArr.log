@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  19 MAR 2026 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  20 MAR 2026 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -305,6 +305,23 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count280
 \enitdp@description=\count281
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
@@ -369,20 +386,29 @@ LaTeX Font Info:    ... okay on input line 87.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count283
-\scratchdimen=\dimen154
+\scratchdimen=\dimen156
 \scratchbox=\box54
 \nofMPsegments=\count284
 \nofMParguments=\count285
 \everyMPshowfont=\toks23
 \MPscratchCnt=\count286
-\MPscratchDim=\dimen155
+\MPscratchDim=\dimen157
 \MPnumerator=\count287
 \makeMPintoPDFobject=\count288
 \everyMPtoPDFconversion=\toks24
-)
-\big@size=\dimen156
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\big@size=\dimen158
 Package hyperref Info: Link coloring ON on input line 87.
- (./HypArr.out) (./HypArr.out)
+
+(./HypArr.out) (./HypArr.out)
 \@outlinefile=\write6
 \openout6 = `HypArr.out'.
 
@@ -462,7 +488,14 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 214.
 [4
 
-] [5] [6] [7]
+] [5]
+<./other/DrawLatex3Arr_Example.pdf, id=125, 281.66632pt x 244.68213pt>
+File: ./other/DrawLatex3Arr_Example.pdf Graphic file (type pdf)
+<use ./other/DrawLatex3Arr_Example.pdf>
+Package pdftex.def Info: ./other/DrawLatex3Arr_Example.pdf  used on input line 
+340.
+(pdftex.def)             Requested size: 281.66562pt x 244.68152pt.
+ [6 <./other/DrawLatex3Arr_Example.pdf>] [7]
 Chapter 3.
 [8
 
@@ -473,97 +506,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.563 \hyperdef{L}{X7C701DBF7BAE649A}{}
-                                       
-Underfull \hbox (badness 10000) in paragraph at lines 570--573
+l.572 \hyperdef{L}{X7C701DBF7BAE649A}{}
+                                        [10
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--585
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 594--597
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--609
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 618--621
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 630--633
-
- []
-
-[10
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 642--645
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 654--657
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 666--669
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 678--681
-
- []
-
-
+] [11] [12] [13]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
 722081}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.690 \hyperdef{L}{X80841F8D80722081}{}
+l.890 \hyperdef{L}{X80841F8D80722081}{}
                                        
-Underfull \hbox (badness 10000) in paragraph at lines 697--700
+Underfull \hbox (badness 10000) in paragraph at lines 925--928
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
+Underfull \hbox (badness 10000) in paragraph at lines 937--940
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--740
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 749--752
+Underfull \hbox (badness 10000) in paragraph at lines 949--952
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--764
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 773--776
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 785--788
+Underfull \hbox (badness 10000) in paragraph at lines 961--964
 
  []
 
@@ -572,42 +540,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X86EC0F0A78
 ECBC10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.797 \hyperdef{L}{X86EC0F0A78ECBC10}{}
-                                        [12] (./HypArr.ind [13
+l.973 \hyperdef{L}{X86EC0F0A78ECBC10}{}
+                                        [14] [15] (./HypArr.ind [16
 
 
-]) (./HypArr.aux)
+])
+(./HypArr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `HypArr.out' has not changed.
-(rerunfilecheck)             Checksum: A6094C57DE00A564EB5BFBC24A30F20D;1367.
+(rerunfilecheck)             Checksum: D59C8A99230C5EE445D33BB0EAEBE91D;1472.
  ) 
 Here is how much of TeX's memory you used:
- 10715 strings out of 474222
- 164789 string characters out of 5748734
- 1932975 words of memory out of 5000000
- 32699 multiletter control sequences out of 15000+600000
+ 11059 strings out of 474222
+ 170931 string characters out of 5748734
+ 1935975 words of memory out of 5000000
+ 33023 multiletter control sequences out of 15000+600000
  623450 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,7n,93p,240b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,7n,93p,308b,775s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfst1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1
-000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (13 pages, 213347 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfst1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on HypArr.pdf (16 pages, 241649 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 106 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

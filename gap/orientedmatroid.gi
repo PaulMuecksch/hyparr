@@ -227,7 +227,7 @@ local n, i,j, G, GraphMat,TGraph,x,y,Topes;
 	GraphMat:=NullMat(n,n);
 	for i in [1..n] do
 		for j in [1..n] do
-        	if Length(SeparatingSet(Topes[i],Topes[j]))<=1 then
+        	if Length(SeparatingSet(Topes[i],Topes[j]))=1 then
 				    GraphMat[i][j]:=1;
 				    GraphMat[j][i]:=1;
 			fi;    

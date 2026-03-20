@@ -10,8 +10,9 @@
 \makelabel{hyparr:Complexes}{3.1}{X79C388D385DB7CD1}
 \makelabel{hyparr:Oriented Matroids}{4}{X8388FBA579602CDB}
 \makelabel{hyparr:Attributes}{4.1}{X7C701DBF7BAE649A}
-\makelabel{hyparr:Global methods}{4.2}{X80841F8D80722081}
-\makelabel{hyparr:Constructors}{4.3}{X86EC0F0A78ECBC10}
+\makelabel{hyparr:Properties}{4.2}{X871597447BB998A1}
+\makelabel{hyparr:Global methods}{4.3}{X80841F8D80722081}
+\makelabel{hyparr:Constructors}{4.4}{X86EC0F0A78ECBC10}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
 \makelabel{hyparr:Dimension for IsHyperplaneArrangement}{2.1.1}{X7CCC1A2A7C3F2CC5}
 \makelabel{hyparr:Roots for IsHyperplaneArrangement}{2.1.2}{X8419FA5F7A08DF56}
@@ -39,12 +40,10 @@
 \makelabel{hyparr:SalvettiComplex for IsOrientedMatroid}{4.1.8}{X7ED4D5138012EB6C}
 \makelabel{hyparr:FPGroundset for IsFacePoset}{4.1.9}{X85AB2A797ABE8967}
 \makelabel{hyparr:FPOrder for IsFacePoset}{4.1.10}{X7E28E057841D6ECD}
-\makelabel{hyparr:cosn}{4.2.1}{X84A29EA5835B9497}
-\makelabel{hyparr:CCToFloat}{4.2.2}{X81F884357C562D53}
-\makelabel{hyparr:pos}{4.2.3}{X7E82F08287360E7C}
-\makelabel{hyparr:OMOperation}{4.2.4}{X7A515BDC8582FFE6}
-\makelabel{hyparr:OrderCovec}{4.2.5}{X801F6A9B7A0A53F5}
-\makelabel{hyparr:LowerOrderIdeal}{4.2.6}{X85EA1E1A87E7EA5D}
-\makelabel{hyparr:IsOMEquiv}{4.2.7}{X80CB9A9C8135A314}
-\makelabel{hyparr:SeparatingSet}{4.2.8}{X793FF1428136B222}
-\makelabel{hyparr:OrientedMatroid for IsList}{4.3.1}{X82EE52377B03CC80}
+\makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{4.2.1}{X86B70496781D3884}
+\makelabel{hyparr:OMOperation}{4.3.1}{X7A515BDC8582FFE6}
+\makelabel{hyparr:OrderCovec}{4.3.2}{X801F6A9B7A0A53F5}
+\makelabel{hyparr:LowerOrderIdeal}{4.3.3}{X85EA1E1A87E7EA5D}
+\makelabel{hyparr:IsOMEquiv}{4.3.4}{X80CB9A9C8135A314}
+\makelabel{hyparr:SeparatingSet}{4.3.5}{X793FF1428136B222}
+\makelabel{hyparr:OrientedMatroid for IsList}{4.4.1}{X82EE52377B03CC80}

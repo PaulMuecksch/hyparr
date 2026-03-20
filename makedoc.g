@@ -13,7 +13,9 @@
 # QUIT;
 
 LoadPackage( "AutoDoc" );
-AutoDoc( rec( scaffold := true,
-              autodoc := true ) );
+AutoDoc( rec( 
+            # scaffold := true,
+            autodoc := true 
+            ) );
 QUIT;
 

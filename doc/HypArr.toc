@@ -12,8 +12,8 @@
 \contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{DrawLatex3Arr}}{5}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}\textcolor {Chapter }{AGpql}}{6}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrResHind}}{6}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{HArrResX}}{6}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}\textcolor {Chapter }{Essentialization}}{6}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{HArrResX}}{7}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}\textcolor {Chapter }{Essentialization}}{7}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Constructors}}{7}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{7}{subsection.2.3.1}%
 \contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Milnor fibers}}{8}{chapter.3}%
@@ -26,22 +26,21 @@
 \contentsline {subsection}{\numberline {4.1.1}\textcolor {Chapter }{OMRank (for IsOrientedMatroid)}}{10}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}\textcolor {Chapter }{OMGroundset (for IsOrientedMatroid)}}{10}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}\textcolor {Chapter }{OMLForms (for IsOrientedMatroid)}}{10}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}\textcolor {Chapter }{OMGeomLattice (for IsOrientedMatroid)}}{10}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}\textcolor {Chapter }{OMCocircuits (for IsOrientedMatroid)}}{10}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.4}\textcolor {Chapter }{OMGeomLattice (for IsOrientedMatroid)}}{11}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}\textcolor {Chapter }{OMCocircuits (for IsOrientedMatroid)}}{11}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}\textcolor {Chapter }{TopeGraph (for IsOrientedMatroid)}}{11}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}\textcolor {Chapter }{OMCovectors (for IsOrientedMatroid)}}{11}{subsection.4.1.7}%
-\contentsline {subsection}{\numberline {4.1.8}\textcolor {Chapter }{SalvettiComplex (for IsOrientedMatroid)}}{11}{subsection.4.1.8}%
-\contentsline {subsection}{\numberline {4.1.9}\textcolor {Chapter }{FPGroundset (for IsFacePoset)}}{11}{subsection.4.1.9}%
-\contentsline {subsection}{\numberline {4.1.10}\textcolor {Chapter }{FPOrder (for IsFacePoset)}}{11}{subsection.4.1.10}%
-\contentsline {section}{\numberline {4.2}\textcolor {Chapter }{Global methods}}{11}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}\textcolor {Chapter }{cosn}}{11}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}\textcolor {Chapter }{CCToFloat}}{11}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}\textcolor {Chapter }{pos}}{11}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}\textcolor {Chapter }{OMOperation}}{12}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}\textcolor {Chapter }{OrderCovec}}{12}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}\textcolor {Chapter }{LowerOrderIdeal}}{12}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}\textcolor {Chapter }{IsOMEquiv}}{12}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}\textcolor {Chapter }{SeparatingSet}}{12}{subsection.4.2.8}%
-\contentsline {section}{\numberline {4.3}\textcolor {Chapter }{Constructors}}{12}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}\textcolor {Chapter }{OrientedMatroid (for IsList)}}{12}{subsection.4.3.1}%
-\contentsline {chapter}{Index}{13}{section*.2}%
+\contentsline {subsection}{\numberline {4.1.7}\textcolor {Chapter }{OMCovectors (for IsOrientedMatroid)}}{12}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.8}\textcolor {Chapter }{SalvettiComplex (for IsOrientedMatroid)}}{12}{subsection.4.1.8}%
+\contentsline {subsection}{\numberline {4.1.9}\textcolor {Chapter }{FPGroundset (for IsFacePoset)}}{12}{subsection.4.1.9}%
+\contentsline {subsection}{\numberline {4.1.10}\textcolor {Chapter }{FPOrder (for IsFacePoset)}}{13}{subsection.4.1.10}%
+\contentsline {section}{\numberline {4.2}\textcolor {Chapter }{Properties}}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}\textcolor {Chapter }{OMIsLinear (for IsOrientedMatroid)}}{13}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}\textcolor {Chapter }{Global methods}}{14}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}\textcolor {Chapter }{OMOperation}}{14}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}\textcolor {Chapter }{OrderCovec}}{14}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}\textcolor {Chapter }{LowerOrderIdeal}}{14}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}\textcolor {Chapter }{IsOMEquiv}}{14}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}\textcolor {Chapter }{SeparatingSet}}{14}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}\textcolor {Chapter }{Constructors}}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}\textcolor {Chapter }{OrientedMatroid (for IsList)}}{15}{subsection.4.4.1}%
+\contentsline {chapter}{Index}{16}{section*.2}%

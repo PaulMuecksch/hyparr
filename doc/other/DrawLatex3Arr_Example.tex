@@ -1,0 +1,29 @@
+% !TeX spellcheck = en_US 
+%\documentclass[12pt]{amsart}
+\documentclass[varwidth]{standalone}
+%\documentclass{standalone}
+%\usepackage{amsmath, amsthm, amsfonts, amssymb, latexsym}
+
+% required packages
+\usepackage{pgfplots, tikz-3dplot, ifthen}
+
+
+\begin{document}
+	
+	\begin{center}
+	\begin{figure}
+	\def \sc {1.0}
+	\begin{tikzpicture}[scale=\sc]
+		\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
+		\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
+		\draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
+		\draw (1.,3.872) -- (1.,-3.872);  % H_4 
+		\draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
+		\draw (3.872,1.) -- (-3.872,1.);  % H_6 
+		
+	\end{tikzpicture}
+	\caption{An example of a picture produced by \texttt{DrawLatex3Arr}.}
+	\end{figure}
+	\end{center}
+
+\end{document}

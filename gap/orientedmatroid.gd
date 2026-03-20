@@ -34,65 +34,188 @@ DeclareRepresentation(
 ##
 #################################
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Arguments OM
+#! @Returns An integer
 #! @Description
-#! Computes 
+#! Returns the rank of the oriented matroid <A>OM</A>.
+#! @BeginExampleSession
+#! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
+#! <OrientedMatroid: 6 elements, rank 3>
+#! gap> OMRank(OM);
+#! 3
+#! @EndExampleSession
 DeclareAttribute("OMRank", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A list
 #! @Description
-#! Computes 
+#! Returns the ground set of the oriented matroid OM.
+#! @BeginExampleSession
+#! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
+#! <OrientedMatroid: 6 elements, rank 3>
+#! gap> OMGroundset(OM);
+#! [ 1, 2, 3, 4, 5, 6 ]
+#! @EndExampleSession
 DeclareAttribute("OMGroundset", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A list of linear forms or <C>fail</C>
 #! @Description
-#! Computes 
+#! Returns the list of linear forms associated with the oriented matroid OM.
+#! If the internal component <C>OM!.lforms</C> is not bound, <C>fail</C> is returned.
+#! @BeginExampleSession
+#! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
+#! <OrientedMatroid: 6 elements, rank 3>
+#! gap> OMLForms(O);
+#! [ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+#!   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+#! @EndExampleSession
 DeclareAttribute("OMLForms", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A list of lists or <C>fail</C>
 #! @Description
-#! Computes 
+#! Computes the geometric lattice associated with the oriented matroid OM.
+#! If OM is linear (as determined by <C>OMIsLinear(OM)</C>), the lattice is
+#! computed as the intersection lattice of the hyperplane arrangement given by <C>OMLForms(OM)</C>,
+#! stored in the internal component <C>OM!.lattice</C>, and returned.
+#! If OM is not linear, <C>fail</C> is returned.
+#! @BeginExampleSession
+#! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
+#! <OrientedMatroid: 6 elements, rank 3>
+#! gap> OMGeomLattice(OM);
+#! [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
+#! [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
+#!   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
+#!   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
+#! @EndExampleSession
 DeclareAttribute("OMGeomLattice", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A list
 #! @Description
-#! Computes 
+#! Computes the (signed) cocircuits of the oriented matroid OM.
+#! The cocircuits are derived from the geometric lattice of OM (via <C>OMGeomLattice(OM)</C>)
+#! and the linear forms (from <C>OMLForms(OM)</C>).
+#! The result is a list of signed vectors representing all cocircuits of OM.
+#!
+#! @BeginExampleSession
+#! gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]); OMCocircuits(O);
+#! <OrientedMatroid: 3 elements, rank 2>
+#! [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
+#!   [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
+#! @EndExampleSession
 DeclareAttribute("OMCocircuits", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A graph
 #! @Description
-#! Computes 
+#! Computes the tope graph of the oriented matroid OM.
+#! The topes are obtained as the first set of covectors from <C>OMCovectors(OM)</C>.
+#! Two topes are connected by an edge if their separating set has at most one element.
+#! @BeginExampleSession
+#! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
+#! <OrientedMatroid: 3 elements, rank 2>
+#! gap> G := ShallowCopy(TopeGraph(O));;
+#! gap> Vertices(G);
+#! [ 1 .. 6 ]
+#! gap> IsSimpleGraph(G);
+#! true
+#! gap> UndirectedEdges(G);
+#! [ [ 1, 3 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ] ]
+#! @EndExampleSession
 DeclareAttribute("TopeGraph", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A list of lists
 #! @Description
-#! Computes 
+#! Computes all covectors of the oriented matroid OM.
+#! The result is returned as a reversed list of lists, where each inner list is a covector represented as a signed vector.
+#! @BeginExampleSession
+#! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
+#! <OrientedMatroid: 3 elements, rank 2>
+#! gap> OMCovectors(O);
+#! [ [ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], 
+#!     [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ],
+#!   [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
+#!     [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ],
+#!   [ [ 0, 0, 0 ] ] ]
+#! @EndExampleSession
 DeclareAttribute("OMCovectors", IsOrientedMatroid);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM
+#! @Returns A Salvetti complex object
 #! @Description
-#! Computes 
+#! Constructs the Salvetti complex associated with the oriented matroid OM.
+#!
+#! The construction proceeds as follows:
+#!
+#! 1. Computes the covectors of OM via <C>OMCovectors(OM)</C>.
+#!
+#! 2. Uses the topes and the lower order ideals of the covector poset to form the cells of the complex.
+#!
+#! 3. Defines an order function on the cells to capture the face poset structure, using <C>OMOperation</C> and <C>OrderCovec</C>.
+#!
+#! 4. Returns an object of type <C>FacePosetFamily</C> representing the Salvetti complex, with its ground set stored in 
+#!   <C>grgroundset</C> and the order function in <C>orderfunction</C>.
+#!
+#! @BeginExampleSession
+#! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
+#! <OrientedMatroid: 3 elements, rank 2>
+#! gap> SalvettiComplex(O);
+#! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+#! @EndExampleSession
 DeclareAttribute("SalvettiComplex", IsOrientedMatroid);
 
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments FP
+#! @Returns A list
 #! @Description
-#! Computes 
+#! Returns the ground set of the face poset FP.
+#! @BeginExampleSession
+#! gap> S := SalvettiComplex(O);
+#! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+#! gap> FPGroundset(S);
+#! [
+#!   [ 
+#!     [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 
+#!     [ [ 1, -1, 1 ], [ 1, -1, 1 ] ], 
+#!     [ [ -1, -1, -1 ], [ -1, -1, -1 ] ], 
+#!     [ [ 1, 1, 1 ], [ 1, 1, 1 ] ], 
+#!     [ [ -1, 1, 1 ], [ -1, 1, 1 ] ], 
+#!     [ [ 1, -1, -1 ], [ 1, -1, -1 ] ]
+#!   ],
+#!   [
+#!     [ [ -1, 0, -1 ], [ -1, 1, -1 ] ], 
+#!     [ [ -1, 1, 0 ], [ -1, 1, -1 ] ], 
+#!     [ [ 1, 0, 1 ], [ 1, -1, 1 ] ], 
+#!     [ [ 1, -1, 0 ], [ 1, -1, 1 ] ], 
+#!     [ [ 0, -1, -1 ], [ -1, -1, -1 ] ], 
+#!     [ [ -1, 0, -1 ], [ -1, -1, -1 ] ], 
+#!     [ [ 0, 1, 1 ], [ 1, 1, 1 ] ], 
+#!     [ [ 1, 0, 1 ], [ 1, 1, 1 ] ], 
+#!     [ [ 0, 1, 1 ], [ -1, 1, 1 ] ], 
+#!     [ [ -1, 1, 0 ], [ -1, 1, 1 ] ], 
+#!     [ [ 0, -1, -1 ], [ 1, -1, -1 ] ], 
+#!     [ [ 1, -1, 0 ], [ 1, -1, -1 ] ]
+#!   ],
+#!   [
+#!     [ [ 0, 0, 0 ], [ -1, 1, -1 ] ], 
+#!     [ [ 0, 0, 0 ], [ 1, -1, 1 ] ], 
+#!     [ [ 0, 0, 0 ], [ -1, -1, -1 ] ], 
+#!     [ [ 0, 0, 0 ], [ 1, 1, 1 ] ], 
+#!     [ [ 0, 0, 0 ], [ -1, 1, 1 ] ], 
+#!     [ [ 0, 0, 0 ], [ 1, -1, -1 ] ]
+#!   ]
+#! ]
+#! @EndExampleSession
 DeclareAttribute("FPGroundset", IsFacePoset);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments FP
+#! @Returns A function
 #! @Description
-#! Computes 
+#! Returns the order function of the face poset FP.
 DeclareAttribute("FPOrder", IsFacePoset);
 
 #################################
@@ -101,6 +224,17 @@ DeclareAttribute("FPOrder", IsFacePoset);
 ##
 #################################
 
+#! @Arguments OM
+#! @Returns true or false
+#! @Description
+#! Returns whether the oriented matroid OM is linear.
+#! This is the case if the internal component <C>OM!.lforms</C> is bound.
+#! @BeginExampleSession
+#! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
+#! <OrientedMatroid: 6 elements, rank 3>
+#! gap> OMIsLinear(OM);
+#! true
+#! @EndExampleSession
 DeclareProperty("OMIsLinear", IsOrientedMatroid);
 
 #################################
@@ -109,28 +243,47 @@ DeclareProperty("OMIsLinear", IsOrientedMatroid);
 ##
 #################################
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#! Computes 
+# @Arguments n, k
+# @Returns A floating-point number
+# @Description
+# Computes the cosine of the angle <C>2*Pi*k/n</C>.
+# Returns <C>Cos(2*Pi*k/n)</C> as a floating-point value.
 DeclareGlobalFunction("cosn");
 
-#! @Arguments z
-#! @Returns a float 
-#! @Description
-#! Compute the float representation of the real part of a cyclotomic (complex) number 
+# @Arguments z
+# @Returns a float 
+# @Description
+# Compute the float representation of the real part of a cyclotomic (complex) number 
 DeclareGlobalFunction("CCToFloat");
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#! Computes 
+# @Arguments 
+# @Returns 
+# @Description
+# Computes 
 DeclareGlobalFunction("pos");
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments sv1, sv2
+#! @Returns A list
 #! @Description
-#! Computes 
+#! Performs the oriented matroid operation 
+#! on two signed vectors <C>sv1</C> and <C>sv2</C>.
+#! For each position <C>i</C>, 
+#! if <C>sv1[i]</C> is nonzero, it is used; 
+#! otherwise <C>sv2[i]</C> is used.
+#! Returns a new signed vector 
+#! representing the result of the operation.
+#! @BeginExampleSession
+#! gap> CVs:=OMCovectors(O)[2];
+#! [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
+#!   [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
+#! gap> sv1 := CVs[3]; sv2 := CVs[5];
+#! [ 1, 0, 1 ]
+#! [ -1, 1, 0 ]
+#! gap> OMOperation(sv1, sv2);
+#! [ 1, 1, 1 ]
+#! gap> OMOperation(sv2, sv1);
+#! [ -1, 1, 1 ]
+#! @EndExampleSession
 DeclareGlobalFunction("OMOperation");
 
 #! @Arguments 

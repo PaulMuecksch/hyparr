@@ -1,5 +1,5 @@
 #
-# HypArr: Computations with hyperplane arrangements 
+# HypArr: Computations with hyperplane arrangements
 #
 #! @Chapter Introduction
 #!
@@ -21,7 +21,7 @@ DeclareCategory("IsHyperplaneArrangement", IsComponentObjectRep and IsAttributeS
 
 # Declare the representation and its attribute accessor functions
 DeclareRepresentation(
-    "IsHyperplaneArrangementRep", 
+    "IsHyperplaneArrangementRep",
     IsHyperplaneArrangement,
     ["roots","dimension","lattice","charpoly","salcpx"]
 );
@@ -79,7 +79,7 @@ DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement );
 #! @Arguments A
 #! @Returns a univariate polynomial with integral coefficients.
 #! @Description
-#! Returns <M>\chi_{\mathcal{A}}</M> the <E>characterisitc polynomial</E> of the arrangement <M>\mathcal{A}</M>.
+#! Returns $\chi_{\mathcal{A}}$ the <E>characterisitc polynomial</E> of the arrangement $\mathcal{A}$.
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
@@ -110,7 +110,7 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 
 #! @Arguments A
 #! @Returns FacePoset
-#! @Description 
+#! @Description
 #! Constructs the Salvetti Complex.
 #! If <C>IsReal(A)</C> is false, then it returns <C>fail</C>.
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
@@ -137,23 +137,30 @@ DeclareGlobalFunction("FloatStringCutoff");
 #! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
 #! @Returns A string.
 #! @Description
-#! Generates tikz-code 
+#! Generates tikz-code
 #! for a nice projective picture of the real 3-arrangement.
+#!
+#! The example below will look as follows (only in pdf).
+#!
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> Print(DrawLatex3Arr(A));
-#! \begin{tikzpicture}[scale=\sc]
-#! \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
-#! \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
-#! \draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
-#! \draw (1.,3.872) -- (1.,-3.872);  % H_4 
-#! \draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
-#! \draw (3.872,1.) -- (-3.872,1.);  % H_6 
-#! 
+#! \begin{tikzpicture}[scale=1.0]
+#! \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1
+#! \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2
+#! \draw (-1.,3.872) -- (-1.,-3.872);  % H_3
+#! \draw (1.,3.872) -- (1.,-3.872);  % H_4
+#! \draw (3.872,-1.) -- (-3.872,-1.);  % H_5
+#! \draw (3.872,1.) -- (-3.872,1.);  % H_6
+#!
 #! \end{tikzpicture}
-#! 
 #! @EndExampleSession
+#! 
+#! @BeginLatexOnly
+#! \includegraphics{./other/DrawLatex3Arr_Example.pdf}
+#! @EndLatexOnly
+#! 
 DeclareGlobalFunction("DrawLatex3Arr");
 
 #! @Arguments p,q,l
@@ -170,10 +177,10 @@ DeclareGlobalFunction("DrawLatex3Arr");
 #! gap> A := AGpql(2,1,3);
 #!  <HyperplaneArrangement: 9 hyperplanes in 3-space>
 #! gap> Roots(A);
-#! [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
-#!   [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+#! [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+#!   [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
 #!   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-#! 
+#!
 #! @EndExampleSession
 DeclareGlobalFunction( "AGpql" );
 

@@ -70,7 +70,7 @@ gap> A := HyperplaneArrangement([[1,0],[0,1],[1,1]]);
  <Returns>a univariate polynomial with integral coefficients.
 </Returns>
  <Description>
- Returns <M>\chi_{\mathcal{A}}</M> the <E>characterisitc polynomial</E> of the arrangement <M>\mathcal{A}</M>.
+ Returns <Math>\chi_{\mathcal{A}}</Math> the <E>characterisitc polynomial</E> of the arrangement <Math>\mathcal{A}</Math>.
 <Example><![CDATA[
 gap> A:=AGpql(2,2,3);
 <HyperplaneArrangement: 6 hyperplanes in 3-space>
@@ -133,25 +133,32 @@ t^3-6*t^2+11*t-6
  <Returns>A string.
 </Returns>
  <Description>
- Generates tikz-code 
+ Generates tikz-code
  for a nice projective picture of the real 3-arrangement.
+<P/>
+ The example below will look as follows (only in pdf).
+<P/>
 <Example><![CDATA[
 gap> A:=AGpql(2,2,3);
 <HyperplaneArrangement: 6 hyperplanes in 3-space>
 gap> Print(DrawLatex3Arr(A));
-\begin{tikzpicture}[scale=\sc]
-\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
-\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
-\draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
-\draw (1.,3.872) -- (1.,-3.872);  % H_4 
-\draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
-\draw (3.872,1.) -- (-3.872,1.);  % H_6 
+\begin{tikzpicture}[scale=1.0]
+\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1
+\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2
+\draw (-1.,3.872) -- (-1.,-3.872);  % H_3
+\draw (1.,3.872) -- (1.,-3.872);  % H_4
+\draw (3.872,-1.) -- (-3.872,-1.);  % H_5
+\draw (3.872,1.) -- (-3.872,1.);  % H_6
 
 \end{tikzpicture}
-
 ]]></Example>
 
 
+<P/>
+<Alt Only="LaTeX"><![CDATA[
+ \includegraphics{./other/DrawLatex3Arr_Example.pdf}
+]]></Alt>
+<P/>
  </Description>
 </ManSection>
 
@@ -172,8 +179,8 @@ gap> Print(DrawLatex3Arr(A));
 gap> A := AGpql(2,1,3);
  <HyperplaneArrangement: 9 hyperplanes in 3-space>
 gap> Roots(A);
-[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
-  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
 
 ]]></Example>

@@ -603,7 +603,8 @@ local A,s,ip,Hind,disthv,
 	
 	R:=List(ShallowCopy(Roots(A)),x->RotTozMat(disthv)*x);;
 
-	sp:="\\begin{tikzpicture}[scale=\\sc]\n";;
+	# sp:="\\begin{tikzpicture}[scale=\\sc]\n";;
+	sp:="\\begin{tikzpicture}[scale=1.0]\n";;
 	
 	RR:=ctf(R);;
 	

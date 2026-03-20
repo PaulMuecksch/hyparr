@@ -76,7 +76,7 @@
 
 
 
-
+\usepackage{graphicx,amsfonts}
 
 %% command for ColorPrompt style examples
 \newcommand{\gapprompt}[1]{\color{promptColor}{\bfseries #1}}
@@ -316,21 +316,30 @@ A string.
 
  Generates tikz\texttt{\symbol{45}}code for a nice projective picture of the
 real 3\texttt{\symbol{45}}arrangement. 
+
+ The example below will look as follows (only in pdf). 
+
+ 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@Print(DrawLatex3Arr(A));|
-  \begin{tikzpicture}[scale=\sc]
-  \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1 
-  \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2 
-  \draw (-1.,3.872) -- (-1.,-3.872);  % H_3 
-  \draw (1.,3.872) -- (1.,-3.872);  % H_4 
-  \draw (3.872,-1.) -- (-3.872,-1.);  % H_5 
-  \draw (3.872,1.) -- (-3.872,1.);  % H_6 
+  \begin{tikzpicture}[scale=1.0]
+  \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1
+  \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2
+  \draw (-1.,3.872) -- (-1.,-3.872);  % H_3
+  \draw (1.,3.872) -- (1.,-3.872);  % H_4
+  \draw (3.872,-1.) -- (-3.872,-1.);  % H_5
+  \draw (3.872,1.) -- (-3.872,1.);  % H_6
   
   \end{tikzpicture}
-  
 \end{Verbatim}
+ 
+
+ 
+ \includegraphics{./other/DrawLatex3Arr_Example.pdf}
+ 
+
  }
 
  
@@ -354,8 +363,8 @@ reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the for
   !gapprompt@gap>| !gapinput@A := AGpql(2,1,3);|
    <HyperplaneArrangement: 9 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@Roots(A);|
-  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
-    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
     [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
   
 \end{Verbatim}
@@ -567,184 +576,351 @@ associated cell complexes and invariants.
 \subsection{\textcolor{Chapter }{OMRank (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 1 ]}\nobreak
 \hyperdef{L}{X7E30B85C7CE42908}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRank({\mdseries\slshape })\index{OMRank@\texttt{OMRank}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRank({\mdseries\slshape OM})\index{OMRank@\texttt{OMRank}!for IsOrientedMatroid}
 \label{OMRank:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+An integer 
 
 
- Computes }
+
+ Returns the rank of the oriented matroid \mbox{\texttt{\mdseries\slshape OM}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMRank(OM);|
+  3
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{OMGroundset (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 2 ]}\nobreak
 \hyperdef{L}{X78C0E4A0861CAD2F}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundset({\mdseries\slshape })\index{OMGroundset@\texttt{OMGroundset}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundset({\mdseries\slshape OM})\index{OMGroundset@\texttt{OMGroundset}!for IsOrientedMatroid}
 \label{OMGroundset:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list 
 
 
- Computes }
+
+ Returns the ground set of the oriented matroid OM. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMGroundset(OM);|
+  [ 1, 2, 3, 4, 5, 6 ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{OMLForms (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 3 ]}\nobreak
 \hyperdef{L}{X86AAB8F480E92ABB}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMLForms({\mdseries\slshape })\index{OMLForms@\texttt{OMLForms}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMLForms({\mdseries\slshape OM})\index{OMLForms@\texttt{OMLForms}!for IsOrientedMatroid}
 \label{OMLForms:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list of linear forms or \texttt{fail} 
 
 
- Computes }
+
+ Returns the list of linear forms associated with the oriented matroid OM. If
+the internal component \texttt{OM!.lforms} is not bound, \texttt{fail} is returned. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMLForms(O);|
+  [ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
+    [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{OMGeomLattice (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 4 ]}\nobreak
 \hyperdef{L}{X81CC016D818B3068}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGeomLattice({\mdseries\slshape })\index{OMGeomLattice@\texttt{OMGeomLattice}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGeomLattice({\mdseries\slshape OM})\index{OMGeomLattice@\texttt{OMGeomLattice}!for IsOrientedMatroid}
 \label{OMGeomLattice:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list of lists or \texttt{fail} 
 
 
- Computes }
+
+ Computes the geometric lattice associated with the oriented matroid OM. If OM
+is linear (as determined by \texttt{OMIsLinear(OM)}), the lattice is computed as the intersection lattice of the hyperplane
+arrangement given by \texttt{OMLForms(OM)}, stored in the internal component \texttt{OM!.lattice}, and returned. If OM is not linear, \texttt{fail} is returned. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMGeomLattice(OM);|
+  [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
+  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
+    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
+    [ [ 1, 2, 3, 4, 5, 6 ] ] ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{OMCocircuits (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 5 ]}\nobreak
 \hyperdef{L}{X83F110A97A80B140}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCocircuits({\mdseries\slshape })\index{OMCocircuits@\texttt{OMCocircuits}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCocircuits({\mdseries\slshape OM})\index{OMCocircuits@\texttt{OMCocircuits}!for IsOrientedMatroid}
 \label{OMCocircuits:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list 
 
 
- Computes }
+
+ Computes the (signed) cocircuits of the oriented matroid OM. The cocircuits
+are derived from the geometric lattice of OM (via \texttt{OMGeomLattice(OM)}) and the linear forms (from \texttt{OMLForms(OM)}). The result is a list of signed vectors representing all cocircuits of OM. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]); OMCocircuits(O);|
+  <OrientedMatroid: 3 elements, rank 2>
+  [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
+    [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{TopeGraph (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 6 ]}\nobreak
 \hyperdef{L}{X7B35E88A79675D1E}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TopeGraph({\mdseries\slshape })\index{TopeGraph@\texttt{TopeGraph}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TopeGraph({\mdseries\slshape OM})\index{TopeGraph@\texttt{TopeGraph}!for IsOrientedMatroid}
 \label{TopeGraph:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A graph 
 
 
- Computes }
+
+ Computes the tope graph of the oriented matroid OM. The topes are obtained as
+the first set of covectors from \texttt{OMCovectors(OM)}. Two topes are connected by an edge if their separating set has at most one
+element. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O := OrientedMatroid([[1,0],[0,1],[1,1]]);|
+  <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@G := ShallowCopy(TopeGraph(O));;|
+  !gapprompt@gap>| !gapinput@Vertices(G);|
+  [ 1 .. 6 ]
+  !gapprompt@gap>| !gapinput@IsSimpleGraph(G);|
+  true
+  !gapprompt@gap>| !gapinput@UndirectedEdges(G);|
+  [ [ 1, 3 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ] ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{OMCovectors (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 7 ]}\nobreak
 \hyperdef{L}{X7B2D2370811476C9}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCovectors({\mdseries\slshape })\index{OMCovectors@\texttt{OMCovectors}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCovectors({\mdseries\slshape OM})\index{OMCovectors@\texttt{OMCovectors}!for IsOrientedMatroid}
 \label{OMCovectors:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list of lists 
 
 
- Computes }
+
+ Computes all covectors of the oriented matroid OM. The result is returned as a
+reversed list of lists, where each inner list is a covector represented as a
+signed vector. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O := OrientedMatroid([[1,0],[0,1],[1,1]]);|
+  <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@OMCovectors(O);|
+  [ [ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], 
+      [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ],
+    [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
+      [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ],
+    [ [ 0, 0, 0 ] ] ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{SalvettiComplex (for IsOrientedMatroid)}}
 \logpage{[ 4, 1, 8 ]}\nobreak
 \hyperdef{L}{X7ED4D5138012EB6C}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape })\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsOrientedMatroid}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape OM})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsOrientedMatroid}
 \label{SalvettiComplex:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A Salvetti complex object 
 
 
- Computes }
+
+ Constructs the Salvetti complex associated with the oriented matroid OM. 
+
+ The construction proceeds as follows: 
+
+ 1. Computes the covectors of OM via \texttt{OMCovectors(OM)}. 
+
+ 2. Uses the topes and the lower order ideals of the covector poset to form the
+cells of the complex. 
+
+ 3. Defines an order function on the cells to capture the face poset structure,
+using \texttt{OMOperation} and \texttt{OrderCovec}. 
+
+ 4. Returns an object of type \texttt{FacePosetFamily} representing the Salvetti complex, with its ground set stored in \texttt{grgroundset} and the order function in \texttt{orderfunction}. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O := OrientedMatroid([[1,0],[0,1],[1,1]]);|
+  <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@SalvettiComplex(O);|
+  <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{FPGroundset (for IsFacePoset)}}
 \logpage{[ 4, 1, 9 ]}\nobreak
 \hyperdef{L}{X85AB2A797ABE8967}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundset({\mdseries\slshape })\index{FPGroundset@\texttt{FPGroundset}!for IsFacePoset}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundset({\mdseries\slshape FP})\index{FPGroundset@\texttt{FPGroundset}!for IsFacePoset}
 \label{FPGroundset:for IsFacePoset}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list 
 
 
- Computes }
+
+ Returns the ground set of the face poset FP. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@S := SalvettiComplex(O);|
+  <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
+  !gapprompt@gap>| !gapinput@FPGroundset(S);|
+  [
+    [ 
+      [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 
+      [ [ 1, -1, 1 ], [ 1, -1, 1 ] ], 
+      [ [ -1, -1, -1 ], [ -1, -1, -1 ] ], 
+      [ [ 1, 1, 1 ], [ 1, 1, 1 ] ], 
+      [ [ -1, 1, 1 ], [ -1, 1, 1 ] ], 
+      [ [ 1, -1, -1 ], [ 1, -1, -1 ] ]
+    ],
+    [
+      [ [ -1, 0, -1 ], [ -1, 1, -1 ] ], 
+      [ [ -1, 1, 0 ], [ -1, 1, -1 ] ], 
+      [ [ 1, 0, 1 ], [ 1, -1, 1 ] ], 
+      [ [ 1, -1, 0 ], [ 1, -1, 1 ] ], 
+      [ [ 0, -1, -1 ], [ -1, -1, -1 ] ], 
+      [ [ -1, 0, -1 ], [ -1, -1, -1 ] ], 
+      [ [ 0, 1, 1 ], [ 1, 1, 1 ] ], 
+      [ [ 1, 0, 1 ], [ 1, 1, 1 ] ], 
+      [ [ 0, 1, 1 ], [ -1, 1, 1 ] ], 
+      [ [ -1, 1, 0 ], [ -1, 1, 1 ] ], 
+      [ [ 0, -1, -1 ], [ 1, -1, -1 ] ], 
+      [ [ 1, -1, 0 ], [ 1, -1, -1 ] ]
+    ],
+    [
+      [ [ 0, 0, 0 ], [ -1, 1, -1 ] ], 
+      [ [ 0, 0, 0 ], [ 1, -1, 1 ] ], 
+      [ [ 0, 0, 0 ], [ -1, -1, -1 ] ], 
+      [ [ 0, 0, 0 ], [ 1, 1, 1 ] ], 
+      [ [ 0, 0, 0 ], [ -1, 1, 1 ] ], 
+      [ [ 0, 0, 0 ], [ 1, -1, -1 ] ]
+    ]
+  ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{FPOrder (for IsFacePoset)}}
 \logpage{[ 4, 1, 10 ]}\nobreak
 \hyperdef{L}{X7E28E057841D6ECD}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPOrder({\mdseries\slshape })\index{FPOrder@\texttt{FPOrder}!for IsFacePoset}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPOrder({\mdseries\slshape FP})\index{FPOrder@\texttt{FPOrder}!for IsFacePoset}
 \label{FPOrder:for IsFacePoset}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A function 
 
 
- Computes }
+
+ Returns the order function of the face poset FP. }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Properties}}\label{Chapter_Oriented_Matroids_Section_Properties}
+\logpage{[ 4, 2, 0 ]}
+\hyperdef{L}{X871597447BB998A1}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{OMIsLinear (for IsOrientedMatroid)}}
+\logpage{[ 4, 2, 1 ]}\nobreak
+\hyperdef{L}{X86B70496781D3884}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMIsLinear({\mdseries\slshape OM})\index{OMIsLinear@\texttt{OMIsLinear}!for IsOrientedMatroid}
+\label{OMIsLinear:for IsOrientedMatroid}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Returns whether the oriented matroid OM is linear. This is the case if the
+internal component \texttt{OM!.lforms} is bound. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMIsLinear(OM);|
+  true
+\end{Verbatim}
+ }
 
  }
 
  
 \section{\textcolor{Chapter }{Global methods}}\label{Chapter_Oriented_Matroids_Section_Global_methods}
-\logpage{[ 4, 2, 0 ]}
+\logpage{[ 4, 3, 0 ]}
 \hyperdef{L}{X80841F8D80722081}{}
 {
   
 
-\subsection{\textcolor{Chapter }{cosn}}
-\logpage{[ 4, 2, 1 ]}\nobreak
-\hyperdef{L}{X84A29EA5835B9497}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{cosn({\mdseries\slshape })\index{cosn@\texttt{cosn}}
-\label{cosn}
-}\hfill{\scriptsize (function)}}\\
-
-
- Computes }
-
- 
-
-\subsection{\textcolor{Chapter }{CCToFloat}}
-\logpage{[ 4, 2, 2 ]}\nobreak
-\hyperdef{L}{X81F884357C562D53}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CCToFloat({\mdseries\slshape z})\index{CCToFloat@\texttt{CCToFloat}}
-\label{CCToFloat}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-a float 
-
-
-
- Compute the float representation of the real part of a cyclotomic (complex)
-number }
-
- 
-
-\subsection{\textcolor{Chapter }{pos}}
-\logpage{[ 4, 2, 3 ]}\nobreak
-\hyperdef{L}{X7E82F08287360E7C}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{pos({\mdseries\slshape })\index{pos@\texttt{pos}}
-\label{pos}
-}\hfill{\scriptsize (function)}}\\
-
-
- Computes }
-
- 
-
 \subsection{\textcolor{Chapter }{OMOperation}}
-\logpage{[ 4, 2, 4 ]}\nobreak
+\logpage{[ 4, 3, 1 ]}\nobreak
 \hyperdef{L}{X7A515BDC8582FFE6}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMOperation({\mdseries\slshape })\index{OMOperation@\texttt{OMOperation}}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMOperation({\mdseries\slshape sv1, sv2})\index{OMOperation@\texttt{OMOperation}}
 \label{OMOperation}
 }\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A list 
 
 
- Computes }
+
+ Performs the oriented matroid operation on two signed vectors \texttt{sv1} and \texttt{sv2}. For each position \texttt{i}, if \texttt{sv1[i]} is nonzero, it is used; otherwise \texttt{sv2[i]} is used. Returns a new signed vector representing the result of the operation. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@CVs:=OMCovectors(O)[2];|
+  [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
+    [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
+  !gapprompt@gap>| !gapinput@sv1 := CVs[3]; sv2 := CVs[5];|
+  [ 1, 0, 1 ]
+  [ -1, 1, 0 ]
+  !gapprompt@gap>| !gapinput@OMOperation(sv1, sv2);|
+  [ 1, 1, 1 ]
+  !gapprompt@gap>| !gapinput@OMOperation(sv2, sv1);|
+  [ -1, 1, 1 ]
+\end{Verbatim}
+ }
 
  
 
 \subsection{\textcolor{Chapter }{OrderCovec}}
-\logpage{[ 4, 2, 5 ]}\nobreak
+\logpage{[ 4, 3, 2 ]}\nobreak
 \hyperdef{L}{X801F6A9B7A0A53F5}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrderCovec({\mdseries\slshape })\index{OrderCovec@\texttt{OrderCovec}}
 \label{OrderCovec}
@@ -756,7 +932,7 @@ number }
  
 
 \subsection{\textcolor{Chapter }{LowerOrderIdeal}}
-\logpage{[ 4, 2, 6 ]}\nobreak
+\logpage{[ 4, 3, 3 ]}\nobreak
 \hyperdef{L}{X85EA1E1A87E7EA5D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LowerOrderIdeal({\mdseries\slshape })\index{LowerOrderIdeal@\texttt{LowerOrderIdeal}}
 \label{LowerOrderIdeal}
@@ -768,7 +944,7 @@ number }
  
 
 \subsection{\textcolor{Chapter }{IsOMEquiv}}
-\logpage{[ 4, 2, 7 ]}\nobreak
+\logpage{[ 4, 3, 4 ]}\nobreak
 \hyperdef{L}{X80CB9A9C8135A314}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsOMEquiv({\mdseries\slshape })\index{IsOMEquiv@\texttt{IsOMEquiv}}
 \label{IsOMEquiv}
@@ -780,7 +956,7 @@ number }
  
 
 \subsection{\textcolor{Chapter }{SeparatingSet}}
-\logpage{[ 4, 2, 8 ]}\nobreak
+\logpage{[ 4, 3, 5 ]}\nobreak
 \hyperdef{L}{X793FF1428136B222}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SeparatingSet({\mdseries\slshape })\index{SeparatingSet@\texttt{SeparatingSet}}
 \label{SeparatingSet}
@@ -793,13 +969,13 @@ number }
 
  
 \section{\textcolor{Chapter }{Constructors}}\label{Chapter_Oriented_Matroids_Section_Constructors}
-\logpage{[ 4, 3, 0 ]}
+\logpage{[ 4, 4, 0 ]}
 \hyperdef{L}{X86EC0F0A78ECBC10}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OrientedMatroid (for IsList)}}
-\logpage{[ 4, 3, 1 ]}\nobreak
+\logpage{[ 4, 4, 1 ]}\nobreak
 \hyperdef{L}{X82EE52377B03CC80}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape r, or, A})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsList}
 \label{OrientedMatroid:for IsList}

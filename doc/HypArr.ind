@@ -4,10 +4,8 @@
 
   \indexspace
 
-  \item \texttt  {CCToFloat}, \hyperpage{11}
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
-  \item \texttt  {cosn}, \hyperpage{11}
 
   \indexspace
 
@@ -17,20 +15,20 @@
 
   \indexspace
 
-  \item \texttt  {Essentialization}, \hyperpage{6}
+  \item \texttt  {Essentialization}, \hyperpage{7}
 
   \indexspace
 
   \item \texttt  {FPGroundset}
-    \subitem for IsFacePoset, \hyperpage{11}
+    \subitem for IsFacePoset, \hyperpage{12}
   \item \texttt  {FPOrder}
-    \subitem for IsFacePoset, \hyperpage{11}
+    \subitem for IsFacePoset, \hyperpage{13}
   \item \texttt  {FPtoCWCpx}, \hyperpage{9}
 
   \indexspace
 
   \item \texttt  {HArrResHind}, \hyperpage{6}
-  \item \texttt  {HArrResX}, \hyperpage{6}
+  \item \texttt  {HArrResX}, \hyperpage{7}
   \item \texttt  {HyperplaneArrangement}
     \subitem for IsList, \hyperpage{7}
 
@@ -38,13 +36,13 @@
 
   \item \texttt  {IntersectionLattice}
     \subitem for IsHyperplaneArrangement, \hyperpage{4}
-  \item \texttt  {IsOMEquiv}, \hyperpage{12}
+  \item \texttt  {IsOMEquiv}, \hyperpage{14}
   \item \texttt  {IsReal}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
 
   \indexspace
 
-  \item \texttt  {LowerOrderIdeal}, \hyperpage{12}
+  \item \texttt  {LowerOrderIdeal}, \hyperpage{14}
 
   \indexspace
 
@@ -57,25 +55,23 @@
   \indexspace
 
   \item \texttt  {OMCocircuits}
-    \subitem for IsOrientedMatroid, \hyperpage{10}
-  \item \texttt  {OMCovectors}
     \subitem for IsOrientedMatroid, \hyperpage{11}
+  \item \texttt  {OMCovectors}
+    \subitem for IsOrientedMatroid, \hyperpage{12}
   \item \texttt  {OMGeomLattice}
-    \subitem for IsOrientedMatroid, \hyperpage{10}
+    \subitem for IsOrientedMatroid, \hyperpage{11}
   \item \texttt  {OMGroundset}
     \subitem for IsOrientedMatroid, \hyperpage{10}
+  \item \texttt  {OMIsLinear}
+    \subitem for IsOrientedMatroid, \hyperpage{13}
   \item \texttt  {OMLForms}
     \subitem for IsOrientedMatroid, \hyperpage{10}
-  \item \texttt  {OMOperation}, \hyperpage{12}
+  \item \texttt  {OMOperation}, \hyperpage{14}
   \item \texttt  {OMRank}
     \subitem for IsOrientedMatroid, \hyperpage{10}
-  \item \texttt  {OrderCovec}, \hyperpage{12}
+  \item \texttt  {OrderCovec}, \hyperpage{14}
   \item \texttt  {OrientedMatroid}
-    \subitem for IsList, \hyperpage{12}
-
-  \indexspace
-
-  \item \texttt  {pos}, \hyperpage{11}
+    \subitem for IsList, \hyperpage{15}
 
   \indexspace
 
@@ -86,8 +82,8 @@
 
   \item \texttt  {SalvettiComplex}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
-    \subitem for IsOrientedMatroid, \hyperpage{11}
-  \item \texttt  {SeparatingSet}, \hyperpage{12}
+    \subitem for IsOrientedMatroid, \hyperpage{12}
+  \item \texttt  {SeparatingSet}, \hyperpage{14}
 
   \indexspace
 
