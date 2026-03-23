@@ -577,6 +577,11 @@ function(T)
 	fi;
 end);
 
+BindGlobal("FloatRound",
+function(x,k)
+	return Round(10^k*x)/10^k;
+end);;
+
 InstallGlobalFunction(FloatStringCutoff,
 function(x)
 local posdot;
@@ -651,10 +656,11 @@ local A,s,ip,Hind,disthv,
 	
 	for vv in RR do
 		if AbsoluteValue(vv[1]^2 + vv[2]^2) < 0.0001 then
-			rinf:=String(18/17*r1);;
+			rinf:=String(FloatRound(18/17*r1,3));;
+			rinf := FloatStringCutoff(rinf);;
 			#xyinf:=String(Sqrt(2.0)/2*18/17*r1+0.35);;
-			xyinf := String(Sqrt(2.0)/2*18/17*r1);;
-            
+			xyinf := String(FloatRound(Sqrt(2.0)/2*18/17*r1,3));;
+            xyinf := FloatStringCutoff(xyinf);;
             
             if Mind=1 and Position(RR,vv) in MarkHs then
 			if Hind=1 then
@@ -701,10 +707,10 @@ local A,s,ip,Hind,disthv,
 				if AbsoluteValue(xc2) < 0.0001 then xc2:=0.0;; fi;;
 				if AbsoluteValue(yc1) < 0.0001 then yc1:=0.0;; fi;;
 				if AbsoluteValue(yc2) < 0.0001 then yc2:=0.0;; fi;;
-				x1:=String(xc1);
-				y1:=String(yc1);
-				x2:=String(xc2);
-				y2:=String(yc2);
+				x1:=String(FloatRound(xc1,3));
+				y1:=String(FloatRound(yc1,3));
+				x2:=String(FloatRound(xc2,3));
+				y2:=String(FloatRound(yc2,3));
 
 				x1:=FloatStringCutoff(x1);;
 				x2:=FloatStringCutoff(x2);;
@@ -736,10 +742,10 @@ local A,s,ip,Hind,disthv,
 					if AbsoluteValue(xc2) < 0.0001 then xc2:=0.0;; fi;;
 					if AbsoluteValue(yc1) < 0.0001 then yc1:=0.0;; fi;;
 					if AbsoluteValue(yc2) < 0.0001 then yc2:=0.0;; fi;;
-					x1:=String(xc1);
-					y1:=String(yc1);
-					x2:=String(xc2);
-					y2:=String(yc2);
+					x1:=String(FloatRound(xc1,3));
+					y1:=String(FloatRound(yc1,3));
+					x2:=String(FloatRound(xc2,3));
+					y2:=String(FloatRound(yc2,3));
 					
 					if x1>=0 then
 						sp:=Concatenation(sp,"\\node at (",x2,",",y2,") {\\small $",String(Position(RR,vv)),"$}; \n");;

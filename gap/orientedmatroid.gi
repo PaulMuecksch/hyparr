@@ -46,7 +46,7 @@ function(r)
     );
 end);
 
-InstallOtherMethod(OrientedMatroid,
+InstallMethod(OrientedMatroid,
     "for a real arrangement",
     [ IsHyperplaneArrangement ],
 function(A)

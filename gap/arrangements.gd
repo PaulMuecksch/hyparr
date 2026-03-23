@@ -285,6 +285,7 @@ DeclareGlobalFunction( "Essentialization");
 #! @EndExampleSession
 DeclareOperation("HyperplaneArrangement", [ IsList ]);
 
+BindGlobal("Arr",HyperplaneArrangement);
 
 #################################
 ##

@@ -336,6 +336,11 @@ DeclareGlobalFunction("SeparatingSet");
 #! <OrientedMatroid: 6 elements, rank 3>
 #! @EndExampleSession
 DeclareOperation("OrientedMatroid", [IsList]);
+DeclareOperation("OrientedMatroid", [IsHyperplaneArrangement]);
+
+
+BindGlobal("OM",OrientedMatroid);
+
 
 # Declare display function for OrientedMatroid objects
 DeclareOperation("ViewObject", [IsOrientedMatroid]);
