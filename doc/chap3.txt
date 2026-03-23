@@ -13,8 +13,7 @@
   [33X[1;0Y[29X[2XIsInductivelyFree[102X( [3XA[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
-  [33X[0;0YDetermines  whether  the  arrangement  [3XA[103X is [13Xinductively free[113X in the sense of
-  Terao.[133X
+  [33X[0;0YDetermines whether the arrangement [3XA[103X is [13Xinductively free[113X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -25,8 +24,7 @@
   [33X[1;0Y[29X[2XIsDivisionallyFree[102X( [3XA[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
-  [33X[0;0YDetermines  whether  the  arrangement [3XA[103X is [13Xdivisionally free[113X in the sense of
-  Terao.[133X
+  [33X[0;0YDetermines whether the arrangement [3XA[103X is [13Xdivisionally free[113X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X

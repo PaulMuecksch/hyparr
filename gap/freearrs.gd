@@ -18,7 +18,7 @@
 #! @Arguments A
 #! @Returns true or false.
 #! @Description
-#! Determines whether the arrangement <A>A</A> is <E>inductively free</E> in the sense of Terao.
+#! Determines whether the arrangement <A>A</A> is <E>inductively free</E>.
 #! @BeginExampleSession
 #! 
 #! @EndExampleSession
@@ -29,7 +29,7 @@ BindGlobal("IsIF",IsInductivelyFree);;
 #! @Arguments A
 #! @Returns true or false.
 #! @Description
-#! Determines whether the arrangement <A>A</A> is <E>divisionally free</E> in the sense of Terao.
+#! Determines whether the arrangement <A>A</A> is <E>divisionally free</E>.
 #! @BeginExampleSession
 #! 
 #! @EndExampleSession

@@ -17,7 +17,7 @@
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the arrangement <A>A</A> is <E>inductively free</E> in the sense of Terao.
+ Determines whether the arrangement <A>A</A> is <E>inductively free</E>.
 <Example><![CDATA[
 
 ]]></Example>
@@ -32,7 +32,7 @@
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the arrangement <A>A</A> is <E>divisionally free</E> in the sense of Terao.
+ Determines whether the arrangement <A>A</A> is <E>divisionally free</E>.
 <Example><![CDATA[
 
 ]]></Example>
