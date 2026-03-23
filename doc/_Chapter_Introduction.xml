@@ -5,8 +5,9 @@
 <Heading>Introduction</Heading>
 
 <P/>
- HypArr is a package for computations with hyperplane arrangements (see <Cite Key="OrTer92_Arr"/>),
- oriented matroids, and their topological invariants, in particular Milnor fibers and complements.
+ <B>HypArr</B> is a <B>GAP 4</B> package for computations with hyperplane arrangements (see <Cite Key="OrTer92_Arr"/>),
+ oriented matroids (see <Cite Key="BLSWZ1999_OrientedMatroids"/>), their combinatorial and topological invariants, in particular 
+ geometric lattices, face posets, Milnor fibers and complements.
 <P/>
 </Chapter>
 

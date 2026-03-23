@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Free_arrangements">
+<Heading>Free arrangements</Heading>
+
+<P/>
+ The following describes functions to analyse freeness
+ properties of arrangements such as  <E>inductive freeness</E> due to
+ H. Terao <Cite Key="Terao1980_FreeI"/> and  <E>divisionell freeness</E> due to T. Abe <Cite Key="Abe16_DivFree"/>.
+<P/>
+<Section Label="Chapter_Free_arrangements_Section_Freeness_properties">
+<Heading>Freeness properties</Heading>
+
+<ManSection>
+  <Prop Arg="A" Name="IsInductivelyFree" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines whether the arrangement <A>A</A> is <E>inductively free</E> in the sense of Terao.
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="A" Name="IsDivisionallyFree" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines whether the arrangement <A>A</A> is <E>divisionally free</E> in the sense of Terao.
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

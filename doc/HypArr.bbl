@@ -1,6 +1,11 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{BLVS{\etalchar{+}}99}
 
+\bibitem[{Abe}16]{Abe16_DivFree}
+T.~{Abe}.
+\newblock Divisionally free arrangements of hyperplanes.
+\newblock {\em Invent. Math.}, 204(1):317--346, 2016.
+
 \bibitem[BLVS{\etalchar{+}}99]{BLSWZ1999_OrientedMatroids}
 Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
   G\"{u}nter~M. Ziegler.
@@ -22,5 +27,10 @@ P.~{Orlik} and H.~{Terao}.
 M.~Salvetti.
 \newblock Topology of the complement of real hyperplanes in {${\bf C}^N$}.
 \newblock {\em Invent. Math.}, 88(3):603--618, 1987.
+
+\bibitem[{Ter}80]{Terao1980_FreeI}
+H.~{Terao}.
+\newblock Arrangements of hyperplanes and their freeness {I}.
+\newblock {\em J. Fac. Sci. Univ. Tokyo}, 27:293--320, 1980.
 
 \end{thebibliography}

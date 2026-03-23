@@ -1,71 +1,34 @@
   
-  [1X3 [33X[0;0YMilnor fibers[133X[101X
+  [1X3 [33X[0;0YFree arrangements[133X[101X
   
-  [33X[0;0YThe Milnor fiber is the typical fiber [22Xf^-1(1)[122X of the Milnor fibration[133X
-  
-  
-  [24X[33X[0;6Yf:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times,
-  z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)[133X
-  
-  [124X
-  
-  [33X[0;0Yof the hyperplane arrangement [22XmathcalA[122X, where [22Xα_H[122X are defining linear forms.[133X
-  
-  [33X[0;0YThe  following  describes functions to construct regular cell complex having
-  the  homotopy  type  of  the  Milnor  fiber  from  [MY25]  and  thus enables
-  computation of homotopy invaraints using e.g. the HAP package.[133X
+  [33X[0;0YThe   following  describes  functions  to  analyse  freeness  properties  of
+  arrangements  such  as  [13Xinductive  freeness[113X  due  to  H.  Terao  [\te80] and
+  [13Xdivisionell freeness[113X due to T. Abe [\te16].[133X
   
   
-  [1X3.1 [33X[0;0YComplexes[133X[101X
+  [1X3.1 [33X[0;0YFreeness properties[133X[101X
   
-  [1X3.1-1 MilnorFiberComplex[101X
+  [1X3.1-1 IsInductivelyFree[101X
   
-  [33X[1;0Y[29X[2XMilnorFiberComplex[102X( [3XOM[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YFacePoset[133X
+  [33X[1;0Y[29X[2XIsInductivelyFree[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
-  [33X[0;0YComputes  the  face  poset  of the regular cell complex of the combinatorial
-  Milnor fiber of the oriented matroid [3XOM[103X.[133X
+  [33X[0;0YDetermines  whether  the  arrangement  [3XA[103X is [13Xinductively free[113X in the sense of
+  Terao.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XO:=OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
-    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
-    [4X[25Xgap>[125X [27XMCpx:=MilnorFiberComplex(O);[127X[104X
-    [4X[28X<FacePoset of dimension 1 with f-vector [ 3, 6 ]>[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X3.1-2 MilnorFiberComplex[101X
+  [1X3.1-2 IsDivisionallyFree[101X
   
-  [33X[1;0Y[29X[2XMilnorFiberComplex[102X( [3XA[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YFacePoset[133X
+  [33X[1;0Y[29X[2XIsDivisionallyFree[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
-  [33X[0;0YComputes the face poset of the regular cell complex having the homotopy type
-  of Milnor fiber of the arrangement [3XA[103X.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
-    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XMCpx:=MilnorFiberComplex(A);[127X[104X
-    [4X[28X<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>[128X[104X
-  [4X[32X[104X
-  
-  [1X3.1-3 FPtoCWCpx[101X
-  
-  [33X[1;0Y[29X[2XFPtoCWCpx[102X( [3XFP[103X ) [32X function[133X
-  [6XReturns:[106X  [33X[0;10YHAP CW Complex[133X
-  
-  [33X[0;0YConverts  a  [12XHypArr[112X  [10XFacePoset[110X  into  a  [12XHAP[112X  [10XRegularCWComplex[110X  for  further
-  computations of topological invariants.[133X
+  [33X[0;0YDetermines  whether  the  arrangement [3XA[103X is [13Xdivisionally free[113X in the sense of
+  Terao.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
-    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XMCpx:=MilnorFiberComplex(A);[127X[104X
-    [4X[28X<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>[128X[104X
-    [4X[25Xgap>[125X [27XMCW := FPtoCWCpx(MCpx);[127X[104X
-    [4X[28XRegular CW-complex of dimension 2[128X[104X
-    [4X[25Xgap>[125X [27XHomology(MCW,0);[127X[104X
-    [4X[28X[ 0 ][128X[104X
-    [4X[25Xgap>[125X [27XHomology(MCW,1);[127X[104X
-    [4X[28X[ 0, 0, 0, 0, 0, 0, 0 ][128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   

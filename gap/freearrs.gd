@@ -4,8 +4,8 @@
 #! @Chapter Free arrangements
 #!
 #! The following describes functions to analyse freeness
-#! properties of arrangements such as  <E>inductively freeness</E> due to
-#! H.\ Terao <Cite Key="Terao1980_FreeI"/> and  <E>inductively freeness</E> due to T.\ Abe <Cite Key="Abe16_DivFree"/>.
+#! properties of arrangements such as  <E>inductive freeness</E> due to
+#! H. Terao <Cite Key="Terao1980_FreeI"/> and  <E>divisionell freeness</E> due to T. Abe <Cite Key="Abe16_DivFree"/>.
 #!
 
 #################################

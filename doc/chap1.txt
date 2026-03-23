@@ -1,7 +1,8 @@
   
   [1X1 [33X[0;0YIntroduction[133X[101X
   
-  [33X[0;0YHypArr  is  a  package  for  computations  with hyperplane arrangements (see
-  [tt92]),  oriented matroids, and their topological invariants, in particular
+  [33X[0;0Y[12XHypArr[112X is a [12XGAP 4[112X package for computations with hyperplane arrangements (see
+  [tt92]),   oriented   matroids  (see  [BLVS+99]),  their  combinatorial  and
+  topological  invariants,  in  particular  geometric  lattices,  face posets,
   Milnor fibers and complements.[133X
   

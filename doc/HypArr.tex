@@ -133,8 +133,8 @@
 {
   
 
- HypArr is a package for computations with hyperplane arrangements (see \cite{OrTer92_Arr}), oriented matroids, and their topological invariants, in particular Milnor
-fibers and complements. 
+ \textsc{HypArr} is a \textsc{GAP 4} package for computations with hyperplane arrangements (see \cite{OrTer92_Arr}), oriented matroids (see \cite{BLSWZ1999_OrientedMatroids}), their combinatorial and topological invariants, in particular geometric
+lattices, face posets, Milnor fibers and complements. 
 
  }
 
@@ -526,8 +526,65 @@ arrangement only stores pairwise linearly independent hyperplanes.
  }
 
    
-\chapter{\textcolor{Chapter }{Milnor fibers}}\label{Chapter_Milnor_fibers}
+\chapter{\textcolor{Chapter }{Free arrangements}}\label{Chapter_Free_arrangements}
 \logpage{[ 3, 0, 0 ]}
+\hyperdef{L}{X84CDDA0382B013CF}{}
+{
+  
+
+ The following describes functions to analyse freeness properties of
+arrangements such as \emph{inductive freeness} due to H. Terao \cite{Terao1980_FreeI} and \emph{divisionell freeness} due to T. Abe \cite{Abe16_DivFree}. 
+
+ 
+\section{\textcolor{Chapter }{Freeness properties}}\label{Chapter_Free_arrangements_Section_Freeness_properties}
+\logpage{[ 3, 1, 0 ]}
+\hyperdef{L}{X82FF317F7EFD52AF}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{IsInductivelyFree (for IsHyperplaneArrangement)}}
+\logpage{[ 3, 1, 1 ]}\nobreak
+\hyperdef{L}{X80F4D6247CAA1BDA}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsInductivelyFree({\mdseries\slshape A})\index{IsInductivelyFree@\texttt{IsInductivelyFree}!for IsHyperplaneArrangement}
+\label{IsInductivelyFree:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{inductively free} in the sense of Terao. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{IsDivisionallyFree (for IsHyperplaneArrangement)}}
+\logpage{[ 3, 1, 2 ]}\nobreak
+\hyperdef{L}{X85DAC6FC78DDED6D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsDivisionallyFree({\mdseries\slshape A})\index{IsDivisionallyFree@\texttt{IsDivisionallyFree}!for IsHyperplaneArrangement}
+\label{IsDivisionallyFree:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{divisionally free} in the sense of Terao. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Milnor fibers}}\label{Chapter_Milnor_fibers}
+\logpage{[ 4, 0, 0 ]}
 \hyperdef{L}{X80236F007DAFE4C2}{}
 {
   
@@ -541,13 +598,13 @@ z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
 homotopy type of the Milnor fiber from \cite{MueYos25_MilnorOM} and thus enables computation of homotopy invaraints using e.g. the HAP
 package. 
 \section{\textcolor{Chapter }{Complexes}}\label{Chapter_Milnor_fibers_Section_Complexes}
-\logpage{[ 3, 1, 0 ]}
+\logpage{[ 4, 1, 0 ]}
 \hyperdef{L}{X79C388D385DB7CD1}{}
 {
   
 
 \subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}
-\logpage{[ 3, 1, 1 ]}\nobreak
+\logpage{[ 4, 1, 1 ]}\nobreak
 \hyperdef{L}{X794B90A67B153E6F}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape OM})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsOrientedMatroid}
 \label{MilnorFiberComplex:for IsOrientedMatroid}
@@ -570,7 +627,7 @@ Milnor fiber of the oriented matroid \mbox{\texttt{\mdseries\slshape OM}}.
  
 
 \subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
-\logpage{[ 3, 1, 2 ]}\nobreak
+\logpage{[ 4, 1, 2 ]}\nobreak
 \hyperdef{L}{X7D30E85086B93DB0}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape A})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
 \label{MilnorFiberComplex:for IsHyperplaneArrangement}
@@ -593,7 +650,7 @@ of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}.
  
 
 \subsection{\textcolor{Chapter }{FPtoCWCpx}}
-\logpage{[ 3, 1, 3 ]}\nobreak
+\logpage{[ 4, 1, 3 ]}\nobreak
 \hyperdef{L}{X7BBA6F967E493B5D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}}
 \label{FPtoCWCpx}
@@ -624,7 +681,7 @@ HAP CW Complex
 
    
 \chapter{\textcolor{Chapter }{Oriented Matroids}}\label{Chapter_Oriented_Matroids}
-\logpage{[ 4, 0, 0 ]}
+\logpage{[ 5, 0, 0 ]}
 \hyperdef{L}{X8388FBA579602CDB}{}
 {
   
@@ -633,13 +690,13 @@ HAP CW Complex
 following describes functions to handle oriented matroids and compute
 associated cell complexes and invariants. See \cite{BLSWZ1999_OrientedMatroids} 
 \section{\textcolor{Chapter }{Attributes}}\label{Chapter_Oriented_Matroids_Section_Attributes}
-\logpage{[ 4, 1, 0 ]}
+\logpage{[ 5, 1, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OMRank (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 1 ]}\nobreak
+\logpage{[ 5, 1, 1 ]}\nobreak
 \hyperdef{L}{X7E30B85C7CE42908}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRank({\mdseries\slshape OM})\index{OMRank@\texttt{OMRank}!for IsOrientedMatroid}
 \label{OMRank:for IsOrientedMatroid}
@@ -661,7 +718,7 @@ An integer
  
 
 \subsection{\textcolor{Chapter }{OMGroundSet (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 2 ]}\nobreak
+\logpage{[ 5, 1, 2 ]}\nobreak
 \hyperdef{L}{X78C0E4A0861CAD2F}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundSet({\mdseries\slshape OM})\index{OMGroundSet@\texttt{OMGroundSet}!for IsOrientedMatroid}
 \label{OMGroundSet:for IsOrientedMatroid}
@@ -683,7 +740,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{OMLForms (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 3 ]}\nobreak
+\logpage{[ 5, 1, 3 ]}\nobreak
 \hyperdef{L}{X86AAB8F480E92ABB}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMLForms({\mdseries\slshape OM})\index{OMLForms@\texttt{OMLForms}!for IsOrientedMatroid}
 \label{OMLForms:for IsOrientedMatroid}
@@ -707,7 +764,7 @@ the internal component \texttt{OM!.lforms} is not bound, \texttt{fail} is return
  
 
 \subsection{\textcolor{Chapter }{OMGeomLattice (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 4 ]}\nobreak
+\logpage{[ 5, 1, 4 ]}\nobreak
 \hyperdef{L}{X81CC016D818B3068}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGeomLattice({\mdseries\slshape OM})\index{OMGeomLattice@\texttt{OMGeomLattice}!for IsOrientedMatroid}
 \label{OMGeomLattice:for IsOrientedMatroid}
@@ -734,7 +791,7 @@ arrangement given by \texttt{OMLForms(OM)}, stored in the internal component \te
  
 
 \subsection{\textcolor{Chapter }{OMCocircuits (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 5 ]}\nobreak
+\logpage{[ 5, 1, 5 ]}\nobreak
 \hyperdef{L}{X83F110A97A80B140}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCocircuits({\mdseries\slshape OM})\index{OMCocircuits@\texttt{OMCocircuits}!for IsOrientedMatroid}
 \label{OMCocircuits:for IsOrientedMatroid}
@@ -759,7 +816,7 @@ are derived from the geometric lattice of OM (via \texttt{OMGeomLattice(OM)}) an
  
 
 \subsection{\textcolor{Chapter }{TopeGraph (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 6 ]}\nobreak
+\logpage{[ 5, 1, 6 ]}\nobreak
 \hyperdef{L}{X7B35E88A79675D1E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TopeGraph({\mdseries\slshape OM})\index{TopeGraph@\texttt{TopeGraph}!for IsOrientedMatroid}
 \label{TopeGraph:for IsOrientedMatroid}
@@ -788,7 +845,7 @@ element.
  
 
 \subsection{\textcolor{Chapter }{OMCovectors (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 7 ]}\nobreak
+\logpage{[ 5, 1, 7 ]}\nobreak
 \hyperdef{L}{X7B2D2370811476C9}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCovectors({\mdseries\slshape OM})\index{OMCovectors@\texttt{OMCovectors}!for IsOrientedMatroid}
 \label{OMCovectors:for IsOrientedMatroid}
@@ -816,7 +873,7 @@ signed vector.
  
 
 \subsection{\textcolor{Chapter }{SalvettiComplex (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 8 ]}\nobreak
+\logpage{[ 5, 1, 8 ]}\nobreak
 \hyperdef{L}{X7ED4D5138012EB6C}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape OM})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsOrientedMatroid}
 \label{SalvettiComplex:for IsOrientedMatroid}
@@ -852,7 +909,7 @@ using \texttt{OMOperation} and \texttt{OrderCovec}.
  
 
 \subsection{\textcolor{Chapter }{FPGroundSet (for IsFacePoset)}}
-\logpage{[ 4, 1, 9 ]}\nobreak
+\logpage{[ 5, 1, 9 ]}\nobreak
 \hyperdef{L}{X85AB2A797ABE8967}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundSet({\mdseries\slshape FP})\index{FPGroundSet@\texttt{FPGroundSet}!for IsFacePoset}
 \label{FPGroundSet:for IsFacePoset}
@@ -905,7 +962,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{FPOrder (for IsFacePoset)}}
-\logpage{[ 4, 1, 10 ]}\nobreak
+\logpage{[ 5, 1, 10 ]}\nobreak
 \hyperdef{L}{X7E28E057841D6ECD}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPOrder({\mdseries\slshape FP})\index{FPOrder@\texttt{FPOrder}!for IsFacePoset}
 \label{FPOrder:for IsFacePoset}
@@ -921,13 +978,13 @@ A function
 
  
 \section{\textcolor{Chapter }{Properties}}\label{Chapter_Oriented_Matroids_Section_Properties}
-\logpage{[ 4, 2, 0 ]}
+\logpage{[ 5, 2, 0 ]}
 \hyperdef{L}{X871597447BB998A1}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OMIsLinear (for IsOrientedMatroid)}}
-\logpage{[ 4, 2, 1 ]}\nobreak
+\logpage{[ 5, 2, 1 ]}\nobreak
 \hyperdef{L}{X86B70496781D3884}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMIsLinear({\mdseries\slshape OM})\index{OMIsLinear@\texttt{OMIsLinear}!for IsOrientedMatroid}
 \label{OMIsLinear:for IsOrientedMatroid}
@@ -951,13 +1008,13 @@ internal component \texttt{OM!.lforms} is bound.
 
  
 \section{\textcolor{Chapter }{Global methods}}\label{Chapter_Oriented_Matroids_Section_Global_methods}
-\logpage{[ 4, 3, 0 ]}
+\logpage{[ 5, 3, 0 ]}
 \hyperdef{L}{X80841F8D80722081}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OMOperation}}
-\logpage{[ 4, 3, 1 ]}\nobreak
+\logpage{[ 5, 3, 1 ]}\nobreak
 \hyperdef{L}{X7A515BDC8582FFE6}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMOperation({\mdseries\slshape sv1, sv2})\index{OMOperation@\texttt{OMOperation}}
 \label{OMOperation}
@@ -985,7 +1042,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{OrderCovec}}
-\logpage{[ 4, 3, 2 ]}\nobreak
+\logpage{[ 5, 3, 2 ]}\nobreak
 \hyperdef{L}{X801F6A9B7A0A53F5}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrderCovec({\mdseries\slshape })\index{OrderCovec@\texttt{OrderCovec}}
 \label{OrderCovec}
@@ -997,7 +1054,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{LowerOrderIdeal}}
-\logpage{[ 4, 3, 3 ]}\nobreak
+\logpage{[ 5, 3, 3 ]}\nobreak
 \hyperdef{L}{X85EA1E1A87E7EA5D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LowerOrderIdeal({\mdseries\slshape })\index{LowerOrderIdeal@\texttt{LowerOrderIdeal}}
 \label{LowerOrderIdeal}
@@ -1009,7 +1066,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{IsOMEquiv}}
-\logpage{[ 4, 3, 4 ]}\nobreak
+\logpage{[ 5, 3, 4 ]}\nobreak
 \hyperdef{L}{X80CB9A9C8135A314}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsOMEquiv({\mdseries\slshape })\index{IsOMEquiv@\texttt{IsOMEquiv}}
 \label{IsOMEquiv}
@@ -1021,7 +1078,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{SeparatingSet}}
-\logpage{[ 4, 3, 5 ]}\nobreak
+\logpage{[ 5, 3, 5 ]}\nobreak
 \hyperdef{L}{X793FF1428136B222}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SeparatingSet({\mdseries\slshape })\index{SeparatingSet@\texttt{SeparatingSet}}
 \label{SeparatingSet}
@@ -1034,13 +1091,13 @@ A list
 
  
 \section{\textcolor{Chapter }{Constructors}}\label{Chapter_Oriented_Matroids_Section_Constructors}
-\logpage{[ 4, 4, 0 ]}
+\logpage{[ 5, 4, 0 ]}
 \hyperdef{L}{X86EC0F0A78ECBC10}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OrientedMatroid (for IsList)}}
-\logpage{[ 4, 4, 1 ]}\nobreak
+\logpage{[ 5, 4, 1 ]}\nobreak
 \hyperdef{L}{X82EE52377B03CC80}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape r, or, A})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsList}
 \label{OrientedMatroid:for IsList}
@@ -1066,13 +1123,27 @@ hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}.
 \end{Verbatim}
  }
 
+ 
+
+\subsection{\textcolor{Chapter }{OrientedMatroid (for IsHyperplaneArrangement)}}
+\logpage{[ 5, 4, 2 ]}\nobreak
+\hyperdef{L}{X7C9A997F7C275795}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape arg})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsHyperplaneArrangement}
+\label{OrientedMatroid:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
  }
 
  }
 
    
 \chapter{\textcolor{Chapter }{Special arrangements}}\label{Chapter_Special_arrangements}
-\logpage{[ 5, 0, 0 ]}
+\logpage{[ 6, 0, 0 ]}
 \hyperdef{L}{X7C9F5AAF83133F9A}{}
 {
   
@@ -1081,13 +1152,13 @@ hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}.
 
  
 \section{\textcolor{Chapter }{Global methods}}\label{Chapter_Special_arrangements_Section_Global_methods}
-\logpage{[ 5, 1, 0 ]}
+\logpage{[ 6, 1, 0 ]}
 \hyperdef{L}{X80841F8D80722081}{}
 {
   
 
 \subsection{\textcolor{Chapter }{AGpql}}
-\logpage{[ 5, 1, 1 ]}\nobreak
+\logpage{[ 6, 1, 1 ]}\nobreak
 \hyperdef{L}{X858205A37B7EB5FA}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape p, q, l})\index{AGpql@\texttt{AGpql}}
 \label{AGpql}
@@ -1115,7 +1186,7 @@ reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the for
  
 
 \subsection{\textcolor{Chapter }{SsS3}}
-\logpage{[ 5, 1, 2 ]}\nobreak
+\logpage{[ 6, 1, 2 ]}\nobreak
 \hyperdef{L}{X81AD6CA97F71ED33}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SsS3({\mdseries\slshape n})\index{SsS3@\texttt{SsS3}}
 \label{SsS3}

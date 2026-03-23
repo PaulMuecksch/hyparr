@@ -377,6 +377,14 @@ gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(A);
 </ManSection>
 
 
+<ManSection>
+  <Oper Arg="arg" Name="OrientedMatroid" Label="for IsHyperplaneArrangement"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
