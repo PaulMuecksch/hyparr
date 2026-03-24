@@ -45,7 +45,8 @@ DeclareGlobalFunction( "sp" );
 #! @Description
 #!  Generates the irreducible supersolvable simplicial arrangement
 #!  of rank 3 with n hyperplanes.
-#!  n must either even oder congruent 1 mod 4. 
+#!  n must either be even oder congruent 1 mod 4.
+#!  In any case, $n\geq 6$. 
 #! @BeginExampleSession
 #! gap> A:=SsS3(9); Roots(A);
 #! <HyperplaneArrangement: 9 hyperplanes in 3-space>

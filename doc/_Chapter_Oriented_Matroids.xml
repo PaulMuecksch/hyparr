@@ -313,33 +313,27 @@ gap> OMOperation(sv2, sv1);
 
 
 <ManSection>
-  <Func Arg="" Name="OrderCovec" />
+  <Func Arg="arg" Name="OrderCovec" />
  <Description>
- Computes 
+ Order function for sign vectors. 
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Func Arg="" Name="LowerOrderIdeal" />
+  <Func Arg="OM1, OM2" Name="IsOMEquiv" />
+ <Returns>true or false
+</Returns>
  <Description>
- Computes 
+ Determines, if the oriented matroids <A>OM1</A> and <A>OM2</A> are isomorphic.
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Func Arg="" Name="IsOMEquiv" />
+  <Func Arg="arg" Name="SeparatingSet" />
  <Description>
- Computes 
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Func Arg="" Name="SeparatingSet" />
- <Description>
- Computes 
+ The separating set of two sign vectors. 
  </Description>
 </ManSection>
 

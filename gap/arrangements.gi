@@ -139,6 +139,40 @@ local kFlatsFct, gset;
 	return kFlatsFct;;
 end);
 
+InstallMethod(GLGraph,
+    [IsGeomLattice],
+function(L)
+local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
+    GSet := GLGroundSet(L);;
+    B:=Concatenation(GSet);
+	n:=Concatenation([0],List([1..Length(GSet)],y->Sum(List(GSet{[1..y]},x->Length(x)))));
+	GraphMat:=NullMat(n[Length(GSet)+1],n[Length(GSet)+1])	;
+	for i in [1..(Length(GSet)-1)] do
+		for j in [(n[i]+1)..n[i+1]] do
+			for k in [(n[i+1]+1)..n[i+2]] do
+				if IsSubset(B[k],B[j]) then
+				    GraphMat[j][k]:=1;
+				    # GraphMat[k][j]:=1;
+				fi;
+		    	od;
+		od;
+	od;
+
+	GraphL := Graph(Group( () ), [1..n[Length(GSet)+1]], OnPoints,function(x,y) return GraphMat[x][y]=1; end, true);
+	
+	return GraphL;;
+end);
+
+InstallMethod(GLAutGroup,
+    [IsGeomLattice],
+function(L)
+local G,GraphL;
+	GraphL:=ShallowCopy(GLGraph(L));;
+	G := AutGroupGraph(GraphL);
+	G := Image(ActionHomomorphism(G,GLAtoms(L)));
+	return G;;
+end);
+
 
 #####################################################################
 # HypArr_AddHToL(R, Lo, Hn)
@@ -453,7 +487,15 @@ local C;
 
 end);
 
+####################################################################################################
 
+InstallGlobalFunction(IsLEquiv,
+function(A,B)
+local LGraphA,LGraphB;;
+    LGraphA := ShallowCopy(GLGraph(IntersectionLattice(A)));
+    LGraphB := ShallowCopy(GLGraph(IntersectionLattice(B)));
+    return IsIsomorphicGraph(LGraphA,LGraphB);
+end);
 
 ############################################################
 ## the wedge-product

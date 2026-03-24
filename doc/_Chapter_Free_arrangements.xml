@@ -19,7 +19,10 @@
  <Description>
  Determines whether the arrangement <A>A</A> is <E>inductively free</E>.
 <Example><![CDATA[
-
+gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+<HyperplaneArrangement: 5 hyperplanes in 3-space>
+gap> IsInductivelyFree(A);
+true
 ]]></Example>
 
 
@@ -34,7 +37,14 @@
  <Description>
  Determines whether the arrangement <A>A</A> is <E>divisionally free</E>.
 <Example><![CDATA[
-
+gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+<HyperplaneArrangement: 5 hyperplanes in 3-space>
+gap> IsDivisionallyFree(A);
+true
+gap> A:=AGpql(3,3,3);
+<HyperplaneArrangement: 9 hyperplanes in 3-space>
+gap> IsDivisionallyFree(A);
+false
 ]]></Example>
 
 

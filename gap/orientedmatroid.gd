@@ -286,28 +286,28 @@ DeclareGlobalFunction("pos");
 #! @EndExampleSession
 DeclareGlobalFunction("OMOperation");
 
-#! @Arguments 
-#! @Returns 
+# @Arguments 
+# @Returns 
 #! @Description
-#! Computes 
+#! Order function for sign vectors. 
 DeclareGlobalFunction("OrderCovec");
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#! Computes 
+# @Arguments 
+# @Returns 
+# @Description
+# Computes 
 DeclareGlobalFunction("LowerOrderIdeal");
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments OM1, OM2
+#! @Returns true or false
 #! @Description
-#! Computes 
+#! Determines, if the oriented matroids <A>OM1</A> and <A>OM2</A> are isomorphic.
 DeclareGlobalFunction("IsOMEquiv");
 
-#! @Arguments 
-#! @Returns 
+# @Arguments 
+# @Returns 
 #! @Description
-#! Computes 
+#! The separating set of two sign vectors. 
 DeclareGlobalFunction("SeparatingSet");
 
 #################################

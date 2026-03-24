@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Further_arrangement_properties">
+<Heading>Further arrangement properties</Heading>
+
+<P/>
+ The following describes functions to analyse further
+ properties of arrangements such as <E>formality</E>, <E>supersolvability</E>, <E>simpliciality</E>,
+ <E>factoredness</E>, <E>inductive factoredness</E> ...
+<P/>
+<Section Label="Chapter_Further_arrangement_properties_Section_Formal_arrangements">
+<Heading>Formal arrangements</Heading>
+
+<ManSection>
+  <Prop Arg="A" Name="IsFormal" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines whether the arrangement is <E>formal</E>
+ in the sense of Falk-Randell <Cite Key="FalkRandell87_HomotopyArr"/>.
+<Example><![CDATA[
+gap> A1 := Arr([
+>     [1,0,0],
+>     [0,1,0],
+>     [0,0,1],
+>     [1,1,1],
+>     [2,1,1],
+>     [2,3,1],
+>     [2,3,4],
+>     [3,0,5],
+>     [3,4,5]
+> ]);;
+gap> 
+gap> A2 := Arr([
+>     [1,0,0],
+>     [0,1,0],
+>     [0,0,1],
+>     [1,1,1],
+>     [2,1,1],
+>     [2,3,1],
+>     [2,3,4],
+>     [1,0,3],
+>     [1,2,3]
+> ]);;
+gap> IsLEquiv(A1,A2);
+true
+gap> IsFormal(A1);
+true
+gap> IsFormal(A2);
+false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+
+
+
+</Chapter>
+

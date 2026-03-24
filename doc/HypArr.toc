@@ -13,48 +13,53 @@
 \contentsline {subsection}{\numberline {2.1.10}\textcolor {Chapter }{GLAtoms (for IsGeomLattice)}}{6}{subsection.2.1.10}%
 \contentsline {subsection}{\numberline {2.1.11}\textcolor {Chapter }{GLRank (for IsGeomLattice)}}{6}{subsection.2.1.11}%
 \contentsline {subsection}{\numberline {2.1.12}\textcolor {Chapter }{GLkFlats (for IsGeomLattice)}}{6}{subsection.2.1.12}%
-\contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Global methods}}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{DrawLatex3Arr}}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}\textcolor {Chapter }{HArrResHind}}{7}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrResX}}{7}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{Essentialization}}{7}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.1.13}\textcolor {Chapter }{GLGraph (for IsGeomLattice)}}{6}{subsection.2.1.13}%
+\contentsline {subsection}{\numberline {2.1.14}\textcolor {Chapter }{GLAutGroup (for IsGeomLattice)}}{6}{subsection.2.1.14}%
+\contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Global methods}}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{IsLEquiv}}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}\textcolor {Chapter }{DrawLatex3Arr}}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrResHind}}{8}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{HArrResX}}{8}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}\textcolor {Chapter }{Essentialization}}{8}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Constructors}}{8}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{8}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Free arrangements}}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}\textcolor {Chapter }{Freeness properties}}{9}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{IsInductivelyFree (for IsHyperplaneArrangement)}}{9}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}\textcolor {Chapter }{IsDivisionallyFree (for IsHyperplaneArrangement)}}{9}{subsection.3.1.2}%
-\contentsline {chapter}{\numberline {4}\textcolor {Chapter }{Milnor fibers}}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}\textcolor {Chapter }{Complexes}}{10}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{10}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{10}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}\textcolor {Chapter }{FPtoCWCpx}}{11}{subsection.4.1.3}%
-\contentsline {chapter}{\numberline {5}\textcolor {Chapter }{Oriented Matroids}}{12}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\textcolor {Chapter }{Attributes}}{12}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}\textcolor {Chapter }{OMRank (for IsOrientedMatroid)}}{12}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}\textcolor {Chapter }{OMGroundSet (for IsOrientedMatroid)}}{12}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}\textcolor {Chapter }{OMLForms (for IsOrientedMatroid)}}{12}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}\textcolor {Chapter }{OMGeomLattice (for IsOrientedMatroid)}}{13}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}\textcolor {Chapter }{OMCocircuits (for IsOrientedMatroid)}}{13}{subsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.1.6}\textcolor {Chapter }{TopeGraph (for IsOrientedMatroid)}}{13}{subsection.5.1.6}%
-\contentsline {subsection}{\numberline {5.1.7}\textcolor {Chapter }{OMCovectors (for IsOrientedMatroid)}}{14}{subsection.5.1.7}%
-\contentsline {subsection}{\numberline {5.1.8}\textcolor {Chapter }{SalvettiComplex (for IsOrientedMatroid)}}{14}{subsection.5.1.8}%
-\contentsline {subsection}{\numberline {5.1.9}\textcolor {Chapter }{FPGroundSet (for IsFacePoset)}}{14}{subsection.5.1.9}%
-\contentsline {subsection}{\numberline {5.1.10}\textcolor {Chapter }{FPOrder (for IsFacePoset)}}{15}{subsection.5.1.10}%
-\contentsline {section}{\numberline {5.2}\textcolor {Chapter }{Properties}}{15}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}\textcolor {Chapter }{OMIsLinear (for IsOrientedMatroid)}}{15}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}\textcolor {Chapter }{Global methods}}{16}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}\textcolor {Chapter }{OMOperation}}{16}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}\textcolor {Chapter }{OrderCovec}}{16}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}\textcolor {Chapter }{LowerOrderIdeal}}{16}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}\textcolor {Chapter }{IsOMEquiv}}{16}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}\textcolor {Chapter }{SeparatingSet}}{16}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}\textcolor {Chapter }{Constructors}}{17}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}\textcolor {Chapter }{OrientedMatroid (for IsList)}}{17}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}\textcolor {Chapter }{OrientedMatroid (for IsHyperplaneArrangement)}}{17}{subsection.5.4.2}%
-\contentsline {chapter}{\numberline {6}\textcolor {Chapter }{Special arrangements}}{18}{chapter.6}%
-\contentsline {section}{\numberline {6.1}\textcolor {Chapter }{Global methods}}{18}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}\textcolor {Chapter }{AGpql}}{18}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}\textcolor {Chapter }{SsS3}}{18}{subsection.6.1.2}%
-\contentsline {chapter}{References}{20}{chapter*.2}%
-\contentsline {chapter}{Index}{21}{section*.3}%
+\contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Free arrangements}}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\textcolor {Chapter }{Freeness properties}}{10}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{IsInductivelyFree (for IsHyperplaneArrangement)}}{10}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}\textcolor {Chapter }{IsDivisionallyFree (for IsHyperplaneArrangement)}}{10}{subsection.3.1.2}%
+\contentsline {chapter}{\numberline {4}\textcolor {Chapter }{Milnor fibers}}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}\textcolor {Chapter }{Complexes}}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{11}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{11}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}\textcolor {Chapter }{FPtoCWCpx}}{12}{subsection.4.1.3}%
+\contentsline {chapter}{\numberline {5}\textcolor {Chapter }{Further arrangement properties}}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}\textcolor {Chapter }{Formal arrangements}}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}\textcolor {Chapter }{IsFormal (for IsHyperplaneArrangement)}}{13}{subsection.5.1.1}%
+\contentsline {chapter}{\numberline {6}\textcolor {Chapter }{Oriented Matroids}}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}\textcolor {Chapter }{Attributes}}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}\textcolor {Chapter }{OMRank (for IsOrientedMatroid)}}{15}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}\textcolor {Chapter }{OMGroundSet (for IsOrientedMatroid)}}{15}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}\textcolor {Chapter }{OMLForms (for IsOrientedMatroid)}}{15}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}\textcolor {Chapter }{OMGeomLattice (for IsOrientedMatroid)}}{16}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}\textcolor {Chapter }{OMCocircuits (for IsOrientedMatroid)}}{16}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}\textcolor {Chapter }{TopeGraph (for IsOrientedMatroid)}}{16}{subsection.6.1.6}%
+\contentsline {subsection}{\numberline {6.1.7}\textcolor {Chapter }{OMCovectors (for IsOrientedMatroid)}}{17}{subsection.6.1.7}%
+\contentsline {subsection}{\numberline {6.1.8}\textcolor {Chapter }{SalvettiComplex (for IsOrientedMatroid)}}{17}{subsection.6.1.8}%
+\contentsline {subsection}{\numberline {6.1.9}\textcolor {Chapter }{FPGroundSet (for IsFacePoset)}}{17}{subsection.6.1.9}%
+\contentsline {subsection}{\numberline {6.1.10}\textcolor {Chapter }{FPOrder (for IsFacePoset)}}{18}{subsection.6.1.10}%
+\contentsline {section}{\numberline {6.2}\textcolor {Chapter }{Properties}}{18}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}\textcolor {Chapter }{OMIsLinear (for IsOrientedMatroid)}}{18}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}\textcolor {Chapter }{Global methods}}{19}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}\textcolor {Chapter }{OMOperation}}{19}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}\textcolor {Chapter }{OrderCovec}}{19}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}\textcolor {Chapter }{IsOMEquiv}}{19}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}\textcolor {Chapter }{SeparatingSet}}{19}{subsection.6.3.4}%
+\contentsline {section}{\numberline {6.4}\textcolor {Chapter }{Constructors}}{19}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}\textcolor {Chapter }{OrientedMatroid (for IsList)}}{19}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}\textcolor {Chapter }{OrientedMatroid (for IsHyperplaneArrangement)}}{20}{subsection.6.4.2}%
+\contentsline {chapter}{\numberline {7}\textcolor {Chapter }{Special arrangements}}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}\textcolor {Chapter }{Global methods}}{21}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}\textcolor {Chapter }{AGpql}}{21}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}\textcolor {Chapter }{SsS3}}{21}{subsection.7.1.2}%
+\contentsline {chapter}{References}{23}{chapter*.2}%
+\contentsline {chapter}{Index}{24}{section*.3}%

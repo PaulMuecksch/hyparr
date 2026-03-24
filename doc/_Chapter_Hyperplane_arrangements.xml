@@ -197,11 +197,58 @@ gap> SalvettiComplex(A);
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="L" Name="GLGraph" Label="for IsGeomLattice"/>
+ <Returns>a graph
+</Returns>
+ <Description>
+ Computes the directed graph of the hasse diagram of L.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLAutGroup" Label="for IsGeomLattice"/>
+ <Returns>a group
+</Returns>
+ <Description>
+ Computes the Autmorphisgroup of L
+ as a subgroup of <C>Sym(GLAtoms(L))</C>.
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
 <Section Label="Chapter_Hyperplane_arrangements_Section_Global_methods">
 <Heading>Global methods</Heading>
+
+<ManSection>
+  <Func Arg="A, B" Name="IsLEquiv" />
+ <Returns>true or false
+</Returns>
+ <Description>
+ Determines, if the arrangements <A>A</A> and <A>B</A> 
+ have isomorphic intersection lattices.
+<P/>
+<Example><![CDATA[
+gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> B:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> IsLEquiv(A,B);
+false
+gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> IsLEquiv(A,B);
+true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
 
 <ManSection>
   <Func Arg="A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]" Name="DrawLatex3Arr" />

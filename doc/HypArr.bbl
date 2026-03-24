@@ -13,6 +13,12 @@ Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
   Mathematics and its Applications}.
 \newblock Cambridge University Press, Cambridge, second edition, 1999.
 
+\bibitem[FR87]{FalkRandell87_HomotopyArr}
+M.~Falk and R.~Randell.
+\newblock On the homotopy theory of arrangements.
+\newblock In {\em Complex analytic singularities}, volume~8 of {\em Adv. Stud.
+  Pure Math.}, pages 101--124. North-Holland, Amsterdam, 1987.
+
 \bibitem[MY25]{MueYos25_MilnorOM}
 P.~M{\"u}cksch and M.~Yoshinaga.
 \newblock Milnor fibrations and oriented matroids.

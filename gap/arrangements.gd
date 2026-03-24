@@ -153,7 +153,6 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 
-
 #! @Subsection Attributes of geometric lattices
 #################################
 
@@ -181,6 +180,19 @@ DeclareAttribute("GLRank", IsGeomLattice);
 #! Returns a function extracting the flats of rank $k$ in <A>L</A>.
 DeclareAttribute("GLkFlats", IsGeomLattice);
 
+#! @Arguments L
+#! @Returns a graph
+#! @Description
+#! Computes the directed graph of the hasse diagram of L.
+DeclareAttribute("GLGraph", IsGeomLattice);;
+
+#! @Arguments L
+#! @Returns a group
+#! @Description
+#! Computes the Autmorphisgroup of L
+#! as a subgroup of <C>Sym(GLAtoms(L))</C>.
+DeclareAttribute("GLAutGroup", IsGeomLattice);;
+
 #################################
 ##
 #! @Section Global methods
@@ -199,6 +211,28 @@ DeclareGlobalFunction("RotTozMat");
 DeclareGlobalFunction("ctf");
 
 DeclareGlobalFunction("FloatStringCutoff");
+
+# DeclareGlobalFunction("");;
+
+#! @Arguments A, B
+#! @Returns true or false
+#! @Description
+#! Determines, if the arrangements <A>A</A> and <A>B</A> 
+#! have isomorphic intersection lattices.
+#!
+#! @BeginExampleSession
+#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> B:=AGpql(2,2,3);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> IsLEquiv(A,B);
+#! false
+#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> IsLEquiv(A,B);
+#! true
+#! @EndExampleSession
+DeclareGlobalFunction("IsLEquiv");
 
 #! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
 #! @Returns A string.
