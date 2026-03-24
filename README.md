@@ -1,4 +1,4 @@
-# The GAP 4 package `HypArr'
+# GAP 4 package `HypArr'
 
 ## Why HypArr
 
