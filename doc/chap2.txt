@@ -1,6 +1,10 @@
   
   [1X2 [33X[0;0YHyperplane arrangements[133X[101X
   
+  [33X[0;0YLet  [23X\mathbb{K}[123X  be  a  field.  A  hyperplane  arrangment  is  a  finite set
+  [23X\mathcal{A}  =  \{H_1,\ldots,H_n\}[123X  of  hyperplanes  in a finite dimensional
+  [23X\mathbb{K}[123X-vector space [23XV[123X.[133X
+  
   
   [1X2.1 [33X[0;0YAttributes[133X[101X
   

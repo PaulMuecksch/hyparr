@@ -69,7 +69,7 @@ gap> OMLForms(O);
 
 <ManSection>
   <Attr Arg="OM" Name="OMGeomLattice" Label="for IsOrientedMatroid"/>
- <Returns>A list of lists or <C>fail</C>
+ <Returns>An object of type <C>IsGeomLattice</C> or <C>fail</C>
 </Returns>
  <Description>
  Computes the geometric lattice associated with the oriented matroid OM.
@@ -164,7 +164,7 @@ gap> OMCovectors(O);
 
 <ManSection>
   <Attr Arg="OM" Name="SalvettiComplex" Label="for IsOrientedMatroid"/>
- <Returns>A Salvetti complex object
+ <Returns>A <C>FacePoset</C>
 </Returns>
  <Description>
  Constructs the Salvetti complex <Cite Key="Salvetti1987_SalCpx"/> associated with the oriented matroid OM.

@@ -12,7 +12,12 @@
 
 InstallGlobalFunction(HArr_FSpace,
 function(A)
-    return NullspaceMat(Roots(A));;
+local NS;;
+    NS := NullspaceMat(Roots(A));;
+    if NS=[] then
+        NS := [0*[1..Length(Roots(A))]];;
+    fi;;
+    return NS;;
 end);
 
 InstallGlobalFunction(HArr_EMatS,
@@ -43,5 +48,9 @@ end);
 InstallMethod(IsFormal,
 	[ IsHyperplaneArrangement ],
 function(A)
-    return Rank(HArr_FSpace(A)) = Rank(HArr_SpaceSFx(A));;
+    if Rank(Roots(A)) <= 1 then
+        return true;;
+    else
+        return Rank(HArr_FSpace(A)) = Rank(HArr_SpaceSFx(A));;
+    fi;;
 end);

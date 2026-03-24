@@ -4,6 +4,10 @@
 <Chapter Label="Chapter_Hyperplane_arrangements">
 <Heading>Hyperplane arrangements</Heading>
 
+<P/>
+ Let <Math>\mathbb{K}</Math> be a field.
+ A hyperplane arrangment is a finite set <Math>\mathcal{A} = \{H_1,\ldots,H_n\}</Math>
+ of hyperplanes in a finite dimensional <Math>\mathbb{K}</Math>-vector space <Math>V</Math>.  
 <Section Label="Chapter_Hyperplane_arrangements_Section_Attributes">
 <Heading>Attributes</Heading>
 

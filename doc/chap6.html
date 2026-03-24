@@ -122,7 +122,7 @@
 <h5>6.1-4 OMGeomLattice</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGeomLattice</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list of lists or <code class="code">fail</code></p>
+<p>Returns: An object of type <code class="code">IsGeomLattice</code> or <code class="code">fail</code></p>
 
 <p>Computes the geometric lattice associated with the oriented matroid OM. If OM is linear (as determined by <code class="code">OMIsLinear(OM)</code>), the lattice is computed as the intersection lattice of the hyperplane arrangement given by <code class="code">OMLForms(OM)</code>, stored in the internal component <code class="code">OM!.lattice</code>, and returned. If OM is not linear, <code class="code">fail</code> is returned.</p>
 
@@ -202,7 +202,7 @@ true
 <h5>6.1-8 SalvettiComplex</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalvettiComplex</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A Salvetti complex object</p>
+<p>Returns: A <code class="code">FacePoset</code></p>
 
 <p>Constructs the Salvetti complex <a href="chapBib.html#biBSalvetti1987_SalCpx">[Sal87]</a> associated with the oriented matroid OM.</p>
 

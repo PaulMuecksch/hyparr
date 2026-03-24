@@ -8,6 +8,10 @@
 #! geometric lattices, face posets, Milnor fibers and complements.
 #!
 #! @Chapter Hyperplane arrangements
+#!
+#! Let $\mathbb{K}$ be a field.
+#! A hyperplane arrangment is a finite set $\mathcal{A} = \{H_1,\ldots,H_n\}$
+#! of hyperplanes in a finite dimensional $\mathbb{K}$-vector space $V$.  
 ##
 #############################################################################
 

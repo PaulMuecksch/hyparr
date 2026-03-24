@@ -74,7 +74,7 @@ DeclareAttribute("OMGroundSet", IsOrientedMatroid);
 DeclareAttribute("OMLForms", IsOrientedMatroid);
 
 #! @Arguments OM
-#! @Returns A list of lists or <C>fail</C>
+#! @Returns An object of type <C>IsGeomLattice</C> or <C>fail</C> 
 #! @Description
 #! Computes the geometric lattice associated with the oriented matroid OM.
 #! If OM is linear (as determined by <C>OMIsLinear(OM)</C>), the lattice is
@@ -145,7 +145,7 @@ DeclareAttribute("TopeGraph", IsOrientedMatroid);
 DeclareAttribute("OMCovectors", IsOrientedMatroid);
 
 #! @Arguments OM
-#! @Returns A Salvetti complex object
+#! @Returns A <C>FacePoset</C>
 #! @Description
 #! Constructs the Salvetti complex <Cite Key="Salvetti1987_SalCpx"/> associated with the oriented matroid OM.
 #!
