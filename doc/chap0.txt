@@ -93,6 +93,7 @@
     6.5 [33X[0;0YConstructors[133X
       6.5-1 OrientedMatroid
       6.5-2 OrientedMatroid
+      6.5-3 OrientedMatroid
   7 [33X[0;0YSpecial arrangements[133X
     7.1 [33X[0;0YGlobal methods[133X
       7.1-1 AGpql

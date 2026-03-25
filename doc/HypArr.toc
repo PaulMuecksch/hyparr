@@ -63,9 +63,10 @@
 \contentsline {section}{\numberline {6.5}\textcolor {Chapter }{Constructors}}{21}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}\textcolor {Chapter }{OrientedMatroid (for IsList)}}{21}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}\textcolor {Chapter }{OrientedMatroid (for IsHyperplaneArrangement)}}{21}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}\textcolor {Chapter }{Special arrangements}}{22}{chapter.7}%
-\contentsline {section}{\numberline {7.1}\textcolor {Chapter }{Global methods}}{22}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}\textcolor {Chapter }{AGpql}}{22}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}\textcolor {Chapter }{SsS3}}{22}{subsection.7.1.2}%
-\contentsline {chapter}{References}{24}{chapter*.2}%
-\contentsline {chapter}{Index}{25}{section*.3}%
+\contentsline {subsection}{\numberline {6.5.3}\textcolor {Chapter }{OrientedMatroid (for IsInt, IsInt, IsList)}}{22}{subsection.6.5.3}%
+\contentsline {chapter}{\numberline {7}\textcolor {Chapter }{Special arrangements}}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}\textcolor {Chapter }{Global methods}}{23}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}\textcolor {Chapter }{AGpql}}{23}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}\textcolor {Chapter }{SsS3}}{23}{subsection.7.1.2}%
+\contentsline {chapter}{References}{25}{chapter*.2}%
+\contentsline {chapter}{Index}{26}{section*.3}%

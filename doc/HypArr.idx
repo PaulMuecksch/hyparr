@@ -44,5 +44,6 @@
 \indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{21}
 \indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{21}
 \indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsHyperplaneArrangement|hyperpage}{21}
-\indexentry{AGpql@\texttt  {AGpql}|hyperpage}{22}
-\indexentry{SsS3@\texttt  {SsS3}|hyperpage}{22}
+\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsInt, IsInt, IsList|hyperpage}{22}
+\indexentry{AGpql@\texttt  {AGpql}|hyperpage}{23}
+\indexentry{SsS3@\texttt  {SsS3}|hyperpage}{23}

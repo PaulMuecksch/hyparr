@@ -7,7 +7,7 @@
 ]
 >
 
-<?LaTeX ExtraPreamble="\usepackage{graphicx,amsfonts,amsmath}"?>
+<?LaTeX ExtraPreamble="\usepackage{graphicx,amsfonts,amsmath, amssymb}"?>
 
 
 <Book Name="HypArr">

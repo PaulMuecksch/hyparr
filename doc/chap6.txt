@@ -217,7 +217,7 @@
   [33X[1;0Y[29X[2XOMChirotype[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA function[133X
   
-  [33X[0;0YReturns  the chirotype giving as a function from [23X\binomial{E}{r} \to \{0,\pm
+  [33X[0;0YReturns  the  chirotype  giving  as a function from [23X\binom{E}{r} \to \{0,\pm
   1\}[123X, where [23XE[123X is the groundset of [23XOM[123X and [23Xr[123X is the rank of [3XOM[103X.[133X
   
   [1X6.1-12 OMRankFunction[101X
@@ -337,4 +337,8 @@
   [1X6.5-2 OrientedMatroid[101X
   
   [33X[1;0Y[29X[2XOrientedMatroid[102X( [3Xarg[103X ) [32X operation[133X
+  
+  [1X6.5-3 OrientedMatroid[101X
+  
+  [33X[1;0Y[29X[2XOrientedMatroid[102X( [3Xarg1[103X, [3Xarg2[103X, [3Xarg3[103X ) [32X operation[133X
   

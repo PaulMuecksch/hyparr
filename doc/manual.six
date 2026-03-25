@@ -29,11 +29,11 @@ entries :=
   [ "\033[1X\033[33X\033[0;-2YGlobal methods\033[133X\033[101X", "6.4", [ 6, 4, 0 ], 272, 20, "global methods", 
       "X80841F8D80722081" ], [ "\033[1X\033[33X\033[0;-2YConstructors\033[133X\033[101X", "6.5", [ 6, 5, 0 ], 316, 21, 
       "constructors", "X86EC0F0A78ECBC10" ], [ "\033[1X\033[33X\033[0;-2YSpecial arrangements\033[133X\033[101X", "7", 
-      [ 7, 0, 0 ], 1, 22, "special arrangements", "X7C9F5AAF83133F9A" ], 
-  [ "\033[1X\033[33X\033[0;-2YGlobal methods\033[133X\033[101X", "7.1", [ 7, 1, 0 ], 6, 22, "global methods", 
-      "X80841F8D80722081" ], [ "Bibliography", "bib", [ "Bib", 0, 0 ], 1, 24, "bibliography", "X7A6F98FD85F02BFE" ], 
-  [ "References", "bib", [ "Bib", 0, 0 ], 1, 24, "references", "X7A6F98FD85F02BFE" ], 
-  [ "Index", "ind", [ "Ind", 0, 0 ], 1, 25, "index", "X83A0356F839C696F" ], 
+      [ 7, 0, 0 ], 1, 23, "special arrangements", "X7C9F5AAF83133F9A" ], 
+  [ "\033[1X\033[33X\033[0;-2YGlobal methods\033[133X\033[101X", "7.1", [ 7, 1, 0 ], 6, 23, "global methods", 
+      "X80841F8D80722081" ], [ "Bibliography", "bib", [ "Bib", 0, 0 ], 1, 25, "bibliography", "X7A6F98FD85F02BFE" ], 
+  [ "References", "bib", [ "Bib", 0, 0 ], 1, 25, "references", "X7A6F98FD85F02BFE" ], 
+  [ "Index", "ind", [ "Ind", 0, 0 ], 1, 26, "index", "X83A0356F839C696F" ], 
   [ "\033[2XDimension\033[102X for IsHyperplaneArrangement", "2.1-1", [ 2, 1, 1 ], 11, 4, 
       "dimension for ishyperplanearrangement", "X7CCC1A2A7C3F2CC5" ], 
   [ "\033[2XRoots\033[102X for IsHyperplaneArrangement", "2.1-2", [ 2, 1, 2 ], 19, 4, "roots for ishyperplanearrangement", 
@@ -101,6 +101,8 @@ entries :=
   [ "\033[2XOrientedMatroid\033[102X for IsList", "6.5-1", [ 6, 5, 1 ], 319, 21, "orientedmatroid for islist", 
       "X82EE52377B03CC80" ], [ "\033[2XOrientedMatroid\033[102X for IsHyperplaneArrangement", "6.5-2", [ 6, 5, 2 ], 337, 21, 
       "orientedmatroid for ishyperplanearrangement", "X7C9A997F7C275795" ], 
-  [ "\033[2XAGpql\033[102X", "7.1-1", [ 7, 1, 1 ], 9, 22, "agpql", "X858205A37B7EB5FA" ], 
-  [ "\033[2XSsS3\033[102X", "7.1-2", [ 7, 1, 2 ], 35, 22, "sss3", "X81AD6CA97F71ED33" ] ]
+  [ "\033[2XOrientedMatroid\033[102X for IsInt, IsInt, IsList", "6.5-3", [ 6, 5, 3 ], 341, 22, 
+      "orientedmatroid for isint isint islist", "X80B0F8178177A60D" ], 
+  [ "\033[2XAGpql\033[102X", "7.1-1", [ 7, 1, 1 ], 9, 23, "agpql", "X858205A37B7EB5FA" ], 
+  [ "\033[2XSsS3\033[102X", "7.1-2", [ 7, 1, 2 ], 35, 23, "sss3", "X81AD6CA97F71ED33" ] ]
 );

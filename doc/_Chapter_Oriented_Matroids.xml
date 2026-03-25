@@ -256,7 +256,7 @@ gap> FPGroundSet(S);
  <Returns>A function
 </Returns>
  <Description>
- Returns the chirotype giving as a function from <Math>\binomial{E}{r} \to \{0,\pm 1\}</Math>,
+ Returns the chirotype giving as a function from <Math>\binom{E}{r} \to \{0,\pm 1\}</Math>,
  where <Math>E</Math> is the groundset of <Math>OM</Math> and <Math>r</Math> is the rank of <A>OM</A>.
  </Description>
 </ManSection>
@@ -421,6 +421,14 @@ gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(A);
 
 <ManSection>
   <Oper Arg="arg" Name="OrientedMatroid" Label="for IsHyperplaneArrangement"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="arg1,arg2,arg3" Name="OrientedMatroid" Label="for IsInt, IsInt, IsList"/>
  <Description>
 <P/>
  </Description>

@@ -43,6 +43,7 @@
   [2XOMRankFunction[102X, for IsOrientedMatroid 6.1-12 
   [2XOrderCovec[102X 6.4-2 
   [2XOrientedMatroid[102X, for IsHyperplaneArrangement 6.5-2 
+      for IsInt, IsInt, IsList 6.5-3 
       for IsList 6.5-1 
   [2XRoots[102X, for IsHyperplaneArrangement 2.1-2 
   [2XSalvettiComplex[102X, for IsHyperplaneArrangement 2.1-8 

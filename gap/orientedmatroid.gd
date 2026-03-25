@@ -224,7 +224,7 @@ DeclareAttribute("FPOrder", IsFacePoset);
 #! @Arguments OM
 #! @Returns A function
 #! @Description
-#! Returns the chirotype giving as a function from $\binomial{E}{r} \to \{0,\pm 1\}$,
+#! Returns the chirotype giving as a function from $\binom{E}{r} \to \{0,\pm 1\}$,
 #! where $E$ is the groundset of $OM$ and $r$ is the rank of <A>OM</A>.
 DeclareAttribute("OMChirotype", IsOrientedMatroid);
 
@@ -380,7 +380,6 @@ DeclareGlobalFunction("ChirotypeFromChiroCore");
 #! @EndExampleSession
 DeclareOperation("OrientedMatroid", [IsList]);
 DeclareOperation("OrientedMatroid", [IsHyperplaneArrangement]);
-
 DeclareOperation("OrientedMatroid", [IsInt, IsInt, IsList]);
 
 
