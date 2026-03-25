@@ -13,7 +13,13 @@ There are no prerequisites to use.
 
 Just clone the git repository to your pkg folder
 
-After that, you should be able to load HypArr.
+ * From within GAP load the package with:
+
+    gap> LoadPackage("hyparr");
+
+    true
+
+ * The documentation is in the `doc` subdirectory. 
 
 ## Documentation
 To create the documentation:
@@ -24,12 +30,6 @@ To create the documentation:
 
     gap tst/testall.g -->
     
-## Update
-The package can be updated using the following commands
-
-    git pull
-    make
-
 ## License
 
 HypArr is free software; you can redistribute it and/or modify it under
