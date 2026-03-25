@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  25 MAR 2026 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  25 MAR 2026 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -563,40 +563,46 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 215.
 [4
 
-] [5] [6] [7]
-<./other/DrawLatex3Arr_Example.pdf, id=212, 281.66632pt x 244.68213pt>
+] [5] [6]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
+18.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [7]
+<./other/DrawLatex3Arr_Example.pdf, id=212, 271.58263pt x 481.4728pt>
 File: ./other/DrawLatex3Arr_Example.pdf Graphic file (type pdf)
 <use ./other/DrawLatex3Arr_Example.pdf>
 Package pdftex.def Info: ./other/DrawLatex3Arr_Example.pdf  used on input line 
-534.
-(pdftex.def)             Requested size: 281.66562pt x 244.68152pt.
- [8 <./other/DrawLatex3Arr_Example.pdf>] [9]
+569.
+(pdftex.def)             Requested size: 271.58195pt x 481.47162pt.
+
+[8] [9 <./other/DrawLatex3Arr_Example.pdf>] [10]
 Chapter 3.
-[10
+[11
 
 ]
 Chapter 4.
-[11
+[12
 
-] [12]
+] [13]
 Chapter 5.
-[13
+[14
 
-] [14]
+] [15]
 Chapter 6.
 
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.853 \hyperdef{L}{X7C701DBF7BAE649A}{}
-                                        [15
+l.888 \hyperdef{L}{X7C701DBF7BAE649A}{}
+                                        [16
 
-] [16] [17]
+] [17] [18]
 ! Undefined control sequence.
 <recently read> \binomial 
                           
-l.1149 ...ype giving as a function from $\binomial
+l.1184 ...ype giving as a function from $\binomial
                                                   {E}{r} \to \{0,\pm 1\}$, w...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -604,25 +610,25 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[18]
+[19]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7DE8E16C7C
 2D387B}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1201 \hyperdef{L}{X7DE8E16C7C2D387B}{}
+l.1236 \hyperdef{L}{X7DE8E16C7C2D387B}{}
                                         
 pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
 722081}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1236 \hyperdef{L}{X80841F8D80722081}{}
-                                         [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1271--1274
+l.1271 \hyperdef{L}{X80841F8D80722081}{}
+                                         [20]
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1298--1301
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1336
 
  []
 
@@ -631,28 +637,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X86EC0F0A78
 ECBC10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1310 \hyperdef{L}{X86EC0F0A78ECBC10}{}
+l.1345 \hyperdef{L}{X86EC0F0A78ECBC10}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 1340--1343
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1378
 
  []
 
-[20]
+[21]
 Chapter 7.
 
 pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
 722081}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1365 \hyperdef{L}{X80841F8D80722081}{}
+l.1400 \hyperdef{L}{X80841F8D80722081}{}
                                          (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [21
+ [22
 
 ]
-[22]) [23
+[23]) [24
 
 ] (./HypArr.ind
 Underfull \hbox (badness 10000) in paragraph at lines 64--66
@@ -664,10 +670,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--66
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[24
+[25
 
 
-] [25
+] [26
 
 ]) (./HypArr.aux)
  ***********
@@ -677,34 +683,35 @@ L3 programming layer <2024-01-22>
 Package rerunfilecheck Info: File `HypArr.out' has not changed.
 (rerunfilecheck)             Checksum: 6DEE3E443D4BB6ED61FC60CD84F040B4;2914.
 Package rerunfilecheck Info: File `HypArr.brf' has not changed.
-(rerunfilecheck)             Checksum: AC5C024E5B79B34D9C870AEA4A6A6940;498.
+(rerunfilecheck)             Checksum: 943A83303B937D13F69F4D6D851E58E7;498.
  ) 
 Here is how much of TeX's memory you used:
- 11910 strings out of 474222
- 183598 string characters out of 5748734
+ 11940 strings out of 474222
+ 184078 string characters out of 5748734
  1935975 words of memory out of 5000000
- 33784 multiletter control sequences out of 15000+600000
- 623450 words of font info for 112 fonts, out of 8000000 for 9000
+ 33809 multiletter control sequences out of 15000+600000
+ 623764 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,7n,93p,347b,791s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfst1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
-b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (25 pages, 273572 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst1
+095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/s
+ymbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on HypArr.pdf (26 pages, 285855 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 171 named destinations out of 1000 (max. 500000)
+ 560 PDF objects out of 1000 (max. 8388607)
+ 491 compressed objects within 5 object streams
+ 172 named destinations out of 1000 (max. 500000)
  190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

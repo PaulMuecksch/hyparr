@@ -657,7 +657,7 @@ local A,s,ip,Hind,disthv,
 				return fail;
 			fi;
 			s:=1;;
-			ip:=0;;
+			ip:=false;;
 			Hind:=0;;
 			disthv:=[0,0,1];;
 			Mind:=0;;
@@ -704,15 +704,15 @@ local A,s,ip,Hind,disthv,
             xyinf := FloatStringCutoff(xyinf);;
             
             if Mind=1 and Position(RR,vv) in MarkHs then
-			if Hind=1 then
-                sp:=Concatenation(sp,
-                    "\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
-                    "\\node [above right] at (",xyinf,",",xyinf,") {$\\infty =$ \\small $",String(Position(RR,vv))," $};  % H_",String(Position(RR,vv))," \n");;
-			else
-				sp:=Concatenation(sp,
-					"\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
-					"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty$};  % H_",String(Position(RR,vv))," \n");;
-			fi;;
+				if Hind=1 then
+					sp:=Concatenation(sp,
+						"\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
+						"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty =$ \\small $",String(Position(RR,vv))," $};  % H_",String(Position(RR,vv))," \n");;
+				else
+					sp:=Concatenation(sp,
+						"\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
+						"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty$};  % H_",String(Position(RR,vv))," \n");;
+				fi;;
 			else
 			if Hind=1 then
                 sp:=Concatenation(sp,
@@ -801,7 +801,7 @@ local A,s,ip,Hind,disthv,
 		
 	od;
 	# sp:=Concatenation(sp, "\n");;
-	if ip=1 then
+	if ip then
 		sp:=Concatenation(sp, "\n");;
 		for sv in GLGroundSet(IntersectionLattice(A))[2] do
 			a:=ctf(NullspaceMat(TransposedMat(R{sv}))[1]);;
