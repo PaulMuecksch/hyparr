@@ -71,6 +71,36 @@ function(A)
     );
 end);
 
+BindGlobal("BsFromChiroCore",
+function(r,n,ChiroCore)
+local Bs;
+    Bs := Combinations([1..n],r);;
+    Bs := Bs{Positions(List(ChiroCore,x->x<>0),true)};
+    return Bs;;
+end);
+
+InstallMethod(OrientedMatroid,
+    "for a chirotype data",
+    [IsInt, IsInt, IsList],
+function(r,n,ChiroCore)
+    local type, ChirotypeFct;
+    # For an r-tuple S return chi(S) \in {0,1,-1} or fail if l(s)<>r
+    ChirotypeFct := ChirotypeFromChiroCore(r,n,ChiroCore);;
+
+    type := NewType(OrientedMatroidFamily,
+                    IsOrientedMatroidRep);
+
+    return Objectify(type,
+        rec(
+            GroundSet := [1..n],
+            chirocore := [r,n,ChiroCore],
+            chirotype := ChirotypeFct,
+            rank := r
+        )
+    );
+
+end);;
+
 InstallMethod(ViewObj,
     [ IsOrientedMatroid ],
 function(OM)
@@ -116,12 +146,112 @@ function(OM)
     fi;;
 end);
 
+InstallMethod(OMChirotype,
+    [ IsOrientedMatroid ],
+function(OM)
+    if IsBound(OM!.chirotype) then
+        return OM!.chirotype;
+    else
+        return fail;
+    fi;;
+end);
+
 InstallMethod(OMIsLinear,
     [ IsOrientedMatroid ],
     OM -> IsBound(OM!.lforms));
 
+BindGlobal("RkFctFromChiroCore",
+function(r,n,ChiroCore)
+    local Bs, RkFct;;
+    Bs := BsFromChiroCore(r,n,ChiroCore);;
+    RkFct := function(S)
+        return Maximum(List(Bs,B->Length(IntersectionSet(S,B))));;
+    end;;
+
+    return RkFct;;
+end);
+
+InstallMethod(OMRankFunction,
+    [ IsOrientedMatroid ],
+function(OM)
+local rf;
+    if IsBound(OM!.rkfct) then
+        return OM!.rkfct;
+    elif OMIsLinear(OM) then
+        rf := function(S)
+            return Rank(OMLForms(OM){S});;
+        end;
+        OM!.rkfct := rf;
+        return OM!.rkfct;
+    elif IsBound(OM!.chirocore) then
+        rf := RkFctFromChiroCore(OM!.chirocore[1],OM!.chirocore[2],OM!.chirocore[3]);
+        OM!.rkfct := rf;
+        return OM!.rkfct;
+    else
+        return fail;
+    fi;;
+end);
 
 ####################################################################################################
+
+BindGlobal("AddEltToL",
+function(no,Lo,RkFct)
+local Ln, m, k, i, n, r;
+	if true in List([1..no],x->RkFct([x,no+1])=1) then 
+		return Lo;
+	fi;;
+	
+	if Lo=[] then
+		return [[[1]]];;
+	fi;;	
+
+	Ln:=List(Lo,x->List(x,y->ShallowCopy(y)));;
+	# n := Length(Lo[1]);;
+    n := ShallowCopy(no);;
+	r := Length(Lo);;
+
+
+	for k in [1..r] do
+		for i in [1..Length(Lo[k])] do
+			m := ShallowCopy(Lo[k][i]);;
+			if RkFct(m) = RkFct(Concatenation(m,[n+1])) then
+				Add(Ln[k][i],n+1);
+			else
+				if k<r then
+					if not( true in List(Lo[k+1],x->IsSubset(x,m) and RkFct(x) = RkFct(Concatenation(x,[n+1]))) ) then
+						Add(Ln[k+1],Concatenation(m,[n+1]));
+					fi;
+				elif k=r then
+					Add(Ln,[Concatenation(m,[n+1])]);;
+				fi;
+			fi;;
+		od;;
+	od;;
+
+	Add(Ln[1],[n+1]);;
+
+	return Ln;;
+end);
+
+BindGlobal("LatticeFromRkFct",
+function(n,RkFct)
+local Ls,i,type;;
+    Ls:=[];;
+	for i in [1..n] do
+		Ls:=AddEltToL(i-1,Ls,RkFct);;
+	od;;
+
+    type := NewType(GeomLatticeFamily,
+                    IsGeomLatticeRep);
+
+    return Objectify(type,
+        rec(
+            grGroundSet := Ls,
+			rank := Length(Ls),
+			atoms := Concatenation(Ls[1])
+        )
+    );
+end);
 
 InstallMethod(OMGeomLattice, 
     [ IsOrientedMatroid ],
@@ -129,6 +259,10 @@ function(OM)
     local L;;
     if OMIsLinear(OM) then
         L:=IntersectionLattice(HyperplaneArrangement(OMLForms(OM)));
+        OM!.lattice := L;;
+        return L;;
+    elif OMRankFunction(OM)<>fail then
+        L:=LatticeFromRkFct(Length(OMGroundSet(OM)),OMRankFunction(OM));
         OM!.lattice := L;;
         return L;;
     else
@@ -142,27 +276,61 @@ end);
 InstallMethod(OMCocircuits, 
     [ IsOrientedMatroid ],
 function(OM)
-    local L,Lk,r,n,T,LHs,CoCircs,m,mX,vm,D;
+    local L,Lk,r,n,T,LHs,CoCircs,m,mX,vm,D,
+        e,f,Bofm,ChiFct,RkFct,BasisOfFlat;
     L:=OMGeomLattice(OM);;
     Lk:=GLkFlats(L);;
     r:=GLRank(L);
     n:=Length(GLAtoms(L));;
     LHs:=Lk(r-1);;
     CoCircs := [];;
-    T:=NullspaceMat(TransposedMat(OMLForms(OM)));;
+    if OMIsLinear(OM) then
+        T:=NullspaceMat(TransposedMat(OMLForms(OM)));;
 
-    for m in LHs do
-        mX:=NullspaceMat(TransposedMat(OMLForms(OM){m}));
-        if T<>[] then
-            vm:=mX[Position(List(mX,x->Rank(Concatenation(T,[x]))>Rank(T)),true)];
-        else
-            vm:=mX[1];;
-        fi;;
-        D:=List(OMLForms(OM),x->pos(x*vm));;
-        Add(CoCircs,D);;
-        Add(CoCircs,-D);;
-    od;;;
-    return CoCircs;;
+        for m in LHs do
+            mX:=NullspaceMat(TransposedMat(OMLForms(OM){m}));
+            if T<>[] then
+                vm:=mX[Position(List(mX,x->Rank(Concatenation(T,[x]))>Rank(T)),true)];
+            else
+                vm:=mX[1];;
+            fi;;
+            D:=List(OMLForms(OM),x->pos(x*vm));;
+            Add(CoCircs,D);;
+            Add(CoCircs,-D);;
+        od;;;
+        return CoCircs;;
+    else
+        ChiFct := OMChirotype(OM);
+        RkFct := OMRankFunction(OM);
+
+        BasisOfFlat := function(m)
+        local B,e,r;;
+            B:=m{[1]};;
+            r:=1;
+            for e in [2..Length(m)] do
+                if RkFct(Concatenation(B,[m[e]])) >r then
+                    Add(B,m[e]);
+                    r:=r+1;;
+                fi;;
+            od;;
+            return B;;
+        end;;
+
+        for m in LHs do
+            D:=List([1..n],x->1);;
+            D{m} := List(m,x->0);;
+            Bofm := BasisOfFlat(m);;
+            e := Difference([1..n],m)[1];;
+            for f in Difference([1..n],Concatenation(m,[e])) do
+                if ChiFct(Concatenation([e],Bofm))*ChiFct(Concatenation([f],Bofm))=-1 then
+                    D[f] := -1;;
+                fi;;
+            od;;
+            Add(CoCircs,D);;
+            Add(CoCircs,-D);;
+        od;;;
+        return CoCircs;;
+    fi;
 end);
 
 ####################################################################################################
@@ -518,5 +686,31 @@ local TGraph1,TGraph2;
     TGraph1 := ShallowCopy(TopeGraph(OM1));
     TGraph2 := ShallowCopy(TopeGraph(OM2));
     return IsIsomorphicGraph(TGraph1,TGraph2);
+end);
+
+InstallGlobalFunction(ChirotypeFromChiroCore,
+function(r,n,ChiroCore)
+local ChiFct;
+    # For an r-tuple S return chi(S) \in {0,1,-1} or fail if l(s)<>r
+    ChiFct := function(S)
+    local Bs,BS,k,kk;;
+        Bs := BsFromChiroCore(r,n,ChiroCore);;
+        if Length(S)<>r then
+            return fail;
+        else
+            k := Position(List(Bs,B->Set(ShallowCopy(B))=Set(ShallowCopy(S)) ),true);
+            if k<>fail then
+                BS := Bs[k];;
+                kk:=Position(Combinations([1..n],r),BS);
+                return Determinant(List(BS,x->IdentityMat(r)[Position(S,x)]))*ChiroCore[kk];
+            else
+                return 0;
+            fi;;
+        fi;;
+        # BS:=Position( List([1..Binomial(n,r)],i->Combinations([1..n],r))[i]
+    
+        return 0;;
+    end;;
+    return ChiFct;
 end);
 

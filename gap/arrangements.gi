@@ -320,9 +320,6 @@ function(A)
         )
     );
 
-    # The resulting lattice structure
-    return Ls;
-
 end);
 
 InstallMethod( MSetInvL,
@@ -489,7 +486,7 @@ end);
 
 ####################################################################################################
 
-InstallGlobalFunction(IsLEquiv,
+InstallGlobalFunction(IsLEquivArr,
 function(A,B)
 local LGraphA,LGraphB;;
     LGraphA := ShallowCopy(GLGraph(IntersectionLattice(A)));

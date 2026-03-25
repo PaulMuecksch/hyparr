@@ -27,7 +27,7 @@
 #! @EndExampleSession
 DeclareProperty("IsInductivelyFree", IsHyperplaneArrangement);
 
-BindGlobal("IsIF",IsInductivelyFree);;
+DeclareSynonym("IsIF",IsInductivelyFree);;
 
 #! @Arguments A
 #! @Returns true or false.
@@ -45,7 +45,7 @@ BindGlobal("IsIF",IsInductivelyFree);;
 #! @EndExampleSession
 DeclareProperty("IsDivisionallyFree", IsHyperplaneArrangement);
 
-BindGlobal("IsDF",IsDivisionallyFree);;
+DeclareSynonym("IsDF",IsDivisionallyFree);;
 
 
 

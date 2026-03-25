@@ -236,7 +236,7 @@ DeclareGlobalFunction("FloatStringCutoff");
 #! gap> IsLEquiv(A,B);
 #! true
 #! @EndExampleSession
-DeclareGlobalFunction("IsLEquiv");
+DeclareGlobalFunction("IsLEquivArr");
 
 #! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
 #! @Returns A string.
@@ -324,7 +324,7 @@ DeclareGlobalFunction( "Essentialization");
 #! @EndExampleSession
 DeclareOperation("HyperplaneArrangement", [ IsList ]);
 
-BindGlobal("Arr",HyperplaneArrangement);
+DeclareSynonym("Arr",HyperplaneArrangement);
 
 #################################
 ##
