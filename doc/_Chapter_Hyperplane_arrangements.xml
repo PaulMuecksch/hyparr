@@ -160,6 +160,11 @@ gap> SalvettiComplex(A);
 </ManSection>
 
 
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Attributes_of_geometric_lattices">
+<Heading>Attributes of geometric lattices</Heading>
 
 <ManSection>
   <Attr Arg="L" Name="GLGroundSet" Label="for IsGeomLattice"/>
@@ -225,15 +230,15 @@ gap> SalvettiComplex(A);
 </Section>
 
 
-<Section Label="Chapter_Hyperplane_arrangements_Section_Global_methods">
-<Heading>Global methods</Heading>
+<Section Label="Chapter_Hyperplane_arrangements_Section_Operations">
+<Heading>Operations</Heading>
 
 <ManSection>
-  <Func Arg="A, B" Name="IsLEquiv" />
+  <Oper Arg="A, B" Name="IsLEquiv" Label="for IsHyperplaneArrangement,IsHyperplaneArrangement"/>
  <Returns>true or false
 </Returns>
  <Description>
- Determines, if the arrangements <A>A</A> and <A>B</A> 
+ Determines if the arrangements <A>A</A> and <A>B</A> 
  have isomorphic intersection lattices.
 <P/>
 <Example><![CDATA[
@@ -255,6 +260,36 @@ true
 
 
 <ManSection>
+  <Oper Arg="A" Name="Essentialization" Label="for IsHyperplaneArrangement"/>
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+ Computes the <E>essentialization</E> of the hyperplane arrangement
+ <A>A</A>.
+ An arrangement is called essential if the intersection of all its
+ hyperplanes is the origin.  If this is not the case, the function
+ restricts the arrangement to a complementary subspace so that the
+ resulting arrangement becomes essential.
+<Example><![CDATA[
+gap> A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);
+<HyperplaneArrangement: 3 hyperplanes in 3-space>
+gap> B:=Essentialization(A); Roots(B);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+[ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Global_methods">
+<Heading>Global methods</Heading>
+
+<ManSection>
   <Func Arg="A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]" Name="DrawLatex3Arr" />
  <Returns>A string.
 </Returns>
@@ -269,13 +304,12 @@ gap> A:=AGpql(2,2,3);
 <HyperplaneArrangement: 6 hyperplanes in 3-space>
 gap> Print(DrawLatex3Arr(A));
 \begin{tikzpicture}[scale=1.0]
-\draw (-2.828,2.828) -- (2.828,-2.828);  % H_1
-\draw (2.828,2.828) -- (-2.828,-2.828);  % H_2
-\draw (-1.,3.872) -- (-1.,-3.872);  % H_3
-\draw (1.,3.872) -- (1.,-3.872);  % H_4
-\draw (3.872,-1.) -- (-3.872,-1.);  % H_5
-\draw (3.872,1.) -- (-3.872,1.);  % H_6
-
+\draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
+\draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
+\draw (1.,3.873) -- (1.,-3.873);  % H_4 
+\draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
+\draw (3.873,1.) -- (-3.873,1.);  % H_6 
 \end{tikzpicture}
 ]]></Example>
 
@@ -307,20 +341,6 @@ gap> Print(DrawLatex3Arr(A));
  <Description>
  Computes the <E>restriction</E> of the arrangement <A>A</A> to the
  subspace spanned by the vectors in <C>S</C>.
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Func Arg="A" Name="Essentialization" />
- <Returns>A hyperplane arrangement.
-</Returns>
- <Description>
- Computes the <E>essentialization</E> of the hyperplane arrangement
- An arrangement is called essential if the intersection of all its
- hyperplanes is the origin.  If this is not the case, the function
- restricts the arrangement to a complementary subspace so that the
- resulting arrangement becomes essential.
  </Description>
 </ManSection>
 

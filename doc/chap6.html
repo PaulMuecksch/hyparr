@@ -35,25 +35,32 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7ED4D5138012EB6C">6.1-8 SalvettiComplex</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X85AB2A797ABE8967">6.1-9 FPGroundSet</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7E28E057841D6ECD">6.1-10 FPOrder</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X8675833982A3FE96">6.1-11 OMChirotype</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EE8B82D792A4A64">6.1-12 OMRankFunction</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X871597447BB998A1">6.2 <span class="Heading">Properties</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X86B70496781D3884">6.2-1 OMIsLinear</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X80841F8D80722081">6.3 <span class="Heading">Global methods</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7DE8E16C7C2D387B">6.3 <span class="Heading">Operations</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7A515BDC8582FFE6">6.3-1 OMOperation</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X801F6A9B7A0A53F5">6.3-2 OrderCovec</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X80CB9A9C8135A314">6.3-3 IsOMEquiv</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X793FF1428136B222">6.3-4 SeparatingSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EE74EA57A779612">6.3-1 IsLEquiv</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X86EC0F0A78ECBC10">6.4 <span class="Heading">Constructors</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X80841F8D80722081">6.4 <span class="Heading">Global methods</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X82EE52377B03CC80">6.4-1 OrientedMatroid</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7C9A997F7C275795">6.4-2 OrientedMatroid</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7A515BDC8582FFE6">6.4-1 OMOperation</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X801F6A9B7A0A53F5">6.4-2 OrderCovec</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X80CB9A9C8135A314">6.4-3 IsOMEquiv</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X793FF1428136B222">6.4-4 SeparatingSet</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X86EC0F0A78ECBC10">6.5 <span class="Heading">Constructors</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X82EE52377B03CC80">6.5-1 OrientedMatroid</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7C9A997F7C275795">6.5-2 OrientedMatroid</a></span>
 </div></div>
 </div>
 
@@ -281,6 +288,24 @@ true
 
 <p>Returns the order function of the face poset FP.</p>
 
+<p><a id="X8675833982A3FE96" name="X8675833982A3FE96"></a></p>
+
+<h5>6.1-11 OMChirotype</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMChirotype</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A function</p>
+
+<p>Returns the chirotype giving as a function from <span class="Math">\binomial{E}{r} \to \{0,\pm 1\}</span>, where <span class="Math">E</span> is the groundset of <span class="Math">OM</span> and <span class="Math">r</span> is the rank of <var class="Arg">OM</var>.</p>
+
+<p><a id="X7EE8B82D792A4A64" name="X7EE8B82D792A4A64"></a></p>
+
+<h5>6.1-12 OMRankFunction</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMRankFunction</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A function</p>
+
+<p>Returns the rank function of the oriented matroid <var class="Arg">OM</var></p>
+
 <p><a id="X871597447BB998A1" name="X871597447BB998A1"></a></p>
 
 <h4>6.2 <span class="Heading">Properties</span></h4>
@@ -302,13 +327,40 @@ true
 true
 </pre></div>
 
+<p><a id="X7DE8E16C7C2D387B" name="X7DE8E16C7C2D387B"></a></p>
+
+<h4>6.3 <span class="Heading">Operations</span></h4>
+
+<p><a id="X7EE74EA57A779612" name="X7EE74EA57A779612"></a></p>
+
+<h5>6.3-1 IsLEquiv</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLEquiv</code>( <var class="Arg">OM1</var>, <var class="Arg">OM2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines if the oriented matroids <var class="Arg">OM1</var> and <var class="Arg">OM2</var> have isomorphic geometric lattices.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O1:=OrientedMatroid(3,4,[1,1,1,1]);</span>
+&lt;OrientedMatroid: 4 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;OrientedMatroid: 4 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(O1,O2);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);</span>
+&lt;OrientedMatroid: 4 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(O1,O2);</span>
+false
+</pre></div>
+
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
 
-<h4>6.3 <span class="Heading">Global methods</span></h4>
+<h4>6.4 <span class="Heading">Global methods</span></h4>
 
 <p><a id="X7A515BDC8582FFE6" name="X7A515BDC8582FFE6"></a></p>
 
-<h5>6.3-1 OMOperation</h5>
+<h5>6.4-1 OMOperation</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMOperation</code>( <var class="Arg">sv1</var>, <var class="Arg">sv2</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A list</p>
@@ -331,14 +383,14 @@ true
 
 <p><a id="X801F6A9B7A0A53F5" name="X801F6A9B7A0A53F5"></a></p>
 
-<h5>6.3-2 OrderCovec</h5>
+<h5>6.4-2 OrderCovec</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrderCovec</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Order function for sign vectors.</p>
 
 <p><a id="X80CB9A9C8135A314" name="X80CB9A9C8135A314"></a></p>
 
-<h5>6.3-3 IsOMEquiv</h5>
+<h5>6.4-3 IsOMEquiv</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsOMEquiv</code>( <var class="Arg">OM1</var>, <var class="Arg">OM2</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
@@ -347,31 +399,23 @@ true
 
 <p><a id="X793FF1428136B222" name="X793FF1428136B222"></a></p>
 
-<h5>6.3-4 SeparatingSet</h5>
+<h5>6.4-4 SeparatingSet</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SeparatingSet</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>The separating set of two sign vectors.</p>
 
 <p><a id="X86EC0F0A78ECBC10" name="X86EC0F0A78ECBC10"></a></p>
 
-<h4>6.4 <span class="Heading">Constructors</span></h4>
+<h4>6.5 <span class="Heading">Constructors</span></h4>
 
 <p><a id="X82EE52377B03CC80" name="X82EE52377B03CC80"></a></p>
 
-<h5>6.4-1 OrientedMatroid</h5>
+<h5>6.5-1 OrientedMatroid</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrientedMatroid</code>( <var class="Arg">r</var>, <var class="Arg">or</var>, <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrientedMatroid</code>( <var class="Arg">r</var>, <var class="Arg">or</var>, <var class="Arg">A</var>, <var class="Arg">or</var>[, <var class="Arg">n</var>, <var class="Arg">r</var>, <var class="Arg">ChiroCoreList</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: An oriented matroid OM.</p>
 
-<p>Constructs am oriented matroid from a list <var class="Arg">r</var> of vectors representing defining linear forms of real hyperplanes or a real hyperplane arrangement <var class="Arg">A</var>.</p>
-
-<p>Each vector <span class="SimpleMath">r = [r_1,dots,r_n]</span> corresponds to the linear form</p>
-
-<p class="pcenter">
-     r_1 x_1 + \cdots + r_n x_n = 0.
-  </p>
-
-<p>The vectors must lie in the same real vector space.</p>
+<p>Constructs am oriented matroid from a list <var class="Arg">r</var> of vectors representing defining linear forms of real hyperplanes or a real hyperplane arrangement <var class="Arg">A</var> or a intergers <var class="Arg">n,r</var> giving the size of the groundset and the rank and a list <var class="Arg">ChiroCoreList</var> <span class="Math">\subseteq \{0,1,-1\}^m (m = \binom{n}{r})</span> presenting the chirotype of the oriented matroid.</p>
 
 
 <div class="example"><pre>
@@ -383,7 +427,7 @@ true
 
 <p><a id="X7C9A997F7C275795" name="X7C9A997F7C275795"></a></p>
 
-<h5>6.4-2 OrientedMatroid</h5>
+<h5>6.5-2 OrientedMatroid</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrientedMatroid</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 

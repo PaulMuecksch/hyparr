@@ -12,11 +12,11 @@
 \indexentry{GLkFlats@\texttt  {GLkFlats}!for IsGeomLattice|hyperpage}{6}
 \indexentry{GLGraph@\texttt  {GLGraph}!for IsGeomLattice|hyperpage}{6}
 \indexentry{GLAutGroup@\texttt  {GLAutGroup}!for IsGeomLattice|hyperpage}{6}
-\indexentry{IsLEquiv@\texttt  {IsLEquiv}|hyperpage}{7}
+\indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsHyperplaneArrangement,IsHyperplaneArrangement|hyperpage}{7}
+\indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{7}
 \indexentry{DrawLatex3Arr@\texttt  {DrawLatex3Arr}|hyperpage}{7}
 \indexentry{HArrResHind@\texttt  {HArrResHind}|hyperpage}{8}
 \indexentry{HArrResX@\texttt  {HArrResX}|hyperpage}{8}
-\indexentry{Essentialization@\texttt  {Essentialization}|hyperpage}{8}
 \indexentry{HyperplaneArrangement@\texttt  {HyperplaneArrangement}!for IsList|hyperpage}{8}
 \indexentry{IsInductivelyFree@\texttt  {IsInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{10}
 \indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{10}
@@ -34,12 +34,15 @@
 \indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsOrientedMatroid|hyperpage}{17}
 \indexentry{FPGroundSet@\texttt  {FPGroundSet}!for IsFacePoset|hyperpage}{17}
 \indexentry{FPOrder@\texttt  {FPOrder}!for IsFacePoset|hyperpage}{18}
-\indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMChirotype@\texttt  {OMChirotype}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMRankFunction@\texttt  {OMRankFunction}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{19}
+\indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{19}
 \indexentry{OMOperation@\texttt  {OMOperation}|hyperpage}{19}
-\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{19}
-\indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{19}
-\indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{19}
-\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{19}
+\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{20}
+\indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{20}
+\indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{20}
+\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{20}
 \indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsHyperplaneArrangement|hyperpage}{20}
 \indexentry{AGpql@\texttt  {AGpql}|hyperpage}{21}
 \indexentry{SsS3@\texttt  {SsS3}|hyperpage}{21}

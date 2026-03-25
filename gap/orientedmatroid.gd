@@ -254,6 +254,34 @@ DeclareAttribute("OMRankFunction", IsOrientedMatroid);
 #! @EndExampleSession
 DeclareProperty("OMIsLinear", IsOrientedMatroid);
 
+
+#################################
+##
+#! @Section Operations
+##
+#################################
+
+
+#! @Arguments OM1, OM2
+#! @Returns true or false
+#! @Description
+#! Determines if the oriented matroids <A>OM1</A> and <A>OM2</A> 
+#! have isomorphic geometric lattices.
+#! @BeginExampleSession
+#! gap> O1:=OrientedMatroid(3,4,[1,1,1,1]);
+#! <OrientedMatroid: 4 elements, rank 3>
+#! gap> O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
+#! <OrientedMatroid: 4 elements, rank 3>
+#! gap> IsLEquiv(O1,O2);
+#! true
+#! gap> O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);
+#! <OrientedMatroid: 4 elements, rank 3>
+#! gap> IsLEquiv(O1,O2);
+#! false
+#! @EndExampleSession
+DeclareOperation("IsLEquiv", [IsOrientedMatroid,IsOrientedMatroid]);
+
+
 #################################
 ##
 #! @Section Global methods

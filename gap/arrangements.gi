@@ -467,7 +467,8 @@ end);
 
 ####################################################################################################
 
-InstallGlobalFunction(Essentialization,
+InstallMethod(Essentialization,
+[IsHyperplaneArrangement],
 function(A)
 local C;
 
@@ -486,7 +487,8 @@ end);
 
 ####################################################################################################
 
-InstallGlobalFunction(IsLEquivArr,
+InstallMethod(IsLEquiv,
+	[IsHyperplaneArrangement, IsHyperplaneArrangement],
 function(A,B)
 local LGraphA,LGraphB;;
     LGraphA := ShallowCopy(GLGraph(IntersectionLattice(A)));
@@ -798,8 +800,9 @@ local A,s,ip,Hind,disthv,
 		fi;
 		
 	od;
-	sp:=Concatenation(sp, "\n");;
+	# sp:=Concatenation(sp, "\n");;
 	if ip=1 then
+		sp:=Concatenation(sp, "\n");;
 		for sv in GLGroundSet(IntersectionLattice(A))[2] do
 			a:=ctf(NullspaceMat(TransposedMat(R{sv}))[1]);;
 			if AbsoluteValue(a[3]) > 0.0001 and a[1]^2+a[2]^2 < (r1/s)^2 then

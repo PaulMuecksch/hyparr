@@ -157,7 +157,7 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 
-#! @Subsection Attributes of geometric lattices
+#! @Section Attributes of geometric lattices
 #################################
 
 #! @Arguments L
@@ -197,6 +197,52 @@ DeclareAttribute("GLGraph", IsGeomLattice);;
 #! as a subgroup of <C>Sym(GLAtoms(L))</C>.
 DeclareAttribute("GLAutGroup", IsGeomLattice);;
 
+
+#################################
+##
+#! @Section Operations
+##
+#################################
+
+#! @Arguments A, B
+#! @Returns true or false
+#! @Description
+#! Determines if the arrangements <A>A</A> and <A>B</A> 
+#! have isomorphic intersection lattices.
+#!
+#! @BeginExampleSession
+#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> B:=AGpql(2,2,3);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> IsLEquiv(A,B);
+#! false
+#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
+#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
+#! gap> IsLEquiv(A,B);
+#! true
+#! @EndExampleSession
+DeclareOperation("IsLEquiv", [IsHyperplaneArrangement,IsHyperplaneArrangement]);
+
+
+#! @Arguments A
+#! @Returns A hyperplane arrangement.
+#! @Description
+#! Computes the <E>essentialization</E> of the hyperplane arrangement
+#! <A>A</A>.
+#! An arrangement is called essential if the intersection of all its
+#! hyperplanes is the origin.  If this is not the case, the function
+#! restricts the arrangement to a complementary subspace so that the
+#! resulting arrangement becomes essential.
+#! @BeginExampleSession
+#! gap> A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);
+#! <HyperplaneArrangement: 3 hyperplanes in 3-space>
+#! gap> B:=Essentialization(A); Roots(B);
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
+#! @EndExampleSession
+DeclareOperation( "Essentialization", [IsHyperplaneArrangement]);
+
 #################################
 ##
 #! @Section Global methods
@@ -218,26 +264,6 @@ DeclareGlobalFunction("FloatStringCutoff");
 
 # DeclareGlobalFunction("");;
 
-#! @Arguments A, B
-#! @Returns true or false
-#! @Description
-#! Determines, if the arrangements <A>A</A> and <A>B</A> 
-#! have isomorphic intersection lattices.
-#!
-#! @BeginExampleSession
-#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
-#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
-#! gap> B:=AGpql(2,2,3);
-#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
-#! gap> IsLEquiv(A,B);
-#! false
-#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
-#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
-#! gap> IsLEquiv(A,B);
-#! true
-#! @EndExampleSession
-DeclareGlobalFunction("IsLEquivArr");
-
 #! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
 #! @Returns A string.
 #! @Description
@@ -251,13 +277,12 @@ DeclareGlobalFunction("IsLEquivArr");
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> Print(DrawLatex3Arr(A));
 #! \begin{tikzpicture}[scale=1.0]
-#! \draw (-2.828,2.828) -- (2.828,-2.828);  % H_1
-#! \draw (2.828,2.828) -- (-2.828,-2.828);  % H_2
-#! \draw (-1.,3.872) -- (-1.,-3.872);  % H_3
-#! \draw (1.,3.872) -- (1.,-3.872);  % H_4
-#! \draw (3.872,-1.) -- (-3.872,-1.);  % H_5
-#! \draw (3.872,1.) -- (-3.872,1.);  % H_6
-#!
+#! \draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
+#! \draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+#! \draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
+#! \draw (1.,3.873) -- (1.,-3.873);  % H_4 
+#! \draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
+#! \draw (3.873,1.) -- (-3.873,1.);  % H_6 
 #! \end{tikzpicture}
 #! @EndExampleSession
 #! 
@@ -283,16 +308,6 @@ DeclareGlobalFunction( "HArrResHind" );
 #! subspace spanned by the vectors in <C>S</C>.
 DeclareGlobalFunction( "HArrResX" );
 
-#! @Arguments A
-#! @Returns A hyperplane arrangement.
-#! @Description
-#! Computes the <E>essentialization</E> of the hyperplane arrangement
-## <A>A</A>.
-#! An arrangement is called essential if the intersection of all its
-#! hyperplanes is the origin.  If this is not the case, the function
-#! restricts the arrangement to a complementary subspace so that the
-#! resulting arrangement becomes essential.
-DeclareGlobalFunction( "Essentialization");
 
 #################################
 ##

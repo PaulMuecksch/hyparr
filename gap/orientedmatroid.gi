@@ -502,6 +502,17 @@ end);
 ##
 
 ####################################################################################################
+
+InstallMethod(IsLEquiv,
+	[IsOrientedMatroid, IsOrientedMatroid],
+function(OM1,OM2)
+local LGraph1,LGraph2;;
+    LGraph1 := ShallowCopy(GLGraph(OMGeomLattice(OM1)));
+    LGraph2 := ShallowCopy(GLGraph(OMGeomLattice(OM2)));
+    return IsIsomorphicGraph(LGraph1,LGraph2);
+end);
+
+####################################################################################################
 # Global auxillary functions
 ####################################################################################################
 

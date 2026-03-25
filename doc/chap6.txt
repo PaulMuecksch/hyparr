@@ -212,6 +212,21 @@
   
   [33X[0;0YReturns the order function of the face poset FP.[133X
   
+  [1X6.1-11 OMChirotype[101X
+  
+  [33X[1;0Y[29X[2XOMChirotype[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA function[133X
+  
+  [33X[0;0YReturns  the chirotype giving as a function from [23X\binomial{E}{r} \to \{0,\pm
+  1\}[123X, where [23XE[123X is the groundset of [23XOM[123X and [23Xr[123X is the rank of [3XOM[103X.[133X
+  
+  [1X6.1-12 OMRankFunction[101X
+  
+  [33X[1;0Y[29X[2XOMRankFunction[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA function[133X
+  
+  [33X[0;0YReturns the rank function of the oriented matroid [3XOM[103X[133X
+  
   
   [1X6.2 [33X[0;0YProperties[133X[101X
   
@@ -231,9 +246,33 @@
   [4X[32X[104X
   
   
-  [1X6.3 [33X[0;0YGlobal methods[133X[101X
+  [1X6.3 [33X[0;0YOperations[133X[101X
   
-  [1X6.3-1 OMOperation[101X
+  [1X6.3-1 IsLEquiv[101X
+  
+  [33X[1;0Y[29X[2XIsLEquiv[102X( [3XOM1[103X, [3XOM2[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines  if  the  oriented matroids [3XOM1[103X and [3XOM2[103X have isomorphic geometric
+  lattices.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO1:=OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XO2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(O1,O2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XO2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(O1,O2);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X6.4 [33X[0;0YGlobal methods[133X[101X
+  
+  [1X6.4-1 OMOperation[101X
   
   [33X[1;0Y[29X[2XOMOperation[102X( [3Xsv1[103X, [3Xsv2[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA list[133X
@@ -255,45 +294,38 @@
     [4X[28X[ -1, 1, 1 ][128X[104X
   [4X[32X[104X
   
-  [1X6.3-2 OrderCovec[101X
+  [1X6.4-2 OrderCovec[101X
   
   [33X[1;0Y[29X[2XOrderCovec[102X( [3Xarg[103X ) [32X function[133X
   
   [33X[0;0YOrder function for sign vectors.[133X
   
-  [1X6.3-3 IsOMEquiv[101X
+  [1X6.4-3 IsOMEquiv[101X
   
   [33X[1;0Y[29X[2XIsOMEquiv[102X( [3XOM1[103X, [3XOM2[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
   [33X[0;0YDetermines, if the oriented matroids [3XOM1[103X and [3XOM2[103X are isomorphic.[133X
   
-  [1X6.3-4 SeparatingSet[101X
+  [1X6.4-4 SeparatingSet[101X
   
   [33X[1;0Y[29X[2XSeparatingSet[102X( [3Xarg[103X ) [32X function[133X
   
   [33X[0;0YThe separating set of two sign vectors.[133X
   
   
-  [1X6.4 [33X[0;0YConstructors[133X[101X
+  [1X6.5 [33X[0;0YConstructors[133X[101X
   
-  [1X6.4-1 OrientedMatroid[101X
+  [1X6.5-1 OrientedMatroid[101X
   
-  [33X[1;0Y[29X[2XOrientedMatroid[102X( [3Xr[103X, [3Xor[103X, [3XA[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XOrientedMatroid[102X( [3Xr[103X, [3Xor[103X, [3XA[103X, [3Xor[103X[, [3Xn[103X, [3Xr[103X, [3XChiroCoreList[103X] ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn oriented matroid OM.[133X
   
   [33X[0;0YConstructs  am  oriented  matroid  from  a  list  [3Xr[103X  of vectors representing
-  defining  linear  forms of real hyperplanes or a real hyperplane arrangement
-  [3XA[103X.[133X
-  
-  [33X[0;0YEach vector [22Xr = [r_1,dots,r_n][122X corresponds to the linear form[133X
-  
-  
-  [24X[33X[0;6Yr_1 x_1 + \cdots + r_n x_n = 0.[133X
-  
-  [124X
-  
-  [33X[0;0YThe vectors must lie in the same real vector space.[133X
+  defining linear forms of real hyperplanes or a real hyperplane arrangement [3XA[103X
+  or  a intergers [3Xn,r[103X giving the size of the groundset and the rank and a list
+  [3XChiroCoreList[103X  [23X\subseteq  \{0,1,-1\}^m  (m  =  \binom{n}{r})[123X  presenting the
+  chirotype of the oriented matroid.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));[127X[104X
@@ -302,7 +334,7 @@
     [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
   [4X[32X[104X
   
-  [1X6.4-2 OrientedMatroid[101X
+  [1X6.5-2 OrientedMatroid[101X
   
   [33X[1;0Y[29X[2XOrientedMatroid[102X( [3Xarg[103X ) [32X operation[133X
   

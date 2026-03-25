@@ -251,6 +251,27 @@ gap> FPGroundSet(S);
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="OM" Name="OMChirotype" Label="for IsOrientedMatroid"/>
+ <Returns>A function
+</Returns>
+ <Description>
+ Returns the chirotype giving as a function from <Math>\binomial{E}{r} \to \{0,\pm 1\}</Math>,
+ where <Math>E</Math> is the groundset of <Math>OM</Math> and <Math>r</Math> is the rank of <A>OM</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="OM" Name="OMRankFunction" Label="for IsOrientedMatroid"/>
+ <Returns>A function
+</Returns>
+ <Description>
+ Returns the rank function of the oriented matroid <A>OM</A>
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
@@ -269,6 +290,37 @@ gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
 <OrientedMatroid: 6 elements, rank 3>
 gap> OMIsLinear(OM);
 true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Oriented_Matroids_Section_Operations">
+<Heading>Operations</Heading>
+
+<ManSection>
+  <Oper Arg="OM1, OM2" Name="IsLEquiv" Label="for IsOrientedMatroid,IsOrientedMatroid"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+ Determines if the oriented matroids <A>OM1</A> and <A>OM2</A> 
+ have isomorphic geometric lattices.
+<Example><![CDATA[
+gap> O1:=OrientedMatroid(3,4,[1,1,1,1]);
+<OrientedMatroid: 4 elements, rank 3>
+gap> O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
+<OrientedMatroid: 4 elements, rank 3>
+gap> IsLEquiv(O1,O2);
+true
+gap> O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);
+<OrientedMatroid: 4 elements, rank 3>
+gap> IsLEquiv(O1,O2);
+false
 ]]></Example>
 
 
@@ -345,20 +397,16 @@ gap> OMOperation(sv2, sv1);
 <Heading>Constructors</Heading>
 
 <ManSection>
-  <Oper Arg="r or A" Name="OrientedMatroid" Label="for IsList"/>
+  <Oper Arg="r or A or [n,r,ChiroCoreList]" Name="OrientedMatroid" Label="for IsList"/>
  <Returns>An oriented matroid OM.
 </Returns>
  <Description>
   Constructs am oriented matroid from a list <A>r</A> of vectors
   representing defining linear forms of real hyperplanes
-  or a real hyperplane arrangement <A>A</A>.
-<P/>
-  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the linear form
-  <Display>
-     r_1 x_1 + \cdots + r_n x_n = 0.
-  </Display>
-  The vectors must lie in the same real vector space.
-<P/>
+  or a real hyperplane arrangement <A>A</A>
+  or a intergers <A>n,r</A> giving the size of the groundset and the rank and
+  a list <A>ChiroCoreList</A> <Math>\subseteq \{0,1,-1\}^m (m = \binom{n}{r})</Math> presenting the chirotype
+  of the oriented matroid.
 <Example><![CDATA[
 gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));
 <OrientedMatroid: 6 elements, rank 3>

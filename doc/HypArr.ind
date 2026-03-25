@@ -15,7 +15,8 @@
 
   \indexspace
 
-  \item \texttt  {Essentialization}, \hyperpage{8}
+  \item \texttt  {Essentialization}
+    \subitem for IsHyperplaneArrangement, \hyperpage{7}
   \item \texttt  {ExpArr}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
 
@@ -59,8 +60,11 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{13}
   \item \texttt  {IsInductivelyFree}
     \subitem for IsHyperplaneArrangement, \hyperpage{10}
-  \item \texttt  {IsLEquiv}, \hyperpage{7}
-  \item \texttt  {IsOMEquiv}, \hyperpage{19}
+  \item \texttt  {IsLEquiv}
+    \subitem for IsHyperplaneArrangement,IsHyperplaneArrangement, 
+		\hyperpage{7}
+    \subitem for IsOrientedMatroid,IsOrientedMatroid, \hyperpage{19}
+  \item \texttt  {IsOMEquiv}, \hyperpage{20}
   \item \texttt  {IsReal}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
 
@@ -74,6 +78,8 @@
 
   \indexspace
 
+  \item \texttt  {OMChirotype}
+    \subitem for IsOrientedMatroid, \hyperpage{18}
   \item \texttt  {OMCocircuits}
     \subitem for IsOrientedMatroid, \hyperpage{16}
   \item \texttt  {OMCovectors}
@@ -83,16 +89,18 @@
   \item \texttt  {OMGroundSet}
     \subitem for IsOrientedMatroid, \hyperpage{15}
   \item \texttt  {OMIsLinear}
-    \subitem for IsOrientedMatroid, \hyperpage{18}
+    \subitem for IsOrientedMatroid, \hyperpage{19}
   \item \texttt  {OMLForms}
     \subitem for IsOrientedMatroid, \hyperpage{15}
   \item \texttt  {OMOperation}, \hyperpage{19}
   \item \texttt  {OMRank}
     \subitem for IsOrientedMatroid, \hyperpage{15}
-  \item \texttt  {OrderCovec}, \hyperpage{19}
+  \item \texttt  {OMRankFunction}
+    \subitem for IsOrientedMatroid, \hyperpage{18}
+  \item \texttt  {OrderCovec}, \hyperpage{20}
   \item \texttt  {OrientedMatroid}
     \subitem for IsHyperplaneArrangement, \hyperpage{20}
-    \subitem for IsList, \hyperpage{19}
+    \subitem for IsList, \hyperpage{20}
 
   \indexspace
 
@@ -104,7 +112,7 @@
   \item \texttt  {SalvettiComplex}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
     \subitem for IsOrientedMatroid, \hyperpage{17}
-  \item \texttt  {SeparatingSet}, \hyperpage{19}
+  \item \texttt  {SeparatingSet}, \hyperpage{20}
   \item \texttt  {SsS3}, \hyperpage{21}
 
   \indexspace
