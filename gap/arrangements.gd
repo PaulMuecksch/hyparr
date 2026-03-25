@@ -271,14 +271,14 @@ DeclareGlobalFunction("FloatStringCutoff");
 #! for a nice projective picture of the real 3-arrangement.
 #! If $x,y,z$ are the coordinates, by default, 
 #! this is the 2-dim affine arrangement
-#! obtained by intersecting <A>A</A> with the plane $z=1$
+#! obtained by intersecting <A>A</A> with the plane $z=1$.
 #! 
 #! The optional parameters are:
 #!  * <A>ps</A> a scaling factor,
 #!  * <A>ip</A> intersection points are drawn,
 #!  * <A>Hind</A> indeces are added,
 #!  * <A>disthv</A> a vector giving the normal of the plane whith which to intersect <A>A</A>,
-#!  * <A>MarkHs</A> a list of indeces of hyperplanes of <A>A</A>, these are drawn in another color.
+#!  * <A>MarkHs</A> a list of indices of hyperplanes of <A>A</A>, these are drawn in another color.
 #!
 #! The example below will look as follows (only in pdf).
 #!
@@ -294,31 +294,31 @@ DeclareGlobalFunction("FloatStringCutoff");
 #! \draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
 #! \draw (3.873,1.) -- (-3.873,1.);  % H_6 
 #! \end{tikzpicture}
-#! gap> Print(DrawLatex3Arr(A,1/2,1,1,[1,1,1],[1,2]));
+#! gap> Print(DrawLatex3Arr(A,1/2,true,true,[1,1,1],[1,2]));
 #! \begin{tikzpicture}[scale=1.0]
 #! \draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 
-#! \node at (1.9750000000000001,-3.7070000000000003) {\small $1$}; 
+#! \node at (1.975,-3.707) {\small $1$}; 
 #! \draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 
-#! \node at (-2.9700000000000002,-2.9700000000000002) {\small $2$}; 
+#! \node at (-2.970,-2.970) {\small $2$}; 
 #! \draw (3.361,2.169) -- (-3.995,0.197);  % H_3 
-#! \node at (-4.1980000000000004,0.14300000000000002) {\small $3$}; 
+#! \node at (-4.198,0.143) {\small $3$}; 
 #! \draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 
-#! \node at (1.087,-4.0570000000000004) {\small $4$}; 
+#! \node at (1.087,-4.057) {\small $4$}; 
 #! \draw (2.169,3.361) -- (0.197,-3.995);  % H_5 
-#! \node at (0.14300000000000002,-4.1980000000000004) {\small $5$}; 
+#! \node at (0.143,-4.198) {\small $5$}; 
 #! \draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 
-#! \node at (4.0570000000000004,-1.087) {\small $6$}; 
-#!
-#! \fill[red] (-0.86602540378443871,-0.86602540378443871) circle[radius=2pt];  % P[ 1, 2 ] 
-#! \fill[red] (-2.3660254037844384,0.63397459621556096) circle[radius=2pt];  % P[ 1, 3, 6 ] 
-#! \fill[red] (1.7320508075688774,1.7320508075688774) circle[radius=2pt];  % P[ 2, 3, 5 ] 
-#! \fill[red] (0.63397459621556096,-2.3660254037844384) circle[radius=2pt];  % P[ 1, 4, 5 ] 
+#! \node at (4.057,-1.087) {\small $6$}; 
+#! 
+#! \fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] 
+#! \fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] 
+#! \fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] 
+#! \fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] 
 #! \fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
-#! \fill[red] (-0.31698729810778048,1.1830127018922192) circle[radius=2pt];  % P[ 3, 4 ] 
-#! \fill[red] (1.1830127018922192,-0.31698729810778048) circle[radius=2pt];  % P[ 5, 6 ] 
-#!
+#! \fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] 
+#! \fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] 
+#! 
 #! \end{tikzpicture}
-#!
+#! 
 #! @EndExampleSession
 #! 
 #! @BeginLatexOnly

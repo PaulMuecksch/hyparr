@@ -658,7 +658,7 @@ local A,s,ip,Hind,disthv,
 			fi;
 			s:=1;;
 			ip:=false;;
-			Hind:=0;;
+			Hind:=false;;
 			disthv:=[0,0,1];;
 			Mind:=0;;
 			if Length(arg)=2 then
@@ -704,7 +704,7 @@ local A,s,ip,Hind,disthv,
             xyinf := FloatStringCutoff(xyinf);;
             
             if Mind=1 and Position(RR,vv) in MarkHs then
-				if Hind=1 then
+				if Hind then
 					sp:=Concatenation(sp,
 						"\\draw[color=red] (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
 						"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty =$ \\small $",String(Position(RR,vv))," $};  % H_",String(Position(RR,vv))," \n");;
@@ -714,7 +714,7 @@ local A,s,ip,Hind,disthv,
 						"\\node [above right] at (",xyinf,",",xyinf,") {$\\infty$};  % H_",String(Position(RR,vv))," \n");;
 				fi;;
 			else
-			if Hind=1 then
+			if Hind then
                 sp:=Concatenation(sp,
                     "\\draw (0,",rinf,") arc [start angle=90, end angle=0, radius=",rinf,"] ;\n",
                     "\\node [above right] at (",xyinf,",",xyinf,") {$\\infty =$ \\small $",String(Position(RR,vv))," $};  % H_",String(Position(RR,vv))," \n");;
@@ -764,7 +764,7 @@ local A,s,ip,Hind,disthv,
                     sp:=Concatenation(sp,"\\draw (",x1,",",y1,") -- (",x2,",",y2,");  % H_",String(Position(RR,vv))," \n");;
 				fi;;
 
-                if Hind=1 then
+                if Hind then
 					#\node at (4.,0.) {\tiny$1$};
 										
 					if AbsoluteValue(v[1]) > 0.0001 then 
@@ -787,6 +787,11 @@ local A,s,ip,Hind,disthv,
 					y1:=String(FloatRound(yc1,3));
 					x2:=String(FloatRound(xc2,3));
 					y2:=String(FloatRound(yc2,3));
+
+					x1:=FloatStringCutoff(x1);;
+					x2:=FloatStringCutoff(x2);;
+					y1:=FloatStringCutoff(y1);;
+					y2:=FloatStringCutoff(y2);;
 					
 					if x1>=0 then
 						sp:=Concatenation(sp,"\\node at (",x2,",",y2,") {\\small $",String(Position(RR,vv)),"$}; \n");;
@@ -806,8 +811,10 @@ local A,s,ip,Hind,disthv,
 		for sv in GLGroundSet(IntersectionLattice(A))[2] do
 			a:=ctf(NullspaceMat(TransposedMat(R{sv}))[1]);;
 			if AbsoluteValue(a[3]) > 0.0001 and a[1]^2+a[2]^2 < (r1/s)^2 then
-				px:=String(s*a[1]/a[3]);;
-				py:=String(s*a[2]/a[3]);;
+				px:=String(FloatRound(s*a[1]/a[3],3));;
+				py:=String(FloatRound(s*a[2]/a[3],3));;
+				px:=FloatStringCutoff(px);;
+				py:=FloatStringCutoff(py);;
 				if AbsoluteValue(s*a[1]/a[3]) < 0.0001 then px:="0.0";; fi;;
 				if AbsoluteValue(s*a[2]/a[3]) < 0.0001 then py:="0.0";; fi;;
 				sp:=Concatenation(sp, "\\fill[red] (",px,",",py,") circle[radius=2pt];  % P",String(sv)," \n");;

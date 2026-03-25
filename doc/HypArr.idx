@@ -17,32 +17,32 @@
 \indexentry{DrawLatex3Arr@\texttt  {DrawLatex3Arr}|hyperpage}{7}
 \indexentry{HArrResHind@\texttt  {HArrResHind}|hyperpage}{9}
 \indexentry{HArrResX@\texttt  {HArrResX}|hyperpage}{9}
-\indexentry{HyperplaneArrangement@\texttt  {HyperplaneArrangement}!for IsList|hyperpage}{10}
-\indexentry{IsInductivelyFree@\texttt  {IsInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{11}
-\indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{11}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{12}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{12}
-\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{13}
-\indexentry{IsFormal@\texttt  {IsFormal}!for IsHyperplaneArrangement|hyperpage}{14}
-\indexentry{OMRank@\texttt  {OMRank}!for IsOrientedMatroid|hyperpage}{16}
-\indexentry{OMGroundSet@\texttt  {OMGroundSet}!for IsOrientedMatroid|hyperpage}{16}
-\indexentry{OMLForms@\texttt  {OMLForms}!for IsOrientedMatroid|hyperpage}{16}
-\indexentry{OMGeomLattice@\texttt  {OMGeomLattice}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{OMCocircuits@\texttt  {OMCocircuits}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{TopeGraph@\texttt  {TopeGraph}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{OMCovectors@\texttt  {OMCovectors}!for IsOrientedMatroid|hyperpage}{18}
-\indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsOrientedMatroid|hyperpage}{18}
-\indexentry{FPGroundSet@\texttt  {FPGroundSet}!for IsFacePoset|hyperpage}{18}
-\indexentry{FPOrder@\texttt  {FPOrder}!for IsFacePoset|hyperpage}{19}
-\indexentry{OMChirotype@\texttt  {OMChirotype}!for IsOrientedMatroid|hyperpage}{19}
-\indexentry{OMRankFunction@\texttt  {OMRankFunction}!for IsOrientedMatroid|hyperpage}{19}
-\indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{20}
-\indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{20}
-\indexentry{OMOperation@\texttt  {OMOperation}|hyperpage}{20}
-\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{21}
-\indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{21}
-\indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{21}
-\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{21}
-\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsHyperplaneArrangement|hyperpage}{21}
-\indexentry{AGpql@\texttt  {AGpql}|hyperpage}{22}
-\indexentry{SsS3@\texttt  {SsS3}|hyperpage}{22}
+\indexentry{HyperplaneArrangement@\texttt  {HyperplaneArrangement}!for IsList|hyperpage}{9}
+\indexentry{IsInductivelyFree@\texttt  {IsInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{10}
+\indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{10}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{11}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{11}
+\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{12}
+\indexentry{IsFormal@\texttt  {IsFormal}!for IsHyperplaneArrangement|hyperpage}{13}
+\indexentry{OMRank@\texttt  {OMRank}!for IsOrientedMatroid|hyperpage}{15}
+\indexentry{OMGroundSet@\texttt  {OMGroundSet}!for IsOrientedMatroid|hyperpage}{15}
+\indexentry{OMLForms@\texttt  {OMLForms}!for IsOrientedMatroid|hyperpage}{15}
+\indexentry{OMGeomLattice@\texttt  {OMGeomLattice}!for IsOrientedMatroid|hyperpage}{16}
+\indexentry{OMCocircuits@\texttt  {OMCocircuits}!for IsOrientedMatroid|hyperpage}{16}
+\indexentry{TopeGraph@\texttt  {TopeGraph}!for IsOrientedMatroid|hyperpage}{16}
+\indexentry{OMCovectors@\texttt  {OMCovectors}!for IsOrientedMatroid|hyperpage}{17}
+\indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsOrientedMatroid|hyperpage}{17}
+\indexentry{FPGroundSet@\texttt  {FPGroundSet}!for IsFacePoset|hyperpage}{17}
+\indexentry{FPOrder@\texttt  {FPOrder}!for IsFacePoset|hyperpage}{18}
+\indexentry{OMChirotype@\texttt  {OMChirotype}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMRankFunction@\texttt  {OMRankFunction}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{19}
+\indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{19}
+\indexentry{OMOperation@\texttt  {OMOperation}|hyperpage}{19}
+\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{20}
+\indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{20}
+\indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{20}
+\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{20}
+\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsHyperplaneArrangement|hyperpage}{20}
+\indexentry{AGpql@\texttt  {AGpql}|hyperpage}{21}
+\indexentry{SsS3@\texttt  {SsS3}|hyperpage}{21}
