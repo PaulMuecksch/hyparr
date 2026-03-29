@@ -5,6 +5,10 @@
   [[20XBLVS+99[120X]  [16XBj\"{o}rner,  A.,  Las  Vergnas,  M.,  Sturmfels,  B.,  White,  N. and Ziegler, G. M.[116X, [17XOriented matroids[117X, Cambridge
   University Press, Cambridge, Second edition, Encyclopedia of Mathematics and its Applications, [19X46[119X (1999), xii+548 pages.
   
+  [[20XEll26[120X]    [16XEllis,    G.[116X,    [17XHAP,    Homological   Algebra   Programming,   Version   1.75[117X   (2026),   (GAP   package),   \href
+  {https://gap-packages.github.io/hap}                {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
+  {}{}{}\texttt{hap}}.
+  
   [[20XFR87[120X]  [16XFalk,  M.  and  Randell, R.[116X, [17XOn the homotopy theory of arrangements[117X, in Complex analytic singularities, North-Holland,
   Amsterdam, Adv. Stud. Pure Math., [19X8[119X (1987), 101--124.
   

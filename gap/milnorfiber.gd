@@ -7,8 +7,9 @@
 #! <Display>f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times, z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)</Display>
 #! of the hyperplane arrangement <M>\mathcal{A}</M>, where <M>\alpha_H</M> are defining linear forms.
 #!
-#! The following describes functions to construct regular cell complex having the homotopy type of
-#! the Milnor fiber from <Cite Key="MueYos25_MilnorOM"/> and thus enables computation of homotopy invaraints using e.g. the HAP package.
+#! The following describes functions to construct a regular cell complex having the homotopy type of
+#! the Milnor fiber from <Cite Key="MueYos25_MilnorOM"/> and thus enables computation of homotopy invaraints 
+#! using e.g. the HAP package <Cite Key="GAP_HAP"/>.
 
 
 #################################

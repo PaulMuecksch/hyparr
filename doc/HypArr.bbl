@@ -13,6 +13,14 @@ Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
   Mathematics and its Applications}.
 \newblock Cambridge University Press, Cambridge, second edition, 1999.
 
+\bibitem[Ell26]{GAP_HAP}
+G.~Ellis.
+\newblock {HAP}, {Homological Algebra Programming}, {V}ersion 1.75.
+\newblock \href {https://gap-packages.github.io/hap}
+  {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
+  {}{}{}\texttt{hap}}, Mar 2026.
+\newblock GAP package.
+
 \bibitem[FR87]{FalkRandell87_HomotopyArr}
 M.~Falk and R.~Randell.
 \newblock On the homotopy theory of arrangements.

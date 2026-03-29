@@ -31,7 +31,7 @@
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 4.1-2 
       for IsOrientedMatroid 4.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.1-6 
-  [2XOMChirotype[102X, for IsOrientedMatroid 6.1-11 
+  [2XOMChirotope[102X, for IsOrientedMatroid 6.1-11 
   [2XOMCocircuits[102X, for IsOrientedMatroid 6.1-5 
   [2XOMCovectors[102X, for IsOrientedMatroid 6.1-7 
   [2XOMGeomLattice[102X, for IsOrientedMatroid 6.1-4 

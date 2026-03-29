@@ -252,11 +252,11 @@ gap> FPGroundSet(S);
 
 
 <ManSection>
-  <Attr Arg="OM" Name="OMChirotype" Label="for IsOrientedMatroid"/>
+  <Attr Arg="OM" Name="OMChirotope" Label="for IsOrientedMatroid"/>
  <Returns>A function
 </Returns>
  <Description>
- Returns the chirotype giving as a function from <Math>\binom{E}{r} \to \{0,\pm 1\}</Math>,
+ Returns the chirotope giving as a function from <Math>\binom{E}{r} \to \{0,\pm 1\}</Math>,
  where <Math>E</Math> is the groundset of <Math>OM</Math> and <Math>r</Math> is the rank of <A>OM</A>.
  </Description>
 </ManSection>
@@ -405,7 +405,7 @@ gap> OMOperation(sv2, sv1);
   representing defining linear forms of real hyperplanes
   or a real hyperplane arrangement <A>A</A>
   or a intergers <A>n,r</A> giving the size of the groundset and the rank and
-  a list <A>ChiroCoreList</A> <Math>\subseteq \{0,1,-1\}^m (m = \binom{n}{r})</Math> presenting the chirotype
+  a list <A>ChiroCoreList</A> <Math>\subseteq \{0,1,-1\}^m (m = \binom{n}{r})</Math> presenting the chirotope
   of the oriented matroid.
 <Example><![CDATA[
 gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));

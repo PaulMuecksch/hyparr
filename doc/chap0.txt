@@ -79,7 +79,7 @@
       6.1-8 SalvettiComplex
       6.1-9 FPGroundSet
       6.1-10 FPOrder
-      6.1-11 OMChirotype
+      6.1-11 OMChirotope
       6.1-12 OMRankFunction
     6.2 [33X[0;0YProperties[133X
       6.2-1 OMIsLinear

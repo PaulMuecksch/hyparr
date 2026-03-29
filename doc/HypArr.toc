@@ -49,7 +49,7 @@
 \contentsline {subsection}{\numberline {6.1.8}\textcolor {Chapter }{SalvettiComplex (for IsOrientedMatroid)}}{18}{subsection.6.1.8}%
 \contentsline {subsection}{\numberline {6.1.9}\textcolor {Chapter }{FPGroundSet (for IsFacePoset)}}{18}{subsection.6.1.9}%
 \contentsline {subsection}{\numberline {6.1.10}\textcolor {Chapter }{FPOrder (for IsFacePoset)}}{19}{subsection.6.1.10}%
-\contentsline {subsection}{\numberline {6.1.11}\textcolor {Chapter }{OMChirotype (for IsOrientedMatroid)}}{19}{subsection.6.1.11}%
+\contentsline {subsection}{\numberline {6.1.11}\textcolor {Chapter }{OMChirotope (for IsOrientedMatroid)}}{19}{subsection.6.1.11}%
 \contentsline {subsection}{\numberline {6.1.12}\textcolor {Chapter }{OMRankFunction (for IsOrientedMatroid)}}{19}{subsection.6.1.12}%
 \contentsline {section}{\numberline {6.2}\textcolor {Chapter }{Properties}}{20}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}\textcolor {Chapter }{OMIsLinear (for IsOrientedMatroid)}}{20}{subsection.6.2.1}%

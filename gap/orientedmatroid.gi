@@ -80,12 +80,12 @@ local Bs;
 end);
 
 InstallMethod(OrientedMatroid,
-    "for a chirotype data",
+    "for a chirotope data",
     [IsInt, IsInt, IsList],
 function(r,n,ChiroCore)
-    local type, ChirotypeFct;
+    local type, ChirotopeFct;
     # For an r-tuple S return chi(S) \in {0,1,-1} or fail if l(s)<>r
-    ChirotypeFct := ChirotypeFromChiroCore(r,n,ChiroCore);;
+    ChirotopeFct := ChirotopeFromChiroCore(r,n,ChiroCore);;
 
     type := NewType(OrientedMatroidFamily,
                     IsOrientedMatroidRep);
@@ -94,7 +94,7 @@ function(r,n,ChiroCore)
         rec(
             GroundSet := [1..n],
             chirocore := [r,n,ChiroCore],
-            chirotype := ChirotypeFct,
+            chirotope := ChirotopeFct,
             rank := r
         )
     );
@@ -146,11 +146,11 @@ function(OM)
     fi;;
 end);
 
-InstallMethod(OMChirotype,
+InstallMethod(OMChirotope,
     [ IsOrientedMatroid ],
 function(OM)
-    if IsBound(OM!.chirotype) then
-        return OM!.chirotype;
+    if IsBound(OM!.chirotope) then
+        return OM!.chirotope;
     else
         return fail;
     fi;;
@@ -300,7 +300,7 @@ function(OM)
         od;;;
         return CoCircs;;
     else
-        ChiFct := OMChirotype(OM);
+        ChiFct := OMChirotope(OM);
         RkFct := OMRankFunction(OM);
 
         BasisOfFlat := function(m)
@@ -699,7 +699,7 @@ local TGraph1,TGraph2;
     return IsIsomorphicGraph(TGraph1,TGraph2);
 end);
 
-InstallGlobalFunction(ChirotypeFromChiroCore,
+InstallGlobalFunction(ChirotopeFromChiroCore,
 function(r,n,ChiroCore)
 local ChiFct;
     # For an r-tuple S return chi(S) \in {0,1,-1} or fail if l(s)<>r

@@ -15,7 +15,7 @@ DeclareCategory("IsOrientedMatroid", IsComponentObjectRep and IsAttributeStoring
 DeclareRepresentation(
     "IsOrientedMatroidRep", 
     IsOrientedMatroid,
-    ["rank","GroundSet","lforms","chirotype",
+    ["rank","GroundSet","lforms","chirotope",
     "chirocore","cocircuits","covectors","rkfct",
     "lattice","topegraph","salcpx"]
 );
@@ -224,9 +224,9 @@ DeclareAttribute("FPOrder", IsFacePoset);
 #! @Arguments OM
 #! @Returns A function
 #! @Description
-#! Returns the chirotype giving as a function from $\binom{E}{r} \to \{0,\pm 1\}$,
+#! Returns the chirotope giving as a function from $\binom{E}{r} \to \{0,\pm 1\}$,
 #! where $E$ is the groundset of $OM$ and $r$ is the rank of <A>OM</A>.
-DeclareAttribute("OMChirotype", IsOrientedMatroid);
+DeclareAttribute("OMChirotope", IsOrientedMatroid);
 
 
 #! @Arguments OM
@@ -355,7 +355,7 @@ DeclareGlobalFunction("IsOMEquiv");
 #! The separating set of two sign vectors. 
 DeclareGlobalFunction("SeparatingSet");
 
-DeclareGlobalFunction("ChirotypeFromChiroCore");
+DeclareGlobalFunction("ChirotopeFromChiroCore");
 
 #################################
 ##
@@ -370,7 +370,7 @@ DeclareGlobalFunction("ChirotypeFromChiroCore");
 #!  representing defining linear forms of real hyperplanes
 #!  or a real hyperplane arrangement <A>A</A>
 #!  or a intergers <A>n,r</A> giving the size of the groundset and the rank and
-#!  a list <A>ChiroCoreList</A> $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ presenting the chirotype
+#!  a list <A>ChiroCoreList</A> $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ presenting the chirotope
 #!  of the oriented matroid.
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));

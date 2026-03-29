@@ -2,8 +2,8 @@
 
 ## Why HypArr
 
-Hyperplane arrangements appear in many different areas of mathematics, such as discrete and algebraic geometry,
-topology, combinatorics, etc..
+Hyperplane arrangements appear in many different areas of mathematics, 
+such as discrete and algebraic geometry, topology, combinatorics, etc..
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ There are no prerequisites to use.
 
 ## Installation
 
-Just clone the git repository to your pkg folder
+Clone the git repository to your pkg folder
 
  * From within GAP load the package with:
 

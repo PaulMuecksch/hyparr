@@ -78,7 +78,7 @@
 
   \indexspace
 
-  \item \texttt  {OMChirotype}
+  \item \texttt  {OMChirotope}
     \subitem for IsOrientedMatroid, \hyperpage{19}
   \item \texttt  {OMCocircuits}
     \subitem for IsOrientedMatroid, \hyperpage{17}

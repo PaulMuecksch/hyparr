@@ -723,9 +723,8 @@ true or false.
 z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
  of the hyperplane arrangement $\mathcal{A}$, where $\alpha_H$ are defining linear forms. 
 
- The following describes functions to construct regular cell complex having the
-homotopy type of the Milnor fiber from \cite{MueYos25_MilnorOM} and thus enables computation of homotopy invaraints using e.g. the HAP
-package. 
+ The following describes functions to construct a regular cell complex having
+the homotopy type of the Milnor fiber from \cite{MueYos25_MilnorOM} and thus enables computation of homotopy invaraints using e.g. the HAP package \cite{GAP_HAP}. 
 \section{\textcolor{Chapter }{Complexes}}\label{Chapter_Milnor_fibers_Section_Complexes}
 \logpage{[ 4, 1, 0 ]}
 \hyperdef{L}{X79C388D385DB7CD1}{}
@@ -1171,18 +1170,18 @@ A function
 
  
 
-\subsection{\textcolor{Chapter }{OMChirotype (for IsOrientedMatroid)}}
+\subsection{\textcolor{Chapter }{OMChirotope (for IsOrientedMatroid)}}
 \logpage{[ 6, 1, 11 ]}\nobreak
-\hyperdef{L}{X8675833982A3FE96}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMChirotype({\mdseries\slshape OM})\index{OMChirotype@\texttt{OMChirotype}!for IsOrientedMatroid}
-\label{OMChirotype:for IsOrientedMatroid}
+\hyperdef{L}{X854947857F5E5D29}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMChirotope({\mdseries\slshape OM})\index{OMChirotope@\texttt{OMChirotope}!for IsOrientedMatroid}
+\label{OMChirotope:for IsOrientedMatroid}
 }\hfill{\scriptsize (attribute)}}\\
 \textbf{\indent Returns:\ }
 A function 
 
 
 
- Returns the chirotype giving as a function from $\binom{E}{r} \to \{0,\pm 1\}$, where $E$ is the groundset of $OM$ and $r$ is the rank of \mbox{\texttt{\mdseries\slshape OM}}. }
+ Returns the chirotope giving as a function from $\binom{E}{r} \to \{0,\pm 1\}$, where $E$ is the groundset of $OM$ and $r$ is the rank of \mbox{\texttt{\mdseries\slshape OM}}. }
 
  
 
@@ -1359,7 +1358,7 @@ An oriented matroid OM.
 
 
  Constructs am oriented matroid from a list \mbox{\texttt{\mdseries\slshape r}} of vectors representing defining linear forms of real hyperplanes or a real
-hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}} or a intergers \mbox{\texttt{\mdseries\slshape n,r}} giving the size of the groundset and the rank and a list \mbox{\texttt{\mdseries\slshape ChiroCoreList}} $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ presenting the chirotype of the oriented matroid. 
+hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}} or a intergers \mbox{\texttt{\mdseries\slshape n,r}} giving the size of the groundset and the rank and a list \mbox{\texttt{\mdseries\slshape ChiroCoreList}} $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ presenting the chirotope of the oriented matroid. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));|
   <OrientedMatroid: 6 elements, rank 3>

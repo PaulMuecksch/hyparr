@@ -212,12 +212,12 @@
   
   [33X[0;0YReturns the order function of the face poset FP.[133X
   
-  [1X6.1-11 OMChirotype[101X
+  [1X6.1-11 OMChirotope[101X
   
-  [33X[1;0Y[29X[2XOMChirotype[102X( [3XOM[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XOMChirotope[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA function[133X
   
-  [33X[0;0YReturns  the  chirotype  giving  as a function from [23X\binom{E}{r} \to \{0,\pm
+  [33X[0;0YReturns  the  chirotope  giving  as a function from [23X\binom{E}{r} \to \{0,\pm
   1\}[123X, where [23XE[123X is the groundset of [23XOM[123X and [23Xr[123X is the rank of [3XOM[103X.[133X
   
   [1X6.1-12 OMRankFunction[101X
@@ -325,7 +325,7 @@
   defining linear forms of real hyperplanes or a real hyperplane arrangement [3XA[103X
   or  a intergers [3Xn,r[103X giving the size of the groundset and the rank and a list
   [3XChiroCoreList[103X  [23X\subseteq  \{0,1,-1\}^m  (m  =  \binom{n}{r})[123X  presenting the
-  chirotype of the oriented matroid.[133X
+  chirotope of the oriented matroid.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));[127X[104X
