@@ -5,29 +5,35 @@
   [2XAGpql[102X 7.1-1 
   [2XCharPoly[102X, for IsHyperplaneArrangement 2.1-4 
   [2XDimension[102X, for IsHyperplaneArrangement 2.1-1 
-  [2XDrawLatex3Arr[102X 2.4-1 
-  [2XEssentialization[102X, for IsHyperplaneArrangement 2.3-2 
+  [2XDrawLatex3Arr[102X 2.6-1 
+  [2XEssentialization[102X, for IsHyperplaneArrangement 2.5-2 
   [2XExpArr[102X, for IsHyperplaneArrangement 2.1-5 
   [2XFPGroundSet[102X, for IsFacePoset 6.1-9 
   [2XFPOrder[102X, for IsFacePoset 6.1-10 
   [2XFPtoCWCpx[102X 4.1-3 
-  [2XGLAtoms[102X, for IsGeomLattice 2.2-2 
-  [2XGLAutGroup[102X, for IsGeomLattice 2.2-6 
-  [2XGLGraph[102X, for IsGeomLattice 2.2-5 
-  [2XGLGroundSet[102X, for IsGeomLattice 2.2-1 
-  [2XGLkFlats[102X, for IsGeomLattice 2.2-4 
-  [2XGLRank[102X, for IsGeomLattice 2.2-3 
-  [2XHArrResHind[102X 2.4-2 
-  [2XHArrResX[102X 2.4-3 
-  [2XHyperplaneArrangement[102X, for IsList 2.5-1 
+  [2XGLAtoms[102X, for IsGeomLattice 2.3-2 
+  [2XGLAutGroup[102X, for IsGeomLattice 2.3-6 
+  [2XGLCharPoly[102X, for IsGeomLattice 2.3-8 
+  [2XGLGraph[102X, for IsGeomLattice 2.3-5 
+  [2XGLGroundSet[102X, for IsGeomLattice 2.3-1 
+  [2XGLIsIrreducible[102X, for IsGeomLattice 2.4-1 
+  [2XGLkFlats[102X, for IsGeomLattice 2.3-4 
+  [2XGLMoebius[102X, for IsGeomLattice 2.3-7 
+  [2XGLRank[102X, for IsGeomLattice 2.3-3 
+  [2XHArrIsIrreducible[102X, for IsHyperplaneArrangement 2.2-2 
+  [2XHArrResHind[102X 2.6-2 
+  [2XHArrResX[102X 2.6-3 
+  [2XHasSimpleSimplexRk[102X, for IsOrientedMatroid, IsInt 6.3-2 
+  [2XHasSimpleTriangle[102X, for IsOrientedMatroid 6.2-2 
+  [2XHyperplaneArrangement[102X, for IsList 2.7-1 
   [2XIntersectionLattice[102X, for IsHyperplaneArrangement 2.1-3 
   [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 3.1-2 
   [2XIsFormal[102X, for IsHyperplaneArrangement 5.1-1 
   [2XIsInductivelyFree[102X, for IsHyperplaneArrangement 3.1-1 
-  [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.3-1 
+  [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.5-1 
       for IsOrientedMatroid,IsOrientedMatroid 6.3-1 
   [2XIsOMEquiv[102X 6.4-3 
-  [2XIsReal[102X, for IsHyperplaneArrangement 2.1-7 
+  [2XIsReal[102X, for IsHyperplaneArrangement 2.2-1 
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 4.1-2 
       for IsOrientedMatroid 4.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.1-6 
@@ -46,11 +52,14 @@
       for IsInt, IsInt, IsList 6.5-3 
       for IsList 6.5-1 
   [2XRoots[102X, for IsHyperplaneArrangement 2.1-2 
-  [2XSalvettiComplex[102X, for IsHyperplaneArrangement 2.1-8 
+  [2XSalvettiComplex[102X, for IsHyperplaneArrangement 2.1-7 
       for IsOrientedMatroid 6.1-8 
   [2XSeparatingSet[102X 6.4-4 
   [2XSsS3[102X 7.1-2 
   [2XTopeGraph[102X, for IsOrientedMatroid 6.1-6 
+  [2XTopePoset[102X, for IsOrientedMatroid, IsList 8.1-1 
+  [2XTPBaseTope[102X, for IsTopePoset 8.2-2 
+  [2XTPGroundSet[102X, for IsTopePoset 8.2-1 
   
   
   -------------------------------------------------------

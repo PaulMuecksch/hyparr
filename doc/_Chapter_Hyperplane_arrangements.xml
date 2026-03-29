@@ -8,9 +8,8 @@
  Let <Math>\mathbb{K}</Math> be a field.
  A hyperplane arrangment is a finite set <Math>\mathcal{A} = \{H_1,\ldots,H_n\}</Math>
  of hyperplanes in a finite dimensional <Math>\mathbb{K}</Math>-vector space <Math>V</Math>.  
-<Section Label="Chapter_Hyperplane_arrangements_Section_Attributes">
-<Heading>Attributes</Heading>
-
+<Section Label="Chapter_Hyperplane_arrangements_Section_Attributes_of_arrangements">
+<Heading>Attributes of arrangements</Heading>
 
 <ManSection>
   <Attr Arg="A" Name="Dimension" Label="for IsHyperplaneArrangement"/>
@@ -45,8 +44,8 @@
  <Description>
  Computes the intersection lattice of the hyperplane arrangement <M>\mathcal{A}</M>.
 <P/>
- The lattice is represented level-by-level.  The entry <M>L[k]</M>
- contains all intersections of rank <M>k</M>.
+ The ground set of the lattice is represented level-by-level.  
+ The entry <M>L[k]</M> contains all intersections of rank <M>k</M>.
 <P/>
  Each lattice element is stored as a list of indices referring to
  hyperplanes in <C>Roots(A)</C>.
@@ -92,7 +91,7 @@ t^3-6*t^2+11*t-6
 </Returns>
  <Description>
  Returns <E>exponents</E> of the arrangement <Math>\mathcal{A}</Math> if
- all the characteristic polynomial factors over the integers.
+ the characteristic polynomial factors over the integers.
 <Example><![CDATA[
 gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
 <HyperplaneArrangement: 3 hyperplanes in 2-space>
@@ -131,17 +130,6 @@ gap> MSetInvL(A);
 
 
 <ManSection>
-  <Prop Arg="A" Name="IsReal" Label="for IsHyperplaneArrangement"/>
- <Returns>true or false.
-</Returns>
- <Description>
- Determines, if the hyperplane arrangement is defined over the reals, i.e.,
- if the entries of the defining linear forms are real.
- </Description>
-</ManSection>
-
-
-<ManSection>
   <Attr Arg="A" Name="SalvettiComplex" Label="for IsHyperplaneArrangement"/>
  <Returns>FacePoset
 </Returns>
@@ -156,6 +144,33 @@ gap> SalvettiComplex(A);
 ]]></Example>
 
 
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Properties_of_arrangements">
+<Heading>Properties of arrangements</Heading>
+
+<ManSection>
+  <Prop Arg="A" Name="IsReal" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if the hyperplane arrangement is defined over the reals, i.e.,
+ if the entries of the defining linear forms are real.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="A" Name="HArrIsIrreducible" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if the hyperplane arrangement is irreducible.
  </Description>
 </ManSection>
 
@@ -211,7 +226,7 @@ gap> SalvettiComplex(A);
  <Returns>a graph
 </Returns>
  <Description>
- Computes the directed graph of the hasse diagram of L.
+ Computes the directed graph of the Hasse diagram of L.
  </Description>
 </ManSection>
 
@@ -221,8 +236,44 @@ gap> SalvettiComplex(A);
  <Returns>a group
 </Returns>
  <Description>
- Computes the Autmorphisgroup of L
+ Computes the autmorphism group of L
  as a subgroup of <C>Sym(GLAtoms(L))</C>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLMoebius" Label="for IsGeomLattice"/>
+ <Returns>function
+</Returns>
+ <Description>
+ Returns the Moebius function of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLCharPoly" Label="for IsGeomLattice"/>
+ <Returns>function
+</Returns>
+ <Description>
+  Computes the characteristic polynomial of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Properties_of_geometric_lattices">
+<Heading>Properties of geometric lattices</Heading>
+
+<ManSection>
+  <Prop Arg="L" Name="GLIsIrreducible" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is irreducible.
  </Description>
 </ManSection>
 
@@ -309,7 +360,7 @@ gap> B:=Essentialization(A); Roots(B);
 <A>ip</A> intersection points are drawn,
 </Item>
 <Item>
-<A>Hind</A> indeces are added,
+<A>Hind</A> labels for the hyperplanes are added,
 </Item>
 <Item>
 <A>disthv</A> a vector giving the normal of the plane whith which to intersect <A>A</A>,
@@ -371,12 +422,12 @@ gap> Print(DrawLatex3Arr(A,1/2,true,true,[1,1,1],[1,2]));
 
 
 <ManSection>
-  <Func Arg="A" Name="HArrResHind" />
+  <Func Arg="A, i" Name="HArrResHind" />
  <Returns>A hyperplane arrangement.
 </Returns>
  <Description>
  Computes the <E>restriction</E> of the arrangement <A>A</A> to the
-  <A>k</A>-th hyperplane of <C>Roots(A)</C>.
+  <A>i</A>-th hyperplane of <C>Roots(A)</C>.
  </Description>
 </ManSection>
 

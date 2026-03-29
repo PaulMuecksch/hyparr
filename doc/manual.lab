@@ -3,11 +3,13 @@
 \makelabel{hyparr:Table of Contents}{}{X8537FEB07AF2BEC8}
 \makelabel{hyparr:Introduction}{1}{X7DFB63A97E67C0A1}
 \makelabel{hyparr:Hyperplane arrangements}{2}{X7EF7AC44814961EC}
-\makelabel{hyparr:Attributes}{2.1}{X7C701DBF7BAE649A}
-\makelabel{hyparr:Attributes of geometric lattices}{2.2}{X79DB21318677B969}
-\makelabel{hyparr:Operations}{2.3}{X7DE8E16C7C2D387B}
-\makelabel{hyparr:Global methods}{2.4}{X80841F8D80722081}
-\makelabel{hyparr:Constructors}{2.5}{X86EC0F0A78ECBC10}
+\makelabel{hyparr:Attributes of arrangements}{2.1}{X8278B3F07C13FCE8}
+\makelabel{hyparr:Properties of arrangements}{2.2}{X7F6F9A097C0400D3}
+\makelabel{hyparr:Attributes of geometric lattices}{2.3}{X79DB21318677B969}
+\makelabel{hyparr:Properties of geometric lattices}{2.4}{X8056EC0986604552}
+\makelabel{hyparr:Operations}{2.5}{X7DE8E16C7C2D387B}
+\makelabel{hyparr:Global methods}{2.6}{X80841F8D80722081}
+\makelabel{hyparr:Constructors}{2.7}{X86EC0F0A78ECBC10}
 \makelabel{hyparr:Free arrangements}{3}{X84CDDA0382B013CF}
 \makelabel{hyparr:Freeness properties}{3.1}{X82FF317F7EFD52AF}
 \makelabel{hyparr:Milnor fibers}{4}{X80236F007DAFE4C2}
@@ -22,6 +24,9 @@
 \makelabel{hyparr:Constructors}{6.5}{X86EC0F0A78ECBC10}
 \makelabel{hyparr:Special arrangements}{7}{X7C9F5AAF83133F9A}
 \makelabel{hyparr:Global methods}{7.1}{X80841F8D80722081}
+\makelabel{hyparr:Chamber and tope posets}{8}{X7A142C9D82C31E24}
+\makelabel{hyparr:Operation}{8.1}{X835880B9800BD2D8}
+\makelabel{hyparr:Attributes}{8.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:References}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
@@ -31,20 +36,24 @@
 \makelabel{hyparr:CharPoly for IsHyperplaneArrangement}{2.1.4}{X8426CC4D7A8491A5}
 \makelabel{hyparr:ExpArr for IsHyperplaneArrangement}{2.1.5}{X83DFD7407D949CD9}
 \makelabel{hyparr:MSetInvL for IsHyperplaneArrangement}{2.1.6}{X852CC1A8795FCD15}
-\makelabel{hyparr:IsReal for IsHyperplaneArrangement}{2.1.7}{X7E907A097A17195F}
-\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement}{2.1.8}{X8333113D7A7A3A91}
-\makelabel{hyparr:GLGroundSet for IsGeomLattice}{2.2.1}{X83B4DD0E8325942E}
-\makelabel{hyparr:GLAtoms for IsGeomLattice}{2.2.2}{X7A01B73E7BE22EDB}
-\makelabel{hyparr:GLRank for IsGeomLattice}{2.2.3}{X83CB7161847F6FF7}
-\makelabel{hyparr:GLkFlats for IsGeomLattice}{2.2.4}{X79CA2563782654EE}
-\makelabel{hyparr:GLGraph for IsGeomLattice}{2.2.5}{X803CD5A07FA65A9C}
-\makelabel{hyparr:GLAutGroup for IsGeomLattice}{2.2.6}{X8120B26884492B63}
-\makelabel{hyparr:IsLEquiv for IsHyperplaneArrangement,IsHyperplaneArrangement}{2.3.1}{X8367DC267DCC0635}
-\makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.3.2}{X7BD35FA07804BB70}
-\makelabel{hyparr:DrawLatex3Arr}{2.4.1}{X82C8EAF88340865B}
-\makelabel{hyparr:HArrResHind}{2.4.2}{X7CC338E67CE223FE}
-\makelabel{hyparr:HArrResX}{2.4.3}{X784AA86286AA9DD8}
-\makelabel{hyparr:HyperplaneArrangement for IsList}{2.5.1}{X860548D886CE5BA2}
+\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement}{2.1.7}{X8333113D7A7A3A91}
+\makelabel{hyparr:IsReal for IsHyperplaneArrangement}{2.2.1}{X7E907A097A17195F}
+\makelabel{hyparr:HArrIsIrreducible for IsHyperplaneArrangement}{2.2.2}{X85260BFF870DE234}
+\makelabel{hyparr:GLGroundSet for IsGeomLattice}{2.3.1}{X83B4DD0E8325942E}
+\makelabel{hyparr:GLAtoms for IsGeomLattice}{2.3.2}{X7A01B73E7BE22EDB}
+\makelabel{hyparr:GLRank for IsGeomLattice}{2.3.3}{X83CB7161847F6FF7}
+\makelabel{hyparr:GLkFlats for IsGeomLattice}{2.3.4}{X79CA2563782654EE}
+\makelabel{hyparr:GLGraph for IsGeomLattice}{2.3.5}{X803CD5A07FA65A9C}
+\makelabel{hyparr:GLAutGroup for IsGeomLattice}{2.3.6}{X8120B26884492B63}
+\makelabel{hyparr:GLMoebius for IsGeomLattice}{2.3.7}{X798F89EB80281979}
+\makelabel{hyparr:GLCharPoly for IsGeomLattice}{2.3.8}{X7C81758087597A80}
+\makelabel{hyparr:GLIsIrreducible for IsGeomLattice}{2.4.1}{X7C4806937CF2DE83}
+\makelabel{hyparr:IsLEquiv for IsHyperplaneArrangement,IsHyperplaneArrangement}{2.5.1}{X8367DC267DCC0635}
+\makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.5.2}{X7BD35FA07804BB70}
+\makelabel{hyparr:DrawLatex3Arr}{2.6.1}{X82C8EAF88340865B}
+\makelabel{hyparr:HArrResHind}{2.6.2}{X7CC338E67CE223FE}
+\makelabel{hyparr:HArrResX}{2.6.3}{X784AA86286AA9DD8}
+\makelabel{hyparr:HyperplaneArrangement for IsList}{2.7.1}{X860548D886CE5BA2}
 \makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{3.1.1}{X80F4D6247CAA1BDA}
 \makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{3.1.2}{X85DAC6FC78DDED6D}
 \makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{4.1.1}{X794B90A67B153E6F}
@@ -64,7 +73,9 @@
 \makelabel{hyparr:OMChirotope for IsOrientedMatroid}{6.1.11}{X854947857F5E5D29}
 \makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{6.1.12}{X7EE8B82D792A4A64}
 \makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{6.2.1}{X86B70496781D3884}
+\makelabel{hyparr:HasSimpleTriangle for IsOrientedMatroid}{6.2.2}{X80F069657B2045C0}
 \makelabel{hyparr:IsLEquiv for IsOrientedMatroid,IsOrientedMatroid}{6.3.1}{X7EE74EA57A779612}
+\makelabel{hyparr:HasSimpleSimplexRk for IsOrientedMatroid, IsInt}{6.3.2}{X81DBFBF67AC497C4}
 \makelabel{hyparr:OMOperation}{6.4.1}{X7A515BDC8582FFE6}
 \makelabel{hyparr:OrderCovec}{6.4.2}{X801F6A9B7A0A53F5}
 \makelabel{hyparr:IsOMEquiv}{6.4.3}{X80CB9A9C8135A314}
@@ -74,3 +85,6 @@
 \makelabel{hyparr:OrientedMatroid for IsInt, IsInt, IsList}{6.5.3}{X80B0F8178177A60D}
 \makelabel{hyparr:AGpql}{7.1.1}{X858205A37B7EB5FA}
 \makelabel{hyparr:SsS3}{7.1.2}{X81AD6CA97F71ED33}
+\makelabel{hyparr:TopePoset for IsOrientedMatroid, IsList}{8.1.1}{X804189147ADFB6A2}
+\makelabel{hyparr:TPGroundSet for IsTopePoset}{8.2.1}{X81854C4D816A501A}
+\makelabel{hyparr:TPBaseTope for IsTopePoset}{8.2.2}{X82CEA0EB7B0AF294}

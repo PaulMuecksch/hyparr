@@ -5,9 +5,9 @@
 <Heading>Oriented Matroids</Heading>
 
 <P/>
- Oriented matroids are a abstraction of real hyperplane arrangements.
+ Oriented matroids are abstractions of real hyperplane arrangements.
  The following describes functions to handle oriented matroids and compute associated cell complexes
- and invariants. See <Cite Key="BLSWZ1999_OrientedMatroids"/>
+ and invariants. See <Cite Key="BLSWZ1999_OrientedMatroids"/>.
 <Section Label="Chapter_Oriented_Matroids_Section_Attributes">
 <Heading>Attributes</Heading>
 
@@ -283,13 +283,27 @@ gap> FPGroundSet(S);
  <Returns>true or false
 </Returns>
  <Description>
- Returns whether the oriented matroid OM is linear.
+ Returns whether the oriented matroid <A>OM</A> is linear.
  This is the case if the internal component <C>OM!.lforms</C> is bound.
 <Example><![CDATA[
 gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
 <OrientedMatroid: 6 elements, rank 3>
 gap> OMIsLinear(OM);
 true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="OM" Name="HasSimpleTriangle" Label="for IsOrientedMatroid"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+   The same as <C>HasSimpSimplexRk(OM,3)</C>.
+<Example><![CDATA[
 ]]></Example>
 
 
@@ -321,6 +335,25 @@ gap> O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);
 <OrientedMatroid: 4 elements, rank 3>
 gap> IsLEquiv(O1,O2);
 false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="OM, k" Name="HasSimpleSimplexRk" Label="for IsOrientedMatroid, IsInt"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+ Returns whether the oriented matroid <A>OM</A>
+ has a localiazion of rank <A>k</A> with a simple Simplex,
+ i.e. such that the localizations at its vertices are boolean.
+ If this is true for <Math>k \geq 3</Math> then its Salvetti complex can not be <Math>K(\pi,1)</Math>.
+<P/>
+<Example><![CDATA[
+
 ]]></Example>
 
 

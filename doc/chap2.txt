@@ -6,7 +6,7 @@
   [23X\mathbb{K}[123X-vector space [23XV[123X.[133X
   
   
-  [1X2.1 [33X[0;0YAttributes[133X[101X
+  [1X2.1 [33X[0;0YAttributes of arrangements[133X[101X
   
   [1X2.1-1 Dimension[101X
   
@@ -37,8 +37,8 @@
   
   [33X[0;0YComputes the intersection lattice of the hyperplane arrangement [22XmathcalA[122X.[133X
   
-  [33X[0;0YThe  lattice  is  represented  level-by-level.  The  entry [22XL[k][122X contains all
-  intersections of rank [22Xk[122X.[133X
+  [33X[0;0YThe  ground set of the lattice is represented level-by-level. The entry [22XL[k][122X
+  contains all intersections of rank [22Xk[122X.[133X
   
   [33X[0;0YEach lattice element is stored as a list of indices referring to hyperplanes
   in [10XRoots(A)[110X.[133X
@@ -75,7 +75,7 @@
   [33X[1;0Y[29X[2XExpArr[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers or fail[133X
   
-  [33X[0;0YReturns  [13Xexponents[113X  of the arrangement [23X\mathcal{A}[123X if all the characteristic
+  [33X[0;0YReturns  [13Xexponents[113X  of  the  arrangement  [23X\mathcal{A}[123X  if the characteristic
   polynomial factors over the integers.[133X
   
   [4X[32X  Example  [32X[104X
@@ -106,15 +106,7 @@
     [4X[28X[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ][128X[104X
   [4X[32X[104X
   
-  [1X2.1-7 IsReal[101X
-  
-  [33X[1;0Y[29X[2XIsReal[102X( [3XA[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
-  
-  [33X[0;0YDetermines,  if  the hyperplane arrangement is defined over the reals, i.e.,
-  if the entries of the defining linear forms are real.[133X
-  
-  [1X2.1-8 SalvettiComplex[101X
+  [1X2.1-7 SalvettiComplex[101X
   
   [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YFacePoset[133X
@@ -130,54 +122,96 @@
   [4X[32X[104X
   
   
-  [1X2.2 [33X[0;0YAttributes of geometric lattices[133X[101X
+  [1X2.2 [33X[0;0YProperties of arrangements[133X[101X
   
-  [1X2.2-1 GLGroundSet[101X
+  [1X2.2-1 IsReal[101X
+  
+  [33X[1;0Y[29X[2XIsReal[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines,  if  the hyperplane arrangement is defined over the reals, i.e.,
+  if the entries of the defining linear forms are real.[133X
+  
+  [1X2.2-2 HArrIsIrreducible[101X
+  
+  [33X[1;0Y[29X[2XHArrIsIrreducible[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines, if the hyperplane arrangement is irreducible.[133X
+  
+  
+  [1X2.3 [33X[0;0YAttributes of geometric lattices[133X[101X
+  
+  [1X2.3-1 GLGroundSet[101X
   
   [33X[1;0Y[29X[2XGLGroundSet[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist of lists[133X
   
   [33X[0;0YReturns the ground set of the geometric lattice [3XL[103X.[133X
   
-  [1X2.2-2 GLAtoms[101X
+  [1X2.3-2 GLAtoms[101X
   
   [33X[1;0Y[29X[2XGLAtoms[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist[133X
   
   [33X[0;0YReturns the set of atoms of [3XL[103X.[133X
   
-  [1X2.2-3 GLRank[101X
+  [1X2.3-3 GLRank[101X
   
   [33X[1;0Y[29X[2XGLRank[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya non-negative integer[133X
   
   [33X[0;0YReturns the rank of [3XL[103X.[133X
   
-  [1X2.2-4 GLkFlats[101X
+  [1X2.3-4 GLkFlats[101X
   
   [33X[1;0Y[29X[2XGLkFlats[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya function[133X
   
   [33X[0;0YReturns a function extracting the flats of rank [23Xk[123X in [3XL[103X.[133X
   
-  [1X2.2-5 GLGraph[101X
+  [1X2.3-5 GLGraph[101X
   
   [33X[1;0Y[29X[2XGLGraph[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya graph[133X
   
-  [33X[0;0YComputes the directed graph of the hasse diagram of L.[133X
+  [33X[0;0YComputes the directed graph of the Hasse diagram of L.[133X
   
-  [1X2.2-6 GLAutGroup[101X
+  [1X2.3-6 GLAutGroup[101X
   
   [33X[1;0Y[29X[2XGLAutGroup[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group[133X
   
-  [33X[0;0YComputes the Autmorphisgroup of L as a subgroup of [10XSym(GLAtoms(L))[110X.[133X
+  [33X[0;0YComputes the autmorphism group of L as a subgroup of [10XSym(GLAtoms(L))[110X.[133X
+  
+  [1X2.3-7 GLMoebius[101X
+  
+  [33X[1;0Y[29X[2XGLMoebius[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yfunction[133X
+  
+  [33X[0;0YReturns the Moebius function of [3XL[103X.[133X
+  
+  [1X2.3-8 GLCharPoly[101X
+  
+  [33X[1;0Y[29X[2XGLCharPoly[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yfunction[133X
+  
+  [33X[0;0YComputes the characteristic polynomial of [3XL[103X.[133X
   
   
-  [1X2.3 [33X[0;0YOperations[133X[101X
+  [1X2.4 [33X[0;0YProperties of geometric lattices[133X[101X
   
-  [1X2.3-1 IsLEquiv[101X
+  [1X2.4-1 GLIsIrreducible[101X
+  
+  [33X[1;0Y[29X[2XGLIsIrreducible[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines, if L is irreducible.[133X
+  
+  
+  [1X2.5 [33X[0;0YOperations[133X[101X
+  
+  [1X2.5-1 IsLEquiv[101X
   
   [33X[1;0Y[29X[2XIsLEquiv[102X( [3XA[103X, [3XB[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
@@ -198,7 +232,7 @@
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
-  [1X2.3-2 Essentialization[101X
+  [1X2.5-2 Essentialization[101X
   
   [33X[1;0Y[29X[2XEssentialization[102X( [3XA[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -218,9 +252,9 @@
   [4X[32X[104X
   
   
-  [1X2.4 [33X[0;0YGlobal methods[133X[101X
+  [1X2.6 [33X[0;0YGlobal methods[133X[101X
   
-  [1X2.4-1 DrawLatex3Arr[101X
+  [1X2.6-1 DrawLatex3Arr[101X
   
   [33X[1;0Y[29X[2XDrawLatex3Arr[102X( [3XA[103X[, [3Xps[103X[, [3Xip[103X[, [3XHind[103X[, [3Xdisthv[103X[, [3XMarkHs[103X]]]]] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA string.[133X
@@ -235,7 +269,7 @@
   
   [30X    [33X[0;6Y[3Xip[103X intersection points are drawn,[133X
   
-  [30X    [33X[0;6Y[3XHind[103X indeces are added,[133X
+  [30X    [33X[0;6Y[3XHind[103X labels for the hyperplanes are added,[133X
   
   [30X    [33X[0;6Y[3Xdisthv[103X  a  vector  giving  the  normal  of  the  plane  whith which to
         intersect [3XA[103X,[133X
@@ -284,15 +318,15 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X2.4-2 HArrResHind[101X
+  [1X2.6-2 HArrResHind[101X
   
-  [33X[1;0Y[29X[2XHArrResHind[102X( [3XA[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XHArrResHind[102X( [3XA[103X, [3Xi[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
   
-  [33X[0;0YComputes  the  [13Xrestriction[113X  of  the  arrangement [3XA[103X to the [3Xk[103X-th hyperplane of
+  [33X[0;0YComputes  the  [13Xrestriction[113X  of  the  arrangement [3XA[103X to the [3Xi[103X-th hyperplane of
   [10XRoots(A)[110X.[133X
   
-  [1X2.4-3 HArrResX[101X
+  [1X2.6-3 HArrResX[101X
   
   [33X[1;0Y[29X[2XHArrResX[102X( [3XA[103X, [3XS[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -301,9 +335,9 @@
   vectors in [10XS[110X.[133X
   
   
-  [1X2.5 [33X[0;0YConstructors[133X[101X
+  [1X2.7 [33X[0;0YConstructors[133X[101X
   
-  [1X2.5-1 HyperplaneArrangement[101X
+  [1X2.7-1 HyperplaneArrangement[101X
   
   [33X[1;0Y[29X[2XHyperplaneArrangement[102X( [3Xr[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement[133X

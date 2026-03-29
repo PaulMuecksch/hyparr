@@ -1,9 +1,9 @@
   
   [1X6 [33X[0;0YOriented Matroids[133X[101X
   
-  [33X[0;0YOriented  matroids  are  a  abstraction of real hyperplane arrangements. The
+  [33X[0;0YOriented  matroids  are  abstractions  of  real hyperplane arrangements. The
   following  describes  functions  to  handle  oriented  matroids  and compute
-  associated cell complexes and invariants. See [BLVS+99][133X
+  associated cell complexes and invariants. See [BLVS+99].[133X
   
   
   [1X6.1 [33X[0;0YAttributes[133X[101X
@@ -235,7 +235,7 @@
   [33X[1;0Y[29X[2XOMIsLinear[102X( [3XOM[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
-  [33X[0;0YReturns  whether  the oriented matroid OM is linear. This is the case if the
+  [33X[0;0YReturns  whether  the oriented matroid [3XOM[103X is linear. This is the case if the
   internal component [10XOM!.lforms[110X is bound.[133X
   
   [4X[32X  Example  [32X[104X
@@ -243,6 +243,16 @@
     [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
     [4X[25Xgap>[125X [27XOMIsLinear(OM);[127X[104X
     [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-2 HasSimpleTriangle[101X
+  
+  [33X[1;0Y[29X[2XHasSimpleTriangle[102X( [3XOM[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YThe same as [10XHasSimpSimplexRk(OM,3)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
   [4X[32X[104X
   
   
@@ -267,6 +277,20 @@
     [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
     [4X[25Xgap>[125X [27XIsLEquiv(O1,O2);[127X[104X
     [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X6.3-2 HasSimpleSimplexRk[101X
+  
+  [33X[1;0Y[29X[2XHasSimpleSimplexRk[102X( [3XOM[103X, [3Xk[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YReturns  whether  the oriented matroid [3XOM[103X has a localiazion of rank [3Xk[103X with a
+  simple  Simplex,  i.e.  such  that  the  localizations  at  its vertices are
+  boolean.  If  this is true for [23Xk \geq 3[123X then its Salvetti complex can not be
+  [23XK(\pi,1)[123X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   

@@ -386,6 +386,110 @@ local expA;;
     return expA;;
 end);
 
+
+InstallMethod(HArrIsIrreducible,
+    [IsHyperplaneArrangement],
+function(A)
+local expt;;
+    expt := List(facQ(CharPoly(A)),x->-Value(x,0));;
+    if Length(Positions(expt,1))>1 or (0 in expt) then
+        return false;
+    fi;
+    return true;
+end);
+
+####################################################################################################
+## The Moebius-Function for a Lattice L of the Arrangement A
+####################################################################################################
+
+InstallMethod(GLMoebius,
+    [IsGeomLattice],
+function(L)
+ 	return function(m,i)
+		local m2,j,I, gset;
+			gset := GLGroundSet(L);;
+			if not m in gset[i] then
+				return fail;
+			fi;
+			if i=0 then
+				return 1;
+			fi;
+			if i=1 then
+				return -1;
+			fi;
+			I:=[];
+			for j in Reversed([1..i-1]) do
+				for m2 in gset[j] do
+					if IsSubset(m,m2) then
+						Add(I,[m2,j]);
+					fi;
+				od;
+			od;
+			return -1-Sum(List(I,x->GLMoebius(L)(x[1],x[2])));
+		end;
+end);
+
+####################################################################################################
+## Direkt Computation of the Characteristic Polynomial 
+## of a Lattice L
+
+InstallMethod(GLCharPoly,
+	[IsGeomLattice],
+function(L)
+local m,g,t,i,j,gset;
+	if IsBound(L!.charpoly) then
+		return L!.charpoly;
+	fi;;
+	gset := GLGroundSet(L);;
+	t:=X(Rationals,"t");
+	m:=GLMoebius(L);
+	g:=t^(Length(gset));
+	for i in [1..Length(gset)] do
+		for j in [1..Length(gset[i])] do
+			g:=g+t^(Length(gset)-i)*m(gset[i][j],i);
+		od;
+	od;
+	L!.charpoly := g;;
+	return L!.charpoly;;
+end);
+
+InstallMethod(GLIsIrreducible,
+    [IsGeomLattice],
+function(L)
+local expt;;
+    expt := List(facQ(GLCharPoly(L)),x->-Value(x,0));;
+    if Length(Positions(expt,1))>1 or (0 in expt) then
+        return false;
+    fi;
+    return true;
+end);
+
+####################################################################################################
+InstallMethod(GLLocX, 
+	[IsGeomLattice, IsList, IsInt],
+function(L,mX,k)
+local gset, type, gsetLocX, Fi;
+	gset:=GLGroundSet(L);;
+	if not(mX in ForAny(GLkFlats(L)(k))) then
+		return fail;
+	fi;;
+	gsetLocX := List([1..k-1],
+		i->gset[i]{Positions(List(gset[i],x->IsSubset(mX,x)),true)});
+	gsetLocX := Concatenation(gsetLocX,[mX]);;
+
+	type := NewType(GeomLatticeFamily,
+                    IsGeomLatticeRep);
+
+    return Objectify(type,
+        rec(
+            grGroundSet := gsetLocX,
+			rank := Length(Ls),
+			atoms := Concatenation(Ls[1])
+        )
+    );
+
+end);;
+
 ####################################################################################################
 # Global auxillary functions
 ####################################################################################################
@@ -495,6 +599,8 @@ local LGraphA,LGraphB;;
     LGraphB := ShallowCopy(GLGraph(IntersectionLattice(B)));
     return IsIsomorphicGraph(LGraphA,LGraphB);
 end);
+
+
 
 ############################################################
 ## the wedge-product

@@ -36,16 +36,13 @@ DeclareRepresentation(
 DeclareRepresentation(
     "IsGeomLatticeRep",
     IsGeomLattice,
-    ["grGroundSet", "rank", "kFlats", "atoms"]
+    ["grGroundSet", "rank", "kFlats", "atoms", "charpoly", "moebius"]
 );
 
 #################################
 ##
-#! @Section Attributes
+#! @Section Attributes of arrangements
 ##
-#################################
-
-#! @Subsection Attributes of arrangements
 #################################
 
 #! @Arguments A
@@ -71,8 +68,8 @@ DeclareAttribute("Roots", IsHyperplaneArrangement);
 #! @Description
 #! Computes the intersection lattice of the hyperplane arrangement <M>\mathcal{A}</M>.
 #!
-#! The lattice is represented level-by-level.  The entry <M>L[k]</M>
-#! contains all intersections of rank <M>k</M>.
+#! The ground set of the lattice is represented level-by-level.  
+#! The entry <M>L[k]</M> contains all intersections of rank <M>k</M>.
 #!
 #! Each lattice element is stored as a list of indices referring to
 #! hyperplanes in <C>Roots(A)</C>.
@@ -107,7 +104,7 @@ DeclareAttribute("CharPoly", IsHyperplaneArrangement);
 #! @Returns a list of integers or fail
 #! @Description
 #! Returns <E>exponents</E> of the arrangement $\mathcal{A}$ if
-#! all the characteristic polynomial factors over the integers.
+#! the characteristic polynomial factors over the integers.
 #! @BeginExampleSession
 #! gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
 #! <HyperplaneArrangement: 3 hyperplanes in 2-space>
@@ -137,13 +134,6 @@ DeclareAttribute("ExpArr", IsHyperplaneArrangement);
 DeclareAttribute("MSetInvL", IsHyperplaneArrangement );
 
 #! @Arguments A
-#! @Returns true or false.
-#! @Description
-#! Determines, if the hyperplane arrangement is defined over the reals, i.e.,
-#! if the entries of the defining linear forms are real.
-DeclareProperty("IsReal", IsHyperplaneArrangement );
-
-#! @Arguments A
 #! @Returns FacePoset
 #! @Description
 #! Constructs the Salvetti Complex <Cite Key="Salvetti1987_SalCpx"/>.
@@ -157,7 +147,32 @@ DeclareProperty("IsReal", IsHyperplaneArrangement );
 DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 
+#################################
+##
+#! @Section Properties of arrangements
+##
+#################################
+
+
+#! @Arguments A
+#! @Returns true or false.
+#! @Description
+#! Determines, if the hyperplane arrangement is defined over the reals, i.e.,
+#! if the entries of the defining linear forms are real.
+DeclareProperty("IsReal", IsHyperplaneArrangement );
+
+
+#! @Arguments A
+#! @Returns true or false.
+#! @Description
+#! Determines, if the hyperplane arrangement is irreducible.
+DeclareProperty("HArrIsIrreducible", IsHyperplaneArrangement );
+
+
+#################################
+##
 #! @Section Attributes of geometric lattices
+##
 #################################
 
 #! @Arguments L
@@ -187,16 +202,43 @@ DeclareAttribute("GLkFlats", IsGeomLattice);
 #! @Arguments L
 #! @Returns a graph
 #! @Description
-#! Computes the directed graph of the hasse diagram of L.
+#! Computes the directed graph of the Hasse diagram of L.
 DeclareAttribute("GLGraph", IsGeomLattice);;
 
 #! @Arguments L
 #! @Returns a group
 #! @Description
-#! Computes the Autmorphisgroup of L
+#! Computes the autmorphism group of L
 #! as a subgroup of <C>Sym(GLAtoms(L))</C>.
 DeclareAttribute("GLAutGroup", IsGeomLattice);;
 
+#! @Arguments L
+#! @Returns function
+#! @Description
+#! Returns the Moebius function of <A>L</A>.
+DeclareAttribute("GLMoebius", IsGeomLattice);
+
+
+#! @Arguments L
+#! @Returns function
+#! @Description
+#!  Computes the characteristic polynomial of <A>L</A>.
+DeclareAttribute("GLCharPoly", IsGeomLattice);
+
+
+#################################
+##
+#! @Section Properties of geometric lattices
+##
+#################################
+
+
+
+#! @Arguments L
+#! @Returns true or false.
+#! @Description
+#! Determines, if L is irreducible.
+DeclareProperty("GLIsIrreducible", IsGeomLattice );
 
 #################################
 ##
@@ -243,6 +285,8 @@ DeclareOperation("IsLEquiv", [IsHyperplaneArrangement,IsHyperplaneArrangement]);
 #! @EndExampleSession
 DeclareOperation( "Essentialization", [IsHyperplaneArrangement]);
 
+DeclareOperation( "GLLocX", [IsGeomLattice, IsList, IsInt]);;
+
 #################################
 ##
 #! @Section Global methods
@@ -276,7 +320,7 @@ DeclareGlobalFunction("FloatStringCutoff");
 #! The optional parameters are:
 #!  * <A>ps</A> a scaling factor,
 #!  * <A>ip</A> intersection points are drawn,
-#!  * <A>Hind</A> indeces are added,
+#!  * <A>Hind</A> labels for the hyperplanes are added,
 #!  * <A>disthv</A> a vector giving the normal of the plane whith which to intersect <A>A</A>,
 #!  * <A>MarkHs</A> a list of indices of hyperplanes of <A>A</A>, these are drawn in another color.
 #!
@@ -329,11 +373,11 @@ DeclareGlobalFunction("DrawLatex3Arr");
 
 DeclareGlobalFunction( "HArrResHvec" );
 
-#! @Arguments A
+#! @Arguments A, i
 #! @Returns A hyperplane arrangement.
 #! @Description
 #! Computes the <E>restriction</E> of the arrangement <A>A</A> to the
-#!  <A>k</A>-th hyperplane of <C>Roots(A)</C>.
+#!  <A>i</A>-th hyperplane of <C>Roots(A)</C>.
 DeclareGlobalFunction( "HArrResHind" );
 
 #! @Arguments A, S

@@ -30,31 +30,37 @@
   
   1 [33X[0;0YIntroduction[133X
   2 [33X[0;0YHyperplane arrangements[133X
-    2.1 [33X[0;0YAttributes[133X
+    2.1 [33X[0;0YAttributes of arrangements[133X
       2.1-1 Dimension
       2.1-2 Roots
       2.1-3 IntersectionLattice
       2.1-4 CharPoly
       2.1-5 ExpArr
       2.1-6 MSetInvL
-      2.1-7 IsReal
-      2.1-8 SalvettiComplex
-    2.2 [33X[0;0YAttributes of geometric lattices[133X
-      2.2-1 GLGroundSet
-      2.2-2 GLAtoms
-      2.2-3 GLRank
-      2.2-4 GLkFlats
-      2.2-5 GLGraph
-      2.2-6 GLAutGroup
-    2.3 [33X[0;0YOperations[133X
-      2.3-1 IsLEquiv
-      2.3-2 Essentialization
-    2.4 [33X[0;0YGlobal methods[133X
-      2.4-1 DrawLatex3Arr
-      2.4-2 HArrResHind
-      2.4-3 HArrResX
-    2.5 [33X[0;0YConstructors[133X
-      2.5-1 HyperplaneArrangement
+      2.1-7 SalvettiComplex
+    2.2 [33X[0;0YProperties of arrangements[133X
+      2.2-1 IsReal
+      2.2-2 HArrIsIrreducible
+    2.3 [33X[0;0YAttributes of geometric lattices[133X
+      2.3-1 GLGroundSet
+      2.3-2 GLAtoms
+      2.3-3 GLRank
+      2.3-4 GLkFlats
+      2.3-5 GLGraph
+      2.3-6 GLAutGroup
+      2.3-7 GLMoebius
+      2.3-8 GLCharPoly
+    2.4 [33X[0;0YProperties of geometric lattices[133X
+      2.4-1 GLIsIrreducible
+    2.5 [33X[0;0YOperations[133X
+      2.5-1 IsLEquiv
+      2.5-2 Essentialization
+    2.6 [33X[0;0YGlobal methods[133X
+      2.6-1 DrawLatex3Arr
+      2.6-2 HArrResHind
+      2.6-3 HArrResX
+    2.7 [33X[0;0YConstructors[133X
+      2.7-1 HyperplaneArrangement
   3 [33X[0;0YFree arrangements[133X
     3.1 [33X[0;0YFreeness properties[133X
       3.1-1 IsInductivelyFree
@@ -83,8 +89,10 @@
       6.1-12 OMRankFunction
     6.2 [33X[0;0YProperties[133X
       6.2-1 OMIsLinear
+      6.2-2 HasSimpleTriangle
     6.3 [33X[0;0YOperations[133X
       6.3-1 IsLEquiv
+      6.3-2 HasSimpleSimplexRk
     6.4 [33X[0;0YGlobal methods[133X
       6.4-1 OMOperation
       6.4-2 OrderCovec
@@ -98,6 +106,12 @@
     7.1 [33X[0;0YGlobal methods[133X
       7.1-1 AGpql
       7.1-2 SsS3
+  8 [33X[0;0YChamber and tope posets[133X
+    8.1 [33X[0;0YOperation[133X
+      8.1-1 TopePoset
+    8.2 [33X[0;0YAttributes[133X
+      8.2-1 TPGroundSet
+      8.2-2 TPBaseTope
   
   
   [32X
