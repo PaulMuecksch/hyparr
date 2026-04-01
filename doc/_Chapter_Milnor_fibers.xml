@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Milnor_fibers">
+<Heading>Milnor fibers</Heading>
+
+<P/>
+ The Milnor fiber is the typical fiber <M>f^{-1}(1)</M> of the Milnor fibration 
+ <Display>f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times, z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)</Display>
+ of the hyperplane arrangement <M>\mathcal{A}</M>, where <M>\alpha_H</M> are defining linear forms.
+<P/>
+ The following describes functions to construct a regular cell complex having the homotopy type of
+ the Milnor fiber from <Cite Key="MueYos25_MilnorOM"/> and thus enables computation of homotopy invaraints 
+ using e.g. the HAP package <Cite Key="GAP_HAP"/>.
+<Section Label="Chapter_Milnor_fibers_Section_Complexes">
+<Heading>Complexes</Heading>
+
+<ManSection>
+  <Attr Arg="OM" Name="MilnorFiberComplex" Label="for IsOrientedMatroid"/>
+ <Returns>FacePoset
+</Returns>
+ <Description>
+ Computes the face poset of the regular cell complex
+ of the combinatorial Milnor fiber of the oriented matroid <A>OM</A>. 
+<Example><![CDATA[
+gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);
+<OrientedMatroid: 3 elements, rank 2>
+gap> MCpx:=MilnorFiberComplex(O);
+<FacePoset of dimension 1 with f-vector [ 3, 6 ]>
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="MilnorFiberComplex" Label="for IsHyperplaneArrangement"/>
+ <Returns>FacePoset
+</Returns>
+ <Description>
+ Computes the face poset of the regular cell complex
+ having the homotopy type of Milnor fiber of the arrangement <A>A</A>. 
+<Example><![CDATA[
+gap> A:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> MCpx:=MilnorFiberComplex(A);
+<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="FP" Name="FPtoCWCpx" />
+ <Returns>HAP CW Complex
+</Returns>
+ <Description>
+ Converts a <B>HypArr</B> <C>FacePoset</C> into a <B>HAP</B> <C>RegularCWComplex</C>
+ for further computations of topological invariants.
+<Example><![CDATA[
+gap> A:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> MCpx:=MilnorFiberComplex(A);
+<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+gap> MCW := FPtoCWCpx(MCpx);
+Regular CW-complex of dimension 2
+gap> Homology(MCW,0);
+[ 0 ]
+gap> Homology(MCW,1);
+[ 0, 0, 0, 0, 0, 0, 0 ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

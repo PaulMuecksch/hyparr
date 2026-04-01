@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Introduction">
+<Heading>Introduction</Heading>
+
+<P/>
+ <B>HypArr</B> is a <B>GAP 4</B> package for computations with hyperplane arrangements (see <Cite Key="OrTer92_Arr"/>),
+ oriented matroids (see <Cite Key="BLSWZ1999_OrientedMatroids"/>), their combinatorial and topological invariants, in particular 
+ geometric lattices, face posets, Milnor fibers and complements.
+<P/>
+</Chapter>
+

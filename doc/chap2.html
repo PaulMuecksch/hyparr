@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (HypArr) - Chapter 2: Hyperplane arrangements</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2_mj.html">[MathJax on]</a></p>
+<p><a id="X7EF7AC44814961EC" name="X7EF7AC44814961EC"></a></p>
+<div class="ChapSects"><a href="chap2.html#X7EF7AC44814961EC">2 <span class="Heading">Hyperplane arrangements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X80F9235385C15A41">2.1 <span class="Heading">Construction of arrangements of hyperplanes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X860548D886CE5BA2">2.1-1 HyperplaneArrangement</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X8278B3F07C13FCE8">2.2 <span class="Heading">Attributes of arrangements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CCC1A2A7C3F2CC5">2.2-1 Dimension</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8419FA5F7A08DF56">2.2-2 Roots</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8555074B83058460">2.2-3 IntersectionLattice</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8426CC4D7A8491A5">2.2-4 CharPoly</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83DFD7407D949CD9">2.2-5 ExpArr</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X852CC1A8795FCD15">2.2-6 MSetInvL</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7F6F9A097C0400D3">2.3 <span class="Heading">Properties of arrangements</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E907A097A17195F">2.3-1 IsReal</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85260BFF870DE234">2.3-2 HArrIsIrreducible</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X804526007DD22027">2.3-3 HArrIsGeneric</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X79DB21318677B969">2.4 <span class="Heading">Attributes of geometric lattices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83B4DD0E8325942E">2.4-1 GLGroundSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7A01B73E7BE22EDB">2.4-2 GLAtoms</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83CB7161847F6FF7">2.4-3 GLRank</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X79CA2563782654EE">2.4-4 GLkFlats</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C9329388710966F">2.4-5 GLRankFunction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X803CD5A07FA65A9C">2.4-6 GLGraph</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8120B26884492B63">2.4-7 GLAutGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X798F89EB80281979">2.4-8 GLMoebius</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C81758087597A80">2.4-9 GLCharPoly</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X8056EC0986604552">2.5 <span class="Heading">Properties of geometric lattices</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C4806937CF2DE83">2.5-1 GLIsIrreducible</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X81BB82B28355CFA0">2.5-2 GLIsBoolean</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7F3537B47F5FD64C">2.5-3 GLIsGeneric</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7DE8E16C7C2D387B">2.6 <span class="Heading">Operations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8367DC267DCC0635">2.6-1 IsLEquiv</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7BD35FA07804BB70">2.6-2 Essentialization</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X80841F8D80722081">2.7 <span class="Heading">Global methods</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CC338E67CE223FE">2.7-1 HArrResHind</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X784AA86286AA9DD8">2.7-2 HArrResX</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X82C8EAF88340865B">2.7-3 DrawLatex3Arr</a></span>
+</div></div>
+</div>
+
+<h3>2 <span class="Heading">Hyperplane arrangements</span></h3>
+
+<p>Let <span class="Math">\mathbb{K}</span> be a field. A hyperplane arrangment is a finite set <span class="Math">\mathcal{A} = \{H_1,\ldots,H_n\}</span> of hyperplanes in a finite dimensional <span class="Math">\mathbb{K}</span>-vector space <span class="Math">V</span>.</p>
+
+<p><a id="X80F9235385C15A41" name="X80F9235385C15A41"></a></p>
+
+<h4>2.1 <span class="Heading">Construction of arrangements of hyperplanes</span></h4>
+
+<p><a id="X860548D886CE5BA2" name="X860548D886CE5BA2"></a></p>
+
+<h5>2.1-1 HyperplaneArrangement</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HyperplaneArrangement</code>( <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement</p>
+
+<p>Constructs a hyperplane arrangement from a list <var class="Arg">R</var> of vectors representing defining linear forms of hyperplanes.</p>
+
+<p>Each vector <span class="SimpleMath">r = [r_1,dots,r_n]</span> corresponds to the hyperplane</p>
+
+<p class="pcenter">
+     r_1 x_1 + \cdots + r_n x_n = 0.
+  </p>
+
+<p>The vectors must lie in the same vector space.</p>
+
+<p>Linearly dependent defining forms are removed automatically, so the resulting arrangement only stores pairwise linearly independent hyperplanes.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Roots(A);</span>
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]
+</pre></div>
+
+<p><a id="X8278B3F07C13FCE8" name="X8278B3F07C13FCE8"></a></p>
+
+<h4>2.2 <span class="Heading">Attributes of arrangements</span></h4>
+
+<p><a id="X7CCC1A2A7C3F2CC5" name="X7CCC1A2A7C3F2CC5"></a></p>
+
+<h5>2.2-1 Dimension</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Dimension</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A non-negative integer.</p>
+
+<p>Returns the dimension of the ambient vector space in which the hyperplane arrangement <var class="Arg">A</var> is defined.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0]]); Dimension(A);</span>
+&lt;HyperplaneArrangement: 2 hyperplanes in 3-space&gt;
+3
+</pre></div>
+
+<p><a id="X8419FA5F7A08DF56" name="X8419FA5F7A08DF56"></a></p>
+
+<h5>2.2-2 Roots</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Roots</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list of vectors.</p>
+
+<p>Returns the list of vectors giving defining linear forms (also called <em>roots</em>) of the hyperplanes in the arrangement <var class="Arg">A</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(3,3,2); Roots(A);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+[ [ 1, -E(3) ], [ 1, -E(3)^2 ], [ 1, -1 ] ]
+</pre></div>
+
+<p><a id="X8555074B83058460" name="X8555074B83058460"></a></p>
+
+<h5>2.2-3 IntersectionLattice</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IntersectionLattice</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: An object of type <code class="code">IsGeomLattice</code>.</p>
+
+<p>Computes the intersection lattice of the hyperplane arrangement <var class="Arg">A</var>.</p>
+
+<p>The ground set <code class="code">L</code> (see <code class="func">GLGroundSet</code> (<a href="chap2.html#X83B4DD0E8325942E"><span class="RefLink">2.4-1</span></a>)) of the lattice is represented level-by-level. The entry <code class="code">L[k]</code> contains all intersections of rank <span class="Math">k</span>.</p>
+
+<p>Each lattice element is stored as a list of indices referring to hyperplanes in <code class="code">Roots(A)</code>.</p>
+
+<p>For example, the list <code class="code">[1,3]</code> represents the intersection of the first and third hyperplane of the arrangement.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A); GLGroundSet(L);</span>
+&lt;Geometric lattice: 3 atoms, rank 3&gt;
+[ [ [ 1 ], [ 2 ], [ 3 ] ], 
+  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], 
+  [ [ 1, 2, 3 ] ] ]
+</pre></div>
+
+<p><a id="X8426CC4D7A8491A5" name="X8426CC4D7A8491A5"></a></p>
+
+<h5>2.2-4 CharPoly</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CharPoly</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a univariate polynomial with integral coefficients.</p>
+
+<p>Returns <span class="Math">\chi_{\mathcal{A}}</span> the <em>characterisitc polynomial</em> of the arrangement <var class="Arg">A</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CharPoly(A);</span>
+t^3-6*t^2+11*t-6
+</pre></div>
+
+<p><a id="X83DFD7407D949CD9" name="X83DFD7407D949CD9"></a></p>
+
+<h5>2.2-5 ExpArr</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ExpArr</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a list of integers, or fail</p>
+
+<p>Returns <em>exponents</em> of the arrangement <span class="Math">\mathcal{A}</span> if the characteristic polynomial factors over the integers.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ExpArr(A);</span>
+[ 1, 2 ]
+</pre></div>
+
+<p><a id="X852CC1A8795FCD15" name="X852CC1A8795FCD15"></a></p>
+
+<h5>2.2-6 MSetInvL</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MSetInvL</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: An object of type IsGeomLattice.</p>
+
+<p>Computes multiset invariants of the intersection lattice (see <code class="func">IntersectionLattice</code> (<a href="chap2.html#X8555074B83058460"><span class="RefLink">2.2-3</span></a>)) of the hyperplane arrangement <var class="Arg">A</var>.</p>
+
+<p>For each level of the lattice, the function records how many intersections occur with a given number of defining hyperplanes.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MSetInvL(A);</span>
+[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ]
+</pre></div>
+
+<p><a id="X7F6F9A097C0400D3" name="X7F6F9A097C0400D3"></a></p>
+
+<h4>2.3 <span class="Heading">Properties of arrangements</span></h4>
+
+<p><a id="X7E907A097A17195F" name="X7E907A097A17195F"></a></p>
+
+<h5>2.3-1 IsReal</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsReal</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if the hyperplane arrangement is defined over the reals, i.e., if the entries of the defining linear forms are real.</p>
+
+<p><a id="X85260BFF870DE234" name="X85260BFF870DE234"></a></p>
+
+<h5>2.3-2 HArrIsIrreducible</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsIrreducible</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if the hyperplane arrangement is irreducible.</p>
+
+<p><a id="X804526007DD22027" name="X804526007DD22027"></a></p>
+
+<h5>2.3-3 HArrIsGeneric</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsGeneric</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if the hyperplane arrangement is generic. See also <code class="func">GLIsGeneric</code> (<a href="chap2.html#X7F3537B47F5FD64C"><span class="RefLink">2.5-3</span></a>).</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsGeneric(A);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsGeneric(A);</span>
+true
+</pre></div>
+
+<p><a id="X79DB21318677B969" name="X79DB21318677B969"></a></p>
+
+<h4>2.4 <span class="Heading">Attributes of geometric lattices</span></h4>
+
+<p><a id="X83B4DD0E8325942E" name="X83B4DD0E8325942E"></a></p>
+
+<h5>2.4-1 GLGroundSet</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLGroundSet</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: list of lists</p>
+
+<p>Returns the ground set of the geometric lattice <var class="Arg">L</var>.</p>
+
+<p><a id="X7A01B73E7BE22EDB" name="X7A01B73E7BE22EDB"></a></p>
+
+<h5>2.4-2 GLAtoms</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLAtoms</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: list</p>
+
+<p>Returns the set of atoms of <var class="Arg">L</var>.</p>
+
+<p><a id="X83CB7161847F6FF7" name="X83CB7161847F6FF7"></a></p>
+
+<h5>2.4-3 GLRank</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLRank</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a non-negative integer</p>
+
+<p>Returns the rank of <var class="Arg">L</var>.</p>
+
+<p><a id="X79CA2563782654EE" name="X79CA2563782654EE"></a></p>
+
+<h5>2.4-4 GLkFlats</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLkFlats</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a function</p>
+
+<p>Returns a function extracting the flats of rank <span class="Math">k</span> in <var class="Arg">L</var>.</p>
+
+<p><a id="X7C9329388710966F" name="X7C9329388710966F"></a></p>
+
+<h5>2.4-5 GLRankFunction</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLRankFunction</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A function</p>
+
+<p>Returns the rank function of the geometric lattice <var class="Arg">L</var>.</p>
+
+<p><a id="X803CD5A07FA65A9C" name="X803CD5A07FA65A9C"></a></p>
+
+<h5>2.4-6 GLGraph</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLGraph</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a graph</p>
+
+<p>Constructs the directed graph of the Hasse diagram of L.</p>
+
+<p><a id="X8120B26884492B63" name="X8120B26884492B63"></a></p>
+
+<h5>2.4-7 GLAutGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLAutGroup</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a group</p>
+
+<p>Computes the autmorphism group of L as a subgroup of <code class="code">Sym(GLAtoms(L))</code>.</p>
+
+<p><a id="X798F89EB80281979" name="X798F89EB80281979"></a></p>
+
+<h5>2.4-8 GLMoebius</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLMoebius</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: function</p>
+
+<p>Returns the Moebius function of <var class="Arg">L</var>.</p>
+
+<p><a id="X7C81758087597A80" name="X7C81758087597A80"></a></p>
+
+<h5>2.4-9 GLCharPoly</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLCharPoly</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: function</p>
+
+<p>Computes the characteristic polynomial of <var class="Arg">L</var>.</p>
+
+<p><a id="X8056EC0986604552" name="X8056EC0986604552"></a></p>
+
+<h4>2.5 <span class="Heading">Properties of geometric lattices</span></h4>
+
+<p><a id="X7C4806937CF2DE83" name="X7C4806937CF2DE83"></a></p>
+
+<h5>2.5-1 GLIsIrreducible</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsIrreducible</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if L is irreducible.</p>
+
+<p><a id="X81BB82B28355CFA0" name="X81BB82B28355CFA0"></a></p>
+
+<h5>2.5-2 GLIsBoolean</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsBoolean</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if L is a boolean lattice.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));</span>
+&lt;Geometric lattice: 2 atoms, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsBoolean(L);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));</span>
+&lt;Geometric lattice: 3 atoms, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsBoolean(L);</span>
+false
+</pre></div>
+
+<p><a id="X7F3537B47F5FD64C" name="X7F3537B47F5FD64C"></a></p>
+
+<h5>2.5-3 GLIsGeneric</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsGeneric</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines, if L is generic, i.e. if L is irreducible and all proper intervals are boolean.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
+&lt;Geometric lattice: 4 atoms, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsGeneric(L);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
+&lt;Geometric lattice: 5 atoms, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsGeneric(L);</span>
+false
+</pre></div>
+
+<p><a id="X7DE8E16C7C2D387B" name="X7DE8E16C7C2D387B"></a></p>
+
+<h4>2.6 <span class="Heading">Operations</span></h4>
+
+<p><a id="X8367DC267DCC0635" name="X8367DC267DCC0635"></a></p>
+
+<h5>2.6-1 IsLEquiv</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLEquiv</code>( <var class="Arg">A</var>, <var class="Arg">B</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines if the arrangements <var class="Arg">A</var> and <var class="Arg">B</var> have isomorphic intersection lattices.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(A,B);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(A,B);</span>
+true
+</pre></div>
+
+<p><a id="X7BD35FA07804BB70" name="X7BD35FA07804BB70"></a></p>
+
+<h5>2.6-2 Essentialization</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Essentialization</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Computes the <em>essentialization</em> of the hyperplane arrangement <var class="Arg">A</var>. An arrangement is called essential if the intersection of all its hyperplanes is the origin. If this is not the case, the function restricts the arrangement to a complementary subspace so that the resulting arrangement becomes essential.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:=Essentialization(A); Roots(B);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+[ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
+</pre></div>
+
+<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
+
+<h4>2.7 <span class="Heading">Global methods</span></h4>
+
+<p><a id="X7CC338E67CE223FE" name="X7CC338E67CE223FE"></a></p>
+
+<h5>2.7-1 HArrResHind</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResHind</code>( <var class="Arg">A</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Computes the <em>restriction</em> of the arrangement <var class="Arg">A</var> to the <var class="Arg">i</var>-th hyperplane of <code class="code">Roots(A)</code>.</p>
+
+<p><a id="X784AA86286AA9DD8" name="X784AA86286AA9DD8"></a></p>
+
+<h5>2.7-2 HArrResX</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResX</code>( <var class="Arg">A</var>, <var class="Arg">S</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Computes the <em>restriction</em> of the arrangement <var class="Arg">A</var> to the subspace orthogonal to the vectors in <code class="code">S</code>.</p>
+
+<p><a id="X82C8EAF88340865B" name="X82C8EAF88340865B"></a></p>
+
+<h5>2.7-3 DrawLatex3Arr</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DrawLatex3Arr</code>( <var class="Arg">A</var>[, <var class="Arg">ps</var>[, <var class="Arg">ip</var>[, <var class="Arg">Hind</var>[, <var class="Arg">disthv</var>[, <var class="Arg">MarkHs</var>]]]]] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A string.</p>
+
+<p>Generates LaTeX tikz-code for a nice projective picture of the real 3-arrangement. If <span class="Math">x,y,z</span> are the coordinates, by default, this is the 2-dim affine arrangement obtained by intersecting <var class="Arg">A</var> with the plane <span class="Math">z=1</span>.</p>
+
+<p>The optional parameters are:</p>
+
+
+<ul>
+<li><p><var class="Arg">ps</var> a scaling factor,</p>
+
+</li>
+<li><p><var class="Arg">ip</var> intersection points are drawn,</p>
+
+</li>
+<li><p><var class="Arg">Hind</var> labels for the hyperplanes are added,</p>
+
+</li>
+<li><p><var class="Arg">disthv</var> a vector giving the normal of the plane whith which to intersect <var class="Arg">A</var>,</p>
+
+</li>
+<li><p><var class="Arg">MarkHs</var> a list of indices of hyperplanes of <var class="Arg">A</var>, these are drawn in another color.</p>
+
+</li>
+</ul>
+<p>The example below will look as follows (only in pdf).</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(DrawLatex3Arr(A));</span>
+\begin{tikzpicture}[scale=1.0]
+\draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
+\draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
+\draw (1.,3.873) -- (1.,-3.873);  % H_4 
+\draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
+\draw (3.873,1.) -- (-3.873,1.);  % H_6 
+\end{tikzpicture}
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(DrawLatex3Arr(A,1/2,true,true,[1,1,1],[1,2]));</span>
+\begin{tikzpicture}[scale=1.0]
+\draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 
+\node at (1.975,-3.707) {\small $1$}; 
+\draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\node at (-2.970,-2.970) {\small $2$}; 
+\draw (3.361,2.169) -- (-3.995,0.197);  % H_3 
+\node at (-4.198,0.143) {\small $3$}; 
+\draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 
+\node at (1.087,-4.057) {\small $4$}; 
+\draw (2.169,3.361) -- (0.197,-3.995);  % H_5 
+\node at (0.143,-4.198) {\small $5$}; 
+\draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 
+\node at (4.057,-1.087) {\small $6$}; 
+
+\fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] 
+\fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] 
+\fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] 
+\fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] 
+\fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
+\fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] 
+\fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] 
+
+\end{tikzpicture}
+
+</pre></div>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

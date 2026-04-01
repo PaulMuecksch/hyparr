@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (HypArr) - Chapter 4: Milnor fibers</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap4"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap4_mj.html">[MathJax on]</a></p>
+<p><a id="X80236F007DAFE4C2" name="X80236F007DAFE4C2"></a></p>
+<div class="ChapSects"><a href="chap4.html#X80236F007DAFE4C2">4 <span class="Heading">Milnor fibers</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X79C388D385DB7CD1">4.1 <span class="Heading">Complexes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X794B90A67B153E6F">4.1-1 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7D30E85086B93DB0">4.1-2 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7BBA6F967E493B5D">4.1-3 FPtoCWCpx</a></span>
+</div></div>
+</div>
+
+<h3>4 <span class="Heading">Milnor fibers</span></h3>
+
+<p>The Milnor fiber is the typical fiber <span class="SimpleMath">f^-1(1)</span> of the Milnor fibration</p>
+
+<p class="pcenter">f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times, z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)</p>
+
+<p>of the hyperplane arrangement <span class="SimpleMath">mathcalA</span>, where <span class="SimpleMath">α_H</span> are defining linear forms.</p>
+
+<p>The following describes functions to construct a regular cell complex having the homotopy type of the Milnor fiber from <a href="chapBib.html#biBMueYos25_MilnorOM">[MY25]</a> and thus enables computation of homotopy invaraints using e.g. the HAP package <a href="chapBib.html#biBGAP_HAP">[Ell26]</a>.</p>
+
+<p><a id="X79C388D385DB7CD1" name="X79C388D385DB7CD1"></a></p>
+
+<h4>4.1 <span class="Heading">Complexes</span></h4>
+
+<p><a id="X794B90A67B153E6F" name="X794B90A67B153E6F"></a></p>
+
+<h5>4.1-1 MilnorFiberComplex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: FacePoset</p>
+
+<p>Computes the face poset of the regular cell complex of the combinatorial Milnor fiber of the oriented matroid <var class="Arg">OM</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
+&lt;OrientedMatroid: 3 elements, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(O);</span>
+&lt;FacePoset of dimension 1 with f-vector [ 3, 6 ]&gt;
+</pre></div>
+
+<p><a id="X7D30E85086B93DB0" name="X7D30E85086B93DB0"></a></p>
+
+<h5>4.1-2 MilnorFiberComplex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: FacePoset</p>
+
+<p>Computes the face poset of the regular cell complex having the homotopy type of Milnor fiber of the arrangement <var class="Arg">A</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
+</pre></div>
+
+<p><a id="X7BBA6F967E493B5D" name="X7BBA6F967E493B5D"></a></p>
+
+<h5>4.1-3 FPtoCWCpx</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPtoCWCpx</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: HAP CW Complex</p>
+
+<p>Converts a <strong class="button">HypArr</strong> <code class="code">FacePoset</code> into a <strong class="button">HAP</strong> <code class="code">RegularCWComplex</code> for further computations of topological invariants.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCW := FPtoCWCpx(MCpx);</span>
+Regular CW-complex of dimension 2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Homology(MCW,0);</span>
+[ 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Homology(MCW,1);</span>
+[ 0, 0, 0, 0, 0, 0, 0 ]
+</pre></div>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

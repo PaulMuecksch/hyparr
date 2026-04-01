@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Hyperplane_arrangements">
+<Heading>Hyperplane arrangements</Heading>
+
+<P/>
+ Let <Math>\mathbb{K}</Math> be a field.
+ A hyperplane arrangment is a finite set <Math>\mathcal{A} = \{H_1,\ldots,H_n\}</Math>
+ of hyperplanes in a finite dimensional <Math>\mathbb{K}</Math>-vector space <Math>V</Math>.  
+<Section Label="Chapter_Hyperplane_arrangements_Section_Construction_of_arrangements_of_hyperplanes">
+<Heading>Construction of arrangements of hyperplanes</Heading>
+
+<ManSection>
+  <Oper Arg="r" Name="HyperplaneArrangement" Label="for IsList"/>
+ <Returns>A hyperplane arrangement
+</Returns>
+ <Description>
+  Constructs a hyperplane arrangement from a list <A>R</A> of vectors
+  representing defining linear forms of hyperplanes.
+<P/>
+  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the hyperplane
+  <Display>
+     r_1 x_1 + \cdots + r_n x_n = 0.
+  </Display>
+  The vectors must lie in the same vector space.
+<P/>
+  Linearly dependent defining forms are removed automatically, so the
+  resulting arrangement only stores pairwise linearly independent
+  hyperplanes.
+<P/>
+<Example><![CDATA[
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);
+<HyperplaneArrangement: 3 hyperplanes in 3-space>
+gap> Roots(A);
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Attributes_of_arrangements">
+<Heading>Attributes of arrangements</Heading>
+
+<ManSection>
+  <Attr Arg="A" Name="Dimension" Label="for IsHyperplaneArrangement"/>
+ <Returns>A non-negative integer.
+</Returns>
+ <Description>
+ Returns the dimension of the ambient vector space in which the
+ hyperplane arrangement <A>A</A> is defined.
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0]]); Dimension(A);
+<HyperplaneArrangement: 2 hyperplanes in 3-space>
+3
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="Roots" Label="for IsHyperplaneArrangement"/>
+ <Returns>A list of vectors.
+</Returns>
+ <Description>
+ Returns the list of vectors giving defining linear forms (also called
+ <E>roots</E>) of the hyperplanes in the arrangement <A>A</A>.
+<Example><![CDATA[
+gap> A:=AGpql(3,3,2); Roots(A);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+[ [ 1, -E(3) ], [ 1, -E(3)^2 ], [ 1, -1 ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="IntersectionLattice" Label="for IsHyperplaneArrangement"/>
+ <Returns>An object of type <C>IsGeomLattice</C>.
+</Returns>
+ <Description>
+ Computes the intersection lattice of the hyperplane arrangement <A>A</A>.
+<P/>
+ The ground set <C>L</C> (see <Ref Attr="GLGroundSet" Label="for IsGeomLattice" Style="Text"/>) 
+ of the lattice is represented level-by-level.  
+ The entry <C>L[k]</C> contains all intersections of rank <Math>k</Math>.
+<P/>
+ Each lattice element is stored as a list of indices referring to
+ hyperplanes in <C>Roots(A)</C>.
+<P/>
+ For example, the list <C>[1,3]</C> represents the intersection of the
+ first and third hyperplane of the arrangement.
+<P/>
+<Example><![CDATA[
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);
+<HyperplaneArrangement: 3 hyperplanes in 3-space>
+gap> L:=IntersectionLattice(A); GLGroundSet(L);
+<Geometric lattice: 3 atoms, rank 3>
+[ [ [ 1 ], [ 2 ], [ 3 ] ], 
+  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], 
+  [ [ 1, 2, 3 ] ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="CharPoly" Label="for IsHyperplaneArrangement"/>
+ <Returns>a univariate polynomial with integral coefficients.
+</Returns>
+ <Description>
+ Returns <Math>\chi_{\mathcal{A}}</Math> the <E>characterisitc polynomial</E> of the arrangement <A>A</A>.
+<Example><![CDATA[
+gap> A:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> CharPoly(A);
+t^3-6*t^2+11*t-6
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="ExpArr" Label="for IsHyperplaneArrangement"/>
+ <Returns>a list of integers, or fail
+</Returns>
+ <Description>
+ Returns <E>exponents</E> of the arrangement <Math>\mathcal{A}</Math> if
+ the characteristic polynomial factors over the integers.
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+gap> ExpArr(A);
+[ 1, 2 ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="A" Name="MSetInvL" Label="for IsHyperplaneArrangement"/>
+ <Returns>An object of type IsGeomLattice.
+</Returns>
+ <Description>
+ Computes multiset invariants of the intersection lattice 
+ (see <Ref Attr="IntersectionLattice" Label="for IsHyperplaneArrangement" Style="Text"/>)
+ of the
+ hyperplane arrangement <A>A</A>.
+<P/>
+ For each level of the lattice, the function records how many
+ intersections occur with a given number of defining hyperplanes.
+<P/>
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);
+<HyperplaneArrangement: 4 hyperplanes in 3-space>
+gap> MSetInvL(A);
+[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Properties_of_arrangements">
+<Heading>Properties of arrangements</Heading>
+
+<ManSection>
+  <Prop Arg="A" Name="IsReal" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if the hyperplane arrangement is defined over the reals, i.e.,
+ if the entries of the defining linear forms are real.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="A" Name="HArrIsIrreducible" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if the hyperplane arrangement is irreducible.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="A" Name="HArrIsGeneric" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if the hyperplane arrangement is generic.
+ See also <Ref Prop="GLIsGeneric" Label="for IsGeomLattice" Style="Text"/>.
+<Example><![CDATA[
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+<HyperplaneArrangement: 5 hyperplanes in 3-space>
+gap> HArrIsGeneric(A);
+false
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
+<HyperplaneArrangement: 4 hyperplanes in 3-space>
+gap> HArrIsGeneric(A);
+true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Attributes_of_geometric_lattices">
+<Heading>Attributes of geometric lattices</Heading>
+
+<ManSection>
+  <Attr Arg="L" Name="GLGroundSet" Label="for IsGeomLattice"/>
+ <Returns>list of lists
+</Returns>
+ <Description>
+ Returns the ground set of the geometric lattice <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLAtoms" Label="for IsGeomLattice"/>
+ <Returns>list
+</Returns>
+ <Description>
+ Returns the set of atoms of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLRank" Label="for IsGeomLattice"/>
+ <Returns>a non-negative integer
+</Returns>
+ <Description>
+ Returns the rank of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLkFlats" Label="for IsGeomLattice"/>
+ <Returns>a function
+</Returns>
+ <Description>
+ Returns a function extracting the flats of rank <Math>k</Math> in <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLRankFunction" Label="for IsGeomLattice"/>
+ <Returns>A function
+</Returns>
+ <Description>
+ Returns the rank function of the geometric lattice <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLGraph" Label="for IsGeomLattice"/>
+ <Returns>a graph
+</Returns>
+ <Description>
+ Constructs the directed graph of the Hasse diagram of L.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLAutGroup" Label="for IsGeomLattice"/>
+ <Returns>a group
+</Returns>
+ <Description>
+ Computes the autmorphism group of L
+ as a subgroup of <C>Sym(GLAtoms(L))</C>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLMoebius" Label="for IsGeomLattice"/>
+ <Returns>function
+</Returns>
+ <Description>
+ Returns the Moebius function of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="GLCharPoly" Label="for IsGeomLattice"/>
+ <Returns>function
+</Returns>
+ <Description>
+  Computes the characteristic polynomial of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Properties_of_geometric_lattices">
+<Heading>Properties of geometric lattices</Heading>
+
+<ManSection>
+  <Prop Arg="L" Name="GLIsIrreducible" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is irreducible.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="L" Name="GLIsBoolean" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is a boolean lattice.
+<Example><![CDATA[
+gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));
+<Geometric lattice: 2 atoms, rank 2>
+gap> GLIsBoolean(L);
+true
+gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));
+<Geometric lattice: 3 atoms, rank 2>
+gap> GLIsBoolean(L);
+false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="L" Name="GLIsGeneric" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is generic, i.e. if L is irreducible 
+ and all proper intervals are boolean.
+<Example><![CDATA[
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
+<HyperplaneArrangement: 4 hyperplanes in 3-space>
+gap> L:=IntersectionLattice(A);
+<Geometric lattice: 4 atoms, rank 3>
+gap> GLIsGeneric(L);
+true
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+<HyperplaneArrangement: 5 hyperplanes in 3-space>
+gap> L:=IntersectionLattice(A);
+<Geometric lattice: 5 atoms, rank 3>
+gap> GLIsGeneric(L);
+false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Operations">
+<Heading>Operations</Heading>
+
+<ManSection>
+  <Oper Arg="A, B" Name="IsLEquiv" Label="for IsHyperplaneArrangement,IsHyperplaneArrangement"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+ Determines if the arrangements <A>A</A> and <A>B</A> 
+ have isomorphic intersection lattices.
+<P/>
+<Example><![CDATA[
+gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> B:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> IsLEquiv(A,B);
+false
+gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> IsLEquiv(A,B);
+true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="A" Name="Essentialization" Label="for IsHyperplaneArrangement"/>
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+ Computes the <E>essentialization</E> of the hyperplane arrangement
+ <A>A</A>.
+ An arrangement is called essential if the intersection of all its
+ hyperplanes is the origin.  If this is not the case, the function
+ restricts the arrangement to a complementary subspace so that the
+ resulting arrangement becomes essential.
+<Example><![CDATA[
+gap> A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);
+<HyperplaneArrangement: 3 hyperplanes in 3-space>
+gap> B:=Essentialization(A); Roots(B);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+[ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Hyperplane_arrangements_Section_Global_methods">
+<Heading>Global methods</Heading>
+
+<ManSection>
+  <Func Arg="A, i" Name="HArrResHind" />
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+ Computes the <E>restriction</E> of the arrangement <A>A</A> to the
+  <A>i</A>-th hyperplane of <C>Roots(A)</C>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="A, S" Name="HArrResX" />
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+ Computes the <E>restriction</E> of the arrangement <A>A</A> to the
+ subspace orthogonal to the vectors in <C>S</C>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]" Name="DrawLatex3Arr" />
+ <Returns>A string.
+</Returns>
+ <Description>
+ Generates LaTeX tikz-code
+ for a nice projective picture of the real 3-arrangement.
+ If <Math>x,y,z</Math> are the coordinates, by default, 
+ this is the 2-dim affine arrangement
+ obtained by intersecting <A>A</A> with the plane <Math>z=1</Math>.
+<P/>
+ The optional parameters are:
+<List>
+<Item>
+<A>ps</A> a scaling factor,
+</Item>
+<Item>
+<A>ip</A> intersection points are drawn,
+</Item>
+<Item>
+<A>Hind</A> labels for the hyperplanes are added,
+</Item>
+<Item>
+<A>disthv</A> a vector giving the normal of the plane whith which to intersect <A>A</A>,
+</Item>
+<Item>
+<A>MarkHs</A> a list of indices of hyperplanes of <A>A</A>, these are drawn in another color.
+</Item>
+</List>
+<P/>
+ The example below will look as follows (only in pdf).
+<P/>
+<Example><![CDATA[
+gap> A:=AGpql(2,2,3);
+<HyperplaneArrangement: 6 hyperplanes in 3-space>
+gap> Print(DrawLatex3Arr(A));
+\begin{tikzpicture}[scale=1.0]
+\draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
+\draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
+\draw (1.,3.873) -- (1.,-3.873);  % H_4 
+\draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
+\draw (3.873,1.) -- (-3.873,1.);  % H_6 
+\end{tikzpicture}
+gap> Print(DrawLatex3Arr(A,1/2,true,true,[1,1,1],[1,2]));
+\begin{tikzpicture}[scale=1.0]
+\draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 
+\node at (1.975,-3.707) {\small $1$}; 
+\draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\node at (-2.970,-2.970) {\small $2$}; 
+\draw (3.361,2.169) -- (-3.995,0.197);  % H_3 
+\node at (-4.198,0.143) {\small $3$}; 
+\draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 
+\node at (1.087,-4.057) {\small $4$}; 
+\draw (2.169,3.361) -- (0.197,-3.995);  % H_5 
+\node at (0.143,-4.198) {\small $5$}; 
+\draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 
+\node at (4.057,-1.087) {\small $6$}; 
+
+\fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] 
+\fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] 
+\fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] 
+\fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] 
+\fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
+\fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] 
+\fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] 
+
+\end{tikzpicture}
+
+]]></Example>
+
+
+<P/>
+<Alt Only="LaTeX"><![CDATA[
+ \includegraphics{./other/DrawLatex3Arr_Example.pdf}
+]]></Alt>
+<P/>
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+
+</Chapter>
+

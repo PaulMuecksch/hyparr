@@ -1,0 +1,422 @@
+  
+  [1X2 [33X[0;0YHyperplane arrangements[133X[101X
+  
+  [33X[0;0YLet  [23X\mathbb{K}[123X  be  a  field.  A  hyperplane  arrangment  is  a  finite set
+  [23X\mathcal{A}  =  \{H_1,\ldots,H_n\}[123X  of  hyperplanes  in a finite dimensional
+  [23X\mathbb{K}[123X-vector space [23XV[123X.[133X
+  
+  
+  [1X2.1 [33X[0;0YConstruction of arrangements of hyperplanes[133X[101X
+  
+  [1X2.1-1 HyperplaneArrangement[101X
+  
+  [33X[1;0Y[29X[2XHyperplaneArrangement[102X( [3Xr[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement[133X
+  
+  [33X[0;0YConstructs  a  hyperplane  arrangement from a list [3XR[103X of vectors representing
+  defining linear forms of hyperplanes.[133X
+  
+  [33X[0;0YEach vector [22Xr = [r_1,dots,r_n][122X corresponds to the hyperplane[133X
+  
+  
+  [24X[33X[0;6Yr_1 x_1 + \cdots + r_n x_n = 0.[133X
+  
+  [124X
+  
+  [33X[0;0YThe vectors must lie in the same vector space.[133X
+  
+  [33X[0;0YLinearly   dependent  defining  forms  are  removed  automatically,  so  the
+  resulting arrangement only stores pairwise linearly independent hyperplanes.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XRoots(A);[127X[104X
+    [4X[28X[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.2 [33X[0;0YAttributes of arrangements[133X[101X
+  
+  [1X2.2-1 Dimension[101X
+  
+  [33X[1;0Y[29X[2XDimension[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer.[133X
+  
+  [33X[0;0YReturns  the  dimension  of the ambient vector space in which the hyperplane
+  arrangement [3XA[103X is defined.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0]]); Dimension(A);[127X[104X
+    [4X[28X<HyperplaneArrangement: 2 hyperplanes in 3-space>[128X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-2 Roots[101X
+  
+  [33X[1;0Y[29X[2XRoots[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of vectors.[133X
+  
+  [33X[0;0YReturns the list of vectors giving defining linear forms (also called [13Xroots[113X)
+  of the hyperplanes in the arrangement [3XA[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(3,3,2); Roots(A);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[28X[ [ 1, -E(3) ], [ 1, -E(3)^2 ], [ 1, -1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-3 IntersectionLattice[101X
+  
+  [33X[1;0Y[29X[2XIntersectionLattice[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn object of type [10XIsGeomLattice[110X.[133X
+  
+  [33X[0;0YComputes the intersection lattice of the hyperplane arrangement [3XA[103X.[133X
+  
+  [33X[0;0YThe  ground  set  [10XL[110X  (see [2XGLGroundSet[102X ([14X2.4-1[114X)) of the lattice is represented
+  level-by-level. The entry [10XL[k][110X contains all intersections of rank [23Xk[123X.[133X
+  
+  [33X[0;0YEach lattice element is stored as a list of indices referring to hyperplanes
+  in [10XRoots(A)[110X.[133X
+  
+  [33X[0;0YFor  example,  the  list  [10X[1,3][110X represents the intersection of the first and
+  third hyperplane of the arrangement.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A); GLGroundSet(L);[127X[104X
+    [4X[28X<Geometric lattice: 3 atoms, rank 3>[128X[104X
+    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2, 3 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-4 CharPoly[101X
+  
+  [33X[1;0Y[29X[2XCharPoly[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya univariate polynomial with integral coefficients.[133X
+  
+  [33X[0;0YReturns  [23X\chi_{\mathcal{A}}[123X the [13Xcharacterisitc polynomial[113X of the arrangement
+  [3XA[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XCharPoly(A);[127X[104X
+    [4X[28Xt^3-6*t^2+11*t-6[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-5 ExpArr[101X
+  
+  [33X[1;0Y[29X[2XExpArr[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of integers, or fail[133X
+  
+  [33X[0;0YReturns  [13Xexponents[113X  of  the  arrangement  [23X\mathcal{A}[123X  if the characteristic
+  polynomial factors over the integers.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
+    [4X[28X[ 1, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-6 MSetInvL[101X
+  
+  [33X[1;0Y[29X[2XMSetInvL[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn object of type IsGeomLattice.[133X
+  
+  [33X[0;0YComputes    multiset   invariants   of   the   intersection   lattice   (see
+  [2XIntersectionLattice[102X ([14X2.2-3[114X)) of the hyperplane arrangement [3XA[103X.[133X
+  
+  [33X[0;0YFor  each  level of the lattice, the function records how many intersections
+  occur with a given number of defining hyperplanes.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0,],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XMSetInvL(A);[127X[104X
+    [4X[28X[ [ [ 1, 4 ] ], [ [ 2, 6 ] ], [ [ 4, 1 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.3 [33X[0;0YProperties of arrangements[133X[101X
+  
+  [1X2.3-1 IsReal[101X
+  
+  [33X[1;0Y[29X[2XIsReal[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines,  if  the hyperplane arrangement is defined over the reals, i.e.,
+  if the entries of the defining linear forms are real.[133X
+  
+  [1X2.3-2 HArrIsIrreducible[101X
+  
+  [33X[1;0Y[29X[2XHArrIsIrreducible[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines, if the hyperplane arrangement is irreducible.[133X
+  
+  [1X2.3-3 HArrIsGeneric[101X
+  
+  [33X[1;0Y[29X[2XHArrIsGeneric[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines,  if  the hyperplane arrangement is generic. See also [2XGLIsGeneric[102X
+  ([14X2.5-3[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsGeneric(A);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsGeneric(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.4 [33X[0;0YAttributes of geometric lattices[133X[101X
+  
+  [1X2.4-1 GLGroundSet[101X
+  
+  [33X[1;0Y[29X[2XGLGroundSet[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ylist of lists[133X
+  
+  [33X[0;0YReturns the ground set of the geometric lattice [3XL[103X.[133X
+  
+  [1X2.4-2 GLAtoms[101X
+  
+  [33X[1;0Y[29X[2XGLAtoms[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ylist[133X
+  
+  [33X[0;0YReturns the set of atoms of [3XL[103X.[133X
+  
+  [1X2.4-3 GLRank[101X
+  
+  [33X[1;0Y[29X[2XGLRank[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya non-negative integer[133X
+  
+  [33X[0;0YReturns the rank of [3XL[103X.[133X
+  
+  [1X2.4-4 GLkFlats[101X
+  
+  [33X[1;0Y[29X[2XGLkFlats[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya function[133X
+  
+  [33X[0;0YReturns a function extracting the flats of rank [23Xk[123X in [3XL[103X.[133X
+  
+  [1X2.4-5 GLRankFunction[101X
+  
+  [33X[1;0Y[29X[2XGLRankFunction[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA function[133X
+  
+  [33X[0;0YReturns the rank function of the geometric lattice [3XL[103X.[133X
+  
+  [1X2.4-6 GLGraph[101X
+  
+  [33X[1;0Y[29X[2XGLGraph[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya graph[133X
+  
+  [33X[0;0YConstructs the directed graph of the Hasse diagram of L.[133X
+  
+  [1X2.4-7 GLAutGroup[101X
+  
+  [33X[1;0Y[29X[2XGLAutGroup[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya group[133X
+  
+  [33X[0;0YComputes the autmorphism group of L as a subgroup of [10XSym(GLAtoms(L))[110X.[133X
+  
+  [1X2.4-8 GLMoebius[101X
+  
+  [33X[1;0Y[29X[2XGLMoebius[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yfunction[133X
+  
+  [33X[0;0YReturns the Moebius function of [3XL[103X.[133X
+  
+  [1X2.4-9 GLCharPoly[101X
+  
+  [33X[1;0Y[29X[2XGLCharPoly[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yfunction[133X
+  
+  [33X[0;0YComputes the characteristic polynomial of [3XL[103X.[133X
+  
+  
+  [1X2.5 [33X[0;0YProperties of geometric lattices[133X[101X
+  
+  [1X2.5-1 GLIsIrreducible[101X
+  
+  [33X[1;0Y[29X[2XGLIsIrreducible[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines, if L is irreducible.[133X
+  
+  [1X2.5-2 GLIsBoolean[101X
+  
+  [33X[1;0Y[29X[2XGLIsBoolean[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines, if L is a boolean lattice.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));[127X[104X
+    [4X[28X<Geometric lattice: 2 atoms, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XGLIsBoolean(L);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));[127X[104X
+    [4X[28X<Geometric lattice: 3 atoms, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XGLIsBoolean(L);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X2.5-3 GLIsGeneric[101X
+  
+  [33X[1;0Y[29X[2XGLIsGeneric[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines,  if  L  is  generic,  i.e.  if  L  is irreducible and all proper
+  intervals are boolean.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);[127X[104X
+    [4X[28X<Geometric lattice: 4 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XGLIsGeneric(L);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);[127X[104X
+    [4X[28X<Geometric lattice: 5 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XGLIsGeneric(L);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.6 [33X[0;0YOperations[133X[101X
+  
+  [1X2.6-1 IsLEquiv[101X
+  
+  [33X[1;0Y[29X[2XIsLEquiv[102X( [3XA[103X, [3XB[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines  if  the  arrangements  [3XA[103X  and  [3XB[103X  have  isomorphic  intersection
+  lattices.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XB:=AGpql(2,2,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(A,B);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XA:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(A,B);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X2.6-2 Essentialization[101X
+  
+  [33X[1;0Y[29X[2XEssentialization[102X( [3XA[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
+  
+  [33X[0;0YComputes   the   [13Xessentialization[113X   of  the  hyperplane  arrangement  [3XA[103X.  An
+  arrangement  is  called essential if the intersection of all its hyperplanes
+  is  the  origin.  If  this  is  not  the  case,  the  function restricts the
+  arrangement  to  a  complementary subspace so that the resulting arrangement
+  becomes essential.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=Arr([[1,0,0],[0,1,0],[1,1,0]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XB:=Essentialization(A); Roots(B);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[28X[ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.7 [33X[0;0YGlobal methods[133X[101X
+  
+  [1X2.7-1 HArrResHind[101X
+  
+  [33X[1;0Y[29X[2XHArrResHind[102X( [3XA[103X, [3Xi[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
+  
+  [33X[0;0YComputes  the  [13Xrestriction[113X  of  the  arrangement [3XA[103X to the [3Xi[103X-th hyperplane of
+  [10XRoots(A)[110X.[133X
+  
+  [1X2.7-2 HArrResX[101X
+  
+  [33X[1;0Y[29X[2XHArrResX[102X( [3XA[103X, [3XS[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
+  
+  [33X[0;0YComputes  the [13Xrestriction[113X of the arrangement [3XA[103X to the subspace orthogonal to
+  the vectors in [10XS[110X.[133X
+  
+  [1X2.7-3 DrawLatex3Arr[101X
+  
+  [33X[1;0Y[29X[2XDrawLatex3Arr[102X( [3XA[103X[, [3Xps[103X[, [3Xip[103X[, [3XHind[103X[, [3Xdisthv[103X[, [3XMarkHs[103X]]]]] ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA string.[133X
+  
+  [33X[0;0YGenerates  LaTeX  tikz-code  for  a  nice  projective  picture  of  the real
+  3-arrangement.  If  [23Xx,y,z[123X are the coordinates, by default, this is the 2-dim
+  affine arrangement obtained by intersecting [3XA[103X with the plane [23Xz=1[123X.[133X
+  
+  [33X[0;0YThe optional parameters are:[133X
+  
+  [30X    [33X[0;6Y[3Xps[103X a scaling factor,[133X
+  
+  [30X    [33X[0;6Y[3Xip[103X intersection points are drawn,[133X
+  
+  [30X    [33X[0;6Y[3XHind[103X labels for the hyperplanes are added,[133X
+  
+  [30X    [33X[0;6Y[3Xdisthv[103X  a  vector  giving  the  normal  of  the  plane  whith which to
+        intersect [3XA[103X,[133X
+  
+  [30X    [33X[0;6Y[3XMarkHs[103X  a  list  of  indices  of  hyperplanes of [3XA[103X, these are drawn in
+        another color.[133X
+  
+  [33X[0;0YThe example below will look as follows (only in pdf).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XPrint(DrawLatex3Arr(A));[127X[104X
+    [4X[28X\begin{tikzpicture}[scale=1.0][128X[104X
+    [4X[28X\draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 [128X[104X
+    [4X[28X\draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 [128X[104X
+    [4X[28X\draw (-1.,3.873) -- (-1.,-3.873);  % H_3 [128X[104X
+    [4X[28X\draw (1.,3.873) -- (1.,-3.873);  % H_4 [128X[104X
+    [4X[28X\draw (3.873,-1.) -- (-3.873,-1.);  % H_5 [128X[104X
+    [4X[28X\draw (3.873,1.) -- (-3.873,1.);  % H_6 [128X[104X
+    [4X[28X\end{tikzpicture}[128X[104X
+    [4X[25Xgap>[125X [27XPrint(DrawLatex3Arr(A,1/2,true,true,[1,1,1],[1,2]));[127X[104X
+    [4X[28X\begin{tikzpicture}[scale=1.0][128X[104X
+    [4X[28X\draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 [128X[104X
+    [4X[28X\node at (1.975,-3.707) {\small $1$}; [128X[104X
+    [4X[28X\draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 [128X[104X
+    [4X[28X\node at (-2.970,-2.970) {\small $2$}; [128X[104X
+    [4X[28X\draw (3.361,2.169) -- (-3.995,0.197);  % H_3 [128X[104X
+    [4X[28X\node at (-4.198,0.143) {\small $3$}; [128X[104X
+    [4X[28X\draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 [128X[104X
+    [4X[28X\node at (1.087,-4.057) {\small $4$}; [128X[104X
+    [4X[28X\draw (2.169,3.361) -- (0.197,-3.995);  % H_5 [128X[104X
+    [4X[28X\node at (0.143,-4.198) {\small $5$}; [128X[104X
+    [4X[28X\draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 [128X[104X
+    [4X[28X\node at (4.057,-1.087) {\small $6$}; [128X[104X
+    [4X[28X[128X[104X
+    [4X[28X\fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] [128X[104X
+    [4X[28X\fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] [128X[104X
+    [4X[28X\fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] [128X[104X
+    [4X[28X\fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] [128X[104X
+    [4X[28X\fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] [128X[104X
+    [4X[28X\fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] [128X[104X
+    [4X[28X\fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] [128X[104X
+    [4X[28X[128X[104X
+    [4X[28X\end{tikzpicture}[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  

@@ -1,0 +1,434 @@
+  
+  [1X6 [33X[0;0YOriented Matroids[133X[101X
+  
+  [33X[0;0YOriented  matroids  are  abstractions  of  real hyperplane arrangements. The
+  following  describes  functions  to  handle  oriented  matroids  and compute
+  associated cell complexes and invariants. See [BLVS+99].[133X
+  
+  
+  [1X6.1 [33X[0;0YConstruction of oriented matroids[133X[101X
+  
+  [1X6.1-1 OrientedMatroid[101X
+  
+  [33X[1;0Y[29X[2XOrientedMatroid[102X( [3XR[103X, [3Xor[103X, [3XA[103X, [3Xor[103X[, [3XCCs[103X, [3Xc[103X], [3Xor[103X[, [3Xn[103X, [3Xr[103X, [3XChiroCoreList[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YAn oriented matroid OM.[133X
+  
+  [33X[0;0YConstructs am oriented matroid from[133X
+  
+  [30X    [33X[0;6Ya  list  [3XR[103X  of  vectors  representing  defining  linear  forms of real
+        hyperplanes,[133X
+  
+  [30X    [33X[0;6Ya real hyperplane arrangement [3XA[103X,[133X
+  
+  [30X    [33X[0;6Ya list of lists [3XCVs[103X of signed covectors and a string [10Xc="cv"[110X,[133X
+  
+  [30X    [33X[0;6Yintergers [3Xn,r[103X giving the size of the groundset and the rank and a list
+        [3XChiroCoreList[103X [23X\subseteq \{0,1,-1\}^m (m = \binom{n}{r})[123X presenting the
+        chirotope[133X
+  
+  [33X[0;0Yof the oriented matroid.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); OM:=OrientedMatroid(A);[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOrientedMatroid([[[1,1],[-1,1],[1,-1],[-1,-1]],[[0,1],[0,-1],[1,0],[-1,0]],[[0,0]]],"cv");[127X[104X
+    [4X[28X<OrientedMatroid: 2 elements, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XOrientedMatroid(2,3,[1,1,1]);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X6.2 [33X[0;0YAttributes[133X[101X
+  
+  [1X6.2-1 OMRank[101X
+  
+  [33X[1;0Y[29X[2XOMRank[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn integer[133X
+  
+  [33X[0;0YReturns the rank of the oriented matroid [3XOM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := AGpql(2,2,3); OM := OrientedMatroid(A);[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMRank(OM);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-2 OMGroundSet[101X
+  
+  [33X[1;0Y[29X[2XOMGroundSet[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YReturns the ground set of the oriented matroid OM.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := AGpql(2,2,3); OM := OrientedMatroid(A);[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMGroundSet(OM);[127X[104X
+    [4X[28X[ 1, 2, 3, 4, 5, 6 ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-3 OMLForms[101X
+  
+  [33X[1;0Y[29X[2XOMLForms[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of linear forms or [10Xfail[110X[133X
+  
+  [33X[0;0YReturns the list of linear forms associated with the oriented matroid OM. If
+  the internal component [10XOM!.lforms[110X is not bound, [10Xfail[110X is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := AGpql(2,2,3); OM := OrientedMatroid(A);[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMLForms(O);[127X[104X
+    [4X[28X[ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], [128X[104X
+    [4X[28X  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-4 OMGeomLattice[101X
+  
+  [33X[1;0Y[29X[2XOMGeomLattice[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YAn object of type [10XIsGeomLattice[110X or [10Xfail[110X[133X
+  
+  [33X[0;0YConstructs the geometric lattice associated with the oriented matroid OM. If
+  OM  is  linear (as determined by [10XOMIsLinear(OM)[110X), the lattice is computed as
+  the   intersection   lattice   of   the   hyperplane  arrangement  given  by
+  [10XOMLForms(OM)[110X, stored in the internal component [10XOM!.lattice[110X, and returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O); GLGroundSet(L);[127X[104X
+    [4X[28X<Geometric lattice: 4 atoms, rank 3>[128X[104X
+    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [128X[104X
+    [4X[28X      [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2, 3, 4 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O); GLGroundSet(L);[127X[104X
+    [4X[28X<Geometric lattice: 4 atoms, rank 3>[128X[104X
+    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [128X[104X
+    [4X[28X      [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2, 3, 4 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-5 OMCocircuits[101X
+  
+  [33X[1;0Y[29X[2XOMCocircuits[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YComputes the (signed) cocircuits of the oriented matroid OM.[133X
+  
+  [33X[0;0YThe result is a list of sign vectors.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid([[1,0],[0,1],[1,1]]); OMCocircuits(O);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[28X[ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], [128X[104X
+    [4X[28X  [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-6 TopeGraph[101X
+  
+  [33X[1;0Y[29X[2XTopeGraph[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA graph[133X
+  
+  [33X[0;0YConstructs the tope graph of the oriented matroid [3XOM[103X. The topes are obtained
+  as the maximal covectors from [10XOMCovectors(OM)[110X. Two topes are connected by an
+  edge if their separating set consists of one element.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XG := ShallowCopy(TopeGraph(O));;[127X[104X
+    [4X[25Xgap>[125X [27XVertices(G);[127X[104X
+    [4X[28X[ 1 .. 6 ][128X[104X
+    [4X[25Xgap>[125X [27XIsSimpleGraph(G);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XUndirectedEdges(G);[127X[104X
+    [4X[28X[ [ 1, 3 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-7 OMCovectors[101X
+  
+  [33X[1;0Y[29X[2XOMCovectors[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list of lists[133X
+  
+  [33X[0;0YComputes all covectors of the oriented matroid OM. The result is returned as
+  a  list  of  lists,  where  the  [23Xk[123X-th  inner  list  is  a  list of covectors
+  corresponding to faces of dimension [23Xk-1[123X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XOMCovectors(O);[127X[104X
+    [4X[28X[ [ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], [128X[104X
+    [4X[28X    [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ],[128X[104X
+    [4X[28X  [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], [128X[104X
+    [4X[28X    [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ],[128X[104X
+    [4X[28X  [ [ 0, 0, 0 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-8 SalvettiComplex[101X
+  
+  [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XOM[103X, [3Xor[103X, [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA [10XFacePoset[110X[133X
+  
+  [33X[0;0YConstructs the Salvetti complex [Sal87] associated with the oriented matroid
+  OM or the real hyperplane arrangement [3XA[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XSalvettiComplex(O);[127X[104X
+    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[25Xgap>[125X [27XSalvettiComplex(A);[127X[104X
+    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-9 SalvettiComplex[101X
+  
+  [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XA[103X ) [32X attribute[133X
+  
+  [33X[0;0YSee [2XSalvettiComplex[102X ([14X6.2-8[114X).[133X
+  
+  [1X6.2-10 FPGroundSet[101X
+  
+  [33X[1;0Y[29X[2XFPGroundSet[102X( [3XFP[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YReturns the ground set of the face poset FP.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XS := SalvettiComplex(O);[127X[104X
+    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
+    [4X[25Xgap>[125X [27XFPGroundSet(S);[127X[104X
+    [4X[28X[[128X[104X
+    [4X[28X  [ [128X[104X
+    [4X[28X    [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 1, -1, 1 ], [ 1, -1, 1 ] ], [128X[104X
+    [4X[28X    [ [ -1, -1, -1 ], [ -1, -1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 1, 1, 1 ], [ 1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ -1, 1, 1 ], [ -1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 1, -1, -1 ], [ 1, -1, -1 ] ][128X[104X
+    [4X[28X  ],[128X[104X
+    [4X[28X  [[128X[104X
+    [4X[28X    [ [ -1, 0, -1 ], [ -1, 1, -1 ] ], [128X[104X
+    [4X[28X    [ [ -1, 1, 0 ], [ -1, 1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 1, 0, 1 ], [ 1, -1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 1, -1, 0 ], [ 1, -1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 0, -1, -1 ], [ -1, -1, -1 ] ], [128X[104X
+    [4X[28X    [ [ -1, 0, -1 ], [ -1, -1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 1, 1 ], [ 1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 1, 0, 1 ], [ 1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 1, 1 ], [ -1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ -1, 1, 0 ], [ -1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 0, -1, -1 ], [ 1, -1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 1, -1, 0 ], [ 1, -1, -1 ] ][128X[104X
+    [4X[28X  ],[128X[104X
+    [4X[28X  [[128X[104X
+    [4X[28X    [ [ 0, 0, 0 ], [ -1, 1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 0, 0 ], [ 1, -1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 0, 0 ], [ -1, -1, -1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 0, 0 ], [ 1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 0, 0 ], [ -1, 1, 1 ] ], [128X[104X
+    [4X[28X    [ [ 0, 0, 0 ], [ 1, -1, -1 ] ][128X[104X
+    [4X[28X  ][128X[104X
+    [4X[28X][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-11 FPOrder[101X
+  
+  [33X[1;0Y[29X[2XFPOrder[102X( [3XFP[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA function[133X
+  
+  [33X[0;0YReturns the order function of the face poset FP.[133X
+  
+  [1X6.2-12 OMChirotope[101X
+  
+  [33X[1;0Y[29X[2XOMChirotope[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA function[133X
+  
+  [33X[0;0YReturns the chirotope given as a function from [23X\binom{E}{r} \to \{0,\pm 1\}[123X,
+  where [23XE[123X is the groundset of [23XOM[123X and [23Xr[123X is the rank of [3XOM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid(2,3,[1,1,1]); c:=OMChirotope(O);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[28Xfunction( S ) ... end[128X[104X
+    [4X[25Xgap>[125X [27XList(Combinations([1..3],2),x->c(x));[127X[104X
+    [4X[28X[ 1, 1, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.2-13 OMRankFunction[101X
+  
+  [33X[1;0Y[29X[2XOMRankFunction[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA function[133X
+  
+  [33X[0;0YReturns the rank function of the oriented matroid [3XOM[103X[133X
+  
+  
+  [1X6.3 [33X[0;0YProperties[133X[101X
+  
+  [1X6.3-1 OMIsLinear[101X
+  
+  [33X[1;0Y[29X[2XOMIsLinear[102X( [3XOM[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines  whether  the  oriented matroid [3XOM[103X is linear. This is the case if
+  the internal component [10XOM!.lforms[110X is bound.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA := AGpql(2,2,3); OM := OrientedMatroid(A);[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMIsLinear(OM);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMIsLinear(O);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X6.3-2 HasSimpleSimplex[101X
+  
+  [33X[1;0Y[29X[2XHasSimpleSimplex[102X( [3XOM[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YReturns  whether  the  oriented  matroid  [3XOM[103X  has  a  simple simplex, i.e. a
+  simplicial  Tope  [23XT[123X  such that the localizations at its vertices are boolean
+  and  there  is another rank 1 covector not adjacent to [23XT[123X. If [10XRank(OM)[110X [23X\geq 3[123X
+  and this is true then its Salvetti complex can not be [23XK(\pi,1)[123X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,1,1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 5 elements, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XHasSimpleSimplex(O);[127X[104X
+    [4X[28X  - tope: [ -1, -1, -1, -1, -1 ][128X[104X
+    [4X[28X  - vertices: [ [ 0, 0, 0, -1, -1 ], [ 0, 0, -1, 0, -1 ], [128X[104X
+    [4X[28X  [ 0, -1, 0, 0, -1 ], [ -1, 0, 0, 0, -1 ] ][128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X6.3-3 HasSimpleTriangle[101X
+  
+  [33X[1;0Y[29X[2XHasSimpleTriangle[102X( [3XOM[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YChecks  all  rank  [23X3[123X  localizations  for  a  simple  simplex,  i.e. a simple
+  triangle.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X6.4 [33X[0;0YOperations[133X[101X
+  
+  [1X6.4-1 IsLEquiv[101X
+  
+  [33X[1;0Y[29X[2XIsLEquiv[102X( [3XOM1[103X, [3XOM2[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines  if  the  oriented matroids [3XOM1[103X and [3XOM2[103X have isomorphic geometric
+  lattices.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO1:=OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XO2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(O1,O2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XO2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(O1,O2);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X6.4-2 HasSimpleSimplexRk[101X
+  
+  [33X[1;0Y[29X[2XHasSimpleSimplexRk[102X( [3XOM[103X, [3Xk[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YReturns  whether  the oriented matroid [3XOM[103X has a localiazion of rank [3Xk[103X with a
+  simple  Simplex.  If this is true for [23Xk \geq 3[123X then its Salvetti complex can
+  not be [23XK(\pi,1)[123X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,1,1,0]]);[127X[104X
+    [4X[28X<OrientedMatroid: 5 elements, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XHasSimpleSimplex(O);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XHasSimpleSimplexRk(O,3);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X6.4-3 OMLocalizationRk[101X
+  
+  [33X[1;0Y[29X[2XOMLocalizationRk[102X( [3XOM[103X, [3XF[103X, [3Xk[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YAn oriented matroid[133X
+  
+  [33X[0;0YReturns the rank [3Xk[103X localization of [3XOM[103X at the flat [3XF[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,1,1,0]]);[127X[104X
+    [4X[28X<OrientedMatroid: 5 elements, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O);[127X[104X
+    [4X[28X<Geometric lattice: 5 atoms, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XGLkFlats(L)(3);[127X[104X
+    [4X[28X[ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ][128X[104X
+    [4X[25Xgap>[125X [27XOMLocalizationRk(O,[1,2,3,5],3);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X6.5 [33X[0;0YGlobal methods[133X[101X
+  
+  [1X6.5-1 OMOperation[101X
+  
+  [33X[1;0Y[29X[2XOMOperation[102X( [3Xsv1[103X, [3Xsv2[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YPerforms  the  oriented matroid operation on two signed vectors [10Xsv1[110X and [10Xsv2[110X.
+  For  each  position [10Xi[110X, if [10Xsv1[i][110X is nonzero, it is used; otherwise [10Xsv2[i][110X is
+  used. Returns a new signed vector representing the result of the operation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XCVs:=OMCovectors(O)[2];[127X[104X
+    [4X[28X[ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], [128X[104X
+    [4X[28X  [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ][128X[104X
+    [4X[25Xgap>[125X [27Xsv1 := CVs[3]; sv2 := CVs[5];[127X[104X
+    [4X[28X[ 1, 0, 1 ][128X[104X
+    [4X[28X[ -1, 1, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XOMOperation(sv1, sv2);[127X[104X
+    [4X[28X[ 1, 1, 1 ][128X[104X
+    [4X[25Xgap>[125X [27XOMOperation(sv2, sv1);[127X[104X
+    [4X[28X[ -1, 1, 1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X6.5-2 OrderCovec[101X
+  
+  [33X[1;0Y[29X[2XOrderCovec[102X( [3Xarg[103X ) [32X function[133X
+  
+  [33X[0;0YOrder function for sign vectors.[133X
+  
+  [1X6.5-3 IsOMEquiv[101X
+  
+  [33X[1;0Y[29X[2XIsOMEquiv[102X( [3XOM1[103X, [3XOM2[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines, if the oriented matroids [3XOM1[103X and [3XOM2[103X are isomorphic.[133X
+  
+  [1X6.5-4 SeparatingSet[101X
+  
+  [33X[1;0Y[29X[2XSeparatingSet[102X( [3Xarg[103X ) [32X function[133X
+  
+  [33X[0;0YThe separating set of two sign vectors.[133X
+  

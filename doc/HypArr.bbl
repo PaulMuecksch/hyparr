@@ -1,0 +1,54 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BLVS{\etalchar{+}}99}
+
+\bibitem[{Abe}16]{Abe16_DivFree}
+T.~{Abe}.
+\newblock Divisionally free arrangements of hyperplanes.
+\newblock {\em Invent. Math.}, 204(1):317--346, 2016.
+
+\bibitem[BLVS{\etalchar{+}}99]{BLSWZ1999_OrientedMatroids}
+Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
+  G\"{u}nter~M. Ziegler.
+\newblock {\em Oriented matroids}, volume~46 of {\em Encyclopedia of
+  Mathematics and its Applications}.
+\newblock Cambridge University Press, Cambridge, second edition, 1999.
+
+\bibitem[CK22]{CK2022_ConnSubgraph_arXiv}
+M.~Cuntz and L.~Kühne.
+\newblock On arrangements of hyperplanes from connected subgraphs, 2022.
+
+\bibitem[Ell26]{GAP_HAP}
+G.~Ellis.
+\newblock {HAP}, {Homological Algebra Programming}, {V}ersion 1.75.
+\newblock \href {https://gap-packages.github.io/hap}
+  {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
+  {}{}{}\texttt{hap}}, Mar 2026.
+\newblock GAP package.
+
+\bibitem[FR87]{FalkRandell87_HomotopyArr}
+M.~Falk and R.~Randell.
+\newblock On the homotopy theory of arrangements.
+\newblock In {\em Complex analytic singularities}, volume~8 of {\em Adv. Stud.
+  Pure Math.}, pages 101--124. North-Holland, Amsterdam, 1987.
+
+\bibitem[MY25]{MueYos25_MilnorOM}
+P.~M{\"u}cksch and M.~Yoshinaga.
+\newblock Milnor fibrations and oriented matroids.
+\newblock {\em ArXiv e-prints}, page arXiv:2508.15331, 2025.
+
+\bibitem[OT92]{OrTer92_Arr}
+P.~{Orlik} and H.~{Terao}.
+\newblock {\em Arrangements of Hyperplanes}.
+\newblock Grundlehren der mathematischen Wissenschaften. Springer, 1992.
+
+\bibitem[Sal87]{Salvetti1987_SalCpx}
+M.~Salvetti.
+\newblock Topology of the complement of real hyperplanes in {${\bf C}^N$}.
+\newblock {\em Invent. Math.}, 88(3):603--618, 1987.
+
+\bibitem[{Ter}80]{Terao1980_FreeI}
+H.~{Terao}.
+\newblock Arrangements of hyperplanes and their freeness {I}.
+\newblock {\em J. Fac. Sci. Univ. Tokyo}, 27:293--320, 1980.
+
+\end{thebibliography}

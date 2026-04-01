@@ -1,0 +1,30 @@
+  
+  
+  [1XReferences[101X
+  
+  [[20XBLVS+99[120X]  [16XBj\"{o}rner,  A.,  Las  Vergnas,  M.,  Sturmfels,  B.,  White,  N. and Ziegler, G. M.[116X, [17XOriented matroids[117X, Cambridge
+  University Press, Cambridge, Second edition, Encyclopedia of Mathematics and its Applications, [19X46[119X (1999), xii+548 pages.
+  
+  [[20XCK22[120X] [16XCuntz, M. and Kühne, L.[116X, [17XOn arrangements of hyperplanes from connected subgraphs[117X (2022).
+  
+  [[20XEll26[120X]    [16XEllis,    G.[116X,    [17XHAP,    Homological   Algebra   Programming,   Version   1.75[117X   (2026),   (GAP   package),   \href
+  {https://gap-packages.github.io/hap}                {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
+  {}{}{}\texttt{hap}}.
+  
+  [[20XFR87[120X]  [16XFalk,  M.  and  Randell, R.[116X, [17XOn the homotopy theory of arrangements[117X, in Complex analytic singularities, North-Holland,
+  Amsterdam, Adv. Stud. Pure Math., [19X8[119X (1987), 101--124.
+  
+  [[20XMY25[120X] [16XM{\"u}cksch, P. and Yoshinaga, M.[116X, [17XMilnor fibrations and oriented matroids.[117X, [18XArXiv e-prints[118X (2025), arXiv:2508.15331.
+  
+  [[20XSal87[120X] [16XSalvetti, M.[116X, [17XTopology of the complement of real hyperplanes in C^N[117X, [18XInvent. Math.[118X, [19X88[119X, 3 (1987), 603--618.
+  
+  [[20X\te80[120X] [16X{Terao}, H.[116X, [17XArrangements of hyperplanes and their freeness I[117X, [18XJ. Fac. Sci. Univ. Tokyo[118X, [19X27[119X (1980), 293--320.
+  
+  [[20X\te16[120X] [16X{Abe}, T.[116X, [17XDivisionally free arrangements of hyperplanes[117X, [18XInvent. Math.[118X, [19X204[119X, 1 (2016), 317--346.
+  
+  [[20Xtt92[120X]  [16X{Orlik},  P.  and  {Terao},  H.[116X,  [17XArrangements of Hyperplanes[117X, Springer, Grundlehren der mathematischen Wissenschaften
+  (1992).
+  
+  
+  
+  [32X

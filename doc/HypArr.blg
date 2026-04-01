@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: HypArr.aux
+The style file: alpha.bst
+Database file #1: hyparr.bib
+You've used 9 entries,
+            2543 wiz_defined-function locations,
+            627 strings with 5916 characters,
+and the built_in function-call counts, 3705 in all, are:
+= -- 385
+> -- 143
+< -- 8
++ -- 45
+- -- 45
+* -- 234
+:= -- 573
+add.period$ -- 29
+call.type$ -- 9
+change.case$ -- 52
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 172
+empty$ -- 275
+format.name$ -- 57
+if$ -- 793
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 9
+newline$ -- 49
+num.names$ -- 27
+pop$ -- 58
+preamble$ -- 1
+purify$ -- 62
+quote$ -- 0
+skip$ -- 162
+stack$ -- 0
+substring$ -- 202
+swap$ -- 55
+text.length$ -- 8
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 64
+warning$ -- 0
+while$ -- 33
+width$ -- 11
+write$ -- 121
