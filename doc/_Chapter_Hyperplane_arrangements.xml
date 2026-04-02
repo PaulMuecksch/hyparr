@@ -12,22 +12,20 @@
 <Heading>Construction of arrangements of hyperplanes</Heading>
 
 <ManSection>
-  <Oper Arg="r" Name="HyperplaneArrangement" Label="for IsList"/>
+  <Oper Arg="R" Name="HyperplaneArrangement" Label="for IsList"/>
  <Returns>A hyperplane arrangement
 </Returns>
  <Description>
   Constructs a hyperplane arrangement from a list <A>R</A> of vectors
   representing defining linear forms of hyperplanes.
 <P/>
-  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the hyperplane
+  Each vector <M>r = [r_1,\dots,r_n]</M> in <A>R</A> corresponds to the hyperplane
   <Display>
      r_1 x_1 + \cdots + r_n x_n = 0.
   </Display>
   The vectors must lie in the same vector space.
 <P/>
-  Linearly dependent defining forms are removed automatically, so the
-  resulting arrangement only stores pairwise linearly independent
-  hyperplanes.
+  Linearly dependent defining forms are removed automatically.
 <P/>
 <Example><![CDATA[
 gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);
@@ -89,7 +87,7 @@ gap> A:=AGpql(3,3,2); Roots(A);
 </Returns>
  <Description>
  Returns the field of definition of <A>A</A>.
- For further compuations, only cyclotomic fields are considered.
+ For further compuations, in characterisic <Math>0</Math> only cyclotomic fields are considered.
 <Example><![CDATA[
 
 ]]></Example>

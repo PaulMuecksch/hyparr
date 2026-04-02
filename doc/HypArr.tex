@@ -159,7 +159,7 @@ lattices, face posets, Milnor fibers and complements.
 \subsection{\textcolor{Chapter }{HyperplaneArrangement (for IsList)}}
 \logpage{[ 2, 1, 1 ]}\nobreak
 \hyperdef{L}{X860548D886CE5BA2}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HyperplaneArrangement({\mdseries\slshape r})\index{HyperplaneArrangement@\texttt{HyperplaneArrangement}!for IsList}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HyperplaneArrangement({\mdseries\slshape R})\index{HyperplaneArrangement@\texttt{HyperplaneArrangement}!for IsList}
 \label{HyperplaneArrangement:for IsList}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
@@ -169,12 +169,11 @@ A hyperplane arrangement
 
  Constructs a hyperplane arrangement from a list \mbox{\texttt{\mdseries\slshape R}} of vectors representing defining linear forms of hyperplanes. 
 
- Each vector $r = [r_1,\dots,r_n]$ corresponds to the hyperplane 
+ Each vector $r = [r_1,\dots,r_n]$ in \mbox{\texttt{\mdseries\slshape R}} corresponds to the hyperplane 
 \[ r_1 x_1 + \cdots + r_n x_n = 0. \]
  The vectors must lie in the same vector space. 
 
- Linearly dependent defining forms are removed automatically, so the resulting
-arrangement only stores pairwise linearly independent hyperplanes. 
+ Linearly dependent defining forms are removed automatically. 
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
@@ -248,7 +247,7 @@ A field
 
 
 
- Returns the field of definition of \mbox{\texttt{\mdseries\slshape A}}. For further compuations, only cyclotomic fields are considered. 
+ Returns the field of definition of \mbox{\texttt{\mdseries\slshape A}}. For further compuations, in characterisic $0$ only cyclotomic fields are considered. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   
 \end{Verbatim}
@@ -837,11 +836,11 @@ arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with th
 arrangements such as \emph{inductive freeness} due to H. Terao \cite{Terao1980_FreeI} and \emph{divisionell freeness} due to T. Abe \cite{Abe16_DivFree}. 
 
  
-\section{\textcolor{Chapter }{Module of logarithmic vector fields}}\label{Chapter_Free_arrangements_Section_Module_of_logarithmic_vector_fields}
+\section{\textcolor{Chapter }{Module of logarithmic vector fields aka derivation modules of arrangements}}\label{Chapter_Free_arrangements_Section_Module_of_logarithmic_vector_fields_aka_derivation_modules_of_arrangements}
 \logpage{[ 3, 1, 0 ]}
-\hyperdef{L}{X7C8434B07E8EF7A1}{}
+\hyperdef{L}{X875DF181804D1224}{}
 {
-  The functions in this section all use the \textsc{singular} package to call functions from \textsc{Singular} for commutative algebra calculations \cite{DGPS_Singular4} 
+  The functions in this section all use the \textsc{singular} package to call functions from \textsc{Singular}\cite{DGPS_Singular4} for commutative algebra calculations. 
 
 \subsection{\textcolor{Chapter }{DerModule (for IsHyperplaneArrangement)}}
 \logpage{[ 3, 1, 1 ]}\nobreak

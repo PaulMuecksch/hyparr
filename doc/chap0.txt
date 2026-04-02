@@ -70,7 +70,8 @@
       2.7-2 HArrResX
       2.7-3 DrawLatex3Arr
   3 [33X[0;0YFree arrangements[133X
-    3.1 [33X[0;0YModule of logarithmic vector fields[133X
+    3.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules of
+    arrangements[133X
       3.1-1 DerModule
       3.1-2 DerModGenerators
       3.1-3 DerModPRing

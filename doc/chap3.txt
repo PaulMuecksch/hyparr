@@ -6,10 +6,11 @@
   [13Xdivisionell freeness[113X due to T. Abe [\te16].[133X
   
   
-  [1X3.1 [33X[0;0YModule of logarithmic vector fields[133X[101X
+  [1X3.1   [33X[0;0YModule   of  logarithmic  vector  fields  aka  derivation  modules  of[101X
+  [1Xarrangements[133X[101X
   
   [33X[0;0YThe functions in this section all use the [12Xsingular[112X package to call functions
-  from [12XSingular[112X for commutative algebra calculations [DGPS24][133X
+  from [12XSingular[112X[DGPS24] for commutative algebra calculations.[133X
   
   [1X3.1-1 DerModule[101X
   

@@ -11,12 +11,12 @@
 
 #################################
 ##
-#! @Section Module of logarithmic vector fields
+#! @Section Module of logarithmic vector fields aka derivation modules of arrangements
 ##
 #################################
 
 #! The functions in this section all use the <B>singular</B> package
-#! to call functions from <B>Singular</B> for commutative algebra calculations <Cite Key="DGPS_Singular4"/>
+#! to call functions from <B>Singular</B><Cite Key="DGPS_Singular4"/> for commutative algebra calculations.
 
 DeclareCategory("IsDerivationModule", IsComponentObjectRep and IsAttributeStoringRep );
 

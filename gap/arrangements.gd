@@ -45,21 +45,19 @@ DeclareRepresentation(
 ##
 #################################
 
-#! @Arguments r
+#! @Arguments R
 #! @Returns A hyperplane arrangement
 #! @Description
 #!  Constructs a hyperplane arrangement from a list <A>R</A> of vectors
 #!  representing defining linear forms of hyperplanes.
 #!
-#!  Each vector <M>r = [r_1,\dots,r_n]</M> corresponds to the hyperplane
+#!  Each vector <M>r = [r_1,\dots,r_n]</M> in <A>R</A> corresponds to the hyperplane
 #!  <Display>
 #!     r_1 x_1 + \cdots + r_n x_n = 0.
 #!  </Display>
 #!  The vectors must lie in the same vector space.
 #!
-#!  Linearly dependent defining forms are removed automatically, so the
-#!  resulting arrangement only stores pairwise linearly independent
-#!  hyperplanes.
+#!  Linearly dependent defining forms are removed automatically.
 #!
 #! @BeginExampleSession
 #! gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);
@@ -106,7 +104,7 @@ DeclareAttribute("Roots", IsHyperplaneArrangement);
 #! @Returns A field
 #! @Description
 #! Returns the field of definition of <A>A</A>.
-#! For further compuations, only cyclotomic fields are considered.
+#! For further compuations, in characterisic $0$ only cyclotomic fields are considered.
 #! @BeginExampleSession
 #! 
 #! @EndExampleSession

@@ -10,13 +10,13 @@
   
   [1X2.1-1 HyperplaneArrangement[101X
   
-  [33X[1;0Y[29X[2XHyperplaneArrangement[102X( [3Xr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XHyperplaneArrangement[102X( [3XR[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement[133X
   
   [33X[0;0YConstructs  a  hyperplane  arrangement from a list [3XR[103X of vectors representing
   defining linear forms of hyperplanes.[133X
   
-  [33X[0;0YEach vector [22Xr = [r_1,dots,r_n][122X corresponds to the hyperplane[133X
+  [33X[0;0YEach vector [22Xr = [r_1,dots,r_n][122X in [3XR[103X corresponds to the hyperplane[133X
   
   
   [24X[33X[0;6Yr_1 x_1 + \cdots + r_n x_n = 0.[133X
@@ -25,8 +25,7 @@
   
   [33X[0;0YThe vectors must lie in the same vector space.[133X
   
-  [33X[0;0YLinearly   dependent  defining  forms  are  removed  automatically,  so  the
-  resulting arrangement only stores pairwise linearly independent hyperplanes.[133X
+  [33X[0;0YLinearly dependent defining forms are removed automatically.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1]]);[127X[104X
@@ -71,8 +70,8 @@
   [33X[1;0Y[29X[2XHArrDefField[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA field[133X
   
-  [33X[0;0YReturns  the  field  of  definition  of  [3XA[103X.  For  further  compuations, only
-  cyclotomic fields are considered.[133X
+  [33X[0;0YReturns   the  field  of  definition  of  [3XA[103X.  For  further  compuations,  in
+  characterisic [23X0[123X only cyclotomic fields are considered.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
