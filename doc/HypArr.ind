@@ -37,7 +37,7 @@
   \item \texttt  {HArrIsIrreducible}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
   \item \texttt  {HArrIsSimplicial}
-    \subitem for IsHyperplaneArrangement, \hyperpage{19}
+    \subitem for IsHyperplaneArrangement and IsReal, \hyperpage{19}
   \item \texttt  {HArrIsSupersolvable}
     \subitem for IsHyperplaneArrangement, \hyperpage{17}
   \item \texttt  {HArrResHind}, \hyperpage{10}
@@ -153,7 +153,7 @@
   \indexspace
 
   \item \texttt  {SalvettiComplex}
-    \subitem for IsHyperplaneArrangement, \hyperpage{24}
+    \subitem for IsHyperplaneArrangement and IsReal, \hyperpage{24}
     \subitem for IsOrientedMatroid, \hyperpage{24}
   \item \texttt  {SeparatingSet}, \hyperpage{28}
   \item \texttt  {SsS3}, \hyperpage{29}

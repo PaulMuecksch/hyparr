@@ -192,7 +192,7 @@ DeclareGlobalFunction("HArr_SpaceSFx");;
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! true
 #! @EndExampleSession
-DeclareProperty("HArrIsSimplicial", IsHyperplaneArrangement);
+DeclareProperty("HArrIsSimplicial", IsHyperplaneArrangement and IsReal);
 
 # DeclareProperty("OMIsSimplicial", IsOrientedMatroid);
 

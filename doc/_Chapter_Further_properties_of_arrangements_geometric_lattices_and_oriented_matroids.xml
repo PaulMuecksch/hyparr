@@ -211,7 +211,7 @@ false
 <Heading>Simplicial arrangements</Heading>
 
 <ManSection>
-  <Prop Arg="A" Name="HArrIsSimplicial" Label="for IsHyperplaneArrangement"/>
+  <Prop Arg="A" Name="HArrIsSimplicial" Label="for IsHyperplaneArrangement and IsReal"/>
  <Returns>true or false.
 </Returns>
  <Description>

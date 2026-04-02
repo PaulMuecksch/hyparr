@@ -118,13 +118,13 @@ end);
 
 
 InstallMethod(HArrIsSimplicial,
-    [IsHyperplaneArrangement],
+    [IsHyperplaneArrangement and IsReal],
 function(A)
 local l,t;#,rk;
-    if not(IsReal(A)) then
-        Print("Arrangement is not real!\n");
-        return fail;
-    fi;;
+    # if not(IsReal(A)) then
+    #     Print("Arrangement is not real!\n");
+    #     return fail;
+    # fi;;
 	l:=Dimension(A);
 	t:=X(Rationals,"t");
 	#rk:=Rank(A.roots);;

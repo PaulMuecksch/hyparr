@@ -524,7 +524,7 @@ end);
 
 InstallMethod(SalvettiComplex,
     "for a real arrangement",
-    [ IsHyperplaneArrangement ],
+    [ IsHyperplaneArrangement and IsReal ],
 function(A)
 local OM,SalCpx,SalOF, FCpx,Topes,d,T, k,type;
     OM := OrientedMatroid(A);;

@@ -72,7 +72,7 @@
 \makelabel{hyparr:HArrIsSupersolvable for IsHyperplaneArrangement}{5.1.5}{X7DC90A0286D5664A}
 \makelabel{hyparr:OMIsSupersolvable for IsOrientedMatroid}{5.1.6}{X78B7232883025D41}
 \makelabel{hyparr:IsFormal for IsHyperplaneArrangement}{5.2.1}{X808977C7824120DF}
-\makelabel{hyparr:HArrIsSimplicial for IsHyperplaneArrangement}{5.3.1}{X7D69068B7DA44D16}
+\makelabel{hyparr:HArrIsSimplicial for IsHyperplaneArrangement and IsReal}{5.3.1}{X7EEAC3257EC22C1B}
 \makelabel{hyparr:OMBoundedCpx for IsOrientedMatroid, IsInt}{5.4.1}{X7F2F674F8273D120}
 \makelabel{hyparr:OMSupportsFalkWeights for IsOrientedMatroid, IsInt}{5.4.2}{X87CE42827934F11F}
 \makelabel{hyparr:OrientedMatroid for IsList}{6.1.1}{X82EE52377B03CC80}
@@ -84,7 +84,7 @@
 \makelabel{hyparr:TopeGraph for IsOrientedMatroid}{6.2.6}{X7B35E88A79675D1E}
 \makelabel{hyparr:OMCovectors for IsOrientedMatroid}{6.2.7}{X7B2D2370811476C9}
 \makelabel{hyparr:SalvettiComplex for IsOrientedMatroid}{6.2.8}{X7ED4D5138012EB6C}
-\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement}{6.2.9}{X8333113D7A7A3A91}
+\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement and IsReal}{6.2.9}{X811DC01A7C2F985B}
 \makelabel{hyparr:FPGroundSet for IsFacePoset}{6.2.10}{X85AB2A797ABE8967}
 \makelabel{hyparr:FPOrder for IsFacePoset}{6.2.11}{X7E28E057841D6ECD}
 \makelabel{hyparr:OMChirotope for IsOrientedMatroid}{6.2.12}{X854947857F5E5D29}
