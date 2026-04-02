@@ -11,7 +11,7 @@ SetPackageInfo( rec(
 PackageName := "HypArr",
 Subtitle := "Computations with hyperplane arrangements",
 Version := "0.26.04",
-Date := "01/04/2026", # dd/mm/yyyy format
+Date := "02/04/2026", # dd/mm/yyyy format
 License := "GPL-3.0-or-later",
 
 Persons := [
@@ -22,8 +22,13 @@ Persons := [
     Email := "paul.muecksch+uni@gmail.com",
     IsAuthor := true,
     IsMaintainer := true,
-    PostalAddress := "Leibniz Universität Hannover, Welfengarten 1, 30167 Hannover, Germany",
-    Place := "Welfengarten 1, 30167 Hannover, Germany",
+    PostalAddress := Concatenation([
+        "Leibniz Universität Hannover/n",
+        "Institut für Algebra, Zahlentheorie und Diskrete Mathematik\n",
+        "Welfengarten 1\n",
+        "30167 Hannover, Germany"
+    ]),
+    Place := "Hannover",
     Institution := "Leibniz Universität Hannover",
   ),
 ],
