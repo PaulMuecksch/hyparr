@@ -17,6 +17,12 @@ Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
 M.~Cuntz and L.~Kühne.
 \newblock On arrangements of hyperplanes from connected subgraphs, 2022.
 
+\bibitem[DGPS24]{DGPS_Singular4}
+Wolfram Decker, Gert-Martin Greuel, Gerhard Pfister, and Hans Sch\"onemann.
+\newblock {\sc Singular} {4-4-0} --- {A} computer algebra system for polynomial
+  computations.
+\newblock \url{http://www.singular.uni-kl.de}, 2024.
+
 \bibitem[Ell26]{GAP_HAP}
 G.~Ellis.
 \newblock {HAP}, {Homological Algebra Programming}, {V}ersion 1.75.

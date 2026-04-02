@@ -11,7 +11,8 @@
 \makelabel{hyparr:Operations}{2.6}{X7DE8E16C7C2D387B}
 \makelabel{hyparr:Global methods}{2.7}{X80841F8D80722081}
 \makelabel{hyparr:Free arrangements}{3}{X84CDDA0382B013CF}
-\makelabel{hyparr:Freeness properties}{3.1}{X82FF317F7EFD52AF}
+\makelabel{hyparr:Module of logarithmic vector fields}{3.1}{X7C8434B07E8EF7A1}
+\makelabel{hyparr:Freeness properties}{3.2}{X82FF317F7EFD52AF}
 \makelabel{hyparr:Milnor fibers}{4}{X80236F007DAFE4C2}
 \makelabel{hyparr:Complexes}{4.1}{X79C388D385DB7CD1}
 \makelabel{hyparr:Further properties of arrangements, geometric lattices, and oriented matroids}{5}{X7E898D0F86EF9F1E}
@@ -36,10 +37,11 @@
 \makelabel{hyparr:HyperplaneArrangement for IsList}{2.1.1}{X860548D886CE5BA2}
 \makelabel{hyparr:Dimension for IsHyperplaneArrangement}{2.2.1}{X7CCC1A2A7C3F2CC5}
 \makelabel{hyparr:Roots for IsHyperplaneArrangement}{2.2.2}{X8419FA5F7A08DF56}
-\makelabel{hyparr:IntersectionLattice for IsHyperplaneArrangement}{2.2.3}{X8555074B83058460}
-\makelabel{hyparr:CharPoly for IsHyperplaneArrangement}{2.2.4}{X8426CC4D7A8491A5}
-\makelabel{hyparr:ExpArr for IsHyperplaneArrangement}{2.2.5}{X83DFD7407D949CD9}
-\makelabel{hyparr:MSetInvL for IsHyperplaneArrangement}{2.2.6}{X852CC1A8795FCD15}
+\makelabel{hyparr:HArrDefField for IsHyperplaneArrangement}{2.2.3}{X7A636F3A7EBD9505}
+\makelabel{hyparr:IntersectionLattice for IsHyperplaneArrangement}{2.2.4}{X8555074B83058460}
+\makelabel{hyparr:CharPoly for IsHyperplaneArrangement}{2.2.5}{X8426CC4D7A8491A5}
+\makelabel{hyparr:ExpArr for IsHyperplaneArrangement}{2.2.6}{X83DFD7407D949CD9}
+\makelabel{hyparr:MSetInvL for IsHyperplaneArrangement}{2.2.7}{X852CC1A8795FCD15}
 \makelabel{hyparr:IsReal for IsHyperplaneArrangement}{2.3.1}{X7E907A097A17195F}
 \makelabel{hyparr:HArrIsIrreducible for IsHyperplaneArrangement}{2.3.2}{X85260BFF870DE234}
 \makelabel{hyparr:HArrIsGeneric for IsHyperplaneArrangement}{2.3.3}{X804526007DD22027}
@@ -60,8 +62,15 @@
 \makelabel{hyparr:HArrResHind}{2.7.1}{X7CC338E67CE223FE}
 \makelabel{hyparr:HArrResX}{2.7.2}{X784AA86286AA9DD8}
 \makelabel{hyparr:DrawLatex3Arr}{2.7.3}{X82C8EAF88340865B}
-\makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{3.1.1}{X80F4D6247CAA1BDA}
-\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{3.1.2}{X85DAC6FC78DDED6D}
+\makelabel{hyparr:DerModule for IsHyperplaneArrangement}{3.1.1}{X783314398329E3BE}
+\makelabel{hyparr:DerModGenerators for IsDerivationModule}{3.1.2}{X7B6780568674988A}
+\makelabel{hyparr:DerModPRing for IsDerivationModule}{3.1.3}{X8174C2FD82AA2B81}
+\makelabel{hyparr:DerModDegreeSequence for IsDerivationModule}{3.1.4}{X78A309B97E68E70F}
+\makelabel{hyparr:DerModProjDim for IsDerivationModule}{3.1.5}{X81D05AA282B2B62E}
+\makelabel{hyparr:DerModIsFree for IsDerivationModule}{3.1.6}{X81110BE983107955}
+\makelabel{hyparr:HArrIsFree for IsHyperplaneArrangement}{3.1.7}{X7C55194B8304FDAC}
+\makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{3.2.1}{X80F4D6247CAA1BDA}
+\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{3.2.2}{X85DAC6FC78DDED6D}
 \makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{4.1.1}{X794B90A67B153E6F}
 \makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{4.1.2}{X7D30E85086B93DB0}
 \makelabel{hyparr:FPtoCWCpx}{4.1.3}{X7BBA6F967E493B5D}

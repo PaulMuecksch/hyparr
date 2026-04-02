@@ -3,15 +3,23 @@
   [1XIndex[101X
   
   [2XAGpql[102X 7.1-1 
-  [2XCharPoly[102X, for IsHyperplaneArrangement 2.2-4 
+  [2XCharPoly[102X, for IsHyperplaneArrangement 2.2-5 
   [2XConnectedSubgraphArr[102X, for IsList 7.1-3 
+  [2XDerModDegreeSequence[102X, for IsDerivationModule 3.1-4 
+  [2XDerModGenerators[102X, for IsDerivationModule 3.1-2 
+  [2XDerModIsFree[102X, for IsDerivationModule 3.1-6 
+  [2XDerModPRing[102X, for IsDerivationModule 3.1-3 
+  [2XDerModProjDim[102X, for IsDerivationModule 3.1-5 
+  [2XDerModule[102X, for IsHyperplaneArrangement 3.1-1 
   [2XDimension[102X, for IsHyperplaneArrangement 2.2-1 
   [2XDrawLatex3Arr[102X 2.7-3 
   [2XEssentialization[102X, for IsHyperplaneArrangement 2.6-2 
-  [2XExpArr[102X, for IsHyperplaneArrangement 2.2-5 
+  [2XExpArr[102X, for IsHyperplaneArrangement 2.2-6 
   [2XFPGroundSet[102X, for IsFacePoset 6.2-10 
   [2XFPOrder[102X, for IsFacePoset 6.2-11 
   [2XFPtoCWCpx[102X 4.1-3 
+  [2XHArrDefField[102X, for IsHyperplaneArrangement 2.2-3 
+  [2XHArrIsFree[102X, for IsHyperplaneArrangement 3.1-7 
   [2XHArrIsGeneric[102X, for IsHyperplaneArrangement 2.3-3 
   [2XHArrIsIrreducible[102X, for IsHyperplaneArrangement 2.3-2 
   [2XHArrIsSimplicial[102X, for IsHyperplaneArrangement and IsReal 5.3-1 
@@ -22,10 +30,10 @@
   [2XHasSimpleSimplexRk[102X, for IsOrientedMatroid, IsInt 6.4-2 
   [2XHasSimpleTriangle[102X, for IsOrientedMatroid 6.3-3 
   [2XHyperplaneArrangement[102X, for IsList 2.1-1 
-  [2XIntersectionLattice[102X, for IsHyperplaneArrangement 2.2-3 
-  [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 3.1-2 
+  [2XIntersectionLattice[102X, for IsHyperplaneArrangement 2.2-4 
+  [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 3.2-2 
   [2XIsFormal[102X, for IsHyperplaneArrangement 5.2-1 
-  [2XIsInductivelyFree[102X, for IsHyperplaneArrangement 3.1-1 
+  [2XIsInductivelyFree[102X, for IsHyperplaneArrangement 3.2-1 
   [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.6-1 
       for IsOrientedMatroid,IsOrientedMatroid 6.4-1 
   [2XIsOMEquiv[102X 6.5-3 
@@ -48,7 +56,7 @@
   [2XLRankFunction[102X, for IsGeomLattice 2.4-5 
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 4.1-2 
       for IsOrientedMatroid 4.1-1 
-  [2XMSetInvL[102X, for IsHyperplaneArrangement 2.2-6 
+  [2XMSetInvL[102X, for IsHyperplaneArrangement 2.2-7 
   [2XOMBoundedCpx[102X, for IsOrientedMatroid, IsInt 5.4-1 
   [2XOMChirotope[102X, for IsOrientedMatroid 6.2-12 
   [2XOMCocircuits[102X, for IsOrientedMatroid 6.2-5 

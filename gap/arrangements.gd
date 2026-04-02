@@ -30,7 +30,7 @@ DeclareCategory("IsGeomLattice", IsComponentObjectRep and IsAttributeStoringRep 
 DeclareRepresentation(
     "IsHyperplaneArrangementRep",
     IsHyperplaneArrangement,
-    ["roots","dimension","lattice","charpoly","salcpx","exp"]
+    ["roots","dimension","lattice","charpoly","salcpx","exp","deffield"]
 );
 
 DeclareRepresentation(
@@ -100,6 +100,17 @@ DeclareAttribute("Dimension", IsHyperplaneArrangement);
 #! [ [ 1, -E(3) ], [ 1, -E(3)^2 ], [ 1, -1 ] ]
 #! @EndExampleSession
 DeclareAttribute("Roots", IsHyperplaneArrangement);
+
+
+#! @Arguments A
+#! @Returns A field
+#! @Description
+#! Returns the field of definition of <A>A</A>.
+#! For further compuations, only cyclotomic fields are considered.
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
+DeclareAttribute("HArrDefField", IsHyperplaneArrangement);
 
 # @Description Synonym for <C>Roots</C>.
 DeclareSynonym( "LForms" ,Roots);

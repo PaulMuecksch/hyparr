@@ -84,6 +84,22 @@ gap> A:=AGpql(3,3,2); Roots(A);
 
 
 <ManSection>
+  <Attr Arg="A" Name="HArrDefField" Label="for IsHyperplaneArrangement"/>
+ <Returns>A field
+</Returns>
+ <Description>
+ Returns the field of definition of <A>A</A>.
+ For further compuations, only cyclotomic fields are considered.
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="A" Name="IntersectionLattice" Label="for IsHyperplaneArrangement"/>
  <Returns>An object of type <C>IsGeomLattice</C>.
 </Returns>

@@ -76,7 +76,8 @@ function(r)
     return Objectify(type,
         rec(
             roots := l,
-            dimension := dim
+            dimension := dim,
+			deffield := DefaultField(Concatenation(l))
         )
     );
 end);
@@ -108,6 +109,9 @@ InstallMethod(Dimension,
     [IsHyperplaneArrangement],
     A -> A!.dimension);
 
+InstallMethod(HArrDefField,
+    [IsHyperplaneArrangement],
+    A -> A!.deffield);
 
 InstallMethod(IsReal,
     [IsHyperplaneArrangement],

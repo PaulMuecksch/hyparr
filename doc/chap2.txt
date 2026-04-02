@@ -66,7 +66,19 @@
     [4X[28X[ [ 1, -E(3) ], [ 1, -E(3)^2 ], [ 1, -1 ] ][128X[104X
   [4X[32X[104X
   
-  [1X2.2-3 IntersectionLattice[101X
+  [1X2.2-3 HArrDefField[101X
+  
+  [33X[1;0Y[29X[2XHArrDefField[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA field[133X
+  
+  [33X[0;0YReturns  the  field  of  definition  of  [3XA[103X.  For  further  compuations, only
+  cyclotomic fields are considered.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-4 IntersectionLattice[101X
   
   [33X[1;0Y[29X[2XIntersectionLattice[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YAn object of type [10XIsGeomLattice[110X.[133X
@@ -92,7 +104,7 @@
     [4X[28X  [ [ 1, 2, 3 ] ] ][128X[104X
   [4X[32X[104X
   
-  [1X2.2-4 CharPoly[101X
+  [1X2.2-5 CharPoly[101X
   
   [33X[1;0Y[29X[2XCharPoly[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya univariate polynomial with integral coefficients.[133X
@@ -107,7 +119,7 @@
     [4X[28Xt^3-6*t^2+11*t-6[128X[104X
   [4X[32X[104X
   
-  [1X2.2-5 ExpArr[101X
+  [1X2.2-6 ExpArr[101X
   
   [33X[1;0Y[29X[2XExpArr[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list of integers, or fail[133X
@@ -122,13 +134,13 @@
     [4X[28X[ 1, 2 ][128X[104X
   [4X[32X[104X
   
-  [1X2.2-6 MSetInvL[101X
+  [1X2.2-7 MSetInvL[101X
   
   [33X[1;0Y[29X[2XMSetInvL[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YAn object of type IsGeomLattice.[133X
   
   [33X[0;0YComputes    multiset   invariants   of   the   intersection   lattice   (see
-  [2XIntersectionLattice[102X ([14X2.2-3[114X)) of the hyperplane arrangement [3XA[103X.[133X
+  [2XIntersectionLattice[102X ([14X2.2-4[114X)) of the hyperplane arrangement [3XA[103X.[133X
   
   [33X[0;0YFor  each  level of the lattice, the function records how many intersections
   occur with a given number of defining hyperplanes.[133X
