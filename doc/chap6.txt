@@ -99,7 +99,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
     [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O); GLGroundSet(L);[127X[104X
+    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O); LGroundSet(L);[127X[104X
     [4X[28X<Geometric lattice: 4 atoms, rank 3>[128X[104X
     [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [128X[104X
     [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [128X[104X
@@ -107,7 +107,7 @@
     [4X[28X  [ [ 1, 2, 3, 4 ] ] ][128X[104X
     [4X[25Xgap>[125X [27XO := OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
     [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O); GLGroundSet(L);[127X[104X
+    [4X[25Xgap>[125X [27XL:=OMGeomLattice(O); LGroundSet(L);[127X[104X
     [4X[28X<Geometric lattice: 4 atoms, rank 3>[128X[104X
     [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [128X[104X
     [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], [128X[104X
@@ -381,7 +381,7 @@
     [4X[28X<OrientedMatroid: 5 elements, rank 4>[128X[104X
     [4X[25Xgap>[125X [27XL:=OMGeomLattice(O);[127X[104X
     [4X[28X<Geometric lattice: 5 atoms, rank 4>[128X[104X
-    [4X[25Xgap>[125X [27XGLkFlats(L)(3);[127X[104X
+    [4X[25Xgap>[125X [27XLkFlats(L)(3);[127X[104X
     [4X[28X[ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ][128X[104X
     [4X[25Xgap>[125X [27XOMLocalizationRk(O,[1,2,3,5],3);[127X[104X
     [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X

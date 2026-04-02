@@ -34,7 +34,7 @@ InstallGlobalFunction(HArr_SpaceSFx,
 function(A)
 local LA2,LA2ns,m,Fm,SFx,n,Am;;
     n:=Length(Roots(A));;
-    LA2:=GLkFlats(IntersectionLattice(A))(2);;
+    LA2:=LkFlats(IntersectionLattice(A))(2);;
     LA2ns := LA2{Positions(List(LA2,x->Length(x)>2),true)};;
     SFx:=NullMat(1,n);;
     for m in LA2ns do
@@ -55,25 +55,25 @@ function(A)
     fi;;
 end);
 
-InstallMethod(GLIsModularPair, 
+InstallMethod(LIsModularPair, 
     [IsGeomLattice, IsList, IsList],
 function(L, m1, m2)
 local d, rfct;
-    rfct := GLRankFunction(L);;
+    rfct := LRankFunction(L);;
     if rfct(m1) + rfct(m2) = rfct(Union(m1,m2)) +  rfct(IntersectionSet(m1,m2)) then
         return true;
     fi;;
     return false;
 end);
 
-InstallMethod(GLIsModularFlat,
+InstallMethod(LIsModularFlat,
     [IsGeomLattice, IsList],
 function(L,m)
 local mt,M,j;
-	M:=Reversed(ShallowCopy(GLGroundSet(L)){[1..GLRank(L)-1]});
-	for j in [1..GLRank(L)-1] do
+	M:=Reversed(ShallowCopy(LGroundSet(L)){[1..LRank(L)-1]});
+	for j in [1..LRank(L)-1] do
 		for mt in M[j] do			
-			if not(GLIsModularPair(L,m,mt)) then
+			if not(LIsModularPair(L,m,mt)) then
 				return false;
 			fi;
 		od;
@@ -81,24 +81,24 @@ local mt,M,j;
 	return true;
 end);
 
-InstallMethod(GLModularFlatsRk,
+InstallMethod(LModularFlatsRk,
     [IsGeomLattice, IsInt],
 function(L,k)
-    return GLkFlats(L)(k){Positions(List(GLkFlats(L)(k),m->GLIsModularFlat(L,m)),true)};;
+    return LkFlats(L)(k){Positions(List(LkFlats(L)(k),m->LIsModularFlat(L,m)),true)};;
 end);;
 
-InstallMethod(GLIsSupersolvable,
+InstallMethod(LIsSupersolvable,
     [IsGeomLattice],
 function(L)
 local LLoc, r, m;
-    r := GLRank(L);
+    r := LRank(L);
     if r <= 2 then
         return true;;
     fi;;
-    for m in GLkFlats(L)(r-1) do
-        if GLIsModularFlat(L,m) then
-            LLoc := GLLocalizationRk(L,m,r-1);
-            return GLIsSupersolvable(LLoc);
+    for m in LkFlats(L)(r-1) do
+        if LIsModularFlat(L,m) then
+            LLoc := LLocalizationRk(L,m,r-1);
+            return LIsSupersolvable(LLoc);
         fi;;
     od;;
     return false;;
@@ -107,13 +107,13 @@ end);
 InstallMethod(HArrIsSupersolvable,
     [IsHyperplaneArrangement],
 function(A)
-    return GLIsSupersolvable(IntersectionLattice(A));
+    return LIsSupersolvable(IntersectionLattice(A));
 end);
 
 InstallMethod(OMIsSupersolvable,
     [IsOrientedMatroid],
 function(OM)
-    return GLIsSupersolvable(OMGeomLattice(OM));
+    return LIsSupersolvable(OMGeomLattice(OM));
 end);
 
 
@@ -140,7 +140,7 @@ end);
 # function(OM)
 # local l,t,f;
 # 	l:=OMRank(OM);
-#     f :=GLCharPoly(OMGeomLattice(OM));
+#     f :=LCharPoly(OMGeomLattice(OM));
 # 	t := IndeterminateOfUnivariateRationalFunction(f);;
 # 	return l*Value(CharPoly(A),[t],[-1])
 # 		+2*Sum(List([1..Length(OMGroundSet(OM))],y->Value(CharPoly(HArrResHind(A,y)),[t],[-1])))

@@ -42,18 +42,18 @@
 \makelabel{hyparr:IsReal for IsHyperplaneArrangement}{2.3.1}{X7E907A097A17195F}
 \makelabel{hyparr:HArrIsIrreducible for IsHyperplaneArrangement}{2.3.2}{X85260BFF870DE234}
 \makelabel{hyparr:HArrIsGeneric for IsHyperplaneArrangement}{2.3.3}{X804526007DD22027}
-\makelabel{hyparr:GLGroundSet for IsGeomLattice}{2.4.1}{X83B4DD0E8325942E}
-\makelabel{hyparr:GLAtoms for IsGeomLattice}{2.4.2}{X7A01B73E7BE22EDB}
-\makelabel{hyparr:GLRank for IsGeomLattice}{2.4.3}{X83CB7161847F6FF7}
-\makelabel{hyparr:GLkFlats for IsGeomLattice}{2.4.4}{X79CA2563782654EE}
-\makelabel{hyparr:GLRankFunction for IsGeomLattice}{2.4.5}{X7C9329388710966F}
-\makelabel{hyparr:GLGraph for IsGeomLattice}{2.4.6}{X803CD5A07FA65A9C}
-\makelabel{hyparr:GLAutGroup for IsGeomLattice}{2.4.7}{X8120B26884492B63}
-\makelabel{hyparr:GLMoebius for IsGeomLattice}{2.4.8}{X798F89EB80281979}
-\makelabel{hyparr:GLCharPoly for IsGeomLattice}{2.4.9}{X7C81758087597A80}
-\makelabel{hyparr:GLIsIrreducible for IsGeomLattice}{2.5.1}{X7C4806937CF2DE83}
-\makelabel{hyparr:GLIsBoolean for IsGeomLattice}{2.5.2}{X81BB82B28355CFA0}
-\makelabel{hyparr:GLIsGeneric for IsGeomLattice}{2.5.3}{X7F3537B47F5FD64C}
+\makelabel{hyparr:LGroundSet for IsGeomLattice}{2.4.1}{X864BB73F7812E0B4}
+\makelabel{hyparr:LAtoms for IsGeomLattice}{2.4.2}{X83946B69829FDA91}
+\makelabel{hyparr:LRank for IsGeomLattice}{2.4.3}{X86823DA184430088}
+\makelabel{hyparr:LkFlats for IsGeomLattice}{2.4.4}{X8255DDFF86DBA263}
+\makelabel{hyparr:LRankFunction for IsGeomLattice}{2.4.5}{X807645CC7B8E3782}
+\makelabel{hyparr:LGraph for IsGeomLattice}{2.4.6}{X79A909F786A94A47}
+\makelabel{hyparr:LAutGroup for IsGeomLattice}{2.4.7}{X7E1203CB7969B4A0}
+\makelabel{hyparr:LMoebius for IsGeomLattice}{2.4.8}{X80A93EFA7EC0496A}
+\makelabel{hyparr:LCharPoly for IsGeomLattice}{2.4.9}{X83B3C4237FD0B9AA}
+\makelabel{hyparr:LIsIrreducible for IsGeomLattice}{2.5.1}{X85C9C1F47977DAD5}
+\makelabel{hyparr:LIsBoolean for IsGeomLattice}{2.5.2}{X8444E8837E952FE4}
+\makelabel{hyparr:LIsGeneric for IsGeomLattice}{2.5.3}{X7ACA5D857F2A0913}
 \makelabel{hyparr:IsLEquiv for IsHyperplaneArrangement,IsHyperplaneArrangement}{2.6.1}{X8367DC267DCC0635}
 \makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.6.2}{X7BD35FA07804BB70}
 \makelabel{hyparr:HArrResHind}{2.7.1}{X7CC338E67CE223FE}
@@ -64,10 +64,10 @@
 \makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{4.1.1}{X794B90A67B153E6F}
 \makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{4.1.2}{X7D30E85086B93DB0}
 \makelabel{hyparr:FPtoCWCpx}{4.1.3}{X7BBA6F967E493B5D}
-\makelabel{hyparr:GLIsModularPair for IsGeomLattice, IsList, IsList}{5.1.1}{X868B794B7B822DBC}
-\makelabel{hyparr:GLIsModularFlat for IsGeomLattice, IsList}{5.1.2}{X823D2069838AE04F}
-\makelabel{hyparr:GLModularFlatsRk for IsGeomLattice, IsInt}{5.1.3}{X7FA04C557F1C2E77}
-\makelabel{hyparr:GLIsSupersolvable for IsGeomLattice}{5.1.4}{X86429691877E1CB6}
+\makelabel{hyparr:LIsModularPair for IsGeomLattice, IsList, IsList}{5.1.1}{X78E6E11179F7ECB5}
+\makelabel{hyparr:LIsModularFlat for IsGeomLattice, IsList}{5.1.2}{X7FECD913876C637C}
+\makelabel{hyparr:LModularFlatsRk for IsGeomLattice, IsInt}{5.1.3}{X8271B52F816053DB}
+\makelabel{hyparr:LIsSupersolvable for IsGeomLattice}{5.1.4}{X7D95D0F37E6FBFD6}
 \makelabel{hyparr:HArrIsSupersolvable for IsHyperplaneArrangement}{5.1.5}{X7DC90A0286D5664A}
 \makelabel{hyparr:OMIsSupersolvable for IsOrientedMatroid}{5.1.6}{X78B7232883025D41}
 \makelabel{hyparr:IsFormal for IsHyperplaneArrangement}{5.2.1}{X808977C7824120DF}

@@ -124,7 +124,7 @@ DeclareAttribute("OMLForms", IsOrientedMatroid);
 #! @BeginExampleSession
 #! gap> O := OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
 #! <OrientedMatroid: 4 elements, rank 3>
-#! gap> L:=OMGeomLattice(O); GLGroundSet(L);
+#! gap> L:=OMGeomLattice(O); LGroundSet(L);
 #! <Geometric lattice: 4 atoms, rank 3>
 #! [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], 
 #!   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], 
@@ -132,7 +132,7 @@ DeclareAttribute("OMLForms", IsOrientedMatroid);
 #!   [ [ 1, 2, 3, 4 ] ] ]
 #! gap> O := OrientedMatroid(3,4,[1,1,1,1]);
 #! <OrientedMatroid: 4 elements, rank 3>
-#! gap> L:=OMGeomLattice(O); GLGroundSet(L);
+#! gap> L:=OMGeomLattice(O); LGroundSet(L);
 #! <Geometric lattice: 4 atoms, rank 3>
 #! [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], 
 #!   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], 
@@ -398,7 +398,7 @@ DeclareOperation("HasSimpleSimplexRk", [IsOrientedMatroid, IsInt]);
 #! <OrientedMatroid: 5 elements, rank 4>
 #! gap> L:=OMGeomLattice(O);
 #! <Geometric lattice: 5 atoms, rank 4>
-#! gap> GLkFlats(L)(3);
+#! gap> LkFlats(L)(3);
 #! [ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ]
 #! gap> OMLocalizationRk(O,[1,2,3,5],3);
 #! <OrientedMatroid: 4 elements, rank 3>

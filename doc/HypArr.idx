@@ -8,18 +8,18 @@
 \indexentry{IsReal@\texttt  {IsReal}!for IsHyperplaneArrangement|hyperpage}{7}
 \indexentry{HArrIsIrreducible@\texttt  {HArrIsIrreducible}!for IsHyperplaneArrangement|hyperpage}{7}
 \indexentry{HArrIsGeneric@\texttt  {HArrIsGeneric}!for IsHyperplaneArrangement|hyperpage}{7}
-\indexentry{GLGroundSet@\texttt  {GLGroundSet}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLAtoms@\texttt  {GLAtoms}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLRank@\texttt  {GLRank}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLkFlats@\texttt  {GLkFlats}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLRankFunction@\texttt  {GLRankFunction}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLGraph@\texttt  {GLGraph}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLAutGroup@\texttt  {GLAutGroup}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLMoebius@\texttt  {GLMoebius}!for IsGeomLattice|hyperpage}{8}
-\indexentry{GLCharPoly@\texttt  {GLCharPoly}!for IsGeomLattice|hyperpage}{9}
-\indexentry{GLIsIrreducible@\texttt  {GLIsIrreducible}!for IsGeomLattice|hyperpage}{9}
-\indexentry{GLIsBoolean@\texttt  {GLIsBoolean}!for IsGeomLattice|hyperpage}{9}
-\indexentry{GLIsGeneric@\texttt  {GLIsGeneric}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LGroundSet@\texttt  {LGroundSet}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LAtoms@\texttt  {LAtoms}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LRank@\texttt  {LRank}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LkFlats@\texttt  {LkFlats}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LRankFunction@\texttt  {LRankFunction}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LGraph@\texttt  {LGraph}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LAutGroup@\texttt  {LAutGroup}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LMoebius@\texttt  {LMoebius}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LCharPoly@\texttt  {LCharPoly}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LIsIrreducible@\texttt  {LIsIrreducible}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LIsBoolean@\texttt  {LIsBoolean}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LIsGeneric@\texttt  {LIsGeneric}!for IsGeomLattice|hyperpage}{9}
 \indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsHyperplaneArrangement,IsHyperplaneArrangement|hyperpage}{10}
 \indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{10}
 \indexentry{HArrResHind@\texttt  {HArrResHind}|hyperpage}{10}
@@ -30,10 +30,10 @@
 \indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{14}
 \indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{14}
 \indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{15}
-\indexentry{GLIsModularPair@\texttt  {GLIsModularPair}!for IsGeomLattice, IsList, IsList|hyperpage}{16}
-\indexentry{GLIsModularFlat@\texttt  {GLIsModularFlat}!for IsGeomLattice, IsList|hyperpage}{16}
-\indexentry{GLModularFlatsRk@\texttt  {GLModularFlatsRk}!for IsGeomLattice, IsInt|hyperpage}{17}
-\indexentry{GLIsSupersolvable@\texttt  {GLIsSupersolvable}!for IsGeomLattice|hyperpage}{17}
+\indexentry{LIsModularPair@\texttt  {LIsModularPair}!for IsGeomLattice, IsList, IsList|hyperpage}{16}
+\indexentry{LIsModularFlat@\texttt  {LIsModularFlat}!for IsGeomLattice, IsList|hyperpage}{16}
+\indexentry{LModularFlatsRk@\texttt  {LModularFlatsRk}!for IsGeomLattice, IsInt|hyperpage}{17}
+\indexentry{LIsSupersolvable@\texttt  {LIsSupersolvable}!for IsGeomLattice|hyperpage}{17}
 \indexentry{HArrIsSupersolvable@\texttt  {HArrIsSupersolvable}!for IsHyperplaneArrangement|hyperpage}{17}
 \indexentry{OMIsSupersolvable@\texttt  {OMIsSupersolvable}!for IsOrientedMatroid|hyperpage}{18}
 \indexentry{IsFormal@\texttt  {IsFormal}!for IsHyperplaneArrangement|hyperpage}{18}

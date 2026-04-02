@@ -25,17 +25,17 @@
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> L:=IntersectionLattice(A);
 #! <Geometric lattice: 6 atoms, rank 3>
-#! gap> GLGroundSet(L);
+#! gap> LGroundSet(L);
 #! [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
 #!  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
 #!    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
 #!   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-#! gap> m1:=[1,2];; m2:= [5,6];; GLIsModularPair(L,m1,m2);
+#! gap> m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);
 #! false
-#! gap> m1:=[1,2];; m2:= [2,4,6];; GLIsModularPair(L,m1,m2);
+#! gap> m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);
 #! true
 #! @EndExampleSession
-DeclareOperation( "GLIsModularPair", [IsGeomLattice, IsList, IsList]);
+DeclareOperation( "LIsModularPair", [IsGeomLattice, IsList, IsList]);
 
 #! @Arguments L, m
 #! @Returns true or false
@@ -43,18 +43,18 @@ DeclareOperation( "GLIsModularPair", [IsGeomLattice, IsList, IsList]);
 #!  Determines if <A>m</A> is a modular flat
 #!  in L.
 #! @BeginExampleSession
-#! gap> A:=AGpql(2,2,3); L:=IntersectionLattice(A); GLGroundSet(L);
+#! gap> A:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! <Geometric lattice: 6 atoms, rank 3>
 #! [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
 #!  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
 #!    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
 #!   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-#! gap> m1:=[1,2];; m2:= [2,4,6];; GLIsModularFlat(L,m1); GLIsModularFlat(L,m2);
+#! gap> m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);
 #! false
 #! true
 #! @EndExampleSession
-DeclareOperation( "GLIsModularFlat", [IsGeomLattice, IsList]);
+DeclareOperation( "LIsModularFlat", [IsGeomLattice, IsList]);
 
 
 #! @Arguments L, k
@@ -64,13 +64,13 @@ DeclareOperation( "GLIsModularFlat", [IsGeomLattice, IsList]);
 #! @BeginExampleSession
 #! gap> L:=IntersectionLattice(AGpql(2,1,4));
 #! <Geometric lattice: 16 atoms, rank 4>
-#! gap> GLModularFlatsRk(L,3);
+#! gap> LModularFlatsRk(L,3);
 #! [ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], 
 #!   [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], 
 #!   [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], 
 #!   [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ]
 #! @EndExampleSession
-DeclareOperation( "GLModularFlatsRk", [IsGeomLattice, IsInt]);
+DeclareOperation( "LModularFlatsRk", [IsGeomLattice, IsInt]);
 
 #! @Arguments L
 #! @Returns true or false.
@@ -79,14 +79,14 @@ DeclareOperation( "GLModularFlatsRk", [IsGeomLattice, IsInt]);
 #! @BeginExampleSession
 #! gap> L:=IntersectionLattice(AGpql(2,1,4));
 #! <Geometric lattice: 16 atoms, rank 4>
-#! gap> GLIsSupersolvable(L);
+#! gap> LIsSupersolvable(L);
 #! true
 #! gap> L:=IntersectionLattice(AGpql(2,2,4));
 #! <Geometric lattice: 12 atoms, rank 4>
-#! gap> GLIsSupersolvable(L);
+#! gap> LIsSupersolvable(L);
 #! false
 #! @EndExampleSession
-DeclareProperty("GLIsSupersolvable", IsGeomLattice);
+DeclareProperty("LIsSupersolvable", IsGeomLattice);
 
 #! @Arguments A
 #! @Returns true or false.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  1 APR 2026 18:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  2 APR 2026 09:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,20 +651,20 @@ er-sion 1.75.
 
 ) [31
 
-] (./HypArr.ind [32
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+] (./HypArr.ind
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 []| \T1/ptm/m/n/10.95 for IsHy-per-plan-eAr-range-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[33]) (./HypArr.aux)
+[32
+
+
+] [33]) (./HypArr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -676,7 +676,7 @@ Package rerunfilecheck Info: File `HypArr.brf' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  12063 strings out of 474222
- 186916 string characters out of 5748734
+ 186900 string characters out of 5748734
  1935975 words of memory out of 5000000
  33864 multiletter control sequences out of 15000+600000
  628526 words of font info for 122 fonts, out of 8000000 for 9000
@@ -697,7 +697,7 @@ ymbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (33 pages, 306973 bytes).
+Output written on HypArr.pdf (33 pages, 306932 bytes).
 PDF statistics:
  724 PDF objects out of 1000 (max. 8388607)
  646 compressed objects within 7 object streams

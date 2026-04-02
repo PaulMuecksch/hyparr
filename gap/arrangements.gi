@@ -93,8 +93,8 @@ InstallMethod(ViewObj,
     [IsGeomLattice],
 function(L)
     Print("<Geometric lattice: ",
-          Length(GLAtoms(L)), " atoms, rank ",
-          GLRank(L), ">");
+          Length(LAtoms(L)), " atoms, rank ",
+          LRank(L), ">");
 end);
 
 
@@ -116,38 +116,38 @@ InstallMethod(IsReal,
 
 # Some basic attributes of geometric lattices
 
-InstallMethod(GLGroundSet,
+InstallMethod(LGroundSet,
     [IsGeomLattice],
     L -> L!.grGroundSet);
     
-InstallMethod(GLAtoms,
+InstallMethod(LAtoms,
     [IsGeomLattice],
     L -> L!.atoms);
 
-InstallMethod(GLRank,
+InstallMethod(LRank,
     [IsGeomLattice],
     L -> L!.rank);
 
-InstallMethod(GLkFlats,
+InstallMethod(LkFlats,
     [IsGeomLattice],
 function(L)
 local kFlatsFct, gset;
-	gset := GLGroundSet(L);;
+	gset := LGroundSet(L);;
 	kFlatsFct := function(k)
 		return gset[k];;
 	end;;
 	return kFlatsFct;;
 end);
 
-InstallMethod(GLRankFunction,
+InstallMethod(LRankFunction,
 	[IsGeomLattice],
 function(L)
 local RkFct;
     RkFct := function(m)
     local r;;
         if m=[] then return 0; fi;;
-        for r in [1..GLRank(L)] do
-            if true in List(GLkFlats(L)(r),x->IsSubset(x,m)) then
+        for r in [1..LRank(L)] do
+            if true in List(LkFlats(L)(r),x->IsSubset(x,m)) then
                 return r;;
             fi;;
         od;;
@@ -156,11 +156,11 @@ local RkFct;
     return RkFct;;
 end);
 
-InstallMethod(GLGraph,
+InstallMethod(LGraph,
     [IsGeomLattice],
 function(L)
 local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
-    GSet := GLGroundSet(L);;
+    GSet := LGroundSet(L);;
     B:=Concatenation(GSet);
 	n:=Concatenation([0],List([1..Length(GSet)],y->Sum(List(GSet{[1..y]},x->Length(x)))));
 	GraphMat:=NullMat(n[Length(GSet)+1],n[Length(GSet)+1])	;
@@ -180,13 +180,13 @@ local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
 	return GraphL;;
 end);
 
-InstallMethod(GLAutGroup,
+InstallMethod(LAutGroup,
     [IsGeomLattice],
 function(L)
 local G,GraphL;
-	GraphL:=ShallowCopy(GLGraph(L));;
+	GraphL:=ShallowCopy(LGraph(L));;
 	G := AutGroupGraph(GraphL);
-	G := Image(ActionHomomorphism(G,GLAtoms(L)));
+	G := Image(ActionHomomorphism(G,LAtoms(L)));
 	return G;;
 end);
 
@@ -348,7 +348,7 @@ function(A)
         return A!.MSetInvL;
     fi;
 
-    L:=GLGroundSet(IntersectionLattice(A));;
+    L:=LGroundSet(IntersectionLattice(A));;
 	I:=[];
 	for i in [1..Length(L)] do
 		Add(I,List(Set(List(L[i],x->Length(x))),x->[x,Length(Positions(List(L[i],x->Length(x)),x))]));
@@ -420,12 +420,12 @@ end);
 ## The Moebius-Function for a Lattice L of the Arrangement A
 ####################################################################################################
 
-InstallMethod(GLMoebius,
+InstallMethod(LMoebius,
     [IsGeomLattice],
 function(L)
  	return function(m,i)
 		local m2,j,I, gset;
-			gset := GLGroundSet(L);;
+			gset := LGroundSet(L);;
 			if not m in gset[i] then
 				return fail;
 			fi;
@@ -443,7 +443,7 @@ function(L)
 					fi;
 				od;
 			od;
-			return -1-Sum(List(I,x->GLMoebius(L)(x[1],x[2])));
+			return -1-Sum(List(I,x->LMoebius(L)(x[1],x[2])));
 		end;
 end);
 
@@ -451,16 +451,16 @@ end);
 ## Direkt Computation of the Characteristic Polynomial 
 ## of a Lattice L
 
-InstallMethod(GLCharPoly,
+InstallMethod(LCharPoly,
 	[IsGeomLattice],
 function(L)
 local m,g,t,i,j,gset;
 	if IsBound(L!.charpoly) then
 		return L!.charpoly;
 	fi;;
-	gset := GLGroundSet(L);;
+	gset := LGroundSet(L);;
 	t:=X(Rationals,"t");
-	m:=GLMoebius(L);
+	m:=LMoebius(L);
 	g:=t^(Length(gset));
 	for i in [1..Length(gset)] do
 		for j in [1..Length(gset[i])] do
@@ -471,11 +471,11 @@ local m,g,t,i,j,gset;
 	return L!.charpoly;;
 end);
 
-InstallMethod(GLIsIrreducible,
+InstallMethod(LIsIrreducible,
     [IsGeomLattice],
 function(L)
 local f,t;
-	f :=GLCharPoly(L);
+	f :=LCharPoly(L);
 	t := IndeterminateOfUnivariateRationalFunction(f);;
 	if f mod (t-1)^2 = 0*t then
 		return false;
@@ -483,22 +483,22 @@ local f,t;
     return true;
 end);
 
-InstallMethod(GLIsBoolean,
+InstallMethod(LIsBoolean,
     [IsGeomLattice],
 function(L)
-	return Length(GLAtoms(L))=GLRank(L);
+	return Length(LAtoms(L))=LRank(L);
 end);
 
-InstallMethod(GLIsGeneric,
+InstallMethod(LIsGeneric,
     [IsGeomLattice],
 function(L)
 local r, Lk, rfct;
-	if not(GLIsIrreducible(L)) then
+	if not(LIsIrreducible(L)) then
 		return false;
 	fi;;
-	r := GLRank(L);
-	Lk := GLkFlats(L)(r-1);
-	rfct := GLRankFunction(L);;
+	r := LRank(L);
+	Lk := LkFlats(L)(r-1);
+	rfct := LRankFunction(L);;
 	if ForAny(Lk,m->Length(m)<>rfct(m)) then
 		return false;
 	fi;;
@@ -509,16 +509,16 @@ end);
 InstallMethod(HArrIsGeneric,
     [IsHyperplaneArrangement],
 function(A)
-	return GLIsGeneric(IntersectionLattice(A));
+	return LIsGeneric(IntersectionLattice(A));
 end);
 
 ####################################################################################################
-InstallMethod(GLLocalizationRk, 
+InstallMethod(LLocalizationRk, 
 	[IsGeomLattice, IsList, IsInt],
 function(L,mX,k)
 local gset, type, gsetLocX, Fi;
-	gset:=GLGroundSet(L);;
-	if not(mX in GLkFlats(L)(k)) then
+	gset:=LGroundSet(L);;
+	if not(mX in LkFlats(L)(k)) then
 		return fail;
 	fi;;
 	gsetLocX := List([1..k-1],
@@ -643,8 +643,8 @@ InstallMethod(IsLEquiv,
 	[IsHyperplaneArrangement, IsHyperplaneArrangement],
 function(A,B)
 local LGraphA,LGraphB;;
-    LGraphA := ShallowCopy(GLGraph(IntersectionLattice(A)));
-    LGraphB := ShallowCopy(GLGraph(IntersectionLattice(B)));
+    LGraphA := ShallowCopy(LGraph(IntersectionLattice(A)));
+    LGraphB := ShallowCopy(LGraph(IntersectionLattice(B)));
     return IsIsomorphicGraph(LGraphA,LGraphB);
 end);
 
@@ -962,7 +962,7 @@ local A,s,ip,Hind,disthv,
 	# sp:=Concatenation(sp, "\n");;
 	if ip then
 		sp:=Concatenation(sp, "\n");;
-		for sv in GLGroundSet(IntersectionLattice(A))[2] do
+		for sv in LGroundSet(IntersectionLattice(A))[2] do
 			a:=ctf(NullspaceMat(TransposedMat(R{sv}))[1]);;
 			if AbsoluteValue(a[3]) > 0.0001 and a[1]^2+a[2]^2 < (r1/s)^2 then
 				px:=String(FloatRound(s*a[1]/a[3],3));;

@@ -32,41 +32,6 @@
 
   \indexspace
 
-  \item \texttt  {GLAtoms}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLAutGroup}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLCharPoly}
-    \subitem for IsGeomLattice, \hyperpage{9}
-  \item \texttt  {GLGraph}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLGroundSet}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLIsBoolean}
-    \subitem for IsGeomLattice, \hyperpage{9}
-  \item \texttt  {GLIsGeneric}
-    \subitem for IsGeomLattice, \hyperpage{9}
-  \item \texttt  {GLIsIrreducible}
-    \subitem for IsGeomLattice, \hyperpage{9}
-  \item \texttt  {GLIsModularFlat}
-    \subitem for IsGeomLattice, IsList, \hyperpage{16}
-  \item \texttt  {GLIsModularPair}
-    \subitem for IsGeomLattice, IsList, IsList, \hyperpage{16}
-  \item \texttt  {GLIsSupersolvable}
-    \subitem for IsGeomLattice, \hyperpage{17}
-  \item \texttt  {GLkFlats}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLModularFlatsRk}
-    \subitem for IsGeomLattice, IsInt, \hyperpage{17}
-  \item \texttt  {GLMoebius}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLRank}
-    \subitem for IsGeomLattice, \hyperpage{8}
-  \item \texttt  {GLRankFunction}
-    \subitem for IsGeomLattice, \hyperpage{8}
-
-  \indexspace
-
   \item \texttt  {HArrIsGeneric}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
   \item \texttt  {HArrIsIrreducible}
@@ -103,6 +68,41 @@
   \item \texttt  {IsOMEquiv}, \hyperpage{27}
   \item \texttt  {IsReal}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
+
+  \indexspace
+
+  \item \texttt  {LAtoms}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LAutGroup}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LCharPoly}
+    \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LGraph}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LGroundSet}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LIsBoolean}
+    \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LIsGeneric}
+    \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LIsIrreducible}
+    \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LIsModularFlat}
+    \subitem for IsGeomLattice, IsList, \hyperpage{16}
+  \item \texttt  {LIsModularPair}
+    \subitem for IsGeomLattice, IsList, IsList, \hyperpage{16}
+  \item \texttt  {LIsSupersolvable}
+    \subitem for IsGeomLattice, \hyperpage{17}
+  \item \texttt  {LkFlats}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LModularFlatsRk}
+    \subitem for IsGeomLattice, IsInt, \hyperpage{17}
+  \item \texttt  {LMoebius}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LRank}
+    \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LRankFunction}
+    \subitem for IsGeomLattice, \hyperpage{8}
 
   \indexspace
 

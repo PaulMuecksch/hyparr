@@ -12,22 +12,6 @@
   [2XFPGroundSet[102X, for IsFacePoset 6.2-10 
   [2XFPOrder[102X, for IsFacePoset 6.2-11 
   [2XFPtoCWCpx[102X 4.1-3 
-  [2XGLAtoms[102X, for IsGeomLattice 2.4-2 
-  [2XGLAutGroup[102X, for IsGeomLattice 2.4-7 
-  [2XGLCharPoly[102X, for IsGeomLattice 2.4-9 
-  [2XGLGraph[102X, for IsGeomLattice 2.4-6 
-  [2XGLGroundSet[102X, for IsGeomLattice 2.4-1 
-  [2XGLIsBoolean[102X, for IsGeomLattice 2.5-2 
-  [2XGLIsGeneric[102X, for IsGeomLattice 2.5-3 
-  [2XGLIsIrreducible[102X, for IsGeomLattice 2.5-1 
-  [2XGLIsModularFlat[102X, for IsGeomLattice, IsList 5.1-2 
-  [2XGLIsModularPair[102X, for IsGeomLattice, IsList, IsList 5.1-1 
-  [2XGLIsSupersolvable[102X, for IsGeomLattice 5.1-4 
-  [2XGLkFlats[102X, for IsGeomLattice 2.4-4 
-  [2XGLModularFlatsRk[102X, for IsGeomLattice, IsInt 5.1-3 
-  [2XGLMoebius[102X, for IsGeomLattice 2.4-8 
-  [2XGLRank[102X, for IsGeomLattice 2.4-3 
-  [2XGLRankFunction[102X, for IsGeomLattice 2.4-5 
   [2XHArrIsGeneric[102X, for IsHyperplaneArrangement 2.3-3 
   [2XHArrIsIrreducible[102X, for IsHyperplaneArrangement 2.3-2 
   [2XHArrIsSimplicial[102X, for IsHyperplaneArrangement 5.3-1 
@@ -46,6 +30,22 @@
       for IsOrientedMatroid,IsOrientedMatroid 6.4-1 
   [2XIsOMEquiv[102X 6.5-3 
   [2XIsReal[102X, for IsHyperplaneArrangement 2.3-1 
+  [2XLAtoms[102X, for IsGeomLattice 2.4-2 
+  [2XLAutGroup[102X, for IsGeomLattice 2.4-7 
+  [2XLCharPoly[102X, for IsGeomLattice 2.4-9 
+  [2XLGraph[102X, for IsGeomLattice 2.4-6 
+  [2XLGroundSet[102X, for IsGeomLattice 2.4-1 
+  [2XLIsBoolean[102X, for IsGeomLattice 2.5-2 
+  [2XLIsGeneric[102X, for IsGeomLattice 2.5-3 
+  [2XLIsIrreducible[102X, for IsGeomLattice 2.5-1 
+  [2XLIsModularFlat[102X, for IsGeomLattice, IsList 5.1-2 
+  [2XLIsModularPair[102X, for IsGeomLattice, IsList, IsList 5.1-1 
+  [2XLIsSupersolvable[102X, for IsGeomLattice 5.1-4 
+  [2XLkFlats[102X, for IsGeomLattice 2.4-4 
+  [2XLModularFlatsRk[102X, for IsGeomLattice, IsInt 5.1-3 
+  [2XLMoebius[102X, for IsGeomLattice 2.4-8 
+  [2XLRank[102X, for IsGeomLattice 2.4-3 
+  [2XLRankFunction[102X, for IsGeomLattice 2.4-5 
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 4.1-2 
       for IsOrientedMatroid 4.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.2-6 

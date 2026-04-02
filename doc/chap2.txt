@@ -73,7 +73,7 @@
   
   [33X[0;0YComputes the intersection lattice of the hyperplane arrangement [3XA[103X.[133X
   
-  [33X[0;0YThe  ground  set  [10XL[110X  (see [2XGLGroundSet[102X ([14X2.4-1[114X)) of the lattice is represented
+  [33X[0;0YThe  ground  set  [10XL[110X  (see  [2XLGroundSet[102X ([14X2.4-1[114X)) of the lattice is represented
   level-by-level. The entry [10XL[k][110X contains all intersections of rank [23Xk[123X.[133X
   
   [33X[0;0YEach lattice element is stored as a list of indices referring to hyperplanes
@@ -85,7 +85,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);[127X[104X
     [4X[28X<HyperplaneArrangement: 3 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A); GLGroundSet(L);[127X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A); LGroundSet(L);[127X[104X
     [4X[28X<Geometric lattice: 3 atoms, rank 3>[128X[104X
     [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ] ], [128X[104X
     [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], [128X[104X
@@ -163,7 +163,7 @@
   [33X[1;0Y[29X[2XHArrIsGeneric[102X( [3XA[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
-  [33X[0;0YDetermines,  if  the hyperplane arrangement is generic. See also [2XGLIsGeneric[102X
+  [33X[0;0YDetermines,  if  the  hyperplane arrangement is generic. See also [2XLIsGeneric[102X
   ([14X2.5-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
@@ -180,65 +180,65 @@
   
   [1X2.4 [33X[0;0YAttributes of geometric lattices[133X[101X
   
-  [1X2.4-1 GLGroundSet[101X
+  [1X2.4-1 LGroundSet[101X
   
-  [33X[1;0Y[29X[2XGLGroundSet[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLGroundSet[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist of lists[133X
   
   [33X[0;0YReturns the ground set of the geometric lattice [3XL[103X.[133X
   
-  [1X2.4-2 GLAtoms[101X
+  [1X2.4-2 LAtoms[101X
   
-  [33X[1;0Y[29X[2XGLAtoms[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLAtoms[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist[133X
   
   [33X[0;0YReturns the set of atoms of [3XL[103X.[133X
   
-  [1X2.4-3 GLRank[101X
+  [1X2.4-3 LRank[101X
   
-  [33X[1;0Y[29X[2XGLRank[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLRank[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya non-negative integer[133X
   
   [33X[0;0YReturns the rank of [3XL[103X.[133X
   
-  [1X2.4-4 GLkFlats[101X
+  [1X2.4-4 LkFlats[101X
   
-  [33X[1;0Y[29X[2XGLkFlats[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLkFlats[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya function[133X
   
   [33X[0;0YReturns a function extracting the flats of rank [23Xk[123X in [3XL[103X.[133X
   
-  [1X2.4-5 GLRankFunction[101X
+  [1X2.4-5 LRankFunction[101X
   
-  [33X[1;0Y[29X[2XGLRankFunction[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLRankFunction[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA function[133X
   
   [33X[0;0YReturns the rank function of the geometric lattice [3XL[103X.[133X
   
-  [1X2.4-6 GLGraph[101X
+  [1X2.4-6 LGraph[101X
   
-  [33X[1;0Y[29X[2XGLGraph[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLGraph[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya graph[133X
   
   [33X[0;0YConstructs the directed graph of the Hasse diagram of L.[133X
   
-  [1X2.4-7 GLAutGroup[101X
+  [1X2.4-7 LAutGroup[101X
   
-  [33X[1;0Y[29X[2XGLAutGroup[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLAutGroup[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group[133X
   
-  [33X[0;0YComputes the autmorphism group of L as a subgroup of [10XSym(GLAtoms(L))[110X.[133X
+  [33X[0;0YComputes the autmorphism group of L as a subgroup of [10XSym(LAtoms(L))[110X.[133X
   
-  [1X2.4-8 GLMoebius[101X
+  [1X2.4-8 LMoebius[101X
   
-  [33X[1;0Y[29X[2XGLMoebius[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLMoebius[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yfunction[133X
   
   [33X[0;0YReturns the Moebius function of [3XL[103X.[133X
   
-  [1X2.4-9 GLCharPoly[101X
+  [1X2.4-9 LCharPoly[101X
   
-  [33X[1;0Y[29X[2XGLCharPoly[102X( [3XL[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLCharPoly[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yfunction[133X
   
   [33X[0;0YComputes the characteristic polynomial of [3XL[103X.[133X
@@ -246,16 +246,16 @@
   
   [1X2.5 [33X[0;0YProperties of geometric lattices[133X[101X
   
-  [1X2.5-1 GLIsIrreducible[101X
+  [1X2.5-1 LIsIrreducible[101X
   
-  [33X[1;0Y[29X[2XGLIsIrreducible[102X( [3XL[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XLIsIrreducible[102X( [3XL[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
   [33X[0;0YDetermines, if L is irreducible.[133X
   
-  [1X2.5-2 GLIsBoolean[101X
+  [1X2.5-2 LIsBoolean[101X
   
-  [33X[1;0Y[29X[2XGLIsBoolean[102X( [3XL[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XLIsBoolean[102X( [3XL[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
   [33X[0;0YDetermines, if L is a boolean lattice.[133X
@@ -263,17 +263,17 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XL:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));[127X[104X
     [4X[28X<Geometric lattice: 2 atoms, rank 2>[128X[104X
-    [4X[25Xgap>[125X [27XGLIsBoolean(L);[127X[104X
+    [4X[25Xgap>[125X [27XLIsBoolean(L);[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XL:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));[127X[104X
     [4X[28X<Geometric lattice: 3 atoms, rank 2>[128X[104X
-    [4X[25Xgap>[125X [27XGLIsBoolean(L);[127X[104X
+    [4X[25Xgap>[125X [27XLIsBoolean(L);[127X[104X
     [4X[28Xfalse[128X[104X
   [4X[32X[104X
   
-  [1X2.5-3 GLIsGeneric[101X
+  [1X2.5-3 LIsGeneric[101X
   
-  [33X[1;0Y[29X[2XGLIsGeneric[102X( [3XL[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XLIsGeneric[102X( [3XL[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
   [33X[0;0YDetermines,  if  L  is  generic,  i.e.  if  L  is irreducible and all proper
@@ -284,13 +284,13 @@
     [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);[127X[104X
     [4X[28X<Geometric lattice: 4 atoms, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XGLIsGeneric(L);[127X[104X
+    [4X[25Xgap>[125X [27XLIsGeneric(L);[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XA := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
     [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);[127X[104X
     [4X[28X<Geometric lattice: 5 atoms, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XGLIsGeneric(L);[127X[104X
+    [4X[25Xgap>[125X [27XLIsGeneric(L);[127X[104X
     [4X[28Xfalse[128X[104X
   [4X[32X[104X
   

@@ -338,9 +338,9 @@ function(OM)
     fi;;
 
     L:=OMGeomLattice(OM);;
-    Lk:=GLkFlats(L);;
-    r:=GLRank(L);
-    n:=Length(GLAtoms(L));;
+    Lk:=LkFlats(L);;
+    r:=LRank(L);
+    n:=Length(LAtoms(L));;
     LHs:=Lk(r-1);;
     CoCircs := [];;
     if OMIsLinear(OM) then
@@ -406,10 +406,10 @@ local ACs,GSet,L,Lk,r,n,m,mm,CsRkk,CsRkkp,k,Csinm,c,cn,i,cp,Fcn;;
     fi;;
 
     L := OMGeomLattice(OM);;
-    Lk:=GLkFlats(L);;
-    r:=GLRank(L);
-    n:=Length(GLAtoms(L));;
-    GSet:=GLAtoms(L);;
+    Lk:=LkFlats(L);;
+    r:=LRank(L);
+    n:=Length(LAtoms(L));;
+    GSet:=LAtoms(L);;
     CsRkk:=OMCocircuits(OM);;
     ACs := Concatenation([[List(GSet,x->0)]],[CsRkk]);;
     for k in Reversed([1..r-2]) do
@@ -573,8 +573,8 @@ InstallMethod(IsLEquiv,
 	[IsOrientedMatroid, IsOrientedMatroid],
 function(OM1,OM2)
 local LGraph1,LGraph2;;
-    LGraph1 := ShallowCopy(GLGraph(OMGeomLattice(OM1)));
-    LGraph2 := ShallowCopy(GLGraph(OMGeomLattice(OM2)));
+    LGraph1 := ShallowCopy(LGraph(OMGeomLattice(OM1)));
+    LGraph2 := ShallowCopy(LGraph(OMGeomLattice(OM2)));
     return IsIsomorphicGraph(LGraph1,LGraph2);
 end);
 
@@ -587,7 +587,7 @@ InstallMethod(OMLocalizationRk,
 function(OM,F,k)
 local i, L, CVs, CVsi, Ff, CVsLoc, OMLoc;;
     L:=OMGeomLattice(OM);;
-    if not(F in GLkFlats(L)(k)) then
+    if not(F in LkFlats(L)(k)) then
         Print(F, " is not a flat!\n");;
         return fail;;
     fi;;
@@ -644,7 +644,7 @@ InstallMethod(HasSimpleSimplexRk,
 function(OM,k)
 local Fk,L,Lk,OMLok,Topes,T,VofT,CVsRk;;
     L:= OMGeomLattice(OM);;
-    Lk := GLkFlats(L)(k);
+    Lk := LkFlats(L)(k);
     # return ForAny( Lk,Fk->HasSimpleSimplex(OMLocalizationRk(OM,Fk,k)) );
     for Fk in Lk do
         if HasSimpleSimplex(OMLocalizationRk(OM,Fk,k)) then

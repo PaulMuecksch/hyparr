@@ -25,10 +25,10 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7B09D56B7A076E6B">5.1 <span class="Heading">Supersolvable arrangements</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X868B794B7B822DBC">5.1-1 GLIsModularPair</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X823D2069838AE04F">5.1-2 GLIsModularFlat</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7FA04C557F1C2E77">5.1-3 GLModularFlatsRk</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X86429691877E1CB6">5.1-4 GLIsSupersolvable</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X78E6E11179F7ECB5">5.1-1 LIsModularPair</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7FECD913876C637C">5.1-2 LIsModularFlat</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X8271B52F816053DB">5.1-3 LModularFlatsRk</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7D95D0F37E6FBFD6">5.1-4 LIsSupersolvable</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7DC90A0286D5664A">5.1-5 HArrIsSupersolvable</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X78B7232883025D41">5.1-6 OMIsSupersolvable</a></span>
 </div></div>
@@ -52,11 +52,11 @@
 
 <h4>5.1 <span class="Heading">Supersolvable arrangements</span></h4>
 
-<p><a id="X868B794B7B822DBC" name="X868B794B7B822DBC"></a></p>
+<p><a id="X78E6E11179F7ECB5" name="X78E6E11179F7ECB5"></a></p>
 
-<h5>5.1-1 GLIsModularPair</h5>
+<h5>5.1-1 LIsModularPair</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsModularPair</code>( <var class="Arg">L</var>, <var class="Arg">m1</var>, <var class="Arg">m2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsModularPair</code>( <var class="Arg">L</var>, <var class="Arg">m1</var>, <var class="Arg">m2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
 
 <p>Determines if <var class="Arg">m1</var> and <var class="Arg">m2</var> form a modular pair in L.</p>
@@ -67,45 +67,45 @@
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
 &lt;Geometric lattice: 6 atoms, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLGroundSet(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LGroundSet(L);</span>
 [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [5,6];; GLIsModularPair(L,m1,m2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [2,4,6];; GLIsModularPair(L,m1,m2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);</span>
 true
 </pre></div>
 
-<p><a id="X823D2069838AE04F" name="X823D2069838AE04F"></a></p>
+<p><a id="X7FECD913876C637C" name="X7FECD913876C637C"></a></p>
 
-<h5>5.1-2 GLIsModularFlat</h5>
+<h5>5.1-2 LIsModularFlat</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsModularFlat</code>( <var class="Arg">L</var>, <var class="Arg">m</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsModularFlat</code>( <var class="Arg">L</var>, <var class="Arg">m</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
 
 <p>Determines if <var class="Arg">m</var> is a modular flat in L.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); L:=IntersectionLattice(A); GLGroundSet(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);</span>
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 &lt;Geometric lattice: 6 atoms, rank 3&gt;
 [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [2,4,6];; GLIsModularFlat(L,m1); GLIsModularFlat(L,m2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);</span>
 false
 true
 </pre></div>
 
-<p><a id="X7FA04C557F1C2E77" name="X7FA04C557F1C2E77"></a></p>
+<p><a id="X8271B52F816053DB" name="X8271B52F816053DB"></a></p>
 
-<h5>5.1-3 GLModularFlatsRk</h5>
+<h5>5.1-3 LModularFlatsRk</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLModularFlatsRk</code>( <var class="Arg">L</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LModularFlatsRk</code>( <var class="Arg">L</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: list</p>
 
 <p>Determines the modular flats in <var class="Arg">L</var> of rank <var class="Arg">k</var>.</p>
@@ -114,18 +114,18 @@ true
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,1,4));</span>
 &lt;Geometric lattice: 16 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLModularFlatsRk(L,3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LModularFlatsRk(L,3);</span>
 [ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], 
   [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], 
   [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], 
   [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ]
 </pre></div>
 
-<p><a id="X86429691877E1CB6" name="X86429691877E1CB6"></a></p>
+<p><a id="X7D95D0F37E6FBFD6" name="X7D95D0F37E6FBFD6"></a></p>
 
-<h5>5.1-4 GLIsSupersolvable</h5>
+<h5>5.1-4 LIsSupersolvable</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsSupersolvable</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsSupersolvable</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
 <p>Determines whether the geometric lattice <var class="Arg">L</var> is <em>supersolvable</em>.</p>
@@ -134,11 +134,11 @@ true
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,1,4));</span>
 &lt;Geometric lattice: 16 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsSupersolvable(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsSupersolvable(L);</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,2,4));</span>
 &lt;Geometric lattice: 12 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsSupersolvable(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsSupersolvable(L);</span>
 false
 </pre></div>
 

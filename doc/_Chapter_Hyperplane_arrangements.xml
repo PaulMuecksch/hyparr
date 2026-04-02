@@ -90,7 +90,7 @@ gap> A:=AGpql(3,3,2); Roots(A);
  <Description>
  Computes the intersection lattice of the hyperplane arrangement <A>A</A>.
 <P/>
- The ground set <C>L</C> (see <Ref Attr="GLGroundSet" Label="for IsGeomLattice" Style="Text"/>) 
+ The ground set <C>L</C> (see <Ref Attr="LGroundSet" Label="for IsGeomLattice" Style="Text"/>) 
  of the lattice is represented level-by-level.  
  The entry <C>L[k]</C> contains all intersections of rank <Math>k</Math>.
 <P/>
@@ -103,7 +103,7 @@ gap> A:=AGpql(3,3,2); Roots(A);
 <Example><![CDATA[
 gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);
 <HyperplaneArrangement: 3 hyperplanes in 3-space>
-gap> L:=IntersectionLattice(A); GLGroundSet(L);
+gap> L:=IntersectionLattice(A); LGroundSet(L);
 <Geometric lattice: 3 atoms, rank 3>
 [ [ [ 1 ], [ 2 ], [ 3 ] ], 
   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], 
@@ -210,7 +210,7 @@ gap> MSetInvL(A);
 </Returns>
  <Description>
  Determines, if the hyperplane arrangement is generic.
- See also <Ref Prop="GLIsGeneric" Label="for IsGeomLattice" Style="Text"/>.
+ See also <Ref Prop="LIsGeneric" Label="for IsGeomLattice" Style="Text"/>.
 <Example><![CDATA[
 gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
 <HyperplaneArrangement: 5 hyperplanes in 3-space>
@@ -234,7 +234,7 @@ true
 <Heading>Attributes of geometric lattices</Heading>
 
 <ManSection>
-  <Attr Arg="L" Name="GLGroundSet" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LGroundSet" Label="for IsGeomLattice"/>
  <Returns>list of lists
 </Returns>
  <Description>
@@ -244,7 +244,7 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLAtoms" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LAtoms" Label="for IsGeomLattice"/>
  <Returns>list
 </Returns>
  <Description>
@@ -254,7 +254,7 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLRank" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LRank" Label="for IsGeomLattice"/>
  <Returns>a non-negative integer
 </Returns>
  <Description>
@@ -264,7 +264,7 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLkFlats" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LkFlats" Label="for IsGeomLattice"/>
  <Returns>a function
 </Returns>
  <Description>
@@ -274,7 +274,7 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLRankFunction" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LRankFunction" Label="for IsGeomLattice"/>
  <Returns>A function
 </Returns>
  <Description>
@@ -284,7 +284,7 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLGraph" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LGraph" Label="for IsGeomLattice"/>
  <Returns>a graph
 </Returns>
  <Description>
@@ -294,18 +294,18 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLAutGroup" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LAutGroup" Label="for IsGeomLattice"/>
  <Returns>a group
 </Returns>
  <Description>
  Computes the autmorphism group of L
- as a subgroup of <C>Sym(GLAtoms(L))</C>.
+ as a subgroup of <C>Sym(LAtoms(L))</C>.
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLMoebius" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LMoebius" Label="for IsGeomLattice"/>
  <Returns>function
 </Returns>
  <Description>
@@ -315,7 +315,7 @@ true
 
 
 <ManSection>
-  <Attr Arg="L" Name="GLCharPoly" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LCharPoly" Label="for IsGeomLattice"/>
  <Returns>function
 </Returns>
  <Description>
@@ -331,7 +331,7 @@ true
 <Heading>Properties of geometric lattices</Heading>
 
 <ManSection>
-  <Prop Arg="L" Name="GLIsIrreducible" Label="for IsGeomLattice"/>
+  <Prop Arg="L" Name="LIsIrreducible" Label="for IsGeomLattice"/>
  <Returns>true or false.
 </Returns>
  <Description>
@@ -341,7 +341,7 @@ true
 
 
 <ManSection>
-  <Prop Arg="L" Name="GLIsBoolean" Label="for IsGeomLattice"/>
+  <Prop Arg="L" Name="LIsBoolean" Label="for IsGeomLattice"/>
  <Returns>true or false.
 </Returns>
  <Description>
@@ -349,11 +349,11 @@ true
 <Example><![CDATA[
 gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));
 <Geometric lattice: 2 atoms, rank 2>
-gap> GLIsBoolean(L);
+gap> LIsBoolean(L);
 true
 gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));
 <Geometric lattice: 3 atoms, rank 2>
-gap> GLIsBoolean(L);
+gap> LIsBoolean(L);
 false
 ]]></Example>
 
@@ -363,7 +363,7 @@ false
 
 
 <ManSection>
-  <Prop Arg="L" Name="GLIsGeneric" Label="for IsGeomLattice"/>
+  <Prop Arg="L" Name="LIsGeneric" Label="for IsGeomLattice"/>
  <Returns>true or false.
 </Returns>
  <Description>
@@ -374,13 +374,13 @@ gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
 <HyperplaneArrangement: 4 hyperplanes in 3-space>
 gap> L:=IntersectionLattice(A);
 <Geometric lattice: 4 atoms, rank 3>
-gap> GLIsGeneric(L);
+gap> LIsGeneric(L);
 true
 gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
 <HyperplaneArrangement: 5 hyperplanes in 3-space>
 gap> L:=IntersectionLattice(A);
 <Geometric lattice: 5 atoms, rank 3>
-gap> GLIsGeneric(L);
+gap> LIsGeneric(L);
 false
 ]]></Example>
 

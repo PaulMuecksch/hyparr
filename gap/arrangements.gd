@@ -109,7 +109,7 @@ DeclareSynonym( "LForms" ,Roots);
 #! @Description
 #! Computes the intersection lattice of the hyperplane arrangement <A>A</A>.
 #!
-#! The ground set <C>L</C> (see <Ref Attr="GLGroundSet" Label="for IsGeomLattice" Style="Text"/>) 
+#! The ground set <C>L</C> (see <Ref Attr="LGroundSet" Label="for IsGeomLattice" Style="Text"/>) 
 #! of the lattice is represented level-by-level.  
 #! The entry <C>L[k]</C> contains all intersections of rank $k$.
 #!
@@ -122,7 +122,7 @@ DeclareSynonym( "LForms" ,Roots);
 #! @BeginExampleSession
 #! gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);
 #! <HyperplaneArrangement: 3 hyperplanes in 3-space>
-#! gap> L:=IntersectionLattice(A); GLGroundSet(L);
+#! gap> L:=IntersectionLattice(A); LGroundSet(L);
 #! <Geometric lattice: 3 atoms, rank 3>
 #! [ [ [ 1 ], [ 2 ], [ 3 ] ], 
 #!   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], 
@@ -202,7 +202,7 @@ DeclareProperty("HArrIsIrreducible", IsHyperplaneArrangement );
 #! @Returns true or false.
 #! @Description
 #! Determines, if the hyperplane arrangement is generic.
-#! See also <Ref Prop="GLIsGeneric" Label="for IsGeomLattice" Style="Text"/>.
+#! See also <Ref Prop="LIsGeneric" Label="for IsGeomLattice" Style="Text"/>.
 #! @BeginExampleSession
 #! gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
 #! <HyperplaneArrangement: 5 hyperplanes in 3-space>
@@ -225,57 +225,57 @@ DeclareProperty("HArrIsGeneric", IsHyperplaneArrangement );
 #! @Returns list of lists
 #! @Description
 #! Returns the ground set of the geometric lattice <A>L</A>.
-DeclareAttribute("GLGroundSet", IsGeomLattice);
+DeclareAttribute("LGroundSet", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns list
 #! @Description
 #! Returns the set of atoms of <A>L</A>.
-DeclareAttribute("GLAtoms", IsGeomLattice);
+DeclareAttribute("LAtoms", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns a non-negative integer
 #! @Description
 #! Returns the rank of <A>L</A>.
-DeclareAttribute("GLRank", IsGeomLattice);
+DeclareAttribute("LRank", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns a function
 #! @Description
 #! Returns a function extracting the flats of rank $k$ in <A>L</A>.
-DeclareAttribute("GLkFlats", IsGeomLattice);
+DeclareAttribute("LkFlats", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns A function
 #! @Description
 #! Returns the rank function of the geometric lattice <A>L</A>.
-DeclareAttribute("GLRankFunction", IsGeomLattice);;
+DeclareAttribute("LRankFunction", IsGeomLattice);;
 
 #! @Arguments L
 #! @Returns a graph
 #! @Description
 #! Constructs the directed graph of the Hasse diagram of L.
-DeclareAttribute("GLGraph", IsGeomLattice);;
+DeclareAttribute("LGraph", IsGeomLattice);;
 
 #! @Arguments L
 #! @Returns a group
 #! @Description
 #! Computes the autmorphism group of L
-#! as a subgroup of <C>Sym(GLAtoms(L))</C>.
-DeclareAttribute("GLAutGroup", IsGeomLattice);;
+#! as a subgroup of <C>Sym(LAtoms(L))</C>.
+DeclareAttribute("LAutGroup", IsGeomLattice);;
 
 #! @Arguments L
 #! @Returns function
 #! @Description
 #! Returns the Moebius function of <A>L</A>.
-DeclareAttribute("GLMoebius", IsGeomLattice);
+DeclareAttribute("LMoebius", IsGeomLattice);
 
 
 #! @Arguments L
 #! @Returns function
 #! @Description
 #!  Computes the characteristic polynomial of <A>L</A>.
-DeclareAttribute("GLCharPoly", IsGeomLattice);
+DeclareAttribute("LCharPoly", IsGeomLattice);
 
 
 #################################
@@ -290,7 +290,7 @@ DeclareAttribute("GLCharPoly", IsGeomLattice);
 #! @Returns true or false.
 #! @Description
 #! Determines, if L is irreducible.
-DeclareProperty("GLIsIrreducible", IsGeomLattice );
+DeclareProperty("LIsIrreducible", IsGeomLattice );
 
 
 #! @Arguments L
@@ -300,14 +300,14 @@ DeclareProperty("GLIsIrreducible", IsGeomLattice );
 #! @BeginExampleSession
 #! gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));
 #! <Geometric lattice: 2 atoms, rank 2>
-#! gap> GLIsBoolean(L);
+#! gap> LIsBoolean(L);
 #! true
 #! gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));
 #! <Geometric lattice: 3 atoms, rank 2>
-#! gap> GLIsBoolean(L);
+#! gap> LIsBoolean(L);
 #! false
 #! @EndExampleSession
-DeclareProperty("GLIsBoolean", IsGeomLattice );
+DeclareProperty("LIsBoolean", IsGeomLattice );
 
 
 #! @Arguments L
@@ -320,16 +320,16 @@ DeclareProperty("GLIsBoolean", IsGeomLattice );
 #! <HyperplaneArrangement: 4 hyperplanes in 3-space>
 #! gap> L:=IntersectionLattice(A);
 #! <Geometric lattice: 4 atoms, rank 3>
-#! gap> GLIsGeneric(L);
+#! gap> LIsGeneric(L);
 #! true
 #! gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
 #! <HyperplaneArrangement: 5 hyperplanes in 3-space>
 #! gap> L:=IntersectionLattice(A);
 #! <Geometric lattice: 5 atoms, rank 3>
-#! gap> GLIsGeneric(L);
+#! gap> LIsGeneric(L);
 #! false
 #! @EndExampleSession
-DeclareProperty("GLIsGeneric", IsGeomLattice );
+DeclareProperty("LIsGeneric", IsGeomLattice );
 
 #################################
 ##
@@ -376,7 +376,7 @@ DeclareOperation("IsLEquiv", [IsHyperplaneArrangement,IsHyperplaneArrangement]);
 #! @EndExampleSession
 DeclareOperation( "Essentialization", [IsHyperplaneArrangement]);
 
-DeclareOperation( "GLLocalizationRk", [IsGeomLattice, IsList, IsInt]);
+DeclareOperation( "LLocalizationRk", [IsGeomLattice, IsList, IsInt]);
 
 #################################
 ##

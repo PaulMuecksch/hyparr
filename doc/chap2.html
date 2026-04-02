@@ -47,22 +47,22 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X79DB21318677B969">2.4 <span class="Heading">Attributes of geometric lattices</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83B4DD0E8325942E">2.4-1 GLGroundSet</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7A01B73E7BE22EDB">2.4-2 GLAtoms</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83CB7161847F6FF7">2.4-3 GLRank</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X79CA2563782654EE">2.4-4 GLkFlats</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C9329388710966F">2.4-5 GLRankFunction</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X803CD5A07FA65A9C">2.4-6 GLGraph</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8120B26884492B63">2.4-7 GLAutGroup</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X798F89EB80281979">2.4-8 GLMoebius</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C81758087597A80">2.4-9 GLCharPoly</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X864BB73F7812E0B4">2.4-1 LGroundSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83946B69829FDA91">2.4-2 LAtoms</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X86823DA184430088">2.4-3 LRank</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8255DDFF86DBA263">2.4-4 LkFlats</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X807645CC7B8E3782">2.4-5 LRankFunction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X79A909F786A94A47">2.4-6 LGraph</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E1203CB7969B4A0">2.4-7 LAutGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X80A93EFA7EC0496A">2.4-8 LMoebius</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83B3C4237FD0B9AA">2.4-9 LCharPoly</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X8056EC0986604552">2.5 <span class="Heading">Properties of geometric lattices</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C4806937CF2DE83">2.5-1 GLIsIrreducible</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X81BB82B28355CFA0">2.5-2 GLIsBoolean</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7F3537B47F5FD64C">2.5-3 GLIsGeneric</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X85C9C1F47977DAD5">2.5-1 LIsIrreducible</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8444E8837E952FE4">2.5-2 LIsBoolean</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7ACA5D857F2A0913">2.5-3 LIsGeneric</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7DE8E16C7C2D387B">2.6 <span class="Heading">Operations</span></a>
 </span>
@@ -159,7 +159,7 @@
 
 <p>Computes the intersection lattice of the hyperplane arrangement <var class="Arg">A</var>.</p>
 
-<p>The ground set <code class="code">L</code> (see <code class="func">GLGroundSet</code> (<a href="chap2.html#X83B4DD0E8325942E"><span class="RefLink">2.4-1</span></a>)) of the lattice is represented level-by-level. The entry <code class="code">L[k]</code> contains all intersections of rank <span class="Math">k</span>.</p>
+<p>The ground set <code class="code">L</code> (see <code class="func">LGroundSet</code> (<a href="chap2.html#X864BB73F7812E0B4"><span class="RefLink">2.4-1</span></a>)) of the lattice is represented level-by-level. The entry <code class="code">L[k]</code> contains all intersections of rank <span class="Math">k</span>.</p>
 
 <p>Each lattice element is stored as a list of indices referring to hyperplanes in <code class="code">Roots(A)</code>.</p>
 
@@ -169,7 +169,7 @@
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,0],[1,1,1]]);</span>
 &lt;HyperplaneArrangement: 3 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A); GLGroundSet(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A); LGroundSet(L);</span>
 &lt;Geometric lattice: 3 atoms, rank 3&gt;
 [ [ [ 1 ], [ 2 ], [ 3 ] ], 
   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ], 
@@ -258,7 +258,7 @@ t^3-6*t^2+11*t-6
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsGeneric</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Determines, if the hyperplane arrangement is generic. See also <code class="func">GLIsGeneric</code> (<a href="chap2.html#X7F3537B47F5FD64C"><span class="RefLink">2.5-3</span></a>).</p>
+<p>Determines, if the hyperplane arrangement is generic. See also <code class="func">LIsGeneric</code> (<a href="chap2.html#X7ACA5D857F2A0913"><span class="RefLink">2.5-3</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -276,83 +276,83 @@ true
 
 <h4>2.4 <span class="Heading">Attributes of geometric lattices</span></h4>
 
-<p><a id="X83B4DD0E8325942E" name="X83B4DD0E8325942E"></a></p>
+<p><a id="X864BB73F7812E0B4" name="X864BB73F7812E0B4"></a></p>
 
-<h5>2.4-1 GLGroundSet</h5>
+<h5>2.4-1 LGroundSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLGroundSet</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LGroundSet</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: list of lists</p>
 
 <p>Returns the ground set of the geometric lattice <var class="Arg">L</var>.</p>
 
-<p><a id="X7A01B73E7BE22EDB" name="X7A01B73E7BE22EDB"></a></p>
+<p><a id="X83946B69829FDA91" name="X83946B69829FDA91"></a></p>
 
-<h5>2.4-2 GLAtoms</h5>
+<h5>2.4-2 LAtoms</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLAtoms</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LAtoms</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: list</p>
 
 <p>Returns the set of atoms of <var class="Arg">L</var>.</p>
 
-<p><a id="X83CB7161847F6FF7" name="X83CB7161847F6FF7"></a></p>
+<p><a id="X86823DA184430088" name="X86823DA184430088"></a></p>
 
-<h5>2.4-3 GLRank</h5>
+<h5>2.4-3 LRank</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLRank</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LRank</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a non-negative integer</p>
 
 <p>Returns the rank of <var class="Arg">L</var>.</p>
 
-<p><a id="X79CA2563782654EE" name="X79CA2563782654EE"></a></p>
+<p><a id="X8255DDFF86DBA263" name="X8255DDFF86DBA263"></a></p>
 
-<h5>2.4-4 GLkFlats</h5>
+<h5>2.4-4 LkFlats</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLkFlats</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LkFlats</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a function</p>
 
 <p>Returns a function extracting the flats of rank <span class="Math">k</span> in <var class="Arg">L</var>.</p>
 
-<p><a id="X7C9329388710966F" name="X7C9329388710966F"></a></p>
+<p><a id="X807645CC7B8E3782" name="X807645CC7B8E3782"></a></p>
 
-<h5>2.4-5 GLRankFunction</h5>
+<h5>2.4-5 LRankFunction</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLRankFunction</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LRankFunction</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A function</p>
 
 <p>Returns the rank function of the geometric lattice <var class="Arg">L</var>.</p>
 
-<p><a id="X803CD5A07FA65A9C" name="X803CD5A07FA65A9C"></a></p>
+<p><a id="X79A909F786A94A47" name="X79A909F786A94A47"></a></p>
 
-<h5>2.4-6 GLGraph</h5>
+<h5>2.4-6 LGraph</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLGraph</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LGraph</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a graph</p>
 
 <p>Constructs the directed graph of the Hasse diagram of L.</p>
 
-<p><a id="X8120B26884492B63" name="X8120B26884492B63"></a></p>
+<p><a id="X7E1203CB7969B4A0" name="X7E1203CB7969B4A0"></a></p>
 
-<h5>2.4-7 GLAutGroup</h5>
+<h5>2.4-7 LAutGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLAutGroup</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LAutGroup</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a group</p>
 
-<p>Computes the autmorphism group of L as a subgroup of <code class="code">Sym(GLAtoms(L))</code>.</p>
+<p>Computes the autmorphism group of L as a subgroup of <code class="code">Sym(LAtoms(L))</code>.</p>
 
-<p><a id="X798F89EB80281979" name="X798F89EB80281979"></a></p>
+<p><a id="X80A93EFA7EC0496A" name="X80A93EFA7EC0496A"></a></p>
 
-<h5>2.4-8 GLMoebius</h5>
+<h5>2.4-8 LMoebius</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLMoebius</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LMoebius</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: function</p>
 
 <p>Returns the Moebius function of <var class="Arg">L</var>.</p>
 
-<p><a id="X7C81758087597A80" name="X7C81758087597A80"></a></p>
+<p><a id="X83B3C4237FD0B9AA" name="X83B3C4237FD0B9AA"></a></p>
 
-<h5>2.4-9 GLCharPoly</h5>
+<h5>2.4-9 LCharPoly</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLCharPoly</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LCharPoly</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: function</p>
 
 <p>Computes the characteristic polynomial of <var class="Arg">L</var>.</p>
@@ -361,20 +361,20 @@ true
 
 <h4>2.5 <span class="Heading">Properties of geometric lattices</span></h4>
 
-<p><a id="X7C4806937CF2DE83" name="X7C4806937CF2DE83"></a></p>
+<p><a id="X85C9C1F47977DAD5" name="X85C9C1F47977DAD5"></a></p>
 
-<h5>2.5-1 GLIsIrreducible</h5>
+<h5>2.5-1 LIsIrreducible</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsIrreducible</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsIrreducible</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
 <p>Determines, if L is irreducible.</p>
 
-<p><a id="X81BB82B28355CFA0" name="X81BB82B28355CFA0"></a></p>
+<p><a id="X8444E8837E952FE4" name="X8444E8837E952FE4"></a></p>
 
-<h5>2.5-2 GLIsBoolean</h5>
+<h5>2.5-2 LIsBoolean</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsBoolean</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsBoolean</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
 <p>Determines, if L is a boolean lattice.</p>
@@ -383,19 +383,19 @@ true
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));</span>
 &lt;Geometric lattice: 2 atoms, rank 2&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsBoolean(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsBoolean(L);</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));</span>
 &lt;Geometric lattice: 3 atoms, rank 2&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsBoolean(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsBoolean(L);</span>
 false
 </pre></div>
 
-<p><a id="X7F3537B47F5FD64C" name="X7F3537B47F5FD64C"></a></p>
+<p><a id="X7ACA5D857F2A0913" name="X7ACA5D857F2A0913"></a></p>
 
-<h5>2.5-3 GLIsGeneric</h5>
+<h5>2.5-3 LIsGeneric</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GLIsGeneric</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsGeneric</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
 <p>Determines, if L is generic, i.e. if L is irreducible and all proper intervals are boolean.</p>
@@ -406,13 +406,13 @@ false
 &lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
 &lt;Geometric lattice: 4 atoms, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsGeneric(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsGeneric(L);</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
 &lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
 &lt;Geometric lattice: 5 atoms, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GLIsGeneric(L);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsGeneric(L);</span>
 false
 </pre></div>
 
