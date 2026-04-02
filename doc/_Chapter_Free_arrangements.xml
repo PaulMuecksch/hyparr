@@ -13,7 +13,7 @@
 <Heading>Module of logarithmic vector fields aka derivation modules of arrangements</Heading>
 
  The functions in this section all use the <B>singular</B> package
- to call functions from <B>Singular</B><Cite Key="DGPS_Singular4"/> for commutative algebra calculations.
+ to call functions from <B>Singular</B> <Cite Key="DGPS_Singular4"/> for commutative algebra calculations.
 <ManSection>
   <Oper Arg="A [, mult]" Name="DerModule" Label="for IsHyperplaneArrangement"/>
  <Returns>Derivation module

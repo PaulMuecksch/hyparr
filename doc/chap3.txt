@@ -10,7 +10,7 @@
   [1Xarrangements[133X[101X
   
   [33X[0;0YThe functions in this section all use the [12Xsingular[112X package to call functions
-  from [12XSingular[112X[DGPS24] for commutative algebra calculations.[133X
+  from [12XSingular[112X [DGPS24] for commutative algebra calculations.[133X
   
   [1X3.1-1 DerModule[101X
   
