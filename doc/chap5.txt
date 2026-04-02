@@ -1,5 +1,6 @@
   
-  [1X5 [33X[0;0YFurther arrangement properties[133X[101X
+  [1X5  [33X[0;0YFurther  properties  of  arrangements,  geometric  lattices, and oriented[101X
+  [1Xmatroids[133X[101X
   
   [33X[0;0YThe   following   describes  functions  to  analyse  further  properties  of
   arrangements    such    as   [13Xformality[113X,   [13Xsupersolvability[113X,   [13Xsimpliciality[113X,
@@ -185,5 +186,61 @@
     [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);[127X[104X
     [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
     [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X5.4 [33X[0;0YFalk's weight test[133X[101X
+  
+  [33X[0;0YThe following still needs to be tested further...[133X
+  
+  [1X5.4-1 OMBoundedCpx[101X
+  
+  [33X[1;0Y[29X[2XOMBoundedCpx[102X( [3XOM[103X, [3Xg[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist of list of sign vectors.[133X
+  
+  [33X[0;0YConstructs  the  complex of bounded cells of the affine part of the oriented
+  matroid [3XOM[103X with respect to the element [3Xg[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X5.4-2 OMSupportsFalkWeights[101X
+  
+  [33X[1;0Y[29X[2XOMSupportsFalkWeights[102X( [3XOM[103X, [3Xg[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist or fail[133X
+  
+  [33X[0;0YOnly  for  oriented  matroids  of  rank 3. Determines, whether [3XOM[103X supports a
+  system of weights as described by M. Falk in [Fal95]. This implies, that the
+  Salvetti   complex   (see   [2XSalvettiComplex[102X   ([14X6.2-8[114X))  is  apsherical.  The
+  functionality of the [12Xcddinterface[112X package is used, to determine solotions of
+  a system of linear inequalities.[133X
+  
+  [33X[0;0YIf  the  algorithm  determines  a  suitable  weight system for [3XOM[103X, each list
+  element  consists  of a weight, and a corner, i.e. a pair of a 2-cell and an
+  adjacent vertex in the bounded complex, given as sign vectors.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid([127X[104X
+    [4X[25X>[125X [27X      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]][127X[104X
+    [4X[25X>[125X [27X);;[127X[104X
+    [4X[28X<OrientedMatroid: 7 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XOMSupportsFalkWeights(O,3);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XOMSupportsFalkWeights(O,1);[127X[104X
+    [4X[28X[ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] [128X[104X
   [4X[32X[104X
   

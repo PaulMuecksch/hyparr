@@ -67,7 +67,9 @@ Dependencies := rec(
                              ["hap", ">= 1.5"]
                             #[ "gapdoc",     ">=0.0" ],
                            ],
-  SuggestedOtherPackages := [ ],
+  SuggestedOtherPackages := [ 
+                              ["cddinterface", ">= 2025"]
+                            ],
   ExternalConditions := [ ],
 ),
 

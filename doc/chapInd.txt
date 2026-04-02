@@ -49,6 +49,7 @@
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 4.1-2 
       for IsOrientedMatroid 4.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.2-6 
+  [2XOMBoundedCpx[102X, for IsOrientedMatroid, IsInt 5.4-1 
   [2XOMChirotope[102X, for IsOrientedMatroid 6.2-12 
   [2XOMCocircuits[102X, for IsOrientedMatroid 6.2-5 
   [2XOMCovectors[102X, for IsOrientedMatroid 6.2-7 
@@ -61,6 +62,7 @@
   [2XOMOperation[102X 6.5-1 
   [2XOMRank[102X, for IsOrientedMatroid 6.2-1 
   [2XOMRankFunction[102X, for IsOrientedMatroid 6.2-13 
+  [2XOMSupportsFalkWeights[102X, for IsOrientedMatroid, IsInt 5.4-2 
   [2XOrderCovec[102X 6.5-2 
   [2XOrientedMatroid[102X, for IsList 6.1-1 
   [2XRoots[102X, for IsHyperplaneArrangement 2.2-2 

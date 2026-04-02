@@ -77,7 +77,8 @@
       4.1-1 MilnorFiberComplex
       4.1-2 MilnorFiberComplex
       4.1-3 FPtoCWCpx
-  5 [33X[0;0YFurther arrangement properties[133X
+  5 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
+  matroids[133X
     5.1 [33X[0;0YSupersolvable arrangements[133X
       5.1-1 LIsModularPair
       5.1-2 LIsModularFlat
@@ -89,6 +90,9 @@
       5.2-1 IsFormal
     5.3 [33X[0;0YSimplicial arrangements[133X
       5.3-1 HArrIsSimplicial
+    5.4 [33X[0;0YFalk's weight test[133X
+      5.4-1 OMBoundedCpx
+      5.4-2 OMSupportsFalkWeights
   6 [33X[0;0YOriented Matroids[133X
     6.1 [33X[0;0YConstruction of oriented matroids[133X
       6.1-1 OrientedMatroid

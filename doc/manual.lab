@@ -14,10 +14,11 @@
 \makelabel{hyparr:Freeness properties}{3.1}{X82FF317F7EFD52AF}
 \makelabel{hyparr:Milnor fibers}{4}{X80236F007DAFE4C2}
 \makelabel{hyparr:Complexes}{4.1}{X79C388D385DB7CD1}
-\makelabel{hyparr:Further arrangement properties}{5}{X80695ECF7F9C8B1E}
+\makelabel{hyparr:Further properties of arrangements, geometric lattices, and oriented matroids}{5}{X7E898D0F86EF9F1E}
 \makelabel{hyparr:Supersolvable arrangements}{5.1}{X7B09D56B7A076E6B}
 \makelabel{hyparr:Formal arrangements}{5.2}{X79BAC87F7C1CA4A1}
 \makelabel{hyparr:Simplicial arrangements}{5.3}{X8070A6CF85A00A70}
+\makelabel{hyparr:Falk's weight test}{5.4}{X79A9BA6287B1A981}
 \makelabel{hyparr:Oriented Matroids}{6}{X8388FBA579602CDB}
 \makelabel{hyparr:Construction of oriented matroids}{6.1}{X8053D2C379B5CD9C}
 \makelabel{hyparr:Attributes}{6.2}{X7C701DBF7BAE649A}
@@ -72,6 +73,8 @@
 \makelabel{hyparr:OMIsSupersolvable for IsOrientedMatroid}{5.1.6}{X78B7232883025D41}
 \makelabel{hyparr:IsFormal for IsHyperplaneArrangement}{5.2.1}{X808977C7824120DF}
 \makelabel{hyparr:HArrIsSimplicial for IsHyperplaneArrangement}{5.3.1}{X7D69068B7DA44D16}
+\makelabel{hyparr:OMBoundedCpx for IsOrientedMatroid, IsInt}{5.4.1}{X7F2F674F8273D120}
+\makelabel{hyparr:OMSupportsFalkWeights for IsOrientedMatroid, IsInt}{5.4.2}{X87CE42827934F11F}
 \makelabel{hyparr:OrientedMatroid for IsList}{6.1.1}{X82EE52377B03CC80}
 \makelabel{hyparr:OMRank for IsOrientedMatroid}{6.2.1}{X7E30B85C7CE42908}
 \makelabel{hyparr:OMGroundSet for IsOrientedMatroid}{6.2.2}{X78C0E4A0861CAD2F}

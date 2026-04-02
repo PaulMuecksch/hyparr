@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (HypArr) - Chapter 5: Further arrangement properties</title>
+<title>GAP (HypArr) - Chapter 5: Further properties of arrangements, geometric lattices, and oriented matroids</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -20,8 +20,8 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap4.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap6.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap5_mj.html">[MathJax on]</a></p>
-<p><a id="X80695ECF7F9C8B1E" name="X80695ECF7F9C8B1E"></a></p>
-<div class="ChapSects"><a href="chap5.html#X80695ECF7F9C8B1E">5 <span class="Heading">Further arrangement properties</span></a>
+<p><a id="X7E898D0F86EF9F1E" name="X7E898D0F86EF9F1E"></a></p>
+<div class="ChapSects"><a href="chap5.html#X7E898D0F86EF9F1E">5 <span class="Heading">Further properties of arrangements, geometric lattices, and oriented matroids</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X7B09D56B7A076E6B">5.1 <span class="Heading">Supersolvable arrangements</span></a>
 </span>
 <div class="ContSSBlock">
@@ -42,9 +42,15 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7D69068B7DA44D16">5.3-1 HArrIsSimplicial</a></span>
 </div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X79A9BA6287B1A981">5.4 <span class="Heading">Falk's weight test</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7F2F674F8273D120">5.4-1 OMBoundedCpx</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X87CE42827934F11F">5.4-2 OMSupportsFalkWeights</a></span>
+</div></div>
 </div>
 
-<h3>5 <span class="Heading">Further arrangement properties</span></h3>
+<h3>5 <span class="Heading">Further properties of arrangements, geometric lattices, and oriented matroids</span></h3>
 
 <p>The following describes functions to analyse further properties of arrangements such as <em>formality</em>, <em>supersolvability</em>, <em>simpliciality</em>, <em>factoredness</em>, <em>inductive factoredness</em> ...</p>
 
@@ -253,6 +259,62 @@ false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);</span>
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 true
+</pre></div>
+
+<p><a id="X79A9BA6287B1A981" name="X79A9BA6287B1A981"></a></p>
+
+<h4>5.4 <span class="Heading">Falk's weight test</span></h4>
+
+<p>The following still needs to be tested further...</p>
+
+<p><a id="X7F2F674F8273D120" name="X7F2F674F8273D120"></a></p>
+
+<h5>5.4-1 OMBoundedCpx</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMBoundedCpx</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: list of list of sign vectors.</p>
+
+<p>Constructs the complex of bounded cells of the affine part of the oriented matroid <var class="Arg">OM</var> with respect to the element <var class="Arg">g</var>.</p>
+
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X87CE42827934F11F" name="X87CE42827934F11F"></a></p>
+
+<h5>5.4-2 OMSupportsFalkWeights</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMSupportsFalkWeights</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: list or fail</p>
+
+<p>Only for oriented matroids of rank 3. Determines, whether <var class="Arg">OM</var> supports a system of weights as described by M. Falk in <a href="chapBib.html#biBFalk1995_Kpi1Arrs">[Fal95]</a>. This implies, that the Salvetti complex (see <code class="func">SalvettiComplex</code> (<a href="chap6.html#X7ED4D5138012EB6C"><span class="RefLink">6.2-8</span></a>)) is apsherical. The functionality of the <strong class="button">cddinterface</strong> package is used, to determine solotions of a system of linear inequalities.</p>
+
+<p>If the algorithm determines a suitable weight system for <var class="Arg">OM</var>, each list element consists of a weight, and a corner, i.e. a pair of a 2-cell and an adjacent vertex in the bounded complex, given as sign vectors.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
+&lt;OrientedMatroid: 7 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMSupportsFalkWeights(O,3);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMSupportsFalkWeights(O,1);</span>
+[ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+  [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+  [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+  [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+  [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
 </pre></div>
 
 

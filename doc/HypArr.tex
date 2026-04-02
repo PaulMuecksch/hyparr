@@ -971,9 +971,9 @@ HAP CW Complex
  }
 
    
-\chapter{\textcolor{Chapter }{Further arrangement properties}}\label{Chapter_Further_arrangement_properties}
+\chapter{\textcolor{Chapter }{Further properties of arrangements, geometric lattices, and oriented matroids}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids}
 \logpage{[ 5, 0, 0 ]}
-\hyperdef{L}{X80695ECF7F9C8B1E}{}
+\hyperdef{L}{X7E898D0F86EF9F1E}{}
 {
   
 
@@ -981,7 +981,7 @@ HAP CW Complex
 arrangements such as \emph{formality}, \emph{supersolvability}, \emph{simpliciality}, \emph{factoredness}, \emph{inductive factoredness} ... 
 
  
-\section{\textcolor{Chapter }{Supersolvable arrangements}}\label{Chapter_Further_arrangement_properties_Section_Supersolvable_arrangements}
+\section{\textcolor{Chapter }{Supersolvable arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Supersolvable_arrangements}
 \logpage{[ 5, 1, 0 ]}
 \hyperdef{L}{X7B09D56B7A076E6B}{}
 {
@@ -1152,7 +1152,7 @@ true or false.
  }
 
  
-\section{\textcolor{Chapter }{Formal arrangements}}\label{Chapter_Further_arrangement_properties_Section_Formal_arrangements}
+\section{\textcolor{Chapter }{Formal arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Formal_arrangements}
 \logpage{[ 5, 2, 0 ]}
 \hyperdef{L}{X79BAC87F7C1CA4A1}{}
 {
@@ -1206,7 +1206,7 @@ true or false.
  }
 
  
-\section{\textcolor{Chapter }{Simplicial arrangements}}\label{Chapter_Further_arrangement_properties_Section_Simplicial_arrangements}
+\section{\textcolor{Chapter }{Simplicial arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Simplicial_arrangements}
 \logpage{[ 5, 3, 0 ]}
 \hyperdef{L}{X8070A6CF85A00A70}{}
 {
@@ -1231,6 +1231,76 @@ true or false.
   !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
   true
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Falk's weight test}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Falks_weight_test}
+\logpage{[ 5, 4, 0 ]}
+\hyperdef{L}{X79A9BA6287B1A981}{}
+{
+  The following still needs to be tested further... 
+
+\subsection{\textcolor{Chapter }{OMBoundedCpx (for IsOrientedMatroid, IsInt)}}
+\logpage{[ 5, 4, 1 ]}\nobreak
+\hyperdef{L}{X7F2F674F8273D120}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMBoundedCpx({\mdseries\slshape OM, g})\index{OMBoundedCpx@\texttt{OMBoundedCpx}!for IsOrientedMatroid, IsInt}
+\label{OMBoundedCpx:for IsOrientedMatroid, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list of list of sign vectors. 
+
+
+
+ Constructs the complex of bounded cells of the affine part of the oriented
+matroid \mbox{\texttt{\mdseries\slshape OM}} with respect to the element \mbox{\texttt{\mdseries\slshape g}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMSupportsFalkWeights (for IsOrientedMatroid, IsInt)}}
+\logpage{[ 5, 4, 2 ]}\nobreak
+\hyperdef{L}{X87CE42827934F11F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMSupportsFalkWeights({\mdseries\slshape OM, g})\index{OMSupportsFalkWeights@\texttt{OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt}
+\label{OMSupportsFalkWeights:for IsOrientedMatroid, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list or fail 
+
+
+
+ Only for oriented matroids of rank 3. Determines, whether \mbox{\texttt{\mdseries\slshape OM}} supports a system of weights as described by M. Falk in \cite{Falk1995_Kpi1Arrs}. This implies, that the Salvetti complex (see \texttt{SalvettiComplex} (\ref{SalvettiComplex:for IsOrientedMatroid})) is apsherical. The functionality of the \textsc{cddinterface} package is used, to determine solotions of a system of linear inequalities. 
+
+ If the algorithm determines a suitable weight system for \mbox{\texttt{\mdseries\slshape OM}}, each list element consists of a weight, and a corner, i.e. a pair of a
+2\texttt{\symbol{45}}cell and an adjacent vertex in the bounded complex, given
+as sign vectors. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(|
+  !gapprompt@>| !gapinput@      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]|
+  !gapprompt@>| !gapinput@);;|
+  <OrientedMatroid: 7 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
+  false
+  !gapprompt@gap>| !gapinput@OMSupportsFalkWeights(O,3);|
+  fail
+  !gapprompt@gap>| !gapinput@OMSupportsFalkWeights(O,1);|
+  [ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+    [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+    [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+    [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+    [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
 \end{Verbatim}
  }
 

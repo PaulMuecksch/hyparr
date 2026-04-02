@@ -1,7 +1,7 @@
 #
 # HypArr: Functions to analyse further arrangement properties
 #
-#! @Chapter Further arrangement properties
+#! @Chapter Further properties of arrangements, geometric lattices, and oriented matroids
 #!
 #! The following describes functions to analyse further
 #! properties of arrangements such as <E>formality</E>, <E>supersolvability</E>, <E>simpliciality</E>,
@@ -195,6 +195,64 @@ DeclareGlobalFunction("HArr_SpaceSFx");;
 DeclareProperty("HArrIsSimplicial", IsHyperplaneArrangement);
 
 # DeclareProperty("OMIsSimplicial", IsOrientedMatroid);
+
+
+#################################
+##
+#! @Section Falk's weight test
+##
+#################################
+
+#! The following still needs to be tested further...
+
+#! @Arguments OM, g
+#! @Returns list of list of sign vectors.
+#! @Description
+#!  Constructs the complex of bounded cells of the affine part 
+#!  of the oriented matroid <A>OM</A> with respect to the element <A>g</A>.
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
+DeclareOperation("OMBoundedCpx", [IsOrientedMatroid, IsInt]);
+
+#! @Arguments OM, g
+#! @Returns list or fail
+#! @Description
+#!  Only for oriented matroids of rank 3.
+#!  Determines, whether <A>OM</A> supports a system of weights as described
+#!  by M. Falk in <Cite Key="Falk1995_Kpi1Arrs"/>.
+#!  This implies, that the Salvetti complex (see <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>)
+#!  is apsherical.
+#!  The functionality of the <B>cddinterface</B> package is used, 
+#!  to determine solotions of a system of linear inequalities.
+#!  
+#!  If the algorithm determines a suitable weight system for <A>OM</A>,
+#!  each list element consists of a weight, and a corner, i.e. a pair of
+#!  a 2-cell and an adjacent vertex in the bounded complex, given as sign vectors.
+#! @BeginExampleSession
+#! gap> O:=OrientedMatroid(
+#! >       [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]
+#! > );;
+#! <OrientedMatroid: 7 elements, rank 3>
+#! gap> OMIsSupersolvable(O);
+#! false
+#! gap> OMSupportsFalkWeights(O,3);
+#! fail
+#! gap> OMSupportsFalkWeights(O,1);
+#! [ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+#!   [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+#!   [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+#!   [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+#!   [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+#!   [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+#!   [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+#!   [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+#!   [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+#!   [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+#!   [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+#!   [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
+#! @EndExampleSession
+DeclareOperation("OMSupportsFalkWeights",[IsOrientedMatroid, IsInt]);;
 
 #################################
 ##
