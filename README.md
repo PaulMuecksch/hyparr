@@ -5,7 +5,7 @@
 Hyperplane arrangements appear in many different areas of mathematics, 
 such as discrete and algebraic geometry, topology, combinatorics, etc..
 
-[the package manual](https://paulmuecksch.github.io/HypArr/doc/chap0_mj.html)
+[The package manual](https://paulmuecksch.github.io/HypArr/doc/chap0_mj.html) [pdf](https://paulmuecksch.github.io/HypArr/doc/manual.pdf)
 
 ## Prerequisites
 
