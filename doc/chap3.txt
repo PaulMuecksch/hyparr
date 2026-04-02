@@ -2,8 +2,8 @@
   [1X3 [33X[0;0YFree arrangements[133X[101X
   
   [33X[0;0YThe   following  describes  functions  to  analyse  freeness  properties  of
-  arrangements  such  as  [13Xinductive  freeness[113X  due  to  H.  Terao  [\te80] and
-  [13Xdivisionell freeness[113X due to T. Abe [\te16].[133X
+  arrangements  such  as  [13Xinductive  freeness[113X  due  to  H.  Terao  [Ter80] and
+  [13Xdivisionell freeness[113X due to T. Abe [Abe16].[133X
   
   
   [1X3.1   [33X[0;0YModule   of  logarithmic  vector  fields  aka  derivation  modules  of[101X

@@ -16,7 +16,7 @@
 #################################
 
 #! The functions in this section all use the <B>singular</B> package
-#! to call functions from <B>Singular</B><Cite Key="DGPS_Singular4"/> for commutative algebra calculations.
+#! to call functions from <B>Singular</B> <Cite Key="DGPS_Singular4"/> for commutative algebra calculations.
 
 DeclareCategory("IsDerivationModule", IsComponentObjectRep and IsAttributeStoringRep );
 

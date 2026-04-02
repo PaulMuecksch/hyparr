@@ -1,8 +1,8 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{BLVS{\etalchar{+}}99}
 
-\bibitem[{Abe}16]{Abe16_DivFree}
-T.~{Abe}.
+\bibitem[Abe16]{Abe16_DivFree}
+T.~Abe.
 \newblock Divisionally free arrangements of hyperplanes.
 \newblock {\em Invent. Math.}, 204(1):317--346, 2016.
 
@@ -43,12 +43,12 @@ M.~Falk and R.~Randell.
   Pure Math.}, pages 101--124. North-Holland, Amsterdam, 1987.
 
 \bibitem[MY25]{MueYos25_MilnorOM}
-P.~M{\"u}cksch and M.~Yoshinaga.
+P.~Mücksch and M.~Yoshinaga.
 \newblock Milnor fibrations and oriented matroids.
 \newblock {\em ArXiv e-prints}, page arXiv:2508.15331, 2025.
 
 \bibitem[OT92]{OrTer92_Arr}
-P.~{Orlik} and H.~{Terao}.
+P.~Orlik and H.~Terao.
 \newblock {\em Arrangements of Hyperplanes}.
 \newblock Grundlehren der mathematischen Wissenschaften. Springer, 1992.
 
@@ -57,8 +57,8 @@ M.~Salvetti.
 \newblock Topology of the complement of real hyperplanes in {${\bf C}^N$}.
 \newblock {\em Invent. Math.}, 88(3):603--618, 1987.
 
-\bibitem[{Ter}80]{Terao1980_FreeI}
-H.~{Terao}.
+\bibitem[Ter80]{Terao1980_FreeI}
+H.~Terao.
 \newblock Arrangements of hyperplanes and their freeness {I}.
 \newblock {\em J. Fac. Sci. Univ. Tokyo}, 27:293--320, 1980.
 
