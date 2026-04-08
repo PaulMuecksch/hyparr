@@ -106,7 +106,12 @@ DeclareAttribute("Roots", IsHyperplaneArrangement);
 #! Returns the field of definition of <A>A</A>.
 #! For further compuations, in characterisic $0$ only cyclotomic fields are considered.
 #! @BeginExampleSession
-#! 
+#! gap> A:=HyperplaneArrangement(Z(3)^0*[[1,0],[0,1],[1,1]]); HArrDefField(A);
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! GF(3)
+#! gap> A:=AGpql(5,5,2); HArrDefField(A);
+#! <HyperplaneArrangement: 5 hyperplanes in 2-space>
+#! CF(5)
 #! @EndExampleSession
 DeclareAttribute("HArrDefField", IsHyperplaneArrangement);
 
