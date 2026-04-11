@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  2 APR 2026 19:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  11 APR 2026 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,7 +565,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 
 ] [6] [7] [8] [9] [10]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
-67.
+72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -574,74 +574,74 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 File: ./other/DrawLatex3Arr_Example.pdf Graphic file (type pdf)
 <use ./other/DrawLatex3Arr_Example.pdf>
 Package pdftex.def Info: ./other/DrawLatex3Arr_Example.pdf  used on input line 
-819.
+824.
 (pdftex.def)             Requested size: 263.24883pt x 369.04788pt.
- [12 <./other/DrawLatex3Arr_Example.pdf>]
+ [12] [13 <./other/DrawLatex3Arr_Example.pdf>]
 Chapter 3.
-[13
 
-] [14] [15] [16]
+pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
+722081}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.845 \hyperdef{L}{X80841F8D80722081}{}
+                                        [14
+
+] [15]
 Chapter 4.
-[17
+[16
 
-] [18]
-Chapter 5.
-[19
-
-] [20] [21] [22] [23]
-Chapter 6.
-[24
-
-] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1790
+] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1211
 
  []
 
-[27] [28]
+[19] [20]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7DE8E16C7C
 2D387B}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1984 \hyperdef{L}{X7DE8E16C7C2D387B}{}
-                                         [29]
+l.1405 \hyperdef{L}{X7DE8E16C7C2D387B}{}
+                                         [21]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
 722081}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2074 \hyperdef{L}{X80841F8D80722081}{}
-                                         [30]
-Underfull \hbox (badness 10000) in paragraph at lines 2109--2112
+l.1495 \hyperdef{L}{X80841F8D80722081}{}
+                                         [22]
+Underfull \hbox (badness 10000) in paragraph at lines 1530--1533
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2136--2139
+Underfull \hbox (badness 10000) in paragraph at lines 1557--1560
 
  []
 
-[31]
+[23]
+Chapter 5.
+[24
+
+] [25] [26] [27]
+Chapter 6.
+[28
+
+] [29] [30] [31] [32]
 Chapter 7.
+[33
 
-pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
-722081}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2159 \hyperdef{L}{X80841F8D80722081}{}
-                                         [32
-
-] [33]
+] [34]
 Chapter 8.
 
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2285 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.2290 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                          (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [34
+ [35
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
@@ -649,7 +649,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--33
 er-sion 1.75.
  []
 
-) [35
+) [36
 
 ] (./HypArr.ind
 Underfull \hbox (badness 10000) in paragraph at lines 81--83
@@ -661,22 +661,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[36
+[37
 
 
-] [37]) (./HypArr.aux)
+] [38]) (./HypArr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `HypArr.out' has not changed.
-(rerunfilecheck)             Checksum: 89760A39871708DEA47326DDE163D846;5286.
+(rerunfilecheck)             Checksum: 54C7300C5DB128584D48AFBEC9903004;5220.
 Package rerunfilecheck Info: File `HypArr.brf' has not changed.
-(rerunfilecheck)             Checksum: FE0281CF64D1F0D3FB5D9344138C5612;657.
+(rerunfilecheck)             Checksum: DD4DA245B727FD1E31B7ABAAC15A99E3;657.
  ) 
 Here is how much of TeX's memory you used:
- 12115 strings out of 474222
- 188393 string characters out of 5748734
+ 12116 strings out of 474222
+ 188364 string characters out of 5748734
  1935975 words of memory out of 5000000
  33886 multiletter control sequences out of 15000+600000
  628526 words of font info for 122 fonts, out of 8000000 for 9000
@@ -697,10 +697,10 @@ ymbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (37 pages, 318999 bytes).
+Output written on HypArr.pdf (38 pages, 319866 bytes).
 PDF statistics:
- 801 PDF objects out of 1000 (max. 8388607)
- 718 compressed objects within 8 object streams
- 270 named destinations out of 1000 (max. 500000)
+ 806 PDF objects out of 1000 (max. 8388607)
+ 722 compressed objects within 8 object streams
+ 271 named destinations out of 1000 (max. 500000)
  262 words of extra memory for PDF output out of 10000 (max. 10000000)
 

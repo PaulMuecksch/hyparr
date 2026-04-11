@@ -8,7 +8,7 @@
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<title>GAP (HypArr) - Chapter 7: Special arrangements</title>
+<title>GAP (HypArr) - Chapter 7: Milnor fibers</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -23,96 +23,86 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap6_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap7.html">[MathJax off]</a></p>
-<p><a id="X7C9F5AAF83133F9A" name="X7C9F5AAF83133F9A"></a></p>
-<div class="ChapSects"><a href="chap7_mj.html#X7C9F5AAF83133F9A">7 <span class="Heading">Special arrangements</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X80841F8D80722081">7.1 <span class="Heading">Global methods</span></a>
+<p><a id="X80236F007DAFE4C2" name="X80236F007DAFE4C2"></a></p>
+<div class="ChapSects"><a href="chap7_mj.html#X80236F007DAFE4C2">7 <span class="Heading">Milnor fibers</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap7_mj.html#X79C388D385DB7CD1">7.1 <span class="Heading">Complexes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X858205A37B7EB5FA">7.1-1 AGpql</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X81AD6CA97F71ED33">7.1-2 SsS3</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X82DB5C6F83FDC443">7.1-3 ConnectedSubgraphArr</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X794B90A67B153E6F">7.1-1 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X7D30E85086B93DB0">7.1-2 MilnorFiberComplex</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap7_mj.html#X7BBA6F967E493B5D">7.1-3 FPtoCWCpx</a></span>
 </div></div>
 </div>
 
-<h3>7 <span class="Heading">Special arrangements</span></h3>
+<h3>7 <span class="Heading">Milnor fibers</span></h3>
 
-<p>The following describes functions to construct some special arrangements.</p>
+<p>The Milnor fiber is the typical fiber <span class="SimpleMath">\(f^{-1}(1)\)</span> of the Milnor fibration</p>
 
-<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
+<p class="center">\[f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times, z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]</p>
 
-<h4>7.1 <span class="Heading">Global methods</span></h4>
+<p>of the hyperplane arrangement <span class="SimpleMath">\(\mathcal{A}\)</span>, where <span class="SimpleMath">\(\alpha_H\)</span> are defining linear forms.</p>
 
-<p><a id="X858205A37B7EB5FA" name="X858205A37B7EB5FA"></a></p>
+<p>The following describes functions to construct a regular cell complex having the homotopy type of the Milnor fiber from <a href="chapBib_mj.html#biBMueYos25_MilnorOM">[MY25]</a> and thus enables computation of homotopy invaraints using e.g. the HAP package <a href="chapBib_mj.html#biBGAP_HAP">[Ell26]</a>.</p>
 
-<h5>7.1-1 AGpql</h5>
+<p><a id="X79C388D385DB7CD1" name="X79C388D385DB7CD1"></a></p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AGpql</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Returns: A hyperplane arrangement.</p>
+<h4>7.1 <span class="Heading">Complexes</span></h4>
 
-<p>Constructs the reflection arrangement associated to the monomial complex reflection group <span class="SimpleMath">\(G(p,q,l)\)</span>. The hyperplanes are defined by equations of the form</p>
+<p><a id="X794B90A67B153E6F" name="X794B90A67B153E6F"></a></p>
 
-<p class="center">\[
-     x_i = \zeta^k x_j
-  \]</p>
+<h5>7.1-1 MilnorFiberComplex</h5>
 
-<p>where <span class="SimpleMath">\(\zeta\)</span> is a primitive <span class="SimpleMath">\(p\)</span>-th root of unity.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: FacePoset</p>
+
+<p>Computes the face poset of the regular cell complex of the combinatorial Milnor fiber of the oriented matroid <var class="Arg">OM</var>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,1,3);</span>
- &lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Roots(A);</span>
-[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
-  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
-  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
+&lt;OrientedMatroid: 3 elements, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(O);</span>
+&lt;FacePoset of dimension 1 with f-vector [ 3, 6 ]&gt;
 </pre></div>
 
-<p><a id="X81AD6CA97F71ED33" name="X81AD6CA97F71ED33"></a></p>
+<p><a id="X7D30E85086B93DB0" name="X7D30E85086B93DB0"></a></p>
 
-<h5>7.1-2 SsS3</h5>
+<h5>7.1-2 MilnorFiberComplex</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SsS3</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Returns: A hyperplane arrangement.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MilnorFiberComplex</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: FacePoset</p>
 
-<p>Generates the irreducible supersolvable simplicial arrangement of rank 3 with n hyperplanes. n must either be even oder congruent 1 mod 4. In any case, <span class="SimpleMath">\(n\geq 6\)</span>.</p>
+<p>Computes the face poset of the regular cell complex having the homotopy type of Milnor fiber of the arrangement <var class="Arg">A</var>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=SsS3(9); Roots(A);</span>
-&lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
-[ [ 0, 0, 1 ], [ 0, 1, 0 ], 
-  [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 0 ], 
-  [ -1, 0, 0 ], 
-  [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 0 ], 
-  [ 1/2*E(8)-1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
-  [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
-  [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ], 
-  [ 1/2*E(8)-1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ] ]
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
 </pre></div>
 
-<p><a id="X82DB5C6F83FDC443" name="X82DB5C6F83FDC443"></a></p>
+<p><a id="X7BBA6F967E493B5D" name="X7BBA6F967E493B5D"></a></p>
 
-<h5>7.1-3 ConnectedSubgraphArr</h5>
+<h5>7.1-3 FPtoCWCpx</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConnectedSubgraphArr</code>( <var class="Arg">Es</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: A hyperplane arrangement.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPtoCWCpx</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: HAP CW Complex</p>
 
-<p>Generates the connected subgraph arrangement (see <a href="chapBib_mj.html#biBCK2022_ConnSubgraph_arXiv">[CK22]</a>) of the graph with edges <var class="Arg">Es</var>.</p>
-
-<p>Let <span class="SimpleMath">\(G = (N,E)\)</span> be an undirected graph with vertex set <span class="SimpleMath">\(N = [n]\)</span> and edge set <span class="SimpleMath">\(E\)</span>. For <span class="SimpleMath">\(I \subseteq N\)</span>, let <span class="SimpleMath">\(G[I]\)</span> be the induced subgraph of <span class="SimpleMath">\(G\)</span> on the set of vertices <span class="SimpleMath">\(I\)</span>. For <span class="SimpleMath">\(I \subseteq N\)</span>, define the hyperplane</p>
-
-<p class="center">\[H_I := \ker \sum_{i \in I}x_i.\]</p>
-
-<p>The connected subgraph arrangement consists of hyperplanes <span class="SimpleMath">\(\{H_I \mid \varnothing \ne I \subseteq N \text{ if \)</span>G[I]<span class="SimpleMath">\( is connected} \}.\)</span></p>
+<p>Converts a <strong class="button">HypArr</strong> <code class="code">FacePoset</code> into a <strong class="button">HAP</strong> <code class="code">RegularCWComplex</code> for further computations of topological invariants.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);</span>
-&lt;HyperplaneArrangement: 7 hyperplanes in 3-space&gt;
-[ [ 1, 1, 1 ], [ 0, 1, 1 ], [ 0, 0, 1 ], [ 0, 1, 0 ], 
-  [ 1, 0, 1 ], [ 1, 0, 0 ], [ 1, 1, 0 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCpx:=MilnorFiberComplex(A);</span>
+&lt;FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MCW := FPtoCWCpx(MCpx);</span>
+Regular CW-complex of dimension 2
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Homology(MCW,0);</span>
+[ 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Homology(MCW,1);</span>
+[ 0, 0, 0, 0, 0, 0, 0 ]
 </pre></div>
 
 

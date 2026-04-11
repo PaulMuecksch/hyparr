@@ -1,7 +1,7 @@
 #
-# HypArr: Functions for chamber posets
+# HypArr: Functions for tope posets
 #
-#! @Chapter Chamber and tope posets
+#! @Chapter Tope posets
 
 # Declare the category
 DeclareCategory("IsTopePoset", IsComponentObjectRep and IsAttributeStoringRep );

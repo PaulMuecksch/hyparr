@@ -1,5 +1,5 @@
   
-  [1X8 [33X[0;0YChamber and tope posets[133X[101X
+  [1X8 [33X[0;0YTope posets[133X[101X
   
   
   [1X8.1 [33X[0;0YOperation[133X[101X

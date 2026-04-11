@@ -3,9 +3,9 @@
 <!-- This is an automatically generated file. -->
 <#Include SYSTEM "_Chapter_Introduction.xml">
 <#Include SYSTEM "_Chapter_Hyperplane_arrangements.xml">
-<#Include SYSTEM "_Chapter_Free_arrangements.xml">
-<#Include SYSTEM "_Chapter_Milnor_fibers.xml">
-<#Include SYSTEM "_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml">
-<#Include SYSTEM "_Chapter_Oriented_Matroids.xml">
 <#Include SYSTEM "_Chapter_Special_arrangements.xml">
-<#Include SYSTEM "_Chapter_Chamber_and_tope_posets.xml">
+<#Include SYSTEM "_Chapter_Oriented_Matroids.xml">
+<#Include SYSTEM "_Chapter_Free_arrangements.xml">
+<#Include SYSTEM "_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml">
+<#Include SYSTEM "_Chapter_Milnor_fibers.xml">
+<#Include SYSTEM "_Chapter_Tope_posets.xml">

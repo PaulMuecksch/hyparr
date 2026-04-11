@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Tope_posets">
+<Heading>Tope posets</Heading>
+
+<Section Label="Chapter_Tope_posets_Section_Operation">
+<Heading>Operation</Heading>
+
+<ManSection>
+  <Oper Arg="OM,BTope" Name="TopePoset" Label="for IsOrientedMatroid, IsList"/>
+ <Returns>A TopePoset object
+</Returns>
+ <Description>
+ Constructs the tope poset of the oriented matroid <A>OM</A>
+ with respect to the base tope <A>BTope</A> (given as sign vector).
+<P/>
+<Example><![CDATA[
+gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]); 
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Tope_posets_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="TP" Name="TPGroundSet" Label="for IsTopePoset"/>
+ <Returns>A list of lists.
+</Returns>
+ <Description>
+  The ground set of the tope poset <A>TP</A>.
+  It is a list of list, recording the separating elements
+  of the given tope from the base tope.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="TP" Name="TPBaseTope" Label="for IsTopePoset"/>
+ <Returns>A sign vector.
+</Returns>
+ <Description>
+   Returns the bast tope of the tope poset <A>TP</A>.
+<P/>
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+
+</Chapter>
+

@@ -74,7 +74,12 @@
   characterisic [23X0[123X only cyclotomic fields are considered.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement(Z(3)^0*[[1,0],[0,1],[1,1]]); HArrDefField(A);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[28XGF(3)[128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(5,5,2); HArrDefField(A);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 2-space>[128X[104X
+    [4X[28XCF(5)[128X[104X
   [4X[32X[104X
   
   [1X2.2-4 IntersectionLattice[101X

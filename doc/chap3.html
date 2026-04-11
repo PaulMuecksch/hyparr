@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (HypArr) - Chapter 3: Free arrangements</title>
+<title>GAP (HypArr) - Chapter 3: Special arrangements</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -20,219 +20,96 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap3_mj.html">[MathJax on]</a></p>
-<p><a id="X84CDDA0382B013CF" name="X84CDDA0382B013CF"></a></p>
-<div class="ChapSects"><a href="chap3.html#X84CDDA0382B013CF">3 <span class="Heading">Free arrangements</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X875DF181804D1224">3.1 <span class="Heading">Module of logarithmic vector fields aka derivation modules of arrangements</span></a>
+<p><a id="X7C9F5AAF83133F9A" name="X7C9F5AAF83133F9A"></a></p>
+<div class="ChapSects"><a href="chap3.html#X7C9F5AAF83133F9A">3 <span class="Heading">Special arrangements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X80841F8D80722081">3.1 <span class="Heading">Global methods</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X783314398329E3BE">3.1-1 DerModule</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7B6780568674988A">3.1-2 DerModGenerators</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X8174C2FD82AA2B81">3.1-3 DerModPRing</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X78A309B97E68E70F">3.1-4 DerModDegreeSequence</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X81D05AA282B2B62E">3.1-5 DerModProjDim</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X81110BE983107955">3.1-6 DerModIsFree</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X7C55194B8304FDAC">3.1-7 HArrIsFree</a></span>
-</div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X82FF317F7EFD52AF">3.2 <span class="Heading">Freeness properties</span></a>
-</span>
-<div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X80F4D6247CAA1BDA">3.2-1 IsInductivelyFree</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X85DAC6FC78DDED6D">3.2-2 IsDivisionallyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X858205A37B7EB5FA">3.1-1 AGpql</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X81AD6CA97F71ED33">3.1-2 SsS3</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3.html#X82DB5C6F83FDC443">3.1-3 ConnectedSubgraphArr</a></span>
 </div></div>
 </div>
 
-<h3>3 <span class="Heading">Free arrangements</span></h3>
+<h3>3 <span class="Heading">Special arrangements</span></h3>
 
-<p>The following describes functions to analyse freeness properties of arrangements such as <em>inductive freeness</em> due to H. Terao <a href="chapBib.html#biBTerao1980_FreeI">[Ter80]</a> and <em>divisionell freeness</em> due to T. Abe <a href="chapBib.html#biBAbe16_DivFree">[Abe16]</a>.</p>
+<p>The following describes functions to construct some special arrangements.</p>
 
-<p><a id="X875DF181804D1224" name="X875DF181804D1224"></a></p>
+<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
 
-<h4>3.1 <span class="Heading">Module of logarithmic vector fields aka derivation modules of arrangements</span></h4>
+<h4>3.1 <span class="Heading">Global methods</span></h4>
 
-<p>The functions in this section all use the <strong class="button">singular</strong> package to call functions from <strong class="button">Singular</strong> <a href="chapBib.html#biBDGPS_Singular4">[DGPS24]</a> for commutative algebra calculations.</p>
+<p><a id="X858205A37B7EB5FA" name="X858205A37B7EB5FA"></a></p>
 
-<p><a id="X783314398329E3BE" name="X783314398329E3BE"></a></p>
+<h5>3.1-1 AGpql</h5>
 
-<h5>3.1-1 DerModule</h5>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AGpql</code>( <var class="Arg">p</var>, <var class="Arg">q</var>, <var class="Arg">l</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModule</code>( <var class="Arg">A</var>[, <var class="Arg">mult</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: Derivation module</p>
+<p>Constructs the reflection arrangement associated to the monomial complex reflection group <span class="SimpleMath">G(p,q,l)</span>. The hyperplanes are defined by equations of the form</p>
 
-<p>Computes the <em>(multi) derivation module</em> of the arrangement <var class="Arg">A</var> (with multiplicities given as a list by <var class="Arg">mult</var>).</p>
+<p class="pcenter">
+     x_i = \zeta^k x_j
+  </p>
+
+<p>where <span class="SimpleMath">ζ</span> is a primitive <span class="SimpleMath">p</span>-th root of unity.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);</span>
-&lt;Derivation module
-  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-  with 4 generators&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A,[2,1,3,4]);</span>
-&lt;Derivation module
-  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-  with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,1,3);</span>
+ &lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Roots(A);</span>
+[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+  [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
+  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
+
 </pre></div>
 
-<p><a id="X7B6780568674988A" name="X7B6780568674988A"></a></p>
+<p><a id="X81AD6CA97F71ED33" name="X81AD6CA97F71ED33"></a></p>
 
-<h5>3.1-2 DerModGenerators</h5>
+<h5>3.1-2 SsS3</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModGenerators</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: list</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SsS3</code>( <var class="Arg">n</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
 
-<p>Returns the (minimal) generators of the module <var class="Arg">D</var>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);</span>
-&lt;Derivation module
-  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-  with 4 generators&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DerModGenerators(D);</span>
-[ [ x_1, x_2, x_3 ], 
-  [ 0, -x_2*x_3, x_2*x_3 ], 
-  [ 0, x_2*x_3, x_1*x_3+x_3^2 ], 
-  [ 0, x_1*x_2+x_2^2+x_2*x_3, 0 ] ]
-</pre></div>
-
-<p><a id="X8174C2FD82AA2B81" name="X8174C2FD82AA2B81"></a></p>
-
-<h5>3.1-3 DerModPRing</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModPRing</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: Polynomial ring</p>
-
-<p>Returns the defining polynomial ring of <var class="Arg">D</var>.</p>
+<p>Generates the irreducible supersolvable simplicial arrangement of rank 3 with n hyperplanes. n must either be even oder congruent 1 mod 4. In any case, <span class="Math">n\geq 6</span>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(AGpql(3,3,2));; DerModPRing(D);</span>
-&lt;field in characteristic 0&gt;[x_1,x_2]
-</pre></div>
-
-<p><a id="X78A309B97E68E70F" name="X78A309B97E68E70F"></a></p>
-
-<h5>3.1-4 DerModDegreeSequence</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModDegreeSequence</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: list</p>
-
-<p>Returns the sequence of degrees of (minimal) generators of the graded module <var class="Arg">D</var>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DerModDegreeSequence(DerModule(A));</span>
-[ 1, 2, 2 ]
-</pre></div>
-
-<p><a id="X81D05AA282B2B62E" name="X81D05AA282B2B62E"></a></p>
-
-<h5>3.1-5 DerModProjDim</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModProjDim</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A non-negative integer</p>
-
-<p>Computes the projective dimension of the module <var class="Arg">D</var>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);</span>
-&lt;Derivation module
-  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-  with 4 generators&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DerModProjDim(D);</span>
-1
-</pre></div>
-
-<p><a id="X81110BE983107955" name="X81110BE983107955"></a></p>
-
-<h5>3.1-6 DerModIsFree</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModIsFree</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
-
-<p>Determines, if <var class="Arg">D</var> is a free module over <code class="code">DerModPRing(D)</code>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);; DerModIsFree(D);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);; DerModIsFree(D);</span>
-false
-</pre></div>
-
-<p><a id="X7C55194B8304FDAC" name="X7C55194B8304FDAC"></a></p>
-
-<h5>3.1-7 HArrIsFree</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
-
-<p>Determines, if <var class="Arg">A</var> is free, i.e. if the derivation module is a free module over the coordinate ring of the ambient space.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFree(A);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFree(A);</span>
-false
-</pre></div>
-
-<p><a id="X82FF317F7EFD52AF" name="X82FF317F7EFD52AF"></a></p>
-
-<h4>3.2 <span class="Heading">Freeness properties</span></h4>
-
-<p><a id="X80F4D6247CAA1BDA" name="X80F4D6247CAA1BDA"></a></p>
-
-<h5>3.2-1 IsInductivelyFree</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsInductivelyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
-
-<p>Determines whether the arrangement <var class="Arg">A</var> is <em>inductively free</em>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsInductivelyFree(A);</span>
-true
-</pre></div>
-
-<p><a id="X85DAC6FC78DDED6D" name="X85DAC6FC78DDED6D"></a></p>
-
-<h5>3.2-2 IsDivisionallyFree</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDivisionallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
-
-<p>Determines whether the arrangement <var class="Arg">A</var> is <em>divisionally free</em>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
-&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDivisionallyFree(A);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(3,3,3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=SsS3(9); Roots(A);</span>
 &lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDivisionallyFree(A);</span>
-false
+[ [ 0, 0, 1 ], [ 0, 1, 0 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 0 ], 
+  [ -1, 0, 0 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 0 ], 
+  [ 1/2*E(8)-1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
+  [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ], 
+  [ 1/2*E(8)-1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ] ]
+
+</pre></div>
+
+<p><a id="X82DB5C6F83FDC443" name="X82DB5C6F83FDC443"></a></p>
+
+<h5>3.1-3 ConnectedSubgraphArr</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ConnectedSubgraphArr</code>( <var class="Arg">Es</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Generates the connected subgraph arrangement (see <a href="chapBib.html#biBCK2022_ConnSubgraph_arXiv">[CK22]</a>) of the graph with edges <var class="Arg">Es</var>.</p>
+
+<p>Let <span class="Math">G = (N,E)</span> be an undirected graph with vertex set <span class="Math">N = [n]</span> and edge set <span class="Math">E</span>. For <span class="Math">I \subseteq N</span>, let <span class="Math">G[I]</span> be the induced subgraph of <span class="Math">G</span> on the set of vertices <span class="Math">I</span>. For <span class="Math">I \subseteq N</span>, define the hyperplane</p>
+
+<p class="pcenter">H_I := \ker \sum_{i \in I}x_i.</p>
+
+<p>The connected subgraph arrangement consists of hyperplanes <span class="Math">\{H_I \mid \varnothing \ne I \subseteq N \text{ if </span>G[I]<span class="Math"> is connected} \}.</span></p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);</span>
+&lt;HyperplaneArrangement: 7 hyperplanes in 3-space&gt;
+[ [ 1, 1, 1 ], [ 0, 1, 1 ], [ 0, 0, 1 ], [ 0, 1, 0 ], 
+  [ 1, 0, 1 ], [ 1, 0, 0 ], [ 1, 1, 0 ] ]
 </pre></div>
 
 

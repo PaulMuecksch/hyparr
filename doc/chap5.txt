@@ -1,246 +1,173 @@
   
-  [1X5  [33X[0;0YFurther  properties  of  arrangements,  geometric  lattices, and oriented[101X
-  [1Xmatroids[133X[101X
+  [1X5 [33X[0;0YFree arrangements[133X[101X
   
-  [33X[0;0YThe   following   describes  functions  to  analyse  further  properties  of
-  arrangements    such    as   [13Xformality[113X,   [13Xsupersolvability[113X,   [13Xsimpliciality[113X,
-  [13Xfactoredness[113X, [13Xinductive factoredness[113X ...[133X
+  [33X[0;0YThe   following  describes  functions  to  analyse  freeness  properties  of
+  arrangements  such  as  [13Xinductive  freeness[113X  due  to  H.  Terao  [Ter80] and
+  [13Xdivisionell freeness[113X due to T. Abe [Abe16].[133X
   
   
-  [1X5.1 [33X[0;0YSupersolvable arrangements[133X[101X
+  [1X5.1   [33X[0;0YModule   of  logarithmic  vector  fields  aka  derivation  modules  of[101X
+  [1Xarrangements[133X[101X
   
-  [1X5.1-1 LIsModularPair[101X
+  [33X[0;0YThe functions in this section all use the [12Xsingular[112X package to call functions
+  from [12XSingular[112X [DGPS24] for commutative algebra calculations.[133X
   
-  [33X[1;0Y[29X[2XLIsModularPair[102X( [3XL[103X, [3Xm1[103X, [3Xm2[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  [1X5.1-1 DerModule[101X
   
-  [33X[0;0YDetermines if [3Xm1[103X and [3Xm2[103X form a modular pair in L.[133X
+  [33X[1;0Y[29X[2XDerModule[102X( [3XA[103X[, [3Xmult[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YDerivation module[133X
   
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
-    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);[127X[104X
-    [4X[28X<Geometric lattice: 6 atoms, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XLGroundSet(L);[127X[104X
-    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], [128X[104X
-    [4X[28X [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], [128X[104X
-    [4X[28X   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], [128X[104X
-    [4X[28X  [ [ 1, 2, 3, 4, 5, 6 ] ] ][128X[104X
-    [4X[25Xgap>[125X [27Xm1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);[127X[104X
-    [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27Xm1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);[127X[104X
-    [4X[28Xtrue[128X[104X
-  [4X[32X[104X
-  
-  [1X5.1-2 LIsModularFlat[101X
-  
-  [33X[1;0Y[29X[2XLIsModularFlat[102X( [3XL[103X, [3Xm[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
-  
-  [33X[0;0YDetermines if [3Xm[103X is a modular flat in L.[133X
+  [33X[0;0YComputes   the   [13X(multi)  derivation  module[113X  of  the  arrangement  [3XA[103X  (with
+  multiplicities given as a list by [3Xmult[103X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);[127X[104X
-    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
-    [4X[28X<Geometric lattice: 6 atoms, rank 3>[128X[104X
-    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], [128X[104X
-    [4X[28X [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], [128X[104X
-    [4X[28X   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], [128X[104X
-    [4X[28X  [ [ 1, 2, 3, 4, 5, 6 ] ] ][128X[104X
-    [4X[25Xgap>[125X [27Xm1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);[127X[104X
-    [4X[28Xfalse[128X[104X
-    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(A);[127X[104X
+    [4X[28X<Derivation module[128X[104X
+    [4X[28X  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )[128X[104X
+    [4X[28X  with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(A,[2,1,3,4]);[127X[104X
+    [4X[28X<Derivation module[128X[104X
+    [4X[28X  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )[128X[104X
+    [4X[28X  with 4 generators>[128X[104X
   [4X[32X[104X
   
-  [1X5.1-3 LModularFlatsRk[101X
+  [1X5.1-2 DerModGenerators[101X
   
-  [33X[1;0Y[29X[2XLModularFlatsRk[102X( [3XL[103X, [3Xk[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDerModGenerators[102X( [3XD[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist[133X
   
-  [33X[0;0YDetermines the modular flats in [3XL[103X of rank [3Xk[103X.[133X
+  [33X[0;0YReturns the (minimal) generators of the module [3XD[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(2,1,4));[127X[104X
-    [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
-    [4X[25Xgap>[125X [27XLModularFlatsRk(L,3);[127X[104X
-    [4X[28X[ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], [128X[104X
-    [4X[28X  [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], [128X[104X
-    [4X[28X  [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], [128X[104X
-    [4X[28X  [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ][128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(A);[127X[104X
+    [4X[28X<Derivation module[128X[104X
+    [4X[28X  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )[128X[104X
+    [4X[28X  with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDerModGenerators(D);[127X[104X
+    [4X[28X[ [ x_1, x_2, x_3 ], [128X[104X
+    [4X[28X  [ 0, -x_2*x_3, x_2*x_3 ], [128X[104X
+    [4X[28X  [ 0, x_2*x_3, x_1*x_3+x_3^2 ], [128X[104X
+    [4X[28X  [ 0, x_1*x_2+x_2^2+x_2*x_3, 0 ] ][128X[104X
   [4X[32X[104X
   
-  [1X5.1-4 LIsSupersolvable[101X
+  [1X5.1-3 DerModPRing[101X
   
-  [33X[1;0Y[29X[2XLIsSupersolvable[102X( [3XL[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  [33X[1;0Y[29X[2XDerModPRing[102X( [3XD[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YPolynomial ring[133X
   
-  [33X[0;0YDetermines whether the geometric lattice [3XL[103X is [13Xsupersolvable[113X.[133X
+  [33X[0;0YReturns the defining polynomial ring of [3XD[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(2,1,4));[127X[104X
-    [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
-    [4X[25Xgap>[125X [27XLIsSupersolvable(L);[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(2,2,4));[127X[104X
-    [4X[28X<Geometric lattice: 12 atoms, rank 4>[128X[104X
-    [4X[25Xgap>[125X [27XLIsSupersolvable(L);[127X[104X
-    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(AGpql(3,3,2));; DerModPRing(D);[127X[104X
+    [4X[28X<field in characteristic 0>[x_1,x_2][128X[104X
   [4X[32X[104X
   
-  [1X5.1-5 HArrIsSupersolvable[101X
+  [1X5.1-4 DerModDegreeSequence[101X
   
-  [33X[1;0Y[29X[2XHArrIsSupersolvable[102X( [3XA[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  [33X[1;0Y[29X[2XDerModDegreeSequence[102X( [3XD[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ylist[133X
   
-  [33X[0;0YDetermines whether the arrangement [3XA[103X is [13Xsupersolvable[113X.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,1,4);[127X[104X
-    [4X[28X<HyperplaneArrangement: 16 hyperplanes in 4-space>[128X[104X
-    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,2,4); [127X[104X
-    [4X[28X<HyperplaneArrangement: 12 hyperplanes in 4-space>[128X[104X
-    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
-    [4X[28Xfalse[128X[104X
-  [4X[32X[104X
-  
-  [1X5.1-6 OMIsSupersolvable[101X
-  
-  [33X[1;0Y[29X[2XOMIsSupersolvable[102X( [3XOM[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
-  
-  [33X[0;0YDetermines whether the oriented matroid [3XOM[103X is [13Xsupersolvable[113X.[133X
+  [33X[0;0YReturns the sequence of degrees of (minimal) generators of the graded module
+  [3XD[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XO:=OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
-    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
-    [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XC:=List(Combinations(Roots(AGpql(2,2,3)),3),x->pos(Determinant(x)));[127X[104X
-    [4X[28X[ 1, 1, 1, 1, 0, -1, -1, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 1, -1, -1 ][128X[104X
-    [4X[25Xgap>[125X [27XO:=OrientedMatroid(3,6,C);[127X[104X
-    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
-    [4X[28Xtrue[128X[104X
-  [4X[32X[104X
-  
-  
-  [1X5.2 [33X[0;0YFormal arrangements[133X[101X
-  
-  [1X5.2-1 IsFormal[101X
-  
-  [33X[1;0Y[29X[2XIsFormal[102X( [3XA[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
-  
-  [33X[0;0YDetermines  whether  the  arrangement is [13Xformal[113X in the sense of Falk-Randell
-  [FR87].[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA1 := Arr([[127X[104X
-    [4X[25X>[125X [27X    [1,0,0],[127X[104X
-    [4X[25X>[125X [27X    [0,1,0],[127X[104X
-    [4X[25X>[125X [27X    [0,0,1],[127X[104X
-    [4X[25X>[125X [27X    [1,1,1],[127X[104X
-    [4X[25X>[125X [27X    [2,1,1],[127X[104X
-    [4X[25X>[125X [27X    [2,3,1],[127X[104X
-    [4X[25X>[125X [27X    [2,3,4],[127X[104X
-    [4X[25X>[125X [27X    [3,0,5],[127X[104X
-    [4X[25X>[125X [27X    [3,4,5][127X[104X
-    [4X[25X>[125X [27X]);;[127X[104X
-    [4X[25Xgap>[125X [27X[127X[104X
-    [4X[25Xgap>[125X [27XA2 := Arr([[127X[104X
-    [4X[25X>[125X [27X    [1,0,0],[127X[104X
-    [4X[25X>[125X [27X    [0,1,0],[127X[104X
-    [4X[25X>[125X [27X    [0,0,1],[127X[104X
-    [4X[25X>[125X [27X    [1,1,1],[127X[104X
-    [4X[25X>[125X [27X    [2,1,1],[127X[104X
-    [4X[25X>[125X [27X    [2,3,1],[127X[104X
-    [4X[25X>[125X [27X    [2,3,4],[127X[104X
-    [4X[25X>[125X [27X    [1,0,3],[127X[104X
-    [4X[25X>[125X [27X    [1,2,3][127X[104X
-    [4X[25X>[125X [27X]);;[127X[104X
-    [4X[25Xgap>[125X [27XIsLEquiv(A1,A2);[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XIsFormal(A1);[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XIsFormal(A2);[127X[104X
-    [4X[28Xfalse[128X[104X
-  [4X[32X[104X
-  
-  
-  [1X5.3 [33X[0;0YSimplicial arrangements[133X[101X
-  
-  [1X5.3-1 HArrIsSimplicial[101X
-  
-  [33X[1;0Y[29X[2XHArrIsSimplicial[102X( [3XA[103X ) [32X property[133X
-  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
-  
-  [33X[0;0YDetermines  whether  the  real  arrangement  [3XA[103X  is  [13Xsimplicial[113X,  i.e. if all
-  chambers are simplicial.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);[127X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
     [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XDerModDegreeSequence(DerModule(A));[127X[104X
+    [4X[28X[ 1, 2, 2 ][128X[104X
+  [4X[32X[104X
+  
+  [1X5.1-5 DerModProjDim[101X
+  
+  [33X[1;0Y[29X[2XDerModProjDim[102X( [3XD[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA non-negative integer[133X
+  
+  [33X[0;0YComputes the projective dimension of the module [3XD[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(A);[127X[104X
+    [4X[28X<Derivation module[128X[104X
+    [4X[28X  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )[128X[104X
+    [4X[28X  with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDerModProjDim(D);[127X[104X
+    [4X[28X1[128X[104X
+  [4X[32X[104X
+  
+  [1X5.1-6 DerModIsFree[101X
+  
+  [33X[1;0Y[29X[2XDerModIsFree[102X( [3XD[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines, if [3XD[103X is a free module over [10XDerModPRing(D)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(A);; DerModIsFree(D);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XD:=DerModule(A);; DerModIsFree(D);[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);[127X[104X
-    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+  [4X[32X[104X
+  
+  [1X5.1-7 HArrIsFree[101X
+  
+  [33X[1;0Y[29X[2XHArrIsFree[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines,  if  [3XA[103X  is  free, i.e. if the derivation module is a free module
+  over the coordinate ring of the ambient space.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsFree(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsFree(A);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X5.2 [33X[0;0YFreeness properties[133X[101X
+  
+  [1X5.2-1 IsInductivelyFree[101X
+  
+  [33X[1;0Y[29X[2XIsInductivelyFree[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines whether the arrangement [3XA[103X is [13Xinductively free[113X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XIsInductivelyFree(A);[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
+  [1X5.2-2 IsDivisionallyFree[101X
   
-  [1X5.4 [33X[0;0YFalk's weight test[133X[101X
+  [33X[1;0Y[29X[2XIsDivisionallyFree[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
   
-  [33X[0;0YThe following still needs to be tested further...[133X
-  
-  [1X5.4-1 OMBoundedCpx[101X
-  
-  [33X[1;0Y[29X[2XOMBoundedCpx[102X( [3XOM[103X, [3Xg[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ylist of list of sign vectors.[133X
-  
-  [33X[0;0YConstructs  the  complex of bounded cells of the affine part of the oriented
-  matroid [3XOM[103X with respect to the element [3Xg[103X.[133X
+  [33X[0;0YDetermines whether the arrangement [3XA[103X is [13Xdivisionally free[113X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
-  
-  [1X5.4-2 OMSupportsFalkWeights[101X
-  
-  [33X[1;0Y[29X[2XOMSupportsFalkWeights[102X( [3XOM[103X, [3Xg[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10Ylist or fail[133X
-  
-  [33X[0;0YOnly  for  oriented  matroids  of  rank 3. Determines, whether [3XOM[103X supports a
-  system of weights as described by M. Falk in [Fal95]. This implies, that the
-  Salvetti   complex   (see   [2XSalvettiComplex[102X   ([14X6.2-8[114X))  is  apsherical.  The
-  functionality of the [12Xcddinterface[112X package is used, to determine solotions of
-  a system of linear inequalities.[133X
-  
-  [33X[0;0YIf  the  algorithm  determines  a  suitable  weight system for [3XOM[103X, each list
-  element  consists  of a weight, and a corner, i.e. a pair of a 2-cell and an
-  adjacent vertex in the bounded complex, given as sign vectors.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XO:=OrientedMatroid([127X[104X
-    [4X[25X>[125X [27X      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]][127X[104X
-    [4X[25X>[125X [27X);;[127X[104X
-    [4X[28X<OrientedMatroid: 7 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XIsDivisionallyFree(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(3,3,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XIsDivisionallyFree(A);[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XOMSupportsFalkWeights(O,3);[127X[104X
-    [4X[28Xfail[128X[104X
-    [4X[25Xgap>[125X [27XOMSupportsFalkWeights(O,1);[127X[104X
-    [4X[28X[ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], [128X[104X
-    [4X[28X  [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
-    [4X[28X  [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
-    [4X[28X  [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], [128X[104X
-    [4X[28X  [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], [128X[104X
-    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] [128X[104X
   [4X[32X[104X
   

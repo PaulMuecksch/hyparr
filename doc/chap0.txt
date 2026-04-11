@@ -69,76 +69,76 @@
       2.7-1 HArrResHind
       2.7-2 HArrResX
       2.7-3 DrawLatex3Arr
-  3 [33X[0;0YFree arrangements[133X
-    3.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules of
+  3 [33X[0;0YSpecial arrangements[133X
+    3.1 [33X[0;0YGlobal methods[133X
+      3.1-1 AGpql
+      3.1-2 SsS3
+      3.1-3 ConnectedSubgraphArr
+  4 [33X[0;0YOriented Matroids[133X
+    4.1 [33X[0;0YConstruction of oriented matroids[133X
+      4.1-1 OrientedMatroid
+    4.2 [33X[0;0YAttributes[133X
+      4.2-1 OMRank
+      4.2-2 OMGroundSet
+      4.2-3 OMLForms
+      4.2-4 OMGeomLattice
+      4.2-5 OMCocircuits
+      4.2-6 TopeGraph
+      4.2-7 OMCovectors
+      4.2-8 SalvettiComplex
+      4.2-9 SalvettiComplex
+      4.2-10 FPGroundSet
+      4.2-11 FPOrder
+      4.2-12 OMChirotope
+      4.2-13 OMRankFunction
+    4.3 [33X[0;0YProperties[133X
+      4.3-1 OMIsLinear
+      4.3-2 HasSimpleSimplex
+      4.3-3 HasSimpleTriangle
+    4.4 [33X[0;0YOperations[133X
+      4.4-1 IsLEquiv
+      4.4-2 HasSimpleSimplexRk
+      4.4-3 OMLocalizationRk
+    4.5 [33X[0;0YGlobal methods[133X
+      4.5-1 OMOperation
+      4.5-2 OrderCovec
+      4.5-3 IsOMEquiv
+      4.5-4 SeparatingSet
+  5 [33X[0;0YFree arrangements[133X
+    5.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules of
     arrangements[133X
-      3.1-1 DerModule
-      3.1-2 DerModGenerators
-      3.1-3 DerModPRing
-      3.1-4 DerModDegreeSequence
-      3.1-5 DerModProjDim
-      3.1-6 DerModIsFree
-      3.1-7 HArrIsFree
-    3.2 [33X[0;0YFreeness properties[133X
-      3.2-1 IsInductivelyFree
-      3.2-2 IsDivisionallyFree
-  4 [33X[0;0YMilnor fibers[133X
-    4.1 [33X[0;0YComplexes[133X
-      4.1-1 MilnorFiberComplex
-      4.1-2 MilnorFiberComplex
-      4.1-3 FPtoCWCpx
-  5 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
+      5.1-1 DerModule
+      5.1-2 DerModGenerators
+      5.1-3 DerModPRing
+      5.1-4 DerModDegreeSequence
+      5.1-5 DerModProjDim
+      5.1-6 DerModIsFree
+      5.1-7 HArrIsFree
+    5.2 [33X[0;0YFreeness properties[133X
+      5.2-1 IsInductivelyFree
+      5.2-2 IsDivisionallyFree
+  6 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
   matroids[133X
-    5.1 [33X[0;0YSupersolvable arrangements[133X
-      5.1-1 LIsModularPair
-      5.1-2 LIsModularFlat
-      5.1-3 LModularFlatsRk
-      5.1-4 LIsSupersolvable
-      5.1-5 HArrIsSupersolvable
-      5.1-6 OMIsSupersolvable
-    5.2 [33X[0;0YFormal arrangements[133X
-      5.2-1 IsFormal
-    5.3 [33X[0;0YSimplicial arrangements[133X
-      5.3-1 HArrIsSimplicial
-    5.4 [33X[0;0YFalk's weight test[133X
-      5.4-1 OMBoundedCpx
-      5.4-2 OMSupportsFalkWeights
-  6 [33X[0;0YOriented Matroids[133X
-    6.1 [33X[0;0YConstruction of oriented matroids[133X
-      6.1-1 OrientedMatroid
-    6.2 [33X[0;0YAttributes[133X
-      6.2-1 OMRank
-      6.2-2 OMGroundSet
-      6.2-3 OMLForms
-      6.2-4 OMGeomLattice
-      6.2-5 OMCocircuits
-      6.2-6 TopeGraph
-      6.2-7 OMCovectors
-      6.2-8 SalvettiComplex
-      6.2-9 SalvettiComplex
-      6.2-10 FPGroundSet
-      6.2-11 FPOrder
-      6.2-12 OMChirotope
-      6.2-13 OMRankFunction
-    6.3 [33X[0;0YProperties[133X
-      6.3-1 OMIsLinear
-      6.3-2 HasSimpleSimplex
-      6.3-3 HasSimpleTriangle
-    6.4 [33X[0;0YOperations[133X
-      6.4-1 IsLEquiv
-      6.4-2 HasSimpleSimplexRk
-      6.4-3 OMLocalizationRk
-    6.5 [33X[0;0YGlobal methods[133X
-      6.5-1 OMOperation
-      6.5-2 OrderCovec
-      6.5-3 IsOMEquiv
-      6.5-4 SeparatingSet
-  7 [33X[0;0YSpecial arrangements[133X
-    7.1 [33X[0;0YGlobal methods[133X
-      7.1-1 AGpql
-      7.1-2 SsS3
-      7.1-3 ConnectedSubgraphArr
-  8 [33X[0;0YChamber and tope posets[133X
+    6.1 [33X[0;0YSupersolvable arrangements[133X
+      6.1-1 LIsModularPair
+      6.1-2 LIsModularFlat
+      6.1-3 LModularFlatsRk
+      6.1-4 LIsSupersolvable
+      6.1-5 HArrIsSupersolvable
+      6.1-6 OMIsSupersolvable
+    6.2 [33X[0;0YFormal arrangements[133X
+      6.2-1 IsFormal
+    6.3 [33X[0;0YSimplicial arrangements[133X
+      6.3-1 HArrIsSimplicial
+    6.4 [33X[0;0YFalk's weight test[133X
+      6.4-1 OMBoundedCpx
+      6.4-2 OMSupportsFalkWeights
+  7 [33X[0;0YMilnor fibers[133X
+    7.1 [33X[0;0YComplexes[133X
+      7.1-1 MilnorFiberComplex
+      7.1-2 MilnorFiberComplex
+      7.1-3 FPtoCWCpx
+  8 [33X[0;0YTope posets[133X
     8.1 [33X[0;0YOperation[133X
       8.1-1 TopePoset
     8.2 [33X[0;0YAttributes[133X

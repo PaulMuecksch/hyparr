@@ -249,7 +249,12 @@ A field
 
  Returns the field of definition of \mbox{\texttt{\mdseries\slshape A}}. For further compuations, in characterisic $0$ only cyclotomic fields are considered. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement(Z(3)^0*[[1,0],[0,1],[1,1]]); HArrDefField(A);|
+  <HyperplaneArrangement: 3 hyperplanes in 2-space>
+  GF(3)
+  !gapprompt@gap>| !gapinput@A:=AGpql(5,5,2); HArrDefField(A);|
+  <HyperplaneArrangement: 5 hyperplanes in 2-space>
+  CF(5)
 \end{Verbatim}
  }
 
@@ -826,684 +831,100 @@ arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with th
  }
 
    
-\chapter{\textcolor{Chapter }{Free arrangements}}\label{Chapter_Free_arrangements}
+\chapter{\textcolor{Chapter }{Special arrangements}}\label{Chapter_Special_arrangements}
 \logpage{[ 3, 0, 0 ]}
-\hyperdef{L}{X84CDDA0382B013CF}{}
+\hyperdef{L}{X7C9F5AAF83133F9A}{}
 {
   
 
- The following describes functions to analyse freeness properties of
-arrangements such as \emph{inductive freeness} due to H. Terao \cite{Terao1980_FreeI} and \emph{divisionell freeness} due to T. Abe \cite{Abe16_DivFree}. 
+ The following describes functions to construct some special arrangements. 
 
  
-\section{\textcolor{Chapter }{Module of logarithmic vector fields aka derivation modules of arrangements}}\label{Chapter_Free_arrangements_Section_Module_of_logarithmic_vector_fields_aka_derivation_modules_of_arrangements}
+\section{\textcolor{Chapter }{Global methods}}\label{Chapter_Special_arrangements_Section_Global_methods}
 \logpage{[ 3, 1, 0 ]}
-\hyperdef{L}{X875DF181804D1224}{}
+\hyperdef{L}{X80841F8D80722081}{}
 {
-  The functions in this section all use the \textsc{singular} package to call functions from \textsc{Singular} \cite{DGPS_Singular4} for commutative algebra calculations. 
+  
 
-\subsection{\textcolor{Chapter }{DerModule (for IsHyperplaneArrangement)}}
+\subsection{\textcolor{Chapter }{AGpql}}
 \logpage{[ 3, 1, 1 ]}\nobreak
-\hyperdef{L}{X783314398329E3BE}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModule({\mdseries\slshape A[, mult]})\index{DerModule@\texttt{DerModule}!for IsHyperplaneArrangement}
-\label{DerModule:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (operation)}}\\
-\textbf{\indent Returns:\ }
-Derivation module 
-
-
-
- Computes the \emph{(multi) derivation module} of the arrangement \mbox{\texttt{\mdseries\slshape A}} (with multiplicities given as a list by \mbox{\texttt{\mdseries\slshape mult}}). 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
-  <HyperplaneArrangement: 4 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);|
-  <Derivation module
-    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-    with 4 generators>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A,[2,1,3,4]);|
-  <Derivation module
-    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-    with 4 generators>
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{DerModGenerators (for IsDerivationModule)}}
-\logpage{[ 3, 1, 2 ]}\nobreak
-\hyperdef{L}{X7B6780568674988A}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModGenerators({\mdseries\slshape D})\index{DerModGenerators@\texttt{DerModGenerators}!for IsDerivationModule}
-\label{DerModGenerators:for IsDerivationModule}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-list 
-
-
-
- Returns the (minimal) generators of the module \mbox{\texttt{\mdseries\slshape D}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
-  <HyperplaneArrangement: 4 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);|
-  <Derivation module
-    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-    with 4 generators>
-  !gapprompt@gap>| !gapinput@DerModGenerators(D);|
-  [ [ x_1, x_2, x_3 ], 
-    [ 0, -x_2*x_3, x_2*x_3 ], 
-    [ 0, x_2*x_3, x_1*x_3+x_3^2 ], 
-    [ 0, x_1*x_2+x_2^2+x_2*x_3, 0 ] ]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{DerModPRing (for IsDerivationModule)}}
-\logpage{[ 3, 1, 3 ]}\nobreak
-\hyperdef{L}{X8174C2FD82AA2B81}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModPRing({\mdseries\slshape D})\index{DerModPRing@\texttt{DerModPRing}!for IsDerivationModule}
-\label{DerModPRing:for IsDerivationModule}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-Polynomial ring 
-
-
-
- Returns the defining polynomial ring of \mbox{\texttt{\mdseries\slshape D}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@D:=DerModule(AGpql(3,3,2));; DerModPRing(D);|
-  <field in characteristic 0>[x_1,x_2]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{DerModDegreeSequence (for IsDerivationModule)}}
-\logpage{[ 3, 1, 4 ]}\nobreak
-\hyperdef{L}{X78A309B97E68E70F}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModDegreeSequence({\mdseries\slshape D})\index{DerModDegreeSequence@\texttt{DerModDegreeSequence}!for IsDerivationModule}
-\label{DerModDegreeSequence:for IsDerivationModule}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-list 
-
-
-
- Returns the sequence of degrees of (minimal) generators of the graded module \mbox{\texttt{\mdseries\slshape D}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
-  <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@DerModDegreeSequence(DerModule(A));|
-  [ 1, 2, 2 ]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{DerModProjDim (for IsDerivationModule)}}
-\logpage{[ 3, 1, 5 ]}\nobreak
-\hyperdef{L}{X81D05AA282B2B62E}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModProjDim({\mdseries\slshape D})\index{DerModProjDim@\texttt{DerModProjDim}!for IsDerivationModule}
-\label{DerModProjDim:for IsDerivationModule}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-A non\texttt{\symbol{45}}negative integer 
-
-
-
- Computes the projective dimension of the module \mbox{\texttt{\mdseries\slshape D}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
-  <HyperplaneArrangement: 4 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);|
-  <Derivation module
-    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
-    with 4 generators>
-  !gapprompt@gap>| !gapinput@DerModProjDim(D);|
-  1
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{DerModIsFree (for IsDerivationModule)}}
-\logpage{[ 3, 1, 6 ]}\nobreak
-\hyperdef{L}{X81110BE983107955}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModIsFree({\mdseries\slshape D})\index{DerModIsFree@\texttt{DerModIsFree}!for IsDerivationModule}
-\label{DerModIsFree:for IsDerivationModule}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-true or false 
-
-
-
- Determines, if \mbox{\texttt{\mdseries\slshape D}} is a free module over \texttt{DerModPRing(D)}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
-  <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);; DerModIsFree(D);|
-  true
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
-  <HyperplaneArrangement: 4 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);; DerModIsFree(D);|
-  false
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{HArrIsFree (for IsHyperplaneArrangement)}}
-\logpage{[ 3, 1, 7 ]}\nobreak
-\hyperdef{L}{X7C55194B8304FDAC}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsFree({\mdseries\slshape A})\index{HArrIsFree@\texttt{HArrIsFree}!for IsHyperplaneArrangement}
-\label{HArrIsFree:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-true or false 
-
-
-
- Determines, if \mbox{\texttt{\mdseries\slshape A}} is free, i.e. if the derivation module is a free module over the coordinate
-ring of the ambient space. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
-  <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@HArrIsFree(A);|
-  true
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
-  <HyperplaneArrangement: 4 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@HArrIsFree(A);|
-  false
-\end{Verbatim}
- }
-
- }
-
- 
-\section{\textcolor{Chapter }{Freeness properties}}\label{Chapter_Free_arrangements_Section_Freeness_properties}
-\logpage{[ 3, 2, 0 ]}
-\hyperdef{L}{X82FF317F7EFD52AF}{}
-{
-  
-
-\subsection{\textcolor{Chapter }{IsInductivelyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 3, 2, 1 ]}\nobreak
-\hyperdef{L}{X80F4D6247CAA1BDA}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsInductivelyFree({\mdseries\slshape A})\index{IsInductivelyFree@\texttt{IsInductivelyFree}!for IsHyperplaneArrangement}
-\label{IsInductivelyFree:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{inductively free}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
-  <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@IsInductivelyFree(A);|
-  true
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{IsDivisionallyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 3, 2, 2 ]}\nobreak
-\hyperdef{L}{X85DAC6FC78DDED6D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsDivisionallyFree({\mdseries\slshape A})\index{IsDivisionallyFree@\texttt{IsDivisionallyFree}!for IsHyperplaneArrangement}
-\label{IsDivisionallyFree:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{divisionally free}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
-  <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@IsDivisionallyFree(A);|
-  true
-  !gapprompt@gap>| !gapinput@A:=AGpql(3,3,3);|
-  <HyperplaneArrangement: 9 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@IsDivisionallyFree(A);|
-  false
-\end{Verbatim}
- }
-
- }
-
- }
-
-   
-\chapter{\textcolor{Chapter }{Milnor fibers}}\label{Chapter_Milnor_fibers}
-\logpage{[ 4, 0, 0 ]}
-\hyperdef{L}{X80236F007DAFE4C2}{}
-{
-  
-
- The Milnor fiber is the typical fiber $f^{-1}(1)$ of the Milnor fibration 
-\[f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times,
-z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
- of the hyperplane arrangement $\mathcal{A}$, where $\alpha_H$ are defining linear forms. 
-
- The following describes functions to construct a regular cell complex having
-the homotopy type of the Milnor fiber from \cite{MueYos25_MilnorOM} and thus enables computation of homotopy invaraints using e.g. the HAP package \cite{GAP_HAP}. 
-\section{\textcolor{Chapter }{Complexes}}\label{Chapter_Milnor_fibers_Section_Complexes}
-\logpage{[ 4, 1, 0 ]}
-\hyperdef{L}{X79C388D385DB7CD1}{}
-{
-  
-
-\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}
-\logpage{[ 4, 1, 1 ]}\nobreak
-\hyperdef{L}{X794B90A67B153E6F}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape OM})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsOrientedMatroid}
-\label{MilnorFiberComplex:for IsOrientedMatroid}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-FacePoset 
-
-
-
- Computes the face poset of the regular cell complex of the combinatorial
-Milnor fiber of the oriented matroid \mbox{\texttt{\mdseries\slshape OM}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]);|
-  <OrientedMatroid: 3 elements, rank 2>
-  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(O);|
-  <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
-\logpage{[ 4, 1, 2 ]}\nobreak
-\hyperdef{L}{X7D30E85086B93DB0}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape A})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
-\label{MilnorFiberComplex:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-FacePoset 
-
-
-
- Computes the face poset of the regular cell complex having the homotopy type
-of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
-  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{FPtoCWCpx}}
-\logpage{[ 4, 1, 3 ]}\nobreak
-\hyperdef{L}{X7BBA6F967E493B5D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}}
-\label{FPtoCWCpx}
+\hyperdef{L}{X858205A37B7EB5FA}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape p, q, l})\index{AGpql@\texttt{AGpql}}
+\label{AGpql}
 }\hfill{\scriptsize (function)}}\\
 \textbf{\indent Returns:\ }
-HAP CW Complex 
+A hyperplane arrangement. 
 
 
 
- Converts a \textsc{HypArr} \texttt{FacePoset} into a \textsc{HAP} \texttt{RegularCWComplex} for further computations of topological invariants. 
+ Constructs the reflection arrangement associated to the monomial complex
+reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the form 
+\[ x_i = \zeta^k x_j \]
+ where $\zeta$ is a primitive $p$\texttt{\symbol{45}}th root of unity. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
-  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
-  !gapprompt@gap>| !gapinput@MCW := FPtoCWCpx(MCpx);|
-  Regular CW-complex of dimension 2
-  !gapprompt@gap>| !gapinput@Homology(MCW,0);|
-  [ 0 ]
-  !gapprompt@gap>| !gapinput@Homology(MCW,1);|
-  [ 0, 0, 0, 0, 0, 0, 0 ]
-\end{Verbatim}
- }
-
- }
-
- }
-
-   
-\chapter{\textcolor{Chapter }{Further properties of arrangements, geometric lattices, and oriented matroids}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids}
-\logpage{[ 5, 0, 0 ]}
-\hyperdef{L}{X7E898D0F86EF9F1E}{}
-{
-  
-
- The following describes functions to analyse further properties of
-arrangements such as \emph{formality}, \emph{supersolvability}, \emph{simpliciality}, \emph{factoredness}, \emph{inductive factoredness} ... 
-
- 
-\section{\textcolor{Chapter }{Supersolvable arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Supersolvable_arrangements}
-\logpage{[ 5, 1, 0 ]}
-\hyperdef{L}{X7B09D56B7A076E6B}{}
-{
-  
-
-\subsection{\textcolor{Chapter }{LIsModularPair (for IsGeomLattice, IsList, IsList)}}
-\logpage{[ 5, 1, 1 ]}\nobreak
-\hyperdef{L}{X78E6E11179F7ECB5}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsModularPair({\mdseries\slshape L, m1, m2})\index{LIsModularPair@\texttt{LIsModularPair}!for IsGeomLattice, IsList, IsList}
-\label{LIsModularPair:for IsGeomLattice, IsList, IsList}
-}\hfill{\scriptsize (operation)}}\\
-\textbf{\indent Returns:\ }
-true or false 
-
-
-
- Determines if \mbox{\texttt{\mdseries\slshape m1}} and \mbox{\texttt{\mdseries\slshape m2}} form a modular pair in L. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(A);|
-  <Geometric lattice: 6 atoms, rank 3>
-  !gapprompt@gap>| !gapinput@LGroundSet(L);|
-  [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
-   [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
-     [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
-    [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);|
-  false
-  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);|
-  true
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LIsModularFlat (for IsGeomLattice, IsList)}}
-\logpage{[ 5, 1, 2 ]}\nobreak
-\hyperdef{L}{X7FECD913876C637C}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsModularFlat({\mdseries\slshape L, m})\index{LIsModularFlat@\texttt{LIsModularFlat}!for IsGeomLattice, IsList}
-\label{LIsModularFlat:for IsGeomLattice, IsList}
-}\hfill{\scriptsize (operation)}}\\
-\textbf{\indent Returns:\ }
-true or false 
-
-
-
- Determines if \mbox{\texttt{\mdseries\slshape m}} is a modular flat in L. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  <Geometric lattice: 6 atoms, rank 3>
-  [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
-   [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
-     [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
-    [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);|
-  false
-  true
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LModularFlatsRk (for IsGeomLattice, IsInt)}}
-\logpage{[ 5, 1, 3 ]}\nobreak
-\hyperdef{L}{X8271B52F816053DB}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LModularFlatsRk({\mdseries\slshape L, k})\index{LModularFlatsRk@\texttt{LModularFlatsRk}!for IsGeomLattice, IsInt}
-\label{LModularFlatsRk:for IsGeomLattice, IsInt}
-}\hfill{\scriptsize (operation)}}\\
-\textbf{\indent Returns:\ }
-list 
-
-
-
- Determines the modular flats in \mbox{\texttt{\mdseries\slshape L}} of rank \mbox{\texttt{\mdseries\slshape k}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,1,4));|
-  <Geometric lattice: 16 atoms, rank 4>
-  !gapprompt@gap>| !gapinput@LModularFlatsRk(L,3);|
-  [ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], 
-    [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], 
-    [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], 
-    [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LIsSupersolvable (for IsGeomLattice)}}
-\logpage{[ 5, 1, 4 ]}\nobreak
-\hyperdef{L}{X7D95D0F37E6FBFD6}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsSupersolvable({\mdseries\slshape L})\index{LIsSupersolvable@\texttt{LIsSupersolvable}!for IsGeomLattice}
-\label{LIsSupersolvable:for IsGeomLattice}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the geometric lattice \mbox{\texttt{\mdseries\slshape L}} is \emph{supersolvable}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,1,4));|
-  <Geometric lattice: 16 atoms, rank 4>
-  !gapprompt@gap>| !gapinput@LIsSupersolvable(L);|
-  true
-  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,2,4));|
-  <Geometric lattice: 12 atoms, rank 4>
-  !gapprompt@gap>| !gapinput@LIsSupersolvable(L);|
-  false
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{HArrIsSupersolvable (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 1, 5 ]}\nobreak
-\hyperdef{L}{X7DC90A0286D5664A}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsSupersolvable({\mdseries\slshape A})\index{HArrIsSupersolvable@\texttt{HArrIsSupersolvable}!for IsHyperplaneArrangement}
-\label{HArrIsSupersolvable:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{supersolvable}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,1,4);|
-  <HyperplaneArrangement: 16 hyperplanes in 4-space>
-  !gapprompt@gap>| !gapinput@HArrIsSupersolvable(A);|
-  true
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,4); |
-  <HyperplaneArrangement: 12 hyperplanes in 4-space>
-  !gapprompt@gap>| !gapinput@HArrIsSupersolvable(A);|
-  false
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{OMIsSupersolvable (for IsOrientedMatroid)}}
-\logpage{[ 5, 1, 6 ]}\nobreak
-\hyperdef{L}{X78B7232883025D41}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMIsSupersolvable({\mdseries\slshape OM})\index{OMIsSupersolvable@\texttt{OMIsSupersolvable}!for IsOrientedMatroid}
-\label{OMIsSupersolvable:for IsOrientedMatroid}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the oriented matroid \mbox{\texttt{\mdseries\slshape OM}} is \emph{supersolvable}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(3,4,[1,1,1,1]);|
-  <OrientedMatroid: 4 elements, rank 3>
-  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
-  false
-  !gapprompt@gap>| !gapinput@C:=List(Combinations(Roots(AGpql(2,2,3)),3),x->pos(Determinant(x)));|
-  [ 1, 1, 1, 1, 0, -1, -1, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 1, -1, -1 ]
-  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(3,6,C);|
-  <OrientedMatroid: 6 elements, rank 3>
-  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
-  true
-\end{Verbatim}
- }
-
- }
-
- 
-\section{\textcolor{Chapter }{Formal arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Formal_arrangements}
-\logpage{[ 5, 2, 0 ]}
-\hyperdef{L}{X79BAC87F7C1CA4A1}{}
-{
-  
-
-\subsection{\textcolor{Chapter }{IsFormal (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 2, 1 ]}\nobreak
-\hyperdef{L}{X808977C7824120DF}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsFormal({\mdseries\slshape A})\index{IsFormal@\texttt{IsFormal}!for IsHyperplaneArrangement}
-\label{IsFormal:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the arrangement is \emph{formal} in the sense of Falk\texttt{\symbol{45}}Randell \cite{FalkRandell87_HomotopyArr}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A1 := Arr([|
-  !gapprompt@>| !gapinput@    [1,0,0],|
-  !gapprompt@>| !gapinput@    [0,1,0],|
-  !gapprompt@>| !gapinput@    [0,0,1],|
-  !gapprompt@>| !gapinput@    [1,1,1],|
-  !gapprompt@>| !gapinput@    [2,1,1],|
-  !gapprompt@>| !gapinput@    [2,3,1],|
-  !gapprompt@>| !gapinput@    [2,3,4],|
-  !gapprompt@>| !gapinput@    [3,0,5],|
-  !gapprompt@>| !gapinput@    [3,4,5]|
-  !gapprompt@>| !gapinput@]);;|
-  !gapprompt@gap>| !gapinput@|
-  !gapprompt@gap>| !gapinput@A2 := Arr([|
-  !gapprompt@>| !gapinput@    [1,0,0],|
-  !gapprompt@>| !gapinput@    [0,1,0],|
-  !gapprompt@>| !gapinput@    [0,0,1],|
-  !gapprompt@>| !gapinput@    [1,1,1],|
-  !gapprompt@>| !gapinput@    [2,1,1],|
-  !gapprompt@>| !gapinput@    [2,3,1],|
-  !gapprompt@>| !gapinput@    [2,3,4],|
-  !gapprompt@>| !gapinput@    [1,0,3],|
-  !gapprompt@>| !gapinput@    [1,2,3]|
-  !gapprompt@>| !gapinput@]);;|
-  !gapprompt@gap>| !gapinput@IsLEquiv(A1,A2);|
-  true
-  !gapprompt@gap>| !gapinput@IsFormal(A1);|
-  true
-  !gapprompt@gap>| !gapinput@IsFormal(A2);|
-  false
-\end{Verbatim}
- }
-
- }
-
- 
-\section{\textcolor{Chapter }{Simplicial arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Simplicial_arrangements}
-\logpage{[ 5, 3, 0 ]}
-\hyperdef{L}{X8070A6CF85A00A70}{}
-{
-  
-
-\subsection{\textcolor{Chapter }{HArrIsSimplicial (for IsHyperplaneArrangement and IsReal)}}
-\logpage{[ 5, 3, 1 ]}\nobreak
-\hyperdef{L}{X7EEAC3257EC22C1B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsSimplicial({\mdseries\slshape A})\index{HArrIsSimplicial@\texttt{HArrIsSimplicial}!for IsHyperplaneArrangement and IsReal}
-\label{HArrIsSimplicial:for IsHyperplaneArrangement and IsReal}
-}\hfill{\scriptsize (property)}}\\
-\textbf{\indent Returns:\ }
-true or false. 
-
-
-
- Determines whether the real arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{simplicial}, i.e. if all chambers are simplicial. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);|
-  <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  false
-  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  true
-\end{Verbatim}
- }
-
- }
-
- 
-\section{\textcolor{Chapter }{Falk's weight test}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Falks_weight_test}
-\logpage{[ 5, 4, 0 ]}
-\hyperdef{L}{X79A9BA6287B1A981}{}
-{
-  The following still needs to be tested further... 
-
-\subsection{\textcolor{Chapter }{OMBoundedCpx (for IsOrientedMatroid, IsInt)}}
-\logpage{[ 5, 4, 1 ]}\nobreak
-\hyperdef{L}{X7F2F674F8273D120}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMBoundedCpx({\mdseries\slshape OM, g})\index{OMBoundedCpx@\texttt{OMBoundedCpx}!for IsOrientedMatroid, IsInt}
-\label{OMBoundedCpx:for IsOrientedMatroid, IsInt}
-}\hfill{\scriptsize (operation)}}\\
-\textbf{\indent Returns:\ }
-list of list of sign vectors. 
-
-
-
- Constructs the complex of bounded cells of the affine part of the oriented
-matroid \mbox{\texttt{\mdseries\slshape OM}} with respect to the element \mbox{\texttt{\mdseries\slshape g}}. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A := AGpql(2,1,3);|
+   <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@Roots(A);|
+  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
+    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
+    [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
   
 \end{Verbatim}
  }
 
  
 
-\subsection{\textcolor{Chapter }{OMSupportsFalkWeights (for IsOrientedMatroid, IsInt)}}
-\logpage{[ 5, 4, 2 ]}\nobreak
-\hyperdef{L}{X87CE42827934F11F}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMSupportsFalkWeights({\mdseries\slshape OM, g})\index{OMSupportsFalkWeights@\texttt{OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt}
-\label{OMSupportsFalkWeights:for IsOrientedMatroid, IsInt}
+\subsection{\textcolor{Chapter }{SsS3}}
+\logpage{[ 3, 1, 2 ]}\nobreak
+\hyperdef{L}{X81AD6CA97F71ED33}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SsS3({\mdseries\slshape n})\index{SsS3@\texttt{SsS3}}
+\label{SsS3}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Generates the irreducible supersolvable simplicial arrangement of rank 3 with
+n hyperplanes. n must either be even oder congruent 1 mod 4. In any case, $n\geq 6$. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=SsS3(9); Roots(A);|
+  <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  [ [ 0, 0, 1 ], [ 0, 1, 0 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 0 ], 
+    [ -1, 0, 0 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 0 ], 
+    [ 1/2*E(8)-1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
+    [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ], 
+    [ 1/2*E(8)-1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ] ]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{ConnectedSubgraphArr (for IsList)}}
+\logpage{[ 3, 1, 3 ]}\nobreak
+\hyperdef{L}{X82DB5C6F83FDC443}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{ConnectedSubgraphArr({\mdseries\slshape Es})\index{ConnectedSubgraphArr@\texttt{ConnectedSubgraphArr}!for IsList}
+\label{ConnectedSubgraphArr:for IsList}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
-list or fail 
+A hyperplane arrangement. 
 
 
 
- Only for oriented matroids of rank 3. Determines, whether \mbox{\texttt{\mdseries\slshape OM}} supports a system of weights as described by M. Falk in \cite{Falk1995_Kpi1Arrs}. This implies, that the Salvetti complex (see \texttt{SalvettiComplex} (\ref{SalvettiComplex:for IsOrientedMatroid})) is apsherical. The functionality of the \textsc{cddinterface} package is used, to determine solotions of a system of linear inequalities. 
+ Generates the connected subgraph arrangement (see \cite{CK2022_ConnSubgraph_arXiv}) of the graph with edges \mbox{\texttt{\mdseries\slshape Es}}. 
 
- If the algorithm determines a suitable weight system for \mbox{\texttt{\mdseries\slshape OM}}, each list element consists of a weight, and a corner, i.e. a pair of a
-2\texttt{\symbol{45}}cell and an adjacent vertex in the bounded complex, given
-as sign vectors. 
+ Let $G = (N,E)$ be an undirected graph with vertex set $N = [n]$ and edge set $E$. For $I \subseteq N$, let $G[I]$ be the induced subgraph of $G$ on the set of vertices $I$. For $I \subseteq N$, define the hyperplane 
+\[H_I := \ker \sum_{i \in I}x_i.\]
+ The connected subgraph arrangement consists of hyperplanes $\{H_I \mid \varnothing \ne I \subseteq N \text{ if $G[I]$ is connected} \}.$ 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(|
-  !gapprompt@>| !gapinput@      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]|
-  !gapprompt@>| !gapinput@);;|
-  <OrientedMatroid: 7 elements, rank 3>
-  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
-  false
-  !gapprompt@gap>| !gapinput@OMSupportsFalkWeights(O,3);|
-  fail
-  !gapprompt@gap>| !gapinput@OMSupportsFalkWeights(O,1);|
-  [ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
-    [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
-    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
-    [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
-    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
-    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
-    [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
-    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
-    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
-    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
-    [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
-    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
+  !gapprompt@gap>| !gapinput@A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);|
+  <HyperplaneArrangement: 7 hyperplanes in 3-space>
+  [ [ 1, 1, 1 ], [ 0, 1, 1 ], [ 0, 0, 1 ], [ 0, 1, 0 ], 
+    [ 1, 0, 1 ], [ 1, 0, 0 ], [ 1, 1, 0 ] ]
 \end{Verbatim}
  }
 
@@ -1513,7 +934,7 @@ as sign vectors.
 
    
 \chapter{\textcolor{Chapter }{Oriented Matroids}}\label{Chapter_Oriented_Matroids}
-\logpage{[ 6, 0, 0 ]}
+\logpage{[ 4, 0, 0 ]}
 \hyperdef{L}{X8388FBA579602CDB}{}
 {
   
@@ -1522,13 +943,13 @@ as sign vectors.
 following describes functions to handle oriented matroids and compute
 associated cell complexes and invariants. See \cite{BLSWZ1999_OrientedMatroids}. 
 \section{\textcolor{Chapter }{Construction of oriented matroids}}\label{Chapter_Oriented_Matroids_Section_Construction_of_oriented_matroids}
-\logpage{[ 6, 1, 0 ]}
+\logpage{[ 4, 1, 0 ]}
 \hyperdef{L}{X8053D2C379B5CD9C}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OrientedMatroid (for IsList)}}
-\logpage{[ 6, 1, 1 ]}\nobreak
+\logpage{[ 4, 1, 1 ]}\nobreak
 \hyperdef{L}{X82EE52377B03CC80}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape R, or, A, or[, CCs, c], or[, n, r, ChiroCoreList]})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsList}
 \label{OrientedMatroid:for IsList}
@@ -1564,13 +985,13 @@ An oriented matroid OM.
 
  
 \section{\textcolor{Chapter }{Attributes}}\label{Chapter_Oriented_Matroids_Section_Attributes}
-\logpage{[ 6, 2, 0 ]}
+\logpage{[ 4, 2, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OMRank (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 1 ]}\nobreak
+\logpage{[ 4, 2, 1 ]}\nobreak
 \hyperdef{L}{X7E30B85C7CE42908}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRank({\mdseries\slshape OM})\index{OMRank@\texttt{OMRank}!for IsOrientedMatroid}
 \label{OMRank:for IsOrientedMatroid}
@@ -1592,7 +1013,7 @@ An integer
  
 
 \subsection{\textcolor{Chapter }{OMGroundSet (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 2 ]}\nobreak
+\logpage{[ 4, 2, 2 ]}\nobreak
 \hyperdef{L}{X78C0E4A0861CAD2F}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGroundSet({\mdseries\slshape OM})\index{OMGroundSet@\texttt{OMGroundSet}!for IsOrientedMatroid}
 \label{OMGroundSet:for IsOrientedMatroid}
@@ -1614,7 +1035,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{OMLForms (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 3 ]}\nobreak
+\logpage{[ 4, 2, 3 ]}\nobreak
 \hyperdef{L}{X86AAB8F480E92ABB}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMLForms({\mdseries\slshape OM})\index{OMLForms@\texttt{OMLForms}!for IsOrientedMatroid}
 \label{OMLForms:for IsOrientedMatroid}
@@ -1638,7 +1059,7 @@ the internal component \texttt{OM!.lforms} is not bound, \texttt{fail} is return
  
 
 \subsection{\textcolor{Chapter }{OMGeomLattice (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 4 ]}\nobreak
+\logpage{[ 4, 2, 4 ]}\nobreak
 \hyperdef{L}{X81CC016D818B3068}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMGeomLattice({\mdseries\slshape OM})\index{OMGeomLattice@\texttt{OMGeomLattice}!for IsOrientedMatroid}
 \label{OMGeomLattice:for IsOrientedMatroid}
@@ -1674,7 +1095,7 @@ arrangement given by \texttt{OMLForms(OM)}, stored in the internal component \te
  
 
 \subsection{\textcolor{Chapter }{OMCocircuits (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 5 ]}\nobreak
+\logpage{[ 4, 2, 5 ]}\nobreak
 \hyperdef{L}{X83F110A97A80B140}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCocircuits({\mdseries\slshape OM})\index{OMCocircuits@\texttt{OMCocircuits}!for IsOrientedMatroid}
 \label{OMCocircuits:for IsOrientedMatroid}
@@ -1700,7 +1121,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{TopeGraph (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 6 ]}\nobreak
+\logpage{[ 4, 2, 6 ]}\nobreak
 \hyperdef{L}{X7B35E88A79675D1E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TopeGraph({\mdseries\slshape OM})\index{TopeGraph@\texttt{TopeGraph}!for IsOrientedMatroid}
 \label{TopeGraph:for IsOrientedMatroid}
@@ -1728,7 +1149,7 @@ element.
  
 
 \subsection{\textcolor{Chapter }{OMCovectors (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 7 ]}\nobreak
+\logpage{[ 4, 2, 7 ]}\nobreak
 \hyperdef{L}{X7B2D2370811476C9}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCovectors({\mdseries\slshape OM})\index{OMCovectors@\texttt{OMCovectors}!for IsOrientedMatroid}
 \label{OMCovectors:for IsOrientedMatroid}
@@ -1756,7 +1177,7 @@ faces of dimension $k-1$.
  
 
 \subsection{\textcolor{Chapter }{SalvettiComplex (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 8 ]}\nobreak
+\logpage{[ 4, 2, 8 ]}\nobreak
 \hyperdef{L}{X7ED4D5138012EB6C}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape OM, or, A})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsOrientedMatroid}
 \label{SalvettiComplex:for IsOrientedMatroid}
@@ -1782,7 +1203,7 @@ A \texttt{FacePoset}
  
 
 \subsection{\textcolor{Chapter }{SalvettiComplex (for IsHyperplaneArrangement and IsReal)}}
-\logpage{[ 6, 2, 9 ]}\nobreak
+\logpage{[ 4, 2, 9 ]}\nobreak
 \hyperdef{L}{X811DC01A7C2F985B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape A})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsHyperplaneArrangement and IsReal}
 \label{SalvettiComplex:for IsHyperplaneArrangement and IsReal}
@@ -1794,7 +1215,7 @@ A \texttt{FacePoset}
  
 
 \subsection{\textcolor{Chapter }{FPGroundSet (for IsFacePoset)}}
-\logpage{[ 6, 2, 10 ]}\nobreak
+\logpage{[ 4, 2, 10 ]}\nobreak
 \hyperdef{L}{X85AB2A797ABE8967}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPGroundSet({\mdseries\slshape FP})\index{FPGroundSet@\texttt{FPGroundSet}!for IsFacePoset}
 \label{FPGroundSet:for IsFacePoset}
@@ -1847,7 +1268,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{FPOrder (for IsFacePoset)}}
-\logpage{[ 6, 2, 11 ]}\nobreak
+\logpage{[ 4, 2, 11 ]}\nobreak
 \hyperdef{L}{X7E28E057841D6ECD}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPOrder({\mdseries\slshape FP})\index{FPOrder@\texttt{FPOrder}!for IsFacePoset}
 \label{FPOrder:for IsFacePoset}
@@ -1862,7 +1283,7 @@ A function
  
 
 \subsection{\textcolor{Chapter }{OMChirotope (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 12 ]}\nobreak
+\logpage{[ 4, 2, 12 ]}\nobreak
 \hyperdef{L}{X854947857F5E5D29}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMChirotope({\mdseries\slshape OM})\index{OMChirotope@\texttt{OMChirotope}!for IsOrientedMatroid}
 \label{OMChirotope:for IsOrientedMatroid}
@@ -1885,7 +1306,7 @@ A function
  
 
 \subsection{\textcolor{Chapter }{OMRankFunction (for IsOrientedMatroid)}}
-\logpage{[ 6, 2, 13 ]}\nobreak
+\logpage{[ 4, 2, 13 ]}\nobreak
 \hyperdef{L}{X7EE8B82D792A4A64}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRankFunction({\mdseries\slshape OM})\index{OMRankFunction@\texttt{OMRankFunction}!for IsOrientedMatroid}
 \label{OMRankFunction:for IsOrientedMatroid}
@@ -1901,13 +1322,13 @@ A function
 
  
 \section{\textcolor{Chapter }{Properties}}\label{Chapter_Oriented_Matroids_Section_Properties}
-\logpage{[ 6, 3, 0 ]}
+\logpage{[ 4, 3, 0 ]}
 \hyperdef{L}{X871597447BB998A1}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OMIsLinear (for IsOrientedMatroid)}}
-\logpage{[ 6, 3, 1 ]}\nobreak
+\logpage{[ 4, 3, 1 ]}\nobreak
 \hyperdef{L}{X86B70496781D3884}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMIsLinear({\mdseries\slshape OM})\index{OMIsLinear@\texttt{OMIsLinear}!for IsOrientedMatroid}
 \label{OMIsLinear:for IsOrientedMatroid}
@@ -1933,7 +1354,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{HasSimpleSimplex (for IsOrientedMatroid)}}
-\logpage{[ 6, 3, 2 ]}\nobreak
+\logpage{[ 4, 3, 2 ]}\nobreak
 \hyperdef{L}{X7D5893807BB9785E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HasSimpleSimplex({\mdseries\slshape OM})\index{HasSimpleSimplex@\texttt{HasSimpleSimplex}!for IsOrientedMatroid}
 \label{HasSimpleSimplex:for IsOrientedMatroid}
@@ -1960,7 +1381,7 @@ rank 1 covector not adjacent to $T$. If \texttt{Rank(OM)} $\geq 3$ and this is t
  
 
 \subsection{\textcolor{Chapter }{HasSimpleTriangle (for IsOrientedMatroid)}}
-\logpage{[ 6, 3, 3 ]}\nobreak
+\logpage{[ 4, 3, 3 ]}\nobreak
 \hyperdef{L}{X80F069657B2045C0}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HasSimpleTriangle({\mdseries\slshape OM})\index{HasSimpleTriangle@\texttt{HasSimpleTriangle}!for IsOrientedMatroid}
 \label{HasSimpleTriangle:for IsOrientedMatroid}
@@ -1980,13 +1401,13 @@ true or false.
 
  
 \section{\textcolor{Chapter }{Operations}}\label{Chapter_Oriented_Matroids_Section_Operations}
-\logpage{[ 6, 4, 0 ]}
+\logpage{[ 4, 4, 0 ]}
 \hyperdef{L}{X7DE8E16C7C2D387B}{}
 {
   
 
 \subsection{\textcolor{Chapter }{IsLEquiv (for IsOrientedMatroid,IsOrientedMatroid)}}
-\logpage{[ 6, 4, 1 ]}\nobreak
+\logpage{[ 4, 4, 1 ]}\nobreak
 \hyperdef{L}{X7EE74EA57A779612}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsLEquiv({\mdseries\slshape OM1, OM2})\index{IsLEquiv@\texttt{IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid}
 \label{IsLEquiv:for IsOrientedMatroid,IsOrientedMatroid}
@@ -2014,7 +1435,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{HasSimpleSimplexRk (for IsOrientedMatroid, IsInt)}}
-\logpage{[ 6, 4, 2 ]}\nobreak
+\logpage{[ 4, 4, 2 ]}\nobreak
 \hyperdef{L}{X81DBFBF67AC497C4}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HasSimpleSimplexRk({\mdseries\slshape OM, k})\index{HasSimpleSimplexRk@\texttt{HasSimpleSimplexRk}!for IsOrientedMatroid, IsInt}
 \label{HasSimpleSimplexRk:for IsOrientedMatroid, IsInt}
@@ -2040,7 +1461,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{OMLocalizationRk (for IsOrientedMatroid, IsList, IsInt)}}
-\logpage{[ 6, 4, 3 ]}\nobreak
+\logpage{[ 4, 4, 3 ]}\nobreak
 \hyperdef{L}{X7C0D5D2A7C058B20}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMLocalizationRk({\mdseries\slshape OM, F, k})\index{OMLocalizationRk@\texttt{OMLocalizationRk}!for IsOrientedMatroid, IsList, IsInt}
 \label{OMLocalizationRk:for IsOrientedMatroid, IsList, IsInt}
@@ -2070,13 +1491,13 @@ An oriented matroid
 
  
 \section{\textcolor{Chapter }{Global methods}}\label{Chapter_Oriented_Matroids_Section_Global_methods}
-\logpage{[ 6, 5, 0 ]}
+\logpage{[ 4, 5, 0 ]}
 \hyperdef{L}{X80841F8D80722081}{}
 {
   
 
 \subsection{\textcolor{Chapter }{OMOperation}}
-\logpage{[ 6, 5, 1 ]}\nobreak
+\logpage{[ 4, 5, 1 ]}\nobreak
 \hyperdef{L}{X7A515BDC8582FFE6}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMOperation({\mdseries\slshape sv1, sv2})\index{OMOperation@\texttt{OMOperation}}
 \label{OMOperation}
@@ -2104,7 +1525,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{OrderCovec}}
-\logpage{[ 6, 5, 2 ]}\nobreak
+\logpage{[ 4, 5, 2 ]}\nobreak
 \hyperdef{L}{X801F6A9B7A0A53F5}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrderCovec({\mdseries\slshape arg})\index{OrderCovec@\texttt{OrderCovec}}
 \label{OrderCovec}
@@ -2116,7 +1537,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{IsOMEquiv}}
-\logpage{[ 6, 5, 3 ]}\nobreak
+\logpage{[ 4, 5, 3 ]}\nobreak
 \hyperdef{L}{X80CB9A9C8135A314}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsOMEquiv({\mdseries\slshape OM1, OM2})\index{IsOMEquiv@\texttt{IsOMEquiv}}
 \label{IsOMEquiv}
@@ -2131,7 +1552,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{SeparatingSet}}
-\logpage{[ 6, 5, 4 ]}\nobreak
+\logpage{[ 4, 5, 4 ]}\nobreak
 \hyperdef{L}{X793FF1428136B222}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SeparatingSet({\mdseries\slshape arg})\index{SeparatingSet@\texttt{SeparatingSet}}
 \label{SeparatingSet}
@@ -2145,100 +1566,250 @@ true or false
  }
 
    
-\chapter{\textcolor{Chapter }{Special arrangements}}\label{Chapter_Special_arrangements}
-\logpage{[ 7, 0, 0 ]}
-\hyperdef{L}{X7C9F5AAF83133F9A}{}
+\chapter{\textcolor{Chapter }{Free arrangements}}\label{Chapter_Free_arrangements}
+\logpage{[ 5, 0, 0 ]}
+\hyperdef{L}{X84CDDA0382B013CF}{}
 {
   
 
- The following describes functions to construct some special arrangements. 
+ The following describes functions to analyse freeness properties of
+arrangements such as \emph{inductive freeness} due to H. Terao \cite{Terao1980_FreeI} and \emph{divisionell freeness} due to T. Abe \cite{Abe16_DivFree}. 
 
  
-\section{\textcolor{Chapter }{Global methods}}\label{Chapter_Special_arrangements_Section_Global_methods}
-\logpage{[ 7, 1, 0 ]}
-\hyperdef{L}{X80841F8D80722081}{}
+\section{\textcolor{Chapter }{Module of logarithmic vector fields aka derivation modules of arrangements}}\label{Chapter_Free_arrangements_Section_Module_of_logarithmic_vector_fields_aka_derivation_modules_of_arrangements}
+\logpage{[ 5, 1, 0 ]}
+\hyperdef{L}{X875DF181804D1224}{}
 {
-  
+  The functions in this section all use the \textsc{singular} package to call functions from \textsc{Singular} \cite{DGPS_Singular4} for commutative algebra calculations. 
 
-\subsection{\textcolor{Chapter }{AGpql}}
-\logpage{[ 7, 1, 1 ]}\nobreak
-\hyperdef{L}{X858205A37B7EB5FA}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{AGpql({\mdseries\slshape p, q, l})\index{AGpql@\texttt{AGpql}}
-\label{AGpql}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-A hyperplane arrangement. 
-
-
-
- Constructs the reflection arrangement associated to the monomial complex
-reflection group $G(p,q,l)$. The hyperplanes are defined by equations of the form 
-\[ x_i = \zeta^k x_j \]
- where $\zeta$ is a primitive $p$\texttt{\symbol{45}}th root of unity. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A := AGpql(2,1,3);|
-   <HyperplaneArrangement: 9 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@Roots(A);|
-  [ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ],
-    [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ],
-    [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-  
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{SsS3}}
-\logpage{[ 7, 1, 2 ]}\nobreak
-\hyperdef{L}{X81AD6CA97F71ED33}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SsS3({\mdseries\slshape n})\index{SsS3@\texttt{SsS3}}
-\label{SsS3}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-A hyperplane arrangement. 
-
-
-
- Generates the irreducible supersolvable simplicial arrangement of rank 3 with
-n hyperplanes. n must either be even oder congruent 1 mod 4. In any case, $n\geq 6$. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=SsS3(9); Roots(A);|
-  <HyperplaneArrangement: 9 hyperplanes in 3-space>
-  [ [ 0, 0, 1 ], [ 0, 1, 0 ], 
-    [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 0 ], 
-    [ -1, 0, 0 ], 
-    [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 0 ], 
-    [ 1/2*E(8)-1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
-    [ -1/2*E(8)+1/2*E(8)^3, 1/2*E(8)-1/2*E(8)^3, 1 ], 
-    [ -1/2*E(8)+1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ], 
-    [ 1/2*E(8)-1/2*E(8)^3, -1/2*E(8)+1/2*E(8)^3, 1 ] ]
-  
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{ConnectedSubgraphArr (for IsList)}}
-\logpage{[ 7, 1, 3 ]}\nobreak
-\hyperdef{L}{X82DB5C6F83FDC443}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{ConnectedSubgraphArr({\mdseries\slshape Es})\index{ConnectedSubgraphArr@\texttt{ConnectedSubgraphArr}!for IsList}
-\label{ConnectedSubgraphArr:for IsList}
+\subsection{\textcolor{Chapter }{DerModule (for IsHyperplaneArrangement)}}
+\logpage{[ 5, 1, 1 ]}\nobreak
+\hyperdef{L}{X783314398329E3BE}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModule({\mdseries\slshape A[, mult]})\index{DerModule@\texttt{DerModule}!for IsHyperplaneArrangement}
+\label{DerModule:for IsHyperplaneArrangement}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
-A hyperplane arrangement. 
+Derivation module 
 
 
 
- Generates the connected subgraph arrangement (see \cite{CK2022_ConnSubgraph_arXiv}) of the graph with edges \mbox{\texttt{\mdseries\slshape Es}}. 
-
- Let $G = (N,E)$ be an undirected graph with vertex set $N = [n]$ and edge set $E$. For $I \subseteq N$, let $G[I]$ be the induced subgraph of $G$ on the set of vertices $I$. For $I \subseteq N$, define the hyperplane 
-\[H_I := \ker \sum_{i \in I}x_i.\]
- The connected subgraph arrangement consists of hyperplanes $\{H_I \mid \varnothing \ne I \subseteq N \text{ if $G[I]$ is connected} \}.$ 
+ Computes the \emph{(multi) derivation module} of the arrangement \mbox{\texttt{\mdseries\slshape A}} (with multiplicities given as a list by \mbox{\texttt{\mdseries\slshape mult}}). 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);|
-  <HyperplaneArrangement: 7 hyperplanes in 3-space>
-  [ [ 1, 1, 1 ], [ 0, 1, 1 ], [ 0, 0, 1 ], [ 0, 1, 0 ], 
-    [ 1, 0, 1 ], [ 1, 0, 0 ], [ 1, 1, 0 ] ]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@D:=DerModule(A);|
+  <Derivation module
+    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+    with 4 generators>
+  !gapprompt@gap>| !gapinput@D:=DerModule(A,[2,1,3,4]);|
+  <Derivation module
+    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+    with 4 generators>
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{DerModGenerators (for IsDerivationModule)}}
+\logpage{[ 5, 1, 2 ]}\nobreak
+\hyperdef{L}{X7B6780568674988A}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModGenerators({\mdseries\slshape D})\index{DerModGenerators@\texttt{DerModGenerators}!for IsDerivationModule}
+\label{DerModGenerators:for IsDerivationModule}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+list 
+
+
+
+ Returns the (minimal) generators of the module \mbox{\texttt{\mdseries\slshape D}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@D:=DerModule(A);|
+  <Derivation module
+    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+    with 4 generators>
+  !gapprompt@gap>| !gapinput@DerModGenerators(D);|
+  [ [ x_1, x_2, x_3 ], 
+    [ 0, -x_2*x_3, x_2*x_3 ], 
+    [ 0, x_2*x_3, x_1*x_3+x_3^2 ], 
+    [ 0, x_1*x_2+x_2^2+x_2*x_3, 0 ] ]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{DerModPRing (for IsDerivationModule)}}
+\logpage{[ 5, 1, 3 ]}\nobreak
+\hyperdef{L}{X8174C2FD82AA2B81}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModPRing({\mdseries\slshape D})\index{DerModPRing@\texttt{DerModPRing}!for IsDerivationModule}
+\label{DerModPRing:for IsDerivationModule}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+Polynomial ring 
+
+
+
+ Returns the defining polynomial ring of \mbox{\texttt{\mdseries\slshape D}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@D:=DerModule(AGpql(3,3,2));; DerModPRing(D);|
+  <field in characteristic 0>[x_1,x_2]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{DerModDegreeSequence (for IsDerivationModule)}}
+\logpage{[ 5, 1, 4 ]}\nobreak
+\hyperdef{L}{X78A309B97E68E70F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModDegreeSequence({\mdseries\slshape D})\index{DerModDegreeSequence@\texttt{DerModDegreeSequence}!for IsDerivationModule}
+\label{DerModDegreeSequence:for IsDerivationModule}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+list 
+
+
+
+ Returns the sequence of degrees of (minimal) generators of the graded module \mbox{\texttt{\mdseries\slshape D}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
+  <HyperplaneArrangement: 5 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@DerModDegreeSequence(DerModule(A));|
+  [ 1, 2, 2 ]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{DerModProjDim (for IsDerivationModule)}}
+\logpage{[ 5, 1, 5 ]}\nobreak
+\hyperdef{L}{X81D05AA282B2B62E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModProjDim({\mdseries\slshape D})\index{DerModProjDim@\texttt{DerModProjDim}!for IsDerivationModule}
+\label{DerModProjDim:for IsDerivationModule}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A non\texttt{\symbol{45}}negative integer 
+
+
+
+ Computes the projective dimension of the module \mbox{\texttt{\mdseries\slshape D}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@D:=DerModule(A);|
+  <Derivation module
+    over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+    with 4 generators>
+  !gapprompt@gap>| !gapinput@DerModProjDim(D);|
+  1
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{DerModIsFree (for IsDerivationModule)}}
+\logpage{[ 5, 1, 6 ]}\nobreak
+\hyperdef{L}{X81110BE983107955}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModIsFree({\mdseries\slshape D})\index{DerModIsFree@\texttt{DerModIsFree}!for IsDerivationModule}
+\label{DerModIsFree:for IsDerivationModule}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Determines, if \mbox{\texttt{\mdseries\slshape D}} is a free module over \texttt{DerModPRing(D)}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
+  <HyperplaneArrangement: 5 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@D:=DerModule(A);; DerModIsFree(D);|
+  true
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@D:=DerModule(A);; DerModIsFree(D);|
+  false
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrIsFree (for IsHyperplaneArrangement)}}
+\logpage{[ 5, 1, 7 ]}\nobreak
+\hyperdef{L}{X7C55194B8304FDAC}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsFree({\mdseries\slshape A})\index{HArrIsFree@\texttt{HArrIsFree}!for IsHyperplaneArrangement}
+\label{HArrIsFree:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Determines, if \mbox{\texttt{\mdseries\slshape A}} is free, i.e. if the derivation module is a free module over the coordinate
+ring of the ambient space. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
+  <HyperplaneArrangement: 5 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@HArrIsFree(A);|
+  true
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@HArrIsFree(A);|
+  false
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Freeness properties}}\label{Chapter_Free_arrangements_Section_Freeness_properties}
+\logpage{[ 5, 2, 0 ]}
+\hyperdef{L}{X82FF317F7EFD52AF}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{IsInductivelyFree (for IsHyperplaneArrangement)}}
+\logpage{[ 5, 2, 1 ]}\nobreak
+\hyperdef{L}{X80F4D6247CAA1BDA}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsInductivelyFree({\mdseries\slshape A})\index{IsInductivelyFree@\texttt{IsInductivelyFree}!for IsHyperplaneArrangement}
+\label{IsInductivelyFree:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{inductively free}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
+  <HyperplaneArrangement: 5 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@IsInductivelyFree(A);|
+  true
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{IsDivisionallyFree (for IsHyperplaneArrangement)}}
+\logpage{[ 5, 2, 2 ]}\nobreak
+\hyperdef{L}{X85DAC6FC78DDED6D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsDivisionallyFree({\mdseries\slshape A})\index{IsDivisionallyFree@\texttt{IsDivisionallyFree}!for IsHyperplaneArrangement}
+\label{IsDivisionallyFree:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{divisionally free}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
+  <HyperplaneArrangement: 5 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@IsDivisionallyFree(A);|
+  true
+  !gapprompt@gap>| !gapinput@A:=AGpql(3,3,3);|
+  <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@IsDivisionallyFree(A);|
+  false
 \end{Verbatim}
  }
 
@@ -2247,12 +1818,446 @@ A hyperplane arrangement.
  }
 
    
-\chapter{\textcolor{Chapter }{Chamber and tope posets}}\label{Chapter_Chamber_and_tope_posets}
-\logpage{[ 8, 0, 0 ]}
-\hyperdef{L}{X7A142C9D82C31E24}{}
+\chapter{\textcolor{Chapter }{Further properties of arrangements, geometric lattices, and oriented matroids}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids}
+\logpage{[ 6, 0, 0 ]}
+\hyperdef{L}{X7E898D0F86EF9F1E}{}
 {
   
-\section{\textcolor{Chapter }{Operation}}\label{Chapter_Chamber_and_tope_posets_Section_Operation}
+
+ The following describes functions to analyse further properties of
+arrangements such as \emph{formality}, \emph{supersolvability}, \emph{simpliciality}, \emph{factoredness}, \emph{inductive factoredness} ... 
+
+ 
+\section{\textcolor{Chapter }{Supersolvable arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Supersolvable_arrangements}
+\logpage{[ 6, 1, 0 ]}
+\hyperdef{L}{X7B09D56B7A076E6B}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{LIsModularPair (for IsGeomLattice, IsList, IsList)}}
+\logpage{[ 6, 1, 1 ]}\nobreak
+\hyperdef{L}{X78E6E11179F7ECB5}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsModularPair({\mdseries\slshape L, m1, m2})\index{LIsModularPair@\texttt{LIsModularPair}!for IsGeomLattice, IsList, IsList}
+\label{LIsModularPair:for IsGeomLattice, IsList, IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Determines if \mbox{\texttt{\mdseries\slshape m1}} and \mbox{\texttt{\mdseries\slshape m2}} form a modular pair in L. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(A);|
+  <Geometric lattice: 6 atoms, rank 3>
+  !gapprompt@gap>| !gapinput@LGroundSet(L);|
+  [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
+   [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
+     [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
+    [ [ 1, 2, 3, 4, 5, 6 ] ] ]
+  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);|
+  false
+  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);|
+  true
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LIsModularFlat (for IsGeomLattice, IsList)}}
+\logpage{[ 6, 1, 2 ]}\nobreak
+\hyperdef{L}{X7FECD913876C637C}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsModularFlat({\mdseries\slshape L, m})\index{LIsModularFlat@\texttt{LIsModularFlat}!for IsGeomLattice, IsList}
+\label{LIsModularFlat:for IsGeomLattice, IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Determines if \mbox{\texttt{\mdseries\slshape m}} is a modular flat in L. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  <Geometric lattice: 6 atoms, rank 3>
+  [ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
+   [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
+     [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
+    [ [ 1, 2, 3, 4, 5, 6 ] ] ]
+  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);|
+  false
+  true
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LModularFlatsRk (for IsGeomLattice, IsInt)}}
+\logpage{[ 6, 1, 3 ]}\nobreak
+\hyperdef{L}{X8271B52F816053DB}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LModularFlatsRk({\mdseries\slshape L, k})\index{LModularFlatsRk@\texttt{LModularFlatsRk}!for IsGeomLattice, IsInt}
+\label{LModularFlatsRk:for IsGeomLattice, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list 
+
+
+
+ Determines the modular flats in \mbox{\texttt{\mdseries\slshape L}} of rank \mbox{\texttt{\mdseries\slshape k}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,1,4));|
+  <Geometric lattice: 16 atoms, rank 4>
+  !gapprompt@gap>| !gapinput@LModularFlatsRk(L,3);|
+  [ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], 
+    [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], 
+    [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], 
+    [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LIsSupersolvable (for IsGeomLattice)}}
+\logpage{[ 6, 1, 4 ]}\nobreak
+\hyperdef{L}{X7D95D0F37E6FBFD6}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsSupersolvable({\mdseries\slshape L})\index{LIsSupersolvable@\texttt{LIsSupersolvable}!for IsGeomLattice}
+\label{LIsSupersolvable:for IsGeomLattice}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the geometric lattice \mbox{\texttt{\mdseries\slshape L}} is \emph{supersolvable}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,1,4));|
+  <Geometric lattice: 16 atoms, rank 4>
+  !gapprompt@gap>| !gapinput@LIsSupersolvable(L);|
+  true
+  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,2,4));|
+  <Geometric lattice: 12 atoms, rank 4>
+  !gapprompt@gap>| !gapinput@LIsSupersolvable(L);|
+  false
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrIsSupersolvable (for IsHyperplaneArrangement)}}
+\logpage{[ 6, 1, 5 ]}\nobreak
+\hyperdef{L}{X7DC90A0286D5664A}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsSupersolvable({\mdseries\slshape A})\index{HArrIsSupersolvable@\texttt{HArrIsSupersolvable}!for IsHyperplaneArrangement}
+\label{HArrIsSupersolvable:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{supersolvable}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,1,4);|
+  <HyperplaneArrangement: 16 hyperplanes in 4-space>
+  !gapprompt@gap>| !gapinput@HArrIsSupersolvable(A);|
+  true
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,4); |
+  <HyperplaneArrangement: 12 hyperplanes in 4-space>
+  !gapprompt@gap>| !gapinput@HArrIsSupersolvable(A);|
+  false
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMIsSupersolvable (for IsOrientedMatroid)}}
+\logpage{[ 6, 1, 6 ]}\nobreak
+\hyperdef{L}{X78B7232883025D41}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMIsSupersolvable({\mdseries\slshape OM})\index{OMIsSupersolvable@\texttt{OMIsSupersolvable}!for IsOrientedMatroid}
+\label{OMIsSupersolvable:for IsOrientedMatroid}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the oriented matroid \mbox{\texttt{\mdseries\slshape OM}} is \emph{supersolvable}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(3,4,[1,1,1,1]);|
+  <OrientedMatroid: 4 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
+  false
+  !gapprompt@gap>| !gapinput@C:=List(Combinations(Roots(AGpql(2,2,3)),3),x->pos(Determinant(x)));|
+  [ 1, 1, 1, 1, 0, -1, -1, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 1, -1, -1 ]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(3,6,C);|
+  <OrientedMatroid: 6 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
+  true
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Formal arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Formal_arrangements}
+\logpage{[ 6, 2, 0 ]}
+\hyperdef{L}{X79BAC87F7C1CA4A1}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{IsFormal (for IsHyperplaneArrangement)}}
+\logpage{[ 6, 2, 1 ]}\nobreak
+\hyperdef{L}{X808977C7824120DF}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsFormal({\mdseries\slshape A})\index{IsFormal@\texttt{IsFormal}!for IsHyperplaneArrangement}
+\label{IsFormal:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the arrangement is \emph{formal} in the sense of Falk\texttt{\symbol{45}}Randell \cite{FalkRandell87_HomotopyArr}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A1 := Arr([|
+  !gapprompt@>| !gapinput@    [1,0,0],|
+  !gapprompt@>| !gapinput@    [0,1,0],|
+  !gapprompt@>| !gapinput@    [0,0,1],|
+  !gapprompt@>| !gapinput@    [1,1,1],|
+  !gapprompt@>| !gapinput@    [2,1,1],|
+  !gapprompt@>| !gapinput@    [2,3,1],|
+  !gapprompt@>| !gapinput@    [2,3,4],|
+  !gapprompt@>| !gapinput@    [3,0,5],|
+  !gapprompt@>| !gapinput@    [3,4,5]|
+  !gapprompt@>| !gapinput@]);;|
+  !gapprompt@gap>| !gapinput@|
+  !gapprompt@gap>| !gapinput@A2 := Arr([|
+  !gapprompt@>| !gapinput@    [1,0,0],|
+  !gapprompt@>| !gapinput@    [0,1,0],|
+  !gapprompt@>| !gapinput@    [0,0,1],|
+  !gapprompt@>| !gapinput@    [1,1,1],|
+  !gapprompt@>| !gapinput@    [2,1,1],|
+  !gapprompt@>| !gapinput@    [2,3,1],|
+  !gapprompt@>| !gapinput@    [2,3,4],|
+  !gapprompt@>| !gapinput@    [1,0,3],|
+  !gapprompt@>| !gapinput@    [1,2,3]|
+  !gapprompt@>| !gapinput@]);;|
+  !gapprompt@gap>| !gapinput@IsLEquiv(A1,A2);|
+  true
+  !gapprompt@gap>| !gapinput@IsFormal(A1);|
+  true
+  !gapprompt@gap>| !gapinput@IsFormal(A2);|
+  false
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Simplicial arrangements}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Simplicial_arrangements}
+\logpage{[ 6, 3, 0 ]}
+\hyperdef{L}{X8070A6CF85A00A70}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{HArrIsSimplicial (for IsHyperplaneArrangement and IsReal)}}
+\logpage{[ 6, 3, 1 ]}\nobreak
+\hyperdef{L}{X7EEAC3257EC22C1B}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsSimplicial({\mdseries\slshape A})\index{HArrIsSimplicial@\texttt{HArrIsSimplicial}!for IsHyperplaneArrangement and IsReal}
+\label{HArrIsSimplicial:for IsHyperplaneArrangement and IsReal}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines whether the real arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{simplicial}, i.e. if all chambers are simplicial. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);|
+  <HyperplaneArrangement: 5 hyperplanes in 3-space>
+  false
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  true
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Falk's weight test}}\label{Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids_Section_Falks_weight_test}
+\logpage{[ 6, 4, 0 ]}
+\hyperdef{L}{X79A9BA6287B1A981}{}
+{
+  The following still needs to be tested further... 
+
+\subsection{\textcolor{Chapter }{OMBoundedCpx (for IsOrientedMatroid, IsInt)}}
+\logpage{[ 6, 4, 1 ]}\nobreak
+\hyperdef{L}{X7F2F674F8273D120}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMBoundedCpx({\mdseries\slshape OM, g})\index{OMBoundedCpx@\texttt{OMBoundedCpx}!for IsOrientedMatroid, IsInt}
+\label{OMBoundedCpx:for IsOrientedMatroid, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list of list of sign vectors. 
+
+
+
+ Constructs the complex of bounded cells of the affine part of the oriented
+matroid \mbox{\texttt{\mdseries\slshape OM}} with respect to the element \mbox{\texttt{\mdseries\slshape g}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMSupportsFalkWeights (for IsOrientedMatroid, IsInt)}}
+\logpage{[ 6, 4, 2 ]}\nobreak
+\hyperdef{L}{X87CE42827934F11F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMSupportsFalkWeights({\mdseries\slshape OM, g})\index{OMSupportsFalkWeights@\texttt{OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt}
+\label{OMSupportsFalkWeights:for IsOrientedMatroid, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list or fail 
+
+
+
+ Only for oriented matroids of rank 3. Determines, whether \mbox{\texttt{\mdseries\slshape OM}} supports a system of weights as described by M. Falk in \cite{Falk1995_Kpi1Arrs}. This implies, that the Salvetti complex (see \texttt{SalvettiComplex} (\ref{SalvettiComplex:for IsOrientedMatroid})) is apsherical. The functionality of the \textsc{cddinterface} package is used, to determine solotions of a system of linear inequalities. 
+
+ If the algorithm determines a suitable weight system for \mbox{\texttt{\mdseries\slshape OM}}, each list element consists of a weight, and a corner, i.e. a pair of a
+2\texttt{\symbol{45}}cell and an adjacent vertex in the bounded complex, given
+as sign vectors. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid(|
+  !gapprompt@>| !gapinput@      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]|
+  !gapprompt@>| !gapinput@);;|
+  <OrientedMatroid: 7 elements, rank 3>
+  !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
+  false
+  !gapprompt@gap>| !gapinput@OMSupportsFalkWeights(O,3);|
+  fail
+  !gapprompt@gap>| !gapinput@OMSupportsFalkWeights(O,1);|
+  [ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+    [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+    [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+    [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+    [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+    [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+    [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
+\end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Milnor fibers}}\label{Chapter_Milnor_fibers}
+\logpage{[ 7, 0, 0 ]}
+\hyperdef{L}{X80236F007DAFE4C2}{}
+{
+  
+
+ The Milnor fiber is the typical fiber $f^{-1}(1)$ of the Milnor fibration 
+\[f:\mathbb{C}^\ell \setminus \cup_{H \in \mathcal{A}}H \to \mathbb{C}^\times,
+z\mapsto \prod_{H \in \mathcal{A}}\alpha_H(z)\]
+ of the hyperplane arrangement $\mathcal{A}$, where $\alpha_H$ are defining linear forms. 
+
+ The following describes functions to construct a regular cell complex having
+the homotopy type of the Milnor fiber from \cite{MueYos25_MilnorOM} and thus enables computation of homotopy invaraints using e.g. the HAP package \cite{GAP_HAP}. 
+\section{\textcolor{Chapter }{Complexes}}\label{Chapter_Milnor_fibers_Section_Complexes}
+\logpage{[ 7, 1, 0 ]}
+\hyperdef{L}{X79C388D385DB7CD1}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}
+\logpage{[ 7, 1, 1 ]}\nobreak
+\hyperdef{L}{X794B90A67B153E6F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape OM})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsOrientedMatroid}
+\label{MilnorFiberComplex:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+FacePoset 
+
+
+
+ Computes the face poset of the regular cell complex of the combinatorial
+Milnor fiber of the oriented matroid \mbox{\texttt{\mdseries\slshape OM}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]);|
+  <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(O);|
+  <FacePoset of dimension 1 with f-vector [ 3, 6 ]>
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}
+\logpage{[ 7, 1, 2 ]}\nobreak
+\hyperdef{L}{X7D30E85086B93DB0}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MilnorFiberComplex({\mdseries\slshape A})\index{MilnorFiberComplex@\texttt{MilnorFiberComplex}!for IsHyperplaneArrangement}
+\label{MilnorFiberComplex:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+FacePoset 
+
+
+
+ Computes the face poset of the regular cell complex having the homotopy type
+of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{FPtoCWCpx}}
+\logpage{[ 7, 1, 3 ]}\nobreak
+\hyperdef{L}{X7BBA6F967E493B5D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}}
+\label{FPtoCWCpx}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+HAP CW Complex 
+
+
+
+ Converts a \textsc{HypArr} \texttt{FacePoset} into a \textsc{HAP} \texttt{RegularCWComplex} for further computations of topological invariants. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@MCpx:=MilnorFiberComplex(A);|
+  <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+  !gapprompt@gap>| !gapinput@MCW := FPtoCWCpx(MCpx);|
+  Regular CW-complex of dimension 2
+  !gapprompt@gap>| !gapinput@Homology(MCW,0);|
+  [ 0 ]
+  !gapprompt@gap>| !gapinput@Homology(MCW,1);|
+  [ 0, 0, 0, 0, 0, 0, 0 ]
+\end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Tope posets}}\label{Chapter_Tope_posets}
+\logpage{[ 8, 0, 0 ]}
+\hyperdef{L}{X7D123BFB84BF8125}{}
+{
+  
+\section{\textcolor{Chapter }{Operation}}\label{Chapter_Tope_posets_Section_Operation}
 \logpage{[ 8, 1, 0 ]}
 \hyperdef{L}{X835880B9800BD2D8}{}
 {
@@ -2280,7 +2285,7 @@ A TopePoset object
  }
 
  
-\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Chamber_and_tope_posets_Section_Attributes}
+\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Tope_posets_Section_Attributes}
 \logpage{[ 8, 2, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {

@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (HypArr) - Chapter 6: Oriented Matroids</title>
+<title>GAP (HypArr) - Chapter 6: Further properties of arrangements, geometric lattices, and oriented matroids</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -20,536 +20,302 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap5.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap7.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap6_mj.html">[MathJax on]</a></p>
-<p><a id="X8388FBA579602CDB" name="X8388FBA579602CDB"></a></p>
-<div class="ChapSects"><a href="chap6.html#X8388FBA579602CDB">6 <span class="Heading">Oriented Matroids</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X8053D2C379B5CD9C">6.1 <span class="Heading">Construction of oriented matroids</span></a>
+<p><a id="X7E898D0F86EF9F1E" name="X7E898D0F86EF9F1E"></a></p>
+<div class="ChapSects"><a href="chap6.html#X7E898D0F86EF9F1E">6 <span class="Heading">Further properties of arrangements, geometric lattices, and oriented matroids</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7B09D56B7A076E6B">6.1 <span class="Heading">Supersolvable arrangements</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X82EE52377B03CC80">6.1-1 OrientedMatroid</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X78E6E11179F7ECB5">6.1-1 LIsModularPair</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7FECD913876C637C">6.1-2 LIsModularFlat</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X8271B52F816053DB">6.1-3 LModularFlatsRk</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7D95D0F37E6FBFD6">6.1-4 LIsSupersolvable</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7DC90A0286D5664A">6.1-5 HArrIsSupersolvable</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X78B7232883025D41">6.1-6 OMIsSupersolvable</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7C701DBF7BAE649A">6.2 <span class="Heading">Attributes</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X79BAC87F7C1CA4A1">6.2 <span class="Heading">Formal arrangements</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7E30B85C7CE42908">6.2-1 OMRank</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X78C0E4A0861CAD2F">6.2-2 OMGroundSet</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X86AAB8F480E92ABB">6.2-3 OMLForms</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X81CC016D818B3068">6.2-4 OMGeomLattice</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X83F110A97A80B140">6.2-5 OMCocircuits</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7B35E88A79675D1E">6.2-6 TopeGraph</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7B2D2370811476C9">6.2-7 OMCovectors</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7ED4D5138012EB6C">6.2-8 SalvettiComplex</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X811DC01A7C2F985B">6.2-9 SalvettiComplex</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X85AB2A797ABE8967">6.2-10 FPGroundSet</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7E28E057841D6ECD">6.2-11 FPOrder</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X854947857F5E5D29">6.2-12 OMChirotope</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EE8B82D792A4A64">6.2-13 OMRankFunction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X808977C7824120DF">6.2-1 IsFormal</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X871597447BB998A1">6.3 <span class="Heading">Properties</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X8070A6CF85A00A70">6.3 <span class="Heading">Simplicial arrangements</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X86B70496781D3884">6.3-1 OMIsLinear</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7D5893807BB9785E">6.3-2 HasSimpleSimplex</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X80F069657B2045C0">6.3-3 HasSimpleTriangle</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EEAC3257EC22C1B">6.3-1 HArrIsSimplicial</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7DE8E16C7C2D387B">6.4 <span class="Heading">Operations</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X79A9BA6287B1A981">6.4 <span class="Heading">Falk's weight test</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EE74EA57A779612">6.4-1 IsLEquiv</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X81DBFBF67AC497C4">6.4-2 HasSimpleSimplexRk</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7C0D5D2A7C058B20">6.4-3 OMLocalizationRk</a></span>
-</div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X80841F8D80722081">6.5 <span class="Heading">Global methods</span></a>
-</span>
-<div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7A515BDC8582FFE6">6.5-1 OMOperation</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X801F6A9B7A0A53F5">6.5-2 OrderCovec</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X80CB9A9C8135A314">6.5-3 IsOMEquiv</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X793FF1428136B222">6.5-4 SeparatingSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7F2F674F8273D120">6.4-1 OMBoundedCpx</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X87CE42827934F11F">6.4-2 OMSupportsFalkWeights</a></span>
 </div></div>
 </div>
 
-<h3>6 <span class="Heading">Oriented Matroids</span></h3>
+<h3>6 <span class="Heading">Further properties of arrangements, geometric lattices, and oriented matroids</span></h3>
 
-<p>Oriented matroids are abstractions of real hyperplane arrangements. The following describes functions to handle oriented matroids and compute associated cell complexes and invariants. See <a href="chapBib.html#biBBLSWZ1999_OrientedMatroids">[BLVS+99]</a>.</p>
+<p>The following describes functions to analyse further properties of arrangements such as <em>formality</em>, <em>supersolvability</em>, <em>simpliciality</em>, <em>factoredness</em>, <em>inductive factoredness</em> ...</p>
 
-<p><a id="X8053D2C379B5CD9C" name="X8053D2C379B5CD9C"></a></p>
+<p><a id="X7B09D56B7A076E6B" name="X7B09D56B7A076E6B"></a></p>
 
-<h4>6.1 <span class="Heading">Construction of oriented matroids</span></h4>
+<h4>6.1 <span class="Heading">Supersolvable arrangements</span></h4>
 
-<p><a id="X82EE52377B03CC80" name="X82EE52377B03CC80"></a></p>
+<p><a id="X78E6E11179F7ECB5" name="X78E6E11179F7ECB5"></a></p>
 
-<h5>6.1-1 OrientedMatroid</h5>
+<h5>6.1-1 LIsModularPair</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrientedMatroid</code>( <var class="Arg">R</var>, <var class="Arg">or</var>, <var class="Arg">A</var>, <var class="Arg">or</var>[, <var class="Arg">CCs</var>, <var class="Arg">c</var>], <var class="Arg">or</var>[, <var class="Arg">n</var>, <var class="Arg">r</var>, <var class="Arg">ChiroCoreList</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: An oriented matroid OM.</p>
-
-<p>Constructs am oriented matroid from</p>
-
-
-<ul>
-<li><p>a list <var class="Arg">R</var> of vectors representing defining linear forms of real hyperplanes,</p>
-
-</li>
-<li><p>a real hyperplane arrangement <var class="Arg">A</var>,</p>
-
-</li>
-<li><p>a list of lists <var class="Arg">CVs</var> of signed covectors and a string <code class="code">c="cv"</code>,</p>
-
-</li>
-<li><p>intergers <var class="Arg">n,r</var> giving the size of the groundset and the rank and a list <var class="Arg">ChiroCoreList</var> <span class="Math">\subseteq \{0,1,-1\}^m (m = \binom{n}{r})</span> presenting the chirotope</p>
-
-</li>
-</ul>
-<p>of the oriented matroid.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); OM:=OrientedMatroid(A);</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrientedMatroid([[[1,1],[-1,1],[1,-1],[-1,-1]],[[0,1],[0,-1],[1,0],[-1,0]],[[0,0]]],"cv");</span>
-&lt;OrientedMatroid: 2 elements, rank 2&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrientedMatroid(2,3,[1,1,1]);</span>
-&lt;OrientedMatroid: 3 elements, rank 2&gt;
-</pre></div>
-
-<p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
-
-<h4>6.2 <span class="Heading">Attributes</span></h4>
-
-<p><a id="X7E30B85C7CE42908" name="X7E30B85C7CE42908"></a></p>
-
-<h5>6.2-1 OMRank</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMRank</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: An integer</p>
-
-<p>Returns the rank of the oriented matroid <var class="Arg">OM</var>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,2,3); OM := OrientedMatroid(A);</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMRank(OM);</span>
-3
-</pre></div>
-
-<p><a id="X78C0E4A0861CAD2F" name="X78C0E4A0861CAD2F"></a></p>
-
-<h5>6.2-2 OMGroundSet</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGroundSet</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list</p>
-
-<p>Returns the ground set of the oriented matroid OM.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,2,3); OM := OrientedMatroid(A);</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMGroundSet(OM);</span>
-[ 1, 2, 3, 4, 5, 6 ]
-</pre></div>
-
-<p><a id="X86AAB8F480E92ABB" name="X86AAB8F480E92ABB"></a></p>
-
-<h5>6.2-3 OMLForms</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMLForms</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list of linear forms or <code class="code">fail</code></p>
-
-<p>Returns the list of linear forms associated with the oriented matroid OM. If the internal component <code class="code">OM!.lforms</code> is not bound, <code class="code">fail</code> is returned.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,2,3); OM := OrientedMatroid(A);</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMLForms(O);</span>
-[ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
-  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
-</pre></div>
-
-<p><a id="X81CC016D818B3068" name="X81CC016D818B3068"></a></p>
-
-<h5>6.2-4 OMGeomLattice</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMGeomLattice</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: An object of type <code class="code">IsGeomLattice</code> or <code class="code">fail</code></p>
-
-<p>Constructs the geometric lattice associated with the oriented matroid OM. If OM is linear (as determined by <code class="code">OMIsLinear(OM)</code>), the lattice is computed as the intersection lattice of the hyperplane arrangement given by <code class="code">OMLForms(OM)</code>, stored in the internal component <code class="code">OM!.lattice</code>, and returned.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=OMGeomLattice(O); LGroundSet(L);</span>
-&lt;Geometric lattice: 4 atoms, rank 3&gt;
-[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], 
-  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], 
-      [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ], 
-  [ [ 1, 2, 3, 4 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid(3,4,[1,1,1,1]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=OMGeomLattice(O); LGroundSet(L);</span>
-&lt;Geometric lattice: 4 atoms, rank 3&gt;
-[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], 
-  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ], 
-      [ 1, 4 ], [ 2, 4 ], [ 3, 4 ] ], 
-  [ [ 1, 2, 3, 4 ] ] ]
-</pre></div>
-
-<p><a id="X83F110A97A80B140" name="X83F110A97A80B140"></a></p>
-
-<h5>6.2-5 OMCocircuits</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMCocircuits</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list</p>
-
-<p>Computes the (signed) cocircuits of the oriented matroid OM.</p>
-
-<p>The result is a list of sign vectors.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0],[0,1],[1,1]]); OMCocircuits(O);</span>
-&lt;OrientedMatroid: 3 elements, rank 2&gt;
-[ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
-  [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
-</pre></div>
-
-<p><a id="X7B35E88A79675D1E" name="X7B35E88A79675D1E"></a></p>
-
-<h5>6.2-6 TopeGraph</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TopeGraph</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A graph</p>
-
-<p>Constructs the tope graph of the oriented matroid <var class="Arg">OM</var>. The topes are obtained as the maximal covectors from <code class="code">OMCovectors(OM)</code>. Two topes are connected by an edge if their separating set consists of one element.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
-&lt;OrientedMatroid: 3 elements, rank 2&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := ShallowCopy(TopeGraph(O));;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Vertices(G);</span>
-[ 1 .. 6 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSimpleGraph(G);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UndirectedEdges(G);</span>
-[ [ 1, 3 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ] ]
-</pre></div>
-
-<p><a id="X7B2D2370811476C9" name="X7B2D2370811476C9"></a></p>
-
-<h5>6.2-7 OMCovectors</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMCovectors</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list of lists</p>
-
-<p>Computes all covectors of the oriented matroid OM. The result is returned as a list of lists, where the <span class="Math">k</span>-th inner list is a list of covectors corresponding to faces of dimension <span class="Math">k-1</span>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
-&lt;OrientedMatroid: 3 elements, rank 2&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMCovectors(O);</span>
-[ [ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], 
-    [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ],
-  [ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
-    [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ],
-  [ [ 0, 0, 0 ] ] ]
-</pre></div>
-
-<p><a id="X7ED4D5138012EB6C" name="X7ED4D5138012EB6C"></a></p>
-
-<h5>6.2-8 SalvettiComplex</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalvettiComplex</code>( <var class="Arg">OM</var>, <var class="Arg">or</var>, <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A <code class="code">FacePoset</code></p>
-
-<p>Constructs the Salvetti complex <a href="chapBib.html#biBSalvetti1987_SalCpx">[Sal87]</a> associated with the oriented matroid OM or the real hyperplane arrangement <var class="Arg">A</var>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
-&lt;OrientedMatroid: 3 elements, rank 2&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SalvettiComplex(O);</span>
-&lt;FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);</span>
-&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SalvettiComplex(A);</span>
-&lt;FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]&gt;
-</pre></div>
-
-<p><a id="X811DC01A7C2F985B" name="X811DC01A7C2F985B"></a></p>
-
-<h5>6.2-9 SalvettiComplex</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalvettiComplex</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>See <code class="func">SalvettiComplex</code> (<a href="chap6.html#X7ED4D5138012EB6C"><span class="RefLink">6.2-8</span></a>).</p>
-
-<p><a id="X85AB2A797ABE8967" name="X85AB2A797ABE8967"></a></p>
-
-<h5>6.2-10 FPGroundSet</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPGroundSet</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list</p>
-
-<p>Returns the ground set of the face poset FP.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S := SalvettiComplex(O);</span>
-&lt;FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FPGroundSet(S);</span>
-[
-  [ 
-    [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 
-    [ [ 1, -1, 1 ], [ 1, -1, 1 ] ], 
-    [ [ -1, -1, -1 ], [ -1, -1, -1 ] ], 
-    [ [ 1, 1, 1 ], [ 1, 1, 1 ] ], 
-    [ [ -1, 1, 1 ], [ -1, 1, 1 ] ], 
-    [ [ 1, -1, -1 ], [ 1, -1, -1 ] ]
-  ],
-  [
-    [ [ -1, 0, -1 ], [ -1, 1, -1 ] ], 
-    [ [ -1, 1, 0 ], [ -1, 1, -1 ] ], 
-    [ [ 1, 0, 1 ], [ 1, -1, 1 ] ], 
-    [ [ 1, -1, 0 ], [ 1, -1, 1 ] ], 
-    [ [ 0, -1, -1 ], [ -1, -1, -1 ] ], 
-    [ [ -1, 0, -1 ], [ -1, -1, -1 ] ], 
-    [ [ 0, 1, 1 ], [ 1, 1, 1 ] ], 
-    [ [ 1, 0, 1 ], [ 1, 1, 1 ] ], 
-    [ [ 0, 1, 1 ], [ -1, 1, 1 ] ], 
-    [ [ -1, 1, 0 ], [ -1, 1, 1 ] ], 
-    [ [ 0, -1, -1 ], [ 1, -1, -1 ] ], 
-    [ [ 1, -1, 0 ], [ 1, -1, -1 ] ]
-  ],
-  [
-    [ [ 0, 0, 0 ], [ -1, 1, -1 ] ], 
-    [ [ 0, 0, 0 ], [ 1, -1, 1 ] ], 
-    [ [ 0, 0, 0 ], [ -1, -1, -1 ] ], 
-    [ [ 0, 0, 0 ], [ 1, 1, 1 ] ], 
-    [ [ 0, 0, 0 ], [ -1, 1, 1 ] ], 
-    [ [ 0, 0, 0 ], [ 1, -1, -1 ] ]
-  ]
-]
-</pre></div>
-
-<p><a id="X7E28E057841D6ECD" name="X7E28E057841D6ECD"></a></p>
-
-<h5>6.2-11 FPOrder</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FPOrder</code>( <var class="Arg">FP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A function</p>
-
-<p>Returns the order function of the face poset FP.</p>
-
-<p><a id="X854947857F5E5D29" name="X854947857F5E5D29"></a></p>
-
-<h5>6.2-12 OMChirotope</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMChirotope</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A function</p>
-
-<p>Returns the chirotope given as a function from <span class="Math">\binom{E}{r} \to \{0,\pm 1\}</span>, where <span class="Math">E</span> is the groundset of <span class="Math">OM</span> and <span class="Math">r</span> is the rank of <var class="Arg">OM</var>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(2,3,[1,1,1]); c:=OMChirotope(O);</span>
-&lt;OrientedMatroid: 3 elements, rank 2&gt;
-function( S ) ... end
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(Combinations([1..3],2),x-&gt;c(x));</span>
-[ 1, 1, 1 ]
-</pre></div>
-
-<p><a id="X7EE8B82D792A4A64" name="X7EE8B82D792A4A64"></a></p>
-
-<h5>6.2-13 OMRankFunction</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMRankFunction</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A function</p>
-
-<p>Returns the rank function of the oriented matroid <var class="Arg">OM</var></p>
-
-<p><a id="X871597447BB998A1" name="X871597447BB998A1"></a></p>
-
-<h4>6.3 <span class="Heading">Properties</span></h4>
-
-<p><a id="X86B70496781D3884" name="X86B70496781D3884"></a></p>
-
-<h5>6.3-1 OMIsLinear</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMIsLinear</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsModularPair</code>( <var class="Arg">L</var>, <var class="Arg">m1</var>, <var class="Arg">m2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
 
-<p>Determines whether the oriented matroid <var class="Arg">OM</var> is linear. This is the case if the internal component <code class="code">OM!.lforms</code> is bound.</p>
+<p>Determines if <var class="Arg">m1</var> and <var class="Arg">m2</var> form a modular pair in L.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,2,3); OM := OrientedMatroid(A);</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsLinear(OM);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid(3,4,[1,1,1,1]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsLinear(O);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
+&lt;Geometric lattice: 6 atoms, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LGroundSet(L);</span>
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
+ [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
+   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
+  [ [ 1, 2, 3, 4, 5, 6 ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);</span>
 false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);</span>
+true
 </pre></div>
 
-<p><a id="X7D5893807BB9785E" name="X7D5893807BB9785E"></a></p>
+<p><a id="X7FECD913876C637C" name="X7FECD913876C637C"></a></p>
 
-<h5>6.3-2 HasSimpleSimplex</h5>
+<h5>6.1-2 LIsModularFlat</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HasSimpleSimplex</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsModularFlat</code>( <var class="Arg">L</var>, <var class="Arg">m</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
 
-<p>Returns whether the oriented matroid <var class="Arg">OM</var> has a simple simplex, i.e. a simplicial Tope <span class="Math">T</span> such that the localizations at its vertices are boolean and there is another rank 1 covector not adjacent to <span class="Math">T</span>. If <code class="code">Rank(OM)</code> <span class="Math">\geq 3</span> and this is true then its Salvetti complex can not be <span class="Math">K(\pi,1)</span>.</p>
+<p>Determines if <var class="Arg">m</var> is a modular flat in L.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,1,1,1]]);</span>
-&lt;OrientedMatroid: 5 elements, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasSimpleSimplex(O);</span>
-  - tope: [ -1, -1, -1, -1, -1 ]
-  - vertices: [ [ 0, 0, 0, -1, -1 ], [ 0, 0, -1, 0, -1 ], 
-  [ 0, -1, 0, 0, -1 ], [ -1, 0, 0, 0, -1 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+&lt;Geometric lattice: 6 atoms, rank 3&gt;
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
+ [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
+   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
+  [ [ 1, 2, 3, 4, 5, 6 ] ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);</span>
+false
 true
-
 </pre></div>
 
-<p><a id="X80F069657B2045C0" name="X80F069657B2045C0"></a></p>
+<p><a id="X8271B52F816053DB" name="X8271B52F816053DB"></a></p>
 
-<h5>6.3-3 HasSimpleTriangle</h5>
+<h5>6.1-3 LModularFlatsRk</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HasSimpleTriangle</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LModularFlatsRk</code>( <var class="Arg">L</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: list</p>
+
+<p>Determines the modular flats in <var class="Arg">L</var> of rank <var class="Arg">k</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,1,4));</span>
+&lt;Geometric lattice: 16 atoms, rank 4&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LModularFlatsRk(L,3);</span>
+[ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], 
+  [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], 
+  [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], 
+  [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ]
+</pre></div>
+
+<p><a id="X7D95D0F37E6FBFD6" name="X7D95D0F37E6FBFD6"></a></p>
+
+<h5>6.1-4 LIsSupersolvable</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsSupersolvable</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Checks all rank <span class="Math">3</span> localizations for a simple simplex, i.e. a simple triangle.</p>
+<p>Determines whether the geometric lattice <var class="Arg">L</var> is <em>supersolvable</em>.</p>
 
 
 <div class="example"><pre>
-
-</pre></div>
-
-<p><a id="X7DE8E16C7C2D387B" name="X7DE8E16C7C2D387B"></a></p>
-
-<h4>6.4 <span class="Heading">Operations</span></h4>
-
-<p><a id="X7EE74EA57A779612" name="X7EE74EA57A779612"></a></p>
-
-<h5>6.4-1 IsLEquiv</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLEquiv</code>( <var class="Arg">OM1</var>, <var class="Arg">OM2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
-
-<p>Determines if the oriented matroids <var class="Arg">OM1</var> and <var class="Arg">OM2</var> have isomorphic geometric lattices.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O1:=OrientedMatroid(3,4,[1,1,1,1]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(O1,O2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,1,4));</span>
+&lt;Geometric lattice: 16 atoms, rank 4&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsSupersolvable(L);</span>
 true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O2:=OrientedMatroid([[1,0,0],[0,1,0],[0,0,1],[1,1,0]]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(O1,O2);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,2,4));</span>
+&lt;Geometric lattice: 12 atoms, rank 4&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsSupersolvable(L);</span>
 false
 </pre></div>
 
-<p><a id="X81DBFBF67AC497C4" name="X81DBFBF67AC497C4"></a></p>
+<p><a id="X7DC90A0286D5664A" name="X7DC90A0286D5664A"></a></p>
 
-<h5>6.4-2 HasSimpleSimplexRk</h5>
+<h5>6.1-5 HArrIsSupersolvable</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HasSimpleSimplexRk</code>( <var class="Arg">OM</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsSupersolvable</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
 
-<p>Returns whether the oriented matroid <var class="Arg">OM</var> has a localiazion of rank <var class="Arg">k</var> with a simple Simplex. If this is true for <span class="Math">k \geq 3</span> then its Salvetti complex can not be <span class="Math">K(\pi,1)</span>.</p>
+<p>Determines whether the arrangement <var class="Arg">A</var> is <em>supersolvable</em>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,1,1,0]]);</span>
-&lt;OrientedMatroid: 5 elements, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasSimpleSimplex(O);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,4);</span>
+&lt;HyperplaneArrangement: 16 hyperplanes in 4-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsSupersolvable(A);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,4); </span>
+&lt;HyperplaneArrangement: 12 hyperplanes in 4-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsSupersolvable(A);</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HasSimpleSimplexRk(O,3);</span>
+</pre></div>
+
+<p><a id="X78B7232883025D41" name="X78B7232883025D41"></a></p>
+
+<h5>6.1-6 OMIsSupersolvable</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMIsSupersolvable</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines whether the oriented matroid <var class="Arg">OM</var> is <em>supersolvable</em>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(3,4,[1,1,1,1]);</span>
+&lt;OrientedMatroid: 4 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C:=List(Combinations(Roots(AGpql(2,2,3)),3),x-&gt;pos(Determinant(x)));</span>
+[ 1, 1, 1, 1, 0, -1, -1, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 1, -1, -1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(3,6,C);</span>
+&lt;OrientedMatroid: 6 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
 true
 </pre></div>
 
-<p><a id="X7C0D5D2A7C058B20" name="X7C0D5D2A7C058B20"></a></p>
+<p><a id="X79BAC87F7C1CA4A1" name="X79BAC87F7C1CA4A1"></a></p>
 
-<h5>6.4-3 OMLocalizationRk</h5>
+<h4>6.2 <span class="Heading">Formal arrangements</span></h4>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMLocalizationRk</code>( <var class="Arg">OM</var>, <var class="Arg">F</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: An oriented matroid</p>
+<p><a id="X808977C7824120DF" name="X808977C7824120DF"></a></p>
 
-<p>Returns the rank <var class="Arg">k</var> localization of <var class="Arg">OM</var> at the flat <var class="Arg">F</var>.</p>
+<h5>6.2-1 IsFormal</h5>
 
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFormal</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
 
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,1,1,0]]);</span>
-&lt;OrientedMatroid: 5 elements, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=OMGeomLattice(O);</span>
-&lt;Geometric lattice: 5 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LkFlats(L)(3);</span>
-[ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMLocalizationRk(O,[1,2,3,5],3);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-
-</pre></div>
-
-<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
-
-<h4>6.5 <span class="Heading">Global methods</span></h4>
-
-<p><a id="X7A515BDC8582FFE6" name="X7A515BDC8582FFE6"></a></p>
-
-<h5>6.5-1 OMOperation</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMOperation</code>( <var class="Arg">sv1</var>, <var class="Arg">sv2</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Returns: A list</p>
-
-<p>Performs the oriented matroid operation on two signed vectors <code class="code">sv1</code> and <code class="code">sv2</code>. For each position <code class="code">i</code>, if <code class="code">sv1[i]</code> is nonzero, it is used; otherwise <code class="code">sv2[i]</code> is used. Returns a new signed vector representing the result of the operation.</p>
+<p>Determines whether the arrangement is <em>formal</em> in the sense of Falk-Randell <a href="chapBib.html#biBFalkRandell87_HomotopyArr">[FR87]</a>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CVs:=OMCovectors(O)[2];</span>
-[ [ 0, 1, 1 ], [ 0, -1, -1 ], [ 1, 0, 1 ], 
-  [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">sv1 := CVs[3]; sv2 := CVs[5];</span>
-[ 1, 0, 1 ]
-[ -1, 1, 0 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMOperation(sv1, sv2);</span>
-[ 1, 1, 1 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMOperation(sv2, sv1);</span>
-[ -1, 1, 1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A1 := Arr([</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,0,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,1,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,0,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,4],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [3,0,5],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [3,4,5]</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"></span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A2 := Arr([</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,0,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,1,0],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,0,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,1,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,1],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,4],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,0,3],</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,2,3]</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(A1,A2);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFormal(A1);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFormal(A2);</span>
+false
 </pre></div>
 
-<p><a id="X801F6A9B7A0A53F5" name="X801F6A9B7A0A53F5"></a></p>
+<p><a id="X8070A6CF85A00A70" name="X8070A6CF85A00A70"></a></p>
 
-<h5>6.5-2 OrderCovec</h5>
+<h4>6.3 <span class="Heading">Simplicial arrangements</span></h4>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrderCovec</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Order function for sign vectors.</p>
+<p><a id="X7EEAC3257EC22C1B" name="X7EEAC3257EC22C1B"></a></p>
 
-<p><a id="X80CB9A9C8135A314" name="X80CB9A9C8135A314"></a></p>
+<h5>6.3-1 HArrIsSimplicial</h5>
 
-<h5>6.5-3 IsOMEquiv</h5>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsSimplicial</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsOMEquiv</code>( <var class="Arg">OM1</var>, <var class="Arg">OM2</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
+<p>Determines whether the real arrangement <var class="Arg">A</var> is <em>simplicial</em>, i.e. if all chambers are simplicial.</p>
 
-<p>Determines, if the oriented matroids <var class="Arg">OM1</var> and <var class="Arg">OM2</var> are isomorphic.</p>
 
-<p><a id="X793FF1428136B222" name="X793FF1428136B222"></a></p>
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+true
+</pre></div>
 
-<h5>6.5-4 SeparatingSet</h5>
+<p><a id="X79A9BA6287B1A981" name="X79A9BA6287B1A981"></a></p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SeparatingSet</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>The separating set of two sign vectors.</p>
+<h4>6.4 <span class="Heading">Falk's weight test</span></h4>
+
+<p>The following still needs to be tested further...</p>
+
+<p><a id="X7F2F674F8273D120" name="X7F2F674F8273D120"></a></p>
+
+<h5>6.4-1 OMBoundedCpx</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMBoundedCpx</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: list of list of sign vectors.</p>
+
+<p>Constructs the complex of bounded cells of the affine part of the oriented matroid <var class="Arg">OM</var> with respect to the element <var class="Arg">g</var>.</p>
+
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X87CE42827934F11F" name="X87CE42827934F11F"></a></p>
+
+<h5>6.4-2 OMSupportsFalkWeights</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMSupportsFalkWeights</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: list or fail</p>
+
+<p>Only for oriented matroids of rank 3. Determines, whether <var class="Arg">OM</var> supports a system of weights as described by M. Falk in <a href="chapBib.html#biBFalk1995_Kpi1Arrs">[Fal95]</a>. This implies, that the Salvetti complex (see <code class="func">SalvettiComplex</code> (<a href="chap4.html#X7ED4D5138012EB6C"><span class="RefLink">4.2-8</span></a>)) is apsherical. The functionality of the <strong class="button">cddinterface</strong> package is used, to determine solotions of a system of linear inequalities.</p>
+
+<p>If the algorithm determines a suitable weight system for <var class="Arg">OM</var>, each list element consists of a weight, and a corner, i.e. a pair of a 2-cell and an adjacent vertex in the bounded complex, given as sign vectors.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>
+&lt;OrientedMatroid: 7 elements, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMSupportsFalkWeights(O,3);</span>
+fail
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMSupportsFalkWeights(O,1);</span>
+[ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+  [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+  [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
+  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+  [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
+  [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
+  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
+</pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap5.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap7.html">[Next Chapter]</a>&nbsp;  </div>

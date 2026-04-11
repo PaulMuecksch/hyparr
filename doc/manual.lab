@@ -10,25 +10,25 @@
 \makelabel{hyparr:Properties of geometric lattices}{2.5}{X8056EC0986604552}
 \makelabel{hyparr:Operations}{2.6}{X7DE8E16C7C2D387B}
 \makelabel{hyparr:Global methods}{2.7}{X80841F8D80722081}
-\makelabel{hyparr:Free arrangements}{3}{X84CDDA0382B013CF}
-\makelabel{hyparr:Module of logarithmic vector fields aka derivation modules of arrangements}{3.1}{X875DF181804D1224}
-\makelabel{hyparr:Freeness properties}{3.2}{X82FF317F7EFD52AF}
-\makelabel{hyparr:Milnor fibers}{4}{X80236F007DAFE4C2}
-\makelabel{hyparr:Complexes}{4.1}{X79C388D385DB7CD1}
-\makelabel{hyparr:Further properties of arrangements, geometric lattices, and oriented matroids}{5}{X7E898D0F86EF9F1E}
-\makelabel{hyparr:Supersolvable arrangements}{5.1}{X7B09D56B7A076E6B}
-\makelabel{hyparr:Formal arrangements}{5.2}{X79BAC87F7C1CA4A1}
-\makelabel{hyparr:Simplicial arrangements}{5.3}{X8070A6CF85A00A70}
-\makelabel{hyparr:Falk's weight test}{5.4}{X79A9BA6287B1A981}
-\makelabel{hyparr:Oriented Matroids}{6}{X8388FBA579602CDB}
-\makelabel{hyparr:Construction of oriented matroids}{6.1}{X8053D2C379B5CD9C}
-\makelabel{hyparr:Attributes}{6.2}{X7C701DBF7BAE649A}
-\makelabel{hyparr:Properties}{6.3}{X871597447BB998A1}
-\makelabel{hyparr:Operations}{6.4}{X7DE8E16C7C2D387B}
-\makelabel{hyparr:Global methods}{6.5}{X80841F8D80722081}
-\makelabel{hyparr:Special arrangements}{7}{X7C9F5AAF83133F9A}
-\makelabel{hyparr:Global methods}{7.1}{X80841F8D80722081}
-\makelabel{hyparr:Chamber and tope posets}{8}{X7A142C9D82C31E24}
+\makelabel{hyparr:Special arrangements}{3}{X7C9F5AAF83133F9A}
+\makelabel{hyparr:Global methods}{3.1}{X80841F8D80722081}
+\makelabel{hyparr:Oriented Matroids}{4}{X8388FBA579602CDB}
+\makelabel{hyparr:Construction of oriented matroids}{4.1}{X8053D2C379B5CD9C}
+\makelabel{hyparr:Attributes}{4.2}{X7C701DBF7BAE649A}
+\makelabel{hyparr:Properties}{4.3}{X871597447BB998A1}
+\makelabel{hyparr:Operations}{4.4}{X7DE8E16C7C2D387B}
+\makelabel{hyparr:Global methods}{4.5}{X80841F8D80722081}
+\makelabel{hyparr:Free arrangements}{5}{X84CDDA0382B013CF}
+\makelabel{hyparr:Module of logarithmic vector fields aka derivation modules of arrangements}{5.1}{X875DF181804D1224}
+\makelabel{hyparr:Freeness properties}{5.2}{X82FF317F7EFD52AF}
+\makelabel{hyparr:Further properties of arrangements, geometric lattices, and oriented matroids}{6}{X7E898D0F86EF9F1E}
+\makelabel{hyparr:Supersolvable arrangements}{6.1}{X7B09D56B7A076E6B}
+\makelabel{hyparr:Formal arrangements}{6.2}{X79BAC87F7C1CA4A1}
+\makelabel{hyparr:Simplicial arrangements}{6.3}{X8070A6CF85A00A70}
+\makelabel{hyparr:Falk's weight test}{6.4}{X79A9BA6287B1A981}
+\makelabel{hyparr:Milnor fibers}{7}{X80236F007DAFE4C2}
+\makelabel{hyparr:Complexes}{7.1}{X79C388D385DB7CD1}
+\makelabel{hyparr:Tope posets}{8}{X7D123BFB84BF8125}
 \makelabel{hyparr:Operation}{8.1}{X835880B9800BD2D8}
 \makelabel{hyparr:Attributes}{8.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
@@ -62,55 +62,55 @@
 \makelabel{hyparr:HArrResHind}{2.7.1}{X7CC338E67CE223FE}
 \makelabel{hyparr:HArrResX}{2.7.2}{X784AA86286AA9DD8}
 \makelabel{hyparr:DrawLatex3Arr}{2.7.3}{X82C8EAF88340865B}
-\makelabel{hyparr:DerModule for IsHyperplaneArrangement}{3.1.1}{X783314398329E3BE}
-\makelabel{hyparr:DerModGenerators for IsDerivationModule}{3.1.2}{X7B6780568674988A}
-\makelabel{hyparr:DerModPRing for IsDerivationModule}{3.1.3}{X8174C2FD82AA2B81}
-\makelabel{hyparr:DerModDegreeSequence for IsDerivationModule}{3.1.4}{X78A309B97E68E70F}
-\makelabel{hyparr:DerModProjDim for IsDerivationModule}{3.1.5}{X81D05AA282B2B62E}
-\makelabel{hyparr:DerModIsFree for IsDerivationModule}{3.1.6}{X81110BE983107955}
-\makelabel{hyparr:HArrIsFree for IsHyperplaneArrangement}{3.1.7}{X7C55194B8304FDAC}
-\makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{3.2.1}{X80F4D6247CAA1BDA}
-\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{3.2.2}{X85DAC6FC78DDED6D}
-\makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{4.1.1}{X794B90A67B153E6F}
-\makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{4.1.2}{X7D30E85086B93DB0}
-\makelabel{hyparr:FPtoCWCpx}{4.1.3}{X7BBA6F967E493B5D}
-\makelabel{hyparr:LIsModularPair for IsGeomLattice, IsList, IsList}{5.1.1}{X78E6E11179F7ECB5}
-\makelabel{hyparr:LIsModularFlat for IsGeomLattice, IsList}{5.1.2}{X7FECD913876C637C}
-\makelabel{hyparr:LModularFlatsRk for IsGeomLattice, IsInt}{5.1.3}{X8271B52F816053DB}
-\makelabel{hyparr:LIsSupersolvable for IsGeomLattice}{5.1.4}{X7D95D0F37E6FBFD6}
-\makelabel{hyparr:HArrIsSupersolvable for IsHyperplaneArrangement}{5.1.5}{X7DC90A0286D5664A}
-\makelabel{hyparr:OMIsSupersolvable for IsOrientedMatroid}{5.1.6}{X78B7232883025D41}
-\makelabel{hyparr:IsFormal for IsHyperplaneArrangement}{5.2.1}{X808977C7824120DF}
-\makelabel{hyparr:HArrIsSimplicial for IsHyperplaneArrangement and IsReal}{5.3.1}{X7EEAC3257EC22C1B}
-\makelabel{hyparr:OMBoundedCpx for IsOrientedMatroid, IsInt}{5.4.1}{X7F2F674F8273D120}
-\makelabel{hyparr:OMSupportsFalkWeights for IsOrientedMatroid, IsInt}{5.4.2}{X87CE42827934F11F}
-\makelabel{hyparr:OrientedMatroid for IsList}{6.1.1}{X82EE52377B03CC80}
-\makelabel{hyparr:OMRank for IsOrientedMatroid}{6.2.1}{X7E30B85C7CE42908}
-\makelabel{hyparr:OMGroundSet for IsOrientedMatroid}{6.2.2}{X78C0E4A0861CAD2F}
-\makelabel{hyparr:OMLForms for IsOrientedMatroid}{6.2.3}{X86AAB8F480E92ABB}
-\makelabel{hyparr:OMGeomLattice for IsOrientedMatroid}{6.2.4}{X81CC016D818B3068}
-\makelabel{hyparr:OMCocircuits for IsOrientedMatroid}{6.2.5}{X83F110A97A80B140}
-\makelabel{hyparr:TopeGraph for IsOrientedMatroid}{6.2.6}{X7B35E88A79675D1E}
-\makelabel{hyparr:OMCovectors for IsOrientedMatroid}{6.2.7}{X7B2D2370811476C9}
-\makelabel{hyparr:SalvettiComplex for IsOrientedMatroid}{6.2.8}{X7ED4D5138012EB6C}
-\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement and IsReal}{6.2.9}{X811DC01A7C2F985B}
-\makelabel{hyparr:FPGroundSet for IsFacePoset}{6.2.10}{X85AB2A797ABE8967}
-\makelabel{hyparr:FPOrder for IsFacePoset}{6.2.11}{X7E28E057841D6ECD}
-\makelabel{hyparr:OMChirotope for IsOrientedMatroid}{6.2.12}{X854947857F5E5D29}
-\makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{6.2.13}{X7EE8B82D792A4A64}
-\makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{6.3.1}{X86B70496781D3884}
-\makelabel{hyparr:HasSimpleSimplex for IsOrientedMatroid}{6.3.2}{X7D5893807BB9785E}
-\makelabel{hyparr:HasSimpleTriangle for IsOrientedMatroid}{6.3.3}{X80F069657B2045C0}
-\makelabel{hyparr:IsLEquiv for IsOrientedMatroid,IsOrientedMatroid}{6.4.1}{X7EE74EA57A779612}
-\makelabel{hyparr:HasSimpleSimplexRk for IsOrientedMatroid, IsInt}{6.4.2}{X81DBFBF67AC497C4}
-\makelabel{hyparr:OMLocalizationRk for IsOrientedMatroid, IsList, IsInt}{6.4.3}{X7C0D5D2A7C058B20}
-\makelabel{hyparr:OMOperation}{6.5.1}{X7A515BDC8582FFE6}
-\makelabel{hyparr:OrderCovec}{6.5.2}{X801F6A9B7A0A53F5}
-\makelabel{hyparr:IsOMEquiv}{6.5.3}{X80CB9A9C8135A314}
-\makelabel{hyparr:SeparatingSet}{6.5.4}{X793FF1428136B222}
-\makelabel{hyparr:AGpql}{7.1.1}{X858205A37B7EB5FA}
-\makelabel{hyparr:SsS3}{7.1.2}{X81AD6CA97F71ED33}
-\makelabel{hyparr:ConnectedSubgraphArr for IsList}{7.1.3}{X82DB5C6F83FDC443}
+\makelabel{hyparr:AGpql}{3.1.1}{X858205A37B7EB5FA}
+\makelabel{hyparr:SsS3}{3.1.2}{X81AD6CA97F71ED33}
+\makelabel{hyparr:ConnectedSubgraphArr for IsList}{3.1.3}{X82DB5C6F83FDC443}
+\makelabel{hyparr:OrientedMatroid for IsList}{4.1.1}{X82EE52377B03CC80}
+\makelabel{hyparr:OMRank for IsOrientedMatroid}{4.2.1}{X7E30B85C7CE42908}
+\makelabel{hyparr:OMGroundSet for IsOrientedMatroid}{4.2.2}{X78C0E4A0861CAD2F}
+\makelabel{hyparr:OMLForms for IsOrientedMatroid}{4.2.3}{X86AAB8F480E92ABB}
+\makelabel{hyparr:OMGeomLattice for IsOrientedMatroid}{4.2.4}{X81CC016D818B3068}
+\makelabel{hyparr:OMCocircuits for IsOrientedMatroid}{4.2.5}{X83F110A97A80B140}
+\makelabel{hyparr:TopeGraph for IsOrientedMatroid}{4.2.6}{X7B35E88A79675D1E}
+\makelabel{hyparr:OMCovectors for IsOrientedMatroid}{4.2.7}{X7B2D2370811476C9}
+\makelabel{hyparr:SalvettiComplex for IsOrientedMatroid}{4.2.8}{X7ED4D5138012EB6C}
+\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement and IsReal}{4.2.9}{X811DC01A7C2F985B}
+\makelabel{hyparr:FPGroundSet for IsFacePoset}{4.2.10}{X85AB2A797ABE8967}
+\makelabel{hyparr:FPOrder for IsFacePoset}{4.2.11}{X7E28E057841D6ECD}
+\makelabel{hyparr:OMChirotope for IsOrientedMatroid}{4.2.12}{X854947857F5E5D29}
+\makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{4.2.13}{X7EE8B82D792A4A64}
+\makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{4.3.1}{X86B70496781D3884}
+\makelabel{hyparr:HasSimpleSimplex for IsOrientedMatroid}{4.3.2}{X7D5893807BB9785E}
+\makelabel{hyparr:HasSimpleTriangle for IsOrientedMatroid}{4.3.3}{X80F069657B2045C0}
+\makelabel{hyparr:IsLEquiv for IsOrientedMatroid,IsOrientedMatroid}{4.4.1}{X7EE74EA57A779612}
+\makelabel{hyparr:HasSimpleSimplexRk for IsOrientedMatroid, IsInt}{4.4.2}{X81DBFBF67AC497C4}
+\makelabel{hyparr:OMLocalizationRk for IsOrientedMatroid, IsList, IsInt}{4.4.3}{X7C0D5D2A7C058B20}
+\makelabel{hyparr:OMOperation}{4.5.1}{X7A515BDC8582FFE6}
+\makelabel{hyparr:OrderCovec}{4.5.2}{X801F6A9B7A0A53F5}
+\makelabel{hyparr:IsOMEquiv}{4.5.3}{X80CB9A9C8135A314}
+\makelabel{hyparr:SeparatingSet}{4.5.4}{X793FF1428136B222}
+\makelabel{hyparr:DerModule for IsHyperplaneArrangement}{5.1.1}{X783314398329E3BE}
+\makelabel{hyparr:DerModGenerators for IsDerivationModule}{5.1.2}{X7B6780568674988A}
+\makelabel{hyparr:DerModPRing for IsDerivationModule}{5.1.3}{X8174C2FD82AA2B81}
+\makelabel{hyparr:DerModDegreeSequence for IsDerivationModule}{5.1.4}{X78A309B97E68E70F}
+\makelabel{hyparr:DerModProjDim for IsDerivationModule}{5.1.5}{X81D05AA282B2B62E}
+\makelabel{hyparr:DerModIsFree for IsDerivationModule}{5.1.6}{X81110BE983107955}
+\makelabel{hyparr:HArrIsFree for IsHyperplaneArrangement}{5.1.7}{X7C55194B8304FDAC}
+\makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{5.2.1}{X80F4D6247CAA1BDA}
+\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{5.2.2}{X85DAC6FC78DDED6D}
+\makelabel{hyparr:LIsModularPair for IsGeomLattice, IsList, IsList}{6.1.1}{X78E6E11179F7ECB5}
+\makelabel{hyparr:LIsModularFlat for IsGeomLattice, IsList}{6.1.2}{X7FECD913876C637C}
+\makelabel{hyparr:LModularFlatsRk for IsGeomLattice, IsInt}{6.1.3}{X8271B52F816053DB}
+\makelabel{hyparr:LIsSupersolvable for IsGeomLattice}{6.1.4}{X7D95D0F37E6FBFD6}
+\makelabel{hyparr:HArrIsSupersolvable for IsHyperplaneArrangement}{6.1.5}{X7DC90A0286D5664A}
+\makelabel{hyparr:OMIsSupersolvable for IsOrientedMatroid}{6.1.6}{X78B7232883025D41}
+\makelabel{hyparr:IsFormal for IsHyperplaneArrangement}{6.2.1}{X808977C7824120DF}
+\makelabel{hyparr:HArrIsSimplicial for IsHyperplaneArrangement and IsReal}{6.3.1}{X7EEAC3257EC22C1B}
+\makelabel{hyparr:OMBoundedCpx for IsOrientedMatroid, IsInt}{6.4.1}{X7F2F674F8273D120}
+\makelabel{hyparr:OMSupportsFalkWeights for IsOrientedMatroid, IsInt}{6.4.2}{X87CE42827934F11F}
+\makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{7.1.1}{X794B90A67B153E6F}
+\makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{7.1.2}{X7D30E85086B93DB0}
+\makelabel{hyparr:FPtoCWCpx}{7.1.3}{X7BBA6F967E493B5D}
 \makelabel{hyparr:TopePoset for IsOrientedMatroid, IsList}{8.1.1}{X804189147ADFB6A2}
 \makelabel{hyparr:TPGroundSet for IsTopePoset}{8.2.1}{X81854C4D816A501A}
 \makelabel{hyparr:TPBaseTope for IsTopePoset}{8.2.2}{X82CEA0EB7B0AF294}

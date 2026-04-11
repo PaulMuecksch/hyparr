@@ -15,7 +15,12 @@
 LoadPackage( "AutoDoc" );
 AutoDoc( rec( 
             # scaffold := true,
-            autodoc := true 
+            # includes := ["_AutoDocMainFile.xml"],
+            # autodoc := true
+            autodoc := rec(
+            files := ["gap/arrangements.gd", "gap/specialarrs.gd", "gap/orientedmatroid.gd", 
+                "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd"] 
+                )
             ) );
 QUIT;
 
