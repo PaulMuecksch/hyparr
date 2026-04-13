@@ -19,9 +19,9 @@
   Constructs a hyperplane arrangement from a list <A>R</A> of vectors
   representing defining linear forms of hyperplanes.
 <P/>
-  Each vector <M>r = [r_1,\dots,r_n]</M> in <A>R</A> corresponds to the hyperplane
+  Each vector <Math>[a_1,\dots,a_\ell]</Math> in <A>R</A> corresponds to the hyperplane
   <Display>
-     r_1 x_1 + \cdots + r_n x_n = 0.
+     a_1 x_1 + \cdots + a_\ell x_\ell = 0.
   </Display>
   The vectors must lie in the same vector space.
 <P/>

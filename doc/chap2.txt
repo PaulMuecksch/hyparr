@@ -16,10 +16,10 @@
   [33X[0;0YConstructs  a  hyperplane  arrangement from a list [3XR[103X of vectors representing
   defining linear forms of hyperplanes.[133X
   
-  [33X[0;0YEach vector [22Xr = [r_1,dots,r_n][122X in [3XR[103X corresponds to the hyperplane[133X
+  [33X[0;0YEach vector [23X[a_1,\dots,a_\ell][123X in [3XR[103X corresponds to the hyperplane[133X
   
   
-  [24X[33X[0;6Yr_1 x_1 + \cdots + r_n x_n = 0.[133X
+  [24X[33X[0;6Ya_1 x_1 + \cdots + a_\ell x_\ell = 0.[133X
   
   [124X
   
