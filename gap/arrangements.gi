@@ -1,5 +1,5 @@
 #
-# HypArr: Computations with hyperplane arrangements 
+# HypArr: Computations with hyperplane arrangements
 #
 # Implementations
 # #
@@ -16,21 +16,28 @@ BindGlobal("GeomLatticeFamily",
 
 InstallGlobalFunction(HypArr_PWLinInd,
 function(ll)
-local test,l2,i,j,k,l;
+local test,l2,i,j,k,l,d;
     l:=ShallowCopy(ll);;
     k:=0;;
+	if IsBound(ll[1]) then
+		d:=Length(ll[1]);;
+	else
+		d:=0;;
+	fi;;
+
     for i in [1..Length(ll)] do
         if Rank(ll{[i]})=0 then
             Remove(l,i+k);;
             k:=k-1;;
         fi;;
     od;;
-    
+
     if l=[] then
+		# l:=[0*[1..d]];;
         return l;;
     fi;;
-    
-#     for 
+
+#     for
 	for i in [1..Length(l)] do
 		test:=true;
 		k:=0;
@@ -47,7 +54,7 @@ local test,l2,i,j,k,l;
 			return HypArr_PWLinInd(l2);
 		fi;
 	od;
-		
+
 	if test then
 		return l;
 	fi;
@@ -60,13 +67,15 @@ InstallMethod(HyperplaneArrangement,
     [IsList],
 function(r)
 
-    local dim, l, type;
+    local dim, l, type, F;
 
     if r = [] then
         dim := 0;
         l := [];
+		F := "not determined";
     else
         dim := Length(r[1]);
+		F:=DefaultField(Concatenation(r));;
         l := HypArr_PWLinInd(r);
     fi;
 
@@ -77,7 +86,7 @@ function(r)
         rec(
             roots := l,
             dimension := dim,
-			deffield := DefaultField(Concatenation(l))
+			deffield := F
         )
     );
 end);
@@ -104,7 +113,7 @@ end);
 InstallMethod(Roots,
     [IsHyperplaneArrangement],
     A -> A!.roots);
-    
+
 InstallMethod(Dimension,
     [IsHyperplaneArrangement],
     A -> A!.dimension);
@@ -123,7 +132,7 @@ InstallMethod(IsReal,
 InstallMethod(LGroundSet,
     [IsGeomLattice],
     L -> L!.grGroundSet);
-    
+
 InstallMethod(LAtoms,
     [IsGeomLattice],
     L -> L!.atoms);
@@ -180,7 +189,7 @@ local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
 	od;
 
 	GraphL := Graph(Group( () ), [1..n[Length(GSet)+1]], OnPoints,function(x,y) return GraphMat[x][y]=1; end, true);
-	
+
 	return GraphL;;
 end);
 
@@ -237,7 +246,7 @@ function(R,Lo,Hn)
     # ------------------------------------------------------------
     if Lo=[] then
         return [[[1]]];;
-    fi;;    
+    fi;;
 
     # Make a copy of the lattice that we will modify
     Ln:=List(Lo, x -> List(x, ShallowCopy));;
@@ -347,7 +356,7 @@ InstallMethod( MSetInvL,
     [ IsHyperplaneArrangement ] ,
 function(A)
     local L,I,i;
-    
+
     if HasMSetInvL(A) then
         return A!.MSetInvL;
     fi;
@@ -366,7 +375,7 @@ InstallMethod( CharPoly,
     [ IsHyperplaneArrangement ],
 function(A)
     local dim,t,r,q,v,rn,An,AA,x,z,ns;
-	
+
 	r:=ShallowCopy(Roots(A));
 	q:=Size(r);
 	dim:=Dimension(A);
@@ -381,7 +390,7 @@ function(A)
 		return t^dim-t^(dim-1);
 	else
 		AA := HyperplaneArrangement(r{[2..q]});
-		An := HArrResHind(A,1);
+		An := HArrRestriction(A,1);
 	    return CharPoly(AA) - CharPoly(An);
     fi;;
 end);
@@ -452,7 +461,7 @@ function(L)
 end);
 
 ####################################################################################################
-## Direkt Computation of the Characteristic Polynomial 
+## Direkt Computation of the Characteristic Polynomial
 ## of a Lattice L
 
 InstallMethod(LCharPoly,
@@ -517,7 +526,7 @@ function(A)
 end);
 
 ####################################################################################################
-InstallMethod(LLocalizationRk, 
+InstallMethod(LLocalizationRk,
 	[IsGeomLattice, IsList, IsInt],
 function(L,mX,k)
 local gset, type, gsetLocX, Fi;
@@ -548,7 +557,7 @@ end);;
 
 InstallGlobalFunction( HArrResHvec,
 function(A,h)
-local k,Am,T,i,z;;
+local k,Am,T,i,z, type, dim;;
 
     # If h is the zero vector, return the arrangement unchanged
     if Rank([h])=0 then
@@ -582,25 +591,35 @@ local k,Am,T,i,z;;
     # Remove the i-th coordinate to obtain the restriction
     Am:=List(Am,x->Concatenation(x{[1..(i-1)]},x{[(i+1)..Dimension(A)]}));
 
+	dim := Rank(Am);;
+
     # Return the restricted hyperplane arrangement
+	# type := NewType(HyperplaneArrangementFamily,
+    #                 IsHyperplaneArrangementRep);
+
+    # return Objectify(type,
+    #     rec(
+    #         roots := Am,
+    #         dimension := ,
+	# 		deffield := HArrDefField(A)
+    #     )
+    # );
+
     return HyperplaneArrangement(Am);
 end);
 
-
-InstallGlobalFunction( HArrResHind,
+InstallMethod( HArrRestriction,
+	[IsHyperplaneArrangement, IsInt],
 function(A,k)
-
     # Restrict the arrangement A to the hyperplane indexed by k
     return HArrResHvec(A,Roots(A)[k]);;
-
 end);
 
-
-InstallGlobalFunction( HArrResX,
+InstallMethod( HArrRestriction,
+	[IsHyperplaneArrangement, IsList],
 function(A,S)
 local An,Sn;;
-
-    # If S contains vectors defining hyperplanes
+	# If S contains vectors defining hyperplanes
     if IsBound(S[1]) then
 
         # Restrict A to the first hyperplane in S
@@ -609,8 +628,12 @@ local An,Sn;;
         # Compute the remaining restriction directions
         Sn:=Roots(HArrResHvec(HyperplaneArrangement(S),S[1]));;
 
+		if Sn<>[] then
         # Continue restricting recursively
-        return HyperplaneArrangement(Roots(HArrResX(An,Sn)));;
+	        return HyperplaneArrangement(Roots(HArrRestriction(An,Sn)));;
+		else
+			return An;
+		fi;;
 
     else
 
@@ -633,7 +656,7 @@ local C;
 
     # If the nullspace is nontrivial, restrict the arrangement
 	if C<>[] then
-		return HArrResX(A,C);
+		return HArrRestriction(A,C);
 	else
         # Otherwise the arrangement is already essential
 		return A;
@@ -643,13 +666,23 @@ end);
 
 ####################################################################################################
 
+InstallMethod(LIsIsomorphic,
+	[IsGeomLattice, IsGeomLattice],
+function(LA,LB)
+local LGraphA,LGraphB;;
+    LGraphA := ShallowCopy(LGraph(LA));
+    LGraphB := ShallowCopy(LGraph(LB));
+    return IsIsomorphicGraph(LGraphA,LGraphB);
+end);
+
 InstallMethod(IsLEquiv,
 	[IsHyperplaneArrangement, IsHyperplaneArrangement],
 function(A,B)
-local LGraphA,LGraphB;;
-    LGraphA := ShallowCopy(LGraph(IntersectionLattice(A)));
-    LGraphB := ShallowCopy(LGraph(IntersectionLattice(B)));
-    return IsIsomorphicGraph(LGraphA,LGraphB);
+	return LIsIsomorphic(IntersectionLattice(A),IntersectionLattice(B));
+# local LGraphA,LGraphB;;
+#     LGraphA := ShallowCopy(LGraph(IntersectionLattice(A)));
+#     LGraphB := ShallowCopy(LGraph(IntersectionLattice(B)));
+#     return IsIsomorphicGraph(LGraphA,LGraphB);
 end);
 
 
@@ -671,22 +704,22 @@ end);
 
 InstallGlobalFunction(HypArr_wg,function(m)
 local dim,x,y;
-	
+
 	dim := Length(m[1]);
 	if dim=3 and Length(m)=2 then
 		return HypArr_wg3(m[1],m[2]);
 	#elif Length(m)<>dim-1 then
 	#	return fail;
 	fi;
-	
+
 	return List([1..dim],x->(-1)^(x+1)*Determinant(List(m,y->y{Concatenation([1..(x-1)],[(x+1)..dim])})));
-	
+
 end);
 
 
 
 ## the complex conjugation
-InstallGlobalFunction(cj, 
+InstallGlobalFunction(cj,
 function(x)
 	return ComplexConjugate(x);
 end);
@@ -701,7 +734,7 @@ end);
 
 ####################################################################################################
 ## Drawing LaTeX Pictures
-## 
+##
 ####################################################################################################
 
 # Rotating normal of a distinguished hyperplane to the z-axis
@@ -737,8 +770,8 @@ local nt,i,nv,P,r,v,v1,v2,v3,B,calpha,salpha,DD,Dnt;;
 	# swith 1 with the non-zero index
 	if i=1 then
 	P:=IdentityMat(3);;
-	elif i>3 then 
-	return fail; 
+	elif i>3 then
+	return fail;
 	else
 	P:=PermutationMat((1,i),3);;
 	fi;;
@@ -767,11 +800,11 @@ local nt,i,nv,P,r,v,v1,v2,v3,B,calpha,salpha,DD,Dnt;;
 	return Dnt*P*B*DD*(B^(-1));;
 end);
 
-InstallGlobalFunction(ctf, 
+InstallGlobalFunction(ctf,
 function(T)
 	if IsList(T) then
 		return List(T,x->ctf(x));
-	else 
+	else
 		return CCToFloat(T);
 	fi;
 end);
@@ -804,11 +837,11 @@ local A,s,ip,Hind,disthv,
 	rinf,xyinf,
 	px,py,sv,
     Mind, MarkHs;
-	
+
 	if IsList(arg) then
 		if Length(arg)=0 then
 			return fail;
-		else 
+		else
 			if IsReal(arg[1]) then
 				A:=arg[1];;
 			else
@@ -827,12 +860,12 @@ local A,s,ip,Hind,disthv,
 			elif Length(arg)=4 then
 				s:=arg[2];;
 				ip:=arg[3];;
-				Hind:=arg[4];;			
+				Hind:=arg[4];;
 			elif Length(arg)=5 then
 				s:=arg[2];;
 				ip:=arg[3];;
 				Hind:=arg[4];;
-				disthv:=arg[5];;			
+				disthv:=arg[5];;
 			elif Length(arg)=6 then
 				s:=arg[2];;
 				ip:=arg[3];;
@@ -843,16 +876,16 @@ local A,s,ip,Hind,disthv,
 			fi;
 		fi;;
 	fi;;
-	
+
 	R:=List(ShallowCopy(Roots(A)),x->RotTozMat(disthv)*x);;
 
 	# sp:="\\begin{tikzpicture}[scale=\\sc]\n";;
 	sp:="\\begin{tikzpicture}[scale=1.0]\n";;
-	
+
 	RR:=ctf(R);;
-	
+
 	r1:=4.0;;
-	
+
 	for vv in RR do
 		if AbsoluteValue(vv[1]^2 + vv[2]^2) < 0.0001 then
 			rinf:=String(FloatRound(18/17*r1,3));;
@@ -860,7 +893,7 @@ local A,s,ip,Hind,disthv,
 			#xyinf:=String(Sqrt(2.0)/2*18/17*r1+0.35);;
 			xyinf := String(FloatRound(Sqrt(2.0)/2*18/17*r1,3));;
             xyinf := FloatStringCutoff(xyinf);;
-            
+
             if Mind=1 and Position(RR,vv) in MarkHs then
 				if Hind then
 					sp:=Concatenation(sp,
@@ -884,13 +917,13 @@ local A,s,ip,Hind,disthv,
 			fi;;
 		else
 			t:=1/Sqrt( vv[1]^2 + vv[2]^2 );;
-		
+
 			v:=t*vv;;
-		
+
 			r2:=-s*v[3];;
-		
+
 			if v[2]^2*r2^2 - (r2^2 - r1^2*v[1]^2) > 0.00001 or v[1]^2*r2^2 - (r2^2 - r1^2*v[2]^2) > 0.00001 then
-				if AbsoluteValue(v[1]) > 0.0001 then 
+				if AbsoluteValue(v[1]) > 0.0001 then
 					yc1:= v[2]*r2 + Sqrt( v[2]^2*r2^2 - (r2^2 - r1^2*v[1]^2) );;
 					yc2:= v[2]*r2 - Sqrt( v[2]^2*r2^2 - (r2^2 - r1^2*v[1]^2) );;
 					xc1:= (r2 - v[2]*yc1)/v[1];
@@ -901,7 +934,7 @@ local A,s,ip,Hind,disthv,
 					yc1:= (r2 - v[1]*xc1)/v[2];
 					yc2:= (r2 - v[1]*xc2)/v[2];
 				fi;
-	
+
 				if AbsoluteValue(xc1) < 0.0001 then xc1:=0.0;; fi;;
 				if AbsoluteValue(xc2) < 0.0001 then xc2:=0.0;; fi;;
 				if AbsoluteValue(yc1) < 0.0001 then yc1:=0.0;; fi;;
@@ -924,8 +957,8 @@ local A,s,ip,Hind,disthv,
 
                 if Hind then
 					#\node at (4.,0.) {\tiny$1$};
-										
-					if AbsoluteValue(v[1]) > 0.0001 then 
+
+					if AbsoluteValue(v[1]) > 0.0001 then
 						yc1:= v[2]*r2 + Sqrt( v[2]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[1]^2) );;
 						yc2:= v[2]*r2 - Sqrt( v[2]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[1]^2) );;
 						xc1:= (r2 - v[2]*yc1)/v[1];
@@ -936,7 +969,7 @@ local A,s,ip,Hind,disthv,
 						yc1:= (r2 - v[1]*xc1)/v[2];
 						yc2:= (r2 - v[1]*xc2)/v[2];
 					fi;
-	
+
 					if AbsoluteValue(xc1) < 0.0001 then xc1:=0.0;; fi;;
 					if AbsoluteValue(xc2) < 0.0001 then xc2:=0.0;; fi;;
 					if AbsoluteValue(yc1) < 0.0001 then yc1:=0.0;; fi;;
@@ -950,7 +983,7 @@ local A,s,ip,Hind,disthv,
 					x2:=FloatStringCutoff(x2);;
 					y1:=FloatStringCutoff(y1);;
 					y2:=FloatStringCutoff(y2);;
-					
+
 					if x1>=0 then
 						sp:=Concatenation(sp,"\\node at (",x2,",",y2,") {\\small $",String(Position(RR,vv)),"$}; \n");;
 					else
@@ -961,7 +994,7 @@ local A,s,ip,Hind,disthv,
 				sp:=Concatenation(sp,"% H_",String(Position(RR,vv))," out of draw area \n");;
 			fi;
 		fi;
-		
+
 	od;
 	# sp:=Concatenation(sp, "\n");;
 	if ip then
@@ -976,13 +1009,13 @@ local A,s,ip,Hind,disthv,
 				if AbsoluteValue(s*a[1]/a[3]) < 0.0001 then px:="0.0";; fi;;
 				if AbsoluteValue(s*a[2]/a[3]) < 0.0001 then py:="0.0";; fi;;
 				sp:=Concatenation(sp, "\\fill[red] (",px,",",py,") circle[radius=2pt];  % P",String(sv)," \n");;
-			fi;	
+			fi;
 		od;;
 		sp:=Concatenation(sp, "\n");;
 	fi;
-	
+
 	sp:=Concatenation(sp, "\\end{tikzpicture}\n");;
 
 	return sp;
-	
+
 end);;

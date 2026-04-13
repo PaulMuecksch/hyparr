@@ -9,7 +9,7 @@
                                     0.26.04
   
   
-                                 April 2, 2026
+                                 April 13, 2026
   
   
                                   Paul Mücksch
@@ -63,12 +63,13 @@
       2.5-2 LIsBoolean
       2.5-3 LIsGeneric
     2.6 [33X[0;0YOperations[133X
-      2.6-1 IsLEquiv
-      2.6-2 Essentialization
+      2.6-1 LIsIsomorphic
+      2.6-2 IsLEquiv
+      2.6-3 Essentialization
+      2.6-4 HArrRestriction
+      2.6-5 HArrRestriction
     2.7 [33X[0;0YGlobal methods[133X
-      2.7-1 HArrResHind
-      2.7-2 HArrResX
-      2.7-3 DrawLatex3Arr
+      2.7-1 DrawLatex3Arr
   3 [33X[0;0YSpecial arrangements[133X
     3.1 [33X[0;0YGlobal methods[133X
       3.1-1 AGpql

@@ -130,7 +130,7 @@ local l,t;#,rk;
 	#rk:=Rank(A.roots);;
 	
 	return l*Value(CharPoly(A),[t],[-1])
-		+2*Sum(List([1..Length(Roots(A))],y->Value(CharPoly(HArrResHind(A,y)),[t],[-1])))
+		+2*Sum(List([1..Length(Roots(A))],y->Value(CharPoly(HArrRestriction(A,y)),[t],[-1])))
 		= 0;
 end);
 

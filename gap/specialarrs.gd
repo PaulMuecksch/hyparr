@@ -75,7 +75,7 @@ DeclareGlobalFunction( "ConnectedSubgraphArrG" );
 #! For $I \subseteq N$, define the hyperplane
 #! $$H_I := \ker \sum_{i \in I}x_i.$$
 #! The connected subgraph arrangement consists of hyperplanes 
-#! $\{H_I \mid \varnothing \ne I \subseteq N \text{ if $G[I]$ is connected} \}.$
+#! $\{H_I \mid \varnothing \ne I \subseteq N$ if $G[I]$ is connected $\}.$
 #! @BeginExampleSession
 #! gap> A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);
 #! <HyperplaneArrangement: 7 hyperplanes in 3-space>

@@ -99,7 +99,7 @@
 \vfill
 
 {\Huge  0.26.04 \mbox{}}\\[1cm]
-{ April 2, 2026 \mbox{}}\\[1cm]
+{ April 13, 2026 \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Paul M{\"u}cksch\\
     \mbox{}}}\\
@@ -659,8 +659,36 @@ are boolean.
 {
   
 
-\subsection{\textcolor{Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}
+\subsection{\textcolor{Chapter }{LIsIsomorphic (for IsGeomLattice,IsGeomLattice)}}
 \logpage{[ 2, 6, 1 ]}\nobreak
+\hyperdef{L}{X83FBDD9A843D6DC7}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsIsomorphic({\mdseries\slshape LA, LB})\index{LIsIsomorphic@\texttt{LIsIsomorphic}!for IsGeomLattice,IsGeomLattice}
+\label{LIsIsomorphic:for IsGeomLattice,IsGeomLattice}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Determines if the geometric lattices \mbox{\texttt{\mdseries\slshape LA}} and \mbox{\texttt{\mdseries\slshape LB}} are isomorphic. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]); B:=HyperplaneArrangement([[1,0],[1,1],[1,2]]);|
+  <HyperplaneArrangement: 3 hyperplanes in 2-space>
+  <HyperplaneArrangement: 3 hyperplanes in 2-space>
+  !gapprompt@gap>| !gapinput@LA:=IntersectionLattice(A); LB:=IntersectionLattice(B);|
+  <Geometric lattice: 3 atoms, rank 2>
+  <Geometric lattice: 3 atoms, rank 2>
+  !gapprompt@gap>| !gapinput@LIsIsomorphic(LA,LB);|
+  true
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}
+\logpage{[ 2, 6, 2 ]}\nobreak
 \hyperdef{L}{X8367DC267DCC0635}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsLEquiv({\mdseries\slshape A, B})\index{IsLEquiv@\texttt{IsLEquiv}!for IsHyperplaneArrangement,IsHyperplaneArrangement}
 \label{IsLEquiv:for IsHyperplaneArrangement,IsHyperplaneArrangement}
@@ -674,13 +702,13 @@ true or false
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);|
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@B:=AGpql(2,2,3);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@IsLEquiv(A,B);|
   false
-  !gapprompt@gap>| !gapinput@A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);|
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);|
   <HyperplaneArrangement: 6 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@IsLEquiv(A,B);|
   true
@@ -690,7 +718,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{Essentialization (for IsHyperplaneArrangement)}}
-\logpage{[ 2, 6, 2 ]}\nobreak
+\logpage{[ 2, 6, 3 ]}\nobreak
 \hyperdef{L}{X7BD35FA07804BB70}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{Essentialization({\mdseries\slshape A})\index{Essentialization@\texttt{Essentialization}!for IsHyperplaneArrangement}
 \label{Essentialization:for IsHyperplaneArrangement}
@@ -705,13 +733,43 @@ hyperplanes is the origin. If this is not the case, the function restricts the
 arrangement to a complementary subspace so that the resulting arrangement
 becomes essential. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);|
+  !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[1,1,0]]);|
   <HyperplaneArrangement: 3 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@B:=Essentialization(A); Roots(B);|
   <HyperplaneArrangement: 3 hyperplanes in 2-space>
   [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
 \end{Verbatim}
  }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsInt)}}
+\logpage{[ 2, 6, 4 ]}\nobreak
+\hyperdef{L}{X844F12CE82E65BFC}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrRestriction({\mdseries\slshape A, i})\index{HArrRestriction@\texttt{HArrRestriction}!for IsHyperplaneArrangement, IsInt}
+\label{HArrRestriction:for IsHyperplaneArrangement, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the \mbox{\texttt{\mdseries\slshape i}}\texttt{\symbol{45}}th hyperplane of \texttt{Roots(A)}. }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsList)}}
+\logpage{[ 2, 6, 5 ]}\nobreak
+\hyperdef{L}{X78D9B1217862EF28}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrRestriction({\mdseries\slshape A, S})\index{HArrRestriction@\texttt{HArrRestriction}!for IsHyperplaneArrangement, IsList}
+\label{HArrRestriction:for IsHyperplaneArrangement, IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the subspace orthogonal to the vectors in \texttt{S}. }
 
  }
 
@@ -722,38 +780,8 @@ becomes essential.
 {
   
 
-\subsection{\textcolor{Chapter }{HArrResHind}}
-\logpage{[ 2, 7, 1 ]}\nobreak
-\hyperdef{L}{X7CC338E67CE223FE}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResHind({\mdseries\slshape A, i})\index{HArrResHind@\texttt{HArrResHind}}
-\label{HArrResHind}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-A hyperplane arrangement. 
-
-
-
- Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the \mbox{\texttt{\mdseries\slshape i}}\texttt{\symbol{45}}th hyperplane of \texttt{Roots(A)}. }
-
- 
-
-\subsection{\textcolor{Chapter }{HArrResX}}
-\logpage{[ 2, 7, 2 ]}\nobreak
-\hyperdef{L}{X784AA86286AA9DD8}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrResX({\mdseries\slshape A, S})\index{HArrResX@\texttt{HArrResX}}
-\label{HArrResX}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-A hyperplane arrangement. 
-
-
-
- Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the subspace orthogonal to the vectors in \texttt{S}. }
-
- 
-
 \subsection{\textcolor{Chapter }{DrawLatex3Arr}}
-\logpage{[ 2, 7, 3 ]}\nobreak
+\logpage{[ 2, 7, 1 ]}\nobreak
 \hyperdef{L}{X82C8EAF88340865B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DrawLatex3Arr({\mdseries\slshape A[, ps[, ip[, Hind[, disthv[, MarkHs]]]]]})\index{DrawLatex3Arr@\texttt{DrawLatex3Arr}}
 \label{DrawLatex3Arr}
@@ -919,7 +947,7 @@ A hyperplane arrangement.
 
  Let $G = (N,E)$ be an undirected graph with vertex set $N = [n]$ and edge set $E$. For $I \subseteq N$, let $G[I]$ be the induced subgraph of $G$ on the set of vertices $I$. For $I \subseteq N$, define the hyperplane 
 \[H_I := \ker \sum_{i \in I}x_i.\]
- The connected subgraph arrangement consists of hyperplanes $\{H_I \mid \varnothing \ne I \subseteq N \text{ if $G[I]$ is connected} \}.$ 
+ The connected subgraph arrangement consists of hyperplanes $\{H_I \mid \varnothing \ne I \subseteq N$ if $G[I]$ is connected $\}.$ 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);|
   <HyperplaneArrangement: 7 hyperplanes in 3-space>

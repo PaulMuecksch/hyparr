@@ -214,7 +214,7 @@ local p,dim,i,j,r,AoH,AResH,tAoH,tAResH,c,expAoH,expAResH,expA,x,t;
 	
 	for i in [1..c] do
 		AoH:=Arr(r{Concatenation([1..(i-1)],[(i+1)..c])});
-		AResH := HArrResHind(A,i);
+		AResH := HArrRestriction(A,i);
 
 		expAResH := ExpArr(AResH);				
 		expAoH := ExpArr(AoH);
@@ -287,7 +287,7 @@ local AA,expAA,expA,h,n;
     n:=Length(Roots(A));
     
     for h in [1..n] do
-        AA:=HArrResHind(A,h);
+        AA:=HArrRestriction(A,h);
         expAA:=ExpArr(AA);
         if expAA<>fail then
             if IsSubMultiSet(expA,expAA) and IsDivisionallyFree(AA) then

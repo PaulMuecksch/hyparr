@@ -21,10 +21,11 @@
 \indexentry{LIsIrreducible@\texttt  {LIsIrreducible}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LIsBoolean@\texttt  {LIsBoolean}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LIsGeneric@\texttt  {LIsGeneric}!for IsGeomLattice|hyperpage}{10}
+\indexentry{LIsIsomorphic@\texttt  {LIsIsomorphic}!for IsGeomLattice,IsGeomLattice|hyperpage}{10}
 \indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsHyperplaneArrangement,IsHyperplaneArrangement|hyperpage}{10}
-\indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{10}
-\indexentry{HArrResHind@\texttt  {HArrResHind}|hyperpage}{11}
-\indexentry{HArrResX@\texttt  {HArrResX}|hyperpage}{11}
+\indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{11}
+\indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsInt|hyperpage}{11}
+\indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsList|hyperpage}{11}
 \indexentry{DrawLatex3Arr@\texttt  {DrawLatex3Arr}|hyperpage}{11}
 \indexentry{AGpql@\texttt  {AGpql}|hyperpage}{14}
 \indexentry{SsS3@\texttt  {SsS3}|hyperpage}{14}

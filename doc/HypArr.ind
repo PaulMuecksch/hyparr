@@ -30,7 +30,7 @@
   \indexspace
 
   \item \texttt  {Essentialization}
-    \subitem for IsHyperplaneArrangement, \hyperpage{10}
+    \subitem for IsHyperplaneArrangement, \hyperpage{11}
   \item \texttt  {ExpArr}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
 
@@ -56,8 +56,9 @@
     \subitem for IsHyperplaneArrangement and IsReal, \hyperpage{31}
   \item \texttt  {HArrIsSupersolvable}
     \subitem for IsHyperplaneArrangement, \hyperpage{29}
-  \item \texttt  {HArrResHind}, \hyperpage{11}
-  \item \texttt  {HArrResX}, \hyperpage{11}
+  \item \texttt  {HArrRestriction}
+    \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{11}
+    \subitem for IsHyperplaneArrangement, IsList, \hyperpage{11}
   \item \texttt  {HasSimpleSimplex}
     \subitem for IsOrientedMatroid, \hyperpage{21}
   \item \texttt  {HasSimpleSimplexRk}
@@ -103,6 +104,8 @@
     \subitem for IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsIrreducible}
     \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LIsIsomorphic}
+    \subitem for IsGeomLattice,IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsModularFlat}
     \subitem for IsGeomLattice, IsList, \hyperpage{28}
   \item \texttt  {LIsModularPair}

@@ -68,15 +68,16 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7DE8E16C7C2D387B">2.6 <span class="Heading">Operations</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8367DC267DCC0635">2.6-1 IsLEquiv</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7BD35FA07804BB70">2.6-2 Essentialization</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83FBDD9A843D6DC7">2.6-1 LIsIsomorphic</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8367DC267DCC0635">2.6-2 IsLEquiv</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7BD35FA07804BB70">2.6-3 Essentialization</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X844F12CE82E65BFC">2.6-4 HArrRestriction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X78D9B1217862EF28">2.6-5 HArrRestriction</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X80841F8D80722081">2.7 <span class="Heading">Global methods</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7CC338E67CE223FE">2.7-1 HArrResHind</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X784AA86286AA9DD8">2.7-2 HArrResX</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X82C8EAF88340865B">2.7-3 DrawLatex3Arr</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X82C8EAF88340865B">2.7-1 DrawLatex3Arr</a></span>
 </div></div>
 </div>
 
@@ -440,9 +441,30 @@ false
 
 <h4>2.6 <span class="Heading">Operations</span></h4>
 
+<p><a id="X83FBDD9A843D6DC7" name="X83FBDD9A843D6DC7"></a></p>
+
+<h5>2.6-1 LIsIsomorphic</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsIsomorphic</code>( <var class="Arg">LA</var>, <var class="Arg">LB</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines if the geometric lattices <var class="Arg">LA</var> and <var class="Arg">LB</var> are isomorphic.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]); B:=HyperplaneArrangement([[1,0],[1,1],[1,2]]);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LA:=IntersectionLattice(A); LB:=IntersectionLattice(B);</span>
+&lt;Geometric lattice: 3 atoms, rank 2&gt;
+&lt;Geometric lattice: 3 atoms, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsIsomorphic(LA,LB);</span>
+true
+</pre></div>
+
 <p><a id="X8367DC267DCC0635" name="X8367DC267DCC0635"></a></p>
 
-<h5>2.6-1 IsLEquiv</h5>
+<h5>2.6-2 IsLEquiv</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLEquiv</code>( <var class="Arg">A</var>, <var class="Arg">B</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
@@ -451,13 +473,13 @@ false
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);</span>
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:=AGpql(2,2,3);</span>
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(A,B);</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);</span>
 &lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(A,B);</span>
 true
@@ -465,7 +487,7 @@ true
 
 <p><a id="X7BD35FA07804BB70" name="X7BD35FA07804BB70"></a></p>
 
-<h5>2.6-2 Essentialization</h5>
+<h5>2.6-3 Essentialization</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Essentialization</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
@@ -474,38 +496,38 @@ true
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[1,1,0]]);</span>
 &lt;HyperplaneArrangement: 3 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">B:=Essentialization(A); Roots(B);</span>
 &lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
 [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
 </pre></div>
 
-<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
+<p><a id="X844F12CE82E65BFC" name="X844F12CE82E65BFC"></a></p>
 
-<h4>2.7 <span class="Heading">Global methods</span></h4>
+<h5>2.6-4 HArrRestriction</h5>
 
-<p><a id="X7CC338E67CE223FE" name="X7CC338E67CE223FE"></a></p>
-
-<h5>2.7-1 HArrResHind</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResHind</code>( <var class="Arg">A</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrRestriction</code>( <var class="Arg">A</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
 
 <p>Computes the <em>restriction</em> of the arrangement <var class="Arg">A</var> to the <var class="Arg">i</var>-th hyperplane of <code class="code">Roots(A)</code>.</p>
 
-<p><a id="X784AA86286AA9DD8" name="X784AA86286AA9DD8"></a></p>
+<p><a id="X78D9B1217862EF28" name="X78D9B1217862EF28"></a></p>
 
-<h5>2.7-2 HArrResX</h5>
+<h5>2.6-5 HArrRestriction</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrResX</code>( <var class="Arg">A</var>, <var class="Arg">S</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrRestriction</code>( <var class="Arg">A</var>, <var class="Arg">S</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement.</p>
 
 <p>Computes the <em>restriction</em> of the arrangement <var class="Arg">A</var> to the subspace orthogonal to the vectors in <code class="code">S</code>.</p>
 
+<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
+
+<h4>2.7 <span class="Heading">Global methods</span></h4>
+
 <p><a id="X82C8EAF88340865B" name="X82C8EAF88340865B"></a></p>
 
-<h5>2.7-3 DrawLatex3Arr</h5>
+<h5>2.7-1 DrawLatex3Arr</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DrawLatex3Arr</code>( <var class="Arg">A</var>[, <var class="Arg">ps</var>[, <var class="Arg">ip</var>[, <var class="Arg">Hind</var>[, <var class="Arg">disthv</var>[, <var class="Arg">MarkHs</var>]]]]] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A string.</p>

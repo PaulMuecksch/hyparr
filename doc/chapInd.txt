@@ -12,8 +12,8 @@
   [2XDerModProjDim[102X, for IsDerivationModule 5.1-5 
   [2XDerModule[102X, for IsHyperplaneArrangement 5.1-1 
   [2XDimension[102X, for IsHyperplaneArrangement 2.2-1 
-  [2XDrawLatex3Arr[102X 2.7-3 
-  [2XEssentialization[102X, for IsHyperplaneArrangement 2.6-2 
+  [2XDrawLatex3Arr[102X 2.7-1 
+  [2XEssentialization[102X, for IsHyperplaneArrangement 2.6-3 
   [2XExpArr[102X, for IsHyperplaneArrangement 2.2-6 
   [2XFPGroundSet[102X, for IsFacePoset 4.2-10 
   [2XFPOrder[102X, for IsFacePoset 4.2-11 
@@ -24,8 +24,8 @@
   [2XHArrIsIrreducible[102X, for IsHyperplaneArrangement 2.3-2 
   [2XHArrIsSimplicial[102X, for IsHyperplaneArrangement and IsReal 6.3-1 
   [2XHArrIsSupersolvable[102X, for IsHyperplaneArrangement 6.1-5 
-  [2XHArrResHind[102X 2.7-1 
-  [2XHArrResX[102X 2.7-2 
+  [2XHArrRestriction[102X, for IsHyperplaneArrangement, IsInt 2.6-4 
+      for IsHyperplaneArrangement, IsList 2.6-5 
   [2XHasSimpleSimplex[102X, for IsOrientedMatroid 4.3-2 
   [2XHasSimpleSimplexRk[102X, for IsOrientedMatroid, IsInt 4.4-2 
   [2XHasSimpleTriangle[102X, for IsOrientedMatroid 4.3-3 
@@ -34,7 +34,7 @@
   [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 5.2-2 
   [2XIsFormal[102X, for IsHyperplaneArrangement 6.2-1 
   [2XIsInductivelyFree[102X, for IsHyperplaneArrangement 5.2-1 
-  [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.6-1 
+  [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.6-2 
       for IsOrientedMatroid,IsOrientedMatroid 4.4-1 
   [2XIsOMEquiv[102X 4.5-3 
   [2XIsReal[102X, for IsHyperplaneArrangement 2.3-1 
@@ -46,6 +46,7 @@
   [2XLIsBoolean[102X, for IsGeomLattice 2.5-2 
   [2XLIsGeneric[102X, for IsGeomLattice 2.5-3 
   [2XLIsIrreducible[102X, for IsGeomLattice 2.5-1 
+  [2XLIsIsomorphic[102X, for IsGeomLattice,IsGeomLattice 2.6-1 
   [2XLIsModularFlat[102X, for IsGeomLattice, IsList 6.1-2 
   [2XLIsModularPair[102X, for IsGeomLattice, IsList, IsList 6.1-1 
   [2XLIsSupersolvable[102X, for IsGeomLattice 6.1-4 

@@ -29,12 +29,13 @@
 \contentsline {subsection}{\numberline {2.5.2}\textcolor {Chapter }{LIsBoolean (for IsGeomLattice)}}{9}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}\textcolor {Chapter }{LIsGeneric (for IsGeomLattice)}}{10}{subsection.2.5.3}%
 \contentsline {section}{\numberline {2.6}\textcolor {Chapter }{Operations}}{10}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}\textcolor {Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}{10}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}\textcolor {Chapter }{Essentialization (for IsHyperplaneArrangement)}}{10}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.1}\textcolor {Chapter }{LIsIsomorphic (for IsGeomLattice,IsGeomLattice)}}{10}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}\textcolor {Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}{10}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}\textcolor {Chapter }{Essentialization (for IsHyperplaneArrangement)}}{11}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}\textcolor {Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsInt)}}{11}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}\textcolor {Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsList)}}{11}{subsection.2.6.5}%
 \contentsline {section}{\numberline {2.7}\textcolor {Chapter }{Global methods}}{11}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}\textcolor {Chapter }{HArrResHind}}{11}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}\textcolor {Chapter }{HArrResX}}{11}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}\textcolor {Chapter }{DrawLatex3Arr}}{11}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.1}\textcolor {Chapter }{DrawLatex3Arr}}{11}{subsection.2.7.1}%
 \contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Special arrangements}}{14}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\textcolor {Chapter }{Global methods}}{14}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{AGpql}}{14}{subsection.3.1.1}%

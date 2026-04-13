@@ -313,7 +313,25 @@
   
   [1X2.6 [33X[0;0YOperations[133X[101X
   
-  [1X2.6-1 IsLEquiv[101X
+  [1X2.6-1 LIsIsomorphic[101X
+  
+  [33X[1;0Y[29X[2XLIsIsomorphic[102X( [3XLA[103X, [3XLB[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines if the geometric lattices [3XLA[103X and [3XLB[103X are isomorphic.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0],[0,1],[1,1]]); B:=HyperplaneArrangement([[1,0],[1,1],[1,2]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[25Xgap>[125X [27XLA:=IntersectionLattice(A); LB:=IntersectionLattice(B);[127X[104X
+    [4X[28X<Geometric lattice: 3 atoms, rank 2>[128X[104X
+    [4X[28X<Geometric lattice: 3 atoms, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XLIsIsomorphic(LA,LB);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X2.6-2 IsLEquiv[101X
   
   [33X[1;0Y[29X[2XIsLEquiv[102X( [3XA[103X, [3XB[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
@@ -322,19 +340,19 @@
   lattices.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);[127X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);[127X[104X
     [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XB:=AGpql(2,2,3);[127X[104X
     [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XIsLEquiv(A,B);[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XA:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);[127X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);[127X[104X
     [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XIsLEquiv(A,B);[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
-  [1X2.6-2 Essentialization[101X
+  [1X2.6-3 Essentialization[101X
   
   [33X[1;0Y[29X[2XEssentialization[102X( [3XA[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -346,33 +364,33 @@
   becomes essential.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=Arr([[1,0,0],[0,1,0],[1,1,0]]);[127X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement(([[1,0,0],[0,1,0],[1,1,0]]);[127X[104X
     [4X[28X<HyperplaneArrangement: 3 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XB:=Essentialization(A); Roots(B);[127X[104X
     [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
     [4X[28X[ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ][128X[104X
   [4X[32X[104X
   
+  [1X2.6-4 HArrRestriction[101X
   
-  [1X2.7 [33X[0;0YGlobal methods[133X[101X
-  
-  [1X2.7-1 HArrResHind[101X
-  
-  [33X[1;0Y[29X[2XHArrResHind[102X( [3XA[103X, [3Xi[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XHArrRestriction[102X( [3XA[103X, [3Xi[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
   
   [33X[0;0YComputes  the  [13Xrestriction[113X  of  the  arrangement [3XA[103X to the [3Xi[103X-th hyperplane of
   [10XRoots(A)[110X.[133X
   
-  [1X2.7-2 HArrResX[101X
+  [1X2.6-5 HArrRestriction[101X
   
-  [33X[1;0Y[29X[2XHArrResX[102X( [3XA[103X, [3XS[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XHArrRestriction[102X( [3XA[103X, [3XS[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
   
   [33X[0;0YComputes  the [13Xrestriction[113X of the arrangement [3XA[103X to the subspace orthogonal to
   the vectors in [10XS[110X.[133X
   
-  [1X2.7-3 DrawLatex3Arr[101X
+  
+  [1X2.7 [33X[0;0YGlobal methods[133X[101X
+  
+  [1X2.7-1 DrawLatex3Arr[101X
   
   [33X[1;0Y[29X[2XDrawLatex3Arr[102X( [3XA[103X[, [3Xps[103X[, [3Xip[103X[, [3XHind[103X[, [3Xdisthv[103X[, [3XMarkHs[103X]]]]] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA string.[133X

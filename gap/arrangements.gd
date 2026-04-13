@@ -351,6 +351,25 @@ DeclareProperty("LIsGeneric", IsGeomLattice );
 ##
 #################################
 
+
+#! @Arguments LA, LB
+#! @Returns true or false
+#! @Description
+#! Determines if the geometric lattices <A>LA</A> and <A>LB</A> 
+#! are isomorphic.
+#!
+#! @BeginExampleSession
+#! gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]); B:=HyperplaneArrangement([[1,0],[1,1],[1,2]]);
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! gap> LA:=IntersectionLattice(A); LB:=IntersectionLattice(B);
+#! <Geometric lattice: 3 atoms, rank 2>
+#! <Geometric lattice: 3 atoms, rank 2>
+#! gap> LIsIsomorphic(LA,LB);
+#! true
+#! @EndExampleSession
+DeclareOperation("LIsIsomorphic", [IsGeomLattice,IsGeomLattice]);
+
 #! @Arguments A, B
 #! @Returns true or false
 #! @Description
@@ -358,13 +377,13 @@ DeclareProperty("LIsGeneric", IsGeomLattice );
 #! have isomorphic intersection lattices.
 #!
 #! @BeginExampleSession
-#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
+#! gap> A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,3]]);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> B:=AGpql(2,2,3);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> IsLEquiv(A,B);
 #! false
-#! gap> A:=Arr([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
+#! gap> A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
 #! gap> IsLEquiv(A,B);
 #! true
@@ -382,7 +401,7 @@ DeclareOperation("IsLEquiv", [IsHyperplaneArrangement,IsHyperplaneArrangement]);
 #! restricts the arrangement to a complementary subspace so that the
 #! resulting arrangement becomes essential.
 #! @BeginExampleSession
-#! gap> A:=Arr([[1,0,0],[0,1,0],[1,1,0]]);
+#! gap> A:=HyperplaneArrangement(([[1,0,0],[0,1,0],[1,1,0]]);
 #! <HyperplaneArrangement: 3 hyperplanes in 3-space>
 #! gap> B:=Essentialization(A); Roots(B);
 #! <HyperplaneArrangement: 3 hyperplanes in 2-space>
@@ -391,12 +410,6 @@ DeclareOperation("IsLEquiv", [IsHyperplaneArrangement,IsHyperplaneArrangement]);
 DeclareOperation( "Essentialization", [IsHyperplaneArrangement]);
 
 DeclareOperation( "LLocalizationRk", [IsGeomLattice, IsList, IsInt]);
-
-#################################
-##
-#! @Section Global methods
-##
-#################################
 
 # some auxillary functions
 DeclareGlobalFunction( "HypArr_PWLinInd" );
@@ -415,20 +428,29 @@ DeclareGlobalFunction("FloatStringCutoff");
 
 DeclareGlobalFunction( "HArrResHvec" );
 
+# @BeginGroup Restrictions of arrangements
+
 #! @Arguments A, i
 #! @Returns A hyperplane arrangement.
 #! @Description
 #! Computes the <E>restriction</E> of the arrangement <A>A</A> to the
 #!  <A>i</A>-th hyperplane of <C>Roots(A)</C>.
-DeclareGlobalFunction( "HArrResHind" );
+DeclareOperation( "HArrRestriction", [IsHyperplaneArrangement, IsInt]  );
 
 #! @Arguments A, S
 #! @Returns A hyperplane arrangement.
 #! @Description
 #! Computes the <E>restriction</E> of the arrangement <A>A</A> to the
 #! subspace orthogonal to the vectors in <C>S</C>.
-DeclareGlobalFunction( "HArrResX" );
+DeclareOperation( "HArrRestriction", [IsHyperplaneArrangement, IsList] );
 
+# @EndGroup
+
+#################################
+##
+#! @Section Global methods
+##
+#################################
 
 #! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
 #! @Returns A string.
