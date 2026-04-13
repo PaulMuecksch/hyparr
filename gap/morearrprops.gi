@@ -365,6 +365,140 @@ local BCpx_g,InEqualities,VsBCpx,v,Bc,c,f,
 end);
 
 
+######################################
+# Factored Arrangements
+######################################
+
+InstallGlobalFunction(PartsL2XsH,
+function(L2,h,lred)
+local L2XsH,ListParts,PP;
+	L2XsH := List(L2{Positions(List(L2,x->h in x),true)},x->Difference(x,[h]));
+	ListParts:=[];
+	for PP in PartitionsSet(Set(L2XsH),lred) do
+		Add(ListParts,List(PP,x->Union(x)));
+	od;;
+	# ListSubParts:=List(Cartesian(List([1..Length(L2XsH)],x->[1..lred])),c->List([1..Length(L2XsH)],i->OneBlockPart(L2XsH[i],c[i],lred)));;
+	return ListParts;
+end);
+
+InstallGlobalFunction(FindAllL2Parts,
+function(A)
+local L2,n,h,Parts,SubParts,SubPart,P,lred,expA,expP;
+	L2:=LkFlats(IntersectionLattice(A))(2);
+	n:=Length(Roots(A));
+	expA:=ExpArr(A);
+	if expA=fail then
+		return fail;
+	fi;;
+	lred := Length(expA)-1;
+	Parts := [];;
+	for h in [1..n] do
+		for SubPart in PartsL2XsH(L2,h,lred) do
+			P:=Concatenation([[h]],SubPart);
+		# for SubParts in AllSubPartsL2XsH(L2,h,lred) do
+		# 	P:=Concatenation([[h]],UnionOfSubParts(SubParts));;
+			expP:=List(P,x->Length(x));
+			Sort(expP);
+			if expP=expA then
+				Add(Parts,P);
+			fi;
+		od;
+	od;
+
+	return Parts;
+end);
+
+InstallGlobalFunction(SectionsPart,
+function(Pr)
+	return Cartesian(Pr);;
+end);
+
+InstallGlobalFunction(InducedPartLoc,
+function(m,P)
+	return Difference(List(P,B->IntersectionSet(B,m)),[[]]);
+end);
+
+InstallGlobalFunction(IsIndependentPart,
+function(PH)
+local S;
+	for S in SectionsPart(PH) do
+		if Rank(S)<>Length(S) then
+			return false;;
+		fi;;
+	od;;
+	return true;;
+end);
+
+InstallGlobalFunction(IsFactPart,
+function(A,P)
+local Pr,B,Hs,i,L,m;
+	if not(1 in List(P,B->Length(B))) then
+		return false;
+	fi;
+	
+# 	Test independent condition
+	Pr:=List(P,B->List(B,h->Roots(A)[h]));
+	for Hs in SectionsPart(Pr) do
+		if Rank(Hs)<>Length(Hs) then
+#             Print(List(Hs,x->Positions(A.roots,x))," section not independent.\n");;
+			return false;
+		fi;;
+	od;;
+	
+# 	Test singletion condition
+	L:=LGroundSet(IntersectionLattice(A));;
+	for m in Concatenation(L{[2..Length(L)-1]}) do
+		if not(1 in List(InducedPartLoc(m,P),B->Length(B))) then
+#             Print(m," violates singleton condition.\n");;
+			return false;
+		fi;;
+	od;;
+	return true;
+end);
+
+InstallMethod(HArrFactorizations,
+    [IsHyperplaneArrangement],
+function(A)
+local n, expA,P,FPs;;
+	expA := ExpArr(A);;
+	if expA=fail then
+		return false;
+	fi;;
+	
+	n:=Length(Roots(A));;
+	FPs:=[];;
+	# return true in List(EnumeratePartitions([1..n],expA),P->IsFactPart(A,P));;
+	for P in FindAllL2Parts(A) do
+		if IsFactPart(A,P) then
+			# return [P,true];
+			Add(FPs,P);
+		fi;
+	od;
+
+	return FPs;;
+end);
+
+InstallMethod(HArrIsFactored,
+    [IsHyperplaneArrangement],
+function(A)
+local n, expA,P,FPs;;
+	expA := ExpArr(A);;
+	if expA=fail then
+		return false;
+	fi;;
+	
+	n:=Length(Roots(A));;
+	FPs:=[];;
+	# return true in List(EnumeratePartitions([1..n],expA),P->IsFactPart(A,P));;
+	for P in FindAllL2Parts(A) do
+		if IsFactPart(A,P) then
+			return P;
+		fi;
+	od;
+
+	return fail;;
+end);
+
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
 ##  the Free Software Foundation, either version 3 of the License, or

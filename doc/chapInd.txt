@@ -19,6 +19,8 @@
   [2XFPOrder[102X, for IsFacePoset 4.2-11 
   [2XFPtoCWCpx[102X 7.1-3 
   [2XHArrDefField[102X, for IsHyperplaneArrangement 2.2-3 
+  [2XHArrFactorizations[102X, for IsHyperplaneArrangement 6.5-1 
+  [2XHArrIsFactored[102X, for IsHyperplaneArrangement 6.5-2 
   [2XHArrIsFree[102X, for IsHyperplaneArrangement 5.1-7 
   [2XHArrIsGeneric[102X, for IsHyperplaneArrangement 2.3-3 
   [2XHArrIsIrreducible[102X, for IsHyperplaneArrangement 2.3-2 

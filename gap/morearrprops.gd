@@ -260,6 +260,54 @@ DeclareOperation("OMSupportsFalkWeights",[IsOrientedMatroid, IsInt]);;
 ##
 #################################
 
+DeclareGlobalFunction("PartsL2XsH");
+DeclareGlobalFunction("FindAllL2Parts");
+DeclareGlobalFunction("IsIndependentPart");
+DeclareGlobalFunction("SectionsPart");
+DeclareGlobalFunction("InducedPartLoc");
+DeclareGlobalFunction("IsFactPart");
+
+#! @Arguments A
+#! @Returns A list
+#! @Description
+#!  Computes a list of all factorizations of <A>A</A> as
+#!  partitions of [1..|<A>A</A>|].
+#! @BeginExampleSession
+#! gap> A:=AGpql(2,1,3);
+#! <HyperplaneArrangement: 9 hyperplanes in 3-space>
+#! gap> HArrFindFactorizations(A);
+#! [ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+#!   [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
+#!   [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+#!   [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], 
+#!   [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], 
+#!   [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], 
+#!   [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+#!   [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], 
+#!   [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], 
+#!   [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
+#!   [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
+#!   [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
+#! @EndExampleSession
+DeclareOperation("HArrFactorizations",[IsHyperplaneArrangement]);
+
+
+#! @Arguments A
+#! @Returns A list or fail
+#! @Description
+#!  Determines if <A>A</A> 
+#!  is factored and if so returns some factorization.
+#! @BeginExampleSession
+#! gap> A:=AGpql(2,1,3);
+#! <HyperplaneArrangement: 9 hyperplanes in 3-space>
+#! gap> HArrIsFactored(A);
+#! [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ]
+#! gap> A:=AGpql(2,2,4);
+#! <HyperplaneArrangement: 12 hyperplanes in 4-space>
+#! gap> HArrIsFactored(A);
+#! fail
+#! @EndExampleSession
+DeclareOperation("HArrIsFactored",[IsHyperplaneArrangement]);
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

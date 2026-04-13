@@ -73,9 +73,11 @@
 \indexentry{HArrIsSimplicial@\texttt  {HArrIsSimplicial}!for IsHyperplaneArrangement and IsReal|hyperpage}{31}
 \indexentry{OMBoundedCpx@\texttt  {OMBoundedCpx}!for IsOrientedMatroid, IsInt|hyperpage}{31}
 \indexentry{OMSupportsFalkWeights@\texttt  {OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt|hyperpage}{31}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{33}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{33}
-\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{34}
-\indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{35}
-\indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{35}
-\indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{35}
+\indexentry{HArrFactorizations@\texttt  {HArrFactorizations}!for IsHyperplaneArrangement|hyperpage}{32}
+\indexentry{HArrIsFactored@\texttt  {HArrIsFactored}!for IsHyperplaneArrangement|hyperpage}{32}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{34}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{34}
+\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{35}
+\indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{36}
+\indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{36}
+\indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{36}
