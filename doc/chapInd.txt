@@ -85,6 +85,7 @@
   [2XTopePoset[102X, for IsOrientedMatroid, IsList 8.1-1 
   [2XTPBaseTope[102X, for IsTopePoset 8.2-2 
   [2XTPGroundSet[102X, for IsTopePoset 8.2-1 
+  [2XTPRankPoly[102X, for IsTopePoset 8.2-3 
   
   
   -------------------------------------------------------

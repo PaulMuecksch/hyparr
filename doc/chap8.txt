@@ -13,7 +13,12 @@
   base tope [3XBTope[103X (given as sign vector).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XO:=OrientedMatroid([[1,0],[0,1],[1,1]]); [127X[104X
+    [4X[25Xgap>[125X [27XO:=OM([[1,0],[0,1]]); Ts:=OMCovectors(O)[1]; T:=Ts[1];[127X[104X
+    [4X[28X<OrientedMatroid: 2 elements, rank 2>[128X[104X
+    [4X[28X[ [ -1, -1 ], [ 1, 1 ], [ -1, 1 ], [ 1, -1 ] ][128X[104X
+    [4X[28X[ -1, -1 ][128X[104X
+    [4X[25Xgap>[125X [27XTP:=TopePoset(O,T);[127X[104X
+    [4X[28X<TopePoset with 3 topes>[128X[104X
   [4X[32X[104X
   
   
@@ -27,10 +32,32 @@
   [33X[0;0YThe  ground  set  of  the tope poset [3XTP[103X. It is a list of list, recording the
   separating elements of the given tope from the base tope.[133X
   
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTPGroundSet(TP);[127X[104X
+    [4X[28X[ [ [  ] ], [ [ 1 ], [ 2 ] ], [ [ 1, 2 ] ] ][128X[104X
+  [4X[32X[104X
+  
   [1X8.2-2 TPBaseTope[101X
   
   [33X[1;0Y[29X[2XTPBaseTope[102X( [3XTP[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA sign vector.[133X
   
   [33X[0;0YReturns the bast tope of the tope poset [3XTP[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTPBaseTope(TP);[127X[104X
+    [4X[28X[ -1, -1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X8.2-3 TPRankPoly[101X
+  
+  [33X[1;0Y[29X[2XTPRankPoly[102X( [3XTP[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA polynomial.[133X
+  
+  [33X[0;0YReturns the rank generating polynomial of the tope poset [3XTP[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XTPRankPoly(TP);[127X[104X
+    [4X[28Xt^2+2*t+1[128X[104X
+  [4X[32X[104X
   

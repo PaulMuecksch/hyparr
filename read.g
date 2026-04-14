@@ -16,4 +16,5 @@ ReadPackage("hyparr","gap/orientedmatroid.gi");
 ReadPackage("hyparr","gap/milnorfiber.gi");
 ReadPackage("hyparr","gap/freearrs.gi");
 ReadPackage("hyparr","gap/morearrprops.gi");
+ReadPackage("hyparr","gap/topeposet.gi");
 

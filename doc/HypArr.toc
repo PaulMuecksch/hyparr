@@ -112,5 +112,6 @@
 \contentsline {section}{\numberline {8.2}\textcolor {Chapter }{Attributes}}{36}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}\textcolor {Chapter }{TPGroundSet (for IsTopePoset)}}{36}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}\textcolor {Chapter }{TPBaseTope (for IsTopePoset)}}{36}{subsection.8.2.2}%
-\contentsline {chapter}{References}{37}{chapter*.2}%
-\contentsline {chapter}{Index}{38}{section*.3}%
+\contentsline {subsection}{\numberline {8.2.3}\textcolor {Chapter }{TPRankPoly (for IsTopePoset)}}{37}{subsection.8.2.3}%
+\contentsline {chapter}{References}{38}{chapter*.2}%
+\contentsline {chapter}{Index}{39}{section*.3}%

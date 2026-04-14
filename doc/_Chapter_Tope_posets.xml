@@ -16,7 +16,12 @@
  with respect to the base tope <A>BTope</A> (given as sign vector).
 <P/>
 <Example><![CDATA[
-gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]); 
+gap> O:=OM([[1,0],[0,1]]); Ts:=OMCovectors(O)[1]; T:=Ts[1];
+<OrientedMatroid: 2 elements, rank 2>
+[ [ -1, -1 ], [ 1, 1 ], [ -1, 1 ], [ 1, -1 ] ]
+[ -1, -1 ]
+gap> TP:=TopePoset(O,T);
+<TopePoset with 3 topes>
 ]]></Example>
 
 
@@ -38,6 +43,12 @@ gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);
   The ground set of the tope poset <A>TP</A>.
   It is a list of list, recording the separating elements
   of the given tope from the base tope.
+<Example><![CDATA[
+gap> TPGroundSet(TP);
+[ [ [  ] ], [ [ 1 ], [ 2 ] ], [ [ 1, 2 ] ] ]
+]]></Example>
+
+
  </Description>
 </ManSection>
 
@@ -48,7 +59,28 @@ gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);
 </Returns>
  <Description>
    Returns the bast tope of the tope poset <A>TP</A>.
-<P/>
+<Example><![CDATA[
+gap> TPBaseTope(TP);
+[ -1, -1 ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="TP" Name="TPRankPoly" Label="for IsTopePoset"/>
+ <Returns>A polynomial.
+</Returns>
+ <Description>
+   Returns the rank generating polynomial of the tope poset <A>TP</A>.
+<Example><![CDATA[
+gap> TPRankPoly(TP);
+t^2+2*t+1
+]]></Example>
+
+
  </Description>
 </ManSection>
 

@@ -191,5 +191,7 @@
     \subitem for IsTopePoset, \hyperpage{36}
   \item \texttt  {TPGroundSet}
     \subitem for IsTopePoset, \hyperpage{36}
+  \item \texttt  {TPRankPoly}
+    \subitem for IsTopePoset, \hyperpage{37}
 
 \end{theindex}

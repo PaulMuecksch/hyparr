@@ -10,7 +10,7 @@ DeclareCategory("IsTopePoset", IsComponentObjectRep and IsAttributeStoringRep );
 DeclareRepresentation(
     "IsTopePosetRep", 
     IsTopePoset,
-    ["grgroundset","btope"]
+    ["grgroundset","bt"]
 );
 
 
@@ -28,7 +28,12 @@ DeclareRepresentation(
 #! with respect to the base tope <A>BTope</A> (given as sign vector).
 #!
 #! @BeginExampleSession
-#! gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]); 
+#! gap> O:=OM([[1,0],[0,1]]); Ts:=OMCovectors(O)[1]; T:=Ts[1];
+#! <OrientedMatroid: 2 elements, rank 2>
+#! [ [ -1, -1 ], [ 1, 1 ], [ -1, 1 ], [ 1, -1 ] ]
+#! [ -1, -1 ]
+#! gap> TP:=TopePoset(O,T);
+#! <TopePoset with 3 topes>
 #! @EndExampleSession
 DeclareOperation("TopePoset", [IsOrientedMatroid, IsList]);
 
@@ -47,6 +52,10 @@ DeclareOperation("TopePoset", [IsOrientedMatroid, IsList]);
 #!  The ground set of the tope poset <A>TP</A>.
 #!  It is a list of list, recording the separating elements
 #!  of the given tope from the base tope.
+#! @BeginExampleSession
+#! gap> TPGroundSet(TP);
+#! [ [ [  ] ], [ [ 1 ], [ 2 ] ], [ [ 1, 2 ] ] ]
+#! @EndExampleSession
 DeclareAttribute("TPGroundSet", IsTopePoset);
 
 
@@ -54,8 +63,21 @@ DeclareAttribute("TPGroundSet", IsTopePoset);
 #! @Returns A sign vector.
 #! @Description
 #!   Returns the bast tope of the tope poset <A>TP</A>.
-#!
+#! @BeginExampleSession
+#! gap> TPBaseTope(TP);
+#! [ -1, -1 ]
+#! @EndExampleSession
 DeclareAttribute("TPBaseTope", IsTopePoset);
+
+#! @Arguments TP
+#! @Returns A polynomial.
+#! @Description
+#!   Returns the rank generating polynomial of the tope poset <A>TP</A>.
+#! @BeginExampleSession
+#! gap> TPRankPoly(TP);
+#! t^2+2*t+1
+#! @EndExampleSession
+DeclareAttribute("TPRankPoly",IsTopePoset);
 
 
 #################################
@@ -65,10 +87,17 @@ DeclareAttribute("TPBaseTope", IsTopePoset);
 #################################
 
 
+#################################
+##
+# @Section Operations
+##
+#################################
+
+
 ##################################################################
 
 # Declare display function for FacePoset objects
-DeclareOperation("ViewObject", [IsFacePoset]);
+DeclareOperation("ViewObject", [IsTopePoset]);
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

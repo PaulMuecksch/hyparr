@@ -2372,7 +2372,12 @@ A TopePoset object
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]); |
+  !gapprompt@gap>| !gapinput@O:=OM([[1,0],[0,1]]); Ts:=OMCovectors(O)[1]; T:=Ts[1];|
+  <OrientedMatroid: 2 elements, rank 2>
+  [ [ -1, -1 ], [ 1, 1 ], [ -1, 1 ], [ 1, -1 ] ]
+  [ -1, -1 ]
+  !gapprompt@gap>| !gapinput@TP:=TopePoset(O,T);|
+  <TopePoset with 3 topes>
 \end{Verbatim}
  }
 
@@ -2397,7 +2402,12 @@ A list of lists.
 
 
  The ground set of the tope poset \mbox{\texttt{\mdseries\slshape TP}}. It is a list of list, recording the separating elements of the given tope
-from the base tope. }
+from the base tope. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@TPGroundSet(TP);|
+  [ [ [  ] ], [ [ 1 ], [ 2 ] ], [ [ 1, 2 ] ] ]
+\end{Verbatim}
+ }
 
  
 
@@ -2413,7 +2423,30 @@ A sign vector.
 
 
  Returns the bast tope of the tope poset \mbox{\texttt{\mdseries\slshape TP}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@TPBaseTope(TP);|
+  [ -1, -1 ]
+\end{Verbatim}
+ }
 
+ 
+
+\subsection{\textcolor{Chapter }{TPRankPoly (for IsTopePoset)}}
+\logpage{[ 8, 2, 3 ]}\nobreak
+\hyperdef{L}{X8258DD9D78DDA4C6}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TPRankPoly({\mdseries\slshape TP})\index{TPRankPoly@\texttt{TPRankPoly}!for IsTopePoset}
+\label{TPRankPoly:for IsTopePoset}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A polynomial. 
+
+
+
+ Returns the rank generating polynomial of the tope poset \mbox{\texttt{\mdseries\slshape TP}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@TPRankPoly(TP);|
+  t^2+2*t+1
+\end{Verbatim}
  }
 
  }

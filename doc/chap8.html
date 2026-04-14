@@ -32,6 +32,7 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8.html#X81854C4D816A501A">8.2-1 TPGroundSet</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8.html#X82CEA0EB7B0AF294">8.2-2 TPBaseTope</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap8.html#X8258DD9D78DDA4C6">8.2-3 TPRankPoly</a></span>
 </div></div>
 </div>
 
@@ -52,7 +53,12 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid([[1,0],[0,1],[1,1]]); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OM([[1,0],[0,1]]); Ts:=OMCovectors(O)[1]; T:=Ts[1];</span>
+&lt;OrientedMatroid: 2 elements, rank 2&gt;
+[ [ -1, -1 ], [ 1, 1 ], [ -1, 1 ], [ 1, -1 ] ]
+[ -1, -1 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TP:=TopePoset(O,T);</span>
+&lt;TopePoset with 3 topes&gt;
 </pre></div>
 
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
@@ -68,6 +74,12 @@
 
 <p>The ground set of the tope poset <var class="Arg">TP</var>. It is a list of list, recording the separating elements of the given tope from the base tope.</p>
 
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TPGroundSet(TP);</span>
+[ [ [  ] ], [ [ 1 ], [ 2 ] ], [ [ 1, 2 ] ] ]
+</pre></div>
+
 <p><a id="X82CEA0EB7B0AF294" name="X82CEA0EB7B0AF294"></a></p>
 
 <h5>8.2-2 TPBaseTope</h5>
@@ -76,6 +88,27 @@
 <p>Returns: A sign vector.</p>
 
 <p>Returns the bast tope of the tope poset <var class="Arg">TP</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TPBaseTope(TP);</span>
+[ -1, -1 ]
+</pre></div>
+
+<p><a id="X8258DD9D78DDA4C6" name="X8258DD9D78DDA4C6"></a></p>
+
+<h5>8.2-3 TPRankPoly</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TPRankPoly</code>( <var class="Arg">TP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A polynomial.</p>
+
+<p>Returns the rank generating polynomial of the tope poset <var class="Arg">TP</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TPRankPoly(TP);</span>
+t^2+2*t+1
+</pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap7.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>

@@ -19,7 +19,7 @@ AutoDoc( rec(
             # autodoc := true
             autodoc := rec(
             files := ["gap/arrangements.gd", "gap/specialarrs.gd", "gap/orientedmatroid.gd", 
-                "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd"] 
+                "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd","gap/topeposet.gd"] 
                 )
             ) );
 QUIT;

@@ -22,9 +22,9 @@ InstallMethod(TPGroundSet,
     [ IsTopePoset ],
     TP -> TP!.grgroundset);
 
-InstallMethod(TPBastTope,
+InstallMethod(TPBaseTope,
     [ IsTopePoset ],
-    TP -> TP!.btope);
+    TP -> TP!.bt);
 
 InstallMethod(TopePoset,
     [ IsOrientedMatroid, IsList ],
@@ -32,20 +32,28 @@ function(OM,BTope)
 local Ps, gset, OF, type, Topes, n;
     Topes := OMCovectors(OM)[1];;
     n := Length(BTope);;
-    Ps := List(Topes,T->SeparatingSet(BTope));;
+    Ps := List(Topes,T->SeparatingSet(BTope,T));;
     Sort(Ps);;
-    gest:=Concatenation(List([0..n],x->Ps{Positions(List(Ps,y->Length(y)),x)}));;
+    gset:=List([0..n],x->Ps{Positions(List(Ps,y->Length(y)),x)});
     
-    type := NewType(TopePosetFamily,
-                    IsTopePosetRep);
+    type := NewType(TopePosetFamily,IsTopePosetRep);
 
     return Objectify(type,
         rec(
             grgroundset := gset,
-			bt := BaseTope
+			bt := BTope
         )
     );
 end);;
+
+InstallMethod(TPRankPoly,
+    [IsTopePoset],
+function(TP)
+local gset,t;
+    t:=X(Rationals,"t");
+    gset := TPGroundSet(TP);;
+    return Sum(List([1..Length(gset)],k->Length(gset[k])*t^(k-1)));
+end);
 
 
 ##  This program is free software: you can redistribute it and/or modify

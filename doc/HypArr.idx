@@ -81,3 +81,4 @@
 \indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{36}
 \indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{36}
 \indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{36}
+\indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{37}

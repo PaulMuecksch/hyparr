@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  13 APR 2026 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  14 APR 2026 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,20 +636,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2384 \hyperdef{L}{X7C701DBF7BAE649A}{}
-                                         (./HypArr.bbl (./HypArr.brf)
+l.2389 \hyperdef{L}{X7C701DBF7BAE649A}{}
+                                         [36
+
+] (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [36
 
-]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
  []
 
-) [37
+) [38
 
 ] (./HypArr.ind
 Underfull \hbox (badness 10000) in paragraph at lines 86--88
@@ -661,10 +662,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--88
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[38
+[39
 
 
-] [39]) (./HypArr.aux)
+] [40]) (./HypArr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -675,10 +676,10 @@ Package rerunfilecheck Info: File `HypArr.brf' has not changed.
 (rerunfilecheck)             Checksum: CCD0CBDB8EC0236D6DCCC53CB6EA2C5A;657.
  ) 
 Here is how much of TeX's memory you used:
- 12120 strings out of 474222
- 188719 string characters out of 5748734
+ 12124 strings out of 474222
+ 188789 string characters out of 5748734
  1938975 words of memory out of 5000000
- 33881 multiletter control sequences out of 15000+600000
+ 33882 multiletter control sequences out of 15000+600000
  623764 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,7n,93p,491b,823s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -697,10 +698,10 @@ ymbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (39 pages, 321499 bytes).
+Output written on HypArr.pdf (40 pages, 322853 bytes).
 PDF statistics:
- 826 PDF objects out of 1000 (max. 8388607)
- 741 compressed objects within 8 object streams
- 280 named destinations out of 1000 (max. 500000)
+ 834 PDF objects out of 1000 (max. 8388607)
+ 748 compressed objects within 8 object streams
+ 283 named destinations out of 1000 (max. 500000)
  270 words of extra memory for PDF output out of 10000 (max. 10000000)
 
