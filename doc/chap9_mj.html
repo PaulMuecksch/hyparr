@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<title>GAP (HypArr) - Chapter 9: Visualization of real 3-arrangements</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap9"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap9.html">[MathJax off]</a></p>
+<p><a id="X867FB7CC79AC1DED" name="X867FB7CC79AC1DED"></a></p>
+<div class="ChapSects"><a href="chap9_mj.html#X867FB7CC79AC1DED">9 <span class="Heading">Visualization of real 3-arrangements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap9_mj.html#X80841F8D80722081">9.1 <span class="Heading">Global methods</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9_mj.html#X78621314826E390B">9.1-1 LaTeXDrawProjPicture</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9_mj.html#X786A445B7D28CCF6">9.1-2 LaTeXDrawSpherePicture</a></span>
+</div></div>
+</div>
+
+<h3>9 <span class="Heading">Visualization of real 3-arrangements</span></h3>
+
+<p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>
+
+<h4>9.1 <span class="Heading">Global methods</span></h4>
+
+<p><a id="X78621314826E390B" name="X78621314826E390B"></a></p>
+
+<h5>9.1-1 LaTeXDrawProjPicture</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LaTeXDrawProjPicture</code>( <var class="Arg">A</var>[, <var class="Arg">ps</var>[, <var class="Arg">ip</var>[, <var class="Arg">Hind</var>[, <var class="Arg">disthv</var>[, <var class="Arg">MarkHs</var>]]]]] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A string.</p>
+
+<p>Generates LaTeX tikz-code for a nice projective picture of the real 3-arrangement. If <span class="SimpleMath">\(x,y,z\)</span> are the coordinates, by default, this is the 2-dim affine arrangement obtained by intersecting <var class="Arg">A</var> with the plane <span class="SimpleMath">\(z=1\)</span>.</p>
+
+<p>The optional parameters are:</p>
+
+
+<ul>
+<li><p><var class="Arg">ps</var> a scaling factor,</p>
+
+</li>
+<li><p><var class="Arg">ip</var> intersection points are drawn,</p>
+
+</li>
+<li><p><var class="Arg">Hind</var> labels for the hyperplanes are added,</p>
+
+</li>
+<li><p><var class="Arg">disthv</var> a vector giving the normal of the plane whith which to intersect <var class="Arg">A</var>,</p>
+
+</li>
+<li><p><var class="Arg">MarkHs</var> a list of indices of hyperplanes of <var class="Arg">A</var>, these are drawn in another color.</p>
+
+</li>
+</ul>
+<p>The example below will look as follows (only in pdf).</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(LaTeXDrawProjPicture(A));</span>
+\begin{tikzpicture}[scale=1.0]
+\draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
+\draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
+\draw (1.,3.873) -- (1.,-3.873);  % H_4 
+\draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
+\draw (3.873,1.) -- (-3.873,1.);  % H_6 
+\end{tikzpicture}
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(LaTeXDrawProjPicture(A,1/2,true,true,[1,1,1],[1,2]));</span>
+\begin{tikzpicture}[scale=1.0]
+\draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 
+\node at (1.975,-3.707) {\small $1$}; 
+\draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+\node at (-2.970,-2.970) {\small $2$}; 
+\draw (3.361,2.169) -- (-3.995,0.197);  % H_3 
+\node at (-4.198,0.143) {\small $3$}; 
+\draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 
+\node at (1.087,-4.057) {\small $4$}; 
+\draw (2.169,3.361) -- (0.197,-3.995);  % H_5 
+\node at (0.143,-4.198) {\small $5$}; 
+\draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 
+\node at (4.057,-1.087) {\small $6$}; 
+
+\fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] 
+\fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] 
+\fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] 
+\fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] 
+\fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
+\fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] 
+\fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] 
+
+\end{tikzpicture}
+
+</pre></div>
+
+<p><a id="X786A445B7D28CCF6" name="X786A445B7D28CCF6"></a></p>
+
+<h5>9.1-2 LaTeXDrawSpherePicture</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LaTeXDrawSpherePicture</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A string.</p>
+
+<p>Generates LaTeX tikz-code for the intersection of a real 3-arrangement with the unit sphere. To compile the LaTeX-code the .sty-file "graphonsphere.sty" (form /doc/LaTeX_Examples) needs to be in the same folder and added via "\usepackage{graphonsphere}".</p>
+
+<p>The example below will look as follows (only in pdf).</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
+&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(LaTeXDrawSpherePicture(A));</span>
+\tdplotsetmaincoords{63}{63}
+\begin{tikzpicture}[scale=3,tdplot_main_coords]
+
+\draw[ball color = gray!40, opacity = 0.2] (0,0,0) circle (1cm);
+
+\def\OMcolor{blue!75!black}
+{\color{\OMcolor}
+% the vertices of the OM-cpx
+\foreach \i/\vx/\vy/\vz in {
+1/0./0./1., 
+2/-0.579/0.579/0.579, 
+3/-0.579/-0.579/0.579, 
+4/0.579/-0.579/0.579, 
+5/0.579/0.579/0.579, 
+6/0./1./0., 
+7/1./0./0., 
+8/0./0./-1., 
+9/0.579/-0.579/-0.579, 
+10/0.579/0.579/-0.579, 
+11/-0.579/0.579/-0.579, 
+12/-0.579/-0.579/-0.579, 
+13/0./-1./0., 
+14/-1./0./0. 
+}{
+\node (\i) at (\vx,\vy,\vz) {};
+\filldraw[color=\OMcolor] (\i) circle[radius=0.5pt];
+}
+%		
+% the edges of the OM-cpx
+\foreach \ax/\ay/\az/\bx/\by/\bz in {
+0./0./1./  -0.579/0.579/0.579, %[ 1, 2 ] 
+0./0./1./  -0.579/-0.579/0.579, %[ 1, 3 ] 
+0./0./1./  0.579/-0.579/0.579, %[ 1, 4 ] 
+0./0./1./  0.579/0.579/0.579, %[ 1, 5 ] 
+-0.579/0.579/0.579/  -0.579/-0.579/0.579, %[ 2, 3 ] 
+-0.579/0.579/0.579/  0.579/0.579/0.579, %[ 2, 5 ] 
+-0.579/0.579/0.579/  0./1./0., %[ 2, 6 ] 
+-0.579/0.579/0.579/  -0.579/0.579/-0.579, %[ 2, 11 ] 
+-0.579/0.579/0.579/  -1./0./0., %[ 2, 14 ] 
+-0.579/-0.579/0.579/  0.579/-0.579/0.579, %[ 3, 4 ] 
+-0.579/-0.579/0.579/  -0.579/-0.579/-0.579, %[ 3, 12 ] 
+-0.579/-0.579/0.579/  0./-1./0., %[ 3, 13 ] 
+-0.579/-0.579/0.579/  -1./0./0., %[ 3, 14 ] 
+0.579/-0.579/0.579/  0.579/0.579/0.579, %[ 4, 5 ] 
+0.579/-0.579/0.579/  1./0./0., %[ 4, 7 ] 
+0.579/-0.579/0.579/  0.579/-0.579/-0.579, %[ 4, 9 ] 
+0.579/-0.579/0.579/  0./-1./0., %[ 4, 13 ] 
+0.579/0.579/0.579/  0./1./0., %[ 5, 6 ] 
+0.579/0.579/0.579/  1./0./0., %[ 5, 7 ] 
+0.579/0.579/0.579/  0.579/0.579/-0.579, %[ 5, 10 ] 
+0./1./0./  0.579/0.579/-0.579, %[ 6, 10 ] 
+0./1./0./  -0.579/0.579/-0.579, %[ 6, 11 ] 
+1./0./0./  0.579/-0.579/-0.579, %[ 7, 9 ] 
+1./0./0./  0.579/0.579/-0.579, %[ 7, 10 ] 
+0./0./-1./  0.579/-0.579/-0.579, %[ 8, 9 ] 
+0./0./-1./  0.579/0.579/-0.579, %[ 8, 10 ] 
+0./0./-1./  -0.579/0.579/-0.579, %[ 8, 11 ] 
+0./0./-1./  -0.579/-0.579/-0.579, %[ 8, 12 ] 
+0.579/-0.579/-0.579/  0.579/0.579/-0.579, %[ 9, 10 ] 
+0.579/-0.579/-0.579/  -0.579/-0.579/-0.579, %[ 9, 12 ] 
+0.579/-0.579/-0.579/  0./-1./0., %[ 9, 13 ] 
+0.579/0.579/-0.579/  -0.579/0.579/-0.579, %[ 10, 11 ] 
+-0.579/0.579/-0.579/  -0.579/-0.579/-0.579, %[ 11, 12 ] 
+-0.579/0.579/-0.579/  -1./0./0., %[ 11, 14 ] 
+-0.579/-0.579/-0.579/  0./-1./0., %[ 12, 13 ] 
+-0.579/-0.579/-0.579/  -1./0./0. %[ 12, 14 ] 
+}{
+\GCArcABfb{\ax}{\ay}{\az}{\bx}{\by}{\bz}{color=\OMcolor}
+}
+}
+\end{tikzpicture}
+</pre></div>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

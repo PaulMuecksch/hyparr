@@ -68,8 +68,6 @@
       2.6-3 Essentialization
       2.6-4 HArrRestriction
       2.6-5 HArrRestriction
-    2.7 [33X[0;0YGlobal methods[133X
-      2.7-1 DrawLatex3Arr
   3 [33X[0;0YSpecial arrangements[133X
     3.1 [33X[0;0YGlobal methods[133X
       3.1-1 AGpql
@@ -149,6 +147,10 @@
       8.2-1 TPGroundSet
       8.2-2 TPBaseTope
       8.2-3 TPRankPoly
+  9 [33X[0;0YVisualization of real 3-arrangements[133X
+    9.1 [33X[0;0YGlobal methods[133X
+      9.1-1 LaTeXDrawProjPicture
+      9.1-2 LaTeXDrawSpherePicture
   
   
   [32X

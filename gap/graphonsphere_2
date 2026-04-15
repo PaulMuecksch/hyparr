@@ -1,0 +1,8 @@
+}{
+\node (\i) at (\vx,\vy,\vz) {};
+%			\node[anchor=south east] at ($(\i)$) {\tiny{$\i$}};
+\filldraw[color=\OMcolor] (\i) circle[radius=0.5pt];
+}
+%		
+% the edges of the OM-cpx
+\foreach \ax/\ay/\az/\bx/\by/\bz in {

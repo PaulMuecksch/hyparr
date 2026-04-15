@@ -524,9 +524,13 @@ end);
 
 InstallMethod(SalvettiComplex,
     "for a real arrangement",
-    [ IsHyperplaneArrangement and IsReal ],
+    [ IsHyperplaneArrangement],
 function(A)
 local OM,SalCpx,SalOF, FCpx,Topes,d,T, k,type;
+    if not(IsReal(A)) then
+        Print("Not a real arrangement!\n");
+        return fail;
+    fi;
     OM := OrientedMatroid(A);;
     FCpx:=OMCovectors(OM);;
     Topes:=FCpx[1];;

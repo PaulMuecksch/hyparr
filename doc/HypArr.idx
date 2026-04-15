@@ -26,59 +26,60 @@
 \indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{11}
 \indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsInt|hyperpage}{11}
 \indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsList|hyperpage}{11}
-\indexentry{DrawLatex3Arr@\texttt  {DrawLatex3Arr}|hyperpage}{11}
-\indexentry{AGpql@\texttt  {AGpql}|hyperpage}{14}
-\indexentry{SsS3@\texttt  {SsS3}|hyperpage}{14}
-\indexentry{ConnectedSubgraphArr@\texttt  {ConnectedSubgraphArr}!for IsList|hyperpage}{15}
-\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{16}
-\indexentry{OMRank@\texttt  {OMRank}!for IsOrientedMatroid|hyperpage}{16}
-\indexentry{OMGroundSet@\texttt  {OMGroundSet}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{OMLForms@\texttt  {OMLForms}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{OMGeomLattice@\texttt  {OMGeomLattice}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{OMCocircuits@\texttt  {OMCocircuits}!for IsOrientedMatroid|hyperpage}{18}
-\indexentry{TopeGraph@\texttt  {TopeGraph}!for IsOrientedMatroid|hyperpage}{18}
-\indexentry{OMCovectors@\texttt  {OMCovectors}!for IsOrientedMatroid|hyperpage}{18}
-\indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsOrientedMatroid|hyperpage}{19}
-\indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsHyperplaneArrangement and IsReal|hyperpage}{19}
-\indexentry{FPGroundSet@\texttt  {FPGroundSet}!for IsFacePoset|hyperpage}{19}
-\indexentry{FPOrder@\texttt  {FPOrder}!for IsFacePoset|hyperpage}{20}
-\indexentry{OMChirotope@\texttt  {OMChirotope}!for IsOrientedMatroid|hyperpage}{20}
-\indexentry{OMRankFunction@\texttt  {OMRankFunction}!for IsOrientedMatroid|hyperpage}{20}
-\indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{20}
-\indexentry{HasSimpleSimplex@\texttt  {HasSimpleSimplex}!for IsOrientedMatroid|hyperpage}{21}
-\indexentry{HasSimpleTriangle@\texttt  {HasSimpleTriangle}!for IsOrientedMatroid|hyperpage}{21}
-\indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{21}
-\indexentry{HasSimpleSimplexRk@\texttt  {HasSimpleSimplexRk}!for IsOrientedMatroid, IsInt|hyperpage}{22}
-\indexentry{OMLocalizationRk@\texttt  {OMLocalizationRk}!for IsOrientedMatroid, IsList, IsInt|hyperpage}{22}
-\indexentry{OMOperation@\texttt  {OMOperation}|hyperpage}{22}
-\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{23}
-\indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{23}
-\indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{23}
-\indexentry{DerModule@\texttt  {DerModule}!for IsHyperplaneArrangement|hyperpage}{24}
-\indexentry{DerModGenerators@\texttt  {DerModGenerators}!for IsDerivationModule|hyperpage}{24}
-\indexentry{DerModPRing@\texttt  {DerModPRing}!for IsDerivationModule|hyperpage}{25}
-\indexentry{DerModDegreeSequence@\texttt  {DerModDegreeSequence}!for IsDerivationModule|hyperpage}{25}
-\indexentry{DerModProjDim@\texttt  {DerModProjDim}!for IsDerivationModule|hyperpage}{25}
-\indexentry{DerModIsFree@\texttt  {DerModIsFree}!for IsDerivationModule|hyperpage}{25}
-\indexentry{HArrIsFree@\texttt  {HArrIsFree}!for IsHyperplaneArrangement|hyperpage}{26}
-\indexentry{IsInductivelyFree@\texttt  {IsInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{26}
-\indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{26}
-\indexentry{LIsModularPair@\texttt  {LIsModularPair}!for IsGeomLattice, IsList, IsList|hyperpage}{28}
-\indexentry{LIsModularFlat@\texttt  {LIsModularFlat}!for IsGeomLattice, IsList|hyperpage}{28}
-\indexentry{LModularFlatsRk@\texttt  {LModularFlatsRk}!for IsGeomLattice, IsInt|hyperpage}{29}
-\indexentry{LIsSupersolvable@\texttt  {LIsSupersolvable}!for IsGeomLattice|hyperpage}{29}
-\indexentry{HArrIsSupersolvable@\texttt  {HArrIsSupersolvable}!for IsHyperplaneArrangement|hyperpage}{29}
-\indexentry{OMIsSupersolvable@\texttt  {OMIsSupersolvable}!for IsOrientedMatroid|hyperpage}{30}
-\indexentry{IsFormal@\texttt  {IsFormal}!for IsHyperplaneArrangement|hyperpage}{30}
-\indexentry{HArrIsSimplicial@\texttt  {HArrIsSimplicial}!for IsHyperplaneArrangement and IsReal|hyperpage}{31}
-\indexentry{OMBoundedCpx@\texttt  {OMBoundedCpx}!for IsOrientedMatroid, IsInt|hyperpage}{31}
-\indexentry{OMSupportsFalkWeights@\texttt  {OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt|hyperpage}{31}
-\indexentry{HArrFactorizations@\texttt  {HArrFactorizations}!for IsHyperplaneArrangement|hyperpage}{32}
-\indexentry{HArrIsFactored@\texttt  {HArrIsFactored}!for IsHyperplaneArrangement|hyperpage}{32}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{34}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{34}
-\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{35}
-\indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{36}
-\indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{36}
-\indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{36}
-\indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{37}
+\indexentry{AGpql@\texttt  {AGpql}|hyperpage}{12}
+\indexentry{SsS3@\texttt  {SsS3}|hyperpage}{12}
+\indexentry{ConnectedSubgraphArr@\texttt  {ConnectedSubgraphArr}!for IsList|hyperpage}{13}
+\indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{14}
+\indexentry{OMRank@\texttt  {OMRank}!for IsOrientedMatroid|hyperpage}{14}
+\indexentry{OMGroundSet@\texttt  {OMGroundSet}!for IsOrientedMatroid|hyperpage}{15}
+\indexentry{OMLForms@\texttt  {OMLForms}!for IsOrientedMatroid|hyperpage}{15}
+\indexentry{OMGeomLattice@\texttt  {OMGeomLattice}!for IsOrientedMatroid|hyperpage}{15}
+\indexentry{OMCocircuits@\texttt  {OMCocircuits}!for IsOrientedMatroid|hyperpage}{16}
+\indexentry{TopeGraph@\texttt  {TopeGraph}!for IsOrientedMatroid|hyperpage}{16}
+\indexentry{OMCovectors@\texttt  {OMCovectors}!for IsOrientedMatroid|hyperpage}{16}
+\indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsOrientedMatroid|hyperpage}{17}
+\indexentry{SalvettiComplex@\texttt  {SalvettiComplex}!for IsHyperplaneArrangement|hyperpage}{17}
+\indexentry{FPGroundSet@\texttt  {FPGroundSet}!for IsFacePoset|hyperpage}{17}
+\indexentry{FPOrder@\texttt  {FPOrder}!for IsFacePoset|hyperpage}{18}
+\indexentry{OMChirotope@\texttt  {OMChirotope}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMRankFunction@\texttt  {OMRankFunction}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{HasSimpleSimplex@\texttt  {HasSimpleSimplex}!for IsOrientedMatroid|hyperpage}{19}
+\indexentry{HasSimpleTriangle@\texttt  {HasSimpleTriangle}!for IsOrientedMatroid|hyperpage}{19}
+\indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{19}
+\indexentry{HasSimpleSimplexRk@\texttt  {HasSimpleSimplexRk}!for IsOrientedMatroid, IsInt|hyperpage}{20}
+\indexentry{OMLocalizationRk@\texttt  {OMLocalizationRk}!for IsOrientedMatroid, IsList, IsInt|hyperpage}{20}
+\indexentry{OMOperation@\texttt  {OMOperation}|hyperpage}{20}
+\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{21}
+\indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{21}
+\indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{21}
+\indexentry{DerModule@\texttt  {DerModule}!for IsHyperplaneArrangement|hyperpage}{22}
+\indexentry{DerModGenerators@\texttt  {DerModGenerators}!for IsDerivationModule|hyperpage}{22}
+\indexentry{DerModPRing@\texttt  {DerModPRing}!for IsDerivationModule|hyperpage}{23}
+\indexentry{DerModDegreeSequence@\texttt  {DerModDegreeSequence}!for IsDerivationModule|hyperpage}{23}
+\indexentry{DerModProjDim@\texttt  {DerModProjDim}!for IsDerivationModule|hyperpage}{23}
+\indexentry{DerModIsFree@\texttt  {DerModIsFree}!for IsDerivationModule|hyperpage}{23}
+\indexentry{HArrIsFree@\texttt  {HArrIsFree}!for IsHyperplaneArrangement|hyperpage}{24}
+\indexentry{IsInductivelyFree@\texttt  {IsInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{24}
+\indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{24}
+\indexentry{LIsModularPair@\texttt  {LIsModularPair}!for IsGeomLattice, IsList, IsList|hyperpage}{26}
+\indexentry{LIsModularFlat@\texttt  {LIsModularFlat}!for IsGeomLattice, IsList|hyperpage}{26}
+\indexentry{LModularFlatsRk@\texttt  {LModularFlatsRk}!for IsGeomLattice, IsInt|hyperpage}{27}
+\indexentry{LIsSupersolvable@\texttt  {LIsSupersolvable}!for IsGeomLattice|hyperpage}{27}
+\indexentry{HArrIsSupersolvable@\texttt  {HArrIsSupersolvable}!for IsHyperplaneArrangement|hyperpage}{27}
+\indexentry{OMIsSupersolvable@\texttt  {OMIsSupersolvable}!for IsOrientedMatroid|hyperpage}{28}
+\indexentry{IsFormal@\texttt  {IsFormal}!for IsHyperplaneArrangement|hyperpage}{28}
+\indexentry{HArrIsSimplicial@\texttt  {HArrIsSimplicial}!for IsHyperplaneArrangement and IsReal|hyperpage}{29}
+\indexentry{OMBoundedCpx@\texttt  {OMBoundedCpx}!for IsOrientedMatroid, IsInt|hyperpage}{29}
+\indexentry{OMSupportsFalkWeights@\texttt  {OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt|hyperpage}{29}
+\indexentry{HArrFactorizations@\texttt  {HArrFactorizations}!for IsHyperplaneArrangement|hyperpage}{30}
+\indexentry{HArrIsFactored@\texttt  {HArrIsFactored}!for IsHyperplaneArrangement|hyperpage}{30}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{32}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{32}
+\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{33}
+\indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{34}
+\indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{34}
+\indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{34}
+\indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{35}
+\indexentry{LaTeXDrawProjPicture@\texttt  {LaTeXDrawProjPicture}|hyperpage}{36}
+\indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{38}

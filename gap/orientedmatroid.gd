@@ -213,7 +213,7 @@ DeclareAttribute("SalvettiComplex", IsOrientedMatroid);
 #! @Arguments A
 #! @Description 
 #! See <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>.
-DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement and IsReal);
+DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
 
 #! @Arguments FP
 #! @Returns A list

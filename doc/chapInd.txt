@@ -12,7 +12,6 @@
   [2XDerModProjDim[102X, for IsDerivationModule 5.1-5 
   [2XDerModule[102X, for IsHyperplaneArrangement 5.1-1 
   [2XDimension[102X, for IsHyperplaneArrangement 2.2-1 
-  [2XDrawLatex3Arr[102X 2.7-1 
   [2XEssentialization[102X, for IsHyperplaneArrangement 2.6-3 
   [2XExpArr[102X, for IsHyperplaneArrangement 2.2-6 
   [2XFPGroundSet[102X, for IsFacePoset 4.2-10 
@@ -40,6 +39,8 @@
       for IsOrientedMatroid,IsOrientedMatroid 4.4-1 
   [2XIsOMEquiv[102X 4.5-3 
   [2XIsReal[102X, for IsHyperplaneArrangement 2.3-1 
+  [2XLaTeXDrawProjPicture[102X 9.1-1 
+  [2XLaTeXDrawSpherePicture[102X 9.1-2 
   [2XLAtoms[102X, for IsGeomLattice 2.4-2 
   [2XLAutGroup[102X, for IsGeomLattice 2.4-7 
   [2XLCharPoly[102X, for IsGeomLattice 2.4-9 
@@ -77,7 +78,7 @@
   [2XOrderCovec[102X 4.5-2 
   [2XOrientedMatroid[102X, for IsList 4.1-1 
   [2XRoots[102X, for IsHyperplaneArrangement 2.2-2 
-  [2XSalvettiComplex[102X, for IsHyperplaneArrangement and IsReal 4.2-9 
+  [2XSalvettiComplex[102X, for IsHyperplaneArrangement 4.2-9 
       for IsOrientedMatroid 4.2-8 
   [2XSeparatingSet[102X 4.5-4 
   [2XSsS3[102X 3.1-2 

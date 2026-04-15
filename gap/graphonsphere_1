@@ -1,0 +1,9 @@
+\tdplotsetmaincoords{63}{63}
+\begin{tikzpicture}[scale=3,tdplot_main_coords]
+
+\draw[ball color = gray!40, opacity = 0.2] (0,0,0) circle (1cm);
+
+\def\OMcolor{black}
+{\color{\OMcolor}
+% the vertices of the OM-cpx
+\foreach \i/\vx/\vy/\vz in {

@@ -241,7 +241,7 @@ gap> SalvettiComplex(A);
 
 
 <ManSection>
-  <Attr Arg="A" Name="SalvettiComplex" Label="for IsHyperplaneArrangement and IsReal"/>
+  <Attr Arg="A" Name="SalvettiComplex" Label="for IsHyperplaneArrangement"/>
  <Description>
  See <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>.
  </Description>

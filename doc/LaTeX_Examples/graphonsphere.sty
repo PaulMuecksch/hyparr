@@ -1,0 +1,127 @@
+\ProvidesPackage{graphonsphere}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Draw great circle arcs on a sphere for the oriented matroid complex and its dual
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% required packages
+\usepackage{pgfplots, tikz-3dplot, ifthen}
+
+% number of samples for drawing arcs
+\def\samples{10}
+
+% great circle arc between the points A and B
+\newcommand{\GCArcAB}[7]{
+	\pgfmathsetmacro{\Ax}{#1}
+	\pgfmathsetmacro{\Ay}{#2}
+	\pgfmathsetmacro{\Az}{#3}
+	\pgfmathsetmacro{\Bx}{#4}
+	\pgfmathsetmacro{\By}{#5}
+	\pgfmathsetmacro{\Bz}{#6}
+	
+	\pgfmathsetmacro{\nA}{sqrt(\Ax*\Ax+\Ay*\Ay+\Az*\Az)}
+	\pgfmathsetmacro{\nB}{sqrt(\Bx*\Bx+\By*\By+\Bz*\Bz)}
+	
+	\pgfmathsetmacro{\nAx}{\Ax/\nA}
+	\pgfmathsetmacro{\nAy}{\Ay/\nA}
+	\pgfmathsetmacro{\nAz}{\Az/\nA}
+	\pgfmathsetmacro{\nBx}{\Bx/\nB}
+	\pgfmathsetmacro{\nBy}{\By/\nB}
+	\pgfmathsetmacro{\nBz}{\Bz/\nB}
+	
+	\pgfmathsetmacro{\a}{acos(\nAx*\nBx+\nAy*\nBy+\nAz*\nBz)}
+	
+	\draw[#7] plot[variable=\t, domain=1:0, samples=\samples]
+	({\nAx*sin((1-\t)*\a)/sin(\a) +\nBx*sin(\t*\a)/sin(\a)},
+	{\nAy*sin((1-\t)*\a)/sin(\a) + \nBy*sin(\t*\a)/sin(\a)},
+	{\nAz*sin((1-\t)*\a)/sin(\a) + \nBz*sin(\t*\a)/sin(\a)});
+}
+
+
+% draw great circle arc between A and B and distinguish between the front (solid) and back (dashed) part
+\newcommand{\GCArcABfb}[7]{
+	\pgfmathsetmacro{\Ax}{#1}
+	\pgfmathsetmacro{\Ay}{#2}
+	\pgfmathsetmacro{\Az}{#3}
+	\pgfmathsetmacro{\Bx}{#4}
+	\pgfmathsetmacro{\By}{#5}
+	\pgfmathsetmacro{\Bz}{#6}
+	
+	\pgfmathsetmacro{\nA}{sqrt(\Ax*\Ax+\Ay*\Ay+\Az*\Az)}
+	\pgfmathsetmacro{\nB}{sqrt(\Bx*\Bx+\By*\By+\Bz*\Bz)}
+	
+	\pgfmathsetmacro{\nAx}{\Ax/\nA}
+	\pgfmathsetmacro{\nAy}{\Ay/\nA}
+	\pgfmathsetmacro{\nAz}{\Az/\nA}
+	\pgfmathsetmacro{\nBx}{\Bx/\nB}
+	\pgfmathsetmacro{\nBy}{\By/\nB}
+	\pgfmathsetmacro{\nBz}{\Bz/\nB}
+	
+	\let\p\tdplotmainphi
+	\let\t\tdplotmaintheta
+	\pgfmathsetmacro\azx{sin(\p)*sin(\t)}
+	\pgfmathsetmacro\azy{-cos(\p)*sin(\t)}
+	\pgfmathsetmacro\azz{cos(\t)}
+	
+	\pgfmathsetmacro{\sAZ}{\nAx*\azx+\nAy*\azy+\nAz*\azz}
+	\pgfmathsetmacro{\sBZ}{\nBx*\azx+\nBy*\azy+\nBz*\azz}
+	\pgfmathsetmacro{\tt}{\sBZ/(\sBZ-\sAZ)}
+	
+	\pgfmathsetmacro{\af}{\sAZ>=0}
+	\pgfmathsetmacro{\ab}{\sAZ<0}
+	\pgfmathsetmacro{\bf}{\sBZ>=0}
+	\pgfmathsetmacro{\bb}{\sBZ<0}
+	\pgfmathsetmacro{\abf}{\af+\bf>1}
+	\pgfmathsetmacro{\abb}{\ab+\bb>1}
+	%		
+	
+	\ifthenelse{\abf=1}{
+		\GCArcAB{\Ax}{\Ay}{\Az}{\Bx}{\By}{\Bz}{#7}
+	}{
+		\ifthenelse{\abb=1}{%
+			\GCArcAB{\Ax}{\Ay}{\Az}{\Bx}{\By}{\Bz}{opacity=0.25, #7}
+		}{
+			\pgfmathsetmacro{\Mx}{\tt*\nAx+(1-\tt)*\nBx}
+			\pgfmathsetmacro{\My}{\tt*\nAy+(1-\tt)*\nBy}
+			\pgfmathsetmacro{\Mz}{\tt*\nAz+(1-\tt)*\nBz}
+			\pgfmathsetmacro{\nM}{sqrt(\Mx*\Mx+\My*\My+\Mz*\Mz)}
+			\pgfmathsetmacro{\nMx}{\Mx/\nM}
+			\pgfmathsetmacro{\nMy}{\My/\nM}
+			\pgfmathsetmacro{\nMz}{\Mz/\nM}
+			
+			\ifthenelse{\af>0}{
+				\pgfmathsetmacro{\aAM}{acos(\nAx*\nMx+\nAy*\nMy+\nAz*\nMz)}
+				
+				\draw[#7] plot[variable=\t, domain=1:0, samples=\samples]
+				({\nAx*sin((1-\t)*\aAM)/sin(\aAM) +\nMx*sin(\t*\aAM)/sin(\aAM)},
+				{\nAy*sin((1-\t)*\aAM)/sin(\aAM) + \nMy*sin(\t*\aAM)/sin(\aAM)},
+				{\nAz*sin((1-\t)*\aAM)/sin(\aAM) + \nMz*sin(\t*\aAM)/sin(\aAM)});
+				
+				\pgfmathsetmacro{\aBM}{acos(\nBx*\nMx+\nBy*\nMy+\nBz*\nMz)}
+				
+				\draw[opacity=0.25, #7] plot[variable=\t, domain=1:0, samples=\samples]
+				({\nBx*sin((1-\t)*\aBM)/sin(\aBM) +\nMx*sin(\t*\aBM)/sin(\aBM)},
+				{\nBy*sin((1-\t)*\aBM)/sin(\aBM) + \nMy*sin(\t*\aBM)/sin(\aBM)},
+				{\nBz*sin((1-\t)*\aBM)/sin(\aBM) + \nMz*sin(\t*\aBM)/sin(\aBM)});
+			}{
+				\pgfmathsetmacro{\aAM}{acos(\nAx*\nMx+\nAy*\nMy+\nAz*\nMz)}
+				
+				\draw[opacity=0.25, #7] plot[variable=\t, domain=1:0, samples=\samples]
+				({\nAx*sin((1-\t)*\aAM)/sin(\aAM) +\nMx*sin(\t*\aAM)/sin(\aAM)},
+				{\nAy*sin((1-\t)*\aAM)/sin(\aAM) + \nMy*sin(\t*\aAM)/sin(\aAM)},
+				{\nAz*sin((1-\t)*\aAM)/sin(\aAM) + \nMz*sin(\t*\aAM)/sin(\aAM)});
+				
+				\pgfmathsetmacro{\aBM}{acos(\nBx*\nMx+\nBy*\nMy+\nBz*\nMz)}
+				
+				\draw[#7] plot[variable=\t, domain=1:0, samples=\samples]
+				({\nBx*sin((1-\t)*\aBM)/sin(\aBM) +\nMx*sin(\t*\aBM)/sin(\aBM)},
+				{\nBy*sin((1-\t)*\aBM)/sin(\aBM) + \nMy*sin(\t*\aBM)/sin(\aBM)},
+				{\nBz*sin((1-\t)*\aBM)/sin(\aBM) + \nMz*sin(\t*\aBM)/sin(\aBM)});					
+			}				
+		}
+	}		
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

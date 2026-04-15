@@ -9,7 +9,6 @@
 \makelabel{hyparr:Attributes of geometric lattices}{2.4}{X79DB21318677B969}
 \makelabel{hyparr:Properties of geometric lattices}{2.5}{X8056EC0986604552}
 \makelabel{hyparr:Operations}{2.6}{X7DE8E16C7C2D387B}
-\makelabel{hyparr:Global methods}{2.7}{X80841F8D80722081}
 \makelabel{hyparr:Special arrangements}{3}{X7C9F5AAF83133F9A}
 \makelabel{hyparr:Global methods}{3.1}{X80841F8D80722081}
 \makelabel{hyparr:Oriented Matroids}{4}{X8388FBA579602CDB}
@@ -32,6 +31,8 @@
 \makelabel{hyparr:Tope posets}{8}{X7D123BFB84BF8125}
 \makelabel{hyparr:Operation}{8.1}{X835880B9800BD2D8}
 \makelabel{hyparr:Attributes}{8.2}{X7C701DBF7BAE649A}
+\makelabel{hyparr:Visualization of real 3-arrangements}{9}{X867FB7CC79AC1DED}
+\makelabel{hyparr:Global methods}{9.1}{X80841F8D80722081}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:References}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
@@ -63,7 +64,6 @@
 \makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.6.3}{X7BD35FA07804BB70}
 \makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsInt}{2.6.4}{X844F12CE82E65BFC}
 \makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsList}{2.6.5}{X78D9B1217862EF28}
-\makelabel{hyparr:DrawLatex3Arr}{2.7.1}{X82C8EAF88340865B}
 \makelabel{hyparr:AGpql}{3.1.1}{X858205A37B7EB5FA}
 \makelabel{hyparr:SsS3}{3.1.2}{X81AD6CA97F71ED33}
 \makelabel{hyparr:ConnectedSubgraphArr for IsList}{3.1.3}{X82DB5C6F83FDC443}
@@ -76,7 +76,7 @@
 \makelabel{hyparr:TopeGraph for IsOrientedMatroid}{4.2.6}{X7B35E88A79675D1E}
 \makelabel{hyparr:OMCovectors for IsOrientedMatroid}{4.2.7}{X7B2D2370811476C9}
 \makelabel{hyparr:SalvettiComplex for IsOrientedMatroid}{4.2.8}{X7ED4D5138012EB6C}
-\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement and IsReal}{4.2.9}{X811DC01A7C2F985B}
+\makelabel{hyparr:SalvettiComplex for IsHyperplaneArrangement}{4.2.9}{X8333113D7A7A3A91}
 \makelabel{hyparr:FPGroundSet for IsFacePoset}{4.2.10}{X85AB2A797ABE8967}
 \makelabel{hyparr:FPOrder for IsFacePoset}{4.2.11}{X7E28E057841D6ECD}
 \makelabel{hyparr:OMChirotope for IsOrientedMatroid}{4.2.12}{X854947857F5E5D29}
@@ -119,3 +119,5 @@
 \makelabel{hyparr:TPGroundSet for IsTopePoset}{8.2.1}{X81854C4D816A501A}
 \makelabel{hyparr:TPBaseTope for IsTopePoset}{8.2.2}{X82CEA0EB7B0AF294}
 \makelabel{hyparr:TPRankPoly for IsTopePoset}{8.2.3}{X8258DD9D78DDA4C6}
+\makelabel{hyparr:LaTeXDrawProjPicture}{9.1.1}{X78621314826E390B}
+\makelabel{hyparr:LaTeXDrawSpherePicture}{9.1.2}{X786A445B7D28CCF6}

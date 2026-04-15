@@ -773,89 +773,6 @@ A hyperplane arrangement.
 
  }
 
- 
-\section{\textcolor{Chapter }{Global methods}}\label{Chapter_Hyperplane_arrangements_Section_Global_methods}
-\logpage{[ 2, 7, 0 ]}
-\hyperdef{L}{X80841F8D80722081}{}
-{
-  
-
-\subsection{\textcolor{Chapter }{DrawLatex3Arr}}
-\logpage{[ 2, 7, 1 ]}\nobreak
-\hyperdef{L}{X82C8EAF88340865B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DrawLatex3Arr({\mdseries\slshape A[, ps[, ip[, Hind[, disthv[, MarkHs]]]]]})\index{DrawLatex3Arr@\texttt{DrawLatex3Arr}}
-\label{DrawLatex3Arr}
-}\hfill{\scriptsize (function)}}\\
-\textbf{\indent Returns:\ }
-A string. 
-
-
-
- Generates LaTeX tikz\texttt{\symbol{45}}code for a nice projective picture of
-the real 3\texttt{\symbol{45}}arrangement. If $x,y,z$ are the coordinates, by default, this is the 2\texttt{\symbol{45}}dim affine
-arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with the plane $z=1$. 
-
- The optional parameters are: 
-\begin{itemize}
-\item  \mbox{\texttt{\mdseries\slshape ps}} a scaling factor, 
-\item  \mbox{\texttt{\mdseries\slshape ip}} intersection points are drawn, 
-\item  \mbox{\texttt{\mdseries\slshape Hind}} labels for the hyperplanes are added, 
-\item  \mbox{\texttt{\mdseries\slshape disthv}} a vector giving the normal of the plane whith which to intersect \mbox{\texttt{\mdseries\slshape A}}, 
-\item  \mbox{\texttt{\mdseries\slshape MarkHs}} a list of indices of hyperplanes of \mbox{\texttt{\mdseries\slshape A}}, these are drawn in another color. 
-\end{itemize}
- 
-
- The example below will look as follows (only in pdf). 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@Print(DrawLatex3Arr(A));|
-  \begin{tikzpicture}[scale=1.0]
-  \draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
-  \draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
-  \draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
-  \draw (1.,3.873) -- (1.,-3.873);  % H_4 
-  \draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
-  \draw (3.873,1.) -- (-3.873,1.);  % H_6 
-  \end{tikzpicture}
-  !gapprompt@gap>| !gapinput@Print(DrawLatex3Arr(A,1/2,true,true,[1,1,1],[1,2]));|
-  \begin{tikzpicture}[scale=1.0]
-  \draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 
-  \node at (1.975,-3.707) {\small $1$}; 
-  \draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 
-  \node at (-2.970,-2.970) {\small $2$}; 
-  \draw (3.361,2.169) -- (-3.995,0.197);  % H_3 
-  \node at (-4.198,0.143) {\small $3$}; 
-  \draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 
-  \node at (1.087,-4.057) {\small $4$}; 
-  \draw (2.169,3.361) -- (0.197,-3.995);  % H_5 
-  \node at (0.143,-4.198) {\small $5$}; 
-  \draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 
-  \node at (4.057,-1.087) {\small $6$}; 
-  
-  \fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] 
-  \fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] 
-  \fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] 
-  \fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] 
-  \fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
-  \fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] 
-  \fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] 
-  
-  \end{tikzpicture}
-  
-\end{Verbatim}
- 
-
- 
- \includegraphics{./other/DrawLatex3Arr_Example.pdf}
- 
-
- }
-
- }
-
  }
 
    
@@ -1230,11 +1147,11 @@ A \texttt{FacePoset}
 
  
 
-\subsection{\textcolor{Chapter }{SalvettiComplex (for IsHyperplaneArrangement and IsReal)}}
+\subsection{\textcolor{Chapter }{SalvettiComplex (for IsHyperplaneArrangement)}}
 \logpage{[ 4, 2, 9 ]}\nobreak
-\hyperdef{L}{X811DC01A7C2F985B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape A})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsHyperplaneArrangement and IsReal}
-\label{SalvettiComplex:for IsHyperplaneArrangement and IsReal}
+\hyperdef{L}{X8333113D7A7A3A91}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SalvettiComplex({\mdseries\slshape A})\index{SalvettiComplex@\texttt{SalvettiComplex}!for IsHyperplaneArrangement}
+\label{SalvettiComplex:for IsHyperplaneArrangement}
 }\hfill{\scriptsize (attribute)}}\\
 
 
@@ -2447,6 +2364,203 @@ A polynomial.
   !gapprompt@gap>| !gapinput@TPRankPoly(TP);|
   t^2+2*t+1
 \end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Visualization of real 3\texttt{\symbol{45}}arrangements}}\label{Chapter_Visualization_of_real_3-arrangements}
+\logpage{[ 9, 0, 0 ]}
+\hyperdef{L}{X867FB7CC79AC1DED}{}
+{
+  
+\section{\textcolor{Chapter }{Global methods}}\label{Chapter_Visualization_of_real_3-arrangements_Section_Global_methods}
+\logpage{[ 9, 1, 0 ]}
+\hyperdef{L}{X80841F8D80722081}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{LaTeXDrawProjPicture}}
+\logpage{[ 9, 1, 1 ]}\nobreak
+\hyperdef{L}{X78621314826E390B}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawProjPicture({\mdseries\slshape A[, ps[, ip[, Hind[, disthv[, MarkHs]]]]]})\index{LaTeXDrawProjPicture@\texttt{LaTeXDrawProjPicture}}
+\label{LaTeXDrawProjPicture}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A string. 
+
+
+
+ Generates LaTeX tikz\texttt{\symbol{45}}code for a nice projective picture of
+the real 3\texttt{\symbol{45}}arrangement. If $x,y,z$ are the coordinates, by default, this is the 2\texttt{\symbol{45}}dim affine
+arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with the plane $z=1$. 
+
+ The optional parameters are: 
+\begin{itemize}
+\item  \mbox{\texttt{\mdseries\slshape ps}} a scaling factor, 
+\item  \mbox{\texttt{\mdseries\slshape ip}} intersection points are drawn, 
+\item  \mbox{\texttt{\mdseries\slshape Hind}} labels for the hyperplanes are added, 
+\item  \mbox{\texttt{\mdseries\slshape disthv}} a vector giving the normal of the plane whith which to intersect \mbox{\texttt{\mdseries\slshape A}}, 
+\item  \mbox{\texttt{\mdseries\slshape MarkHs}} a list of indices of hyperplanes of \mbox{\texttt{\mdseries\slshape A}}, these are drawn in another color. 
+\end{itemize}
+ 
+
+ The example below will look as follows (only in pdf). 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3);|
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@Print(LaTeXDrawProjPicture(A));|
+  \begin{tikzpicture}[scale=1.0]
+  \draw (-2.827,2.827) -- (2.827,-2.827);  % H_1 
+  \draw (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+  \draw (-1.,3.873) -- (-1.,-3.873);  % H_3 
+  \draw (1.,3.873) -- (1.,-3.873);  % H_4 
+  \draw (3.873,-1.) -- (-3.873,-1.);  % H_5 
+  \draw (3.873,1.) -- (-3.873,1.);  % H_6 
+  \end{tikzpicture}
+  !gapprompt@gap>| !gapinput@Print(LaTeXDrawProjPicture(A,1/2,true,true,[1,1,1],[1,2]));|
+  \begin{tikzpicture}[scale=1.0]
+  \draw[color=red] (-3.559,1.827) -- (1.827,-3.559);  % H_1 
+  \node at (1.975,-3.707) {\small $1$}; 
+  \draw[color=red] (2.827,2.827) -- (-2.827,-2.827);  % H_2 
+  \node at (-2.970,-2.970) {\small $2$}; 
+  \draw (3.361,2.169) -- (-3.995,0.197);  % H_3 
+  \node at (-4.198,0.143) {\small $3$}; 
+  \draw (-1.034,3.863) -- (1.034,-3.863);  % H_4 
+  \node at (1.087,-4.057) {\small $4$}; 
+  \draw (2.169,3.361) -- (0.197,-3.995);  % H_5 
+  \node at (0.143,-4.198) {\small $5$}; 
+  \draw (-3.863,1.034) -- (3.863,-1.034);  % H_6 
+  \node at (4.057,-1.087) {\small $6$}; 
+  
+  \fill[red] (-0.865,-0.865) circle[radius=2pt];  % P[ 1, 2 ] 
+  \fill[red] (-2.366,0.634) circle[radius=2pt];  % P[ 1, 3, 6 ] 
+  \fill[red] (1.732,1.732) circle[radius=2pt];  % P[ 2, 3, 5 ] 
+  \fill[red] (0.634,-2.366) circle[radius=2pt];  % P[ 1, 4, 5 ] 
+  \fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
+  \fill[red] (-0.317,1.183) circle[radius=2pt];  % P[ 3, 4 ] 
+  \fill[red] (1.183,-0.317) circle[radius=2pt];  % P[ 5, 6 ] 
+  
+  \end{tikzpicture}
+  
+\end{Verbatim}
+ 
+
+ 
+ \includegraphics{./LaTeX_Examples/DrawLatex3Arr_Example.pdf}
+ 
+
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LaTeXDrawSpherePicture}}
+\logpage{[ 9, 1, 2 ]}\nobreak
+\hyperdef{L}{X786A445B7D28CCF6}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawSpherePicture({\mdseries\slshape A})\index{LaTeXDrawSpherePicture@\texttt{LaTeXDrawSpherePicture}}
+\label{LaTeXDrawSpherePicture}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A string. 
+
+
+
+ Generates LaTeX tikz\texttt{\symbol{45}}code for the intersection of a real
+3\texttt{\symbol{45}}arrangement with the unit sphere. To compile the
+LaTeX\texttt{\symbol{45}}code the .sty\texttt{\symbol{45}}file
+"graphonsphere.sty" (form /doc/LaTeX{\textunderscore}Examples) needs to be in
+the same folder and added via
+"\texttt{\symbol{92}}usepackage\texttt{\symbol{123}}graphonsphere\texttt{\symbol{125}}". 
+
+ The example below will look as follows (only in pdf). 
+
+ 
+\begin{Verbatim}[commandchars=@|E,fontsize=\small,frame=single,label=Example]
+  @gapprompt|gap>E @gapinput|A:=AGpql(2,2,3);E
+  <HyperplaneArrangement: 6 hyperplanes in 3-space>
+  @gapprompt|gap>E @gapinput|Print(LaTeXDrawSpherePicture(A));E
+  \tdplotsetmaincoords{63}{63}
+  \begin{tikzpicture}[scale=3,tdplot_main_coords]
+  
+  \draw[ball color = gray!40, opacity = 0.2] (0,0,0) circle (1cm);
+  
+  \def\OMcolor{blue!75!black}
+  {\color{\OMcolor}
+  % the vertices of the OM-cpx
+  \foreach \i/\vx/\vy/\vz in {
+  1/0./0./1., 
+  2/-0.579/0.579/0.579, 
+  3/-0.579/-0.579/0.579, 
+  4/0.579/-0.579/0.579, 
+  5/0.579/0.579/0.579, 
+  6/0./1./0., 
+  7/1./0./0., 
+  8/0./0./-1., 
+  9/0.579/-0.579/-0.579, 
+  10/0.579/0.579/-0.579, 
+  11/-0.579/0.579/-0.579, 
+  12/-0.579/-0.579/-0.579, 
+  13/0./-1./0., 
+  14/-1./0./0. 
+  }{
+  \node (\i) at (\vx,\vy,\vz) {};
+  \filldraw[color=\OMcolor] (\i) circle[radius=0.5pt];
+  }
+  %		
+  % the edges of the OM-cpx
+  \foreach \ax/\ay/\az/\bx/\by/\bz in {
+  0./0./1./  -0.579/0.579/0.579, %[ 1, 2 ] 
+  0./0./1./  -0.579/-0.579/0.579, %[ 1, 3 ] 
+  0./0./1./  0.579/-0.579/0.579, %[ 1, 4 ] 
+  0./0./1./  0.579/0.579/0.579, %[ 1, 5 ] 
+  -0.579/0.579/0.579/  -0.579/-0.579/0.579, %[ 2, 3 ] 
+  -0.579/0.579/0.579/  0.579/0.579/0.579, %[ 2, 5 ] 
+  -0.579/0.579/0.579/  0./1./0., %[ 2, 6 ] 
+  -0.579/0.579/0.579/  -0.579/0.579/-0.579, %[ 2, 11 ] 
+  -0.579/0.579/0.579/  -1./0./0., %[ 2, 14 ] 
+  -0.579/-0.579/0.579/  0.579/-0.579/0.579, %[ 3, 4 ] 
+  -0.579/-0.579/0.579/  -0.579/-0.579/-0.579, %[ 3, 12 ] 
+  -0.579/-0.579/0.579/  0./-1./0., %[ 3, 13 ] 
+  -0.579/-0.579/0.579/  -1./0./0., %[ 3, 14 ] 
+  0.579/-0.579/0.579/  0.579/0.579/0.579, %[ 4, 5 ] 
+  0.579/-0.579/0.579/  1./0./0., %[ 4, 7 ] 
+  0.579/-0.579/0.579/  0.579/-0.579/-0.579, %[ 4, 9 ] 
+  0.579/-0.579/0.579/  0./-1./0., %[ 4, 13 ] 
+  0.579/0.579/0.579/  0./1./0., %[ 5, 6 ] 
+  0.579/0.579/0.579/  1./0./0., %[ 5, 7 ] 
+  0.579/0.579/0.579/  0.579/0.579/-0.579, %[ 5, 10 ] 
+  0./1./0./  0.579/0.579/-0.579, %[ 6, 10 ] 
+  0./1./0./  -0.579/0.579/-0.579, %[ 6, 11 ] 
+  1./0./0./  0.579/-0.579/-0.579, %[ 7, 9 ] 
+  1./0./0./  0.579/0.579/-0.579, %[ 7, 10 ] 
+  0./0./-1./  0.579/-0.579/-0.579, %[ 8, 9 ] 
+  0./0./-1./  0.579/0.579/-0.579, %[ 8, 10 ] 
+  0./0./-1./  -0.579/0.579/-0.579, %[ 8, 11 ] 
+  0./0./-1./  -0.579/-0.579/-0.579, %[ 8, 12 ] 
+  0.579/-0.579/-0.579/  0.579/0.579/-0.579, %[ 9, 10 ] 
+  0.579/-0.579/-0.579/  -0.579/-0.579/-0.579, %[ 9, 12 ] 
+  0.579/-0.579/-0.579/  0./-1./0., %[ 9, 13 ] 
+  0.579/0.579/-0.579/  -0.579/0.579/-0.579, %[ 10, 11 ] 
+  -0.579/0.579/-0.579/  -0.579/-0.579/-0.579, %[ 11, 12 ] 
+  -0.579/0.579/-0.579/  -1./0./0., %[ 11, 14 ] 
+  -0.579/-0.579/-0.579/  0./-1./0., %[ 12, 13 ] 
+  -0.579/-0.579/-0.579/  -1./0./0. %[ 12, 14 ] 
+  }{
+  \GCArcABfb{\ax}{\ay}{\az}{\bx}{\by}{\bz}{color=\OMcolor}
+  }
+  }
+  \end{tikzpicture}
+\end{Verbatim}
+ 
+
+ 
+ \includegraphics{./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf}
+ 
+
  }
 
  }
