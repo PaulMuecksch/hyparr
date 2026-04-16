@@ -19,8 +19,8 @@
   Paul Mücksch
       Email:    [7Xmailto:paul.muecksch+uni@gmail.com[107X
       Homepage: [7Xhttps://paulmuecksch.github.io[107X
-      Address:  [33X[0;14YLeibniz    Universität    Hannover/nInstitut    für   Algebra,
-                Zahlentheorie und Diskrete Mathematik[133X
+      Address:  [33X[0;14YLeibniz Universität Hannover[133X
+                [33X[0;14YInstitut für Algebra, Zahlentheorie und Diskrete Mathematik[133X
                 [33X[0;14YWelfengarten 1[133X
                 [33X[0;14Y30167 Hannover, Germany[133X
   

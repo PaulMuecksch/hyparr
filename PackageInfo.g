@@ -23,7 +23,7 @@ Persons := [
     IsAuthor := true,
     IsMaintainer := true,
     PostalAddress := Concatenation([
-        "Leibniz Universität Hannover/n",
+        "Leibniz Universität Hannover\n",
         "Institut für Algebra, Zahlentheorie und Diskrete Mathematik\n",
         "Welfengarten 1\n",
         "30167 Hannover, Germany"
