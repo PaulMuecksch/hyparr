@@ -41,6 +41,7 @@
   [2XIsReal[102X, for IsHyperplaneArrangement 2.3-1 
   [2XLaTeXDrawProjPicture[102X 9.1-1 
   [2XLaTeXDrawSpherePicture[102X 9.1-2 
+  [2XLaTeXDrawTopeGraph[102X 9.1-3 
   [2XLAtoms[102X, for IsGeomLattice 2.4-2 
   [2XLAutGroup[102X, for IsGeomLattice 2.4-7 
   [2XLCharPoly[102X, for IsGeomLattice 2.4-9 

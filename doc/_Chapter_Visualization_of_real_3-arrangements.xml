@@ -188,6 +188,31 @@ gap> Print(LaTeXDrawSpherePicture(A));
 </ManSection>
 
 
+<ManSection>
+  <Func Arg="A" Name="LaTeXDrawTopeGraph" />
+ <Returns>A string.
+</Returns>
+ <Description>
+ Generates LaTeX tikz-code
+ for the tope graph of a real 3-arrangement on the unit sphere.
+ To compile the LaTeX-code the .sty-file "<URL Text="graphonsphere.sty">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/graphonsphere.sty</URL>" (from /doc/LaTeX_Examples)
+ needs to be in the same folder and added via "\usepackage{graphonsphere}".
+<P/>
+ The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf</URL>).
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+<P/>
+<Alt Only="LaTeX"><![CDATA[
+ \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf}
+]]></Alt>
+<P/>
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

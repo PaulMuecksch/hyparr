@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,25 +652,34 @@ Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf  use
 d on input line 2453.
 (pdftex.def)             Requested size: 294.74846pt x 481.32304pt.
  [37] [38 <./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf>] [39]
-<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=609, 286.44415pt x 195
-.33878pt>
+<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=609, 286.44415pt x 379
+.31813pt>
 File: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf Graphic file (type pd
 f)
 <use ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf  u
 sed on input line 2560.
-(pdftex.def)             Requested size: 286.44345pt x 195.33827pt.
+(pdftex.def)             Requested size: 286.44345pt x 379.3172pt.
+ [40]
+<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=616, 285.9995pt x 197.2017
+4pt>
+File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
+<use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
+Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
+on input line 2592.
+(pdftex.def)             Requested size: 285.9988pt x 197.20125pt.
  (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [40 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>]
+ [41 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>] [42 <./LaTeX_Exampl
+es/LaTeXDrawTopeGraph_Example.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
  []
 
-) [41
+) [43
 
 ] (./HypArr.ind
 Underfull \hbox (badness 10000) in paragraph at lines 85--87
@@ -682,10 +691,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--87
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[42
+[44
 
 
-] [43]) (./HypArr.aux)
+] [45]) (./HypArr.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -696,10 +705,10 @@ Package rerunfilecheck Info: File `HypArr.brf' has not changed.
 (rerunfilecheck)             Checksum: 59408825D1142C62F76894FF9EE829EB;657.
  ) 
 Here is how much of TeX's memory you used:
- 12145 strings out of 474222
- 189565 string characters out of 5748734
+ 12157 strings out of 474222
+ 190035 string characters out of 5748734
  1938975 words of memory out of 5000000
- 33895 multiletter control sequences out of 15000+600000
+ 33903 multiletter control sequences out of 15000+600000
  624077 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,7n,93p,491b,823s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -719,10 +728,10 @@ l/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on HypArr.pdf (43 pages, 354613 bytes).
+Output written on HypArr.pdf (45 pages, 370593 bytes).
 PDF statistics:
- 878 PDF objects out of 1000 (max. 8388607)
- 783 compressed objects within 8 object streams
- 290 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 904 PDF objects out of 1000 (max. 8388607)
+ 802 compressed objects within 9 object streams
+ 294 named destinations out of 1000 (max. 500000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 

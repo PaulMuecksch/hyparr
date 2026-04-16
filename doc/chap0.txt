@@ -150,6 +150,7 @@
     9.1 [33X[0;0YGlobal methods[133X
       9.1-1 LaTeXDrawProjPicture
       9.1-2 LaTeXDrawSpherePicture
+      9.1-3 LaTeXDrawTopeGraph
   
   
   [32X
