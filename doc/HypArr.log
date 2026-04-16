@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -643,30 +643,30 @@ l.2380 \hyperdef{L}{X80841F8D80722081}{}
                                          [36
 
 ]
-<./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf, id=572, 294.74919pt x 481.3
-2422pt>
+<./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf, id=572, 250.97162pt x 471.3
+2385pt>
 File: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf Graphic file (type pdf)
 
 <use ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf  use
 d on input line 2453.
-(pdftex.def)             Requested size: 294.74846pt x 481.32304pt.
+(pdftex.def)             Requested size: 250.971pt x 471.3227pt.
  [37] [38 <./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf>] [39]
-<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=609, 286.44415pt x 195
-.33878pt>
+<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=609, 242.6656pt x 185.
+33842pt>
 File: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf Graphic file (type pd
 f)
 <use ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf  u
 sed on input line 2560.
-(pdftex.def)             Requested size: 286.44345pt x 195.33827pt.
-<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=612, 285.9995pt x 197.2017
-4pt>
+(pdftex.def)             Requested size: 242.665pt x 185.33797pt.
+<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=612, 242.22194pt x 187.201
+39pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
 on input line 2592.
-(pdftex.def)             Requested size: 285.9988pt x 197.20125pt.
+(pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
  (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
@@ -727,7 +727,7 @@ l/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on HypArr.pdf (44 pages, 364974 bytes).
+Output written on HypArr.pdf (44 pages, 364513 bytes).
 PDF statistics:
  899 PDF objects out of 1000 (max. 8388607)
  799 compressed objects within 8 object streams
