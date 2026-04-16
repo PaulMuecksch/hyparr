@@ -4,7 +4,7 @@ encoding := "UTF-8",
 bookname := "HypArr",
 entries :=
 [ [ "Title page", "0.0", [ 0, 0, 0 ], 1, 1, "title page", "X7D2C85EC87DD46E5" ], 
-  [ "Table of Contents", "0.0-1", [ 0, 0, 1 ], 31, 2, "table of contents", "X8537FEB07AF2BEC8" ], 
+  [ "Table of Contents", "0.0-1", [ 0, 0, 1 ], 30, 2, "table of contents", "X8537FEB07AF2BEC8" ], 
   [ "\033[1X\033[33X\033[0;-2YIntroduction\033[133X\033[101X", "1", [ 1, 0, 0 ], 1, 4, "introduction", "X7DFB63A97E67C0A1" ], 
   [ "\033[1X\033[33X\033[0;-2YHyperplane arrangements\033[133X\033[101X", "2", [ 2, 0, 0 ], 1, 5, "hyperplane arrangements", 
       "X7EF7AC44814961EC" ], [ "\033[1X\033[33X\033[0;-2YConstruction of arrangements of hyperplanes\033[133X\033[101X", "2.1", 
