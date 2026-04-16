@@ -191,6 +191,6 @@ entries :=
   [ "\033[2XTPRankPoly\033[102X for IsTopePoset", "8.2-3", [ 8, 2, 3 ], 52, 35, "tprankpoly for istopeposet", 
       "X8258DD9D78DDA4C6" ], [ "\033[2XLaTeXDrawProjPicture\033[102X", "9.1-1", [ 9, 1, 1 ], 7, 36, "latexdrawprojpicture", 
       "X78621314826E390B" ], [ "\033[2XLaTeXDrawSpherePicture\033[102X", "9.1-2", [ 9, 1, 2 ], 72, 38, "latexdrawspherepicture",
-      "X786A445B7D28CCF6" ], [ "\033[2XLaTeXDrawTopeGraph\033[102X", "9.1-3", [ 9, 1, 3 ], 164, 40, "latexdrawtopegraph", 
+      "X786A445B7D28CCF6" ], [ "\033[2XLaTeXDrawTopeGraph\033[102X", "9.1-3", [ 9, 1, 3 ], 163, 40, "latexdrawtopegraph", 
       "X80A3836987B539A6" ] ]
 );

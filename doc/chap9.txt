@@ -112,8 +112,7 @@
     [4X[28X14/-1./0./0. [128X[104X
     [4X[28X}{[128X[104X
     [4X[28X\node (\i) at (\vx,\vy,\vz) {};[128X[104X
-    [4X[28X%			\node[anchor=south east] at ($(\i)$) {\tiny{$\i$}};[128X[104X
-    [4X[28X\filldraw[color=\OMcolor] (\i) circle[radius=0.5pt];[128X[104X
+    [4X[28X\POnSfb{\vx}{\vy}{\vz}{}[128X[104X
     [4X[28X}[128X[104X
     [4X[28X%		[128X[104X
     [4X[28X% the edges of the OM-cpx[128X[104X

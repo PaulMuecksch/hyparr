@@ -2,7 +2,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Draw great circle arcs on a sphere for the oriented matroid complex and its dual
+%%% Draw great circle arcs on a sphere to illustrate the oriented matroid complex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % required packages
@@ -39,7 +39,37 @@
 }
 
 
-% draw great circle arc between A and B and distinguish between the front (solid) and back (dashed) part
+% midpoint on gc-arc between the points A and B
+
+\newcommand{\GCMidPointAB}[7]{
+	\pgfmathsetmacro{\Ax}{#1}
+	\pgfmathsetmacro{\Ay}{#2}
+	\pgfmathsetmacro{\Az}{#3}
+	\pgfmathsetmacro{\Bx}{#4}
+	\pgfmathsetmacro{\By}{#5}
+	\pgfmathsetmacro{\Bz}{#6}
+	
+	\pgfmathsetmacro{\nA}{sqrt(\Ax*\Ax+\Ay*\Ay+\Az*\Az)}
+	\pgfmathsetmacro{\nB}{sqrt(\Bx*\Bx+\By*\By+\Bz*\Bz)}
+	
+	\pgfmathsetmacro{\nAx}{\Ax/\nA}
+	\pgfmathsetmacro{\nAy}{\Ay/\nA}
+	\pgfmathsetmacro{\nAz}{\Az/\nA}
+	\pgfmathsetmacro{\nBx}{\Bx/\nB}
+	\pgfmathsetmacro{\nBy}{\By/\nB}
+	\pgfmathsetmacro{\nBz}{\Bz/\nB}
+	
+	\pgfmathsetmacro{\a}{acos(\nAx*\nBx+\nAy*\nBy+\nAz*\nBz)}
+	\pgfmathsetmacro{\tn}{#7}
+	
+	\node (mpAB) at
+	({\nAx*sin((1-\tn)*\a)/sin(\a) +\nBx*sin(\tn*\a)/sin(\a)},
+	{\nAy*sin((1-\tn)*\a)/sin(\a) + \nBy*sin(\tn*\a)/sin(\a)},
+	{\nAz*sin((1-\tn)*\a)/sin(\a) + \nBz*sin(\tn*\a)/sin(\a)}) {};
+	\filldraw (mpAB) circle[radius=0.3pt];
+}
+
+% draw great circle arc between A and B and distinguish between the front (solid) and back (opacity=0.25) part
 \newcommand{\GCArcABfb}[7]{
 	\pgfmathsetmacro{\Ax}{#1}
 	\pgfmathsetmacro{\Ay}{#2}
@@ -121,6 +151,60 @@
 			}				
 		}
 	}		
+}
+
+
+% draw a point P on the sphere and distinguish between the front (solid) and back (opacity=0.25) part
+\newcommand{\POnSfb}[4]{
+	\pgfmathsetmacro{\Px}{#1}
+	\pgfmathsetmacro{\Py}{#2}
+	\pgfmathsetmacro{\Pz}{#3}
+	\pgfmathsetmacro{\nP}{sqrt(\Px*\Px+\Py*\Py+\Pz*\Pz)}
+	\pgfmathsetmacro{\nPx}{\Px/\nP}
+	\pgfmathsetmacro{\nPy}{\Py/\nP}
+	\pgfmathsetmacro{\nPz}{\Pz/\nP}
+	
+	\let\p\tdplotmainphi
+	\let\t\tdplotmaintheta
+	\pgfmathsetmacro\azx{sin(\p)*sin(\t)}
+	\pgfmathsetmacro\azy{-cos(\p)*sin(\t)}
+	\pgfmathsetmacro\azz{cos(\t)}
+	
+	\pgfmathsetmacro{\sPZ}{\nPx*\azx+\nPy*\azy+\nPz*\azz}
+	
+	\pgfmathsetmacro{\Pf}{\sPZ>=0}
+	
+	\ifthenelse{\Pf>0}{%
+		\filldraw[#4] ({\nPx},{\nPy},{\nPz}) circle[radius=0.5pt];
+	}{%
+		\filldraw[opacity=0.25, #4] ({\nPx},{\nPy},{\nPz}) circle[radius=0.5pt];
+	}
+}
+
+\newcommand{\clipGCArcAB}[7]{
+	\pgfmathsetmacro{\Ax}{#1}
+	\pgfmathsetmacro{\Ay}{#2}
+	\pgfmathsetmacro{\Az}{#3}
+	\pgfmathsetmacro{\Bx}{#4}
+	\pgfmathsetmacro{\By}{#5}
+	\pgfmathsetmacro{\Bz}{#6}
+	
+	\pgfmathsetmacro{\nA}{sqrt(\Ax*\Ax+\Ay*\Ay+\Az*\Az)}
+	\pgfmathsetmacro{\nB}{sqrt(\Bx*\Bx+\By*\By+\Bz*\Bz)}
+	
+	\pgfmathsetmacro{\nAx}{\Ax/\nA}
+	\pgfmathsetmacro{\nAy}{\Ay/\nA}
+	\pgfmathsetmacro{\nAz}{\Az/\nA}
+	\pgfmathsetmacro{\nBx}{\Bx/\nB}
+	\pgfmathsetmacro{\nBy}{\By/\nB}
+	\pgfmathsetmacro{\nBz}{\Bz/\nB}
+	
+	\pgfmathsetmacro{\a}{acos(\nAx*\nBx+\nAy*\nBy+\nAz*\nBz)}
+	
+	\clip[#7] plot[variable=\t, domain=1:0, samples=\samples]
+	({\nAx*sin((1-\t)*\a)/sin(\a) +\nBx*sin(\t*\a)/sin(\a)},
+	{\nAy*sin((1-\t)*\a)/sin(\a) + \nBy*sin(\t*\a)/sin(\a)},
+	{\nAz*sin((1-\t)*\a)/sin(\a) + \nBz*sin(\t*\a)/sin(\a)});
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

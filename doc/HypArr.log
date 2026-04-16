@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -658,14 +658,14 @@ File: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf Graphic file (type pd
 f)
 <use ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf  u
-sed on input line 2560.
+sed on input line 2559.
 (pdftex.def)             Requested size: 242.665pt x 185.33797pt.
 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=612, 242.22194pt x 187.201
 39pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
-on input line 2592.
+on input line 2591.
 (pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
  (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
@@ -727,7 +727,7 @@ l/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on HypArr.pdf (44 pages, 364513 bytes).
+Output written on HypArr.pdf (44 pages, 364461 bytes).
 PDF statistics:
  899 PDF objects out of 1000 (max. 8388607)
  799 compressed objects within 8 object streams
