@@ -187,6 +187,14 @@ DeclareGlobalFunction("LaTeXDrawSpherePicture");
 DeclareGlobalFunction("LaTeXDrawTopeGraph");
 
 
+#! Both function <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
+#! can be used to draw nice pictures of oriented matroid complexes and their duals.
+#! See e.g. (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf</URL>)
+#! @BeginLatexOnly
+#! \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf}
+#! @EndLatexOnly
+
+
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

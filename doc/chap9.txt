@@ -177,3 +177,8 @@
   [4X[32X  Example  [32X[104X
   [4X[32X[104X
   
+  [33X[0;0YBoth  function [10XLaTexDrawSpherePicture[110X and [10XLaTeXDrawTopeGraph[110X combined can be
+  used  to  draw  nice pictures of oriented matroid complexes and their duals.
+  See         e.g.         (only         in         pdf         or         pic
+  ([7Xhttps://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf[107X))[133X
+  

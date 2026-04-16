@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  16 APR 2026 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,12 +667,19 @@ File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
 on input line 2591.
 (pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
+ [40 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>]
+<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=631, 216.7287pt x 190.4435pt>
+File: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf Graphic file (type pdf)
+<use ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>
+Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf  used on in
+put line 2598.
+(pdftex.def)             Requested size: 216.72816pt x 190.44302pt.
  (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [40 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>] [41 <./LaTeX_Exampl
-es/LaTeXDrawTopeGraph_Example.pdf>]
+ [41 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf> <./LaTeX_Examples/LaTeXD
+rawTopeGraph_H3.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
@@ -704,33 +711,34 @@ Package rerunfilecheck Info: File `HypArr.brf' has not changed.
 (rerunfilecheck)             Checksum: 59408825D1142C62F76894FF9EE829EB;657.
  ) 
 Here is how much of TeX's memory you used:
- 12156 strings out of 474222
- 190028 string characters out of 5748734
+ 12163 strings out of 474222
+ 190394 string characters out of 5748734
  1938975 words of memory out of 5000000
- 33903 multiletter control sequences out of 15000+600000
+ 33910 multiletter control sequences out of 15000+600000
  624077 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,7n,93p,491b,823s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst1
-095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sftt2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbo
-l/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on HypArr.pdf (44 pages, 364461 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst1095.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sftt2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on HypArr.pdf (44 pages, 425124 bytes).
 PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 799 compressed objects within 8 object streams
+ 926 PDF objects out of 1000 (max. 8388607)
+ 818 compressed objects within 9 object streams
  293 named destinations out of 1000 (max. 500000)
- 288 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

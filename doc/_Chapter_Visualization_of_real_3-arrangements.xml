@@ -212,6 +212,12 @@ gap> Print(LaTeXDrawSpherePicture(A));
 </ManSection>
 
 
+ Both function <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
+ can be used to draw nice pictures of oriented matroid complexes and their duals.
+ See e.g. (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf</URL>)
+<Alt Only="LaTeX"><![CDATA[
+ \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf}
+]]></Alt>
 </Section>
 
 
