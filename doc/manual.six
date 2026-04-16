@@ -52,9 +52,9 @@ entries :=
   [ "\033[1X\033[33X\033[0;-2YVisualization of real 3-arrangements\033[133X\033[101X", "9", [ 9, 0, 0 ], 1, 36, 
       "visualization of real 3-arrangements", "X867FB7CC79AC1DED" ], 
   [ "\033[1X\033[33X\033[0;-2YGlobal methods\033[133X\033[101X", "9.1", [ 9, 1, 0 ], 4, 36, "global methods", 
-      "X80841F8D80722081" ], [ "Bibliography", "bib", [ "Bib", 0, 0 ], 1, 40, "bibliography", "X7A6F98FD85F02BFE" ], 
-  [ "References", "bib", [ "Bib", 0, 0 ], 1, 40, "references", "X7A6F98FD85F02BFE" ], 
-  [ "Index", "ind", [ "Ind", 0, 0 ], 1, 41, "index", "X83A0356F839C696F" ], 
+      "X80841F8D80722081" ], [ "Bibliography", "bib", [ "Bib", 0, 0 ], 1, 41, "bibliography", "X7A6F98FD85F02BFE" ], 
+  [ "References", "bib", [ "Bib", 0, 0 ], 1, 41, "references", "X7A6F98FD85F02BFE" ], 
+  [ "Index", "ind", [ "Ind", 0, 0 ], 1, 42, "index", "X83A0356F839C696F" ], 
   [ "\033[2XHyperplaneArrangement\033[102X for IsList", "2.1-1", [ 2, 1, 1 ], 11, 5, "hyperplanearrangement for islist", 
       "X860548D886CE5BA2" ], [ "\033[2XDimension\033[102X for IsHyperplaneArrangement", "2.2-1", [ 2, 2, 1 ], 40, 5, 
       "dimension for ishyperplanearrangement", "X7CCC1A2A7C3F2CC5" ], 
@@ -190,6 +190,6 @@ entries :=
       "tpbasetope for istopeposet", "X82CEA0EB7B0AF294" ], 
   [ "\033[2XTPRankPoly\033[102X for IsTopePoset", "8.2-3", [ 8, 2, 3 ], 52, 35, "tprankpoly for istopeposet", 
       "X8258DD9D78DDA4C6" ], [ "\033[2XLaTeXDrawProjPicture\033[102X", "9.1-1", [ 9, 1, 1 ], 7, 36, "latexdrawprojpicture", 
-      "X78621314826E390B" ], [ "\033[2XLaTeXDrawSpherePicture\033[102X", "9.1-2", [ 9, 1, 2 ], 71, 38, "latexdrawspherepicture",
+      "X78621314826E390B" ], [ "\033[2XLaTeXDrawSpherePicture\033[102X", "9.1-2", [ 9, 1, 2 ], 72, 38, "latexdrawspherepicture",
       "X786A445B7D28CCF6" ] ]
 );

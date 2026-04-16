@@ -88,11 +88,11 @@ function(x,k)
 end);;
 
 InstallGlobalFunction(FloatStringCutoff,
-function(x)
+function(x,k)
 local posdot;
 	posdot := Position(x,'.');;
-	if Length(x)-posdot >= 4 then
-		return Concatenation(x{[1..posdot]},x{[posdot+1..posdot+3]});
+	if Length(x)-posdot >= k then
+		return Concatenation(x{[1..posdot]},x{[posdot+1..posdot+k]});
 	else
 		return x;;
 	fi;;
@@ -100,7 +100,7 @@ end);
 
 
 coordstr := function(x)
-    return FloatStringCutoff(String(FloatRound(x,2)));
+    return FloatStringCutoff(String(FloatRound(x,2)),2);
 end;;
 
 InstallGlobalFunction(LaTeXDrawProjPicture,

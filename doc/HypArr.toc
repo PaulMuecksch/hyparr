@@ -115,5 +115,5 @@
 \contentsline {section}{\numberline {9.1}\textcolor {Chapter }{Global methods}}{36}{section.9.1}%
 \contentsline {subsection}{\numberline {9.1.1}\textcolor {Chapter }{LaTeXDrawProjPicture}}{36}{subsection.9.1.1}%
 \contentsline {subsection}{\numberline {9.1.2}\textcolor {Chapter }{LaTeXDrawSpherePicture}}{38}{subsection.9.1.2}%
-\contentsline {chapter}{References}{40}{chapter*.2}%
-\contentsline {chapter}{Index}{41}{section*.3}%
+\contentsline {chapter}{References}{41}{chapter*.2}%
+\contentsline {chapter}{Index}{42}{section*.3}%
