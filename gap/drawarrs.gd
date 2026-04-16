@@ -168,7 +168,24 @@ DeclareGlobalFunction("LaTeXDrawProjPicture");
 #! 
 DeclareGlobalFunction("LaTeXDrawSpherePicture");
 
-
+#! @Arguments A
+#! @Returns A string.
+#! @Description
+#! Generates LaTeX tikz-code
+#! for the tope graph of a real 3-arrangement on the unit sphere.
+#! To compile the LaTeX-code the .sty-file "<URL Text="graphonsphere.sty">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/graphonsphere.sty</URL>" (from /doc/LaTeX_Examples)
+#! needs to be in the same folder and added via "\usepackage{graphonsphere}".
+#! 
+#! The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf</URL>).
+#!
+#! @BeginExampleSession
+#! @EndExampleSession
+#! 
+#! @BeginLatexOnly
+#! \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf}
+#! @EndLatexOnly
+#! 
+DeclareGlobalFunction("LaTeXDrawTopeGraph");
 
 
 ##

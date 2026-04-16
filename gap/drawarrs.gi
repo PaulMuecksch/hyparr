@@ -381,6 +381,25 @@ local G,Vs, Es, fn, s1,s2,s3, str;
     return str;;
 end);;
 
+
+
+InstallGlobalFunction(LaTeXDrawTopeGraph,
+function(A)
+local G,Vs, Es, fn, s1,s2,s3, str;
+    G:=TopeGraph3Arr(A);;
+    Vs:=G.TVertices;
+    Es:=G.TEdges;;
+
+    fn:=Filename(GAPInfo.PackageDirectories[1],"hyparr/gap/graphonsphere_1");
+    s1:=ReadAll(InputTextFile(fn));
+    fn:=Filename(GAPInfo.PackageDirectories[1],"hyparr/gap/graphonsphere_2");
+    s2:=ReadAll(InputTextFile(fn));
+    fn:=Filename(GAPInfo.PackageDirectories[1],"hyparr/gap/graphonsphere_3");
+    s3:=ReadAll(InputTextFile(fn));
+    str := Concatenation(s1,PrintVerts(Vs),s2,PrintEdges(Es,Vs),s3);;
+    return str;;
+end);;
+
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
