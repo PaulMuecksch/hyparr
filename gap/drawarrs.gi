@@ -305,7 +305,27 @@ local Vertices, Edges, ACs, vCs, d, L,R;
     Edges := Edges{Positions(List(Edges,x->OMOperation(vCs[x[1]],vCs[x[2]])=OMOperation(vCs[x[2]],vCs[x[1]]) and 0 in OMOperation(vCs[x[1]],vCs[x[2]])),true)};;
     
     return rec(DVertices := Vertices, DEdges := Edges, SignVectors := vCs);;
+end); 
+
+BindGlobal("TopeGraph3Arr",
+function(A)
+local VerticesD, Vertices, Edges, Cs,L, R;
+    R:=Roots(A);
+    Cs := OMCovectors(OrientedMatroid(A))[1];
+    L := LGroundSet(IntersectionLattice(A));
+    VerticesD := List(L[2],x->NullspaceMat(TransposedMat(R{x}))[1]);
+    VerticesD := Concatenation(VerticesD,-VerticesD);;
     
+    Vertices := List(Cs,x->VerticesD{Positions(List(VerticesD,vv->OrderCovec(List(R*vv,a->pos(a)),x)),true)});
+        
+    Edges := Combinations([1..Length(Vertices)],2);;
+    Edges := Edges{Positions(List(Edges,x->Length(SeparatingSet(List(R*Sum(Vertices[x[1]]),a->pos(a)),List(R*Sum(Vertices[x[2]]),a->pos(a))))=1),true)};;
+
+    Vertices := List(Vertices,v->List(v,x->List(x,a->CCToFloat(a))));;
+    Vertices := List(Vertices,v->Sum(List(v,a->a/Sqrt(a*a)))/Length(v));
+    Vertices := List(Vertices,v->v/Sqrt(v*v));
+    
+    return rec(TVertices := Vertices, TEdges := Edges, SignVectors := Cs);;
 end); 
 
 BindGlobal("PrintVerts",
