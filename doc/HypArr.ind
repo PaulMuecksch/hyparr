@@ -93,7 +93,7 @@
 
   \item \texttt  {LaTeXDrawProjPicture}, \hyperpage{36}
   \item \texttt  {LaTeXDrawSpherePicture}, \hyperpage{38}
-  \item \texttt  {LaTeXDrawTopeGraph}, \hyperpage{41}
+  \item \texttt  {LaTeXDrawTopeGraph}, \hyperpage{40}
   \item \texttt  {LAtoms}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LAutGroup}
