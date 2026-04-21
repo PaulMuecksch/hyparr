@@ -263,20 +263,20 @@ DeclareAttribute("LkFlats", IsGeomLattice);
 #! @Returns A function
 #! @Description
 #! Returns the rank function of the geometric lattice <A>L</A>.
-DeclareAttribute("LRankFunction", IsGeomLattice);;
+DeclareAttribute("LRankFunction", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns a graph
 #! @Description
 #! Constructs the directed graph of the Hasse diagram of L.
-DeclareAttribute("LGraph", IsGeomLattice);;
+DeclareAttribute("LGraph", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns a group
 #! @Description
 #! Computes the autmorphism group of L
 #! as a subgroup of <C>Sym(LAtoms(L))</C>.
-DeclareAttribute("LAutGroup", IsGeomLattice);;
+DeclareAttribute("LAutGroup", IsGeomLattice);
 
 #! @Arguments L
 #! @Returns function
@@ -424,7 +424,7 @@ DeclareGlobalFunction("ctf");
 
 DeclareGlobalFunction("FloatStringCutoff");
 
-# DeclareGlobalFunction("");;
+# DeclareGlobalFunction("");
 
 DeclareGlobalFunction( "HArrResHvec" );
 

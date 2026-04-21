@@ -12,7 +12,7 @@ InstallMethod(ViewObj,
     [ IsTopePoset ],
 function(TP)
 local GSet;
-    GSet := TPGroundSet(TP);;
+    GSet := TPGroundSet(TP);
     Print("<TopePoset with ",
           Length(GSet)," topes>");
 end);
@@ -30,10 +30,10 @@ InstallMethod(TopePoset,
     [ IsOrientedMatroid, IsList ],
 function(OM,BTope)
 local Ps, gset, OF, type, Topes, n;
-    Topes := OMCovectors(OM)[1];;
-    n := Length(BTope);;
-    Ps := List(Topes,T->SeparatingSet(BTope,T));;
-    Sort(Ps);;
+    Topes := OMCovectors(OM)[1];
+    n := Length(BTope);
+    Ps := List(Topes,T->SeparatingSet(BTope,T));
+    Sort(Ps);
     gset:=List([0..n],x->Ps{Positions(List(Ps,y->Length(y)),x)});
     
     type := NewType(TopePosetFamily,IsTopePosetRep);
@@ -44,14 +44,14 @@ local Ps, gset, OF, type, Topes, n;
 			bt := BTope
         )
     );
-end);;
+end);
 
 InstallMethod(TPRankPoly,
     [IsTopePoset],
 function(TP)
 local gset,t;
     t:=X(Rationals,"t");
-    gset := TPGroundSet(TP);;
+    gset := TPGroundSet(TP);
     return Sum(List([1..Length(gset)],k->Length(gset[k])*t^(k-1)));
 end);
 

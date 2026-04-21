@@ -165,7 +165,7 @@ DeclareAttribute("OMCocircuits", IsOrientedMatroid);
 #! @BeginExampleSession
 #! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
 #! <OrientedMatroid: 3 elements, rank 2>
-#! gap> G := ShallowCopy(TopeGraph(O));;
+#! gap> G := ShallowCopy(TopeGraph(O));
 #! gap> Vertices(G);
 #! [ 1 .. 6 ]
 #! gap> IsSimpleGraph(G);

@@ -38,16 +38,16 @@ end);
 InstallGlobalFunction(cp,
 function(p,k)
 local zeta;
-	zeta := E(2*p);;
-	return (zeta^k+zeta^(2*p-k))/2;;
+	zeta := E(2*p);
+	return (zeta^k+zeta^(2*p-k))/2;
 end);
 
 # sinus
 InstallGlobalFunction(sp,
 function(p,k)
 local zeta;
-	zeta := E(2*p);;
-	return (zeta^k-zeta^(2*p-k))/(2*E(4));;
+	zeta := E(2*p);
+	return (zeta^k-zeta^(2*p-k))/(2*E(4));
 end);
 
 InstallGlobalFunction(SsS3,
@@ -55,7 +55,7 @@ function(m)
 local k,n,R;
 	
 	if m<6 then
-		Print("m >\= 6!  ");;
+		Print("m >\= 6!  ");
 		return fail;
 	fi;
 		
@@ -66,9 +66,9 @@ local k,n,R;
 				[[0,0,1]],
 				List([0..(n-1)],k->[-sp(n,k),cp(n,k),0]),
 				List([0..(n-1)],k->[cp(n,2*k+1),sp(n,2*k+1),1])
-				);;
+				);
 		else	
-			Print("m = 1 (mod 4)!  ");;
+			Print("m = 1 (mod 4)!  ");
 			return fail;
 		fi;
 	else
@@ -76,10 +76,10 @@ local k,n,R;
 		R:=Concatenation(
 			List([0..(n-1)],k->[-sp(n,k),cp(n,k),0]),
 			List([0..(n-1)],k->[cp(n,2*k+1),sp(n,2*k+1),1])
-			);;
+			);
 	fi;
 	
-	return HyperplaneArrangement(R);;
+	return HyperplaneArrangement(R);
 end);
 
 ####################################################################################################
@@ -87,13 +87,13 @@ end);
 
 InstallGlobalFunction(SimpGraphFromEdgeSet,
 function(SetOfEdges)
-local e,n, AdjMat;;
-	n := Maximum(Concatenation(SetOfEdges));;
-	AdjMat := NullMat(n,n);;
+local e,n, AdjMat;
+	n := Maximum(Concatenation(SetOfEdges));
+	AdjMat := NullMat(n,n);
 	for e in SetOfEdges do
-		AdjMat[e[1]][e[2]] := 1;;
-		AdjMat[e[2]][e[1]] := 1;;
-	od;;
+		AdjMat[e[1]][e[2]] := 1;
+		AdjMat[e[2]][e[1]] := 1;
+	od;
 	return Graph( Group(()), [1..n], OnPoints, function(x,y) return AdjMat[x][y]=1; end, true );
 end);
 
@@ -101,28 +101,28 @@ InstallGlobalFunction(ConnectedSubgraphArrG,
 function(G)
 local Gm, V, Vm, v, R, r, Imap;
     if not(IsConnectedGraph(G)) then
-        return fail;;
-    fi;;
+        return fail;
+    fi;
     if Length(Vertices(G)) = 1 then
         return Arr([[1]]);
-    fi;;
+    fi;
 
-    V := Vertices(G);;
-    R := [List(V,x->1)];;
+    V := Vertices(G);
+    R := [List(V,x->1)];
     for v in V do
         Vm := Difference(V,[v]);
-        Gm := InducedSubgraph(G,Vm);;
+        Gm := InducedSubgraph(G,Vm);
         if IsConnectedGraph(Gm) then
-            r := 0*[1..Length(Vertices(G))];;
-            r{Vm} := List(Vm,x->1);;
-            Add(R,r);;
+            r := 0*[1..Length(Vertices(G))];
+            r{Vm} := List(Vm,x->1);
+            Add(R,r);
             
-            Imap := TransposedMat(IdentityMat(Length(V)){List(Vm,x->Position(V,x))});;
-            R := Concatenation( R, List( Roots(ConnectedSubgraphArrG(Gm)),x->Imap*x));;
-        fi;;
-    od;;
+            Imap := TransposedMat(IdentityMat(Length(V)){List(Vm,x->Position(V,x))});
+            R := Concatenation( R, List( Roots(ConnectedSubgraphArrG(Gm)),x->Imap*x));
+        fi;
+    od;
 
-    return Arr(R);;
+    return Arr(R);
 end);
 
 InstallMethod( ConnectedSubgraphArr,
@@ -130,7 +130,7 @@ InstallMethod( ConnectedSubgraphArr,
 function(Es)
 local G;
     G := SimpGraphFromEdgeSet(Es);
-    return ConnectedSubgraphArrG(G);;
+    return ConnectedSubgraphArrG(G);
 end);
 
 

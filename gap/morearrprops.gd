@@ -30,9 +30,9 @@
 #!  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
 #!    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
 #!   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-#! gap> m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);
+#! gap> m1:=[1,2]; m2:= [5,6]; LIsModularPair(L,m1,m2);
 #! false
-#! gap> m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);
+#! gap> m1:=[1,2]; m2:= [2,4,6]; LIsModularPair(L,m1,m2);
 #! true
 #! @EndExampleSession
 DeclareOperation( "LIsModularPair", [IsGeomLattice, IsList, IsList]);
@@ -50,7 +50,7 @@ DeclareOperation( "LIsModularPair", [IsGeomLattice, IsList, IsList]);
 #!  [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
 #!    [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
 #!   [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-#! gap> m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);
+#! gap> m1:=[1,2]; m2:= [2,4,6]; LIsModularFlat(L,m1); LIsModularFlat(L,m2);
 #! false
 #! true
 #! @EndExampleSession
@@ -144,7 +144,7 @@ DeclareProperty("OMIsSupersolvable", IsOrientedMatroid);
 #! >     [2,3,4],
 #! >     [3,0,5],
 #! >     [3,4,5]
-#! > ]);;
+#! > ]);
 #! gap> 
 #! gap> A2 := Arr([
 #! >     [1,0,0],
@@ -156,7 +156,7 @@ DeclareProperty("OMIsSupersolvable", IsOrientedMatroid);
 #! >     [2,3,4],
 #! >     [1,0,3],
 #! >     [1,2,3]
-#! > ]);;
+#! > ]);
 #! gap> IsLEquiv(A1,A2);
 #! true
 #! gap> IsFormal(A1);
@@ -167,9 +167,9 @@ DeclareProperty("OMIsSupersolvable", IsOrientedMatroid);
 DeclareProperty("IsFormal", IsHyperplaneArrangement);
 
 # some auxillary functions
-DeclareGlobalFunction("HArr_FSpace");;
-DeclareGlobalFunction("HArr_EMatS");;
-DeclareGlobalFunction("HArr_SpaceSFx");;
+DeclareGlobalFunction("HArr_FSpace");
+DeclareGlobalFunction("HArr_EMatS");
+DeclareGlobalFunction("HArr_SpaceSFx");
 
 
 #################################
@@ -232,7 +232,7 @@ DeclareOperation("OMBoundedCpx", [IsOrientedMatroid, IsInt]);
 #! @BeginExampleSession
 #! gap> O:=OrientedMatroid(
 #! >       [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]
-#! > );;
+#! > );
 #! <OrientedMatroid: 7 elements, rank 3>
 #! gap> OMIsSupersolvable(O);
 #! false
@@ -252,7 +252,7 @@ DeclareOperation("OMBoundedCpx", [IsOrientedMatroid, IsInt]);
 #!   [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
 #!   [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
 #! @EndExampleSession
-DeclareOperation("OMSupportsFalkWeights",[IsOrientedMatroid, IsInt]);;
+DeclareOperation("OMSupportsFalkWeights",[IsOrientedMatroid, IsInt]);
 
 #################################
 ##

@@ -74,7 +74,7 @@ DeclareAttribute("DerModGenerators",IsDerivationModule);
 #! @Description
 #! Returns the defining polynomial ring of <A>D</A>.
 #! @BeginExampleSession
-#! gap> D:=DerModule(AGpql(3,3,2));; DerModPRing(D);
+#! gap> D:=DerModule(AGpql(3,3,2)); DerModPRing(D);
 #! <field in characteristic 0>[x_1,x_2]
 #! @EndExampleSession
 DeclareAttribute("DerModPRing",IsDerivationModule);
@@ -116,11 +116,11 @@ DeclareAttribute("DerModProjDim", IsDerivationModule);
 #! @BeginExampleSession
 #! gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
 #! <HyperplaneArrangement: 5 hyperplanes in 3-space>
-#! gap> D:=DerModule(A);; DerModIsFree(D);
+#! gap> D:=DerModule(A); DerModIsFree(D);
 #! true
 #! gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
 #! <HyperplaneArrangement: 4 hyperplanes in 3-space>
-#! gap> D:=DerModule(A);; DerModIsFree(D);
+#! gap> D:=DerModule(A); DerModIsFree(D);
 #! false
 #! @EndExampleSession
 DeclareAttribute("DerModIsFree", IsDerivationModule);
@@ -164,7 +164,7 @@ DeclareAttribute("HArrIsFree", IsHyperplaneArrangement);
 #! @EndExampleSession
 DeclareProperty("IsInductivelyFree", IsHyperplaneArrangement);
 
-DeclareSynonym("IsIF",IsInductivelyFree);;
+DeclareSynonym("IsIF",IsInductivelyFree);
 
 #! @Arguments A
 #! @Returns true or false.
@@ -182,14 +182,14 @@ DeclareSynonym("IsIF",IsInductivelyFree);;
 #! @EndExampleSession
 DeclareProperty("IsDivisionallyFree", IsHyperplaneArrangement);
 
-DeclareSynonym("IsDF",IsDivisionallyFree);;
+DeclareSynonym("IsDF",IsDivisionallyFree);
 
 
 
 #################################
 # some auxillary functions
 #################################
-DeclareGlobalFunction("IsSubMultiSet");;
+DeclareGlobalFunction("IsSubMultiSet");
 
 
 

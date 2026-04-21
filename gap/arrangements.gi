@@ -17,25 +17,25 @@ BindGlobal("GeomLatticeFamily",
 InstallGlobalFunction(HypArr_PWLinInd,
 function(ll)
 local test,l2,i,j,k,l,d;
-    l:=ShallowCopy(ll);;
-    k:=0;;
+    l:=ShallowCopy(ll);
+    k:=0;
 	if IsBound(ll[1]) then
-		d:=Length(ll[1]);;
+		d:=Length(ll[1]);
 	else
-		d:=0;;
-	fi;;
+		d:=0;
+	fi;
 
     for i in [1..Length(ll)] do
         if Rank(ll{[i]})=0 then
-            Remove(l,i+k);;
-            k:=k-1;;
-        fi;;
-    od;;
+            Remove(l,i+k);
+            k:=k-1;
+        fi;
+    od;
 
     if l=[] then
-		# l:=[0*[1..d]];;
-        return l;;
-    fi;;
+		# l:=[0*[1..d]];
+        return l;
+    fi;
 
 #     for
 	for i in [1..Length(l)] do
@@ -44,7 +44,7 @@ local test,l2,i,j,k,l,d;
 		l2:=ShallowCopy(l);
 		for j in [(i+1)..Length(l)] do
 			if Rank(l{[i,j]})=1 then
-# 				Print(j);;
+# 				Print(j);
 				Remove(l2,j+k);
 				k:=k-1;
 				test:=false;
@@ -75,7 +75,7 @@ function(r)
 		F := "not determined";
     else
         dim := Length(r[1]);
-		F:=DefaultField(Concatenation(r));;
+		F:=DefaultField(Concatenation(r));
         l := HypArr_PWLinInd(r);
     fi;
 
@@ -145,11 +145,11 @@ InstallMethod(LkFlats,
     [IsGeomLattice],
 function(L)
 local kFlatsFct, gset;
-	gset := LGroundSet(L);;
+	gset := LGroundSet(L);
 	kFlatsFct := function(k)
-		return gset[k];;
-	end;;
-	return kFlatsFct;;
+		return gset[k];
+	end;
+	return kFlatsFct;
 end);
 
 InstallMethod(LRankFunction,
@@ -157,23 +157,23 @@ InstallMethod(LRankFunction,
 function(L)
 local RkFct;
     RkFct := function(m)
-    local r;;
-        if m=[] then return 0; fi;;
+    local r;
+        if m=[] then return 0; fi;
         for r in [1..LRank(L)] do
             if true in List(LkFlats(L)(r),x->IsSubset(x,m)) then
-                return r;;
-            fi;;
-        od;;
-        return fail;;
-    end;;
-    return RkFct;;
+                return r;
+            fi;
+        od;
+        return fail;
+    end;
+    return RkFct;
 end);
 
 InstallMethod(LGraph,
     [IsGeomLattice],
 function(L)
 local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
-    GSet := LGroundSet(L);;
+    GSet := LGroundSet(L);
     B:=Concatenation(GSet);
 	n:=Concatenation([0],List([1..Length(GSet)],y->Sum(List(GSet{[1..y]},x->Length(x)))));
 	GraphMat:=NullMat(n[Length(GSet)+1],n[Length(GSet)+1])	;
@@ -190,17 +190,17 @@ local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
 
 	GraphL := Graph(Group( () ), [1..n[Length(GSet)+1]], OnPoints,function(x,y) return GraphMat[x][y]=1; end, true);
 
-	return GraphL;;
+	return GraphL;
 end);
 
 InstallMethod(LAutGroup,
     [IsGeomLattice],
 function(L)
 local G,GraphL;
-	GraphL:=ShallowCopy(LGraph(L));;
+	GraphL:=ShallowCopy(LGraph(L));
 	G := AutGroupGraph(GraphL);
 	G := Image(ActionHomomorphism(G,LAtoms(L)));
-	return G;;
+	return G;
 end);
 
 
@@ -238,24 +238,24 @@ function(R,Lo,Hn)
     # ------------------------------------------------------------
     if ForAny(R, x -> Rank([x,Hn]) = 1) then
         return Lo;
-    fi;;
+    fi;
 
     # ------------------------------------------------------------
     # If the lattice is empty, this is the first hyperplane.
     # The lattice consists only of the hyperplane itself.
     # ------------------------------------------------------------
     if Lo=[] then
-        return [[[1]]];;
-    fi;;
+        return [[[1]]];
+    fi;
 
     # Make a copy of the lattice that we will modify
-    Ln:=List(Lo, x -> List(x, ShallowCopy));;
+    Ln:=List(Lo, x -> List(x, ShallowCopy));
 
     # n = number of hyperplanes already present
-    n := Length(Lo[1]);;
+    n := Length(Lo[1]);
 
     # r = number of levels in the lattice
-    r := Length(Lo);;
+    r := Length(Lo);
 
     # ------------------------------------------------------------
     # Iterate through all existing lattice elements
@@ -265,7 +265,7 @@ function(R,Lo,Hn)
 
             # m represents the set of hyperplanes defining
             # a particular intersection
-            m := ShallowCopy(Lo[k][i]);;
+            m := ShallowCopy(Lo[k][i]);
 
             # ----------------------------------------------------
             # Check if the intersection defined by m is already
@@ -298,20 +298,20 @@ function(R,Lo,Hn)
                 elif k=r then
 
                     # If we are at the top level, create a new level
-                    Add(Ln,[Concatenation(m,[n+1])]);;
+                    Add(Ln,[Concatenation(m,[n+1])]);
 
                 fi;
-            fi;;
-        od;;
-    od;;
+            fi;
+        od;
+    od;
 
     # ------------------------------------------------------------
     # Add the new hyperplane itself as a rank-1 element
     # ------------------------------------------------------------
-    Add(Ln[1],[n+1]);;
+    Add(Ln[1],[n+1]);
 
-    return Ln;;
-end);;
+    return Ln;
+end);
 
 
 #####################################################################
@@ -361,7 +361,7 @@ function(A)
         return A!.MSetInvL;
     fi;
 
-    L:=LGroundSet(IntersectionLattice(A));;
+    L:=LGroundSet(IntersectionLattice(A));
 	I:=[];
 	for i in [1..Length(L)] do
 		Add(I,List(Set(List(L[i],x->Length(x))),x->[x,Length(Positions(List(L[i],x->Length(x)),x))]));
@@ -392,7 +392,7 @@ function(A)
 		AA := HyperplaneArrangement(r{[2..q]});
 		An := HArrRestriction(A,1);
 	    return CharPoly(AA) - CharPoly(An);
-    fi;;
+    fi;
 end);
 
 ## Factorization of an rational Polynomial
@@ -405,15 +405,15 @@ end);
 InstallMethod(ExpArr,
 	[ IsHyperplaneArrangement ],
 function(A)
-local expA;;
+local expA;
 	if IsBound(A!.exp) then
-		return A!.exp;;
-	fi;;
-    expA:=List(facQ(CharPoly(A)),x->-Value(x,0));;
+		return A!.exp;
+	fi;
+    expA:=List(facQ(CharPoly(A)),x->-Value(x,0));
     if Length(expA)<>Dimension(A) then
         return fail;
-    fi;;
-    return expA;;
+    fi;
+    return expA;
 end);
 
 
@@ -422,10 +422,10 @@ InstallMethod(HArrIsIrreducible,
 function(A)
 local f,t;
 	f :=CharPoly(A);
-	t := IndeterminateOfUnivariateRationalFunction(f);;
+	t := IndeterminateOfUnivariateRationalFunction(f);
 	if f mod t = 0*t or f mod (t-1)^2 = 0*t then
 		return false;
-	fi;;
+	fi;
     return true;
 end);
 
@@ -438,7 +438,7 @@ InstallMethod(LMoebius,
 function(L)
  	return function(m,i)
 		local m2,j,I, gset;
-			gset := LGroundSet(L);;
+			gset := LGroundSet(L);
 			if not m in gset[i] then
 				return fail;
 			fi;
@@ -470,8 +470,8 @@ function(L)
 local m,g,t,i,j,gset;
 	if IsBound(L!.charpoly) then
 		return L!.charpoly;
-	fi;;
-	gset := LGroundSet(L);;
+	fi;
+	gset := LGroundSet(L);
 	t:=X(Rationals,"t");
 	m:=LMoebius(L);
 	g:=t^(Length(gset));
@@ -480,8 +480,8 @@ local m,g,t,i,j,gset;
 			g:=g+t^(Length(gset)-i)*m(gset[i][j],i);
 		od;
 	od;
-	L!.charpoly := g;;
-	return L!.charpoly;;
+	L!.charpoly := g;
+	return L!.charpoly;
 end);
 
 InstallMethod(LIsIrreducible,
@@ -489,10 +489,10 @@ InstallMethod(LIsIrreducible,
 function(L)
 local f,t;
 	f :=LCharPoly(L);
-	t := IndeterminateOfUnivariateRationalFunction(f);;
+	t := IndeterminateOfUnivariateRationalFunction(f);
 	if f mod (t-1)^2 = 0*t then
 		return false;
-	fi;;
+	fi;
     return true;
 end);
 
@@ -508,13 +508,13 @@ function(L)
 local r, Lk, rfct;
 	if not(LIsIrreducible(L)) then
 		return false;
-	fi;;
+	fi;
 	r := LRank(L);
 	Lk := LkFlats(L)(r-1);
-	rfct := LRankFunction(L);;
+	rfct := LRankFunction(L);
 	if ForAny(Lk,m->Length(m)<>rfct(m)) then
 		return false;
-	fi;;
+	fi;
 	return true;
 end);
 
@@ -530,13 +530,13 @@ InstallMethod(LLocalizationRk,
 	[IsGeomLattice, IsList, IsInt],
 function(L,mX,k)
 local gset, type, gsetLocX, Fi;
-	gset:=LGroundSet(L);;
+	gset:=LGroundSet(L);
 	if not(mX in LkFlats(L)(k)) then
 		return fail;
-	fi;;
+	fi;
 	gsetLocX := List([1..k-1],
 		i->gset[i]{Positions(List(gset[i],x->IsSubset(mX,x)),true)});
-	gsetLocX := Concatenation(gsetLocX,[[mX]]);;
+	gsetLocX := Concatenation(gsetLocX,[[mX]]);
 
 	type := NewType(GeomLatticeFamily,
                     IsGeomLatticeRep);
@@ -549,7 +549,7 @@ local gset, type, gsetLocX, Fi;
         )
     );
 
-end);;
+end);
 
 ####################################################################################################
 # Global auxillary functions
@@ -557,33 +557,33 @@ end);;
 
 InstallGlobalFunction( HArrResHvec,
 function(A,h)
-local k,Am,T,i,z, type, dim;;
+local k,Am,T,i,z, type, dim;
 
     # If h is the zero vector, return the arrangement unchanged
     if Rank([h])=0 then
         return A;
-    fi;;
+    fi;
 
     # Dimension of the ambient space
-    k:=Length(h);;
+    k:=Length(h);
 
     # Generator of the underlying field
-    z:=GeneratorsOfField(Field(h))[1];;
+    z:=GeneratorsOfField(Field(h))[1];
 
     # Start with the identity transformation matrix
-    T:=z*IdentityMat(k);;
+    T:=z*IdentityMat(k);
 
     # Find the first nonzero entry of h
-    i:=Minimum(Positions(List(h,x->x<>0*z),true));;
+    i:=Minimum(Positions(List(h,x->x<>0*z),true));
 
     # Replace the i-th row with h
-    T[i]:=h;;
+    T[i]:=h;
 
     # Invert the transformation matrix
-    T:=T^(-1);;
+    T:=T^(-1);
 
     # Copy the defining linear forms of A
-    Am:=ShallowCopy(Roots(A));;
+    Am:=ShallowCopy(Roots(A));
 
     # Apply the coordinate transformation
     Am:=Am*T;
@@ -591,7 +591,7 @@ local k,Am,T,i,z, type, dim;;
     # Remove the i-th coordinate to obtain the restriction
     Am:=List(Am,x->Concatenation(x{[1..(i-1)]},x{[(i+1)..Dimension(A)]}));
 
-	dim := Rank(Am);;
+	dim := Rank(Am);
 
     # Return the restricted hyperplane arrangement
 	# type := NewType(HyperplaneArrangementFamily,
@@ -612,13 +612,13 @@ InstallMethod( HArrRestriction,
 	[IsHyperplaneArrangement, IsInt],
 function(A,k)
     # Restrict the arrangement A to the hyperplane indexed by k
-    return HArrResHvec(A,Roots(A)[k]);;
+    return HArrResHvec(A,Roots(A)[k]);
 end);
 
 InstallMethod( HArrRestriction,
 	[IsHyperplaneArrangement, IsList],
 function(A,S)
-local An,Sn;;
+local An,Sn;
 	# If S contains vectors defining hyperplanes
     if IsBound(S[1]) then
 
@@ -626,21 +626,21 @@ local An,Sn;;
         An:=HArrResHvec(A,S[1]);
 
         # Compute the remaining restriction directions
-        Sn:=Roots(HArrResHvec(HyperplaneArrangement(S),S[1]));;
+        Sn:=Roots(HArrResHvec(HyperplaneArrangement(S),S[1]));
 
 		if Sn<>[] then
         # Continue restricting recursively
-	        return HyperplaneArrangement(Roots(HArrRestriction(An,Sn)));;
+	        return HyperplaneArrangement(Roots(HArrRestriction(An,Sn)));
 		else
 			return An;
-		fi;;
+		fi;
 
     else
 
         # If no restriction is specified, return A unchanged
-        return HyperplaneArrangement(Roots(A));;
+        return HyperplaneArrangement(Roots(A));
 
-    fi;;
+    fi;
 end);
 
 
@@ -669,7 +669,7 @@ end);
 InstallMethod(LIsIsomorphic,
 	[IsGeomLattice, IsGeomLattice],
 function(LA,LB)
-local LGraphA,LGraphB;;
+local LGraphA,LGraphB;
     LGraphA := ShallowCopy(LGraph(LA));
     LGraphB := ShallowCopy(LGraph(LB));
     return IsIsomorphicGraph(LGraphA,LGraphB);
@@ -679,7 +679,7 @@ InstallMethod(IsLEquiv,
 	[IsHyperplaneArrangement, IsHyperplaneArrangement],
 function(A,B)
 	return LIsIsomorphic(IntersectionLattice(A),IntersectionLattice(B));
-# local LGraphA,LGraphB;;
+# local LGraphA,LGraphB;
 #     LGraphA := ShallowCopy(LGraph(IntersectionLattice(A)));
 #     LGraphB := ShallowCopy(LGraph(IntersectionLattice(B)));
 #     return IsIsomorphicGraph(LGraphA,LGraphB);
@@ -729,5 +729,5 @@ end);
 #####################################################################################
 
 InstallGlobalFunction(tnow,function()
-    return Runtimes().user_time;;
+    return Runtimes().user_time;
 end);
