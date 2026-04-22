@@ -47,6 +47,55 @@
 		
 	\end{tikzpicture}
 	
+	\begin{tikzpicture}[scale=1.0]
+		\draw (4.,0.) -- (-4.,0.);  % H_1 
+		\node at (-4.20,0.) {\small $1$}; 
+		\draw (3.46,2.) -- (-3.46,-2.);  % H_2 
+		\node at (-3.64,-2.10) {\small $2$}; 
+		\draw[color=red] (2.,3.46) -- (-2.,-3.46);  % H_3 
+		\node at (-2.10,-3.64) {\small $3$}; 
+		\draw (0.,4.) -- (0.,-4.);  % H_4 
+		\node at (0.,-4.20) {\small $4$}; 
+		\draw (-2.,3.46) -- (2.,-3.46);  % H_5 
+		\node at (2.10,-3.64) {\small $5$}; 
+		\draw[color=red] (-3.46,2.) -- (3.46,-2.);  % H_6 
+		\node at (3.64,-2.10) {\small $6$}; 
+		\draw (-2.41,3.18) -- (1.55,-3.68);  % H_7 
+		\node at (1.65,-3.85) {\small $7$}; 
+		\draw[color=red] (3.97,-0.5) -- (-3.97,-0.5);  % H_8 
+		\node at (-4.16,-0.5) {\small $8$}; 
+		\draw (2.41,3.18) -- (-1.55,-3.68);  % H_9 
+		\node at (-1.65,-3.85) {\small $9$}; 
+		\draw (-1.55,3.68) -- (2.41,-3.18);  % H_10 
+		\node at (2.52,-3.35) {\small $10$}; 
+		\draw[color=red] (3.97,0.5) -- (-3.97,0.5);  % H_11 
+		\node at (-4.16,0.5) {\small $11$}; 
+		\draw (1.55,3.68) -- (-2.41,-3.18);  % H_12 
+		\node at (-2.52,-3.35) {\small $12$}; 
+		
+		\fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 1, 2, 3, 4, 5, 6 ] 
+		\fill[red] (-0.57,0.0) circle[radius=2pt];  % P[ 1, 7, 12 ] 
+		\fill[red] (-0.42,-0.25) circle[radius=2pt];  % P[ 2, 7 ] 
+		\fill[red] (-0.28,-0.5) circle[radius=2pt];  % P[ 3, 7, 8 ] 
+		\fill[red] (0.0,-1.) circle[radius=2pt];  % P[ 4, 7, 9 ] 
+		\fill[red] (-0.87,0.5) circle[radius=2pt];  % P[ 6, 7, 11 ] 
+		\fill[red] (-0.87,-0.5) circle[radius=2pt];  % P[ 2, 8, 12 ] 
+		\fill[red] (0.0,-0.5) circle[radius=2pt];  % P[ 4, 8 ] 
+		\fill[red] (0.28,-0.5) circle[radius=2pt];  % P[ 5, 8, 9 ] 
+		\fill[red] (0.87,-0.5) circle[radius=2pt];  % P[ 6, 8, 10 ] 
+		\fill[red] (0.57,0.0) circle[radius=2pt];  % P[ 1, 9, 10 ] 
+		\fill[red] (0.87,0.5) circle[radius=2pt];  % P[ 2, 9, 11 ] 
+		\fill[red] (0.42,-0.25) circle[radius=2pt];  % P[ 6, 9 ] 
+		\fill[red] (0.42,0.25) circle[radius=2pt];  % P[ 2, 10 ] 
+		\fill[red] (0.28,0.5) circle[radius=2pt];  % P[ 3, 10, 11 ] 
+		\fill[red] (0.0,1.) circle[radius=2pt];  % P[ 4, 10, 12 ] 
+		\fill[red] (0.0,0.5) circle[radius=2pt];  % P[ 4, 11 ] 
+		\fill[red] (-0.28,0.5) circle[radius=2pt];  % P[ 5, 11, 12 ] 
+		\fill[red] (-0.42,0.25) circle[radius=2pt];  % P[ 6, 12 ] 
+		
+	\end{tikzpicture}
+	
+	
 	
 	\end{center}
 	\par

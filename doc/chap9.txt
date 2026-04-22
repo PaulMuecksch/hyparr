@@ -6,22 +6,23 @@
   
   [1X9.1-1 LaTeXDrawProjPicture[101X
   
-  [33X[1;0Y[29X[2XLaTeXDrawProjPicture[102X( [3XA[103X[, [3Xps[103X[, [3Xip[103X[, [3XHind[103X[, [3Xdisthv[103X[, [3XMarkHs[103X]]]]] ) [32X function[133X
+  [33X[1;0Y[29X[2XLaTeXDrawProjPicture[102X( [3XA[103X[, [3XDrawOptions[103X] ) [32X function[133X
   [6XReturns:[106X  [33X[0;10YA string.[133X
   
   [33X[0;0YGenerates  LaTeX  tikz-code  for  a  nice  projective  picture  of  the real
   3-arrangement.  If  [23Xx,y,z[123X are the coordinates, by default, this is the 2-dim
   affine arrangement obtained by intersecting [3XA[103X with the plane [23Xz=1[123X.[133X
   
-  [33X[0;0YThe optional parameters are:[133X
+  [33X[0;0YIn  the  optional parameters [3XDrawOptions[103X, a record, the following parameters
+  can be chosen[133X
   
-  [30X    [33X[0;6Y[3Xps[103X a scaling factor,[133X
+  [30X    [33X[0;6Y[3Xscale[103X, a positive rational scaling factor,[133X
   
-  [30X    [33X[0;6Y[3Xip[103X intersection points are drawn,[133X
+  [30X    [33X[0;6Y[3Xisecps[103X intersection points are drawn, [10Xtrue[110X or [10Xfalse[110X,[133X
   
-  [30X    [33X[0;6Y[3XHind[103X labels for the hyperplanes are added,[133X
+  [30X    [33X[0;6Y[3XHind[103X labels for the hyperplanes are added, [10Xtrue[110X or [10Xfalse[110X,[133X
   
-  [30X    [33X[0;6Y[3Xdisthv[103X  a  vector  giving  the  normal  of  the  plane  whith which to
+  [30X    [33X[0;6Y[3XdeconeH[103X  a  vector  giving  the normal of the plane (=1) with which to
         intersect [3XA[103X,[133X
   
   [30X    [33X[0;6Y[3XMarkHs[103X  a  list  of  indices  of  hyperplanes of [3XA[103X, these are drawn in
@@ -42,7 +43,9 @@
     [4X[28X\draw (3.87,-1.) -- (-3.87,-1.);  % H_5 [128X[104X
     [4X[28X\draw (3.87,1.) -- (-3.87,1.);  % H_6 [128X[104X
     [4X[28X\end{tikzpicture}[128X[104X
-    [4X[25Xgap>[125X [27XPrint(LaTeXDrawProjPicture(A,1/2,true,true,[1,1,1],[1,2]));[127X[104X
+    [4X[25Xgap>[125X [27XDrawOpts:=rec(scale:=1/2,isecps:=true,Hind:=true,[127X[104X
+    [4X[25X>[125X [27X      deconeH:=[1,1,1],MarkHs:=[1,2]);;[127X[104X
+    [4X[25Xgap>[125X [27XPrint(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));[127X[104X
     [4X[28X\begin{tikzpicture}[scale=1.0][128X[104X
     [4X[28X\draw[color=red] (-3.56,1.83) -- (1.83,-3.56);  % H_1 [128X[104X
     [4X[28X\node at (1.97,-3.71) {\small $1$}; [128X[104X
@@ -64,9 +67,7 @@
     [4X[28X\fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] [128X[104X
     [4X[28X\fill[red] (-0.32,1.17) circle[radius=2pt];  % P[ 3, 4 ] [128X[104X
     [4X[28X\fill[red] (1.17,-0.32) circle[radius=2pt];  % P[ 5, 6 ] [128X[104X
-    [4X[28X[128X[104X
     [4X[28X\end{tikzpicture}[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X9.1-2 LaTeXDrawSpherePicture[101X

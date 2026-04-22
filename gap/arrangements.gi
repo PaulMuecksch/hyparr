@@ -204,6 +204,19 @@ local G,GraphL;
 end);
 
 
+InstallMethod(LBases,
+    [IsGeomLattice],
+function(L)
+local rkFkt, atoms, Bs, rL;
+    rkFkt := LRankFunction(L);
+    rL := LRank(L);
+    atoms := LAtoms(L);
+    Bs := Combinations(atoms,rL);;
+    Bs := Bs{Positions(List(Bs,B->rkFkt(B)=rL),true)};;
+    return Bs;;
+end);
+
+
 #####################################################################
 # HypArr_AddHToL(R, Lo, Hn)
 #

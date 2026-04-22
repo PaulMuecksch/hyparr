@@ -143,7 +143,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
     [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
-    [4X[25Xgap>[125X [27XG := ShallowCopy(TopeGraph(O));;[127X[104X
+    [4X[25Xgap>[125X [27XG := ShallowCopy(TopeGraph(O));[127X[104X
     [4X[25Xgap>[125X [27XVertices(G);[127X[104X
     [4X[28X[ 1 .. 6 ][128X[104X
     [4X[25Xgap>[125X [27XIsSimpleGraph(G);[127X[104X

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (HypArr) - Chapter 10: Realization spaces of geometric lattices</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap10"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap9.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap10_mj.html">[MathJax on]</a></p>
+<p><a id="X82EB57AB7B1A0B2D" name="X82EB57AB7B1A0B2D"></a></p>
+<div class="ChapSects"><a href="chap10.html#X82EB57AB7B1A0B2D">10 <span class="Heading">Realization spaces of geometric lattices</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap10.html#X7F6278CD87400D49">10.1 <span class="Heading">Construction</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X7C0F4DAD86FB464E">10.1-1 RealizationSpaceOfGeomLattice</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap10.html#X7C701DBF7BAE649A">10.2 <span class="Heading">Attributes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X7A65C85187E4D34B">10.2-1 LGenSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X8070EC1580B975D7">10.2-2 RSLattice</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X7C7870A785D8894E">10.2-3 RSCharacteristic</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X877A2CF98702D72D">10.2-4 RSDefField</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X7D89A3E87AE33F30">10.2-5 RSCoeffMat</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X7CD7DC23844DAB58">10.2-6 RSDimension</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X7FE8075E860D45B1">10.2-7 RSPRing</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X8495A2627D020F1B">10.2-8 RSIdealMinors</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X875EF4217DDB2DD3">10.2-9 RSIdealNonMinors</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap10.html#X871597447BB998A1">10.3 <span class="Heading">Properties</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X781923918754E3CE">10.3-1 RSIsNonEmpty</a></span>
+</div></div>
+</div>
+
+<h3>10 <span class="Heading">Realization spaces of geometric lattices</span></h3>
+
+<p><a id="X7F6278CD87400D49" name="X7F6278CD87400D49"></a></p>
+
+<h4>10.1 <span class="Heading">Construction</span></h4>
+
+<p><a id="X7C0F4DAD86FB464E" name="X7C0F4DAD86FB464E"></a></p>
+
+<h5>10.1-1 RealizationSpaceOfGeomLattice</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RealizationSpaceOfGeomLattice</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
+
+<h4>10.2 <span class="Heading">Attributes</span></h4>
+
+<p><a id="X7A65C85187E4D34B" name="X7A65C85187E4D34B"></a></p>
+
+<h5>10.2-1 LGenSet</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LGenSet</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X8070EC1580B975D7" name="X8070EC1580B975D7"></a></p>
+
+<h5>10.2-2 RSLattice</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSLattice</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X7C7870A785D8894E" name="X7C7870A785D8894E"></a></p>
+
+<h5>10.2-3 RSCharacteristic</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCharacteristic</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X877A2CF98702D72D" name="X877A2CF98702D72D"></a></p>
+
+<h5>10.2-4 RSDefField</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDefField</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X7D89A3E87AE33F30" name="X7D89A3E87AE33F30"></a></p>
+
+<h5>10.2-5 RSCoeffMat</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCoeffMat</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X7CD7DC23844DAB58" name="X7CD7DC23844DAB58"></a></p>
+
+<h5>10.2-6 RSDimension</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDimension</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X7FE8075E860D45B1" name="X7FE8075E860D45B1"></a></p>
+
+<h5>10.2-7 RSPRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSPRing</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X8495A2627D020F1B" name="X8495A2627D020F1B"></a></p>
+
+<h5>10.2-8 RSIdealMinors</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIdealMinors</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X875EF4217DDB2DD3" name="X875EF4217DDB2DD3"></a></p>
+
+<h5>10.2-9 RSIdealNonMinors</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIdealNonMinors</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+
+</pre></div>
+
+<p><a id="X871597447BB998A1" name="X871597447BB998A1"></a></p>
+
+<h4>10.3 <span class="Heading">Properties</span></h4>
+
+<p><a id="X781923918754E3CE" name="X781923918754E3CE"></a></p>
+
+<h5>10.3-1 RSIsNonEmpty</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIsNonEmpty</code>(  )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
+
+
+<div class="example"><pre>
+
+</pre></div>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap9.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

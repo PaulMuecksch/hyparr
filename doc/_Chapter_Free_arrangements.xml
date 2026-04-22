@@ -72,7 +72,7 @@ gap> DerModGenerators(D);
  <Description>
  Returns the defining polynomial ring of <A>D</A>.
 <Example><![CDATA[
-gap> D:=DerModule(AGpql(3,3,2));; DerModPRing(D);
+gap> D:=DerModule(AGpql(3,3,2)); DerModPRing(D);
 <field in characteristic 0>[x_1,x_2]
 ]]></Example>
 
@@ -132,11 +132,11 @@ gap> DerModProjDim(D);
 <Example><![CDATA[
 gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
 <HyperplaneArrangement: 5 hyperplanes in 3-space>
-gap> D:=DerModule(A);; DerModIsFree(D);
+gap> D:=DerModule(A); DerModIsFree(D);
 true
 gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
 <HyperplaneArrangement: 4 hyperplanes in 3-space>
-gap> D:=DerModule(A);; DerModIsFree(D);
+gap> D:=DerModule(A); DerModIsFree(D);
 false
 ]]></Example>
 

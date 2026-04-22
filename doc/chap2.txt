@@ -259,6 +259,17 @@
   
   [33X[0;0YComputes the characteristic polynomial of [3XL[103X.[133X
   
+  [1X2.4-10 LBases[101X
+  
+  [33X[1;0Y[29X[2XLBases[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ylist of bases[133X
+  
+  [33X[0;0YDetermines the subset of [10XLAtoms(L)[110X which are bases.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
   
   [1X2.5 [33X[0;0YProperties of geometric lattices[133X[101X
   

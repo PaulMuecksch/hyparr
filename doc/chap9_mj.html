@@ -18,9 +18,9 @@
 <body class="chap9"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chap10_mj.html">10</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
-<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap10_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap9.html">[MathJax off]</a></p>
 <p><a id="X867FB7CC79AC1DED" name="X867FB7CC79AC1DED"></a></p>
@@ -44,25 +44,25 @@
 
 <h5>9.1-1 LaTeXDrawProjPicture</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LaTeXDrawProjPicture</code>( <var class="Arg">A</var>[, <var class="Arg">ps</var>[, <var class="Arg">ip</var>[, <var class="Arg">Hind</var>[, <var class="Arg">disthv</var>[, <var class="Arg">MarkHs</var>]]]]] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LaTeXDrawProjPicture</code>( <var class="Arg">A</var>[, <var class="Arg">DrawOptions</var>] )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: A string.</p>
 
 <p>Generates LaTeX tikz-code for a nice projective picture of the real 3-arrangement. If <span class="SimpleMath">\(x,y,z\)</span> are the coordinates, by default, this is the 2-dim affine arrangement obtained by intersecting <var class="Arg">A</var> with the plane <span class="SimpleMath">\(z=1\)</span>.</p>
 
-<p>The optional parameters are:</p>
+<p>In the optional parameters <var class="Arg">DrawOptions</var>, a record, the following parameters can be chosen</p>
 
 
 <ul>
-<li><p><var class="Arg">ps</var> a scaling factor,</p>
+<li><p><var class="Arg">scale</var>, a positive rational scaling factor,</p>
 
 </li>
-<li><p><var class="Arg">ip</var> intersection points are drawn,</p>
+<li><p><var class="Arg">isecps</var> intersection points are drawn, <code class="code">true</code> or <code class="code">false</code>,</p>
 
 </li>
-<li><p><var class="Arg">Hind</var> labels for the hyperplanes are added,</p>
+<li><p><var class="Arg">Hind</var> labels for the hyperplanes are added, <code class="code">true</code> or <code class="code">false</code>,</p>
 
 </li>
-<li><p><var class="Arg">disthv</var> a vector giving the normal of the plane whith which to intersect <var class="Arg">A</var>,</p>
+<li><p><var class="Arg">deconeH</var> a vector giving the normal of the plane (=1) with which to intersect <var class="Arg">A</var>,</p>
 
 </li>
 <li><p><var class="Arg">MarkHs</var> a list of indices of hyperplanes of <var class="Arg">A</var>, these are drawn in another color.</p>
@@ -84,7 +84,9 @@
 \draw (3.87,-1.) -- (-3.87,-1.);  % H_5 
 \draw (3.87,1.) -- (-3.87,1.);  % H_6 
 \end{tikzpicture}
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(LaTeXDrawProjPicture(A,1/2,true,true,[1,1,1],[1,2]));</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DrawOpts:=rec(scale:=1/2,isecps:=true,Hind:=true,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">      deconeH:=[1,1,1],MarkHs:=[1,2]);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Print(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));</span>
 \begin{tikzpicture}[scale=1.0]
 \draw[color=red] (-3.56,1.83) -- (1.83,-3.56);  % H_1 
 \node at (1.97,-3.71) {\small $1$}; 
@@ -106,9 +108,7 @@
 \fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
 \fill[red] (-0.32,1.17) circle[radius=2pt];  % P[ 3, 4 ] 
 \fill[red] (1.17,-0.32) circle[radius=2pt];  % P[ 5, 6 ] 
-
 \end{tikzpicture}
-
 </pre></div>
 
 <p><a id="X786A445B7D28CCF6" name="X786A445B7D28CCF6"></a></p>
@@ -218,10 +218,10 @@
 <p>Both function <code class="code">LaTexDrawSpherePicture</code> and <code class="code">LaTeXDrawTopeGraph</code> combined can be used to draw nice pictures of oriented matroid complexes and their duals. See e.g. (only in pdf or <span class="URL"><a href="https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf">pic</a></span>)</p>
 
 
-<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap10_mj.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0_mj.html">Top</a>  <a href="chap1_mj.html">1</a>  <a href="chap2_mj.html">2</a>  <a href="chap3_mj.html">3</a>  <a href="chap4_mj.html">4</a>  <a href="chap5_mj.html">5</a>  <a href="chap6_mj.html">6</a>  <a href="chap7_mj.html">7</a>  <a href="chap8_mj.html">8</a>  <a href="chap9_mj.html">9</a>  <a href="chap10_mj.html">10</a>  <a href="chapBib_mj.html">Bib</a>  <a href="chapInd_mj.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

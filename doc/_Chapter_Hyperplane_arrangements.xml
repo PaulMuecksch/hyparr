@@ -343,6 +343,22 @@ true
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="L" Name="LBases" Label="for IsGeomLattice"/>
+ <Returns>list of bases
+</Returns>
+ <Description>
+ Determines the subset of <C>LAtoms(L)</C> which are bases.
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

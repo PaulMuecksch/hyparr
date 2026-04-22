@@ -18,6 +18,7 @@
 \indexentry{LAutGroup@\texttt  {LAutGroup}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LMoebius@\texttt  {LMoebius}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LCharPoly@\texttt  {LCharPoly}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LBases@\texttt  {LBases}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LIsIrreducible@\texttt  {LIsIrreducible}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LIsBoolean@\texttt  {LIsBoolean}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LIsGeneric@\texttt  {LIsGeneric}!for IsGeomLattice|hyperpage}{10}
@@ -84,3 +85,14 @@
 \indexentry{LaTeXDrawProjPicture@\texttt  {LaTeXDrawProjPicture}|hyperpage}{36}
 \indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{38}
 \indexentry{LaTeXDrawTopeGraph@\texttt  {LaTeXDrawTopeGraph}|hyperpage}{40}
+\indexentry{RealizationSpaceOfGeomLattice@\texttt  {RealizationSpaceOfGeomLattice}!for IsGeomLattice, IsInt|hyperpage}{42}
+\indexentry{LGenSet@\texttt  {LGenSet}!for IsGeomLattice|hyperpage}{42}
+\indexentry{RSLattice@\texttt  {RSLattice}!for IsRealizationSpaceOfGeomLattice|hyperpage}{42}
+\indexentry{RSCharacteristic@\texttt  {RSCharacteristic}!for IsRealizationSpaceOfGeomLattice|hyperpage}{42}
+\indexentry{RSDefField@\texttt  {RSDefField}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSCoeffMat@\texttt  {RSCoeffMat}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSDimension@\texttt  {RSDimension}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSPRing@\texttt  {RSPRing}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSIdealMinors@\texttt  {RSIdealMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSIdealNonMinors@\texttt  {RSIdealNonMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}

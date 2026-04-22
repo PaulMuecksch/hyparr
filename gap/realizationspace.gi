@@ -60,10 +60,10 @@ InstallMethod(RSIsNonEmpty,
 BindGlobal("GenPointAndLineOfEltFromGenSet",
 function(L,GenSet,e)
 local rkFkt,rL,PsOverElt,LsOverElt,GenPs,pos, PLPairOverElt,POverElt,LOverElt;
-    rkFkt := RankL(L);
-    rL := Length(L);
-    PsOverElt := L[rL-1]{Positions(List(L[rL-1],p->e in p and rkFkt(Intersection(GenSet,p))=rL-1 ),true)};
-    LsOverElt := L[2]{Positions(List(L[2],l->e in l and rkFkt(Intersection(GenSet,l))=2 ),true)};
+    rkFkt := LRankFunction(L);
+    rL := LRank(L);
+    PsOverElt := LkFlats(L)(rL-1){Positions(List(LkFlats(L)(rL-1),p->e in p and rkFkt(Intersection(GenSet,p))=rL-1 ),true)};
+    LsOverElt := LkFlats(L)(2){Positions(List(LkFlats(L)(2),l->e in l and rkFkt(Intersection(GenSet,l))=2 ),true)};
     PLPairOverElt := Cartesian(PsOverElt,LsOverElt);
     pos := Position(List(PLPairOverElt,pl -> Length(Intersection(pl))=1),true);
     if pos<>fail then
@@ -81,15 +81,14 @@ end);
 InstallMethod(LSubsetGeneratedByS,
     [IsGeomLattice,IsList],
 function(L,S)
-local Sn1,Sn2, Es, newElts, e, Atoms;
-#     Es := Concatenation(L[1],S);
+local Sn1,Sn2, EltsLeft, newElts, e, Atoms;
     newElts := true;
     Sn1 := ShallowCopy(S);
     Atoms := LAtoms(L);
     while newElts=true do
-        Es := Difference(Concatenation(Atoms),Sn1);
+        EltsLeft := Difference(Atoms,Sn1);
         Sn2 := ShallowCopy(Sn1);
-        for e in Es do
+        for e in EltsLeft do
             if GenPointAndLineOfEltFromGenSet(L,Sn2,e)<>fail then
                 Add(Sn2,e);
             fi;
@@ -106,31 +105,67 @@ end);
 InstallMethod(LIsGenSet,
     [IsGeomLattice,IsList],
 function(L,S)
-local rkFkt,rL,PsFormS,EsFromS,Sn,Es,e;
-    if Length(LSubsetGeneratedByS(L,S))=Length(LAtoms(L)[1]) then
+    if Length(LSubsetGeneratedByS(L,S))=Length(LAtoms(L)) then
         return true;
     fi;
-    
     return false;
 end);
 
 InstallMethod(LGenSet,
     [IsGeomLattice],
 function(L)
-local genSet;
-    if IsBound(L!.genset) then
-        return L!.genset;
-    fi;
+local genSet, FindLGenSet;
 
+    FindLGenSet := function(L)
+    local GenSs,MaxLenGenSs, isGenSet,GenSet,GenSetNew, NewGenSets, ls, ml,l,Atoms,RankFktnL,
+        # GenericSubsets,
+        rL;
+        
+        rL:=LRank(L);;
+        Atoms := LAtoms(L);
+        RankFktnL := LRankFunction(L);
+        # GenericSubsets := Combinations(Atoms,rL+1);;
+        # Print(Length(GenericSubsets),"\n");;
+        # GenericSubsets := GenericSubsets{Positions(List(GenericSubsets,S->not(ForAny(Combinations(S,rL),T->RankFktnL(T)<rL))),true)};;
+        # Print(Length(GenericSubsets),"\n");;
+        # ls := List(GenericSubsets,S->Length(LSubsetGeneratedByS(L,S)));;
+        # ml := Maximum(ls);;
+        # GenericSubsets := GenericSubsets{Positions(List(GenericSubsets,S->Length(LSubsetGeneratedByS(L,S))),ml)};        
+        # Print(Length(GenericSubsets),"\n");;
+        # GenSet := Random(GenericSubsets);
+        # if LIsGenSet(L,GenSet) then
+        #     return GenSet;
+        # fi;;
+        GenSet := Random(LBases(L));
+        isGenSet := false;
+        while isGenSet=false do
+            NewGenSets := List(Difference(Atoms,GenSet),l->Union(GenSet,[l]) );
+            ls := List(NewGenSets,x->Length(LSubsetGeneratedByS(L,x)));
+            ml := Maximum(ls);
+            GenSetNew := NewGenSets[Position(ls,ml)];
+            if LIsGenSet(L,GenSetNew) then
+                isGenSet := true;
+                return GenSetNew;
+            elif Length(LSubsetGeneratedByS(L,GenSetNew)) > Length(LSubsetGeneratedByS(L,GenSet)) then
+                GenSet := GenSetNew;
+            fi;;
+        od;;
+        
+        return fail;
+    end;;
 
+    L!.genset := FindLGenSet(L);;
+    return(L!.genset);
 end);
 
 InstallMethod(RealizationSpaceOfGeomLattice,
     "for a geometric lattice and a characteristic",
     [IsGeomLattice, IsInt],
 function(L,char)
-local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs, VarRing, VarRingExt, IMat, A, Det, GenSetL, IdealVanishingMinors,NonVanishingMinors, f, ff, GenMinors,g, b, DefIdeal,
-    L,K, IsRepresentable, AssPrimesDefIdeal, dim, fr;
+local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs, 
+    VarRing, VarRingExt, IMat, A, Det, GenSetL, 
+    IdealVanishingMinors, NonVanishingMinors, f, ff, GenMinors,g, b, DefIdeal,
+    K, IsRepresentable, AssPrimesDefIdeal, dim, fr;
     # local L, dfield, gset, cmat, isrep, dim, PRing,IMinors,INMinors;
     # "lattice","char","deffield","coeffmat",
     # "isrep","dimension",

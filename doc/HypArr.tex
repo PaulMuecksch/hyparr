@@ -570,6 +570,27 @@ function
 
  Computes the characteristic polynomial of \mbox{\texttt{\mdseries\slshape L}}. }
 
+ 
+
+\subsection{\textcolor{Chapter }{LBases (for IsGeomLattice)}}
+\logpage{[ 2, 4, 10 ]}\nobreak
+\hyperdef{L}{X84CE9FBB8328238A}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LBases({\mdseries\slshape L})\index{LBases@\texttt{LBases}!for IsGeomLattice}
+\label{LBases:for IsGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+list of bases 
+
+
+
+ Determines the subset of \texttt{LAtoms(L)} which are bases. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
  }
 
  
@@ -1080,7 +1101,7 @@ element.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@O := OrientedMatroid([[1,0],[0,1],[1,1]]);|
   <OrientedMatroid: 3 elements, rank 2>
-  !gapprompt@gap>| !gapinput@G := ShallowCopy(TopeGraph(O));;|
+  !gapprompt@gap>| !gapinput@G := ShallowCopy(TopeGraph(O));|
   !gapprompt@gap>| !gapinput@Vertices(G);|
   [ 1 .. 6 ]
   !gapprompt@gap>| !gapinput@IsSimpleGraph(G);|
@@ -1596,7 +1617,7 @@ Polynomial ring
 
  Returns the defining polynomial ring of \mbox{\texttt{\mdseries\slshape D}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@D:=DerModule(AGpql(3,3,2));; DerModPRing(D);|
+  !gapprompt@gap>| !gapinput@D:=DerModule(AGpql(3,3,2)); DerModPRing(D);|
   <field in characteristic 0>[x_1,x_2]
 \end{Verbatim}
  }
@@ -1666,11 +1687,11 @@ true or false
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);|
   <HyperplaneArrangement: 5 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);; DerModIsFree(D);|
+  !gapprompt@gap>| !gapinput@D:=DerModule(A); DerModIsFree(D);|
   true
   !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);|
   <HyperplaneArrangement: 4 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@D:=DerModule(A);; DerModIsFree(D);|
+  !gapprompt@gap>| !gapinput@D:=DerModule(A); DerModIsFree(D);|
   false
 \end{Verbatim}
  }
@@ -1800,9 +1821,9 @@ true or false
    [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
      [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
     [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [5,6];; LIsModularPair(L,m1,m2);|
+  !gapprompt@gap>| !gapinput@m1:=[1,2]; m2:= [5,6]; LIsModularPair(L,m1,m2);|
   false
-  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [2,4,6];; LIsModularPair(L,m1,m2);|
+  !gapprompt@gap>| !gapinput@m1:=[1,2]; m2:= [2,4,6]; LIsModularPair(L,m1,m2);|
   true
 \end{Verbatim}
  }
@@ -1829,7 +1850,7 @@ true or false
    [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
      [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
     [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-  !gapprompt@gap>| !gapinput@m1:=[1,2];; m2:= [2,4,6];; LIsModularFlat(L,m1); LIsModularFlat(L,m2);|
+  !gapprompt@gap>| !gapinput@m1:=[1,2]; m2:= [2,4,6]; LIsModularFlat(L,m1); LIsModularFlat(L,m2);|
   false
   true
 \end{Verbatim}
@@ -1972,7 +1993,7 @@ true or false.
   !gapprompt@>| !gapinput@    [2,3,4],|
   !gapprompt@>| !gapinput@    [3,0,5],|
   !gapprompt@>| !gapinput@    [3,4,5]|
-  !gapprompt@>| !gapinput@]);;|
+  !gapprompt@>| !gapinput@]);|
   !gapprompt@gap>| !gapinput@|
   !gapprompt@gap>| !gapinput@A2 := Arr([|
   !gapprompt@>| !gapinput@    [1,0,0],|
@@ -1984,7 +2005,7 @@ true or false.
   !gapprompt@>| !gapinput@    [2,3,4],|
   !gapprompt@>| !gapinput@    [1,0,3],|
   !gapprompt@>| !gapinput@    [1,2,3]|
-  !gapprompt@>| !gapinput@]);;|
+  !gapprompt@>| !gapinput@]);|
   !gapprompt@gap>| !gapinput@IsLEquiv(A1,A2);|
   true
   !gapprompt@gap>| !gapinput@IsFormal(A1);|
@@ -2073,7 +2094,7 @@ as sign vectors.
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@O:=OrientedMatroid(|
   !gapprompt@>| !gapinput@      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]|
-  !gapprompt@>| !gapinput@);;|
+  !gapprompt@>| !gapinput@);|
   <OrientedMatroid: 7 elements, rank 3>
   !gapprompt@gap>| !gapinput@OMIsSupersolvable(O);|
   false
@@ -2384,7 +2405,7 @@ A polynomial.
 \subsection{\textcolor{Chapter }{LaTeXDrawProjPicture}}
 \logpage{[ 9, 1, 1 ]}\nobreak
 \hyperdef{L}{X78621314826E390B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawProjPicture({\mdseries\slshape A[, ps[, ip[, Hind[, disthv[, MarkHs]]]]]})\index{LaTeXDrawProjPicture@\texttt{LaTeXDrawProjPicture}}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawProjPicture({\mdseries\slshape A[, DrawOptions]})\index{LaTeXDrawProjPicture@\texttt{LaTeXDrawProjPicture}}
 \label{LaTeXDrawProjPicture}
 }\hfill{\scriptsize (function)}}\\
 \textbf{\indent Returns:\ }
@@ -2396,12 +2417,12 @@ A string.
 the real 3\texttt{\symbol{45}}arrangement. If $x,y,z$ are the coordinates, by default, this is the 2\texttt{\symbol{45}}dim affine
 arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with the plane $z=1$. 
 
- The optional parameters are: 
+ In the optional parameters \mbox{\texttt{\mdseries\slshape DrawOptions}}, a record, the following parameters can be chosen 
 \begin{itemize}
-\item  \mbox{\texttt{\mdseries\slshape ps}} a scaling factor, 
-\item  \mbox{\texttt{\mdseries\slshape ip}} intersection points are drawn, 
-\item  \mbox{\texttt{\mdseries\slshape Hind}} labels for the hyperplanes are added, 
-\item  \mbox{\texttt{\mdseries\slshape disthv}} a vector giving the normal of the plane whith which to intersect \mbox{\texttt{\mdseries\slshape A}}, 
+\item  \mbox{\texttt{\mdseries\slshape scale}}, a positive rational scaling factor, 
+\item  \mbox{\texttt{\mdseries\slshape isecps}} intersection points are drawn, \texttt{true} or \texttt{false}, 
+\item  \mbox{\texttt{\mdseries\slshape Hind}} labels for the hyperplanes are added, \texttt{true} or \texttt{false}, 
+\item  \mbox{\texttt{\mdseries\slshape deconeH}} a vector giving the normal of the plane (=1) with which to intersect \mbox{\texttt{\mdseries\slshape A}}, 
 \item  \mbox{\texttt{\mdseries\slshape MarkHs}} a list of indices of hyperplanes of \mbox{\texttt{\mdseries\slshape A}}, these are drawn in another color. 
 \end{itemize}
  
@@ -2421,7 +2442,9 @@ arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with th
   \draw (3.87,-1.) -- (-3.87,-1.);  % H_5 
   \draw (3.87,1.) -- (-3.87,1.);  % H_6 
   \end{tikzpicture}
-  !gapprompt@gap>| !gapinput@Print(LaTeXDrawProjPicture(A,1/2,true,true,[1,1,1],[1,2]));|
+  !gapprompt@gap>| !gapinput@DrawOpts:=rec(scale:=1/2,isecps:=true,Hind:=true,|
+  !gapprompt@>| !gapinput@      deconeH:=[1,1,1],MarkHs:=[1,2]);;|
+  !gapprompt@gap>| !gapinput@Print(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));|
   \begin{tikzpicture}[scale=1.0]
   \draw[color=red] (-3.56,1.83) -- (1.83,-3.56);  % H_1 
   \node at (1.97,-3.71) {\small $1$}; 
@@ -2443,9 +2466,7 @@ arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with th
   \fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
   \fill[red] (-0.32,1.17) circle[radius=2pt];  % P[ 3, 4 ] 
   \fill[red] (1.17,-0.32) circle[radius=2pt];  % P[ 5, 6 ] 
-  
   \end{tikzpicture}
-  
 \end{Verbatim}
  
 
@@ -2596,6 +2617,235 @@ and added via
  Both function \texttt{LaTexDrawSpherePicture} and \texttt{LaTeXDrawTopeGraph} combined can be used to draw nice pictures of oriented matroid complexes and
 their duals. See e.g. (only in pdf or \href{https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf} {pic}) 
  \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf}
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Realization spaces of geometric lattices}}\label{Chapter_Realization_spaces_of_geometric_lattices}
+\logpage{[ 10, 0, 0 ]}
+\hyperdef{L}{X82EB57AB7B1A0B2D}{}
+{
+  
+\section{\textcolor{Chapter }{Construction}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Construction}
+\logpage{[ 10, 1, 0 ]}
+\hyperdef{L}{X7F6278CD87400D49}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{RealizationSpaceOfGeomLattice (for IsGeomLattice, IsInt)}}
+\logpage{[ 10, 1, 1 ]}\nobreak
+\hyperdef{L}{X7C0F4DAD86FB464E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RealizationSpaceOfGeomLattice({\mdseries\slshape })\index{RealizationSpaceOfGeomLattice@\texttt{RealizationSpaceOfGeomLattice}!for IsGeomLattice, IsInt}
+\label{RealizationSpaceOfGeomLattice:for IsGeomLattice, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Attributes}
+\logpage{[ 10, 2, 0 ]}
+\hyperdef{L}{X7C701DBF7BAE649A}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{LGenSet (for IsGeomLattice)}}
+\logpage{[ 10, 2, 1 ]}\nobreak
+\hyperdef{L}{X7A65C85187E4D34B}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LGenSet({\mdseries\slshape })\index{LGenSet@\texttt{LGenSet}!for IsGeomLattice}
+\label{LGenSet:for IsGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 2 ]}\nobreak
+\hyperdef{L}{X8070EC1580B975D7}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSLattice({\mdseries\slshape })\index{RSLattice@\texttt{RSLattice}!for IsRealizationSpaceOfGeomLattice}
+\label{RSLattice:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 3 ]}\nobreak
+\hyperdef{L}{X7C7870A785D8894E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCharacteristic({\mdseries\slshape })\index{RSCharacteristic@\texttt{RSCharacteristic}!for IsRealizationSpaceOfGeomLattice}
+\label{RSCharacteristic:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 4 ]}\nobreak
+\hyperdef{L}{X877A2CF98702D72D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDefField({\mdseries\slshape })\index{RSDefField@\texttt{RSDefField}!for IsRealizationSpaceOfGeomLattice}
+\label{RSDefField:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 5 ]}\nobreak
+\hyperdef{L}{X7D89A3E87AE33F30}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCoeffMat({\mdseries\slshape })\index{RSCoeffMat@\texttt{RSCoeffMat}!for IsRealizationSpaceOfGeomLattice}
+\label{RSCoeffMat:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 6 ]}\nobreak
+\hyperdef{L}{X7CD7DC23844DAB58}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDimension({\mdseries\slshape })\index{RSDimension@\texttt{RSDimension}!for IsRealizationSpaceOfGeomLattice}
+\label{RSDimension:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 7 ]}\nobreak
+\hyperdef{L}{X7FE8075E860D45B1}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSPRing({\mdseries\slshape })\index{RSPRing@\texttt{RSPRing}!for IsRealizationSpaceOfGeomLattice}
+\label{RSPRing:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 8 ]}\nobreak
+\hyperdef{L}{X8495A2627D020F1B}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIdealMinors({\mdseries\slshape })\index{RSIdealMinors@\texttt{RSIdealMinors}!for IsRealizationSpaceOfGeomLattice}
+\label{RSIdealMinors:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{RSIdealNonMinors (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 9 ]}\nobreak
+\hyperdef{L}{X875EF4217DDB2DD3}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIdealNonMinors({\mdseries\slshape })\index{RSIdealNonMinors@\texttt{RSIdealNonMinors}!for IsRealizationSpaceOfGeomLattice}
+\label{RSIdealNonMinors:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Properties}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Properties}
+\logpage{[ 10, 3, 0 ]}
+\hyperdef{L}{X871597447BB998A1}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 3, 1 ]}\nobreak
+\hyperdef{L}{X781923918754E3CE}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIsNonEmpty({\mdseries\slshape })\index{RSIsNonEmpty@\texttt{RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice}
+\label{RSIsNonEmpty:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+\texttt{true} or \texttt{false} 
+
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  
+\end{Verbatim}
+ }
+
  }
 
  }

@@ -292,6 +292,17 @@ DeclareAttribute("LMoebius", IsGeomLattice);
 DeclareAttribute("LCharPoly", IsGeomLattice);
 
 
+#! @Arguments L
+#! @Returns list of bases
+#! @Description
+#! Determines the subset of <C>LAtoms(L)</C> which are bases.
+#!
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
+DeclareAttribute("LBases", IsGeomLattice);
+
+
 #################################
 ##
 #! @Section Properties of geometric lattices
@@ -351,7 +362,6 @@ DeclareProperty("LIsGeneric", IsGeomLattice );
 ##
 #################################
 
-
 #! @Arguments LA, LB
 #! @Returns true or false
 #! @Description
@@ -389,7 +399,6 @@ DeclareOperation("LIsIsomorphic", [IsGeomLattice,IsGeomLattice]);
 #! true
 #! @EndExampleSession
 DeclareOperation("IsLEquiv", [IsHyperplaneArrangement,IsHyperplaneArrangement]);
-
 
 #! @Arguments A
 #! @Returns A hyperplane arrangement.

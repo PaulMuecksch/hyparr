@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Realization_spaces_of_geometric_lattices">
+<Heading>Realization spaces of geometric lattices</Heading>
+
+<Section Label="Chapter_Realization_spaces_of_geometric_lattices_Section_Construction">
+<Heading>Construction</Heading>
+
+<ManSection>
+  <Oper Arg="" Name="RealizationSpaceOfGeomLattice" Label="for IsGeomLattice, IsInt"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Realization_spaces_of_geometric_lattices_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="" Name="LGenSet" Label="for IsGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSLattice" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSCharacteristic" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSDefField" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSCoeffMat" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSDimension" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSPRing" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSIdealMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="" Name="RSIdealNonMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Realization_spaces_of_geometric_lattices_Section_Properties">
+<Heading>Properties</Heading>
+
+<ManSection>
+  <Prop Arg="" Name="RSIsNonEmpty" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns><K>true</K> or <K>false</K>
+</Returns>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

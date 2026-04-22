@@ -105,7 +105,7 @@ end;
 
 InstallGlobalFunction(LaTeXDrawProjPicture,
 function(arg) # function(A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]])
-local A,s,ip,Hind,disthv,
+local A,s,ip,Hind,disthv,DrawOptions,
 	#TM,
 	R,RR,r1,r2,v,vv,v2d,sp,t,cs,cf,
 	a,b,c,
@@ -123,6 +123,7 @@ local A,s,ip,Hind,disthv,
 			if IsReal(arg[1]) then
 				A:=arg[1];
 			else
+				Print("The arrangement must be real!\n");
 				return fail;
 			fi;
 			s:=1;
@@ -131,33 +132,37 @@ local A,s,ip,Hind,disthv,
 			disthv:=[0,0,1];
 			Mind:=0;
 			if Length(arg)=2 then
-				s:=arg[2];
-			elif Length(arg)=3 then
-				s:=arg[2];
-				ip:=arg[3];
-			elif Length(arg)=4 then
-				s:=arg[2];
-				ip:=arg[3];
-				Hind:=arg[4];
-			elif Length(arg)=5 then
-				s:=arg[2];
-				ip:=arg[3];
-				Hind:=arg[4];
-				disthv:=arg[5];
-			elif Length(arg)=6 then
-				s:=arg[2];
-				ip:=arg[3];
-				Hind:=arg[4];
-				disthv:=arg[5];
-                Mind:=1;
-                MarkHs:=arg[6];
+				if IsRecord(arg[2]) then
+					DrawOptions:=arg[2];
+					if IsBound(DrawOptions.scale) then
+						s:=DrawOptions.scale;
+					fi;
+					if IsBound(DrawOptions.isecps) then
+						ip := DrawOptions.isecps;
+					fi;
+					if IsBound(DrawOptions.Hind) then
+						Hind:=DrawOptions.Hind;
+					fi;
+					if IsBound(DrawOptions.deconeH) then
+						disthv:=DrawOptions.deconeH;
+					fi;
+					if IsBound(DrawOptions.MarkHs) then
+						Mind:=1;
+						MarkHs:=DrawOptions.MarkHs;
+					fi;;
+				else
+					Print("Optinoal second argument must a record with options!\n");
+					return fail;
+				fi;;
+			else
+				Print("Length of arguments must be 1 or 2!\n");
+				return fail;
 			fi;
 		fi;
 	fi;
 
 	R:=List(ShallowCopy(Roots(A)),x->RotTozMat(disthv)*x);
 
-	# sp:="\\begin{tikzpicture}[scale=\\sc]\n";
 	sp:="\\begin{tikzpicture}[scale=1.0]\n";
 
 	RR:=ctf(R);
@@ -167,7 +172,6 @@ local A,s,ip,Hind,disthv,
 	for vv in RR do
 		if AbsoluteValue(vv[1]^2 + vv[2]^2) < 0.0001 then
 			rinf:=coordstr(18/17*r1);
-			#xyinf:=String(Sqrt(2.0)/2*18/17*r1+0.35);
 			xyinf := coordstr(Sqrt(2.0)/2*18/17*r1);
 
             if Mind=1 and Position(RR,vv) in MarkHs then
@@ -227,7 +231,6 @@ local A,s,ip,Hind,disthv,
 				fi;
 
                 if Hind then
-					#\node at (4.,0.) {\tiny$1$};
 
 					if AbsoluteValue(v[1]) > 0.0001 then
 						yc1:= v[2]*r2 + Sqrt( v[2]^2*r2^2 - (r2^2 - (r1+0.2)^2*v[1]^2) );
@@ -262,7 +265,6 @@ local A,s,ip,Hind,disthv,
 		fi;
 
 	od;
-	# sp:=Concatenation(sp, "\n");
 	if ip then
 		sp:=Concatenation(sp, "\n");
 		for sv in LGroundSet(IntersectionLattice(A))[2] do
@@ -275,10 +277,10 @@ local A,s,ip,Hind,disthv,
 				sp:=Concatenation(sp, "\\fill[red] (",px,",",py,") circle[radius=2pt];  % P",String(sv)," \n");
 			fi;
 		od;
-		sp:=Concatenation(sp, "\n");
+		# sp:=Concatenation(sp, "\n");
 	fi;
 
-	sp:=Concatenation(sp, "\\end{tikzpicture}\n");
+	sp:=Concatenation(sp, "\\end{tikzpicture}");
 
 	return sp;
 

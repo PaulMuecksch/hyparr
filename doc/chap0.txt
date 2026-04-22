@@ -57,6 +57,7 @@
       2.4-7 LAutGroup
       2.4-8 LMoebius
       2.4-9 LCharPoly
+      2.4-10 LBases
     2.5 [33X[0;0YProperties of geometric lattices[133X
       2.5-1 LIsIrreducible
       2.5-2 LIsBoolean
@@ -151,6 +152,21 @@
       9.1-1 LaTeXDrawProjPicture
       9.1-2 LaTeXDrawSpherePicture
       9.1-3 LaTeXDrawTopeGraph
+  10 [33X[0;0YRealization spaces of geometric lattices[133X
+    10.1 [33X[0;0YConstruction[133X
+      10.1-1 RealizationSpaceOfGeomLattice
+    10.2 [33X[0;0YAttributes[133X
+      10.2-1 LGenSet
+      10.2-2 RSLattice
+      10.2-3 RSCharacteristic
+      10.2-4 RSDefField
+      10.2-5 RSCoeffMat
+      10.2-6 RSDimension
+      10.2-7 RSPRing
+      10.2-8 RSIdealMinors
+      10.2-9 RSIdealNonMinors
+    10.3 [33X[0;0YProperties[133X
+      10.3-1 RSIsNonEmpty
   
   
   [32X

@@ -10,7 +10,8 @@
 ##
 #################################
 
-#! @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
+# @Arguments A,[ps,[ip,[Hind,[disthv,[MarkHs]]]]]
+#! @Arguments A,[DrawOptions]
 #! @Returns A string.
 #! @Description
 #! Generates LaTeX tikz-code
@@ -19,11 +20,11 @@
 #! this is the 2-dim affine arrangement
 #! obtained by intersecting <A>A</A> with the plane $z=1$.
 #! 
-#! The optional parameters are:
-#!  * <A>ps</A> a scaling factor,
-#!  * <A>ip</A> intersection points are drawn,
-#!  * <A>Hind</A> labels for the hyperplanes are added,
-#!  * <A>disthv</A> a vector giving the normal of the plane whith which to intersect <A>A</A>,
+#! In the optional parameters <A>DrawOptions</A>, a record, the following parameters can be chosen
+#!  * <A>scale</A>, a positive rational scaling factor,
+#!  * <A>isecps</A> intersection points are drawn, <C>true</C> or <C>false</C>,
+#!  * <A>Hind</A> labels for the hyperplanes are added, <C>true</C> or <C>false</C>,
+#!  * <A>deconeH</A> a vector giving the normal of the plane (=1) with which to intersect <A>A</A>,
 #!  * <A>MarkHs</A> a list of indices of hyperplanes of <A>A</A>, these are drawn in another color.
 #!
 #! The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf</URL>).
@@ -40,7 +41,9 @@
 #! \draw (3.87,-1.) -- (-3.87,-1.);  % H_5 
 #! \draw (3.87,1.) -- (-3.87,1.);  % H_6 
 #! \end{tikzpicture}
-#! gap> Print(LaTeXDrawProjPicture(A,1/2,true,true,[1,1,1],[1,2]));
+#! gap> DrawOpts:=rec(scale:=1/2,isecps:=true,Hind:=true,
+#! >       deconeH:=[1,1,1],MarkHs:=[1,2]);;
+#! gap> Print(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));
 #! \begin{tikzpicture}[scale=1.0]
 #! \draw[color=red] (-3.56,1.83) -- (1.83,-3.56);  % H_1 
 #! \node at (1.97,-3.71) {\small $1$}; 
@@ -62,9 +65,7 @@
 #! \fill[red] (0.0,0.0) circle[radius=2pt];  % P[ 2, 4, 6 ] 
 #! \fill[red] (-0.32,1.17) circle[radius=2pt];  % P[ 3, 4 ] 
 #! \fill[red] (1.17,-0.32) circle[radius=2pt];  % P[ 5, 6 ] 
-#!
 #! \end{tikzpicture}
-#! 
 #! @EndExampleSession
 #! 
 #! @BeginLatexOnly
