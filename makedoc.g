@@ -14,15 +14,13 @@
 
 LoadPackage( "AutoDoc" );
 AutoDoc( rec(
-            # AutodocLaTeXPackages := latexPackages,
             scaffold := rec(
             bib := "hyparr.bib",
             ),
-            # includes := ["_AutoDocMainFile.xml"],
-            # autodoc := true
             autodoc := rec(
             files := ["gap/arrangements.gd", "gap/specialarrs.gd", "gap/orientedmatroid.gd", 
-                "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd","gap/topeposet.gd","gap/drawarrs.gd"] 
+                "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd",
+                "gap/topeposet.gd","gap/drawarrs.gd","gap/realizationspace.gd"] 
                 ),
             gapdoc := rec(
                 LaTeXOptions := rec(
