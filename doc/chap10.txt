@@ -117,3 +117,54 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
+  
+  [1X10.4 [33X[0;0YFurther (auxillary) Operations[133X[101X
+  
+  [1X10.4-1 LSubsetGeneratedByS[101X
+  
+  [33X[1;0Y[29X[2XLSubsetGeneratedByS[102X(  ) [32X operation[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X10.4-2 LIsGenSet[101X
+  
+  [33X[1;0Y[29X[2XLIsGenSet[102X(  ) [32X operation[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X10.4-3 LDependentSubsets[101X
+  
+  [33X[1;0Y[29X[2XLDependentSubsets[102X(  ) [32X operation[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X10.4-4 LIsIndependentSubset[101X
+  
+  [33X[1;0Y[29X[2XLIsIndependentSubset[102X(  ) [32X operation[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X10.4-5 LBasisCircuitInMat[101X
+  
+  [33X[1;0Y[29X[2XLBasisCircuitInMat[102X(  ) [32X operation[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X10.4-6 LGenSetIndeterminateMat[101X
+  
+  [33X[1;0Y[29X[2XLGenSetIndeterminateMat[102X(  ) [32X operation[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  

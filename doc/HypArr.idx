@@ -96,3 +96,9 @@
 \indexentry{RSIdealMinors@\texttt  {RSIdealMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
 \indexentry{RSNonMinors@\texttt  {RSNonMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
 \indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
+\indexentry{LSubsetGeneratedByS@\texttt  {LSubsetGeneratedByS}!for IsGeomLattice,IsList|hyperpage}{44}
+\indexentry{LIsGenSet@\texttt  {LIsGenSet}!for IsGeomLattice,IsList|hyperpage}{44}
+\indexentry{LDependentSubsets@\texttt  {LDependentSubsets}!for IsGeomLattice, IsInt|hyperpage}{44}
+\indexentry{LIsIndependentSubset@\texttt  {LIsIndependentSubset}!for IsGeomLattice, IsList|hyperpage}{44}
+\indexentry{LBasisCircuitInMat@\texttt  {LBasisCircuitInMat}!for IsGeomLattice, IsList|hyperpage}{45}
+\indexentry{LGenSetIndeterminateMat@\texttt  {LGenSetIndeterminateMat}!for IsGeomLattice, IsList, IsField|hyperpage}{45}

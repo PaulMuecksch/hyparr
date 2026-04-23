@@ -100,10 +100,16 @@
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LBases}
     \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LBasisCircuitInMat}
+    \subitem for IsGeomLattice, IsList, \hyperpage{45}
   \item \texttt  {LCharPoly}
     \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LDependentSubsets}
+    \subitem for IsGeomLattice, IsInt, \hyperpage{44}
   \item \texttt  {LGenSet}
     \subitem for IsGeomLattice, \hyperpage{42}
+  \item \texttt  {LGenSetIndeterminateMat}
+    \subitem for IsGeomLattice, IsList, IsField, \hyperpage{45}
   \item \texttt  {LGraph}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGroundSet}
@@ -112,6 +118,10 @@
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LIsGeneric}
     \subitem for IsGeomLattice, \hyperpage{10}
+  \item \texttt  {LIsGenSet}
+    \subitem for IsGeomLattice,IsList, \hyperpage{44}
+  \item \texttt  {LIsIndependentSubset}
+    \subitem for IsGeomLattice, IsList, \hyperpage{44}
   \item \texttt  {LIsIrreducible}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LIsIsomorphic}
@@ -134,6 +144,8 @@
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LRealizationSpace}
     \subitem for IsGeomLattice, IsInt, \hyperpage{42}
+  \item \texttt  {LSubsetGeneratedByS}
+    \subitem for IsGeomLattice,IsList, \hyperpage{44}
 
   \indexspace
 

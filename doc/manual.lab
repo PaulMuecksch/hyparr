@@ -37,6 +37,7 @@
 \makelabel{hyparr:Construction}{10.1}{X7F6278CD87400D49}
 \makelabel{hyparr:Attributes}{10.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Properties}{10.3}{X871597447BB998A1}
+\makelabel{hyparr:Further (auxillary) Operations}{10.4}{X8252A2A9867F3059}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:References}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
@@ -138,3 +139,9 @@
 \makelabel{hyparr:RSIdealMinors for IsRealizationSpaceOfGeomLattice}{10.2.8}{X8495A2627D020F1B}
 \makelabel{hyparr:RSNonMinors for IsRealizationSpaceOfGeomLattice}{10.2.9}{X78DA8570821E4775}
 \makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{10.3.1}{X781923918754E3CE}
+\makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{10.4.1}{X800FB3BB86AD2F1A}
+\makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{10.4.2}{X84F182B783389C2B}
+\makelabel{hyparr:LDependentSubsets for IsGeomLattice, IsInt}{10.4.3}{X87BD2A427B7F5E16}
+\makelabel{hyparr:LIsIndependentSubset for IsGeomLattice, IsList}{10.4.4}{X87024F1B82B3A420}
+\makelabel{hyparr:LBasisCircuitInMat for IsGeomLattice, IsList}{10.4.5}{X79FBA771828AB797}
+\makelabel{hyparr:LGenSetIndeterminateMat for IsGeomLattice, IsList, IsField}{10.4.6}{X80ED5A5187C06782}

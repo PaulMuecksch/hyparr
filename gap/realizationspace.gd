@@ -154,11 +154,66 @@ DeclareAttribute("RSNonMinors",IsRealizationSpaceOfGeomLattice);
 #! @EndExampleSession
 DeclareProperty("RSIsNonEmpty",IsRealizationSpaceOfGeomLattice);
 
+
+
+#################################################
+##
+#! @Section Further (auxillary) Operations
+##
+#################################################
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#!  
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
 DeclareOperation("LSubsetGeneratedByS",[IsGeomLattice,IsList]);
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#!  
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
 DeclareOperation("LIsGenSet",[IsGeomLattice,IsList]);
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#!  
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
 DeclareOperation("LDependentSubsets", [IsGeomLattice, IsInt]);
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#!  
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
 DeclareOperation("LIsIndependentSubset", [IsGeomLattice, IsList]);
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#!  
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
 DeclareOperation("LBasisCircuitInMat", [IsGeomLattice, IsList]);
+
+#! @Arguments 
+#! @Returns 
+#! @Description
+#!  
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
 DeclareOperation("LGenSetIndeterminateMat", [IsGeomLattice, IsList, IsField]);
 
 DeclareGlobalFunction("PolyIsProdOfDivisors");

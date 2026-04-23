@@ -183,5 +183,89 @@ gap> LGenSet(L);
 </Section>
 
 
+<Section Label="Chapter_Realization_spaces_of_geometric_lattices_Section_Further_auxillary_Operations">
+<Heading>Further (auxillary) Operations</Heading>
+
+<ManSection>
+  <Oper Arg="" Name="LSubsetGeneratedByS" Label="for IsGeomLattice,IsList"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="" Name="LIsGenSet" Label="for IsGeomLattice,IsList"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="" Name="LDependentSubsets" Label="for IsGeomLattice, IsInt"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="" Name="LIsIndependentSubset" Label="for IsGeomLattice, IsList"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="" Name="LBasisCircuitInMat" Label="for IsGeomLattice, IsList"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="" Name="LGenSetIndeterminateMat" Label="for IsGeomLattice, IsList, IsField"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
 </Chapter>
 

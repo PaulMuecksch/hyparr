@@ -153,7 +153,11 @@ end);
 InstallMethod(LGenSet,
     [IsGeomLattice],
 function(L)
-    L!.genset := LFindGenSet(L);;
+local GenSet,ml;
+    GenSet := List([1..20],x->LFindGenSet(L));
+    ml := Minimum(List(GenSet,x->Length(x)));
+    GenSet := Random(GenSet{Positions(List(GenSet,x->Length(x)),ml)});
+    L!.genset := GenSet;
     return(L!.genset);
 end);
 
@@ -348,9 +352,10 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
         return fail;
     fi;
 
-    GenSet := List([1..20],x->LFindGenSet(L));;
-    ml := Minimum(List(GenSet,x->Length(x)));;
-    GenSet := GenSet[Position(List(GenSet,x->Length(x)),ml)];;
+    GenSet := LGenSet(L);;
+    # GenSet := List([1..20],x->LFindGenSet(L));;
+    # ml := Minimum(List(GenSet,x->Length(x)));;
+    # GenSet := GenSet[Position(List(GenSet,x->Length(x)),ml)];;
 
     rkL := LRank(L);
     A := LGenSetIndeterminateMat(L,GenSet,K);
@@ -394,7 +399,7 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
         fi;;
     od;;
     NonVanishingMinors := ff;
-    IdealNonVanishingMinors := Ideal(VarRing,[Product(ff)]);
+    IdealNonVanishingMinors := Ideal(VarRing,[eR*Product(ff)]);
     IdealNonVanishingMinors := SingularInterface("std",[IdealNonVanishingMinors],"ideal");
 
     SingularLibrary("elim.lib");
