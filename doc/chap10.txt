@@ -1,6 +1,9 @@
   
   [1X10 [33X[0;0YRealization spaces of geometric lattices[133X[101X
   
+  [33X[0;0YThe  computation  of the realization space uses the [12Xsingular[112X package to call
+  functions from [12XSingular[112X [DGPS24].[133X
+  
   
   [1X10.1 [33X[0;0YConstruction[133X[101X
   
@@ -46,7 +49,8 @@
   [33X[1;0Y[29X[2XRSLattice[102X(  ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSLattice(RS);[127X[104X
+    [4X[28X<Geometric lattice: 9 atoms, rank 3>[128X[104X
   [4X[32X[104X
   
   [1X10.2-3 RSCharacteristic[101X
@@ -54,7 +58,8 @@
   [33X[1;0Y[29X[2XRSCharacteristic[102X(  ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSCharacteristic(RS);[127X[104X
+    [4X[28X0[128X[104X
   [4X[32X[104X
   
   [1X10.2-4 RSDefField[101X
@@ -62,7 +67,8 @@
   [33X[1;0Y[29X[2XRSDefField[102X(  ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSDefField(RS);[127X[104X
+    [4X[28XRationals[128X[104X
   [4X[32X[104X
   
   [1X10.2-5 RSCoeffMat[101X
@@ -70,7 +76,10 @@
   [33X[1;0Y[29X[2XRSCoeffMat[102X(  ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSCoeffMat(RS);[127X[104X
+    [4X[28X[ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [128X[104X
+    [4X[28X  [ 1, 1, a1 ], [ 1, 1, 1 ], [ 0, 1, -a1^2+a1 ], [128X[104X
+    [4X[28X  [ 1, 0, a1 ], [ -a1+1, -a1, -a1^2 ] ][128X[104X
   [4X[32X[104X
   
   [1X10.2-6 RSDimension[101X
@@ -78,7 +87,8 @@
   [33X[1;0Y[29X[2XRSDimension[102X(  ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSDimension(RS);[127X[104X
+    [4X[28X0[128X[104X
   [4X[32X[104X
   
   [1X10.2-7 RSPRing[101X
@@ -86,23 +96,27 @@
   [33X[1;0Y[29X[2XRSPRing[102X(  ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSPRing(RS);[127X[104X
+    [4X[28XRationals[a1][128X[104X
   [4X[32X[104X
   
   [1X10.2-8 RSIdealMinors[101X
   
-  [33X[1;0Y[29X[2XRSIdealMinors[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSIdealMinors[102X( [3XRS[103X ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XI:=RSIdealMinors(RS); GeneratorsOfIdeal(I);[127X[104X
+    [4X[28X<two-sided ideal in Rationals[a1], (1 generator)>[128X[104X
+    [4X[28X[ a1^2-a1+1 ][128X[104X
   [4X[32X[104X
   
   [1X10.2-9 RSNonMinors[101X
   
-  [33X[1;0Y[29X[2XRSNonMinors[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSNonMinors[102X( [3XRS[103X ) [32X attribute[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XRSNonMinors(RS);[127X[104X
+    [4X[28X[ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ][128X[104X
   [4X[32X[104X
   
   
@@ -110,61 +124,17 @@
   
   [1X10.3-1 RSIsNonEmpty[101X
   
-  [33X[1;0Y[29X[2XRSIsNonEmpty[102X(  ) [32X property[133X
+  [33X[1;0Y[29X[2XRSIsNonEmpty[102X( [3XRS[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
   
   
   [1X10.4 [33X[0;0YFurther (auxillary) Operations[133X[101X
   
   [1X10.4-1 LSubsetGeneratedByS[101X
   
-  [33X[1;0Y[29X[2XLSubsetGeneratedByS[102X(  ) [32X operation[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
+  [33X[1;0Y[29X[2XLSubsetGeneratedByS[102X( [3XL[103X, [3XS[103X ) [32X operation[133X
   
   [1X10.4-2 LIsGenSet[101X
   
-  [33X[1;0Y[29X[2XLIsGenSet[102X(  ) [32X operation[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
-  
-  [1X10.4-3 LDependentSubsets[101X
-  
-  [33X[1;0Y[29X[2XLDependentSubsets[102X(  ) [32X operation[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
-  
-  [1X10.4-4 LIsIndependentSubset[101X
-  
-  [33X[1;0Y[29X[2XLIsIndependentSubset[102X(  ) [32X operation[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
-  
-  [1X10.4-5 LBasisCircuitInMat[101X
-  
-  [33X[1;0Y[29X[2XLBasisCircuitInMat[102X(  ) [32X operation[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
-  
-  [1X10.4-6 LGenSetIndeterminateMat[101X
-  
-  [33X[1;0Y[29X[2XLGenSetIndeterminateMat[102X(  ) [32X operation[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
+  [33X[1;0Y[29X[2XLIsGenSet[102X( [3XL[103X, [3XS[103X ) [32X operation[133X
   

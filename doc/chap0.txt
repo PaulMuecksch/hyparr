@@ -170,10 +170,6 @@
     10.4 [33X[0;0YFurther (auxillary) Operations[133X
       10.4-1 LSubsetGeneratedByS
       10.4-2 LIsGenSet
-      10.4-3 LDependentSubsets
-      10.4-4 LIsIndependentSubset
-      10.4-5 LBasisCircuitInMat
-      10.4-6 LGenSetIndeterminateMat
   
   
   [32X

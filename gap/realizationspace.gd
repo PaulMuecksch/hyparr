@@ -2,7 +2,9 @@
 # HypArr: Relization spaces of geometric lattices
 #
 #! @Chapter Realization spaces of geometric lattices
-
+#!
+#! The computation of the realization space uses the <B>singular</B> package
+#! to call functions from <B>Singular</B> <Cite Key="DGPS_Singular4"/>.
 
 # Declare the category
 DeclareCategory("IsRealizationSpaceOfGeomLattice", IsComponentObjectRep and IsAttributeStoringRep );
@@ -71,7 +73,8 @@ DeclareAttribute("LGenSet",IsGeomLattice);
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSLattice(RS);
+#! <Geometric lattice: 9 atoms, rank 3>
 #! @EndExampleSession
 DeclareAttribute("RSLattice",IsRealizationSpaceOfGeomLattice);
 
@@ -80,7 +83,8 @@ DeclareAttribute("RSLattice",IsRealizationSpaceOfGeomLattice);
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSCharacteristic(RS);
+#! 0
 #! @EndExampleSession
 DeclareAttribute("RSCharacteristic",IsRealizationSpaceOfGeomLattice);
 
@@ -89,7 +93,8 @@ DeclareAttribute("RSCharacteristic",IsRealizationSpaceOfGeomLattice);
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSDefField(RS);
+#! Rationals
 #! @EndExampleSession
 DeclareAttribute("RSDefField",IsRealizationSpaceOfGeomLattice);
 
@@ -98,7 +103,10 @@ DeclareAttribute("RSDefField",IsRealizationSpaceOfGeomLattice);
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSCoeffMat(RS);
+#! [ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
+#!   [ 1, 1, a1 ], [ 1, 1, 1 ], [ 0, 1, -a1^2+a1 ], 
+#!   [ 1, 0, a1 ], [ -a1+1, -a1, -a1^2 ] ]
 #! @EndExampleSession
 DeclareAttribute("RSCoeffMat",IsRealizationSpaceOfGeomLattice);
 
@@ -107,7 +115,8 @@ DeclareAttribute("RSCoeffMat",IsRealizationSpaceOfGeomLattice);
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSDimension(RS);
+#! 0
 #! @EndExampleSession
 DeclareAttribute("RSDimension",IsRealizationSpaceOfGeomLattice);
 
@@ -116,25 +125,29 @@ DeclareAttribute("RSDimension",IsRealizationSpaceOfGeomLattice);
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSPRing(RS);
+#! Rationals[a1]
 #! @EndExampleSession
 DeclareAttribute("RSPRing",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
+#! @Arguments RS
 #! @Returns 
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);
+#! <two-sided ideal in Rationals[a1], (1 generator)>
+#! [ a1^2-a1+1 ]
 #! @EndExampleSession
 DeclareAttribute("RSIdealMinors",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
+#! @Arguments RS
 #! @Returns 
 #! @Description
 #!  
 #! @BeginExampleSession
-#! 
+#! gap> RSNonMinors(RS);
+#! [ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]
 #! @EndExampleSession
 DeclareAttribute("RSNonMinors",IsRealizationSpaceOfGeomLattice);
 
@@ -145,13 +158,7 @@ DeclareAttribute("RSNonMinors",IsRealizationSpaceOfGeomLattice);
 ##
 ###############################
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
+#! @Arguments RS
 DeclareProperty("RSIsNonEmpty",IsRealizationSpaceOfGeomLattice);
 
 
@@ -162,58 +169,18 @@ DeclareProperty("RSIsNonEmpty",IsRealizationSpaceOfGeomLattice);
 ##
 #################################################
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
+#! @Arguments L,S
 DeclareOperation("LSubsetGeneratedByS",[IsGeomLattice,IsList]);
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
+#! @Arguments L,S
 DeclareOperation("LIsGenSet",[IsGeomLattice,IsList]);
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
 DeclareOperation("LDependentSubsets", [IsGeomLattice, IsInt]);
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
 DeclareOperation("LIsIndependentSubset", [IsGeomLattice, IsList]);
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
 DeclareOperation("LBasisCircuitInMat", [IsGeomLattice, IsList]);
 
-#! @Arguments 
-#! @Returns 
-#! @Description
-#!  
-#! @BeginExampleSession
-#! 
-#! @EndExampleSession
 DeclareOperation("LGenSetIndeterminateMat", [IsGeomLattice, IsList, IsField]);
 
 DeclareGlobalFunction("PolyIsProdOfDivisors");

@@ -4,6 +4,9 @@
 <Chapter Label="Chapter_Realization_spaces_of_geometric_lattices">
 <Heading>Realization spaces of geometric lattices</Heading>
 
+<P/>
+ The computation of the realization space uses the <B>singular</B> package
+ to call functions from <B>Singular</B> <Cite Key="DGPS_Singular4"/>.
 <Section Label="Chapter_Realization_spaces_of_geometric_lattices_Section_Construction">
 <Heading>Construction</Heading>
 
@@ -60,7 +63,8 @@ gap> LGenSet(L);
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSLattice(RS);
+<Geometric lattice: 9 atoms, rank 3>
 ]]></Example>
 
 
@@ -73,7 +77,8 @@ gap> LGenSet(L);
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSCharacteristic(RS);
+0
 ]]></Example>
 
 
@@ -86,7 +91,8 @@ gap> LGenSet(L);
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSDefField(RS);
+Rationals
 ]]></Example>
 
 
@@ -99,7 +105,10 @@ gap> LGenSet(L);
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSCoeffMat(RS);
+[ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
+  [ 1, 1, a1 ], [ 1, 1, 1 ], [ 0, 1, -a1^2+a1 ], 
+  [ 1, 0, a1 ], [ -a1+1, -a1, -a1^2 ] ]
 ]]></Example>
 
 
@@ -112,7 +121,8 @@ gap> LGenSet(L);
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSDimension(RS);
+0
 ]]></Example>
 
 
@@ -125,7 +135,8 @@ gap> LGenSet(L);
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSPRing(RS);
+Rationals[a1]
 ]]></Example>
 
 
@@ -134,11 +145,13 @@ gap> LGenSet(L);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSIdealMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSIdealMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);
+<two-sided ideal in Rationals[a1], (1 generator)>
+[ a1^2-a1+1 ]
 ]]></Example>
 
 
@@ -147,11 +160,12 @@ gap> LGenSet(L);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSNonMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSNonMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
  <Description>
 <P/>
 <Example><![CDATA[
-
+gap> RSNonMinors(RS);
+[ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]
 ]]></Example>
 
 
@@ -166,16 +180,11 @@ gap> LGenSet(L);
 <Heading>Properties</Heading>
 
 <ManSection>
-  <Prop Arg="" Name="RSIsNonEmpty" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Prop Arg="RS" Name="RSIsNonEmpty" Label="for IsRealizationSpaceOfGeomLattice"/>
  <Returns><K>true</K> or <K>false</K>
 </Returns>
  <Description>
 <P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
  </Description>
 </ManSection>
 
@@ -187,79 +196,17 @@ gap> LGenSet(L);
 <Heading>Further (auxillary) Operations</Heading>
 
 <ManSection>
-  <Oper Arg="" Name="LSubsetGeneratedByS" Label="for IsGeomLattice,IsList"/>
+  <Oper Arg="L,S" Name="LSubsetGeneratedByS" Label="for IsGeomLattice,IsList"/>
  <Description>
 <P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
  </Description>
 </ManSection>
 
 
 <ManSection>
-  <Oper Arg="" Name="LIsGenSet" Label="for IsGeomLattice,IsList"/>
+  <Oper Arg="L,S" Name="LIsGenSet" Label="for IsGeomLattice,IsList"/>
  <Description>
 <P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Oper Arg="" Name="LDependentSubsets" Label="for IsGeomLattice, IsInt"/>
- <Description>
-<P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Oper Arg="" Name="LIsIndependentSubset" Label="for IsGeomLattice, IsList"/>
- <Description>
-<P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Oper Arg="" Name="LBasisCircuitInMat" Label="for IsGeomLattice, IsList"/>
- <Description>
-<P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
- </Description>
-</ManSection>
-
-
-<ManSection>
-  <Oper Arg="" Name="LGenSetIndeterminateMat" Label="for IsGeomLattice, IsList, IsField"/>
- <Description>
-<P/>
-<Example><![CDATA[
-
-]]></Example>
-
-
  </Description>
 </ManSection>
 

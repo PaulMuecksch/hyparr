@@ -45,17 +45,13 @@
   [2XLAtoms[102X, for IsGeomLattice 2.4-2 
   [2XLAutGroup[102X, for IsGeomLattice 2.4-7 
   [2XLBases[102X, for IsGeomLattice 2.4-10 
-  [2XLBasisCircuitInMat[102X, for IsGeomLattice, IsList 10.4-5 
   [2XLCharPoly[102X, for IsGeomLattice 2.4-9 
-  [2XLDependentSubsets[102X, for IsGeomLattice, IsInt 10.4-3 
   [2XLGenSet[102X, for IsGeomLattice 10.2-1 
-  [2XLGenSetIndeterminateMat[102X, for IsGeomLattice, IsList, IsField 10.4-6 
   [2XLGraph[102X, for IsGeomLattice 2.4-6 
   [2XLGroundSet[102X, for IsGeomLattice 2.4-1 
   [2XLIsBoolean[102X, for IsGeomLattice 2.5-2 
   [2XLIsGeneric[102X, for IsGeomLattice 2.5-3 
   [2XLIsGenSet[102X, for IsGeomLattice,IsList 10.4-2 
-  [2XLIsIndependentSubset[102X, for IsGeomLattice, IsList 10.4-4 
   [2XLIsIrreducible[102X, for IsGeomLattice 2.5-1 
   [2XLIsIsomorphic[102X, for IsGeomLattice,IsGeomLattice 2.6-1 
   [2XLIsModularFlat[102X, for IsGeomLattice, IsList 6.1-2 

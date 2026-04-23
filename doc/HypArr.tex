@@ -2625,6 +2625,8 @@ their duals. See e.g. (only in pdf or \href{https://paulmuecksch.github.io/HypAr
 \hyperdef{L}{X82EB57AB7B1A0B2D}{}
 {
   
+
+ The computation of the realization space uses the \textsc{singular} package to call functions from \textsc{Singular} \cite{DGPS_Singular4}. 
 \section{\textcolor{Chapter }{Construction}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Construction}
 \logpage{[ 10, 1, 0 ]}
 \hyperdef{L}{X7F6278CD87400D49}{}
@@ -2698,7 +2700,8 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSLattice(RS);|
+  <Geometric lattice: 9 atoms, rank 3>
 \end{Verbatim}
  }
 
@@ -2716,7 +2719,8 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSCharacteristic(RS);|
+  0
 \end{Verbatim}
  }
 
@@ -2734,7 +2738,8 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSDefField(RS);|
+  Rationals
 \end{Verbatim}
  }
 
@@ -2752,7 +2757,10 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSCoeffMat(RS);|
+  [ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
+    [ 1, 1, a1 ], [ 1, 1, 1 ], [ 0, 1, -a1^2+a1 ], 
+    [ 1, 0, a1 ], [ -a1+1, -a1, -a1^2 ] ]
 \end{Verbatim}
  }
 
@@ -2770,7 +2778,8 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSDimension(RS);|
+  0
 \end{Verbatim}
  }
 
@@ -2788,7 +2797,8 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSPRing(RS);|
+  Rationals[a1]
 \end{Verbatim}
  }
 
@@ -2797,7 +2807,7 @@ a set
 \subsection{\textcolor{Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 8 ]}\nobreak
 \hyperdef{L}{X8495A2627D020F1B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIdealMinors({\mdseries\slshape })\index{RSIdealMinors@\texttt{RSIdealMinors}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIdealMinors({\mdseries\slshape RS})\index{RSIdealMinors@\texttt{RSIdealMinors}!for IsRealizationSpaceOfGeomLattice}
 \label{RSIdealMinors:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
 
@@ -2806,7 +2816,9 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);|
+  <two-sided ideal in Rationals[a1], (1 generator)>
+  [ a1^2-a1+1 ]
 \end{Verbatim}
  }
 
@@ -2815,7 +2827,7 @@ a set
 \subsection{\textcolor{Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 9 ]}\nobreak
 \hyperdef{L}{X78DA8570821E4775}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSNonMinors({\mdseries\slshape })\index{RSNonMinors@\texttt{RSNonMinors}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSNonMinors({\mdseries\slshape RS})\index{RSNonMinors@\texttt{RSNonMinors}!for IsRealizationSpaceOfGeomLattice}
 \label{RSNonMinors:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
 
@@ -2824,7 +2836,8 @@ a set
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@RSNonMinors(RS);|
+  [ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]
 \end{Verbatim}
  }
 
@@ -2840,7 +2853,7 @@ a set
 \subsection{\textcolor{Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 3, 1 ]}\nobreak
 \hyperdef{L}{X781923918754E3CE}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIsNonEmpty({\mdseries\slshape })\index{RSIsNonEmpty@\texttt{RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIsNonEmpty({\mdseries\slshape RS})\index{RSIsNonEmpty@\texttt{RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice}
 \label{RSIsNonEmpty:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (property)}}\\
 \textbf{\indent Returns:\ }
@@ -2850,10 +2863,6 @@ a set
 
  
 
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
  }
 
  }
@@ -2868,17 +2877,13 @@ a set
 \subsection{\textcolor{Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}
 \logpage{[ 10, 4, 1 ]}\nobreak
 \hyperdef{L}{X800FB3BB86AD2F1A}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LSubsetGeneratedByS({\mdseries\slshape })\index{LSubsetGeneratedByS@\texttt{LSubsetGeneratedByS}!for IsGeomLattice,IsList}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LSubsetGeneratedByS({\mdseries\slshape L, S})\index{LSubsetGeneratedByS@\texttt{LSubsetGeneratedByS}!for IsGeomLattice,IsList}
 \label{LSubsetGeneratedByS:for IsGeomLattice,IsList}
 }\hfill{\scriptsize (operation)}}\\
 
 
  
 
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
  }
 
  
@@ -2886,89 +2891,13 @@ a set
 \subsection{\textcolor{Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}
 \logpage{[ 10, 4, 2 ]}\nobreak
 \hyperdef{L}{X84F182B783389C2B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsGenSet({\mdseries\slshape })\index{LIsGenSet@\texttt{LIsGenSet}!for IsGeomLattice,IsList}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsGenSet({\mdseries\slshape L, S})\index{LIsGenSet@\texttt{LIsGenSet}!for IsGeomLattice,IsList}
 \label{LIsGenSet:for IsGeomLattice,IsList}
 }\hfill{\scriptsize (operation)}}\\
 
 
  
 
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LDependentSubsets (for IsGeomLattice, IsInt)}}
-\logpage{[ 10, 4, 3 ]}\nobreak
-\hyperdef{L}{X87BD2A427B7F5E16}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LDependentSubsets({\mdseries\slshape })\index{LDependentSubsets@\texttt{LDependentSubsets}!for IsGeomLattice, IsInt}
-\label{LDependentSubsets:for IsGeomLattice, IsInt}
-}\hfill{\scriptsize (operation)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LIsIndependentSubset (for IsGeomLattice, IsList)}}
-\logpage{[ 10, 4, 4 ]}\nobreak
-\hyperdef{L}{X87024F1B82B3A420}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsIndependentSubset({\mdseries\slshape })\index{LIsIndependentSubset@\texttt{LIsIndependentSubset}!for IsGeomLattice, IsList}
-\label{LIsIndependentSubset:for IsGeomLattice, IsList}
-}\hfill{\scriptsize (operation)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LBasisCircuitInMat (for IsGeomLattice, IsList)}}
-\logpage{[ 10, 4, 5 ]}\nobreak
-\hyperdef{L}{X79FBA771828AB797}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LBasisCircuitInMat({\mdseries\slshape })\index{LBasisCircuitInMat@\texttt{LBasisCircuitInMat}!for IsGeomLattice, IsList}
-\label{LBasisCircuitInMat:for IsGeomLattice, IsList}
-}\hfill{\scriptsize (operation)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{LGenSetIndeterminateMat (for IsGeomLattice, IsList, IsField)}}
-\logpage{[ 10, 4, 6 ]}\nobreak
-\hyperdef{L}{X80ED5A5187C06782}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LGenSetIndeterminateMat({\mdseries\slshape })\index{LGenSetIndeterminateMat@\texttt{LGenSetIndeterminateMat}!for IsGeomLattice, IsList, IsField}
-\label{LGenSetIndeterminateMat:for IsGeomLattice, IsList, IsField}
-}\hfill{\scriptsize (operation)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
-\end{Verbatim}
  }
 
  }

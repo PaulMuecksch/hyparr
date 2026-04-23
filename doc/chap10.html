@@ -50,14 +50,12 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X800FB3BB86AD2F1A">10.4-1 LSubsetGeneratedByS</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X84F182B783389C2B">10.4-2 LIsGenSet</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X87BD2A427B7F5E16">10.4-3 LDependentSubsets</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X87024F1B82B3A420">10.4-4 LIsIndependentSubset</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X79FBA771828AB797">10.4-5 LBasisCircuitInMat</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap10.html#X80ED5A5187C06782">10.4-6 LGenSetIndeterminateMat</a></span>
 </div></div>
 </div>
 
 <h3>10 <span class="Heading">Realization spaces of geometric lattices</span></h3>
+
+<p>The computation of the realization space uses the <strong class="button">singular</strong> package to call functions from <strong class="button">Singular</strong> <a href="chapBib.html#biBDGPS_Singular4">[DGPS24]</a>.</p>
 
 <p><a id="X7F6278CD87400D49" name="X7F6278CD87400D49"></a></p>
 
@@ -112,7 +110,8 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSLattice</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSLattice(RS);</span>
+&lt;Geometric lattice: 9 atoms, rank 3&gt;
 </pre></div>
 
 <p><a id="X7C7870A785D8894E" name="X7C7870A785D8894E"></a></p>
@@ -122,7 +121,8 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCharacteristic</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSCharacteristic(RS);</span>
+0
 </pre></div>
 
 <p><a id="X877A2CF98702D72D" name="X877A2CF98702D72D"></a></p>
@@ -132,7 +132,8 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDefField</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSDefField(RS);</span>
+Rationals
 </pre></div>
 
 <p><a id="X7D89A3E87AE33F30" name="X7D89A3E87AE33F30"></a></p>
@@ -142,7 +143,10 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCoeffMat</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSCoeffMat(RS);</span>
+[ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
+  [ 1, 1, a1 ], [ 1, 1, 1 ], [ 0, 1, -a1^2+a1 ], 
+  [ 1, 0, a1 ], [ -a1+1, -a1, -a1^2 ] ]
 </pre></div>
 
 <p><a id="X7CD7DC23844DAB58" name="X7CD7DC23844DAB58"></a></p>
@@ -152,7 +156,8 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDimension</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSDimension(RS);</span>
+0
 </pre></div>
 
 <p><a id="X7FE8075E860D45B1" name="X7FE8075E860D45B1"></a></p>
@@ -162,27 +167,31 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSPRing</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSPRing(RS);</span>
+Rationals[a1]
 </pre></div>
 
 <p><a id="X8495A2627D020F1B" name="X8495A2627D020F1B"></a></p>
 
 <h5>10.2-8 RSIdealMinors</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIdealMinors</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIdealMinors</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);</span>
+&lt;two-sided ideal in Rationals[a1], (1 generator)&gt;
+[ a1^2-a1+1 ]
 </pre></div>
 
 <p><a id="X78DA8570821E4775" name="X78DA8570821E4775"></a></p>
 
 <h5>10.2-9 RSNonMinors</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSNonMinors</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSNonMinors</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSNonMinors(RS);</span>
+[ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]
 </pre></div>
 
 <p><a id="X871597447BB998A1" name="X871597447BB998A1"></a></p>
@@ -193,13 +202,8 @@
 
 <h5>10.3-1 RSIsNonEmpty</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIsNonEmpty</code>(  )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIsNonEmpty</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: <code class="keyw">true</code> or <code class="keyw">false</code></p>
-
-
-<div class="example"><pre>
-
-</pre></div>
 
 <p><a id="X8252A2A9867F3059" name="X8252A2A9867F3059"></a></p>
 
@@ -209,62 +213,12 @@
 
 <h5>10.4-1 LSubsetGeneratedByS</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LSubsetGeneratedByS</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-
-</pre></div>
-
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LSubsetGeneratedByS</code>( <var class="Arg">L</var>, <var class="Arg">S</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p><a id="X84F182B783389C2B" name="X84F182B783389C2B"></a></p>
 
 <h5>10.4-2 LIsGenSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsGenSet</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-
-</pre></div>
-
-<p><a id="X87BD2A427B7F5E16" name="X87BD2A427B7F5E16"></a></p>
-
-<h5>10.4-3 LDependentSubsets</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LDependentSubsets</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-
-</pre></div>
-
-<p><a id="X87024F1B82B3A420" name="X87024F1B82B3A420"></a></p>
-
-<h5>10.4-4 LIsIndependentSubset</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsIndependentSubset</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-
-</pre></div>
-
-<p><a id="X79FBA771828AB797" name="X79FBA771828AB797"></a></p>
-
-<h5>10.4-5 LBasisCircuitInMat</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LBasisCircuitInMat</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-
-</pre></div>
-
-<p><a id="X80ED5A5187C06782" name="X80ED5A5187C06782"></a></p>
-
-<h5>10.4-6 LGenSetIndeterminateMat</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LGenSetIndeterminateMat</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-
-</pre></div>
-
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsGenSet</code>( <var class="Arg">L</var>, <var class="Arg">S</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap9.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
 

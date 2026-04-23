@@ -4,22 +4,21 @@
   
   [[20XAbe16[120X] [16XAbe, T.[116X, [17XDivisionally free arrangements of hyperplanes[117X, [18XInvent. Math.[118X, [19X204[119X, 1 (2016), 317--346.
   
-  [[20XBLVS+99[120X]  [16XBj\"{o}rner,  A.,  Las  Vergnas,  M.,  Sturmfels,  B.,  White,  N. and Ziegler, G. M.[116X, [17XOriented matroids[117X, Cambridge
-  University Press, Cambridge, Second edition, Encyclopedia of Mathematics and its Applications, [19X46[119X (1999), xii+548 pages.
+  [[20XBLVS+99[120X]  [16XBj\"{o}rner,  A.,  Las  Vergnas, M., Sturmfels, B., White, N. and Ziegler, G. M.[116X, [17XOriented matroids[117X, Cambridge University Press,
+  Cambridge, Second edition, Encyclopedia of Mathematics and its Applications, [19X46[119X (1999), xii+548 pages.
   
   [[20XCK22[120X] [16XCuntz, M. and Kühne, L.[116X, [17XOn arrangements of hyperplanes from connected subgraphs[117X (2022).
   
-  [[20XDGPS24[120X]  [16XDecker,  W.,  Greuel,  G.-M., Pfister, G. and Sch\"onemann, H.[116X, [17X\sc Singular 4-4-0 --- A computer algebra system for
-  polynomial computations[117X (2024), \url{http://www.singular.uni-kl.de}.
+  [[20XDGPS24[120X]  [16XDecker,  W.,  Greuel,  G.-M.,  Pfister,  G. and Sch\"onemann, H.[116X, [17X\sc Singular 4-4-0 --- A computer algebra system for polynomial
+  computations[117X (2024), \url{http://www.singular.uni-kl.de}.
   
-  [[20XEll26[120X]    [16XEllis,    G.[116X,    [17XHAP,    Homological   Algebra   Programming,   Version   1.75[117X   (2026),   (GAP   package),   \href
-  {https://gap-packages.github.io/hap}                {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
-  {}{}{}\texttt{hap}}.
+  [[20XEll26[120X]  [16XEllis,  G.[116X,  [17XHAP,  Homological Algebra Programming, Version 1.75[117X (2026), (GAP package), \href {https://gap-packages.github.io/hap}
+  {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary {}{}{}\texttt{hap}}.
   
   [[20XFal95[120X] [16XFalk, M.[116X, [17XK(π,1) arrangements[117X, [18XTopology[118X, [19X34[119X, 1 (1995), 141--154.
   
-  [[20XFR87[120X]  [16XFalk,  M.  and  Randell, R.[116X, [17XOn the homotopy theory of arrangements[117X, in Complex analytic singularities, North-Holland,
-  Amsterdam, Adv. Stud. Pure Math., [19X8[119X (1987), 101--124.
+  [[20XFR87[120X]  [16XFalk, M. and Randell, R.[116X, [17XOn the homotopy theory of arrangements[117X, in Complex analytic singularities, North-Holland, Amsterdam, Adv.
+  Stud. Pure Math., [19X8[119X (1987), 101--124.
   
   [[20XMY25[120X] [16XMücksch, P. and Yoshinaga, M.[116X, [17XMilnor fibrations and oriented matroids.[117X, [18XArXiv e-prints[118X (2025), arXiv:2508.15331.
   

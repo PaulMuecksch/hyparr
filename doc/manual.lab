@@ -141,7 +141,3 @@
 \makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{10.3.1}{X781923918754E3CE}
 \makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{10.4.1}{X800FB3BB86AD2F1A}
 \makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{10.4.2}{X84F182B783389C2B}
-\makelabel{hyparr:LDependentSubsets for IsGeomLattice, IsInt}{10.4.3}{X87BD2A427B7F5E16}
-\makelabel{hyparr:LIsIndependentSubset for IsGeomLattice, IsList}{10.4.4}{X87024F1B82B3A420}
-\makelabel{hyparr:LBasisCircuitInMat for IsGeomLattice, IsList}{10.4.5}{X79FBA771828AB797}
-\makelabel{hyparr:LGenSetIndeterminateMat for IsGeomLattice, IsList, IsField}{10.4.6}{X80ED5A5187C06782}

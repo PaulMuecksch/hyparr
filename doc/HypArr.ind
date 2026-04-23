@@ -100,16 +100,10 @@
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LBases}
     \subitem for IsGeomLattice, \hyperpage{9}
-  \item \texttt  {LBasisCircuitInMat}
-    \subitem for IsGeomLattice, IsList, \hyperpage{45}
   \item \texttt  {LCharPoly}
     \subitem for IsGeomLattice, \hyperpage{9}
-  \item \texttt  {LDependentSubsets}
-    \subitem for IsGeomLattice, IsInt, \hyperpage{44}
   \item \texttt  {LGenSet}
     \subitem for IsGeomLattice, \hyperpage{42}
-  \item \texttt  {LGenSetIndeterminateMat}
-    \subitem for IsGeomLattice, IsList, IsField, \hyperpage{45}
   \item \texttt  {LGraph}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGroundSet}
@@ -120,8 +114,6 @@
     \subitem for IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsGenSet}
     \subitem for IsGeomLattice,IsList, \hyperpage{44}
-  \item \texttt  {LIsIndependentSubset}
-    \subitem for IsGeomLattice, IsList, \hyperpage{44}
   \item \texttt  {LIsIrreducible}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LIsIsomorphic}
@@ -201,11 +193,11 @@
   \item \texttt  {RSDimension}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSIdealMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
   \item \texttt  {RSIsNonEmpty}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
   \item \texttt  {RSLattice}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{42}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSNonMinors}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
   \item \texttt  {RSPRing}

@@ -24,7 +24,7 @@ InstallMethod(RSCharacteristic,
 
 InstallMethod(RSDefField,
     [ IsRealizationSpaceOfGeomLattice ],
-    RS -> RS!.dfield);
+    RS -> RS!.deffield);
 
 InstallMethod(RSCoeffMat,
     [ IsRealizationSpaceOfGeomLattice ],
@@ -367,6 +367,7 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     DepSs := LDependentSubsets(L,LRank(L));;
 
     GenMinors := List(DepSs,S->Det(IMat{S}));;
+    Add(GenMinors, Zero(A.PRing));
     IdealVanishingMinors := Ideal(VarRing,GenMinors);
 
     SetTermOrdering(VarRing,"dp");;
@@ -460,8 +461,8 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     Det := Determinant;
     Bs := LBases(L);
     DepSs := LDependentSubsets(L,LRank(L));;
-
     GenMinors := List(DepSs,S->Det(IMat{S}));;
+    Add(GenMinors, Zero(A.PRing));
     IdealVanishingMinors := Ideal(VarRing,GenMinors);
 
     SetTermOrdering(VarRing,"dp");;
