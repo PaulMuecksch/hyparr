@@ -57,10 +57,21 @@
 
 <h5>10.1-1 LRealizationSpace</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LRealizationSpace</code>(  )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LRealizationSpace</code>( <var class="Arg">L</var>, <var class="Arg">char</var>[, <var class="Arg">GenSetL</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: RealizationSpaceOfGeometricLattice</p>
+
+<p>Computes the realization space of the geometric lattice <var class="Arg">L</var> in characteristic <var class="Arg">char</var>. Optionally, a generating set of <var class="Arg">L</var> (as a subset of <code class="code">LAtoms(L)</code>) can be given. Otherwise, the algorithm tries to find a small one.</p>
+
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(3,3,3));</span>
+&lt;Geometric lattice: 9 atoms, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RS:=LRealizationSpace(L,0);</span>
+&lt;RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">S:=LGenSet(L);</span>
+[ 2, 3, 4, 6, 8 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RS:=LRealizationSpace(L,0,S);</span>
+&lt;RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true
 </pre></div>
 
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
@@ -71,10 +82,17 @@
 
 <h5>10.2-1 LGenSet</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LGenSet</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LGenSet</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a set</p>
+
+<p>Computes some generating set of <var class="Arg">L</var>.</p>
+
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(3,3,3));</span>
+&lt;Geometric lattice: 9 atoms, rank 3&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LGenSet(L);</span>
+[ 2, 3, 4, 6, 8 ]
 </pre></div>
 
 <p><a id="X8070EC1580B975D7" name="X8070EC1580B975D7"></a></p>

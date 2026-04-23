@@ -88,11 +88,11 @@
 \indexentry{LRealizationSpace@\texttt  {LRealizationSpace}!for IsGeomLattice, IsInt|hyperpage}{42}
 \indexentry{LGenSet@\texttt  {LGenSet}!for IsGeomLattice|hyperpage}{42}
 \indexentry{RSLattice@\texttt  {RSLattice}!for IsRealizationSpaceOfGeomLattice|hyperpage}{42}
-\indexentry{RSCharacteristic@\texttt  {RSCharacteristic}!for IsRealizationSpaceOfGeomLattice|hyperpage}{42}
+\indexentry{RSCharacteristic@\texttt  {RSCharacteristic}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
 \indexentry{RSDefField@\texttt  {RSDefField}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
 \indexentry{RSCoeffMat@\texttt  {RSCoeffMat}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
 \indexentry{RSDimension@\texttt  {RSDimension}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
 \indexentry{RSPRing@\texttt  {RSPRing}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
 \indexentry{RSIdealMinors@\texttt  {RSIdealMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSNonMinors@\texttt  {RSNonMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
+\indexentry{RSNonMinors@\texttt  {RSNonMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
 \indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}

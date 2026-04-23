@@ -8,11 +8,22 @@
 <Heading>Construction</Heading>
 
 <ManSection>
-  <Oper Arg="" Name="LRealizationSpace" Label="for IsGeomLattice, IsInt"/>
+  <Oper Arg="L, char[, GenSetL]" Name="LRealizationSpace" Label="for IsGeomLattice, IsInt"/>
+ <Returns>RealizationSpaceOfGeometricLattice
+</Returns>
  <Description>
-<P/>
+  Computes the realization space of the geometric lattice <A>L</A> in characteristic <A>char</A>.
+  Optionally, a generating set of <A>L</A> (as a subset of <C>LAtoms(L)</C>) can be given. 
+  Otherwise, the algorithm tries to find a small one.
 <Example><![CDATA[
-
+gap> L:=IntersectionLattice(AGpql(3,3,3));
+<Geometric lattice: 9 atoms, rank 3>
+gap> RS:=LRealizationSpace(L,0);
+<RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true>
+gap> S:=LGenSet(L);
+[ 2, 3, 4, 6, 8 ]
+gap> RS:=LRealizationSpace(L,0,S);
+<RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true
 ]]></Example>
 
 
@@ -27,11 +38,16 @@
 <Heading>Attributes</Heading>
 
 <ManSection>
-  <Attr Arg="" Name="LGenSet" Label="for IsGeomLattice"/>
+  <Attr Arg="L" Name="LGenSet" Label="for IsGeomLattice"/>
+ <Returns>a set
+</Returns>
  <Description>
-<P/>
+  Computes some generating set of <A>L</A>.
 <Example><![CDATA[
-
+gap> L:=IntersectionLattice(AGpql(3,3,3));
+<Geometric lattice: 9 atoms, rank 3>
+gap> LGenSet(L);
+[ 2, 3, 4, 6, 8 ]
 ]]></Example>
 
 

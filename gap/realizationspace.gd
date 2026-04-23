@@ -27,12 +27,21 @@ DeclareOperation("ViewObject", [IsRealizationSpaceOfGeomLattice]);
 ##
 #################################
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments L, char[, GenSetL]
+#! @Returns RealizationSpaceOfGeometricLattice
 #! @Description
-#!  
+#!  Computes the realization space of the geometric lattice <A>L</A> in characteristic <A>char</A>.
+#!  Optionally, a generating set of <A>L</A> (as a subset of <C>LAtoms(L)</C>) can be given. 
+#!  Otherwise, the algorithm tries to find a small one.
 #! @BeginExampleSession
-#! 
+#! gap> L:=IntersectionLattice(AGpql(3,3,3));
+#! <Geometric lattice: 9 atoms, rank 3>
+#! gap> RS:=LRealizationSpace(L,0);
+#! <RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true>
+#! gap> S:=LGenSet(L);
+#! [ 2, 3, 4, 6, 8 ]
+#! gap> RS:=LRealizationSpace(L,0,S);
+#! <RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true
 #! @EndExampleSession
 DeclareOperation("LRealizationSpace", [IsGeomLattice, IsInt]);
 
@@ -45,12 +54,15 @@ DeclareOperation("LRealizationSpace", [IsGeomLattice, IsInt, IsList]);
 ##
 #################################
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments L
+#! @Returns a set
 #! @Description
-#!  
+#!  Computes some generating set of <A>L</A>.
 #! @BeginExampleSession
-#! 
+#! gap> L:=IntersectionLattice(AGpql(3,3,3));
+#! <Geometric lattice: 9 atoms, rank 3>
+#! gap> LGenSet(L);
+#! [ 2, 3, 4, 6, 8 ]
 #! @EndExampleSession
 DeclareAttribute("LGenSet",IsGeomLattice);
 

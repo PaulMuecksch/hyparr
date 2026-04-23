@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  23 APR 2026 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.8)  23 APR 2026 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,75 +678,64 @@ put line 2617.
 rawTopeGraph_H3.pdf>]
 Chapter 10.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2637--2640
-
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2655 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.2663 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 2662--2665
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2680--2683
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2698--2701
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2716--2719
+Underfull \hbox (badness 10000) in paragraph at lines 2692--2695
 
  []
 
 [42
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2734--2737
+Underfull \hbox (badness 10000) in paragraph at lines 2710--2713
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2752--2755
+Underfull \hbox (badness 10000) in paragraph at lines 2728--2731
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2770--2773
+Underfull \hbox (badness 10000) in paragraph at lines 2746--2749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2788--2791
+Underfull \hbox (badness 10000) in paragraph at lines 2764--2767
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2806--2809
+Underfull \hbox (badness 10000) in paragraph at lines 2782--2785
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 2800--2803
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2818--2821
+
+ []
+
+[43]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X871597447B
 B998A1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2824 \hyperdef{L}{X871597447BB998A1}{}
+l.2836 \hyperdef{L}{X871597447BB998A1}{}
                                          (./HypArr.bbl (./HypArr.brf)
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [43]
-[44]
+ [44]
 Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
@@ -804,7 +793,7 @@ exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on HypArr.pdf (48 pages, 430485 bytes).
+Output written on HypArr.pdf (48 pages, 431599 bytes).
 PDF statistics:
  1007 PDF objects out of 1200 (max. 8388607)
  895 compressed objects within 9 object streams

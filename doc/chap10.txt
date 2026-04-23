@@ -6,10 +6,22 @@
   
   [1X10.1-1 LRealizationSpace[101X
   
-  [33X[1;0Y[29X[2XLRealizationSpace[102X(  ) [32X operation[133X
+  [33X[1;0Y[29X[2XLRealizationSpace[102X( [3XL[103X, [3Xchar[103X[, [3XGenSetL[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YRealizationSpaceOfGeometricLattice[133X
+  
+  [33X[0;0YComputes  the realization space of the geometric lattice [3XL[103X in characteristic
+  [3Xchar[103X.  Optionally,  a  generating set of [3XL[103X (as a subset of [10XLAtoms(L)[110X) can be
+  given. Otherwise, the algorithm tries to find a small one.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(3,3,3));[127X[104X
+    [4X[28X<Geometric lattice: 9 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XRS:=LRealizationSpace(L,0);[127X[104X
+    [4X[28X<RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true>[128X[104X
+    [4X[25Xgap>[125X [27XS:=LGenSet(L);[127X[104X
+    [4X[28X[ 2, 3, 4, 6, 8 ][128X[104X
+    [4X[25Xgap>[125X [27XRS:=LRealizationSpace(L,0,S);[127X[104X
+    [4X[28X<RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true[128X[104X
   [4X[32X[104X
   
   
@@ -17,10 +29,16 @@
   
   [1X10.2-1 LGenSet[101X
   
-  [33X[1;0Y[29X[2XLGenSet[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLGenSet[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya set[133X
+  
+  [33X[0;0YComputes some generating set of [3XL[103X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(3,3,3));[127X[104X
+    [4X[28X<Geometric lattice: 9 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XLGenSet(L);[127X[104X
+    [4X[28X[ 2, 3, 4, 6, 8 ][128X[104X
   [4X[32X[104X
   
   [1X10.2-2 RSLattice[101X

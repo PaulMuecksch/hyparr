@@ -2634,16 +2634,24 @@ their duals. See e.g. (only in pdf or \href{https://paulmuecksch.github.io/HypAr
 \subsection{\textcolor{Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}
 \logpage{[ 10, 1, 1 ]}\nobreak
 \hyperdef{L}{X7F6CF5007E699D5D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LRealizationSpace({\mdseries\slshape })\index{LRealizationSpace@\texttt{LRealizationSpace}!for IsGeomLattice, IsInt}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LRealizationSpace({\mdseries\slshape L, char[, GenSetL]})\index{LRealizationSpace@\texttt{LRealizationSpace}!for IsGeomLattice, IsInt}
 \label{LRealizationSpace:for IsGeomLattice, IsInt}
 }\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+RealizationSpaceOfGeometricLattice 
 
 
- 
 
- 
+ Computes the realization space of the geometric lattice \mbox{\texttt{\mdseries\slshape L}} in characteristic \mbox{\texttt{\mdseries\slshape char}}. Optionally, a generating set of \mbox{\texttt{\mdseries\slshape L}} (as a subset of \texttt{LAtoms(L)}) can be given. Otherwise, the algorithm tries to find a small one. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(3,3,3));|
+  <Geometric lattice: 9 atoms, rank 3>
+  !gapprompt@gap>| !gapinput@RS:=LRealizationSpace(L,0);|
+  <RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true>
+  !gapprompt@gap>| !gapinput@S:=LGenSet(L);|
+  [ 2, 3, 4, 6, 8 ]
+  !gapprompt@gap>| !gapinput@RS:=LRealizationSpace(L,0,S);|
+  <RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true
 \end{Verbatim}
  }
 
@@ -2659,16 +2667,20 @@ their duals. See e.g. (only in pdf or \href{https://paulmuecksch.github.io/HypAr
 \subsection{\textcolor{Chapter }{LGenSet (for IsGeomLattice)}}
 \logpage{[ 10, 2, 1 ]}\nobreak
 \hyperdef{L}{X7A65C85187E4D34B}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LGenSet({\mdseries\slshape })\index{LGenSet@\texttt{LGenSet}!for IsGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LGenSet({\mdseries\slshape L})\index{LGenSet@\texttt{LGenSet}!for IsGeomLattice}
 \label{LGenSet:for IsGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a set 
 
 
- 
 
- 
+ Computes some generating set of \mbox{\texttt{\mdseries\slshape L}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(3,3,3));|
+  <Geometric lattice: 9 atoms, rank 3>
+  !gapprompt@gap>| !gapinput@LGenSet(L);|
+  [ 2, 3, 4, 6, 8 ]
 \end{Verbatim}
  }
 

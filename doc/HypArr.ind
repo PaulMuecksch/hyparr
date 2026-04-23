@@ -181,7 +181,7 @@
   \item \texttt  {Roots}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {RSCharacteristic}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{42}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSCoeffMat}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSDefField}
@@ -195,7 +195,7 @@
   \item \texttt  {RSLattice}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{42}
   \item \texttt  {RSNonMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
   \item \texttt  {RSPRing}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
 
