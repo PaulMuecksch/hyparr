@@ -127,7 +127,7 @@
 \makelabel{hyparr:LaTeXDrawProjPicture}{9.1.1}{X78621314826E390B}
 \makelabel{hyparr:LaTeXDrawSpherePicture}{9.1.2}{X786A445B7D28CCF6}
 \makelabel{hyparr:LaTeXDrawTopeGraph}{9.1.3}{X80A3836987B539A6}
-\makelabel{hyparr:RealizationSpaceOfGeomLattice for IsGeomLattice, IsInt}{10.1.1}{X7C0F4DAD86FB464E}
+\makelabel{hyparr:LRealizationSpace for IsGeomLattice, IsInt}{10.1.1}{X7F6CF5007E699D5D}
 \makelabel{hyparr:LGenSet for IsGeomLattice}{10.2.1}{X7A65C85187E4D34B}
 \makelabel{hyparr:RSLattice for IsRealizationSpaceOfGeomLattice}{10.2.2}{X8070EC1580B975D7}
 \makelabel{hyparr:RSCharacteristic for IsRealizationSpaceOfGeomLattice}{10.2.3}{X7C7870A785D8894E}
@@ -136,5 +136,5 @@
 \makelabel{hyparr:RSDimension for IsRealizationSpaceOfGeomLattice}{10.2.6}{X7CD7DC23844DAB58}
 \makelabel{hyparr:RSPRing for IsRealizationSpaceOfGeomLattice}{10.2.7}{X7FE8075E860D45B1}
 \makelabel{hyparr:RSIdealMinors for IsRealizationSpaceOfGeomLattice}{10.2.8}{X8495A2627D020F1B}
-\makelabel{hyparr:RSIdealNonMinors for IsRealizationSpaceOfGeomLattice}{10.2.9}{X875EF4217DDB2DD3}
+\makelabel{hyparr:RSNonMinors for IsRealizationSpaceOfGeomLattice}{10.2.9}{X78DA8570821E4775}
 \makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{10.3.1}{X781923918754E3CE}

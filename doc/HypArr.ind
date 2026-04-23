@@ -132,6 +132,8 @@
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LRankFunction}
     \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LRealizationSpace}
+    \subitem for IsGeomLattice, IsInt, \hyperpage{42}
 
   \indexspace
 
@@ -176,8 +178,6 @@
 
   \indexspace
 
-  \item \texttt  {RealizationSpaceOfGeomLattice}
-    \subitem for IsGeomLattice, IsInt, \hyperpage{42}
   \item \texttt  {Roots}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {RSCharacteristic}
@@ -190,12 +190,12 @@
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSIdealMinors}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
-  \item \texttt  {RSIdealNonMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSIsNonEmpty}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
   \item \texttt  {RSLattice}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{42}
+  \item \texttt  {RSNonMinors}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSPRing}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
 

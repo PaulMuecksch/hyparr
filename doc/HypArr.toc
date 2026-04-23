@@ -119,7 +119,7 @@
 \contentsline {subsection}{\numberline {9.1.3}\textcolor {Chapter }{LaTeXDrawTopeGraph}}{40}{subsection.9.1.3}%
 \contentsline {chapter}{\numberline {10}\textcolor {Chapter }{Realization spaces of geometric lattices}}{42}{chapter.10}%
 \contentsline {section}{\numberline {10.1}\textcolor {Chapter }{Construction}}{42}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{RealizationSpaceOfGeomLattice (for IsGeomLattice, IsInt)}}{42}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}{42}{subsection.10.1.1}%
 \contentsline {section}{\numberline {10.2}\textcolor {Chapter }{Attributes}}{42}{section.10.2}%
 \contentsline {subsection}{\numberline {10.2.1}\textcolor {Chapter }{LGenSet (for IsGeomLattice)}}{42}{subsection.10.2.1}%
 \contentsline {subsection}{\numberline {10.2.2}\textcolor {Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}{42}{subsection.10.2.2}%
@@ -129,7 +129,7 @@
 \contentsline {subsection}{\numberline {10.2.6}\textcolor {Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.6}%
 \contentsline {subsection}{\numberline {10.2.7}\textcolor {Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.7}%
 \contentsline {subsection}{\numberline {10.2.8}\textcolor {Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.8}%
-\contentsline {subsection}{\numberline {10.2.9}\textcolor {Chapter }{RSIdealNonMinors (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.9}%
+\contentsline {subsection}{\numberline {10.2.9}\textcolor {Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.9}%
 \contentsline {section}{\numberline {10.3}\textcolor {Chapter }{Properties}}{44}{section.10.3}%
 \contentsline {subsection}{\numberline {10.3.1}\textcolor {Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.3.1}%
 \contentsline {chapter}{References}{45}{chapter*.2}%

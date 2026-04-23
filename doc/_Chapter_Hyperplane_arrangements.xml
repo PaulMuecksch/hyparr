@@ -348,8 +348,7 @@ true
  <Returns>list of bases
 </Returns>
  <Description>
- Determines the subset of <C>LAtoms(L)</C> which are bases.
-<P/>
+ Determines the subsets of <C>LAtoms(L)</C> which are bases.
 <Example><![CDATA[
 
 ]]></Example>

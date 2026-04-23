@@ -10,7 +10,7 @@ DeclareCategory("IsRealizationSpaceOfGeomLattice", IsComponentObjectRep and IsAt
 # Declare the representation
 DeclareRepresentation(
     "IsRealizationSpaceOfGeomLatticeRep", 
-    IsOrientedMatroid,
+    IsRealizationSpaceOfGeomLattice,
     ["lattice","char","deffield","coeffmat",
     "isrep","dimension",
     "pring","idealminors","idealnonminors"]
@@ -34,7 +34,9 @@ DeclareOperation("ViewObject", [IsRealizationSpaceOfGeomLattice]);
 #! @BeginExampleSession
 #! 
 #! @EndExampleSession
-DeclareOperation("RealizationSpaceOfGeomLattice", [IsGeomLattice, IsInt]);
+DeclareOperation("LRealizationSpace", [IsGeomLattice, IsInt]);
+
+DeclareOperation("LRealizationSpace", [IsGeomLattice, IsInt, IsList]);
 
 
 #################################
@@ -122,7 +124,7 @@ DeclareAttribute("RSIdealMinors",IsRealizationSpaceOfGeomLattice);
 #! @BeginExampleSession
 #! 
 #! @EndExampleSession
-DeclareAttribute("RSIdealNonMinors",IsRealizationSpaceOfGeomLattice);
+DeclareAttribute("RSNonMinors",IsRealizationSpaceOfGeomLattice);
 
 
 ###############################
@@ -142,6 +144,13 @@ DeclareProperty("RSIsNonEmpty",IsRealizationSpaceOfGeomLattice);
 
 DeclareOperation("LSubsetGeneratedByS",[IsGeomLattice,IsList]);
 DeclareOperation("LIsGenSet",[IsGeomLattice,IsList]);
+DeclareOperation("LDependentSubsets", [IsGeomLattice, IsInt]);
+DeclareOperation("LIsIndependentSubset", [IsGeomLattice, IsList]);
+DeclareOperation("LBasisCircuitInMat", [IsGeomLattice, IsList]);
+DeclareOperation("LGenSetIndeterminateMat", [IsGeomLattice, IsList, IsField]);
+
+DeclareGlobalFunction("PolyIsProdOfDivisors");
+DeclareGlobalFunction("MaximalElementsWrtDivisibility");
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

@@ -154,7 +154,7 @@
       9.1-3 LaTeXDrawTopeGraph
   10 [33X[0;0YRealization spaces of geometric lattices[133X
     10.1 [33X[0;0YConstruction[133X
-      10.1-1 RealizationSpaceOfGeomLattice
+      10.1-1 LRealizationSpace
     10.2 [33X[0;0YAttributes[133X
       10.2-1 LGenSet
       10.2-2 RSLattice
@@ -164,7 +164,7 @@
       10.2-6 RSDimension
       10.2-7 RSPRing
       10.2-8 RSIdealMinors
-      10.2-9 RSIdealNonMinors
+      10.2-9 RSNonMinors
     10.3 [33X[0;0YProperties[133X
       10.3-1 RSIsNonEmpty
   

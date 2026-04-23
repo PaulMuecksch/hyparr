@@ -198,8 +198,8 @@ entries :=
       "X8258DD9D78DDA4C6" ], [ "\033[2XLaTeXDrawProjPicture\033[102X", "9.1-1", [ 9, 1, 1 ], 7, 36, "latexdrawprojpicture", 
       "X78621314826E390B" ], [ "\033[2XLaTeXDrawSpherePicture\033[102X", "9.1-2", [ 9, 1, 2 ], 73, 38, "latexdrawspherepicture",
       "X786A445B7D28CCF6" ], [ "\033[2XLaTeXDrawTopeGraph\033[102X", "9.1-3", [ 9, 1, 3 ], 164, 40, "latexdrawtopegraph", 
-      "X80A3836987B539A6" ], [ "\033[2XRealizationSpaceOfGeomLattice\033[102X for IsGeomLattice, IsInt", "10.1-1", 
-      [ 10, 1, 1 ], 7, 42, "realizationspaceofgeomlattice for isgeomlattice isint", "X7C0F4DAD86FB464E" ], 
+      "X80A3836987B539A6" ], [ "\033[2XLRealizationSpace\033[102X for IsGeomLattice, IsInt", "10.1-1", [ 10, 1, 1 ], 7, 42, 
+      "lrealizationspace for isgeomlattice isint", "X7F6CF5007E699D5D" ], 
   [ "\033[2XLGenSet\033[102X for IsGeomLattice", "10.2-1", [ 10, 2, 1 ], 18, 42, "lgenset for isgeomlattice", 
       "X7A65C85187E4D34B" ], [ "\033[2XRSLattice\033[102X for IsRealizationSpaceOfGeomLattice", "10.2-2", [ 10, 2, 2 ], 26, 42, 
       "rslattice for isrealizationspaceofgeomlattice", "X8070EC1580B975D7" ], 
@@ -215,8 +215,8 @@ entries :=
       "rspring for isrealizationspaceofgeomlattice", "X7FE8075E860D45B1" ], 
   [ "\033[2XRSIdealMinors\033[102X for IsRealizationSpaceOfGeomLattice", "10.2-8", [ 10, 2, 8 ], 74, 43, 
       "rsidealminors for isrealizationspaceofgeomlattice", "X8495A2627D020F1B" ], 
-  [ "\033[2XRSIdealNonMinors\033[102X for IsRealizationSpaceOfGeomLattice", "10.2-9", [ 10, 2, 9 ], 82, 43, 
-      "rsidealnonminors for isrealizationspaceofgeomlattice", "X875EF4217DDB2DD3" ], 
+  [ "\033[2XRSNonMinors\033[102X for IsRealizationSpaceOfGeomLattice", "10.2-9", [ 10, 2, 9 ], 82, 43, 
+      "rsnonminors for isrealizationspaceofgeomlattice", "X78DA8570821E4775" ], 
   [ "\033[2XRSIsNonEmpty\033[102X for IsRealizationSpaceOfGeomLattice", "10.3-1", [ 10, 3, 1 ], 93, 44, 
       "rsisnonempty for isrealizationspaceofgeomlattice", "X781923918754E3CE" ] ]
 );

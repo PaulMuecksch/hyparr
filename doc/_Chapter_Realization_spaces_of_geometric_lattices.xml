@@ -8,7 +8,7 @@
 <Heading>Construction</Heading>
 
 <ManSection>
-  <Oper Arg="" Name="RealizationSpaceOfGeomLattice" Label="for IsGeomLattice, IsInt"/>
+  <Oper Arg="" Name="LRealizationSpace" Label="for IsGeomLattice, IsInt"/>
  <Description>
 <P/>
 <Example><![CDATA[
@@ -131,7 +131,7 @@
 
 
 <ManSection>
-  <Attr Arg="" Name="RSIdealNonMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="" Name="RSNonMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
  <Description>
 <P/>
 <Example><![CDATA[

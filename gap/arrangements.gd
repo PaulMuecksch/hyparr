@@ -295,8 +295,7 @@ DeclareAttribute("LCharPoly", IsGeomLattice);
 #! @Arguments L
 #! @Returns list of bases
 #! @Description
-#! Determines the subset of <C>LAtoms(L)</C> which are bases.
-#!
+#! Determines the subsets of <C>LAtoms(L)</C> which are bases.
 #! @BeginExampleSession
 #! 
 #! @EndExampleSession

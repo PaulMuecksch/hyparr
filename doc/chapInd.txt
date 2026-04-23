@@ -61,6 +61,7 @@
   [2XLMoebius[102X, for IsGeomLattice 2.4-8 
   [2XLRank[102X, for IsGeomLattice 2.4-3 
   [2XLRankFunction[102X, for IsGeomLattice 2.4-5 
+  [2XLRealizationSpace[102X, for IsGeomLattice, IsInt 10.1-1 
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 7.1-2 
       for IsOrientedMatroid 7.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.2-7 
@@ -80,16 +81,15 @@
   [2XOMSupportsFalkWeights[102X, for IsOrientedMatroid, IsInt 6.4-2 
   [2XOrderCovec[102X 4.5-2 
   [2XOrientedMatroid[102X, for IsList 4.1-1 
-  [2XRealizationSpaceOfGeomLattice[102X, for IsGeomLattice, IsInt 10.1-1 
   [2XRoots[102X, for IsHyperplaneArrangement 2.2-2 
   [2XRSCharacteristic[102X, for IsRealizationSpaceOfGeomLattice 10.2-3 
   [2XRSCoeffMat[102X, for IsRealizationSpaceOfGeomLattice 10.2-5 
   [2XRSDefField[102X, for IsRealizationSpaceOfGeomLattice 10.2-4 
   [2XRSDimension[102X, for IsRealizationSpaceOfGeomLattice 10.2-6 
   [2XRSIdealMinors[102X, for IsRealizationSpaceOfGeomLattice 10.2-8 
-  [2XRSIdealNonMinors[102X, for IsRealizationSpaceOfGeomLattice 10.2-9 
   [2XRSIsNonEmpty[102X, for IsRealizationSpaceOfGeomLattice 10.3-1 
   [2XRSLattice[102X, for IsRealizationSpaceOfGeomLattice 10.2-2 
+  [2XRSNonMinors[102X, for IsRealizationSpaceOfGeomLattice 10.2-9 
   [2XRSPRing[102X, for IsRealizationSpaceOfGeomLattice 10.2-7 
   [2XSalvettiComplex[102X, for IsHyperplaneArrangement 4.2-9 
       for IsOrientedMatroid 4.2-8 
