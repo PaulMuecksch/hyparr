@@ -499,6 +499,49 @@ local n, expA,P,FPs;
 	return fail;
 end);
 
+####################################
+## Inductively factored
+#######################################
+
+InstallGlobalFunction(ResPart,
+function(P,h)
+local Ares, Pres;;
+    Pres := P{Positions(List(P,B->not(h in B)),true)};
+    Pres := List(Pres,B->Roots(Arr(List(B, hh-> Roots(HArrRestriction(Arr([hh]),[h]))[1]))));
+    return Pres;
+end);
+
+InstallGlobalFunction(DelPart,
+function(P,h)
+local Pdel;
+    Pdel := List(P,B->Difference(B,[h]));
+    return Pdel;
+end);
+
+InstallGlobalFunction(ResMapIsBij,
+function(A,P,h)
+local Ares,Ares2,Pres,Pred,hi;
+    if not(h in Roots(A)) then
+        return fail;
+    fi;;
+    Ares := HArrRestriction(A,[h]);
+    Pred := P{Positions(List(P,B->not(h in B)),true)};
+    Ares2 := HArrRestriction(Arr(Concatenation(Pred)),[h]);
+    if Length(Roots(Ares))=Length(Roots(Ares2)) 
+        and Length(Roots(Ares2))=Sum(List(Pred,x->Length(x))) then
+        return true;;
+    fi;;
+    
+    return false;;
+end;;
+
+BindGlobal("IndFact_up_or_down","down");;
+
+InstallMethod(HArrIsInductivelyFactored,
+    [IsHyperplaneArrangement, IsString],
+function(A)    
+end);
+
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
 ##  the Free Software Foundation, either version 3 of the License, or

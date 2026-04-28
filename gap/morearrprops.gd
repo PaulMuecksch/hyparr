@@ -309,6 +309,20 @@ DeclareOperation("HArrFactorizations",[IsHyperplaneArrangement]);
 #! @EndExampleSession
 DeclareOperation("HArrIsFactored",[IsHyperplaneArrangement]);
 
+DeclareGlobalFunction("ResPart");
+DeclareGlobalFunction("DelPart");
+DeclareGlobalFunction("ResMapIsBij");
+
+#! @Arguments A
+#! @Returns A list or fail
+#! @Description
+#!  Determines if <A>A</A> 
+#!  is inductively factored and if so returns some inductive factorization.
+#! @BeginExampleSession
+#! 
+#! @EndExampleSession
+DeclareOperation("HArrIsInductivelyFactored",[IsHyperplaneArrangement,IsString]);
+
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
 ##  the Free Software Foundation, either version 3 of the License, or
