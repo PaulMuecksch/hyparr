@@ -533,13 +533,59 @@ local Ares,Ares2,Pres,Pred,hi;
     fi;;
     
     return false;;
-end;;
+end);
+
+InstallGlobalFunction(IsIndFactorization,
+function(P)
+local h,Hs,Pres, Pdel, IsFactPartH;
+    
+    IsFactPartH := function(A,P)
+        return IsFactPart(A,List(P,B->List(B,h->Position(Roots(A),h))));;
+    end;
+
+	Hs := Concatenation(P);;
+	if Rank(Hs)<=2 and IsFactPartH(Arr(Hs),P) then
+        return true;;
+    fi;
+    
+    for h in Hs do
+        Pres := ResPart(P,h);;
+        Pdel := DelPart(P,h);;
+        if ResMapIsBij(Arr(Hs),P,h) and IsIndFactorization(Pdel) and IsIndFactorization(Pres) then
+            return true;;
+        fi;;
+    od;;
+    
+    return false;;
+end);
 
 BindGlobal("IndFact_up_or_down","down");;
 
+InstallMethod(HArrInductiveFactorizations,
+    [IsHyperplaneArrangement],
+function(A)
+local FactsA,IndFacts,P;;
+    FactsA:=HArrFactorizations(A);
+    IndFacts:=[];;
+    for P in FactsA do
+        if IsIndFactorization(List(P,B->List(B,h->Roots(A)[h]))) then
+            Add(IndFacts,P);
+        fi;;
+    od;;
+    return IndFacts;
+end);
+
 InstallMethod(HArrIsInductivelyFactored,
-    [IsHyperplaneArrangement, IsString],
-function(A)    
+    [IsHyperplaneArrangement],
+function(A)
+local FactsA,P;;
+    FactsA:=HArrFactorizations(A);;
+    for P in FactsA do
+        if IsIndFactorization(List(P,B->List(B,h->Roots(A)[h]))) then
+            return [P,true];;
+        fi;;
+    od;;
+    return false;;
 end);
 
 ##  This program is free software: you can redistribute it and/or modify

@@ -26,7 +26,8 @@ AutoDoc( rec(
                 LaTeXOptions := rec(
                     LateExtraPreamble := "\\usepackage{graphicx,amsfonts,amsmath, amssymb}"
                 )
-            )
+            ),
+            extract_examples := true
             ) );
 QUIT;
 

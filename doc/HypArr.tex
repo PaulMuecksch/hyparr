@@ -99,7 +99,7 @@
 \vfill
 
 {\Huge  0.26.04 \mbox{}}\\[1cm]
-{ 23 April 2026 \mbox{}}\\[1cm]
+{ 28 April 2026 \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Paul M{\"u}cksch\\
     \mbox{}}}\\
@@ -2138,7 +2138,7 @@ A list
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=AGpql(2,1,3);|
   <HyperplaneArrangement: 9 hyperplanes in 3-space>
-  !gapprompt@gap>| !gapinput@HArrFindFactorizations(A);|
+  !gapprompt@gap>| !gapinput@HArrFactorizations(A);|
   [ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
     [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
     [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
@@ -2161,7 +2161,7 @@ A list
 \hyperdef{L}{X87DEBDF185ACD970}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsFactored({\mdseries\slshape A})\index{HArrIsFactored@\texttt{HArrIsFactored}!for IsHyperplaneArrangement}
 \label{HArrIsFactored:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (operation)}}\\
+}\hfill{\scriptsize (attribute)}}\\
 \textbf{\indent Returns:\ }
 A list or fail 
 
@@ -2178,6 +2178,79 @@ A list or fail
   !gapprompt@gap>| !gapinput@HArrIsFactored(A);|
   fail
 \end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrInductiveFactorizations (for IsHyperplaneArrangement)}}
+\logpage{[ 6, 5, 3 ]}\nobreak
+\hyperdef{L}{X7EB5E5DA797D0A61}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrInductiveFactorizations({\mdseries\slshape A})\index{HArrInductiveFactorizations@\texttt{HArrInductiveFactorizations}!for IsHyperplaneArrangement}
+\label{HArrInductiveFactorizations:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+A list 
+
+
+
+ Computes a list of all inductive factorizations of \mbox{\texttt{\mdseries\slshape A}} as partitions of [1..|\mbox{\texttt{\mdseries\slshape A}}|]. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,1,3);|
+  <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@HArrInductiveFactorizations(A);|
+  [ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+    [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
+    [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+    [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], 
+    [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], 
+    [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], 
+    [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+    [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], 
+    [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], 
+    [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
+    [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
+    [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrIsInductivelyFactored (for IsHyperplaneArrangement)}}
+\logpage{[ 6, 5, 4 ]}\nobreak
+\hyperdef{L}{X7F64D3DE8599E489}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsInductivelyFactored({\mdseries\slshape A})\index{HArrIsInductivelyFactored@\texttt{HArrIsInductivelyFactored}!for IsHyperplaneArrangement}
+\label{HArrIsInductivelyFactored:for IsHyperplaneArrangement}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list or fail 
+
+
+
+ Determines if \mbox{\texttt{\mdseries\slshape A}} is inductively factored and if so returns some inductive factorization. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,1,4);|
+  <HyperplaneArrangement: 16 hyperplanes in 4-space>
+  !gapprompt@gap>| !gapinput@HArrIsInductivelyFactored(A);|
+  [ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,4);|
+  <HyperplaneArrangement: 12 hyperplanes in 4-space>
+  !gapprompt@gap>| !gapinput@HArrIsInductivelyFactored(A);|
+  false
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrIsInductivelyFactored (for IsHyperplaneArrangement,IsString)}}
+\logpage{[ 6, 5, 5 ]}\nobreak
+\hyperdef{L}{X79B743A6817A12DA}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsInductivelyFactored({\mdseries\slshape arg1, arg2})\index{HArrIsInductivelyFactored@\texttt{HArrIsInductivelyFactored}!for IsHyperplaneArrangement,IsString}
+\label{HArrIsInductivelyFactored:for IsHyperplaneArrangement,IsString}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
  }
 
  }
@@ -2691,14 +2764,15 @@ a set
 \subsection{\textcolor{Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 2 ]}\nobreak
 \hyperdef{L}{X8070EC1580B975D7}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSLattice({\mdseries\slshape })\index{RSLattice@\texttt{RSLattice}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSLattice({\mdseries\slshape RS})\index{RSLattice@\texttt{RSLattice}!for IsRealizationSpaceOfGeomLattice}
 \label{RSLattice:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a geometric lattice 
 
 
- 
 
- 
+ Returns the geometric lattice of the realization space \mbox{\texttt{\mdseries\slshape RS}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSLattice(RS);|
   <Geometric lattice: 9 atoms, rank 3>
@@ -2710,14 +2784,15 @@ a set
 \subsection{\textcolor{Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 3 ]}\nobreak
 \hyperdef{L}{X7C7870A785D8894E}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCharacteristic({\mdseries\slshape })\index{RSCharacteristic@\texttt{RSCharacteristic}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCharacteristic({\mdseries\slshape RS})\index{RSCharacteristic@\texttt{RSCharacteristic}!for IsRealizationSpaceOfGeomLattice}
 \label{RSCharacteristic:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+0 or a prime number 
 
 
- 
 
- 
+ Returns the characteristic of the reliation space \mbox{\texttt{\mdseries\slshape RS}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSCharacteristic(RS);|
   0
@@ -2729,14 +2804,15 @@ a set
 \subsection{\textcolor{Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 4 ]}\nobreak
 \hyperdef{L}{X877A2CF98702D72D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDefField({\mdseries\slshape })\index{RSDefField@\texttt{RSDefField}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDefField({\mdseries\slshape RS})\index{RSDefField@\texttt{RSDefField}!for IsRealizationSpaceOfGeomLattice}
 \label{RSDefField:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a field 
 
 
- 
 
- 
+ Returns the field over which the realization space \mbox{\texttt{\mdseries\slshape RS}} is defined. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSDefField(RS);|
   Rationals
@@ -2748,14 +2824,15 @@ a set
 \subsection{\textcolor{Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 5 ]}\nobreak
 \hyperdef{L}{X7D89A3E87AE33F30}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCoeffMat({\mdseries\slshape })\index{RSCoeffMat@\texttt{RSCoeffMat}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCoeffMat({\mdseries\slshape RS})\index{RSCoeffMat@\texttt{RSCoeffMat}!for IsRealizationSpaceOfGeomLattice}
 \label{RSCoeffMat:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a matrix 
 
 
- 
 
- 
+ Returns the coefficient matrix of \mbox{\texttt{\mdseries\slshape RS}} with entries in \texttt{RSPRing(RS)}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSCoeffMat(RS);|
   [ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
@@ -2769,14 +2846,15 @@ a set
 \subsection{\textcolor{Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 6 ]}\nobreak
 \hyperdef{L}{X7CD7DC23844DAB58}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDimension({\mdseries\slshape })\index{RSDimension@\texttt{RSDimension}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDimension({\mdseries\slshape RS})\index{RSDimension@\texttt{RSDimension}!for IsRealizationSpaceOfGeomLattice}
 \label{RSDimension:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a non\texttt{\symbol{45}}negative integer 
 
 
- 
 
- 
+ Returns the dimension of \mbox{\texttt{\mdseries\slshape RS}}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSDimension(RS);|
   0
@@ -2788,14 +2866,15 @@ a set
 \subsection{\textcolor{Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}
 \logpage{[ 10, 2, 7 ]}\nobreak
 \hyperdef{L}{X7FE8075E860D45B1}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSPRing({\mdseries\slshape })\index{RSPRing@\texttt{RSPRing}!for IsRealizationSpaceOfGeomLattice}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSPRing({\mdseries\slshape RS})\index{RSPRing@\texttt{RSPRing}!for IsRealizationSpaceOfGeomLattice}
 \label{RSPRing:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a polynomial ring 
 
 
- 
 
- 
+ The polynomial ring over which the representing coefficient matrix \texttt{RSCoeffMat(RS)} of \mbox{\texttt{\mdseries\slshape RS}} is defined. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSPRing(RS);|
   Rationals[a1]
@@ -2810,11 +2889,13 @@ a set
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIdealMinors({\mdseries\slshape RS})\index{RSIdealMinors@\texttt{RSIdealMinors}!for IsRealizationSpaceOfGeomLattice}
 \label{RSIdealMinors:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+an ideal 
 
 
- 
 
- 
+ Returns the ideal of equations which have to satisfied due to the dependcy of
+atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);|
   <two-sided ideal in Rationals[a1], (1 generator)>
@@ -2830,11 +2911,13 @@ a set
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSNonMinors({\mdseries\slshape RS})\index{RSNonMinors@\texttt{RSNonMinors}!for IsRealizationSpaceOfGeomLattice}
 \label{RSNonMinors:for IsRealizationSpaceOfGeomLattice}
 }\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list of polynomials 
 
 
- 
 
- 
+ Gives a list of polynomials which should not vanish due to independent subsets
+of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@RSNonMinors(RS);|
   [ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]

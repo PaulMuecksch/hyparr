@@ -75,26 +75,29 @@
 \indexentry{OMSupportsFalkWeights@\texttt  {OMSupportsFalkWeights}!for IsOrientedMatroid, IsInt|hyperpage}{29}
 \indexentry{HArrFactorizations@\texttt  {HArrFactorizations}!for IsHyperplaneArrangement|hyperpage}{30}
 \indexentry{HArrIsFactored@\texttt  {HArrIsFactored}!for IsHyperplaneArrangement|hyperpage}{30}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{32}
-\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{32}
-\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{33}
-\indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{34}
-\indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{34}
-\indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{34}
-\indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{35}
-\indexentry{LaTeXDrawProjPicture@\texttt  {LaTeXDrawProjPicture}|hyperpage}{36}
-\indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{38}
-\indexentry{LaTeXDrawTopeGraph@\texttt  {LaTeXDrawTopeGraph}|hyperpage}{40}
-\indexentry{LRealizationSpace@\texttt  {LRealizationSpace}!for IsGeomLattice, IsInt|hyperpage}{42}
-\indexentry{LGenSet@\texttt  {LGenSet}!for IsGeomLattice|hyperpage}{42}
-\indexentry{RSLattice@\texttt  {RSLattice}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSCharacteristic@\texttt  {RSCharacteristic}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSDefField@\texttt  {RSDefField}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSCoeffMat@\texttt  {RSCoeffMat}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSDimension@\texttt  {RSDimension}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSPRing@\texttt  {RSPRing}!for IsRealizationSpaceOfGeomLattice|hyperpage}{43}
-\indexentry{RSIdealMinors@\texttt  {RSIdealMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
-\indexentry{RSNonMinors@\texttt  {RSNonMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
-\indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
-\indexentry{LSubsetGeneratedByS@\texttt  {LSubsetGeneratedByS}!for IsGeomLattice,IsList|hyperpage}{44}
-\indexentry{LIsGenSet@\texttt  {LIsGenSet}!for IsGeomLattice,IsList|hyperpage}{44}
+\indexentry{HArrInductiveFactorizations@\texttt  {HArrInductiveFactorizations}!for IsHyperplaneArrangement|hyperpage}{31}
+\indexentry{HArrIsInductivelyFactored@\texttt  {HArrIsInductivelyFactored}!for IsHyperplaneArrangement|hyperpage}{31}
+\indexentry{HArrIsInductivelyFactored@\texttt  {HArrIsInductivelyFactored}!for IsHyperplaneArrangement,IsString|hyperpage}{32}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{33}
+\indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{33}
+\indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{34}
+\indexentry{TopePoset@\texttt  {TopePoset}!for IsOrientedMatroid, IsList|hyperpage}{35}
+\indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{35}
+\indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{35}
+\indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{36}
+\indexentry{LaTeXDrawProjPicture@\texttt  {LaTeXDrawProjPicture}|hyperpage}{37}
+\indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{39}
+\indexentry{LaTeXDrawTopeGraph@\texttt  {LaTeXDrawTopeGraph}|hyperpage}{41}
+\indexentry{LRealizationSpace@\texttt  {LRealizationSpace}!for IsGeomLattice, IsInt|hyperpage}{43}
+\indexentry{LGenSet@\texttt  {LGenSet}!for IsGeomLattice|hyperpage}{43}
+\indexentry{RSLattice@\texttt  {RSLattice}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
+\indexentry{RSCharacteristic@\texttt  {RSCharacteristic}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
+\indexentry{RSDefField@\texttt  {RSDefField}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
+\indexentry{RSCoeffMat@\texttt  {RSCoeffMat}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
+\indexentry{RSDimension@\texttt  {RSDimension}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
+\indexentry{RSPRing@\texttt  {RSPRing}!for IsRealizationSpaceOfGeomLattice|hyperpage}{45}
+\indexentry{RSIdealMinors@\texttt  {RSIdealMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{45}
+\indexentry{RSNonMinors@\texttt  {RSNonMinors}!for IsRealizationSpaceOfGeomLattice|hyperpage}{45}
+\indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{45}
+\indexentry{LSubsetGeneratedByS@\texttt  {LSubsetGeneratedByS}!for IsGeomLattice,IsList|hyperpage}{45}
+\indexentry{LIsGenSet@\texttt  {LIsGenSet}!for IsGeomLattice,IsList|hyperpage}{45}

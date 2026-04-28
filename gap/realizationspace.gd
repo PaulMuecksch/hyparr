@@ -68,40 +68,40 @@ DeclareOperation("LRealizationSpace", [IsGeomLattice, IsInt, IsList]);
 #! @EndExampleSession
 DeclareAttribute("LGenSet",IsGeomLattice);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments RS
+#! @Returns a geometric lattice
 #! @Description
-#!  
+#!  Returns the geometric lattice of the realization space <A>RS</A>.
 #! @BeginExampleSession
 #! gap> RSLattice(RS);
 #! <Geometric lattice: 9 atoms, rank 3>
 #! @EndExampleSession
 DeclareAttribute("RSLattice",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments RS
+#! @Returns 0 or a prime number
 #! @Description
-#!  
+#!  Returns the characteristic of the reliation space <A>RS</A>.
 #! @BeginExampleSession
 #! gap> RSCharacteristic(RS);
 #! 0
 #! @EndExampleSession
 DeclareAttribute("RSCharacteristic",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments RS
+#! @Returns a field
 #! @Description
-#!  
+#!  Returns the field over which the realization space <A>RS</A> is defined.
 #! @BeginExampleSession
 #! gap> RSDefField(RS);
 #! Rationals
 #! @EndExampleSession
 DeclareAttribute("RSDefField",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments RS
+#! @Returns a matrix
 #! @Description
-#!  
+#!  Returns the coefficient matrix of <A>RS</A> with entries in <C>RSPRing(RS)</C>.
 #! @BeginExampleSession
 #! gap> RSCoeffMat(RS);
 #! [ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
@@ -110,20 +110,21 @@ DeclareAttribute("RSDefField",IsRealizationSpaceOfGeomLattice);
 #! @EndExampleSession
 DeclareAttribute("RSCoeffMat",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments RS
+#! @Returns a non-negative integer
 #! @Description
-#!  
+#!  Returns the dimension of <A>RS</A>.
 #! @BeginExampleSession
 #! gap> RSDimension(RS);
 #! 0
 #! @EndExampleSession
 DeclareAttribute("RSDimension",IsRealizationSpaceOfGeomLattice);
 
-#! @Arguments 
-#! @Returns 
+#! @Arguments RS
+#! @Returns a polynomial ring
 #! @Description
-#!  
+#!  The polynomial ring over which the representing coefficient matrix
+#!  <C>RSCoeffMat(RS)</C> of <A>RS</A> is defined.
 #! @BeginExampleSession
 #! gap> RSPRing(RS);
 #! Rationals[a1]
@@ -131,9 +132,10 @@ DeclareAttribute("RSDimension",IsRealizationSpaceOfGeomLattice);
 DeclareAttribute("RSPRing",IsRealizationSpaceOfGeomLattice);
 
 #! @Arguments RS
-#! @Returns 
+#! @Returns an ideal
 #! @Description
-#!  
+#!  Returns the ideal of equations which have to satisfied due to the dependcy of atoms
+#!  in <C>RSLattice(RS)</C> over <C>RSDefField(RS)</C>.
 #! @BeginExampleSession
 #! gap> I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);
 #! <two-sided ideal in Rationals[a1], (1 generator)>
@@ -142,9 +144,11 @@ DeclareAttribute("RSPRing",IsRealizationSpaceOfGeomLattice);
 DeclareAttribute("RSIdealMinors",IsRealizationSpaceOfGeomLattice);
 
 #! @Arguments RS
-#! @Returns 
+#! @Returns a list of polynomials
 #! @Description
-#!  
+#!  Gives a list of polynomials which should not vanish due to 
+#!  independent subsets of atoms
+#!  in <C>RSLattice(RS)</C> over <C>RSDefField(RS)</C>.
 #! @BeginExampleSession
 #! gap> RSNonMinors(RS);
 #! [ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]

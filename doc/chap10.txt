@@ -46,7 +46,10 @@
   
   [1X10.2-2 RSLattice[101X
   
-  [33X[1;0Y[29X[2XRSLattice[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSLattice[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya geometric lattice[133X
+  
+  [33X[0;0YReturns the geometric lattice of the realization space [3XRS[103X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSLattice(RS);[127X[104X
@@ -55,7 +58,10 @@
   
   [1X10.2-3 RSCharacteristic[101X
   
-  [33X[1;0Y[29X[2XRSCharacteristic[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSCharacteristic[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Y0 or a prime number[133X
+  
+  [33X[0;0YReturns the characteristic of the reliation space [3XRS[103X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSCharacteristic(RS);[127X[104X
@@ -64,7 +70,10 @@
   
   [1X10.2-4 RSDefField[101X
   
-  [33X[1;0Y[29X[2XRSDefField[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSDefField[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya field[133X
+  
+  [33X[0;0YReturns the field over which the realization space [3XRS[103X is defined.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSDefField(RS);[127X[104X
@@ -73,7 +82,10 @@
   
   [1X10.2-5 RSCoeffMat[101X
   
-  [33X[1;0Y[29X[2XRSCoeffMat[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSCoeffMat[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix[133X
+  
+  [33X[0;0YReturns the coefficient matrix of [3XRS[103X with entries in [10XRSPRing(RS)[110X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSCoeffMat(RS);[127X[104X
@@ -84,7 +96,10 @@
   
   [1X10.2-6 RSDimension[101X
   
-  [33X[1;0Y[29X[2XRSDimension[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSDimension[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya non-negative integer[133X
+  
+  [33X[0;0YReturns the dimension of [3XRS[103X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSDimension(RS);[127X[104X
@@ -93,7 +108,11 @@
   
   [1X10.2-7 RSPRing[101X
   
-  [33X[1;0Y[29X[2XRSPRing[102X(  ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSPRing[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya polynomial ring[133X
+  
+  [33X[0;0YThe   polynomial   ring  over  which  the  representing  coefficient  matrix
+  [10XRSCoeffMat(RS)[110X of [3XRS[103X is defined.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSPRing(RS);[127X[104X
@@ -103,6 +122,10 @@
   [1X10.2-8 RSIdealMinors[101X
   
   [33X[1;0Y[29X[2XRSIdealMinors[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yan ideal[133X
+  
+  [33X[0;0YReturns  the  ideal of equations which have to satisfied due to the dependcy
+  of atoms in [10XRSLattice(RS)[110X over [10XRSDefField(RS)[110X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XI:=RSIdealMinors(RS); GeneratorsOfIdeal(I);[127X[104X
@@ -113,6 +136,10 @@
   [1X10.2-9 RSNonMinors[101X
   
   [33X[1;0Y[29X[2XRSNonMinors[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of polynomials[133X
+  
+  [33X[0;0YGives  a  list  of  polynomials  which  should not vanish due to independent
+  subsets of atoms in [10XRSLattice(RS)[110X over [10XRSDefField(RS)[110X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XRSNonMinors(RS);[127X[104X

@@ -59,9 +59,11 @@ gap> LGenSet(L);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSLattice" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSLattice" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>a geometric lattice
+</Returns>
  <Description>
-<P/>
+  Returns the geometric lattice of the realization space <A>RS</A>.
 <Example><![CDATA[
 gap> RSLattice(RS);
 <Geometric lattice: 9 atoms, rank 3>
@@ -73,9 +75,11 @@ gap> RSLattice(RS);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSCharacteristic" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSCharacteristic" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>0 or a prime number
+</Returns>
  <Description>
-<P/>
+  Returns the characteristic of the reliation space <A>RS</A>.
 <Example><![CDATA[
 gap> RSCharacteristic(RS);
 0
@@ -87,9 +91,11 @@ gap> RSCharacteristic(RS);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSDefField" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSDefField" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>a field
+</Returns>
  <Description>
-<P/>
+  Returns the field over which the realization space <A>RS</A> is defined.
 <Example><![CDATA[
 gap> RSDefField(RS);
 Rationals
@@ -101,9 +107,11 @@ Rationals
 
 
 <ManSection>
-  <Attr Arg="" Name="RSCoeffMat" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSCoeffMat" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>a matrix
+</Returns>
  <Description>
-<P/>
+  Returns the coefficient matrix of <A>RS</A> with entries in <C>RSPRing(RS)</C>.
 <Example><![CDATA[
 gap> RSCoeffMat(RS);
 [ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], 
@@ -117,9 +125,11 @@ gap> RSCoeffMat(RS);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSDimension" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSDimension" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>a non-negative integer
+</Returns>
  <Description>
-<P/>
+  Returns the dimension of <A>RS</A>.
 <Example><![CDATA[
 gap> RSDimension(RS);
 0
@@ -131,9 +141,12 @@ gap> RSDimension(RS);
 
 
 <ManSection>
-  <Attr Arg="" Name="RSPRing" Label="for IsRealizationSpaceOfGeomLattice"/>
+  <Attr Arg="RS" Name="RSPRing" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>a polynomial ring
+</Returns>
  <Description>
-<P/>
+  The polynomial ring over which the representing coefficient matrix
+  <C>RSCoeffMat(RS)</C> of <A>RS</A> is defined.
 <Example><![CDATA[
 gap> RSPRing(RS);
 Rationals[a1]
@@ -146,8 +159,11 @@ Rationals[a1]
 
 <ManSection>
   <Attr Arg="RS" Name="RSIdealMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>an ideal
+</Returns>
  <Description>
-<P/>
+  Returns the ideal of equations which have to satisfied due to the dependcy of atoms
+  in <C>RSLattice(RS)</C> over <C>RSDefField(RS)</C>.
 <Example><![CDATA[
 gap> I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);
 <two-sided ideal in Rationals[a1], (1 generator)>
@@ -161,8 +177,12 @@ gap> I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);
 
 <ManSection>
   <Attr Arg="RS" Name="RSNonMinors" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Returns>a list of polynomials
+</Returns>
  <Description>
-<P/>
+  Gives a list of polynomials which should not vanish due to 
+  independent subsets of atoms
+  in <C>RSLattice(RS)</C> over <C>RSDefField(RS)</C>.
 <Example><![CDATA[
 gap> RSNonMinors(RS);
 [ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ]

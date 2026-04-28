@@ -9,7 +9,7 @@
                                     0.26.04
   
   
-                                 23 April 2026
+                                 28 April 2026
   
   
                                   Paul Mücksch
@@ -135,6 +135,9 @@
     6.5 [33X[0;0YFactored arrangements[133X
       6.5-1 HArrFactorizations
       6.5-2 HArrIsFactored
+      6.5-3 HArrInductiveFactorizations
+      6.5-4 HArrIsInductivelyFactored
+      6.5-5 HArrIsInductivelyFactored
   7 [33X[0;0YMilnor fibers[133X
     7.1 [33X[0;0YComplexes[133X
       7.1-1 MilnorFiberComplex

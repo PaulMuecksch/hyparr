@@ -107,7 +107,11 @@
 
 <h5>10.2-2 RSLattice</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSLattice</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSLattice</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a geometric lattice</p>
+
+<p>Returns the geometric lattice of the realization space <var class="Arg">RS</var>.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSLattice(RS);</span>
@@ -118,7 +122,11 @@
 
 <h5>10.2-3 RSCharacteristic</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCharacteristic</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCharacteristic</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: 0 or a prime number</p>
+
+<p>Returns the characteristic of the reliation space <var class="Arg">RS</var>.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSCharacteristic(RS);</span>
@@ -129,7 +137,11 @@
 
 <h5>10.2-4 RSDefField</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDefField</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDefField</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a field</p>
+
+<p>Returns the field over which the realization space <var class="Arg">RS</var> is defined.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSDefField(RS);</span>
@@ -140,7 +152,11 @@ Rationals
 
 <h5>10.2-5 RSCoeffMat</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCoeffMat</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSCoeffMat</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a matrix</p>
+
+<p>Returns the coefficient matrix of <var class="Arg">RS</var> with entries in <code class="code">RSPRing(RS)</code>.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSCoeffMat(RS);</span>
@@ -153,7 +169,11 @@ Rationals
 
 <h5>10.2-6 RSDimension</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDimension</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSDimension</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a non-negative integer</p>
+
+<p>Returns the dimension of <var class="Arg">RS</var>.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSDimension(RS);</span>
@@ -164,7 +184,11 @@ Rationals
 
 <h5>10.2-7 RSPRing</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSPRing</code>(  )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSPRing</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a polynomial ring</p>
+
+<p>The polynomial ring over which the representing coefficient matrix <code class="code">RSCoeffMat(RS)</code> of <var class="Arg">RS</var> is defined.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSPRing(RS);</span>
@@ -176,6 +200,10 @@ Rationals[a1]
 <h5>10.2-8 RSIdealMinors</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSIdealMinors</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: an ideal</p>
+
+<p>Returns the ideal of equations which have to satisfied due to the dependcy of atoms in <code class="code">RSLattice(RS)</code> over <code class="code">RSDefField(RS)</code>.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">I:=RSIdealMinors(RS); GeneratorsOfIdeal(I);</span>
@@ -188,6 +216,10 @@ Rationals[a1]
 <h5>10.2-9 RSNonMinors</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RSNonMinors</code>( <var class="Arg">RS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a list of polynomials</p>
+
+<p>Gives a list of polynomials which should not vanish due to independent subsets of atoms in <code class="code">RSLattice(RS)</code> over <code class="code">RSDefField(RS)</code>.</p>
+
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RSNonMinors(RS);</span>
