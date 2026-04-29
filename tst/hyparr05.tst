@@ -143,7 +143,17 @@ gap> OMSupportsFalkWeights(O,1);
   [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
   [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
 
-# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:315-331
+# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:315-324
+gap> A:=AGpql(2,1,3);
+<HyperplaneArrangement: 9 hyperplanes in 3-space>
+gap> HArrIsFactored(A);
+[ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ]
+gap> A:=AGpql(2,2,4);
+<HyperplaneArrangement: 12 hyperplanes in 4-space>
+gap> HArrIsFactored(A);
+fail
+
+# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:338-354
 gap> A:=AGpql(2,1,3);
 <HyperplaneArrangement: 9 hyperplanes in 3-space>
 gap> HArrFactorizations(A);
@@ -160,17 +170,17 @@ gap> HArrFactorizations(A);
   [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
   [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
 
-# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:345-354
-gap> A:=AGpql(2,1,3);
-<HyperplaneArrangement: 9 hyperplanes in 3-space>
-gap> HArrIsFactored(A);
-[ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ]
+# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:368-377
+gap> A:=AGpql(2,1,4);
+<HyperplaneArrangement: 16 hyperplanes in 4-space>
+gap> HArrIsInductivelyFactored(A);
+[ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ]
 gap> A:=AGpql(2,2,4);
 <HyperplaneArrangement: 12 hyperplanes in 4-space>
-gap> HArrIsFactored(A);
-fail
+gap> HArrIsInductivelyFactored(A);
+false
 
-# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:368-384
+# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:391-407
 gap> A:=AGpql(2,1,3);
 <HyperplaneArrangement: 9 hyperplanes in 3-space>
 gap> HArrInductiveFactorizations(A);
@@ -186,16 +196,6 @@ gap> HArrInductiveFactorizations(A);
   [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
   [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
   [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
-
-# doc/_Chapter_Further_properties_of_arrangements_geometric_lattices_and_oriented_matroids.xml:398-407
-gap> A:=AGpql(2,1,4);
-<HyperplaneArrangement: 16 hyperplanes in 4-space>
-gap> HArrIsInductivelyFactored(A);
-[ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ]
-gap> A:=AGpql(2,2,4);
-<HyperplaneArrangement: 12 hyperplanes in 4-space>
-gap> HArrIsInductivelyFactored(A);
-false
 
 #
 gap> STOP_TEST("hyparr05.tst", 1);

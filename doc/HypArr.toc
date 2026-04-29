@@ -98,45 +98,44 @@
 \contentsline {subsection}{\numberline {6.4.1}\textcolor {Chapter }{OMBoundedCpx (for IsOrientedMatroid, IsInt)}}{29}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}\textcolor {Chapter }{OMSupportsFalkWeights (for IsOrientedMatroid, IsInt)}}{29}{subsection.6.4.2}%
 \contentsline {section}{\numberline {6.5}\textcolor {Chapter }{Factored arrangements}}{30}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}\textcolor {Chapter }{HArrFactorizations (for IsHyperplaneArrangement)}}{30}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}\textcolor {Chapter }{HArrIsFactored (for IsHyperplaneArrangement)}}{30}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}\textcolor {Chapter }{HArrInductiveFactorizations (for IsHyperplaneArrangement)}}{31}{subsection.6.5.3}%
-\contentsline {subsection}{\numberline {6.5.4}\textcolor {Chapter }{HArrIsInductivelyFactored (for IsHyperplaneArrangement)}}{31}{subsection.6.5.4}%
-\contentsline {subsection}{\numberline {6.5.5}\textcolor {Chapter }{HArrIsInductivelyFactored (for IsHyperplaneArrangement,IsString)}}{32}{subsection.6.5.5}%
-\contentsline {chapter}{\numberline {7}\textcolor {Chapter }{Milnor fibers}}{33}{chapter.7}%
-\contentsline {section}{\numberline {7.1}\textcolor {Chapter }{Complexes}}{33}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{33}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{33}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}\textcolor {Chapter }{FPtoCWCpx}}{34}{subsection.7.1.3}%
-\contentsline {chapter}{\numberline {8}\textcolor {Chapter }{Tope posets}}{35}{chapter.8}%
-\contentsline {section}{\numberline {8.1}\textcolor {Chapter }{Operation}}{35}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}\textcolor {Chapter }{TopePoset (for IsOrientedMatroid, IsList)}}{35}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}\textcolor {Chapter }{Attributes}}{35}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}\textcolor {Chapter }{TPGroundSet (for IsTopePoset)}}{35}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}\textcolor {Chapter }{TPBaseTope (for IsTopePoset)}}{35}{subsection.8.2.2}%
-\contentsline {subsection}{\numberline {8.2.3}\textcolor {Chapter }{TPRankPoly (for IsTopePoset)}}{36}{subsection.8.2.3}%
-\contentsline {chapter}{\numberline {9}\textcolor {Chapter }{Visualization of real 3\texttt {\symbol {45}}arrangements}}{37}{chapter.9}%
-\contentsline {section}{\numberline {9.1}\textcolor {Chapter }{Global methods}}{37}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}\textcolor {Chapter }{LaTeXDrawProjPicture}}{37}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}\textcolor {Chapter }{LaTeXDrawSpherePicture}}{39}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}\textcolor {Chapter }{LaTeXDrawTopeGraph}}{41}{subsection.9.1.3}%
-\contentsline {chapter}{\numberline {10}\textcolor {Chapter }{Realization spaces of geometric lattices}}{43}{chapter.10}%
-\contentsline {section}{\numberline {10.1}\textcolor {Chapter }{Construction}}{43}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}{43}{subsection.10.1.1}%
-\contentsline {section}{\numberline {10.2}\textcolor {Chapter }{Attributes}}{43}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}\textcolor {Chapter }{LGenSet (for IsGeomLattice)}}{43}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}\textcolor {Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}\textcolor {Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.3}%
-\contentsline {subsection}{\numberline {10.2.4}\textcolor {Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.4}%
-\contentsline {subsection}{\numberline {10.2.5}\textcolor {Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.5}%
-\contentsline {subsection}{\numberline {10.2.6}\textcolor {Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.6}%
-\contentsline {subsection}{\numberline {10.2.7}\textcolor {Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.7}%
-\contentsline {subsection}{\numberline {10.2.8}\textcolor {Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.8}%
-\contentsline {subsection}{\numberline {10.2.9}\textcolor {Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.9}%
-\contentsline {section}{\numberline {10.3}\textcolor {Chapter }{Properties}}{45}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}\textcolor {Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.3.1}%
-\contentsline {section}{\numberline {10.4}\textcolor {Chapter }{Further (auxillary) Operations}}{45}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}\textcolor {Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}{45}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}\textcolor {Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}{45}{subsection.10.4.2}%
-\contentsline {chapter}{References}{46}{chapter*.2}%
-\contentsline {chapter}{Index}{47}{section*.3}%
+\contentsline {subsection}{\numberline {6.5.1}\textcolor {Chapter }{HArrIsFactored (for IsHyperplaneArrangement)}}{30}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}\textcolor {Chapter }{HArrFactorizations (for IsHyperplaneArrangement)}}{30}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}\textcolor {Chapter }{HArrIsInductivelyFactored (for IsHyperplaneArrangement)}}{31}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}\textcolor {Chapter }{HArrInductiveFactorizations (for IsHyperplaneArrangement)}}{31}{subsection.6.5.4}%
+\contentsline {chapter}{\numberline {7}\textcolor {Chapter }{Milnor fibers}}{32}{chapter.7}%
+\contentsline {section}{\numberline {7.1}\textcolor {Chapter }{Complexes}}{32}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{32}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{32}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}\textcolor {Chapter }{FPtoCWCpx}}{33}{subsection.7.1.3}%
+\contentsline {chapter}{\numberline {8}\textcolor {Chapter }{Tope posets}}{34}{chapter.8}%
+\contentsline {section}{\numberline {8.1}\textcolor {Chapter }{Operation}}{34}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}\textcolor {Chapter }{TopePoset (for IsOrientedMatroid, IsList)}}{34}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}\textcolor {Chapter }{Attributes}}{34}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}\textcolor {Chapter }{TPGroundSet (for IsTopePoset)}}{34}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}\textcolor {Chapter }{TPBaseTope (for IsTopePoset)}}{34}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}\textcolor {Chapter }{TPRankPoly (for IsTopePoset)}}{35}{subsection.8.2.3}%
+\contentsline {chapter}{\numberline {9}\textcolor {Chapter }{Visualization of real 3\texttt {\symbol {45}}arrangements}}{36}{chapter.9}%
+\contentsline {section}{\numberline {9.1}\textcolor {Chapter }{Global methods}}{36}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}\textcolor {Chapter }{LaTeXDrawProjPicture}}{36}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}\textcolor {Chapter }{LaTeXDrawSpherePicture}}{38}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}\textcolor {Chapter }{LaTeXDrawTopeGraph}}{40}{subsection.9.1.3}%
+\contentsline {chapter}{\numberline {10}\textcolor {Chapter }{Realization spaces of geometric lattices}}{42}{chapter.10}%
+\contentsline {section}{\numberline {10.1}\textcolor {Chapter }{Construction}}{42}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}{42}{subsection.10.1.1}%
+\contentsline {section}{\numberline {10.2}\textcolor {Chapter }{Attributes}}{42}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}\textcolor {Chapter }{LGenSet (for IsGeomLattice)}}{42}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}\textcolor {Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}\textcolor {Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.2.4}\textcolor {Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.4}%
+\contentsline {subsection}{\numberline {10.2.5}\textcolor {Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.5}%
+\contentsline {subsection}{\numberline {10.2.6}\textcolor {Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}{43}{subsection.10.2.6}%
+\contentsline {subsection}{\numberline {10.2.7}\textcolor {Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.7}%
+\contentsline {subsection}{\numberline {10.2.8}\textcolor {Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.8}%
+\contentsline {subsection}{\numberline {10.2.9}\textcolor {Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.9}%
+\contentsline {section}{\numberline {10.3}\textcolor {Chapter }{Properties}}{44}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}\textcolor {Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.3.1}%
+\contentsline {section}{\numberline {10.4}\textcolor {Chapter }{Further (auxillary) Operations}}{44}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}\textcolor {Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}{44}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}\textcolor {Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}{44}{subsection.10.4.2}%
+\contentsline {chapter}{References}{45}{chapter*.2}%
+\contentsline {chapter}{Index}{46}{section*.3}%

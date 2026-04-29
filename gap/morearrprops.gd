@@ -268,6 +268,23 @@ DeclareGlobalFunction("InducedPartLoc");
 DeclareGlobalFunction("IsFactPart");
 
 #! @Arguments A
+#! @Returns A list or fail
+#! @Description
+#!  Determines if <A>A</A> 
+#!  is factored and if so returns some factorization.
+#! @BeginExampleSession
+#! gap> A:=AGpql(2,1,3);
+#! <HyperplaneArrangement: 9 hyperplanes in 3-space>
+#! gap> HArrIsFactored(A);
+#! [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ]
+#! gap> A:=AGpql(2,2,4);
+#! <HyperplaneArrangement: 12 hyperplanes in 4-space>
+#! gap> HArrIsFactored(A);
+#! fail
+#! @EndExampleSession
+DeclareAttribute("HArrIsFactored",IsHyperplaneArrangement);
+
+#! @Arguments A
 #! @Returns A list
 #! @Description
 #!  Computes a list of all factorizations of <A>A</A> as
@@ -291,28 +308,27 @@ DeclareGlobalFunction("IsFactPart");
 #! @EndExampleSession
 DeclareOperation("HArrFactorizations",[IsHyperplaneArrangement]);
 
+DeclareGlobalFunction("ResPart");
+DeclareGlobalFunction("DelPart");
+DeclareGlobalFunction("ResMapIsBij");
+DeclareGlobalFunction("IsIndFactorization");
 
 #! @Arguments A
 #! @Returns A list or fail
 #! @Description
 #!  Determines if <A>A</A> 
-#!  is factored and if so returns some factorization.
+#!  is inductively factored and if so returns some inductive factorization.
 #! @BeginExampleSession
-#! gap> A:=AGpql(2,1,3);
-#! <HyperplaneArrangement: 9 hyperplanes in 3-space>
-#! gap> HArrIsFactored(A);
-#! [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ]
+#! gap> A:=AGpql(2,1,4);
+#! <HyperplaneArrangement: 16 hyperplanes in 4-space>
+#! gap> HArrIsInductivelyFactored(A);
+#! [ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ]
 #! gap> A:=AGpql(2,2,4);
 #! <HyperplaneArrangement: 12 hyperplanes in 4-space>
-#! gap> HArrIsFactored(A);
-#! fail
+#! gap> HArrIsInductivelyFactored(A);
+#! false
 #! @EndExampleSession
-DeclareAttribute("HArrIsFactored",IsHyperplaneArrangement);
-
-DeclareGlobalFunction("ResPart");
-DeclareGlobalFunction("DelPart");
-DeclareGlobalFunction("ResMapIsBij");
-DeclareGlobalFunction("IsIndFactorization");
+DeclareAttribute("HArrIsInductivelyFactored",IsHyperplaneArrangement);
 
 #! @Arguments A
 #! @Returns A list
@@ -338,23 +354,6 @@ DeclareGlobalFunction("IsIndFactorization");
 #! @EndExampleSession
 DeclareOperation("HArrInductiveFactorizations",[IsHyperplaneArrangement]);
 
-#! @Arguments A
-#! @Returns A list or fail
-#! @Description
-#!  Determines if <A>A</A> 
-#!  is inductively factored and if so returns some inductive factorization.
-#! @BeginExampleSession
-#! gap> A:=AGpql(2,1,4);
-#! <HyperplaneArrangement: 16 hyperplanes in 4-space>
-#! gap> HArrIsInductivelyFactored(A);
-#! [ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ]
-#! gap> A:=AGpql(2,2,4);
-#! <HyperplaneArrangement: 12 hyperplanes in 4-space>
-#! gap> HArrIsInductivelyFactored(A);
-#! false
-#! @EndExampleSession
-DeclareAttribute("HArrIsInductivelyFactored",IsHyperplaneArrangement);
-# DeclareOperation("HArrIsInductivelyFactored",[IsHyperplaneArrangement,IsString]);
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

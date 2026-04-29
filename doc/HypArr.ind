@@ -39,7 +39,7 @@
     \subitem for IsFacePoset, \hyperpage{17}
   \item \texttt  {FPOrder}
     \subitem for IsFacePoset, \hyperpage{18}
-  \item \texttt  {FPtoCWCpx}, \hyperpage{34}
+  \item \texttt  {FPtoCWCpx}, \hyperpage{33}
 
   \indexspace
 
@@ -57,7 +57,6 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{8}
   \item \texttt  {HArrIsInductivelyFactored}
     \subitem for IsHyperplaneArrangement, \hyperpage{31}
-    \subitem for IsHyperplaneArrangement,IsString, \hyperpage{32}
   \item \texttt  {HArrIsIrreducible}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
   \item \texttt  {HArrIsSimplicial}
@@ -96,9 +95,9 @@
 
   \indexspace
 
-  \item \texttt  {LaTeXDrawProjPicture}, \hyperpage{37}
-  \item \texttt  {LaTeXDrawSpherePicture}, \hyperpage{39}
-  \item \texttt  {LaTeXDrawTopeGraph}, \hyperpage{41}
+  \item \texttt  {LaTeXDrawProjPicture}, \hyperpage{36}
+  \item \texttt  {LaTeXDrawSpherePicture}, \hyperpage{38}
+  \item \texttt  {LaTeXDrawTopeGraph}, \hyperpage{40}
   \item \texttt  {LAtoms}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LAutGroup}
@@ -108,7 +107,7 @@
   \item \texttt  {LCharPoly}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGenSet}
-    \subitem for IsGeomLattice, \hyperpage{43}
+    \subitem for IsGeomLattice, \hyperpage{42}
   \item \texttt  {LGraph}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGroundSet}
@@ -118,7 +117,7 @@
   \item \texttt  {LIsGeneric}
     \subitem for IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsGenSet}
-    \subitem for IsGeomLattice,IsList, \hyperpage{45}
+    \subitem for IsGeomLattice,IsList, \hyperpage{44}
   \item \texttt  {LIsIrreducible}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LIsIsomorphic}
@@ -140,15 +139,15 @@
   \item \texttt  {LRankFunction}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LRealizationSpace}
-    \subitem for IsGeomLattice, IsInt, \hyperpage{43}
+    \subitem for IsGeomLattice, IsInt, \hyperpage{42}
   \item \texttt  {LSubsetGeneratedByS}
-    \subitem for IsGeomLattice,IsList, \hyperpage{45}
+    \subitem for IsGeomLattice,IsList, \hyperpage{44}
 
   \indexspace
 
   \item \texttt  {MilnorFiberComplex}
-    \subitem for IsHyperplaneArrangement, \hyperpage{33}
-    \subitem for IsOrientedMatroid, \hyperpage{33}
+    \subitem for IsHyperplaneArrangement, \hyperpage{32}
+    \subitem for IsOrientedMatroid, \hyperpage{32}
   \item \texttt  {MSetInvL}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
 
@@ -190,23 +189,23 @@
   \item \texttt  {Roots}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {RSCharacteristic}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSCoeffMat}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSDefField}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSDimension}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSIdealMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
-  \item \texttt  {RSIsNonEmpty}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
-  \item \texttt  {RSLattice}
     \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+  \item \texttt  {RSIsNonEmpty}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+  \item \texttt  {RSLattice}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{43}
   \item \texttt  {RSNonMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
   \item \texttt  {RSPRing}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
 
   \indexspace
 
@@ -221,12 +220,12 @@
   \item \texttt  {TopeGraph}
     \subitem for IsOrientedMatroid, \hyperpage{16}
   \item \texttt  {TopePoset}
-    \subitem for IsOrientedMatroid, IsList, \hyperpage{35}
+    \subitem for IsOrientedMatroid, IsList, \hyperpage{34}
   \item \texttt  {TPBaseTope}
-    \subitem for IsTopePoset, \hyperpage{35}
+    \subitem for IsTopePoset, \hyperpage{34}
   \item \texttt  {TPGroundSet}
-    \subitem for IsTopePoset, \hyperpage{35}
+    \subitem for IsTopePoset, \hyperpage{34}
   \item \texttt  {TPRankPoly}
-    \subitem for IsTopePoset, \hyperpage{36}
+    \subitem for IsTopePoset, \hyperpage{35}
 
 \end{theindex}

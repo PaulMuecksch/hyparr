@@ -306,36 +306,6 @@ gap> OMSupportsFalkWeights(O,1);
 <Heading>Factored arrangements</Heading>
 
 <ManSection>
-  <Oper Arg="A" Name="HArrFactorizations" Label="for IsHyperplaneArrangement"/>
- <Returns>A list
-</Returns>
- <Description>
-  Computes a list of all factorizations of <A>A</A> as
-  partitions of [1..|<A>A</A>|].
-<Example><![CDATA[
-gap> A:=AGpql(2,1,3);
-<HyperplaneArrangement: 9 hyperplanes in 3-space>
-gap> HArrFactorizations(A);
-[ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
-  [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], 
-  [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], 
-  [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
-  [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
-]]></Example>
-
-
- </Description>
-</ManSection>
-
-
-<ManSection>
   <Attr Arg="A" Name="HArrIsFactored" Label="for IsHyperplaneArrangement"/>
  <Returns>A list or fail
 </Returns>
@@ -359,16 +329,16 @@ fail
 
 
 <ManSection>
-  <Oper Arg="A" Name="HArrInductiveFactorizations" Label="for IsHyperplaneArrangement"/>
+  <Oper Arg="A" Name="HArrFactorizations" Label="for IsHyperplaneArrangement"/>
  <Returns>A list
 </Returns>
  <Description>
-  Computes a list of all inductive factorizations of <A>A</A> as
+  Computes a list of all factorizations of <A>A</A> as
   partitions of [1..|<A>A</A>|].
 <Example><![CDATA[
 gap> A:=AGpql(2,1,3);
 <HyperplaneArrangement: 9 hyperplanes in 3-space>
-gap> HArrInductiveFactorizations(A);
+gap> HArrFactorizations(A);
 [ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
   [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
   [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
@@ -412,9 +382,31 @@ false
 
 
 <ManSection>
-  <Oper Arg="arg1,arg2" Name="HArrIsInductivelyFactored" Label="for IsHyperplaneArrangement,IsString"/>
+  <Oper Arg="A" Name="HArrInductiveFactorizations" Label="for IsHyperplaneArrangement"/>
+ <Returns>A list
+</Returns>
  <Description>
-<P/>
+  Computes a list of all inductive factorizations of <A>A</A> as
+  partitions of [1..|<A>A</A>|].
+<Example><![CDATA[
+gap> A:=AGpql(2,1,3);
+<HyperplaneArrangement: 9 hyperplanes in 3-space>
+gap> HArrInductiveFactorizations(A);
+[ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+  [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
+  [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+  [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], 
+  [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], 
+  [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], 
+  [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], 
+  [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], 
+  [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], 
+  [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
+  [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
+  [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
+]]></Example>
+
+
  </Description>
 </ManSection>
 

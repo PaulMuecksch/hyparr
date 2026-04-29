@@ -150,6 +150,17 @@ local GenSs,MaxLenGenSs, isGenSet,GenSet,GenSetNew, NewGenSets, ls, ml,l,Atoms,R
     return fail;
 end);
 
+
+# BindGlobal("LFindGenSet2",
+# function(L)
+# local rL,ContainsProperGenSet, S, Sn;
+#     S:=Atoms(L);
+#     ContainsProperGenSet := true;
+
+    
+#     return fail;
+# end);
+
 InstallMethod(LGenSet,
     [IsGeomLattice],
 function(L)
