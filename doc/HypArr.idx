@@ -100,11 +100,11 @@
 \indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{44}
 \indexentry{LSubsetGeneratedByS@\texttt  {LSubsetGeneratedByS}!for IsGeomLattice,IsList|hyperpage}{44}
 \indexentry{LIsGenSet@\texttt  {LIsGenSet}!for IsGeomLattice,IsList|hyperpage}{44}
-\indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{45}
-\indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{45}
-\indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{45}
-\indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{45}
+\indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt|hyperpage}{45}
+\indexentry{ChiSplits@\texttt  {ChiSplits}|hyperpage}{45}
+\indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{46}
+\indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{46}
+\indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{46}
+\indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{46}
 \indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{46}
 \indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{46}
-\indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt|hyperpage}{46}
-\indexentry{ChiSplits@\texttt  {ChiSplits}|hyperpage}{47}

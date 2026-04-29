@@ -173,16 +173,16 @@
       10.4-1 LSubsetGeneratedByS
       10.4-2 LIsGenSet
   11 [33X[0;0YGreedy search for special arrangements[133X
-    11.1 [33X[0;0YAttributes[133X
-      11.1-1 GreedySearchGF
-      11.1-2 GreedySearchDimension
-      11.1-3 GreedySearchNOfHs
-      11.1-4 GreedySearchTargetFct
-      11.1-5 GreedySearchMaxIterations
-      11.1-6 GreedySearchRun
-    11.2 [33X[0;0YConstructions[133X
-      11.2-1 HArrGreedySearch
-      11.2-2 ChiSplits
+    11.1 [33X[0;0YConstructions[133X
+      11.1-1 HArrGreedySearch
+      11.1-2 ChiSplits
+    11.2 [33X[0;0YAttributes[133X
+      11.2-1 GreedySearchGF
+      11.2-2 GreedySearchDimension
+      11.2-3 GreedySearchNOfHs
+      11.2-4 GreedySearchTargetFct
+      11.2-5 GreedySearchMaxIterations
+      11.2-6 GreedySearchRun
   
   
   [32X

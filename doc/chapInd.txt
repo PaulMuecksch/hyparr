@@ -4,7 +4,7 @@
   
   [2XAGpql[102X 3.1-1 
   [2XCharPoly[102X, for IsHyperplaneArrangement 2.2-5 
-  [2XChiSplits[102X 11.2-2 
+  [2XChiSplits[102X 11.1-2 
   [2XConnectedSubgraphArr[102X, for IsList 3.1-3 
   [2XDerModDegreeSequence[102X, for IsDerivationModule 5.1-4 
   [2XDerModGenerators[102X, for IsDerivationModule 5.1-2 
@@ -18,15 +18,15 @@
   [2XFPGroundSet[102X, for IsFacePoset 4.2-10 
   [2XFPOrder[102X, for IsFacePoset 4.2-11 
   [2XFPtoCWCpx[102X 7.1-3 
-  [2XGreedySearchDimension[102X, for IsHArrGreedySearch 11.1-2 
-  [2XGreedySearchGF[102X, for IsHArrGreedySearch 11.1-1 
-  [2XGreedySearchMaxIterations[102X, for IsHArrGreedySearch 11.1-5 
-  [2XGreedySearchNOfHs[102X, for IsHArrGreedySearch 11.1-3 
-  [2XGreedySearchRun[102X, for IsHArrGreedySearch 11.1-6 
-  [2XGreedySearchTargetFct[102X, for IsHArrGreedySearch 11.1-4 
+  [2XGreedySearchDimension[102X, for IsHArrGreedySearch 11.2-2 
+  [2XGreedySearchGF[102X, for IsHArrGreedySearch 11.2-1 
+  [2XGreedySearchMaxIterations[102X, for IsHArrGreedySearch 11.2-5 
+  [2XGreedySearchNOfHs[102X, for IsHArrGreedySearch 11.2-3 
+  [2XGreedySearchRun[102X, for IsHArrGreedySearch 11.2-6 
+  [2XGreedySearchTargetFct[102X, for IsHArrGreedySearch 11.2-4 
   [2XHArrDefField[102X, for IsHyperplaneArrangement 2.2-3 
   [2XHArrFactorizations[102X, for IsHyperplaneArrangement 6.5-2 
-  [2XHArrGreedySearch[102X, for IsInt,IsInt,IsField,IsFunction,IsInt 11.2-1 
+  [2XHArrGreedySearch[102X, for IsInt,IsInt,IsField,IsFunction,IsInt 11.1-1 
   [2XHArrInductiveFactorizations[102X, for IsHyperplaneArrangement 6.5-4 
   [2XHArrIsFactored[102X, for IsHyperplaneArrangement 6.5-1 
   [2XHArrIsFree[102X, for IsHyperplaneArrangement 5.1-7 

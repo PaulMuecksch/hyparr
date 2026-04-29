@@ -25,21 +25,21 @@
 <p id="mathjaxlink" class="pcenter"><a href="chap11.html">[MathJax off]</a></p>
 <p><a id="X86BE32CF7BCF339E" name="X86BE32CF7BCF339E"></a></p>
 <div class="ChapSects"><a href="chap11_mj.html#X86BE32CF7BCF339E">11 <span class="Heading">Greedy search for special arrangements</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11_mj.html#X7C701DBF7BAE649A">11.1 <span class="Heading">Attributes</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11_mj.html#X836F56D77AA04554">11.1 <span class="Heading">Constructions</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X830ABDC2827862CD">11.1-1 GreedySearchGF</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X7BDEEF027FB60AB3">11.1-2 GreedySearchDimension</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X7D09885B7C69A621">11.1-3 GreedySearchNOfHs</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X81F9A4827A5ABC5D">11.1-4 GreedySearchTargetFct</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X83296B32854C2647">11.1-5 GreedySearchMaxIterations</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X87BDEC467DE8A782">11.1-6 GreedySearchRun</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X84821A5B843965BA">11.1-1 HArrGreedySearch</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X872030DC7F4EDD16">11.1-2 ChiSplits</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11_mj.html#X836F56D77AA04554">11.2 <span class="Heading">Constructions</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11_mj.html#X7C701DBF7BAE649A">11.2 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X84821A5B843965BA">11.2-1 HArrGreedySearch</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X872030DC7F4EDD16">11.2-2 ChiSplits</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X830ABDC2827862CD">11.2-1 GreedySearchGF</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X7BDEEF027FB60AB3">11.2-2 GreedySearchDimension</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X7D09885B7C69A621">11.2-3 GreedySearchNOfHs</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X81F9A4827A5ABC5D">11.2-4 GreedySearchTargetFct</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X83296B32854C2647">11.2-5 GreedySearchMaxIterations</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X87BDEC467DE8A782">11.2-6 GreedySearchRun</a></span>
 </div></div>
 </div>
 
@@ -47,13 +47,50 @@
 
 <p>This is an implementation of basic greedy algorithms to construct arrangements satisfying certain properties, based on <a href="chapBib_mj.html#biBCuntz2022_Greedy">[Cun22]</a>. A variant was used in <a href="chapBib_mj.html#biBMMR2024_CombFormality">[MMR24]</a> to construct an arrangement which is <span class="SimpleMath">\(4\)</span>-formal with a restriction which is not <span class="SimpleMath">\(3\)</span>-formal.</p>
 
+<p><a id="X836F56D77AA04554" name="X836F56D77AA04554"></a></p>
+
+<h4>11.1 <span class="Heading">Constructions</span></h4>
+
+<p><a id="X84821A5B843965BA" name="X84821A5B843965BA"></a></p>
+
+<h5>11.1-1 HArrGreedySearch</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrGreedySearch</code>( <var class="Arg">NumberOfHs</var>, <var class="Arg">dim</var>, <var class="Arg">GField</var>, <var class="Arg">PropTargetFct</var>, <var class="Arg">MaxNoIterations</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement</p>
+
+<p>Constructs a greedy search for arrangements over <var class="Arg">GField</var> with <var class="Arg">NumberOfHs</var> hyperplanes in dimension <var class="Arg">dim</var>.</p>
+
+
+<ul>
+<li><p><var class="Arg">PropTargetFct</var> should be a function taking a hyperplane arragement as argument, returning a non-negative real number, which the search tries to minimize, and such that value=0 means the arrangement satisfies the desired property.</p>
+
+</li>
+<li><p><var class="Arg">MaxNoIterations</var> is the maximal number of steps to be carried out in the search (one step = exchanging a hyperplane).</p>
+
+</li>
+</ul>
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrGreedySearch(13,3,GF(17),ChiSplits,400);</span>
+GreedySearch over GF(17) for arrangements:
+ - of rank 3
+ - with 13 hyperplanes.
+</pre></div>
+
+<p><a id="X872030DC7F4EDD16" name="X872030DC7F4EDD16"></a></p>
+
+<h5>11.1-2 ChiSplits</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ChiSplits</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>A target/score function for splitting of the characteristic polynomial of <var class="Arg">A</var> over <span class="SimpleMath">\(\mathbb{Z}\)</span>.</p>
+
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
 
-<h4>11.1 <span class="Heading">Attributes</span></h4>
+<h4>11.2 <span class="Heading">Attributes</span></h4>
 
 <p><a id="X830ABDC2827862CD" name="X830ABDC2827862CD"></a></p>
 
-<h5>11.1-1 GreedySearchGF</h5>
+<h5>11.2-1 GreedySearchGF</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchGF</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a field</p>
@@ -66,7 +103,7 @@
 
 <p><a id="X7BDEEF027FB60AB3" name="X7BDEEF027FB60AB3"></a></p>
 
-<h5>11.1-2 GreedySearchDimension</h5>
+<h5>11.2-2 GreedySearchDimension</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchDimension</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
@@ -75,7 +112,7 @@
 
 <p><a id="X7D09885B7C69A621" name="X7D09885B7C69A621"></a></p>
 
-<h5>11.1-3 GreedySearchNOfHs</h5>
+<h5>11.2-3 GreedySearchNOfHs</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchNOfHs</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
@@ -84,7 +121,7 @@
 
 <p><a id="X81F9A4827A5ABC5D" name="X81F9A4827A5ABC5D"></a></p>
 
-<h5>11.1-4 GreedySearchTargetFct</h5>
+<h5>11.2-4 GreedySearchTargetFct</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchTargetFct</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
@@ -93,7 +130,7 @@
 
 <p><a id="X83296B32854C2647" name="X83296B32854C2647"></a></p>
 
-<h5>11.1-5 GreedySearchMaxIterations</h5>
+<h5>11.2-5 GreedySearchMaxIterations</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchMaxIterations</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 
@@ -102,7 +139,7 @@
 
 <p><a id="X87BDEC467DE8A782" name="X87BDEC467DE8A782"></a></p>
 
-<h5>11.1-6 GreedySearchRun</h5>
+<h5>11.2-6 GreedySearchRun</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchRun</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a function</p>
@@ -111,7 +148,7 @@
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GSChiSplits_13_3:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);</span>
 GreedySearch over GF(17) for arrangements:
  - of rank 3
  - with 13 hyperplanes.
@@ -130,43 +167,6 @@ false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFree(A);</span>
 true
 </pre></div>
-
-<p><a id="X836F56D77AA04554" name="X836F56D77AA04554"></a></p>
-
-<h4>11.2 <span class="Heading">Constructions</span></h4>
-
-<p><a id="X84821A5B843965BA" name="X84821A5B843965BA"></a></p>
-
-<h5>11.2-1 HArrGreedySearch</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrGreedySearch</code>( <var class="Arg">NumberOfHs</var>, <var class="Arg">dim</var>, <var class="Arg">GField</var>, <var class="Arg">PropTargetFct</var>, <var class="Arg">MaxNoIterations</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: A hyperplane arrangement</p>
-
-<p>Constructs a greedy search for arrangements over <var class="Arg">GField</var> with <var class="Arg">NumberOfHs</var> hyperplanes in dimension <var class="Arg">dim</var>.</p>
-
-
-<ul>
-<li><p><var class="Arg">PropTargetFct</var> should be a function taking hyperplane arragements as arguments, returning a non-negative real number, which the search tries to minimize, and such that value=0 means the arrangement satisfies the desired property.</p>
-
-</li>
-<li><p><var class="Arg">MaxNoIterations</var> is the maximal number of steps to be carried out in the search (one step = exchanging a hyperplane).</p>
-
-</li>
-</ul>
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrGreedySearch(13,3,GF(17),ChiSplits,400);</span>
-GreedySearch over GF(17) for arrangements:
- - of rank 3
- - with 13 hyperplanes.
-</pre></div>
-
-<p><a id="X872030DC7F4EDD16" name="X872030DC7F4EDD16"></a></p>
-
-<h5>11.2-2 ChiSplits</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ChiSplits</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<p>A target/score function for splitting of the characteristic polynomial of <var class="Arg">A</var> over <span class="SimpleMath">\(\mathbb{Z}\)</span>.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap10_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib_mj.html">[Next Chapter]</a>&nbsp;  </div>

@@ -31,6 +31,49 @@ DeclareOperation("ViewObject", [IsHArrGreedySearch]);
 DeclareOperation("ViewObject", [IsHArrGreedySearchPair]);
 
 
+
+#################################################
+##
+#! @Section Constructions
+##
+#################################################
+
+DeclareOperation("RandomArrOverGF",[IsInt,IsInt,IsField]);
+DeclareOperation("CandidatesLinesPointsNewH",[IsGeomLattice]);
+DeclareOperation("RandomNewHThroughPoints",[IsHyperplaneArrangement]);
+DeclareOperation("RandomNewHThroughIntersections",[IsHyperplaneArrangement]);
+DeclareOperation("RandomNewH",[IsHyperplaneArrangement]);
+DeclareOperation("ExchangeRandomH",[IsHyperplaneArrangement]);
+DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
+
+#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations
+#! @Returns A hyperplane arrangement
+#! @Description
+#!  Constructs a greedy search for arrangements over <A>GField</A> with <A>NumberOfHs</A>
+#!  hyperplanes in dimension <A>dim</A>.
+#!  * <A>PropTargetFct</A> should be a function taking a hyperplane arragement as argument,
+#!      returning a non-negative real number, which the search tries to minimize,
+#!      and such that value=0 means the arrangement satisfies the desired property.
+#!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
+#!      (one step = exchanging a hyperplane).
+#! @BeginExampleSession
+#! gap> HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+#! GreedySearch over GF(17) for arrangements:
+#!  - of rank 3
+#!  - with 13 hyperplanes.
+#! @EndExampleSession
+DeclareOperation("HArrGreedySearch",[IsInt,IsInt,IsField,IsFunction,IsInt]);
+
+DeclareOperation("HArrGreedySearchPair",[IsInt,IsInt,IsField,IsFunction,IsFunction,IsInt]);
+
+DeclareOperation("RandArrOverGF",[IsInt,IsInt,IsField]);
+
+#! @Arguments A
+#! @Description
+#!  A target/score function for splitting of the characteristic polynomial of <A>A</A> over $\mathbb{Z}$.
+DeclareGlobalFunction("ChiSplits");
+
+
 #################################
 ##
 #! @Section Attributes
@@ -82,7 +125,7 @@ DeclareAttribute("GreedySearchMaxIterations",IsHArrGreedySearch);
 #! @Description
 #!  The function to run the search which will return an arrangement or <C>fail</C>.
 #! @BeginExampleSession
-#! gap> GSChiSplits_13_3:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+#! gap> GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);
 #! GreedySearch over GF(17) for arrangements:
 #!  - of rank 3
 #!  - with 13 hyperplanes.
@@ -129,47 +172,6 @@ DeclareAttribute("GreedySearchRun",IsHArrGreedySearchPair);
 ##############
 
 
-
-#################################################
-##
-#! @Section Constructions
-##
-#################################################
-
-DeclareOperation("RandomArrOverGF",[IsInt,IsInt,IsField]);
-DeclareOperation("CandidatesLinesPointsNewH",[IsGeomLattice]);
-DeclareOperation("RandomNewHThroughPoints",[IsHyperplaneArrangement]);
-DeclareOperation("RandomNewHThroughIntersections",[IsHyperplaneArrangement]);
-DeclareOperation("RandomNewH",[IsHyperplaneArrangement]);
-DeclareOperation("ExchangeRandomH",[IsHyperplaneArrangement]);
-DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
-
-#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations
-#! @Returns A hyperplane arrangement
-#! @Description
-#!  Constructs a greedy search for arrangements over <A>GField</A> with <A>NumberOfHs</A>
-#!  hyperplanes in dimension <A>dim</A>.
-#!  * <A>PropTargetFct</A> should be a function taking hyperplane arragements as arguments,
-#!      returning a non-negative real number, which the search tries to minimize,
-#!      and such that value=0 means the arrangement satisfies the desired property.
-#!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
-#!      (one step = exchanging a hyperplane).
-#! @BeginExampleSession
-#! gap> HArrGreedySearch(13,3,GF(17),ChiSplits,400);
-#! GreedySearch over GF(17) for arrangements:
-#!  - of rank 3
-#!  - with 13 hyperplanes.
-#! @EndExampleSession
-DeclareOperation("HArrGreedySearch",[IsInt,IsInt,IsField,IsFunction,IsInt]);
-
-DeclareOperation("HArrGreedySearchPair",[IsInt,IsInt,IsField,IsFunction,IsFunction,IsInt]);
-
-DeclareOperation("RandArrOverGF",[IsInt,IsInt,IsField]);
-
-#! @Arguments A
-#! @Description
-#!  A target/score function for splitting of the characteristic polynomial of <A>A</A> over $\mathbb{Z}$.
-DeclareGlobalFunction("ChiSplits");
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
