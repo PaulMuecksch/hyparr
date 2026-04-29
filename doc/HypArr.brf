@@ -11,5 +11,8 @@
 \backcite {MueYos25_MilnorOM}{{32}{7}{chapter.7}}
 \backcite {GAP_HAP}{{32}{7}{chapter.7}}
 \backcite {DGPS_Singular4}{{42}{10}{chapter.10}}
+\backcite {Cuntz2022_Greedy}{{42}{10}{chapter.10}}
+\backcite {Cuntz2022_Greedy}{{42}{10.2.1}{subsection.10.2.1}}
+\backcite {GMRS2025_HyperpolygonalArrs}{{42}{10.2.1}{subsection.10.2.1}}
 \backcite {Cuntz2022_Greedy}{{45}{11}{chapter.11}}
 \backcite {MMR2024_CombFormality}{{45}{11}{chapter.11}}

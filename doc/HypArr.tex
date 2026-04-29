@@ -2685,7 +2685,7 @@ their duals. See e.g. (only in pdf or \href{https://paulmuecksch.github.io/HypAr
 {
   
 
- The computation of the realization space uses the \textsc{singular} package to call functions from \textsc{Singular} \cite{DGPS_Singular4}. 
+ The computation of the realization space uses the \textsc{singular} package to call functions from \textsc{Singular} \cite{DGPS_Singular4}. Our implementation is an adaptation of the algorithm described in \cite[Algorithm 3.9]{Cuntz2022_Greedy} for geometric lattices of arbitrary rank. 
 \section{\textcolor{Chapter }{Construction}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Construction}
 \logpage{[ 10, 1, 0 ]}
 \hyperdef{L}{X7F6278CD87400D49}{}
@@ -2736,7 +2736,7 @@ a set
 
 
 
- Computes some generating set of \mbox{\texttt{\mdseries\slshape L}}. 
+ Computes some generating set of \mbox{\texttt{\mdseries\slshape L}}, see \cite[Def.3.4]{Cuntz2022_Greedy} resp. \cite[Def.4.2]{GMRS2025_HyperpolygonalArrs}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(3,3,3));|
   <Geometric lattice: 9 atoms, rank 3>

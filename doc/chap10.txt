@@ -2,7 +2,9 @@
   [1X10 [33X[0;0YRealization spaces of geometric lattices[133X[101X
   
   [33X[0;0YThe  computation  of the realization space uses the [12Xsingular[112X package to call
-  functions from [12XSingular[112X [DGPS24].[133X
+  functions from [12XSingular[112X [DGPS24]. Our implementation is an adaptation of the
+  algorithm  described  in  [Cun22,  Algorithm  3.9] for geometric lattices of
+  arbitrary rank.[133X
   
   
   [1X10.1 [33X[0;0YConstruction[133X[101X
@@ -35,7 +37,8 @@
   [33X[1;0Y[29X[2XLGenSet[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya set[133X
   
-  [33X[0;0YComputes some generating set of [3XL[103X.[133X
+  [33X[0;0YComputes  some  generating  set  of  [3XL[103X,  see [Cun22, Def.3.4] resp. [GMRS26,
+  Def.4.2].[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(3,3,3));[127X[104X

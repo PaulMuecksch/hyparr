@@ -5,6 +5,8 @@
 #!
 #! The computation of the realization space uses the <B>singular</B> package
 #! to call functions from <B>Singular</B> <Cite Key="DGPS_Singular4"/>.
+#! Our implementation is an adaptation of the algorithm described in 
+#! <Cite Key="Cuntz2022_Greedy" Where="Algorithm 3.9"/> for geometric lattices of arbitrary rank.
 
 # Declare the category
 DeclareCategory("IsRealizationSpaceOfGeomLattice", IsComponentObjectRep and IsAttributeStoringRep );
@@ -59,7 +61,8 @@ DeclareOperation("LRealizationSpace", [IsGeomLattice, IsInt, IsList]);
 #! @Arguments L
 #! @Returns a set
 #! @Description
-#!  Computes some generating set of <A>L</A>.
+#!  Computes some generating set of <A>L</A>, see <Cite Key="Cuntz2022_Greedy" Where="Def.3.4"/>
+#! resp. <Cite Key="GMRS2025_HyperpolygonalArrs" Where="Def.4.2"/>.
 #! @BeginExampleSession
 #! gap> L:=IntersectionLattice(AGpql(3,3,3));
 #! <Geometric lattice: 9 atoms, rank 3>

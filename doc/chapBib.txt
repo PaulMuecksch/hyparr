@@ -23,6 +23,9 @@
   [[20XFR87[120X]  [16XFalk, M. and Randell, R.[116X, [17XOn the homotopy theory of arrangements[117X, in Complex analytic singularities, North-Holland, Amsterdam, Adv.
   Stud. Pure Math., [19X8[119X (1987), 101--124.
   
+  [[20XGMRS26[120X]  [16XGiordani,  L.,  Mücksch, P., Röhrle, G. and Schmitt, J.[116X, [17XHyperpolygonal arrangements[117X, [18XGlasgow Mathematical Journal[118X, [19X68[119X, 1 (2026),
+  134–146.
+  
   [[20XMMR24[120X]  [16XM{\"o}ller, T., M{\"u}cksch, P. and R{\"o}hrle, G.[116X, [17XOn formality and combinatorial formality for hyperplane arrangements[117X, [18XDiscrete
   Comput. Geom.[118X, [19X72[119X, 1 (2024), 73--90.
   
