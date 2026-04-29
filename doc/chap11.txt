@@ -1,0 +1,110 @@
+  
+  [1X11 [33X[0;0YGreedy search for special arrangements[133X[101X
+  
+  [33X[0;0YThis   is   an  implementation  of  basic  greedy  algorithms  to  construct
+  arrangements  satisfying certain properties, based on [Cun22]. A variant was
+  used  in  [MMR24]  to  construct  an  arrangement  which  is [23X4[123X-formal with a
+  restriction which is not [23X3[123X-formal.[133X
+  
+  
+  [1X11.1 [33X[0;0YAttributes[133X[101X
+  
+  [1X11.1-1 GreedySearchGF[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchGF[102X( [3XGS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya field[133X
+  
+  [33X[0;0YThe Galois field over which to search for arrangements.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.1-2 GreedySearchDimension[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchDimension[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.1-3 GreedySearchNOfHs[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchNOfHs[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.1-4 GreedySearchTargetFct[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchTargetFct[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.1-5 GreedySearchMaxIterations[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchMaxIterations[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.1-6 GreedySearchRun[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchRun[102X( [3XGS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya function[133X
+  
+  [33X[0;0YThe function to run the search which will return an arrangement or [10Xfail[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XGSChiSplits_13_3:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);[127X[104X
+    [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
+    [4X[28X - of rank 3[128X[104X
+    [4X[28X - with 13 hyperplanes.[128X[104X
+    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GSChiSplits_13_3)();[127X[104X
+    [4X[28X227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
+    [4X[28X[ 1, 6, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GSChiSplits_13_3)();[127X[104X
+    [4X[28X358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
+    [4X[28X[ 1, 6, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsFree(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X11.2 [33X[0;0YConstructions[133X[101X
+  
+  [1X11.2-1 HArrGreedySearch[101X
+  
+  [33X[1;0Y[29X[2XHArrGreedySearch[102X( [3XNumberOfHs[103X, [3Xdim[103X, [3XGField[103X, [3XPropTargetFct[103X, [3XMaxNoIterations[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement[133X
+  
+  [33X[0;0YConstructs  a  greedy  search  for  arrangements over [3XGField[103X with [3XNumberOfHs[103X
+  hyperplanes in dimension [3Xdim[103X.[133X
+  
+  [30X    [33X[0;6Y[3XPropTargetFct[103X  should  be  a function taking hyperplane arragements as
+        arguments,  returning  a  non-negative  real  number, which the search
+        tries  to  minimize,  and  such  that  value=0  means  the arrangement
+        satisfies the desired property.[133X
+  
+  [30X    [33X[0;6Y[3XMaxNoIterations[103X  is  the  maximal number of steps to be carried out in
+        the search (one step = exchanging a hyperplane).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XHArrGreedySearch(13,3,GF(17),ChiSplits,400);[127X[104X
+    [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
+    [4X[28X - of rank 3[128X[104X
+    [4X[28X - with 13 hyperplanes.[128X[104X
+  [4X[32X[104X
+  
+  [1X11.2-2 ChiSplits[101X
+  
+  [33X[1;0Y[29X[2XChiSplits[102X( [3XA[103X ) [32X function[133X
+  
+  [33X[0;0YA  target/score function for splitting of the characteristic polynomial of [3XA[103X
+  over [23X\mathbb{Z}[123X.[133X
+  

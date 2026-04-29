@@ -19,4 +19,5 @@ ReadPackage("hyparr","gap/morearrprops.gi");
 ReadPackage("hyparr","gap/topeposet.gi");
 ReadPackage("hyparr","gap/drawarrs.gi");
 ReadPackage("hyparr","gap/realizationspace.gi");
+ReadPackage("hyparr","gap/greedy.gi");
 

@@ -29,7 +29,7 @@
 \makelabel{hyparr:Milnor fibers}{7}{X80236F007DAFE4C2}
 \makelabel{hyparr:Complexes}{7.1}{X79C388D385DB7CD1}
 \makelabel{hyparr:Tope posets}{8}{X7D123BFB84BF8125}
-\makelabel{hyparr:Operation}{8.1}{X835880B9800BD2D8}
+\makelabel{hyparr:Operations}{8.1}{X7DE8E16C7C2D387B}
 \makelabel{hyparr:Attributes}{8.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Visualization of real 3-arrangements}{9}{X867FB7CC79AC1DED}
 \makelabel{hyparr:Global methods}{9.1}{X80841F8D80722081}
@@ -38,6 +38,9 @@
 \makelabel{hyparr:Attributes}{10.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Properties}{10.3}{X871597447BB998A1}
 \makelabel{hyparr:Further (auxillary) Operations}{10.4}{X8252A2A9867F3059}
+\makelabel{hyparr:Greedy search for special arrangements}{11}{X86BE32CF7BCF339E}
+\makelabel{hyparr:Attributes}{11.1}{X7C701DBF7BAE649A}
+\makelabel{hyparr:Constructions}{11.2}{X836F56D77AA04554}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:References}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
@@ -143,3 +146,11 @@
 \makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{10.3.1}{X781923918754E3CE}
 \makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{10.4.1}{X800FB3BB86AD2F1A}
 \makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{10.4.2}{X84F182B783389C2B}
+\makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{11.1.1}{X830ABDC2827862CD}
+\makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{11.1.2}{X7BDEEF027FB60AB3}
+\makelabel{hyparr:GreedySearchNOfHs for IsHArrGreedySearch}{11.1.3}{X7D09885B7C69A621}
+\makelabel{hyparr:GreedySearchTargetFct for IsHArrGreedySearch}{11.1.4}{X81F9A4827A5ABC5D}
+\makelabel{hyparr:GreedySearchMaxIterations for IsHArrGreedySearch}{11.1.5}{X83296B32854C2647}
+\makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{11.1.6}{X87BDEC467DE8A782}
+\makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt}{11.2.1}{X84821A5B843965BA}
+\makelabel{hyparr:ChiSplits}{11.2.2}{X872030DC7F4EDD16}

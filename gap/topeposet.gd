@@ -16,7 +16,7 @@ DeclareRepresentation(
 
 #################################
 ##
-#! @Section Operation
+#! @Section Operations
 ##
 #################################
 

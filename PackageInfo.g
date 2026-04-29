@@ -64,7 +64,8 @@ Dependencies := rec(
   GAP := ">= 4.10",
   NeededOtherPackages := [
                              ["grape", ">= 4.0"],
-                             ["hap", ">= 1.5"]
+                             ["hap", ">= 1.5"],
+                             ["fining", ">= 1.0"]
                             #[ "gapdoc",     ">=0.0" ],
                            ],
   SuggestedOtherPackages := [ 

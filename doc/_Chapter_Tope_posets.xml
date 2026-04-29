@@ -4,8 +4,8 @@
 <Chapter Label="Chapter_Tope_posets">
 <Heading>Tope posets</Heading>
 
-<Section Label="Chapter_Tope_posets_Section_Operation">
-<Heading>Operation</Heading>
+<Section Label="Chapter_Tope_posets_Section_Operations">
+<Heading>Operations</Heading>
 
 <ManSection>
   <Oper Arg="OM,BTope" Name="TopePoset" Label="for IsOrientedMatroid, IsList"/>

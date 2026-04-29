@@ -6,6 +6,7 @@
 
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
+  \item \texttt  {ChiSplits}, \hyperpage{47}
   \item \texttt  {ConnectedSubgraphArr}
     \subitem for IsList, \hyperpage{13}
 
@@ -43,10 +44,27 @@
 
   \indexspace
 
+  \item \texttt  {GreedySearchDimension}
+    \subitem for IsHArrGreedySearch, \hyperpage{45}
+  \item \texttt  {GreedySearchGF}
+    \subitem for IsHArrGreedySearch, \hyperpage{45}
+  \item \texttt  {GreedySearchMaxIterations}
+    \subitem for IsHArrGreedySearch, \hyperpage{46}
+  \item \texttt  {GreedySearchNOfHs}
+    \subitem for IsHArrGreedySearch, \hyperpage{45}
+  \item \texttt  {GreedySearchRun}
+    \subitem for IsHArrGreedySearch, \hyperpage{46}
+  \item \texttt  {GreedySearchTargetFct}
+    \subitem for IsHArrGreedySearch, \hyperpage{45}
+
+  \indexspace
+
   \item \texttt  {HArrDefField}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {HArrFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{30}
+  \item \texttt  {HArrGreedySearch}
+    \subitem for IsInt,IsInt,IsField,IsFunction,IsInt, \hyperpage{46}
   \item \texttt  {HArrInductiveFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{31}
   \item \texttt  {HArrIsFactored}

@@ -9,6 +9,9 @@
   
   [[20XCK22[120X] [16XCuntz, M. and Kühne, L.[116X, [17XOn arrangements of hyperplanes from connected subgraphs[117X (2022).
   
+  [[20XCun22[120X]  [16XCuntz,  M.[116X,  [17XA  greedy  algorithm  to compute arrangements of lines in the projective plane[117X, [18XDiscrete Comput. Geom.[118X, [19X68[119X, 1 (2022),
+  107--124.
+  
   [[20XDGPS24[120X]  [16XDecker,  W.,  Greuel,  G.-M.,  Pfister,  G. and Sch\"onemann, H.[116X, [17X\sc Singular 4-4-0 --- A computer algebra system for polynomial
   computations[117X (2024), \url{http://www.singular.uni-kl.de}.
   
@@ -19,6 +22,9 @@
   
   [[20XFR87[120X]  [16XFalk, M. and Randell, R.[116X, [17XOn the homotopy theory of arrangements[117X, in Complex analytic singularities, North-Holland, Amsterdam, Adv.
   Stud. Pure Math., [19X8[119X (1987), 101--124.
+  
+  [[20XMMR24[120X]  [16XM{\"o}ller, T., M{\"u}cksch, P. and R{\"o}hrle, G.[116X, [17XOn formality and combinatorial formality for hyperplane arrangements[117X, [18XDiscrete
+  Comput. Geom.[118X, [19X72[119X, 1 (2024), 73--90.
   
   [[20XMY25[120X] [16XMücksch, P. and Yoshinaga, M.[116X, [17XMilnor fibrations and oriented matroids.[117X, [18XArXiv e-prints[118X (2025), arXiv:2508.15331.
   

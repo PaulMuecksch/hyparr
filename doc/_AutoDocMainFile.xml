@@ -11,3 +11,4 @@
 <#Include SYSTEM "_Chapter_Tope_posets.xml">
 <#Include SYSTEM "_Chapter_Visualization_of_real_3-arrangements.xml">
 <#Include SYSTEM "_Chapter_Realization_spaces_of_geometric_lattices.xml">
+<#Include SYSTEM "_Chapter_Greedy_search_for_special_arrangements.xml">

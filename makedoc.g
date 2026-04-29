@@ -20,14 +20,15 @@ AutoDoc( rec(
             autodoc := rec(
             files := ["gap/arrangements.gd", "gap/specialarrs.gd", "gap/orientedmatroid.gd", 
                 "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd",
-                "gap/topeposet.gd","gap/drawarrs.gd","gap/realizationspace.gd"] 
+                "gap/topeposet.gd","gap/drawarrs.gd","gap/realizationspace.gd",
+                "gap/greedy.gi"] 
                 ),
             gapdoc := rec(
                 LaTeXOptions := rec(
                     LateExtraPreamble := "\\usepackage{graphicx,amsfonts,amsmath, amssymb}"
                 )
             ),
-            extract_examples := true
+            # extract_examples := true
             ) );
 QUIT;
 

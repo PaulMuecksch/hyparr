@@ -17,6 +17,12 @@ Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
 M.~Cuntz and L.~Kühne.
 \newblock On arrangements of hyperplanes from connected subgraphs, 2022.
 
+\bibitem[Cun22]{Cuntz2022_Greedy}
+Michael Cuntz.
+\newblock A greedy algorithm to compute arrangements of lines in the projective
+  plane.
+\newblock {\em Discrete Comput. Geom.}, 68(1):107--124, 2022.
+
 \bibitem[DGPS24]{DGPS_Singular4}
 Wolfram Decker, Gert-Martin Greuel, Gerhard Pfister, and Hans Sch\"onemann.
 \newblock {\sc Singular} {4-4-0} --- {A} computer algebra system for polynomial
@@ -41,6 +47,11 @@ M.~Falk and R.~Randell.
 \newblock On the homotopy theory of arrangements.
 \newblock In {\em Complex analytic singularities}, volume~8 of {\em Adv. Stud.
   Pure Math.}, pages 101--124. North-Holland, Amsterdam, 1987.
+
+\bibitem[MMR24]{MMR2024_CombFormality}
+Tilman M{\"o}ller, Paul M{\"u}cksch, and Gerhard R{\"o}hrle.
+\newblock On formality and combinatorial formality for hyperplane arrangements.
+\newblock {\em Discrete Comput. Geom.}, 72(1):73--90, 2024.
 
 \bibitem[MY25]{MueYos25_MilnorOM}
 P.~Mücksch and M.~Yoshinaga.

@@ -108,7 +108,7 @@
 \contentsline {subsection}{\numberline {7.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{32}{subsection.7.1.2}%
 \contentsline {subsection}{\numberline {7.1.3}\textcolor {Chapter }{FPtoCWCpx}}{33}{subsection.7.1.3}%
 \contentsline {chapter}{\numberline {8}\textcolor {Chapter }{Tope posets}}{34}{chapter.8}%
-\contentsline {section}{\numberline {8.1}\textcolor {Chapter }{Operation}}{34}{section.8.1}%
+\contentsline {section}{\numberline {8.1}\textcolor {Chapter }{Operations}}{34}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}\textcolor {Chapter }{TopePoset (for IsOrientedMatroid, IsList)}}{34}{subsection.8.1.1}%
 \contentsline {section}{\numberline {8.2}\textcolor {Chapter }{Attributes}}{34}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}\textcolor {Chapter }{TPGroundSet (for IsTopePoset)}}{34}{subsection.8.2.1}%
@@ -137,5 +137,16 @@
 \contentsline {section}{\numberline {10.4}\textcolor {Chapter }{Further (auxillary) Operations}}{44}{section.10.4}%
 \contentsline {subsection}{\numberline {10.4.1}\textcolor {Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}{44}{subsection.10.4.1}%
 \contentsline {subsection}{\numberline {10.4.2}\textcolor {Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}{44}{subsection.10.4.2}%
-\contentsline {chapter}{References}{45}{chapter*.2}%
-\contentsline {chapter}{Index}{46}{section*.3}%
+\contentsline {chapter}{\numberline {11}\textcolor {Chapter }{Greedy search for special arrangements}}{45}{chapter.11}%
+\contentsline {section}{\numberline {11.1}\textcolor {Chapter }{Attributes}}{45}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{45}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{45}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{45}{subsection.11.1.3}%
+\contentsline {subsection}{\numberline {11.1.4}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{45}{subsection.11.1.4}%
+\contentsline {subsection}{\numberline {11.1.5}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{46}{subsection.11.1.5}%
+\contentsline {subsection}{\numberline {11.1.6}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{46}{subsection.11.1.6}%
+\contentsline {section}{\numberline {11.2}\textcolor {Chapter }{Constructions}}{46}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt)}}{46}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}\textcolor {Chapter }{ChiSplits}}{47}{subsection.11.2.2}%
+\contentsline {chapter}{References}{48}{chapter*.2}%
+\contentsline {chapter}{Index}{49}{section*.3}%

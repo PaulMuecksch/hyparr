@@ -143,7 +143,7 @@
       7.1-2 MilnorFiberComplex
       7.1-3 FPtoCWCpx
   8 [33X[0;0YTope posets[133X
-    8.1 [33X[0;0YOperation[133X
+    8.1 [33X[0;0YOperations[133X
       8.1-1 TopePoset
     8.2 [33X[0;0YAttributes[133X
       8.2-1 TPGroundSet
@@ -172,6 +172,17 @@
     10.4 [33X[0;0YFurther (auxillary) Operations[133X
       10.4-1 LSubsetGeneratedByS
       10.4-2 LIsGenSet
+  11 [33X[0;0YGreedy search for special arrangements[133X
+    11.1 [33X[0;0YAttributes[133X
+      11.1-1 GreedySearchGF
+      11.1-2 GreedySearchDimension
+      11.1-3 GreedySearchNOfHs
+      11.1-4 GreedySearchTargetFct
+      11.1-5 GreedySearchMaxIterations
+      11.1-6 GreedySearchRun
+    11.2 [33X[0;0YConstructions[133X
+      11.2-1 HArrGreedySearch
+      11.2-2 ChiSplits
   
   
   [32X
