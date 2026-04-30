@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (HypArr) - Chapter 11: Greedy search for special arrangements</title>
+<title>GAP (HypArr) - Chapter 11: Greedy search for arrangements</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -20,8 +20,8 @@
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap10.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap11_mj.html">[MathJax on]</a></p>
-<p><a id="X86BE32CF7BCF339E" name="X86BE32CF7BCF339E"></a></p>
-<div class="ChapSects"><a href="chap11.html#X86BE32CF7BCF339E">11 <span class="Heading">Greedy search for special arrangements</span></a>
+<p><a id="X85C6C672870D19BD" name="X85C6C672870D19BD"></a></p>
+<div class="ChapSects"><a href="chap11.html#X85C6C672870D19BD">11 <span class="Heading">Greedy search for arrangements</span></a>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11.html#X836F56D77AA04554">11.1 <span class="Heading">Constructions</span></a>
 </span>
 <div class="ContSSBlock">
@@ -31,18 +31,18 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11.html#X7C701DBF7BAE649A">11.2 <span class="Heading">Attributes</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X830ABDC2827862CD">11.2-1 GreedySearchGF</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X7BDEEF027FB60AB3">11.2-2 GreedySearchDimension</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X7D09885B7C69A621">11.2-3 GreedySearchNOfHs</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X81F9A4827A5ABC5D">11.2-4 GreedySearchTargetFct</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X83296B32854C2647">11.2-5 GreedySearchMaxIterations</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X87BDEC467DE8A782">11.2-6 GreedySearchRun</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X87BDEC467DE8A782">11.2-1 GreedySearchRun</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X830ABDC2827862CD">11.2-2 GreedySearchGF</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X7BDEEF027FB60AB3">11.2-3 GreedySearchDimension</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X7D09885B7C69A621">11.2-4 GreedySearchNOfHs</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X81F9A4827A5ABC5D">11.2-5 GreedySearchTargetFct</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11.html#X83296B32854C2647">11.2-6 GreedySearchMaxIterations</a></span>
 </div></div>
 </div>
 
-<h3>11 <span class="Heading">Greedy search for special arrangements</span></h3>
+<h3>11 <span class="Heading">Greedy search for arrangements</span></h3>
 
-<p>This is an implementation of basic greedy algorithms to construct arrangements satisfying certain properties, based on <a href="chapBib.html#biBCuntz2022_Greedy">[Cun22]</a>. A variant was used in <a href="chapBib.html#biBMMR2024_CombFormality">[MMR24]</a> to construct an arrangement which is <span class="Math">4</span>-formal with a restriction which is not <span class="Math">3</span>-formal.</p>
+<p>This is an implementation of a basic greedy algorithm to construct arrangements satisfying a certain property, based on <a href="chapBib.html#biBCuntz2022_Greedy">[Cun22]</a>. A variant was used in <a href="chapBib.html#biBMMR2024_CombFormality">[MMR24]</a> to construct an arrangement which is <span class="Math">4</span>-formal with a restriction which is not <span class="Math">3</span>-formal.</p>
 
 <p><a id="X836F56D77AA04554" name="X836F56D77AA04554"></a></p>
 
@@ -85,58 +85,9 @@ GreedySearch over GF(17) for arrangements:
 
 <h4>11.2 <span class="Heading">Attributes</span></h4>
 
-<p><a id="X830ABDC2827862CD" name="X830ABDC2827862CD"></a></p>
-
-<h5>11.2-1 GreedySearchGF</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchGF</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: a field</p>
-
-<p>The Galois field over which to search for arrangements.</p>
-
-
-<div class="example"><pre>
-</pre></div>
-
-<p><a id="X7BDEEF027FB60AB3" name="X7BDEEF027FB60AB3"></a></p>
-
-<h5>11.2-2 GreedySearchDimension</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchDimension</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-</pre></div>
-
-<p><a id="X7D09885B7C69A621" name="X7D09885B7C69A621"></a></p>
-
-<h5>11.2-3 GreedySearchNOfHs</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchNOfHs</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-</pre></div>
-
-<p><a id="X81F9A4827A5ABC5D" name="X81F9A4827A5ABC5D"></a></p>
-
-<h5>11.2-4 GreedySearchTargetFct</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchTargetFct</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-</pre></div>
-
-<p><a id="X83296B32854C2647" name="X83296B32854C2647"></a></p>
-
-<h5>11.2-5 GreedySearchMaxIterations</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchMaxIterations</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-
-<div class="example"><pre>
-</pre></div>
-
 <p><a id="X87BDEC467DE8A782" name="X87BDEC467DE8A782"></a></p>
 
-<h5>11.2-6 GreedySearchRun</h5>
+<h5>11.2-1 GreedySearchRun</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchRun</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a function</p>
@@ -163,6 +114,55 @@ true
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFree(A);</span>
 true
+</pre></div>
+
+<p><a id="X830ABDC2827862CD" name="X830ABDC2827862CD"></a></p>
+
+<h5>11.2-2 GreedySearchGF</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchGF</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a field</p>
+
+<p>The Galois field over which to search for arrangements.</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X7BDEEF027FB60AB3" name="X7BDEEF027FB60AB3"></a></p>
+
+<h5>11.2-3 GreedySearchDimension</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchDimension</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X7D09885B7C69A621" name="X7D09885B7C69A621"></a></p>
+
+<h5>11.2-4 GreedySearchNOfHs</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchNOfHs</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X81F9A4827A5ABC5D" name="X81F9A4827A5ABC5D"></a></p>
+
+<h5>11.2-5 GreedySearchTargetFct</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchTargetFct</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X83296B32854C2647" name="X83296B32854C2647"></a></p>
+
+<h5>11.2-6 GreedySearchMaxIterations</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchMaxIterations</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+
+<div class="example"><pre>
 </pre></div>
 
 

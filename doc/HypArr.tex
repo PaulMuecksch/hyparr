@@ -2974,13 +2974,13 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
  }
 
    
-\chapter{\textcolor{Chapter }{Greedy search for special arrangements}}\label{Chapter_Greedy_search_for_special_arrangements}
+\chapter{\textcolor{Chapter }{Greedy search for arrangements}}\label{Chapter_Greedy_search_for_arrangements}
 \logpage{[ 11, 0, 0 ]}
-\hyperdef{L}{X86BE32CF7BCF339E}{}
+\hyperdef{L}{X85C6C672870D19BD}{}
 {
-  This is an implementation of basic greedy algorithms to construct arrangements
-satisfying certain properties, based on \cite{Cuntz2022_Greedy}. A variant was used in \cite{MMR2024_CombFormality} to construct an arrangement which is $4$\texttt{\symbol{45}}formal with a restriction which is not $3$\texttt{\symbol{45}}formal. 
-\section{\textcolor{Chapter }{Constructions}}\label{Chapter_Greedy_search_for_special_arrangements_Section_Constructions}
+  This is an implementation of a basic greedy algorithm to construct
+arrangements satisfying a certain property, based on \cite{Cuntz2022_Greedy}. A variant was used in \cite{MMR2024_CombFormality} to construct an arrangement which is $4$\texttt{\symbol{45}}formal with a restriction which is not $3$\texttt{\symbol{45}}formal. 
+\section{\textcolor{Chapter }{Constructions}}\label{Chapter_Greedy_search_for_arrangements_Section_Constructions}
 \logpage{[ 11, 1, 0 ]}
 \hyperdef{L}{X836F56D77AA04554}{}
 {
@@ -3030,100 +3030,14 @@ exchanging a hyperplane).
  }
 
  
-\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Greedy_search_for_special_arrangements_Section_Attributes}
+\section{\textcolor{Chapter }{Attributes}}\label{Chapter_Greedy_search_for_arrangements_Section_Attributes}
 \logpage{[ 11, 2, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {
   
 
-\subsection{\textcolor{Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}
-\logpage{[ 11, 2, 1 ]}\nobreak
-\hyperdef{L}{X830ABDC2827862CD}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchGF({\mdseries\slshape GS})\index{GreedySearchGF@\texttt{GreedySearchGF}!for IsHArrGreedySearch}
-\label{GreedySearchGF:for IsHArrGreedySearch}
-}\hfill{\scriptsize (attribute)}}\\
-\textbf{\indent Returns:\ }
-a field 
-
-
-
- The Galois field over which to search for arrangements. 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}
-\logpage{[ 11, 2, 2 ]}\nobreak
-\hyperdef{L}{X7BDEEF027FB60AB3}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchDimension({\mdseries\slshape GS})\index{GreedySearchDimension@\texttt{GreedySearchDimension}!for IsHArrGreedySearch}
-\label{GreedySearchDimension:for IsHArrGreedySearch}
-}\hfill{\scriptsize (attribute)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}
-\logpage{[ 11, 2, 3 ]}\nobreak
-\hyperdef{L}{X7D09885B7C69A621}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchNOfHs({\mdseries\slshape GS})\index{GreedySearchNOfHs@\texttt{GreedySearchNOfHs}!for IsHArrGreedySearch}
-\label{GreedySearchNOfHs:for IsHArrGreedySearch}
-}\hfill{\scriptsize (attribute)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}
-\logpage{[ 11, 2, 4 ]}\nobreak
-\hyperdef{L}{X81F9A4827A5ABC5D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchTargetFct({\mdseries\slshape GS})\index{GreedySearchTargetFct@\texttt{GreedySearchTargetFct}!for IsHArrGreedySearch}
-\label{GreedySearchTargetFct:for IsHArrGreedySearch}
-}\hfill{\scriptsize (attribute)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-\end{Verbatim}
- }
-
- 
-
-\subsection{\textcolor{Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}
-\logpage{[ 11, 2, 5 ]}\nobreak
-\hyperdef{L}{X83296B32854C2647}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchMaxIterations({\mdseries\slshape GS})\index{GreedySearchMaxIterations@\texttt{GreedySearchMaxIterations}!for IsHArrGreedySearch}
-\label{GreedySearchMaxIterations:for IsHArrGreedySearch}
-}\hfill{\scriptsize (attribute)}}\\
-
-
- 
-
- 
-\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-\end{Verbatim}
- }
-
- 
-
 \subsection{\textcolor{Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}
-\logpage{[ 11, 2, 6 ]}\nobreak
+\logpage{[ 11, 2, 1 ]}\nobreak
 \hyperdef{L}{X87BDEC467DE8A782}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchRun({\mdseries\slshape GS})\index{GreedySearchRun@\texttt{GreedySearchRun}!for IsHArrGreedySearch}
 \label{GreedySearchRun:for IsHArrGreedySearch}
@@ -3153,6 +3067,92 @@ a function
   false
   !gapprompt@gap>| !gapinput@HArrIsFree(A);|
   true
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}
+\logpage{[ 11, 2, 2 ]}\nobreak
+\hyperdef{L}{X830ABDC2827862CD}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchGF({\mdseries\slshape GS})\index{GreedySearchGF@\texttt{GreedySearchGF}!for IsHArrGreedySearch}
+\label{GreedySearchGF:for IsHArrGreedySearch}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a field 
+
+
+
+ The Galois field over which to search for arrangements. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}
+\logpage{[ 11, 2, 3 ]}\nobreak
+\hyperdef{L}{X7BDEEF027FB60AB3}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchDimension({\mdseries\slshape GS})\index{GreedySearchDimension@\texttt{GreedySearchDimension}!for IsHArrGreedySearch}
+\label{GreedySearchDimension:for IsHArrGreedySearch}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}
+\logpage{[ 11, 2, 4 ]}\nobreak
+\hyperdef{L}{X7D09885B7C69A621}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchNOfHs({\mdseries\slshape GS})\index{GreedySearchNOfHs@\texttt{GreedySearchNOfHs}!for IsHArrGreedySearch}
+\label{GreedySearchNOfHs:for IsHArrGreedySearch}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}
+\logpage{[ 11, 2, 5 ]}\nobreak
+\hyperdef{L}{X81F9A4827A5ABC5D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchTargetFct({\mdseries\slshape GS})\index{GreedySearchTargetFct@\texttt{GreedySearchTargetFct}!for IsHArrGreedySearch}
+\label{GreedySearchTargetFct:for IsHArrGreedySearch}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}
+\logpage{[ 11, 2, 6 ]}\nobreak
+\hyperdef{L}{X83296B32854C2647}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchMaxIterations({\mdseries\slshape GS})\index{GreedySearchMaxIterations@\texttt{GreedySearchMaxIterations}!for IsHArrGreedySearch}
+\label{GreedySearchMaxIterations:for IsHArrGreedySearch}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
 \end{Verbatim}
  }
 

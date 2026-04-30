@@ -460,12 +460,16 @@ DeclareOperation( "HArrRestriction", [IsHyperplaneArrangement, IsList] );
 #! @Section Display
 ##
 #################################
-# Declare display function for HyperplaneArrangement objects
+# Declare display and print function for HyperplaneArrangement objects
 DeclareOperation("ViewObject", [ IsHyperplaneArrangement ]);
+DeclareOperation("PrintObject", [ IsHyperplaneArrangement ]);
 
 
-# Declare display function for GeomLattice objects
+
+# Declare display and print function for GeomLattice objects
 DeclareOperation("ViewObject", [ IsGeomLattice ]);
+
+DeclareOperation("PrintObject", [ IsGeomLattice ]);
 
 ##
 ##  This program is free software: you can redistribute it and/or modify

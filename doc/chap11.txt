@@ -1,8 +1,8 @@
   
-  [1X11 [33X[0;0YGreedy search for special arrangements[133X[101X
+  [1X11 [33X[0;0YGreedy search for arrangements[133X[101X
   
-  [33X[0;0YThis   is   an  implementation  of  basic  greedy  algorithms  to  construct
-  arrangements  satisfying certain properties, based on [Cun22]. A variant was
+  [33X[0;0YThis  is  an  implementation  of  a  basic  greedy  algorithm  to  construct
+  arrangements  satisfying a certain property, based on [Cun22]. A variant was
   used  in  [MMR24]  to  construct  an  arrangement  which  is [23X4[123X-formal with a
   restriction which is not [23X3[123X-formal.[133X
   
@@ -42,45 +42,7 @@
   
   [1X11.2 [33X[0;0YAttributes[133X[101X
   
-  [1X11.2-1 GreedySearchGF[101X
-  
-  [33X[1;0Y[29X[2XGreedySearchGF[102X( [3XGS[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Ya field[133X
-  
-  [33X[0;0YThe Galois field over which to search for arrangements.[133X
-  
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
-  
-  [1X11.2-2 GreedySearchDimension[101X
-  
-  [33X[1;0Y[29X[2XGreedySearchDimension[102X( [3XGS[103X ) [32X attribute[133X
-  
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
-  
-  [1X11.2-3 GreedySearchNOfHs[101X
-  
-  [33X[1;0Y[29X[2XGreedySearchNOfHs[102X( [3XGS[103X ) [32X attribute[133X
-  
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
-  
-  [1X11.2-4 GreedySearchTargetFct[101X
-  
-  [33X[1;0Y[29X[2XGreedySearchTargetFct[102X( [3XGS[103X ) [32X attribute[133X
-  
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
-  
-  [1X11.2-5 GreedySearchMaxIterations[101X
-  
-  [33X[1;0Y[29X[2XGreedySearchMaxIterations[102X( [3XGS[103X ) [32X attribute[133X
-  
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
-  
-  [1X11.2-6 GreedySearchRun[101X
+  [1X11.2-1 GreedySearchRun[101X
   
   [33X[1;0Y[29X[2XGreedySearchRun[102X( [3XGS[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya function[133X
@@ -106,5 +68,43 @@
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27XHArrIsFree(A);[127X[104X
     [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X11.2-2 GreedySearchGF[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchGF[102X( [3XGS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya field[133X
+  
+  [33X[0;0YThe Galois field over which to search for arrangements.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.2-3 GreedySearchDimension[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchDimension[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.2-4 GreedySearchNOfHs[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchNOfHs[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.2-5 GreedySearchTargetFct[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchTargetFct[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X11.2-6 GreedySearchMaxIterations[101X
+  
+  [33X[1;0Y[29X[2XGreedySearchMaxIterations[102X( [3XGS[103X ) [32X attribute[133X
+  
+  [4X[32X  Example  [32X[104X
   [4X[32X[104X
   

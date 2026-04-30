@@ -137,16 +137,16 @@
 \contentsline {section}{\numberline {10.4}\textcolor {Chapter }{Further (auxillary) Operations}}{44}{section.10.4}%
 \contentsline {subsection}{\numberline {10.4.1}\textcolor {Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}{44}{subsection.10.4.1}%
 \contentsline {subsection}{\numberline {10.4.2}\textcolor {Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}{44}{subsection.10.4.2}%
-\contentsline {chapter}{\numberline {11}\textcolor {Chapter }{Greedy search for special arrangements}}{45}{chapter.11}%
+\contentsline {chapter}{\numberline {11}\textcolor {Chapter }{Greedy search for arrangements}}{45}{chapter.11}%
 \contentsline {section}{\numberline {11.1}\textcolor {Chapter }{Constructions}}{45}{section.11.1}%
 \contentsline {subsection}{\numberline {11.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt)}}{45}{subsection.11.1.1}%
 \contentsline {subsection}{\numberline {11.1.2}\textcolor {Chapter }{ChiSplits}}{45}{subsection.11.1.2}%
 \contentsline {section}{\numberline {11.2}\textcolor {Chapter }{Attributes}}{46}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{46}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{46}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{46}{subsection.11.2.3}%
-\contentsline {subsection}{\numberline {11.2.4}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{46}{subsection.11.2.4}%
-\contentsline {subsection}{\numberline {11.2.5}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{46}{subsection.11.2.5}%
-\contentsline {subsection}{\numberline {11.2.6}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{46}{subsection.11.2.6}%
+\contentsline {subsection}{\numberline {11.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{46}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{46}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{46}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{46}{subsection.11.2.4}%
+\contentsline {subsection}{\numberline {11.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{46}{subsection.11.2.5}%
+\contentsline {subsection}{\numberline {11.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{47}{subsection.11.2.6}%
 \contentsline {chapter}{References}{49}{chapter*.2}%
 \contentsline {chapter}{Index}{50}{section*.3}%

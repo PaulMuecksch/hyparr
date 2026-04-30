@@ -92,6 +92,7 @@ function(r)
 end);
 
 InstallMethod(ViewObj,
+    "for hyperplane arrangements",
     [IsHyperplaneArrangement],
 function(A)
     Print("<HyperplaneArrangement: ",
@@ -99,12 +100,34 @@ function(A)
           Dimension(A), "-space>");
 end);
 
+InstallMethod(PrintObj,
+    "for hyperplane arrangements",
+    [IsHyperplaneArrangement],
+function(A)
+    Print("HyperplaneArrangement defined by\n");
+    PrintArray(Roots(A));
+end);
+
 InstallMethod(ViewObj,
+    "for geometric lattices",
     [IsGeomLattice],
 function(L)
     Print("<Geometric lattice: ",
           Length(LAtoms(L)), " atoms, rank ",
           LRank(L), ">");
+end);
+
+InstallMethod(PrintObj,
+    "for geometric lattices",
+    [IsGeomLattice],
+function(L)
+local k;
+    # Print("Geometric lattice\n",
+    Print("[ ",LkFlats(L)(1),",\n");
+    for k in [2..LRank(L)-1] do
+        Print("  ",LkFlats(L)(k),",\n");
+    od;;
+    Print("  ",LkFlats(L)(LRank(L))," ]");
 end);
 
 
@@ -333,7 +356,11 @@ InstallMethod(IntersectionLattice,
     [IsHyperplaneArrangement],
 function(A)
 
-    local R, Rt, r, Ls, type;
+    local R, Rt, r, Ls, type, L;
+
+    if IsBound(A!.lattice) then
+        return A!.lattice;
+    fi;
 
     # R  = list of defining linear forms (roots) of the arrangement
     R := ShallowCopy(Roots(A));
@@ -355,13 +382,16 @@ function(A)
 	type := NewType(GeomLatticeFamily,
                     IsGeomLatticeRep);
 
-    return Objectify(type,
+    L:= Objectify(type,
         rec(
             grGroundSet := Ls,
 			rank := Length(Ls),
 			atoms := Concatenation(Ls[1])
         )
     );
+
+    A!.lattice := L;
+    return L;
 
 end);
 

@@ -102,9 +102,9 @@
 \indexentry{LIsGenSet@\texttt  {LIsGenSet}!for IsGeomLattice,IsList|hyperpage}{44}
 \indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt|hyperpage}{45}
 \indexentry{ChiSplits@\texttt  {ChiSplits}|hyperpage}{45}
+\indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{46}
 \indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{46}
 \indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{46}
 \indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{46}
 \indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{46}
-\indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{46}
-\indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{46}
+\indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{47}

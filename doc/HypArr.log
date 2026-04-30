@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  29 APR 2026 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  30 APR 2026 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -709,22 +709,22 @@ l.3035 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                          [45
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3060--3063
+Underfull \hbox (badness 10000) in paragraph at lines 3096--3099
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3077--3080
+Underfull \hbox (badness 10000) in paragraph at lines 3113--3116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3094--3097
+Underfull \hbox (badness 10000) in paragraph at lines 3130--3133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3111--3114
+Underfull \hbox (badness 10000) in paragraph at lines 3147--3150
 
  []
 
@@ -761,14 +761,14 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `HypArr.out' has not changed.
-(rerunfilecheck)             Checksum: 2F5E6609C7E75DBA7819625D7FD59CDE;6909.
+(rerunfilecheck)             Checksum: A18DC809D680A8616C36C354E3DD953D;6866.
 Package rerunfilecheck Info: File `HypArr.brf' has not changed.
 (rerunfilecheck)             Checksum: 0DC533327AAAD2C3C71E84D371C162DB;999.
  ) 
 Here is how much of TeX's memory you used:
  12355 strings out of 467533
- 193652 string characters out of 5422138
- 616402 words of memory out of 5000000
+ 193628 string characters out of 5422138
+ 616394 words of memory out of 5000000
  40694 multiletter control sequences out of 15000+600000
  693729 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -790,7 +790,7 @@ exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on HypArr.pdf (52 pages, 440287 bytes).
+Output written on HypArr.pdf (52 pages, 440233 bytes).
 PDF statistics:
  1104 PDF objects out of 1200 (max. 8388607)
  987 compressed objects within 10 object streams

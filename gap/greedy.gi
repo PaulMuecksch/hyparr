@@ -207,12 +207,13 @@ local RunSearch,PropP, type;
     RunSearch := function()
     local k,AOld,ANew,i;
         AOld := RandomArrOverGF(dim,NumberOfHs,GField);
-        k:=0;
+        k:=1;
         for i in [1..MaxNoIterations] do
             ANew := ExchangeRandomH(AOld);;
             if ANew=fail then
                 ANew := ExchangeRandomH2(AOld);;
                 if ANew=fail then
+                    Print(i," Iterations - ");;
                     Print("Target function value: ",PropP(AOld),"\n");
                     return fail;
                 fi;;
@@ -222,10 +223,15 @@ local RunSearch,PropP, type;
                 return ANew;;
             elif PropP(ANew)<PropP(AOld) then
                 AOld := ANew;;
+                k:=1;
+            # else
+            #     k:=k+1;
             fi;;
-            if i = 49 mod 50 then
-                AOld := ANew;;
-            fi;;
+            # if k>=MaxNoIterations/4 then
+            # if k>=50 then
+            #     k:=1;
+            #     AOld := ANew;;
+            # fi;;
         od;;
         Print("Target function value: ",PropP(ANew),"\n");
         return fail;;

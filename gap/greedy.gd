@@ -1,10 +1,10 @@
 #
 # HypArr: Greedy search for special arrangements
 #
-#! @Chapter Greedy search for special arrangements
+#! @Chapter Greedy search for arrangements
 
-#! This is an implementation of basic greedy algorithms to construct arrangements
-#! satisfying certain properties, based on <Cite Key="Cuntz2022_Greedy"/>.
+#! This is an implementation of a basic greedy algorithm to construct arrangements
+#! satisfying a certain property, based on <Cite Key="Cuntz2022_Greedy"/>.
 #! A variant was used in <Cite Key="MMR2024_CombFormality"/> to
 #! construct an arrangement which is $4$-formal with a restriction which is not $3$-formal.
 
@@ -81,6 +81,32 @@ DeclareGlobalFunction("ChiSplits");
 #################################
 
 #! @Arguments GS
+#! @Returns a function
+#! @Description
+#!  The function to run the search which will return an arrangement or <C>fail</C>.
+#! @BeginExampleSession
+#! gap> GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+#! GreedySearch over GF(17) for arrangements:
+#!  - of rank 3
+#!  - with 13 hyperplanes.
+#! gap> A:=GreedySearchRun(GSChiSplits_13_3)();
+#! 227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
+#! gap> ExpArr(A);
+#! [ 1, 6, 6 ]
+#! gap> HArrIsSupersolvable(A);
+#! true
+#! gap> A:=GreedySearchRun(GSChiSplits_13_3)();
+#! 358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
+#! gap> ExpArr(A);
+#! [ 1, 6, 6 ]
+#! gap> HArrIsSupersolvable(A);
+#! false
+#! gap> HArrIsFree(A);
+#! true
+#! @EndExampleSession
+DeclareAttribute("GreedySearchRun",IsHArrGreedySearch);
+
+#! @Arguments GS
 #! @Returns a field
 #! @Description
 #!  The Galois field over which to search for arrangements.
@@ -119,32 +145,6 @@ DeclareAttribute("GreedySearchTargetFct",IsHArrGreedySearch);
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareAttribute("GreedySearchMaxIterations",IsHArrGreedySearch);
-
-#! @Arguments GS
-#! @Returns a function
-#! @Description
-#!  The function to run the search which will return an arrangement or <C>fail</C>.
-#! @BeginExampleSession
-#! gap> GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);
-#! GreedySearch over GF(17) for arrangements:
-#!  - of rank 3
-#!  - with 13 hyperplanes.
-#! gap> A:=GreedySearchRun(GSChiSplits_13_3)();
-#! 227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
-#! gap> ExpArr(A);
-#! [ 1, 6, 6 ]
-#! gap> HArrIsSupersolvable(A);
-#! true
-#! gap> A:=GreedySearchRun(GSChiSplits_13_3)();
-#! 358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
-#! gap> ExpArr(A);
-#! [ 1, 6, 6 ]
-#! gap> HArrIsSupersolvable(A);
-#! false
-#! gap> HArrIsFree(A);
-#! true
-#! @EndExampleSession
-DeclareAttribute("GreedySearchRun",IsHArrGreedySearch);
 
 DeclareAttribute("GreedySearchGF",IsHArrGreedySearchPair);
 DeclareAttribute("GreedySearchDimension",IsHArrGreedySearchPair);

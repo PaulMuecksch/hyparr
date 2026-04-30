@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Greedy_search_for_arrangements">
+<Heading>Greedy search for arrangements</Heading>
+
+ This is an implementation of a basic greedy algorithm to construct arrangements
+ satisfying a certain property, based on <Cite Key="Cuntz2022_Greedy"/>.
+ A variant was used in <Cite Key="MMR2024_CombFormality"/> to
+ construct an arrangement which is <Math>4</Math>-formal with a restriction which is not <Math>3</Math>-formal.
+<Section Label="Chapter_Greedy_search_for_arrangements_Section_Constructions">
+<Heading>Constructions</Heading>
+
+<ManSection>
+  <Oper Arg="NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations" Name="HArrGreedySearch" Label="for IsInt,IsInt,IsField,IsFunction,IsInt"/>
+ <Returns>A hyperplane arrangement
+</Returns>
+ <Description>
+  Constructs a greedy search for arrangements over <A>GField</A> with <A>NumberOfHs</A>
+  hyperplanes in dimension <A>dim</A>.
+<List>
+<Item>
+<A>PropTargetFct</A> should be a function taking a hyperplane arragement as argument,
+      returning a non-negative real number, which the search tries to minimize,
+      and such that value=0 means the arrangement satisfies the desired property.
+</Item>
+<Item>
+<A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
+      (one step = exchanging a hyperplane).
+</Item>
+</List>
+<Example><![CDATA[
+gap> HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+GreedySearch over GF(17) for arrangements:
+ - of rank 3
+ - with 13 hyperplanes.
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="A" Name="ChiSplits" />
+ <Description>
+  A target/score function for splitting of the characteristic polynomial of <A>A</A> over <Math>\mathbb{Z}</Math>.
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Greedy_search_for_arrangements_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="GS" Name="GreedySearchRun" Label="for IsHArrGreedySearch"/>
+ <Returns>a function
+</Returns>
+ <Description>
+  The function to run the search which will return an arrangement or <C>fail</C>.
+<Example><![CDATA[
+gap> GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+GreedySearch over GF(17) for arrangements:
+ - of rank 3
+ - with 13 hyperplanes.
+gap> A:=GreedySearchRun(GSChiSplits_13_3)();
+227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
+gap> ExpArr(A);
+[ 1, 6, 6 ]
+gap> HArrIsSupersolvable(A);
+true
+gap> A:=GreedySearchRun(GSChiSplits_13_3)();
+358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
+gap> ExpArr(A);
+[ 1, 6, 6 ]
+gap> HArrIsSupersolvable(A);
+false
+gap> HArrIsFree(A);
+true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="GS" Name="GreedySearchGF" Label="for IsHArrGreedySearch"/>
+ <Returns>a field
+</Returns>
+ <Description>
+  The Galois field over which to search for arrangements.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="GS" Name="GreedySearchDimension" Label="for IsHArrGreedySearch"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="GS" Name="GreedySearchNOfHs" Label="for IsHArrGreedySearch"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="GS" Name="GreedySearchTargetFct" Label="for IsHArrGreedySearch"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="GS" Name="GreedySearchMaxIterations" Label="for IsHArrGreedySearch"/>
+ <Description>
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+
