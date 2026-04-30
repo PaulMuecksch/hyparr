@@ -57,7 +57,7 @@ DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
 #!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
 #!      (one step = exchanging a hyperplane).
 #! @BeginExampleSession
-#! gap> HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+#! gap> HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
 #! GreedySearch over GF(17) for arrangements:
 #!  - of rank 3
 #!  - with 13 hyperplanes.
@@ -71,7 +71,7 @@ DeclareOperation("RandArrOverGF",[IsInt,IsInt,IsField]);
 #! @Arguments A
 #! @Description
 #!  A target/score function for splitting of the characteristic polynomial of <A>A</A> over $\mathbb{Z}$.
-DeclareGlobalFunction("ChiSplits");
+DeclareGlobalFunction("CharPolySplits");
 
 
 #################################

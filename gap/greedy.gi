@@ -254,7 +254,7 @@ local RunSearch,PropP, type;
 
 end);
 
-InstallGlobalFunction(ChiSplits,
+InstallGlobalFunction(CharPolySplits,
 function(A)
 local t,f,ChiRed,DiscChiRed;
     f := CharPoly(A);
