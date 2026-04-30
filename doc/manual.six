@@ -206,7 +206,7 @@ entries :=
   [ "\033[2XLIsGenSet\033[102X for IsGeomLattice,IsList", "10.4-2", [ 10, 4, 2 ], 167, 44, "lisgenset for isgeomlattice islist", 
       "X84F182B783389C2B" ], [ "\033[2XHArrGreedySearch\033[102X for IsInt,IsInt,IsField,IsFunction,IsInt", "11.1-1", [ 11, 1, 1 ], 12, 45, 
       "harrgreedysearch for isint isint isfield isfunction isint", "X84821A5B843965BA" ], 
-  [ "\033[2XChiSplits\033[102X", "11.1-2", [ 11, 1, 2 ], 35, 45, "chisplits", "X872030DC7F4EDD16" ], 
+  [ "\033[2XCharPolySplits\033[102X", "11.1-2", [ 11, 1, 2 ], 35, 45, "charpolysplits", "X86BF30D17A33874E" ], 
   [ "\033[2XGreedySearchRun\033[102X for IsHArrGreedySearch", "11.2-1", [ 11, 2, 1 ], 45, 46, "greedysearchrun for isharrgreedysearch", 
       "X87BDEC467DE8A782" ], [ "\033[2XGreedySearchGF\033[102X for IsHArrGreedySearch", "11.2-2", [ 11, 2, 2 ], 73, 46, 
       "greedysearchgf for isharrgreedysearch", "X830ABDC2827862CD" ], [ "\033[2XGreedySearchDimension\033[102X for IsHArrGreedySearch", 

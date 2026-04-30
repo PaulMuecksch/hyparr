@@ -147,7 +147,7 @@
 \makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{10.4.1}{X800FB3BB86AD2F1A}
 \makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{10.4.2}{X84F182B783389C2B}
 \makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt}{11.1.1}{X84821A5B843965BA}
-\makelabel{hyparr:ChiSplits}{11.1.2}{X872030DC7F4EDD16}
+\makelabel{hyparr:CharPolySplits}{11.1.2}{X86BF30D17A33874E}
 \makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{11.2.1}{X87BDEC467DE8A782}
 \makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{11.2.2}{X830ABDC2827862CD}
 \makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{11.2.3}{X7BDEEF027FB60AB3}

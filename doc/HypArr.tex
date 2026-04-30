@@ -3008,7 +3008,7 @@ exchanging a hyperplane).
 \end{itemize}
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@HArrGreedySearch(13,3,GF(17),ChiSplits,400);|
+  !gapprompt@gap>| !gapinput@HArrGreedySearch(13,3,GF(17),CharPolySplits,400);|
   GreedySearch over GF(17) for arrangements:
    - of rank 3
    - with 13 hyperplanes.
@@ -3017,11 +3017,11 @@ exchanging a hyperplane).
 
  
 
-\subsection{\textcolor{Chapter }{ChiSplits}}
+\subsection{\textcolor{Chapter }{CharPolySplits}}
 \logpage{[ 11, 1, 2 ]}\nobreak
-\hyperdef{L}{X872030DC7F4EDD16}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{ChiSplits({\mdseries\slshape A})\index{ChiSplits@\texttt{ChiSplits}}
-\label{ChiSplits}
+\hyperdef{L}{X86BF30D17A33874E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CharPolySplits({\mdseries\slshape A})\index{CharPolySplits@\texttt{CharPolySplits}}
+\label{CharPolySplits}
 }\hfill{\scriptsize (function)}}\\
 
 
@@ -3049,17 +3049,17 @@ a function
 
  The function to run the search which will return an arrangement or \texttt{fail}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);|
+  !gapprompt@gap>| !gapinput@GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);|
   GreedySearch over GF(17) for arrangements:
    - of rank 3
    - with 13 hyperplanes.
-  !gapprompt@gap>| !gapinput@A:=GreedySearchRun(GSChiSplits_13_3)();|
+  !gapprompt@gap>| !gapinput@A:=GreedySearchRun(GS)();|
   227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@ExpArr(A);|
   [ 1, 6, 6 ]
   !gapprompt@gap>| !gapinput@HArrIsSupersolvable(A);|
   true
-  !gapprompt@gap>| !gapinput@A:=GreedySearchRun(GSChiSplits_13_3)();|
+  !gapprompt@gap>| !gapinput@A:=GreedySearchRun(GS)();|
   358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
   !gapprompt@gap>| !gapinput@ExpArr(A);|
   [ 1, 6, 6 ]

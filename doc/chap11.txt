@@ -26,15 +26,15 @@
         the search (one step = exchanging a hyperplane).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XHArrGreedySearch(13,3,GF(17),ChiSplits,400);[127X[104X
+    [4X[25Xgap>[125X [27XHArrGreedySearch(13,3,GF(17),CharPolySplits,400);[127X[104X
     [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
     [4X[28X - of rank 3[128X[104X
     [4X[28X - with 13 hyperplanes.[128X[104X
   [4X[32X[104X
   
-  [1X11.1-2 ChiSplits[101X
+  [1X11.1-2 CharPolySplits[101X
   
-  [33X[1;0Y[29X[2XChiSplits[102X( [3XA[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCharPolySplits[102X( [3XA[103X ) [32X function[133X
   
   [33X[0;0YA  target/score function for splitting of the characteristic polynomial of [3XA[103X
   over [23X\mathbb{Z}[123X.[133X
@@ -50,17 +50,17 @@
   [33X[0;0YThe function to run the search which will return an arrangement or [10Xfail[110X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XGS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);[127X[104X
+    [4X[25Xgap>[125X [27XGS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);[127X[104X
     [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
     [4X[28X - of rank 3[128X[104X
     [4X[28X - with 13 hyperplanes.[128X[104X
-    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GSChiSplits_13_3)();[127X[104X
+    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GS)();[127X[104X
     [4X[28X227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
     [4X[28X[ 1, 6, 6 ][128X[104X
     [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GSChiSplits_13_3)();[127X[104X
+    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GS)();[127X[104X
     [4X[28X358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>[128X[104X
     [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
     [4X[28X[ 1, 6, 6 ][128X[104X

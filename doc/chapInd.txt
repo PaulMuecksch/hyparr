@@ -4,7 +4,7 @@
   
   [2XAGpql[102X 3.1-1 
   [2XCharPoly[102X, for IsHyperplaneArrangement 2.2-5 
-  [2XChiSplits[102X 11.1-2 
+  [2XCharPolySplits[102X 11.1-2 
   [2XConnectedSubgraphArr[102X, for IsList 3.1-3 
   [2XDerModDegreeSequence[102X, for IsDerivationModule 5.1-4 
   [2XDerModGenerators[102X, for IsDerivationModule 5.1-2 

@@ -6,7 +6,7 @@
 
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
-  \item \texttt  {ChiSplits}, \hyperpage{45}
+  \item \texttt  {CharPolySplits}, \hyperpage{45}
   \item \texttt  {ConnectedSubgraphArr}
     \subitem for IsList, \hyperpage{13}
 

@@ -140,7 +140,7 @@
 \contentsline {chapter}{\numberline {11}\textcolor {Chapter }{Greedy search for arrangements}}{45}{chapter.11}%
 \contentsline {section}{\numberline {11.1}\textcolor {Chapter }{Constructions}}{45}{section.11.1}%
 \contentsline {subsection}{\numberline {11.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt)}}{45}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}\textcolor {Chapter }{ChiSplits}}{45}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.2}\textcolor {Chapter }{CharPolySplits}}{45}{subsection.11.1.2}%
 \contentsline {section}{\numberline {11.2}\textcolor {Chapter }{Attributes}}{46}{section.11.2}%
 \contentsline {subsection}{\numberline {11.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{46}{subsection.11.2.1}%
 \contentsline {subsection}{\numberline {11.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{46}{subsection.11.2.2}%

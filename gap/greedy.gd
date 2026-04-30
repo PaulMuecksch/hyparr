@@ -85,17 +85,17 @@ DeclareGlobalFunction("CharPolySplits");
 #! @Description
 #!  The function to run the search which will return an arrangement or <C>fail</C>.
 #! @BeginExampleSession
-#! gap> GS:=HArrGreedySearch(13,3,GF(17),ChiSplits,400);
+#! gap> GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
 #! GreedySearch over GF(17) for arrangements:
 #!  - of rank 3
 #!  - with 13 hyperplanes.
-#! gap> A:=GreedySearchRun(GSChiSplits_13_3)();
+#! gap> A:=GreedySearchRun(GS)();
 #! 227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
 #! gap> ExpArr(A);
 #! [ 1, 6, 6 ]
 #! gap> HArrIsSupersolvable(A);
 #! true
-#! gap> A:=GreedySearchRun(GSChiSplits_13_3)();
+#! gap> A:=GreedySearchRun(GS)();
 #! 358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>
 #! gap> ExpArr(A);
 #! [ 1, 6, 6 ]
