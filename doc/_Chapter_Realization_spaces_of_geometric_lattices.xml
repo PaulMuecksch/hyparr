@@ -196,6 +196,14 @@ gap> RSNonMinors(RS);
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="RS" Name="RSEvalPoint" Label="for IsRealizationSpaceOfGeomLattice"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

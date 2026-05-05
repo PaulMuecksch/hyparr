@@ -13,6 +13,7 @@
   [2XDerModProjDim[102X, for IsDerivationModule 5.1-5 
   [2XDerModule[102X, for IsHyperplaneArrangement 5.1-1 
   [2XDimension[102X, for IsHyperplaneArrangement 2.2-1 
+  [2XDistMSetInvL[102X 11.1-3 
   [2XEssentialization[102X, for IsHyperplaneArrangement 2.6-3 
   [2XExpArr[102X, for IsHyperplaneArrangement 2.2-6 
   [2XFPGroundSet[102X, for IsFacePoset 4.2-10 
@@ -24,7 +25,9 @@
   [2XGreedySearchNOfHs[102X, for IsHArrGreedySearch 11.2-4 
   [2XGreedySearchRun[102X, for IsHArrGreedySearch 11.2-1 
   [2XGreedySearchTargetFct[102X, for IsHArrGreedySearch 11.2-5 
+  [2XHArrAddition[102X, for IsHyperplaneArrangement, IsList 2.6-6 
   [2XHArrDefField[102X, for IsHyperplaneArrangement 2.2-3 
+  [2XHArrDeletion[102X, for IsHyperplaneArrangement, IsInt 2.6-7 
   [2XHArrFactorizations[102X, for IsHyperplaneArrangement 6.5-2 
   [2XHArrGreedySearch[102X, for IsInt,IsInt,IsField,IsFunction,IsInt 11.1-1 
   [2XHArrInductiveFactorizations[102X, for IsHyperplaneArrangement 6.5-4 
@@ -98,6 +101,7 @@
   [2XRSCoeffMat[102X, for IsRealizationSpaceOfGeomLattice 10.2-5 
   [2XRSDefField[102X, for IsRealizationSpaceOfGeomLattice 10.2-4 
   [2XRSDimension[102X, for IsRealizationSpaceOfGeomLattice 10.2-6 
+  [2XRSEvalPoint[102X, for IsRealizationSpaceOfGeomLattice 10.2-10 
   [2XRSIdealMinors[102X, for IsRealizationSpaceOfGeomLattice 10.2-8 
   [2XRSIsNonEmpty[102X, for IsRealizationSpaceOfGeomLattice 10.3-1 
   [2XRSLattice[102X, for IsRealizationSpaceOfGeomLattice 10.2-2 

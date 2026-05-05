@@ -398,3 +398,18 @@
   [33X[0;0YComputes  the [13Xrestriction[113X of the arrangement [3XA[103X to the subspace orthogonal to
   the vectors in [10XS[110X.[133X
   
+  [1X2.6-6 HArrAddition[101X
+  
+  [33X[1;0Y[29X[2XHArrAddition[102X( [3XA[103X, [3Xh[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
+  
+  [33X[0;0YComputes the [13Xaddition[113X of the arrangement [3XA[103X with respect to hyperplane [3Xh[103X.[133X
+  
+  [1X2.6-7 HArrDeletion[101X
+  
+  [33X[1;0Y[29X[2XHArrDeletion[102X( [3XA[103X, [3Xi[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
+  
+  [33X[0;0YComputes  the  [13Xdeletion[113X of the arrangement [3XA[103X with respect to [3Xi[103X-th hyperplane
+  of [10XRoots(A)[110X.[133X
+  

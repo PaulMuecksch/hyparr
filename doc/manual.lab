@@ -73,6 +73,8 @@
 \makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.6.3}{X7BD35FA07804BB70}
 \makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsInt}{2.6.4}{X844F12CE82E65BFC}
 \makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsList}{2.6.5}{X78D9B1217862EF28}
+\makelabel{hyparr:HArrAddition for IsHyperplaneArrangement, IsList}{2.6.6}{X826DE7F27A79AF95}
+\makelabel{hyparr:HArrDeletion for IsHyperplaneArrangement, IsInt}{2.6.7}{X7F207BE684694078}
 \makelabel{hyparr:AGpql}{3.1.1}{X858205A37B7EB5FA}
 \makelabel{hyparr:SsS3}{3.1.2}{X81AD6CA97F71ED33}
 \makelabel{hyparr:ConnectedSubgraphArr for IsList}{3.1.3}{X82DB5C6F83FDC443}
@@ -143,11 +145,13 @@
 \makelabel{hyparr:RSPRing for IsRealizationSpaceOfGeomLattice}{10.2.7}{X7FE8075E860D45B1}
 \makelabel{hyparr:RSIdealMinors for IsRealizationSpaceOfGeomLattice}{10.2.8}{X8495A2627D020F1B}
 \makelabel{hyparr:RSNonMinors for IsRealizationSpaceOfGeomLattice}{10.2.9}{X78DA8570821E4775}
+\makelabel{hyparr:RSEvalPoint for IsRealizationSpaceOfGeomLattice}{10.2.10}{X81A7EF29810F3103}
 \makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{10.3.1}{X781923918754E3CE}
 \makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{10.4.1}{X800FB3BB86AD2F1A}
 \makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{10.4.2}{X84F182B783389C2B}
 \makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt}{11.1.1}{X84821A5B843965BA}
 \makelabel{hyparr:CharPolySplits}{11.1.2}{X86BF30D17A33874E}
+\makelabel{hyparr:DistMSetInvL}{11.1.3}{X81A9CF1C804C8B60}
 \makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{11.2.1}{X87BDEC467DE8A782}
 \makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{11.2.2}{X830ABDC2827862CD}
 \makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{11.2.3}{X7BDEEF027FB60AB3}

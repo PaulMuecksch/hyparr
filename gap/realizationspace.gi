@@ -51,6 +51,28 @@ InstallMethod(RSIsNonEmpty,
     RS -> RS!.isrep);
 
 
+
+InstallMethod(RSEvalPoint,
+    [ IsRealizationSpaceOfGeomLattice ],
+function(RS)
+local EvalFct;
+    EvalFct := function(p)
+    local vars, genMinors;
+        vars := IndeterminatesOfPolynomialRing(RSPRing(RS));
+        if Length(p)<>Length(vars) then
+            return fail;
+        fi;
+        genMinors := GeneratorsOfIdeal(RSIdealMinors(RS));
+        if ForAny(genMinors,f->Value(f,vars,p)<>0) or
+            ForAny(RSNonMinors(RS),f->Value(f,vars,p)=0) then
+            return fail;
+        fi;;
+        return Arr(List(RSCoeffMat(RS),v->List(v,x->Value(x,vars,p))));
+    end;;
+
+    return EvalFct;
+end);;
+
 #######################################################
 ##
 ## Computation of realization space 
@@ -165,7 +187,7 @@ InstallMethod(LGenSet,
     [IsGeomLattice],
 function(L)
 local GenSet,ml;
-    GenSet := List([1..20],x->LFindGenSet(L));
+    GenSet := List([1..5],x->LFindGenSet(L));
     ml := Minimum(List(GenSet,x->Length(x)));
     GenSet := Random(GenSet{Positions(List(GenSet,x->Length(x)),ml)});
     L!.genset := GenSet;

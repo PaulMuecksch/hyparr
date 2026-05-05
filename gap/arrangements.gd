@@ -426,6 +426,7 @@ DeclareGlobalFunction( "HypArr_wg3" );
 DeclareGlobalFunction( "HypArr_AddHToL" );
 DeclareGlobalFunction( "tnow");
 DeclareGlobalFunction("cj");
+DeclareGlobalFunction("NewHsThroughIntersections");
 
 DeclareGlobalFunction("RotTozMat");
 DeclareGlobalFunction("ctf");
@@ -454,6 +455,19 @@ DeclareOperation( "HArrRestriction", [IsHyperplaneArrangement, IsList] );
 
 # @EndGroup
 
+#! @Arguments A, h
+#! @Returns A hyperplane arrangement.
+#! @Description
+#! Computes the <E>addition</E> of the arrangement <A>A</A> 
+#! with respect to hyperplane <A>h</A>.
+DeclareOperation( "HArrAddition", [IsHyperplaneArrangement, IsList] );
+
+#! @Arguments A, i
+#! @Returns A hyperplane arrangement.
+#! @Description
+#! Computes the <E>deletion</E> of the arrangement <A>A</A> 
+#! with respect to <A>i</A>-th hyperplane of <C>Roots(A)</C>.
+DeclareOperation( "HArrDeletion", [IsHyperplaneArrangement, IsInt] );
 
 #################################
 ##

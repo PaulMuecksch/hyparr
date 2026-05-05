@@ -686,6 +686,47 @@ local An,Sn;
     fi;
 end);
 
+InstallMethod( HArrAddition,
+	[IsHyperplaneArrangement, IsList],
+function(A,h)
+local AA,Lo,Ln,L,type,Rt;
+    if Length(h)<>Dimension(A) or ForAny(h,x->not(x in HArrDefField(A))) then
+        Print("New hyperplane ",h," is not in the ambient space!\n");
+        return fail;
+    fi;
+
+    if ForAny(Roots(A),r->Rank([r,h])=1) then
+        Print("Hyperplane already in the arrangement!\n");
+        return fail;
+    fi;
+
+    Rt:= Concatenation(Roots(A),[h]);
+    AA := Arr(Rt);
+
+    if Tester(IntersectionLattice)(A) then
+        Lo:=LGroundSet(IntersectionLattice(A));
+        Ln := HypArr_AddHToL(Roots(A), Lo, h);
+        type := NewType(GeomLatticeFamily,
+                    IsGeomLatticeRep);
+        L:= Objectify(type,
+            rec(
+                grGroundSet := Ln,
+                rank := Length(Ln),
+                atoms := Concatenation(Ln[1])
+            )
+        );
+        AA!.lattice := L;
+    fi;
+
+    return AA;
+end);
+
+InstallMethod( HArrDeletion,
+	[IsHyperplaneArrangement, IsInt],
+function(A,i)
+    return Arr(Roots(A){Concatenation([1..i-1],[i+1..Length(Roots(A))])});
+end);
+
 
 ####################################################################################################
 
@@ -759,6 +800,19 @@ local dim,x,y;
 
 end);
 
+InstallGlobalFunction(NewHsThroughIntersections,
+function(A)
+local L,Cs,NewHs;
+    L := IntersectionLattice(A);;
+    Cs := Set(CandidatesLinesPointsNewH(L),x->Set(x,y->Set(y)));;
+
+    if Cs=[] then
+        return fail;
+    fi;;
+    
+    NewHs:= List(Cs, c-> NullspaceMat( TransposedMat(Concatenation(List(c,y->NullspaceMat(TransposedMat(Roots(A){y}))))))[1] );;
+    return NewHs;;
+end);
 
 
 ## the complex conjugation

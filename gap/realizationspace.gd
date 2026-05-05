@@ -159,6 +159,10 @@ DeclareAttribute("RSIdealMinors",IsRealizationSpaceOfGeomLattice);
 DeclareAttribute("RSNonMinors",IsRealizationSpaceOfGeomLattice);
 
 
+#! @Arguments RS
+DeclareAttribute("RSEvalPoint",IsRealizationSpaceOfGeomLattice);
+
+
 ###############################
 ##
 #! @Section Properties
@@ -189,6 +193,8 @@ DeclareOperation("LIsIndependentSubset", [IsGeomLattice, IsList]);
 DeclareOperation("LBasisCircuitInMat", [IsGeomLattice, IsList]);
 
 DeclareOperation("LGenSetIndeterminateMat", [IsGeomLattice, IsList, IsField]);
+
+
 
 DeclareGlobalFunction("PolyIsProdOfDivisors");
 DeclareGlobalFunction("MaximalElementsWrtDivisibility");

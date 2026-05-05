@@ -117,47 +117,48 @@ local A,s,ip,Hind,disthv,DrawOptions,
     Mind, MarkHs;
 
 	if IsList(arg) then
+
+		s:=1;
+		ip:=false;
+		Hind:=false;
+		disthv:=[0,0,1];
+		Mind:=0;
+
 		if Length(arg)=0 then
 			return fail;
-		else
+		elif Length(arg)=1 then
 			if IsReal(arg[1]) then
 				A:=arg[1];
 			else
 				Print("The arrangement must be real!\n");
 				return fail;
 			fi;
-			s:=1;
-			ip:=false;
-			Hind:=false;
-			disthv:=[0,0,1];
-			Mind:=0;
-			if Length(arg)=2 then
-				if IsRecord(arg[2]) then
-					DrawOptions:=arg[2];
-					if IsBound(DrawOptions.scale) then
-						s:=DrawOptions.scale;
-					fi;
-					if IsBound(DrawOptions.isecps) then
-						ip := DrawOptions.isecps;
-					fi;
-					if IsBound(DrawOptions.Hind) then
-						Hind:=DrawOptions.Hind;
-					fi;
-					if IsBound(DrawOptions.deconeH) then
-						disthv:=DrawOptions.deconeH;
-					fi;
-					if IsBound(DrawOptions.MarkHs) then
-						Mind:=1;
-						MarkHs:=DrawOptions.MarkHs;
-					fi;;
-				else
-					Print("Optinoal second argument must a record with options!\n");
-					return fail;
+		elif Length(arg)=2 then
+			if IsRecord(arg[2]) then
+				DrawOptions:=arg[2];
+				if IsBound(DrawOptions.scale) then
+					s:=DrawOptions.scale;
+				fi;
+				if IsBound(DrawOptions.isecps) then
+					ip := DrawOptions.isecps;
+				fi;
+				if IsBound(DrawOptions.Hind) then
+					Hind:=DrawOptions.Hind;
+				fi;
+				if IsBound(DrawOptions.deconeH) then
+					disthv:=DrawOptions.deconeH;
+				fi;
+				if IsBound(DrawOptions.MarkHs) then
+					Mind:=1;
+					MarkHs:=DrawOptions.MarkHs;
 				fi;;
 			else
-				Print("Length of arguments must be 1 or 2!\n");
+				Print("Optinoal second argument must a record with options!\n");
 				return fail;
-			fi;
+			fi;;
+		else
+			Print("Length of arguments must be 1 or 2!\n");
+			return fail;
 		fi;
 	fi;
 

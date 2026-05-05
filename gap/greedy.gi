@@ -82,7 +82,7 @@ InstallMethod(RandomArrOverGF,
 function(dim,NumberOfHs,GField)
 local Hs,i,R,h;
     Hs := Points(PG(dim-1,GField));;
-    R:=[];;
+    R:=Concatenation(One(GField)*IdentityMat(dim),[List([1..dim],x->One(GField))]);;
     while Length(R)<NumberOfHs do
         h:=Coordinates(Random(Hs));;
         if not(true in List(R,ht->Rank([h,ht])=1)) then
@@ -171,13 +171,17 @@ InstallMethod(ExchangeRandomH,
 function(A)
 local ANew,PossibleNewHs,OldH,NewH,Ln, Rn, n, h;
     n := Length(Roots(A));;
-    h := Random([1..n]);;
+    # if n>=Dimension(A)+2 then
+    #     h := Random([Dimension(A)+2..n]);
+    # else
+        h := Random([1..n]);
+    # fi;
     NewH := RandomNewHThroughIntersections(A);;
     if NewH = fail then
         return fail;;
     fi;;
-    Rn := Roots(A){Difference([1..n],[h])};;
-    ANew := Arr(Concatenation(Rn,[NewH]));;        
+    Rn := Roots(A){Difference([1..n],[h])};
+    ANew := Arr(Concatenation(Rn,[NewH]));       
     return ANew;;
 end);
 
@@ -186,7 +190,11 @@ InstallMethod(ExchangeRandomH2,
 function(A)
 local ANew,NewH,Ln, Rn, n, h;
     n := Length(Roots(A));;
-    h := Random([1..n]);;
+    # if n>=Dimension(A)+2 then
+    #     h := Random([Dimension(A)+2..n]);
+    # else
+        h := Random([1..n]);
+    # fi;
     NewH := RandomNewH(A);;
     if NewH = fail then
         return fail;;
@@ -271,6 +279,33 @@ local t,f,ChiRed,DiscChiRed;
             return 1;
         fi;;
     fi;;
+end);
+
+InstallGlobalFunction(DistMSetInvL,
+function(A,B)
+local MSetA, MSetB, mA, mB, m, vA, vB;
+    MSetA:=MSetInvL(A);
+    MSetB:=MSetInvL(B);
+    mA:=Maximum(List(MSetA[2],x->x[1]));
+    mB:=Maximum(List(MSetB[2],x->x[1]));
+    m:=Maximum(mA,mB);
+
+    vA:=0*[1..m];
+    vB:=0*[1..m];
+
+    vA{List(MSetA[2],x->x[1])} := List(MSetA[2],x->x[2]);
+    vB{List(MSetB[2],x->x[1])} := List(MSetB[2],x->x[2]);
+
+    return (vA-vB)^2;
+end);
+
+InstallGlobalFunction(NotLEquiv,
+function(A,B) 
+    if IsLEquiv(A,B) then 
+        return 1/2; 
+    else 
+        return 0; 
+    fi; 
 end);
 
 ## For arrangement pairs

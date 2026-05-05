@@ -525,6 +525,28 @@ gap> B:=Essentialization(A); Roots(B);
 </ManSection>
 
 
+<ManSection>
+  <Oper Arg="A, h" Name="HArrAddition" Label="for IsHyperplaneArrangement, IsList"/>
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+ Computes the <E>addition</E> of the arrangement <A>A</A> 
+ with respect to hyperplane <A>h</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="A, i" Name="HArrDeletion" Label="for IsHyperplaneArrangement, IsInt"/>
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+ Computes the <E>deletion</E> of the arrangement <A>A</A> 
+ with respect to <A>i</A>-th hyperplane of <C>Roots(A)</C>.
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

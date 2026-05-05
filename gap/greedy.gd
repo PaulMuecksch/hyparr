@@ -73,6 +73,13 @@ DeclareOperation("RandArrOverGF",[IsInt,IsInt,IsField]);
 #!  A target/score function for splitting of the characteristic polynomial of <A>A</A> over $\mathbb{Z}$.
 DeclareGlobalFunction("CharPolySplits");
 
+#! @Arguments A,B
+#! @Description
+#!  A target/score function for comparing <C>MSetInvL(B)</C> and <C>MSetInvL(B)</C> 
+#! (see <Ref Attr="MSetInvL" Label="for IsHyperplaneArrangement" Style="Text"/>).
+DeclareGlobalFunction("DistMSetInvL");;
+
+DeclareGlobalFunction("NotLEquiv");;
 
 #################################
 ##
@@ -83,7 +90,7 @@ DeclareGlobalFunction("CharPolySplits");
 #! @Arguments GS
 #! @Returns a function
 #! @Description
-#!  The function to run the search which will return an arrangement or <C>fail</C>.
+#!  Run the search algorithm of <A>GS</A> which will return an arrangement or <C>fail</C>.
 #! @BeginExampleSession
 #! gap> GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
 #! GreedySearch over GF(17) for arrangements:

@@ -77,6 +77,8 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7BD35FA07804BB70">2.6-3 Essentialization</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X844F12CE82E65BFC">2.6-4 HArrRestriction</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X78D9B1217862EF28">2.6-5 HArrRestriction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X826DE7F27A79AF95">2.6-6 HArrAddition</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7F207BE684694078">2.6-7 HArrDeletion</a></span>
 </div></div>
 </div>
 
@@ -533,6 +535,24 @@ true
 <p>Returns: A hyperplane arrangement.</p>
 
 <p>Computes the <em>restriction</em> of the arrangement <var class="Arg">A</var> to the subspace orthogonal to the vectors in <code class="code">S</code>.</p>
+
+<p><a id="X826DE7F27A79AF95" name="X826DE7F27A79AF95"></a></p>
+
+<h5>2.6-6 HArrAddition</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrAddition</code>( <var class="Arg">A</var>, <var class="Arg">h</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Computes the <em>addition</em> of the arrangement <var class="Arg">A</var> with respect to hyperplane <var class="Arg">h</var>.</p>
+
+<p><a id="X7F207BE684694078" name="X7F207BE684694078"></a></p>
+
+<h5>2.6-7 HArrDeletion</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrDeletion</code>( <var class="Arg">A</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A hyperplane arrangement.</p>
+
+<p>Computes the <em>deletion</em> of the arrangement <var class="Arg">A</var> with respect to <var class="Arg">i</var>-th hyperplane of <code class="code">Roots(A)</code>.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Next Chapter]</a>&nbsp;  </div>

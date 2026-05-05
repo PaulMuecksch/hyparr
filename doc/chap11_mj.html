@@ -30,6 +30,7 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X84821A5B843965BA">11.1-1 HArrGreedySearch</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X86BF30D17A33874E">11.1-2 CharPolySplits</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap11_mj.html#X81A9CF1C804C8B60">11.1-3 DistMSetInvL</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap11_mj.html#X7C701DBF7BAE649A">11.2 <span class="Heading">Attributes</span></a>
 </span>
@@ -84,6 +85,13 @@ GreedySearch over GF(17) for arrangements:
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CharPolySplits</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>A target/score function for splitting of the characteristic polynomial of <var class="Arg">A</var> over <span class="SimpleMath">\(\mathbb{Z}\)</span>.</p>
 
+<p><a id="X81A9CF1C804C8B60" name="X81A9CF1C804C8B60"></a></p>
+
+<h5>11.1-3 DistMSetInvL</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DistMSetInvL</code>( <var class="Arg">A</var>, <var class="Arg">B</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>A target/score function for comparing <code class="code">MSetInvL(B)</code> and <code class="code">MSetInvL(B)</code> (see <code class="func">MSetInvL</code> (<a href="chap2_mj.html#X852CC1A8795FCD15"><span class="RefLink">2.2-7</span></a>)).</p>
+
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
 
 <h4>11.2 <span class="Heading">Attributes</span></h4>
@@ -95,7 +103,7 @@ GreedySearch over GF(17) for arrangements:
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GreedySearchRun</code>( <var class="Arg">GS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: a function</p>
 
-<p>The function to run the search which will return an arrangement or <code class="code">fail</code>.</p>
+<p>Run the search algorithm of <var class="Arg">GS</var> which will return an arrangement or <code class="code">fail</code>.</p>
 
 
 <div class="example"><pre>

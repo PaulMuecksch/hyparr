@@ -98,8 +98,8 @@
 {\Huge \textbf{ Computations with hyperplane arrangements \mbox{}}}\\
 \vfill
 
-{\Huge  0.26.04 \mbox{}}\\[1cm]
-{ 28 April 2026 \mbox{}}\\[1cm]
+{\Huge  0.26.05 \mbox{}}\\[1cm]
+{ 5 May 2026 \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Paul M{\"u}cksch\\
     \mbox{}}}\\
@@ -788,6 +788,36 @@ A hyperplane arrangement.
 
 
  Computes the \emph{restriction} of the arrangement \mbox{\texttt{\mdseries\slshape A}} to the subspace orthogonal to the vectors in \texttt{S}. }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrAddition (for IsHyperplaneArrangement, IsList)}}
+\logpage{[ 2, 6, 6 ]}\nobreak
+\hyperdef{L}{X826DE7F27A79AF95}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrAddition({\mdseries\slshape A, h})\index{HArrAddition@\texttt{HArrAddition}!for IsHyperplaneArrangement, IsList}
+\label{HArrAddition:for IsHyperplaneArrangement, IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Computes the \emph{addition} of the arrangement \mbox{\texttt{\mdseries\slshape A}} with respect to hyperplane \mbox{\texttt{\mdseries\slshape h}}. }
+
+ 
+
+\subsection{\textcolor{Chapter }{HArrDeletion (for IsHyperplaneArrangement, IsInt)}}
+\logpage{[ 2, 6, 7 ]}\nobreak
+\hyperdef{L}{X7F207BE684694078}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrDeletion({\mdseries\slshape A, i})\index{HArrDeletion@\texttt{HArrDeletion}!for IsHyperplaneArrangement, IsInt}
+\label{HArrDeletion:for IsHyperplaneArrangement, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Computes the \emph{deletion} of the arrangement \mbox{\texttt{\mdseries\slshape A}} with respect to \mbox{\texttt{\mdseries\slshape i}}\texttt{\symbol{45}}th hyperplane of \texttt{Roots(A)}. }
 
  }
 
@@ -2910,6 +2940,20 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
 \end{Verbatim}
  }
 
+ 
+
+\subsection{\textcolor{Chapter }{RSEvalPoint (for IsRealizationSpaceOfGeomLattice)}}
+\logpage{[ 10, 2, 10 ]}\nobreak
+\hyperdef{L}{X81A7EF29810F3103}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSEvalPoint({\mdseries\slshape RS})\index{RSEvalPoint@\texttt{RSEvalPoint}!for IsRealizationSpaceOfGeomLattice}
+\label{RSEvalPoint:for IsRealizationSpaceOfGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ 
+
+ }
+
  }
 
  
@@ -3027,6 +3071,18 @@ exchanging a hyperplane).
 
  A target/score function for splitting of the characteristic polynomial of \mbox{\texttt{\mdseries\slshape A}} over $\mathbb{Z}$. }
 
+ 
+
+\subsection{\textcolor{Chapter }{DistMSetInvL}}
+\logpage{[ 11, 1, 3 ]}\nobreak
+\hyperdef{L}{X81A9CF1C804C8B60}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DistMSetInvL({\mdseries\slshape A, B})\index{DistMSetInvL@\texttt{DistMSetInvL}}
+\label{DistMSetInvL}
+}\hfill{\scriptsize (function)}}\\
+
+
+ A target/score function for comparing \texttt{MSetInvL(B)} and \texttt{MSetInvL(B)} (see \texttt{MSetInvL} (\ref{MSetInvL:for IsHyperplaneArrangement})). }
+
  }
 
  
@@ -3047,7 +3103,7 @@ a function
 
 
 
- The function to run the search which will return an arrangement or \texttt{fail}. 
+ Run the search algorithm of \mbox{\texttt{\mdseries\slshape GS}} which will return an arrangement or \texttt{fail}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);|
   GreedySearch over GF(17) for arrangements:

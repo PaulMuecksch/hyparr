@@ -49,6 +49,15 @@ GreedySearch over GF(17) for arrangements:
 </ManSection>
 
 
+<ManSection>
+  <Func Arg="A,B" Name="DistMSetInvL" />
+ <Description>
+  A target/score function for comparing <C>MSetInvL(B)</C> and <C>MSetInvL(B)</C> 
+ (see <Ref Attr="MSetInvL" Label="for IsHyperplaneArrangement" Style="Text"/>).
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
@@ -60,7 +69,7 @@ GreedySearch over GF(17) for arrangements:
  <Returns>a function
 </Returns>
  <Description>
-  The function to run the search which will return an arrangement or <C>fail</C>.
+  Run the search algorithm of <A>GS</A> which will return an arrangement or <C>fail</C>.
 <Example><![CDATA[
 gap> GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
 GreedySearch over GF(17) for arrangements:
