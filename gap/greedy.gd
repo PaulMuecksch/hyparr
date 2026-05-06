@@ -80,6 +80,7 @@ DeclareGlobalFunction("CharPolySplits");
 DeclareGlobalFunction("DistMSetInvL");;
 
 DeclareGlobalFunction("NotLEquiv");;
+DeclareGlobalFunction("CoeffDistCharPolyExp");
 
 #################################
 ##
