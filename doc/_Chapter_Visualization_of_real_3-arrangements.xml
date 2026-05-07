@@ -37,8 +37,6 @@
 </Item>
 </List>
 <P/>
- The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf</URL>).
-<P/>
 <Example><![CDATA[
 gap> A:=AGpql(2,2,3);
 <HyperplaneArrangement: 6 hyperplanes in 3-space>
@@ -80,6 +78,9 @@ gap> Print(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));
 
 
 <P/>
+ The preceding example will look as follows 
+<P/>
+ <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawProjPicture_Example.png">&lt;/img></Alt>
 <Alt Only="LaTeX"><![CDATA[
  \includegraphics{./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf}
 ]]></Alt>
@@ -97,8 +98,6 @@ gap> Print(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));
  for the intersection of a real 3-arrangement with the unit sphere.
  To compile the LaTeX-code the .sty-file "<URL Text="graphonsphere.sty">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/graphonsphere.sty</URL>" (from /doc/LaTeX_Examples)
  needs to be in the same folder and added via "\usepackage{graphonsphere}".
-<P/>
- The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf</URL>).
 <P/>
 <Example><![CDATA[
 gap> A:=AGpql(2,2,3);
@@ -179,6 +178,9 @@ gap> Print(LaTeXDrawSpherePicture(A));
 
 
 <P/>
+ The preceding example will look as follows 
+<P/>
+ <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawSpherePicture_Example.png">&lt;/img></Alt>
 <Alt Only="LaTeX"><![CDATA[
  \includegraphics{./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf}
 ]]></Alt>
@@ -197,13 +199,14 @@ gap> Print(LaTeXDrawSpherePicture(A));
  To compile the LaTeX-code the .sty-file "<URL Text="graphonsphere.sty">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/graphonsphere.sty</URL>" (from /doc/LaTeX_Examples)
  needs to be in the same folder and added via "\usepackage{graphonsphere}".
 <P/>
- The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf</URL>).
-<P/>
 <Example><![CDATA[
 ]]></Example>
 
 
 <P/>
+ The preceding example will look as follows 
+<P/>
+ <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawTopeGraph_Example.png">&lt;/img></Alt>
 <Alt Only="LaTeX"><![CDATA[
  \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf}
 ]]></Alt>
@@ -212,9 +215,10 @@ gap> Print(LaTeXDrawSpherePicture(A));
 </ManSection>
 
 
- Both function <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
+ Both functions <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
  can be used to draw nice pictures of oriented matroid complexes and their duals.
- See e.g. (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf</URL>)
+<P/>
+ <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawTopeGraph_H3.png">&lt;/img></Alt>
 <Alt Only="LaTeX"><![CDATA[
  \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf}
 ]]></Alt>

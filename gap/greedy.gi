@@ -319,7 +319,7 @@ local CVExp, t,f,ChiRed, CVChiRed, n, DsCVs;
     CVChiRed := CoefficientsOfUnivariatePolynomial(ChiRed);
     CVChiRed := Concatenation(CVChiRed,List([Length(CVChiRed)+1..3],x->0));
     
-    CVExp := CoefficientsOfUnivariatePolynomial((t-Exp[1])*(t-Exp[2]));
+    CVExp := CoefficientsOfUnivariatePolynomial(Product(List(Exp,e->(t-e))));
     return (CVExp-CVChiRed)^2;
 end);
 

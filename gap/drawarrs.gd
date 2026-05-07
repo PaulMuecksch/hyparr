@@ -27,7 +27,6 @@
 #!  * <A>deconeH</A> a vector giving the normal of the plane (=1) with which to intersect <A>A</A>,
 #!  * <A>MarkHs</A> a list of indices of hyperplanes of <A>A</A>, these are drawn in another color.
 #!
-#! The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf</URL>).
 #!
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3);
@@ -68,6 +67,10 @@
 #! \end{tikzpicture}
 #! @EndExampleSession
 #! 
+#! The preceding example will look as follows 
+#(only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf</URL>).
+#! 
+#! <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawProjPicture_Example.png">&lt;/img></Alt>
 #! @BeginLatexOnly
 #! \includegraphics{./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf}
 #! @EndLatexOnly
@@ -83,8 +86,6 @@ DeclareGlobalFunction("LaTeXDrawProjPicture");
 #! To compile the LaTeX-code the .sty-file "<URL Text="graphonsphere.sty">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/graphonsphere.sty</URL>" (from /doc/LaTeX_Examples)
 #! needs to be in the same folder and added via "\usepackage{graphonsphere}".
 #! 
-#! The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf</URL>).
-#!
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3);
 #! <HyperplaneArrangement: 6 hyperplanes in 3-space>
@@ -162,6 +163,11 @@ DeclareGlobalFunction("LaTeXDrawProjPicture");
 #! \end{tikzpicture}
 #! @EndExampleSession
 #! 
+#! 
+#! The preceding example will look as follows 
+#(only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf</URL>).
+#! 
+#! <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawSpherePicture_Example.png">&lt;/img></Alt>
 #! @BeginLatexOnly
 #! \includegraphics{./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf}
 #! @EndLatexOnly
@@ -176,11 +182,14 @@ DeclareGlobalFunction("LaTeXDrawSpherePicture");
 #! To compile the LaTeX-code the .sty-file "<URL Text="graphonsphere.sty">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/graphonsphere.sty</URL>" (from /doc/LaTeX_Examples)
 #! needs to be in the same folder and added via "\usepackage{graphonsphere}".
 #! 
-#! The example below will look as follows (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf</URL>).
-#!
 #! @BeginExampleSession
 #! @EndExampleSession
 #! 
+#! 
+#! The preceding example will look as follows 
+#(only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf</URL>).
+#! 
+#! <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawTopeGraph_Example.png">&lt;/img></Alt>
 #! @BeginLatexOnly
 #! \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf}
 #! @EndLatexOnly
@@ -188,9 +197,11 @@ DeclareGlobalFunction("LaTeXDrawSpherePicture");
 DeclareGlobalFunction("LaTeXDrawTopeGraph");
 
 
-#! Both function <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
+#! Both functions <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
 #! can be used to draw nice pictures of oriented matroid complexes and their duals.
-#! See e.g. (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf</URL>)
+# See e.g. (only in pdf or <URL Text="pic">https://paulmuecksch.github.io/HypArr/doc/LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf</URL>)
+#! 
+#! <Alt Only="HTML">&lt;img src="./LaTeX_Examples/LaTeXDrawTopeGraph_H3.png">&lt;/img></Alt>
 #! @BeginLatexOnly
 #! \includegraphics{./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf}
 #! @EndLatexOnly

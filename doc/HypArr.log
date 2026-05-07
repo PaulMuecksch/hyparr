@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  6 MAY 2026 12:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  7 MAY 2026 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -635,7 +635,7 @@ l.2488 \hyperdef{L}{X80841F8D80722081}{}
                                          [37
 
 ]
-<./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf, id=626, 250.97162pt x 471.3
+<./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf, id=625, 250.97162pt x 471.3
 2385pt>
 File: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf Graphic file (type pdf)
 
@@ -644,7 +644,7 @@ Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf  use
 d on input line 2561.
 (pdftex.def)             Requested size: 250.971pt x 471.3227pt.
  [38] [39 <./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf>] [40]
-<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=663, 242.6656pt x 185.
+<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=661, 242.6656pt x 185.
 33842pt>
 File: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf Graphic file (type pd
 f)
@@ -652,7 +652,7 @@ f)
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf  u
 sed on input line 2667.
 (pdftex.def)             Requested size: 242.665pt x 185.33797pt.
-<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=666, 242.22194pt x 187.201
+<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=663, 242.22194pt x 187.201
 39pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
@@ -660,11 +660,11 @@ Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used
 on input line 2699.
 (pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
  [41 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>]
-<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=685, 216.7287pt x 190.4435pt>
+<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=681, 216.7287pt x 190.4435pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf  used on in
-put line 2706.
+put line 2708.
 (pdftex.def)             Requested size: 216.72816pt x 190.44302pt.
  [42 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf> <./LaTeX_Examples/LaTeXD
 rawTopeGraph_H3.pdf>]
@@ -674,11 +674,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2754 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.2756 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                          [43
 
 ] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 2948--2951
+Underfull \hbox (badness 10000) in paragraph at lines 2950--2953
 
  []
 
@@ -687,26 +687,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X871597447B
 B998A1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2962 \hyperdef{L}{X871597447BB998A1}{}
+l.2964 \hyperdef{L}{X871597447BB998A1}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 2993--2996
+Underfull \hbox (badness 10000) in paragraph at lines 2995--2998
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3007--3010
+Underfull \hbox (badness 10000) in paragraph at lines 3009--3012
 
  []
 
 [45] [46]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3067--3070
+Underfull \hbox (badness 10000) in paragraph at lines 3069--3072
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3079--3082
+Underfull \hbox (badness 10000) in paragraph at lines 3081--3084
 
  []
 
@@ -717,24 +717,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3091 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.3093 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3152--3155
+Underfull \hbox (badness 10000) in paragraph at lines 3154--3157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3169--3172
+Underfull \hbox (badness 10000) in paragraph at lines 3171--3174
 
  []
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 3186--3189
+Underfull \hbox (badness 10000) in paragraph at lines 3188--3191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3203--3206
+Underfull \hbox (badness 10000) in paragraph at lines 3205--3208
 
  []
 
@@ -798,10 +798,10 @@ exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on HypArr.pdf (54 pages, 441993 bytes).
+Output written on HypArr.pdf (54 pages, 441524 bytes).
 PDF statistics:
- 1128 PDF objects out of 1200 (max. 8388607)
- 1008 compressed objects within 11 object streams
+ 1124 PDF objects out of 1200 (max. 8388607)
+ 1004 compressed objects within 11 object streams
  374 named destinations out of 1000 (max. 500000)
  357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -187,7 +187,7 @@ InstallMethod(LGenSet,
     [IsGeomLattice],
 function(L)
 local GenSet,ml;
-    GenSet := List([1..5],x->LFindGenSet(L));
+    GenSet := List([1..10],x->LFindGenSet(L));
     ml := Minimum(List(GenSet,x->Length(x)));
     GenSet := Random(GenSet{Positions(List(GenSet,x->Length(x)),ml)});
     L!.genset := GenSet;
@@ -199,9 +199,14 @@ InstallMethod(LDependentSubsets,
 function(L,d)
 local DepSs,S;
     DepSs := [];
+    for S in Concatenation(List([2..d-2],k->LkFlats(L)(k))) do
+        if Length(S)>=d then
+            DepSs := Union(DepSs,Combinations(S,d));
+        fi;
+    od;    
     for S in LkFlats(L)(d-1) do
         DepSs := Union(DepSs,Combinations(S,d));
-    od;;    
+    od;
     return DepSs;
 end);
 
@@ -437,10 +442,12 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     IdealNonVanishingMinors := SingularInterface("std",[IdealNonVanishingMinors],"ideal");
 
     SingularLibrary("elim.lib");
-    IdealVanishingMinors := SingularInterface("sat",[IdealVanishingMinors,IdealNonVanishingMinors],"ideal");
+
+    IdealVanishingMinors := SingularInterface("sat",[sI,IdealNonVanishingMinors],"ideal");
+    # IdealVanishingMinors := SingularInterface("sat",[IdealVanishingMinors,IdealNonVanishingMinors],"ideal");
 
     if X(K,"a1") in IndeterminatesOfPolynomialRing(VarRing) then
-        dim := SingularInterface("dim",[sI],"int");
+        dim := SingularInterface("dim",[IdealVanishingMinors],"int");
     else
         dim := 0;;
     fi;;
@@ -511,7 +518,7 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
         IsRepresentable := true;;
     fi;;
 
-    ff := [];;
+    ff := [eR];;
     for B in Bs do
         f := Det(IMat{B});
         if not(IsUnit(VarRing,f)) then
