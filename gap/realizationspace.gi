@@ -87,7 +87,8 @@ local rkFkt,rL,PsOverElt,LsOverElt,GenPs,pos, PLPairOverElt,POverElt,LOverElt;
     PsOverElt := LkFlats(L)(rL-1){Positions(List(LkFlats(L)(rL-1),p->e in p and rkFkt(Intersection(GenSet,p))=rL-1 ),true)};
     LsOverElt := LkFlats(L)(2){Positions(List(LkFlats(L)(2),l->e in l and rkFkt(Intersection(GenSet,l))=2 ),true)};
     PLPairOverElt := Cartesian(PsOverElt,LsOverElt);
-    pos := Position(List(PLPairOverElt,pl -> Length(Intersection(pl))=1),true);
+    pos := Position(List(PLPairOverElt,pl -> Length(Intersection(pl))=1),true); # check: condider more than one pair? i.e. "Positions(...)" 
+    # or not only pais of line and coatoms -> Problem with Dimension of Realization space of lattices of rk>=4 (missing relations for vanishing minors)
     if pos<>fail then
         PLPairOverElt := PLPairOverElt[pos];
         POverElt := PLPairOverElt[1];
