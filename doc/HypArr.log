@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  7 MAY 2026 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  7 MAY 2026 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -658,13 +658,13 @@ sed on input line 2667.
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
-on input line 2783.
+on input line 2781.
 (pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
 <./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=685, 216.7287pt x 190.4435pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf  used on in
-put line 2792.
+put line 2790.
 (pdftex.def)             Requested size: 216.72816pt x 190.44302pt.
  [43 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>]
 [44 <./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>]
@@ -674,11 +674,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2840 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.2838 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                          [45
 
 ] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 3034--3037
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3035
 
  []
 
@@ -687,26 +687,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X871597447B
 B998A1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3048 \hyperdef{L}{X871597447BB998A1}{}
+l.3046 \hyperdef{L}{X871597447BB998A1}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3079--3082
+Underfull \hbox (badness 10000) in paragraph at lines 3077--3080
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3093--3096
+Underfull \hbox (badness 10000) in paragraph at lines 3091--3094
 
  []
 
 [47] [48]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3153--3156
+Underfull \hbox (badness 10000) in paragraph at lines 3151--3154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3165--3168
+Underfull \hbox (badness 10000) in paragraph at lines 3163--3166
 
  []
 
@@ -717,24 +717,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3177 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.3175 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3238--3241
+Underfull \hbox (badness 10000) in paragraph at lines 3236--3239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3255--3258
+Underfull \hbox (badness 10000) in paragraph at lines 3253--3256
 
  []
 
 [50]
-Underfull \hbox (badness 10000) in paragraph at lines 3272--3275
+Underfull \hbox (badness 10000) in paragraph at lines 3270--3273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3289--3292
+Underfull \hbox (badness 10000) in paragraph at lines 3287--3290
 
  []
 
@@ -798,7 +798,7 @@ exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on HypArr.pdf (56 pages, 444668 bytes).
+Output written on HypArr.pdf (56 pages, 444626 bytes).
 PDF statistics:
  1133 PDF objects out of 1200 (max. 8388607)
  1011 compressed objects within 11 object streams
