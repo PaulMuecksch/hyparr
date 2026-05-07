@@ -121,36 +121,36 @@
 \contentsline {subsection}{\numberline {9.1.1}\textcolor {Chapter }{LaTeXDrawProjPicture}}{37}{subsection.9.1.1}%
 \contentsline {subsection}{\numberline {9.1.2}\textcolor {Chapter }{LaTeXDrawSpherePicture}}{39}{subsection.9.1.2}%
 \contentsline {subsection}{\numberline {9.1.3}\textcolor {Chapter }{LaTeXDrawTopeGraph}}{41}{subsection.9.1.3}%
-\contentsline {chapter}{\numberline {10}\textcolor {Chapter }{Realization spaces of geometric lattices}}{43}{chapter.10}%
-\contentsline {section}{\numberline {10.1}\textcolor {Chapter }{Construction}}{43}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}{43}{subsection.10.1.1}%
-\contentsline {section}{\numberline {10.2}\textcolor {Chapter }{Attributes}}{43}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}\textcolor {Chapter }{LGenSet (for IsGeomLattice)}}{43}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}\textcolor {Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}\textcolor {Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.3}%
-\contentsline {subsection}{\numberline {10.2.4}\textcolor {Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.4}%
-\contentsline {subsection}{\numberline {10.2.5}\textcolor {Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.5}%
-\contentsline {subsection}{\numberline {10.2.6}\textcolor {Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}{44}{subsection.10.2.6}%
-\contentsline {subsection}{\numberline {10.2.7}\textcolor {Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.7}%
-\contentsline {subsection}{\numberline {10.2.8}\textcolor {Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.8}%
-\contentsline {subsection}{\numberline {10.2.9}\textcolor {Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.9}%
-\contentsline {subsection}{\numberline {10.2.10}\textcolor {Chapter }{RSEvalPoint (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.2.10}%
-\contentsline {section}{\numberline {10.3}\textcolor {Chapter }{Properties}}{45}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}\textcolor {Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}{45}{subsection.10.3.1}%
-\contentsline {section}{\numberline {10.4}\textcolor {Chapter }{Further (auxillary) Operations}}{45}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}\textcolor {Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}{45}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}\textcolor {Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}{46}{subsection.10.4.2}%
-\contentsline {chapter}{\numberline {11}\textcolor {Chapter }{Greedy search for arrangements}}{47}{chapter.11}%
-\contentsline {section}{\numberline {11.1}\textcolor {Chapter }{Constructions}}{47}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt)}}{47}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}\textcolor {Chapter }{CharPolySplits}}{47}{subsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.1.3}\textcolor {Chapter }{DistMSetInvL}}{48}{subsection.11.1.3}%
-\contentsline {section}{\numberline {11.2}\textcolor {Chapter }{Attributes}}{48}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{48}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{48}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{48}{subsection.11.2.3}%
-\contentsline {subsection}{\numberline {11.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{49}{subsection.11.2.4}%
-\contentsline {subsection}{\numberline {11.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{49}{subsection.11.2.5}%
-\contentsline {subsection}{\numberline {11.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{49}{subsection.11.2.6}%
-\contentsline {chapter}{References}{51}{chapter*.2}%
-\contentsline {chapter}{Index}{52}{section*.3}%
+\contentsline {chapter}{\numberline {10}\textcolor {Chapter }{Realization spaces of geometric lattices}}{45}{chapter.10}%
+\contentsline {section}{\numberline {10.1}\textcolor {Chapter }{Construction}}{45}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}{45}{subsection.10.1.1}%
+\contentsline {section}{\numberline {10.2}\textcolor {Chapter }{Attributes}}{45}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}\textcolor {Chapter }{LGenSet (for IsGeomLattice)}}{45}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}\textcolor {Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}{46}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}\textcolor {Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}{46}{subsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.2.4}\textcolor {Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}{46}{subsection.10.2.4}%
+\contentsline {subsection}{\numberline {10.2.5}\textcolor {Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}{46}{subsection.10.2.5}%
+\contentsline {subsection}{\numberline {10.2.6}\textcolor {Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}{46}{subsection.10.2.6}%
+\contentsline {subsection}{\numberline {10.2.7}\textcolor {Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}{47}{subsection.10.2.7}%
+\contentsline {subsection}{\numberline {10.2.8}\textcolor {Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}{47}{subsection.10.2.8}%
+\contentsline {subsection}{\numberline {10.2.9}\textcolor {Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}{47}{subsection.10.2.9}%
+\contentsline {subsection}{\numberline {10.2.10}\textcolor {Chapter }{RSEvalPoint (for IsRealizationSpaceOfGeomLattice)}}{47}{subsection.10.2.10}%
+\contentsline {section}{\numberline {10.3}\textcolor {Chapter }{Properties}}{47}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}\textcolor {Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}{47}{subsection.10.3.1}%
+\contentsline {section}{\numberline {10.4}\textcolor {Chapter }{Further (auxillary) Operations}}{47}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}\textcolor {Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}{47}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}\textcolor {Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}{48}{subsection.10.4.2}%
+\contentsline {chapter}{\numberline {11}\textcolor {Chapter }{Greedy search for arrangements}}{49}{chapter.11}%
+\contentsline {section}{\numberline {11.1}\textcolor {Chapter }{Constructions}}{49}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt)}}{49}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}\textcolor {Chapter }{CharPolySplits}}{49}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}\textcolor {Chapter }{DistMSetInvL}}{50}{subsection.11.1.3}%
+\contentsline {section}{\numberline {11.2}\textcolor {Chapter }{Attributes}}{50}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{50}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{50}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{50}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{51}{subsection.11.2.4}%
+\contentsline {subsection}{\numberline {11.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{51}{subsection.11.2.5}%
+\contentsline {subsection}{\numberline {11.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{51}{subsection.11.2.6}%
+\contentsline {chapter}{References}{53}{chapter*.2}%
+\contentsline {chapter}{Index}{54}{section*.3}%

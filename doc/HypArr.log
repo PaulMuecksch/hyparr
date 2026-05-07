@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  7 MAY 2026 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  7 MAY 2026 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,33 +652,33 @@ f)
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf  u
 sed on input line 2667.
 (pdftex.def)             Requested size: 242.665pt x 185.33797pt.
-<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=663, 242.22194pt x 187.201
+ [41 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>] [42]
+<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=684, 242.22194pt x 187.201
 39pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
-on input line 2699.
+on input line 2783.
 (pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
- [41 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>]
-<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=681, 216.7287pt x 190.4435pt>
+<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=685, 216.7287pt x 190.4435pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf  used on in
-put line 2708.
+put line 2792.
 (pdftex.def)             Requested size: 216.72816pt x 190.44302pt.
- [42 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf> <./LaTeX_Examples/LaTeXD
-rawTopeGraph_H3.pdf>]
+ [43 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>]
+[44 <./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>]
 Chapter 10.
 
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2756 \hyperdef{L}{X7C701DBF7BAE649A}{}
-                                         [43
+l.2840 \hyperdef{L}{X7C701DBF7BAE649A}{}
+                                         [45
 
-] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 2950--2953
+] [46]
+Underfull \hbox (badness 10000) in paragraph at lines 3034--3037
 
  []
 
@@ -687,54 +687,54 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X871597447B
 B998A1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2964 \hyperdef{L}{X871597447BB998A1}{}
+l.3048 \hyperdef{L}{X871597447BB998A1}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 2995--2998
+Underfull \hbox (badness 10000) in paragraph at lines 3079--3082
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3009--3012
+Underfull \hbox (badness 10000) in paragraph at lines 3093--3096
 
  []
 
-[45] [46]
+[47] [48]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3069--3072
+Underfull \hbox (badness 10000) in paragraph at lines 3153--3156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3081--3084
+Underfull \hbox (badness 10000) in paragraph at lines 3165--3168
 
  []
 
-[47
+[49
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3093 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.3177 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3154--3157
+Underfull \hbox (badness 10000) in paragraph at lines 3238--3241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3171--3174
+Underfull \hbox (badness 10000) in paragraph at lines 3255--3258
 
  []
 
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 3188--3191
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 3272--3275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3205--3208
+Underfull \hbox (badness 10000) in paragraph at lines 3289--3292
 
  []
 
@@ -742,15 +742,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 3205--3208
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [49]
+ [51]
 Underfull \hbox (badness 10000) in paragraph at lines 39--39
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
  []
 
-) [50
+) [52
 
-] [51] (./HypArr.ind [52
+] [53] (./HypArr.ind [54
 
 
 ]
@@ -763,7 +763,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--114
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[53] [54]) (./HypArr.aux)
+[55] [56]) (./HypArr.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -771,11 +771,11 @@ L3 programming layer <2026-01-19>
 Package rerunfilecheck Info: File `HypArr.out' has not changed.
 (rerunfilecheck)             Checksum: A18DC809D680A8616C36C354E3DD953D;6866.
 Package rerunfilecheck Info: File `HypArr.brf' has not changed.
-(rerunfilecheck)             Checksum: 292486E6933FA091590B0515C7B6BE74;999.
+(rerunfilecheck)             Checksum: 95A70C551F14D5A3CD213E1589343F5B;999.
  ) 
 Here is how much of TeX's memory you used:
- 12369 strings out of 467533
- 193952 string characters out of 5422138
+ 12371 strings out of 467533
+ 193966 string characters out of 5422138
  616757 words of memory out of 5000000
  40698 multiletter control sequences out of 15000+600000
  693729 words of font info for 118 fonts, out of 8000000 for 9000
@@ -798,10 +798,10 @@ exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on HypArr.pdf (54 pages, 441524 bytes).
+Output written on HypArr.pdf (56 pages, 444668 bytes).
 PDF statistics:
- 1124 PDF objects out of 1200 (max. 8388607)
- 1004 compressed objects within 11 object streams
- 374 named destinations out of 1000 (max. 500000)
+ 1133 PDF objects out of 1200 (max. 8388607)
+ 1011 compressed objects within 11 object streams
+ 376 named destinations out of 1000 (max. 500000)
  357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

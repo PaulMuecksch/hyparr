@@ -6,7 +6,7 @@
 
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
-  \item \texttt  {CharPolySplits}, \hyperpage{47}
+  \item \texttt  {CharPolySplits}, \hyperpage{49}
   \item \texttt  {ConnectedSubgraphArr}
     \subitem for IsList, \hyperpage{14}
 
@@ -26,7 +26,7 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{23}
   \item \texttt  {Dimension}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
-  \item \texttt  {DistMSetInvL}, \hyperpage{48}
+  \item \texttt  {DistMSetInvL}, \hyperpage{50}
 
   \indexspace
 
@@ -46,17 +46,17 @@
   \indexspace
 
   \item \texttt  {GreedySearchDimension}
-    \subitem for IsHArrGreedySearch, \hyperpage{48}
+    \subitem for IsHArrGreedySearch, \hyperpage{50}
   \item \texttt  {GreedySearchGF}
-    \subitem for IsHArrGreedySearch, \hyperpage{48}
+    \subitem for IsHArrGreedySearch, \hyperpage{50}
   \item \texttt  {GreedySearchMaxIterations}
-    \subitem for IsHArrGreedySearch, \hyperpage{49}
+    \subitem for IsHArrGreedySearch, \hyperpage{51}
   \item \texttt  {GreedySearchNOfHs}
-    \subitem for IsHArrGreedySearch, \hyperpage{49}
+    \subitem for IsHArrGreedySearch, \hyperpage{51}
   \item \texttt  {GreedySearchRun}
-    \subitem for IsHArrGreedySearch, \hyperpage{48}
+    \subitem for IsHArrGreedySearch, \hyperpage{50}
   \item \texttt  {GreedySearchTargetFct}
-    \subitem for IsHArrGreedySearch, \hyperpage{49}
+    \subitem for IsHArrGreedySearch, \hyperpage{51}
 
   \indexspace
 
@@ -69,7 +69,7 @@
   \item \texttt  {HArrFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{31}
   \item \texttt  {HArrGreedySearch}
-    \subitem for IsInt,IsInt,IsField,IsFunction,IsInt, \hyperpage{47}
+    \subitem for IsInt,IsInt,IsField,IsFunction,IsInt, \hyperpage{49}
   \item \texttt  {HArrInductiveFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{32}
   \item \texttt  {HArrIsFactored}
@@ -130,7 +130,7 @@
   \item \texttt  {LCharPoly}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGenSet}
-    \subitem for IsGeomLattice, \hyperpage{43}
+    \subitem for IsGeomLattice, \hyperpage{45}
   \item \texttt  {LGraph}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGroundSet}
@@ -140,7 +140,7 @@
   \item \texttt  {LIsGeneric}
     \subitem for IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsGenSet}
-    \subitem for IsGeomLattice,IsList, \hyperpage{46}
+    \subitem for IsGeomLattice,IsList, \hyperpage{48}
   \item \texttt  {LIsIrreducible}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LIsIsomorphic}
@@ -162,9 +162,9 @@
   \item \texttt  {LRankFunction}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LRealizationSpace}
-    \subitem for IsGeomLattice, IsInt, \hyperpage{43}
+    \subitem for IsGeomLattice, IsInt, \hyperpage{45}
   \item \texttt  {LSubsetGeneratedByS}
-    \subitem for IsGeomLattice,IsList, \hyperpage{45}
+    \subitem for IsGeomLattice,IsList, \hyperpage{47}
 
   \indexspace
 
@@ -212,25 +212,25 @@
   \item \texttt  {Roots}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {RSCharacteristic}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{46}
   \item \texttt  {RSCoeffMat}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{46}
   \item \texttt  {RSDefField}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{46}
   \item \texttt  {RSDimension}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{46}
   \item \texttt  {RSEvalPoint}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{47}
   \item \texttt  {RSIdealMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{47}
   \item \texttt  {RSIsNonEmpty}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{47}
   \item \texttt  {RSLattice}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{44}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{46}
   \item \texttt  {RSNonMinors}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{47}
   \item \texttt  {RSPRing}
-    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{45}
+    \subitem for IsRealizationSpaceOfGeomLattice, \hyperpage{47}
 
   \indexspace
 
