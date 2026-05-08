@@ -1,15 +1,26 @@
 # GAP 4 package `HypArr'
 
-## Why HypArr
+## Overview
 
 Hyperplane arrangements appear in many different areas of mathematics, 
 such as discrete and algebraic geometry, topology, combinatorics, etc..
 
-[The package manual](https://paulmuecksch.github.io/HypArr/doc/chap0_mj.html) [pdf](https://paulmuecksch.github.io/HypArr/doc/manual.pdf)
+[The package manual](https://paulmuecksch.github.io/HypArr/doc/chap0_mj.html) 
+[pdf](https://paulmuecksch.github.io/HypArr/doc/manual.pdf)
 
-## Prerequisites
+Some things you can do with this package:
 
-There are no prerequisites to use.
+  * Determine freeness properties of arrangements.
+
+  * Determine invariants of oriented matroids.
+  
+  * Construct the Milnor fiber complex of a real hyperplane arrangement and compute homotopy invariants.
+
+  * Draw nice pictures (as tikz-code) of real arrangements in 3-space.
+
+  * Compute the realization space of a geometric lattice.
+
+  * Construct new arrangements satisfying certain properties via a greedy search algorithm over finite field.
 
 ## Installation
 
