@@ -20,7 +20,7 @@ Some things you can do with this package:
 
   * Compute the realization space of a geometric lattice.
 
-  * Construct new arrangements satisfying certain properties via a greedy search algorithm over finite field.
+  * Construct arrangements satisfying certain properties via a greedy search algorithm over finite field.
 
 ## Installation
 
