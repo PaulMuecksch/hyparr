@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: HypArr.aux
 The style file: alpha.bst
 Database file #1: hyparr.bib
-You've used 14 entries,
+You've used 15 entries,
             2543 wiz_defined-function locations,
-            660 strings with 6744 characters,
-and the built_in function-call counts, 5765 in all, are:
-= -- 592
-> -- 246
+            667 strings with 6912 characters,
+and the built_in function-call counts, 6179 in all, are:
+= -- 636
+> -- 265
 < -- 10
-+ -- 83
-- -- 82
-* -- 398
-:= -- 920
-add.period$ -- 44
-call.type$ -- 14
-change.case$ -- 85
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 240
-empty$ -- 420
-format.name$ -- 101
-if$ -- 1199
++ -- 89
+- -- 88
+* -- 431
+:= -- 988
+add.period$ -- 47
+call.type$ -- 15
+change.case$ -- 91
+chr.to.int$ -- 15
+cite$ -- 15
+duplicate$ -- 254
+empty$ -- 450
+format.name$ -- 108
+if$ -- 1282
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 13
-newline$ -- 74
-num.names$ -- 42
-pop$ -- 84
+missing$ -- 14
+newline$ -- 79
+num.names$ -- 45
+pop$ -- 87
 preamble$ -- 1
-purify$ -- 100
+purify$ -- 107
 quote$ -- 0
-skip$ -- 217
+skip$ -- 230
 stack$ -- 0
-substring$ -- 334
-swap$ -- 60
+substring$ -- 366
+swap$ -- 61
 text.length$ -- 10
 text.prefix$ -- 6
 top$ -- 0
-type$ -- 104
+type$ -- 112
 warning$ -- 0
-while$ -- 53
-width$ -- 19
-write$ -- 185
+while$ -- 58
+width$ -- 20
+write$ -- 198

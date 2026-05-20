@@ -1,6 +1,6 @@
 #############################################################################
 ##
-##  init.g              HypArr package
+##  read.g              HypArr package
 ##                                                              Paul Muecksch
 ##
 ##  Copyright 2026	Leibniz University Hannover
@@ -13,6 +13,7 @@
 ReadPackage("hyparr","gap/arrangements.gi");
 ReadPackage("hyparr","gap/specialarrs.gi");
 ReadPackage("hyparr","gap/orientedmatroid.gi");
+ReadPackage("hyparr","gap/cpxcomplement.gi");
 ReadPackage("hyparr","gap/milnorfiber.gi");
 ReadPackage("hyparr","gap/freearrs.gi");
 ReadPackage("hyparr","gap/morearrprops.gi");

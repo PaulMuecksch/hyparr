@@ -20,16 +20,6 @@ DeclareRepresentation(
     "lattice","topegraph","salcpx"]
 );
 
-# Declare the category
-DeclareCategory("IsFacePoset", IsComponentObjectRep and IsAttributeStoringRep );
-
-# Declare the representation
-DeclareRepresentation(
-    "IsFacePosetRep", 
-    IsFacePoset,
-    ["grGroundSet","orderfunction"]
-);
-
 
 #################################
 ##
@@ -192,77 +182,6 @@ DeclareAttribute("TopeGraph", IsOrientedMatroid);
 #!   [ [ 0, 0, 0 ] ] ]
 #! @EndExampleSession
 DeclareAttribute("OMCovectors", IsOrientedMatroid);
-
-#! @Arguments OM or A
-#! @Returns A <C>FacePoset</C>
-#! @Description
-#! Constructs the Salvetti complex <Cite Key="Salvetti1987_SalCpx"/> associated with the oriented matroid OM
-#! or the real hyperplane arrangement <A>A</A>.
-#! @BeginExampleSession
-#! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
-#! <OrientedMatroid: 3 elements, rank 2>
-#! gap> SalvettiComplex(O);
-#! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
-#! gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);
-#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
-#! gap> SalvettiComplex(A);
-#! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
-#! @EndExampleSession
-DeclareAttribute("SalvettiComplex", IsOrientedMatroid);
-
-#! @Arguments A
-#! @Description 
-#! See <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>.
-DeclareAttribute("SalvettiComplex", IsHyperplaneArrangement);
-
-#! @Arguments FP
-#! @Returns A list
-#! @Description
-#! Returns the ground set of the face poset FP.
-#! @BeginExampleSession
-#! gap> S := SalvettiComplex(O);
-#! <FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>
-#! gap> FPGroundSet(S);
-#! [
-#!   [ 
-#!     [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], 
-#!     [ [ 1, -1, 1 ], [ 1, -1, 1 ] ], 
-#!     [ [ -1, -1, -1 ], [ -1, -1, -1 ] ], 
-#!     [ [ 1, 1, 1 ], [ 1, 1, 1 ] ], 
-#!     [ [ -1, 1, 1 ], [ -1, 1, 1 ] ], 
-#!     [ [ 1, -1, -1 ], [ 1, -1, -1 ] ]
-#!   ],
-#!   [
-#!     [ [ -1, 0, -1 ], [ -1, 1, -1 ] ], 
-#!     [ [ -1, 1, 0 ], [ -1, 1, -1 ] ], 
-#!     [ [ 1, 0, 1 ], [ 1, -1, 1 ] ], 
-#!     [ [ 1, -1, 0 ], [ 1, -1, 1 ] ], 
-#!     [ [ 0, -1, -1 ], [ -1, -1, -1 ] ], 
-#!     [ [ -1, 0, -1 ], [ -1, -1, -1 ] ], 
-#!     [ [ 0, 1, 1 ], [ 1, 1, 1 ] ], 
-#!     [ [ 1, 0, 1 ], [ 1, 1, 1 ] ], 
-#!     [ [ 0, 1, 1 ], [ -1, 1, 1 ] ], 
-#!     [ [ -1, 1, 0 ], [ -1, 1, 1 ] ], 
-#!     [ [ 0, -1, -1 ], [ 1, -1, -1 ] ], 
-#!     [ [ 1, -1, 0 ], [ 1, -1, -1 ] ]
-#!   ],
-#!   [
-#!     [ [ 0, 0, 0 ], [ -1, 1, -1 ] ], 
-#!     [ [ 0, 0, 0 ], [ 1, -1, 1 ] ], 
-#!     [ [ 0, 0, 0 ], [ -1, -1, -1 ] ], 
-#!     [ [ 0, 0, 0 ], [ 1, 1, 1 ] ], 
-#!     [ [ 0, 0, 0 ], [ -1, 1, 1 ] ], 
-#!     [ [ 0, 0, 0 ], [ 1, -1, -1 ] ]
-#!   ]
-#! ]
-#! @EndExampleSession
-DeclareAttribute("FPGroundSet", IsFacePoset);
-
-#! @Arguments FP
-#! @Returns A function
-#! @Description
-#! Returns the order function of the face poset FP.
-DeclareAttribute("FPOrder", IsFacePoset);
 
 
 #! @Arguments OM
@@ -441,6 +360,19 @@ DeclareGlobalFunction("pos");
 # Computes
 DeclareGlobalFunction("SVZeroSet");
 
+# @Arguments 
+# @Returns 
+# @Description
+# Computes
+DeclareGlobalFunction("SVPlusSet");
+
+# @Arguments 
+# @Returns 
+# @Description
+# Computes
+DeclareGlobalFunction("SVMinusSet");
+
+
 #! @Arguments sv1, sv2
 #! @Returns A list
 #! @Description
@@ -496,8 +428,6 @@ DeclareGlobalFunction("ChirotopeFromChiroCore");
 # Declare display function for OrientedMatroid objects
 DeclareOperation("ViewObject", [IsOrientedMatroid]);
 
-# Declare display function for FacePoset objects
-DeclareOperation("ViewObject", [IsFacePoset]);
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

@@ -18,10 +18,19 @@ AutoDoc( rec(
             bib := "hyparr.bib",
             ),
             autodoc := rec(
-            files := ["gap/arrangements.gd", "gap/specialarrs.gd", "gap/orientedmatroid.gd", 
-                "gap/freearrs.gd", "gap/morearrprops.gd", "gap/milnorfiber.gd",
-                "gap/topeposet.gd","gap/drawarrs.gd","gap/realizationspace.gd",
-                "gap/greedy.gi"] 
+            files := [
+                "gap/arrangements.gd", 
+                "gap/specialarrs.gd", 
+                "gap/orientedmatroid.gd", 
+                "gap/freearrs.gd", 
+                "gap/morearrprops.gd", 
+                "gap/cpxcomplement.gd", 
+                "gap/milnorfiber.gd",
+                "gap/topeposet.gd",
+                "gap/drawarrs.gd",
+                "gap/realizationspace.gd",
+                "gap/greedy.gi"
+                ] 
                 ),
             gapdoc := rec(
                 LaTeXOptions := rec(

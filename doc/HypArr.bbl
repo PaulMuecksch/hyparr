@@ -13,6 +13,11 @@ Anders Bj\"{o}rner, Michel Las~Vergnas, Bernd Sturmfels, Neil White, and
   Mathematics and its Applications}.
 \newblock Cambridge University Press, Cambridge, second edition, 1999.
 
+\bibitem[BZ92]{BjoeZie1992_CombStrat}
+Anders Bj\"{o}rner and G\"{u}nter~M. Ziegler.
+\newblock Combinatorial stratification of complex arrangements.
+\newblock {\em J. Amer. Math. Soc.}, 5(1):105--149, 1992.
+
 \bibitem[CK22]{CK2022_ConnSubgraph_arXiv}
 M.~Cuntz and L.~Kühne.
 \newblock On arrangements of hyperplanes from connected subgraphs, 2022.

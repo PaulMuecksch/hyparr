@@ -151,11 +151,11 @@ local A,s,ip,Hind,disthv,DrawOptions,
 				if IsBound(DrawOptions.MarkHs) then
 					Mind:=1;
 					MarkHs:=DrawOptions.MarkHs;
-				fi;;
+				fi;
 			else
 				Print("Optinoal second argument must a record with options!\n");
 				return fail;
-			fi;;
+			fi;
 		else
 			Print("Length of arguments must be 1 or 2!\n");
 			return fail;

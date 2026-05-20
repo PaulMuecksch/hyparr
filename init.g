@@ -13,6 +13,7 @@
 ReadPackage("hyparr","gap/arrangements.gd");
 ReadPackage("hyparr","gap/specialarrs.gd");
 ReadPackage("hyparr","gap/orientedmatroid.gd");
+ReadPackage("hyparr","gap/cpxcomplement.gd");
 ReadPackage("hyparr","gap/milnorfiber.gd");
 ReadPackage("hyparr","gap/freearrs.gd");
 ReadPackage("hyparr","gap/morearrprops.gd");

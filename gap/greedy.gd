@@ -77,9 +77,9 @@ DeclareGlobalFunction("CharPolySplits");
 #! @Description
 #!  A target/score function for comparing <C>MSetInvL(B)</C> and <C>MSetInvL(B)</C> 
 #! (see <Ref Attr="MSetInvL" Label="for IsHyperplaneArrangement" Style="Text"/>).
-DeclareGlobalFunction("DistMSetInvL");;
+DeclareGlobalFunction("DistMSetInvL");
 
-DeclareGlobalFunction("NotLEquiv");;
+DeclareGlobalFunction("NotLEquiv");
 DeclareGlobalFunction("CoeffDistCharPolyExp");
 
 #################################

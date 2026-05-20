@@ -2,15 +2,13 @@
 # HypArr: Computations with oriented matroids
 #
 # Implementations
-# #
+#
 
 
 BindGlobal("OrientedMatroidFamily",
     NewFamily("OrientedMatroidFamily"));
 
 
-BindGlobal("FacePosetFamily",
-    NewFamily("FacePosetFamily"));
 
 # Implement the oriented matroid constructor
 
@@ -138,24 +136,6 @@ function(OM)
           Length(OMGroundSet(OM)), " elements, rank ",
           OMRank(OM), ">");
 end);
-
-InstallMethod(ViewObj,
-    [ IsFacePoset ],
-function(FP)
-local GSet;
-    GSet := FPGroundSet(FP);
-    Print("<FacePoset of dimension ",
-          Length(GSet)-1," with f-vector ",List(GSet,x->Length(x)),">");
-end);
-
-
-InstallMethod(FPGroundSet,
-    [ IsFacePoset ],
-    FP -> FP!.grGroundSet);
-
-InstallMethod(FPOrder,
-    [ IsFacePoset ],
-    FP -> FP!.orderfunction);
 
 
 InstallMethod(OMGroundSet,
@@ -356,7 +336,7 @@ function(OM)
             D:=List(OMLForms(OM),x->pos(x*vm));
             Add(CoCircs,D);
             Add(CoCircs,-D);
-        od;;
+        od;
         # return CoCircs;
     else
         ChiFct := OMChirotope(OM);
@@ -387,7 +367,7 @@ function(OM)
             od;
             Add(CoCircs,D);
             Add(CoCircs,-D);
-        od;;
+        od;
         # return CoCircs;
     fi;
     OM!.cocircuits := CoCircs;
@@ -397,6 +377,7 @@ end);
 ####################################################################################################
 
 # The main function computing the covectors 
+# this is rather slow and needs to be optimized further
 InstallMethod(OMCovectors, 
     [ IsOrientedMatroid ],
 function(OM)
@@ -412,36 +393,47 @@ local ACs,GSet,L,Lk,r,n,m,mm,CsRkk,CsRkkp,k,Csinm,c,cn,i,cp,Fcn;
     GSet:=LAtoms(L);
     CsRkk:=OMCocircuits(OM);
     ACs := Concatenation([[List(GSet,x->0)]],[CsRkk]);
+    CsRkk:=CsRkk{List([0..Length(CsRkk)/2-1],x->2*x+1)};
     for k in Reversed([1..r-2]) do
         CsRkkp:=[];
         for m in Lk(k) do
             for mm in Lk(k+2){Positions(List(Lk(k+2),x->IsSubset(x,m)),true)} do
-            Csinm := CsRkk{Positions(List(CsRkk,c->IsSubset(Positions(c,0),m) and IsSubset(mm,Positions(c,0))),true)};
-            c:=Csinm[1];
-            for i in List([1..Length(Csinm)/2-1],x->2*x+1) do
-                cn := OMOperation(Csinm[i],c);
-                Fcn := Positions(cn,0);
-                if not( (Fcn<>m) or (cn in CsRkkp) ) then
-                    Add(CsRkkp,cn);
-                    Add(CsRkkp,-cn);
-                fi;
-                cn := OMOperation(Csinm[i],-c);
-                Fcn := Positions(cn,0);
-                if not( (Fcn<>m) or (cn in CsRkkp) ) then
-                    Add(CsRkkp,cn);
-                    Add(CsRkkp,-cn);
-                fi;
-            od;
+                Csinm := CsRkk{Positions(List(CsRkk,c->IsSubset(SVZeroSet(c),m) and IsSubset(mm,SVZeroSet(c))),true)};
+                c:=Csinm[1];
+                # for i in List([1..Length(Csinm)/2-1],x->2*x+1) do
+                for i in [1..Length(Csinm)] do
+                    cn := OMOperation(Csinm[i],c);
+                    Fcn := SVZeroSet(cn);
+                    if not( (Fcn<>m) or (cn in CsRkkp) ) then
+                        Add(CsRkkp,cn);
+                        Add(CsRkkp,-cn);
+                    fi;
+                    cn := OMOperation(Csinm[i],-c);
+                    Fcn := SVZeroSet(cn);
+                    if not( (Fcn<>m) or (cn in CsRkkp) ) then
+                        Add(CsRkkp,cn);
+                        Add(CsRkkp,-cn);
+                    fi;
+                od;
             od;
         od;
         Add(ACs,ShallowCopy(CsRkkp));
         CsRkk := ShallowCopy(CsRkkp);
+        CsRkk:=CsRkk{List([0..Length(CsRkk)/2-1],x->2*x+1)};
     od;
 
     CsRkkp:=[];
-    for cp in Combinations(CsRkk,2) do
-        cn := OMOperation(cp[1],cp[2]);
-        if not( (0 in cn) or (cn in CsRkkp) ) then
+    # od;
+    for c in CsRkk do
+        cn := ShallowCopy(c);
+        cn{SVZeroSet(cn)} := [1];
+        if not( cn in CsRkkp ) then
+            Add(CsRkkp,cn);
+            Add(CsRkkp,-cn);
+        fi;
+        cn := ShallowCopy(c);
+        cn{SVZeroSet(cn)} := [-1];
+        if not( cn in CsRkkp ) then
             Add(CsRkkp,cn);
             Add(CsRkkp,-cn);
         fi;
@@ -473,105 +465,6 @@ local n, i,j, G, GraphMat,TGraph,x,y,Topes;
     OM!.topegraph := TGraph;
     return TGraph;
 end);
-
-####################################################################################################
-
-InstallMethod(SalvettiComplex,
-    "for an oriented matroid",
-    [ IsOrientedMatroid ],
-function(OM)
-local SalCpx,SalOF, FCpx,Topes,d,T, k,type;
-    FCpx:=OMCovectors(OM);
-    Topes:=FCpx[1];
-    d:=Length(FCpx);
-    SalCpx:=List([1..d],x->[]);;
-    for T in Topes do
-        for k in [1..d] do
-            SalCpx[k] := Concatenation(SalCpx[k], List(LowerOrderIdeal(FCpx,[T],OrderCovec)[k],x->[x,T]) );
-        od;
-    od;
-
-    # return SalCpx;
-    SalOF := function(SalCell1,SalCell2)
-    local T,R,sigma,tau;
-        sigma:=SalCell1[1];
-        tau:=SalCell2[1];
-        T:=SalCell1[2];
-        R:=SalCell2[2];
-
-        if OrderCovec(tau,sigma)=true then
-            if OMOperation(sigma,R)=T then
-                return true;
-            fi;
-        fi; 
-        return false;
-    end;
-
-    type := NewType(FacePosetFamily,
-                    IsFacePosetRep);
-
-    return Objectify(type,
-        rec(
-            grGroundSet := SalCpx,
-            orderfunction := SalOF
-        )
-    );
-end);
-
-
-####################################################################################################
-
-
-InstallMethod(SalvettiComplex,
-    "for a real arrangement",
-    [ IsHyperplaneArrangement],
-function(A)
-local OM,SalCpx,SalOF, FCpx,Topes,d,T, k,type;
-    if not(IsReal(A)) then
-        Print("Not a real arrangement!\n");
-        return fail;
-    fi;
-    OM := OrientedMatroid(A);
-    FCpx:=OMCovectors(OM);
-    Topes:=FCpx[1];
-    d:=Length(FCpx);
-    SalCpx:=List([1..d],x->[]);;
-    for T in Topes do
-        for k in [1..d] do
-            SalCpx[k] := Concatenation(SalCpx[k], List(LowerOrderIdeal(FCpx,[T],OrderCovec)[k],x->[x,T]) );
-        od;
-    od;
-
-    # return SalCpx;
-    SalOF := function(SalCell1,SalCell2)
-    local T,R,sigma,tau;
-        sigma:=SalCell1[1];
-        tau:=SalCell2[1];
-        T:=SalCell1[2];
-        R:=SalCell2[2];
-
-        if OrderCovec(tau,sigma)=true then
-            if OMOperation(sigma,R)=T then
-                return true;
-            fi;
-        fi; 
-        return false;
-    end;
-
-    type := NewType(FacePosetFamily,
-                    IsFacePosetRep);
-
-    return Objectify(type,
-        rec(
-            grGroundSet := SalCpx,
-            orderfunction := SalOF
-        )
-    );
-end);
-
-##
-
-####################################################################################################
 
 InstallMethod(IsLEquiv,
 	[IsOrientedMatroid, IsOrientedMatroid],
@@ -803,6 +696,17 @@ end);
 InstallGlobalFunction(SVZeroSet,
 function(sv)
     return Positions(sv,0);
+end);  
+
+
+InstallGlobalFunction(SVPlusSet,
+function(sv)
+    return Positions(sv,1);
+end);  
+
+InstallGlobalFunction(SVMinusSet,
+function(sv)
+    return Positions(sv,-1);
 end);  
 
 InstallGlobalFunction(OrderCovec,

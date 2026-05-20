@@ -9,7 +9,7 @@
                                     0.26.05
   
   
-                                   5 May 2026
+                                  19 May 2026
   
   
                                   Paul Mücksch
@@ -86,12 +86,8 @@
       4.2-5 OMCocircuits
       4.2-6 TopeGraph
       4.2-7 OMCovectors
-      4.2-8 SalvettiComplex
-      4.2-9 SalvettiComplex
-      4.2-10 FPGroundSet
-      4.2-11 FPOrder
-      4.2-12 OMChirotope
-      4.2-13 OMRankFunction
+      4.2-8 OMChirotope
+      4.2-9 OMRankFunction
     4.3 [33X[0;0YProperties[133X
       4.3-1 OMIsLinear
       4.3-2 HasSimpleSimplex
@@ -139,54 +135,62 @@
       6.5-2 HArrFactorizations
       6.5-3 HArrIsInductivelyFactored
       6.5-4 HArrInductiveFactorizations
-  7 [33X[0;0YMilnor fibers[133X
-    7.1 [33X[0;0YComplexes[133X
-      7.1-1 MilnorFiberComplex
-      7.1-2 MilnorFiberComplex
-      7.1-3 FPtoCWCpx
-  8 [33X[0;0YTope posets[133X
-    8.1 [33X[0;0YOperations[133X
-      8.1-1 TopePoset
-    8.2 [33X[0;0YAttributes[133X
-      8.2-1 TPGroundSet
-      8.2-2 TPBaseTope
-      8.2-3 TPRankPoly
-  9 [33X[0;0YVisualization of real 3-arrangements[133X
-    9.1 [33X[0;0YGlobal methods[133X
-      9.1-1 LaTeXDrawProjPicture
-      9.1-2 LaTeXDrawSpherePicture
-      9.1-3 LaTeXDrawTopeGraph
-  10 [33X[0;0YRealization spaces of geometric lattices[133X
-    10.1 [33X[0;0YConstruction[133X
-      10.1-1 LRealizationSpace
-    10.2 [33X[0;0YAttributes[133X
-      10.2-1 LGenSet
-      10.2-2 RSLattice
-      10.2-3 RSCharacteristic
-      10.2-4 RSDefField
-      10.2-5 RSCoeffMat
-      10.2-6 RSDimension
-      10.2-7 RSPRing
-      10.2-8 RSIdealMinors
-      10.2-9 RSNonMinors
-      10.2-10 RSEvalPoint
-    10.3 [33X[0;0YProperties[133X
-      10.3-1 RSIsNonEmpty
-    10.4 [33X[0;0YFurther (auxillary) Operations[133X
-      10.4-1 LSubsetGeneratedByS
-      10.4-2 LIsGenSet
-  11 [33X[0;0YGreedy search for arrangements[133X
-    11.1 [33X[0;0YConstructions[133X
-      11.1-1 HArrGreedySearch
-      11.1-2 CharPolySplits
-      11.1-3 DistMSetInvL
+  7 [33X[0;0YComplements of complex arrangements[133X
+    7.1 [33X[0;0YComplexes and face posets[133X
+      7.1-1 SalvettiComplex
+      7.1-2 SalvettiComplex
+      7.1-3 FPGroundSet
+      7.1-4 FPOrder
+      7.1-5 BZs1Complex
+      7.1-6 BZs2Complex
+  8 [33X[0;0YMilnor fibers[133X
+    8.1 [33X[0;0YComplexes[133X
+      8.1-1 MilnorFiberComplex
+      8.1-2 MilnorFiberComplex
+      8.1-3 FPtoCWCpx
+  9 [33X[0;0YTope posets[133X
+    9.1 [33X[0;0YOperations[133X
+      9.1-1 TopePoset
+    9.2 [33X[0;0YAttributes[133X
+      9.2-1 TPGroundSet
+      9.2-2 TPBaseTope
+      9.2-3 TPRankPoly
+  10 [33X[0;0YVisualization of real 3-arrangements[133X
+    10.1 [33X[0;0YGlobal methods[133X
+      10.1-1 LaTeXDrawProjPicture
+      10.1-2 LaTeXDrawSpherePicture
+      10.1-3 LaTeXDrawTopeGraph
+  11 [33X[0;0YRealization spaces of geometric lattices[133X
+    11.1 [33X[0;0YConstruction[133X
+      11.1-1 LRealizationSpace
     11.2 [33X[0;0YAttributes[133X
-      11.2-1 GreedySearchRun
-      11.2-2 GreedySearchGF
-      11.2-3 GreedySearchDimension
-      11.2-4 GreedySearchNOfHs
-      11.2-5 GreedySearchTargetFct
-      11.2-6 GreedySearchMaxIterations
+      11.2-1 LGenSet
+      11.2-2 RSLattice
+      11.2-3 RSCharacteristic
+      11.2-4 RSDefField
+      11.2-5 RSCoeffMat
+      11.2-6 RSDimension
+      11.2-7 RSPRing
+      11.2-8 RSIdealMinors
+      11.2-9 RSNonMinors
+      11.2-10 RSEvalPoint
+    11.3 [33X[0;0YProperties[133X
+      11.3-1 RSIsNonEmpty
+    11.4 [33X[0;0YFurther (auxillary) Operations[133X
+      11.4-1 LSubsetGeneratedByS
+      11.4-2 LIsGenSet
+  12 [33X[0;0YGreedy search for arrangements[133X
+    12.1 [33X[0;0YConstructions[133X
+      12.1-1 HArrGreedySearch
+      12.1-2 CharPolySplits
+      12.1-3 DistMSetInvL
+    12.2 [33X[0;0YAttributes[133X
+      12.2-1 GreedySearchRun
+      12.2-2 GreedySearchGF
+      12.2-3 GreedySearchDimension
+      12.2-4 GreedySearchNOfHs
+      12.2-5 GreedySearchTargetFct
+      12.2-6 GreedySearchMaxIterations
   
   
   [32X

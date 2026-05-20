@@ -23,7 +23,7 @@ gap> Print(LaTeXDrawProjPicture(A));
 \draw (3.87,1.) -- (-3.87,1.);  % H_6 
 \end{tikzpicture}
 gap> DrawOpts:=rec(scale:=1/2,isecps:=true,Hind:=true,
->       deconeH:=[1,1,1],MarkHs:=[1,2]);;
+>       deconeH:=[1,1,1],MarkHs:=[1,2]);
 gap> Print(LaTeXDrawProjPicture(AGpql(2,2,3),DrawOpts));
 \begin{tikzpicture}[scale=1.0]
 \draw[color=red] (-3.56,1.83) -- (1.83,-3.56);  % H_1 

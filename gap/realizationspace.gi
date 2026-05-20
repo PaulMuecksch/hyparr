@@ -66,12 +66,12 @@ local EvalFct;
         if ForAny(genMinors,f->Value(f,vars,p)<>0) or
             ForAny(RSNonMinors(RS),f->Value(f,vars,p)=0) then
             return fail;
-        fi;;
+        fi;
         return Arr(List(RSCoeffMat(RS),v->List(v,x->Value(x,vars,p))));
-    end;;
+    end;
 
     return EvalFct;
-end);;
+end);
 
 #######################################################
 ##
@@ -139,21 +139,21 @@ local GenSs,MaxLenGenSs, isGenSet,GenSet,GenSetNew, NewGenSets, ls, ml,l,Atoms,R
     # GenericSubsets,
     rL;
     
-    rL:=LRank(L);;
+    rL:=LRank(L);
     Atoms := LAtoms(L);
     RankFktnL := LRankFunction(L);
-    # GenericSubsets := Combinations(Atoms,rL+1);;
-    # Print(Length(GenericSubsets),"\n");;
-    # GenericSubsets := GenericSubsets{Positions(List(GenericSubsets,S->not(ForAny(Combinations(S,rL),T->RankFktnL(T)<rL))),true)};;
-    # Print(Length(GenericSubsets),"\n");;
-    # ls := List(GenericSubsets,S->Length(LSubsetGeneratedByS(L,S)));;
-    # ml := Maximum(ls);;
+    # GenericSubsets := Combinations(Atoms,rL+1);
+    # Print(Length(GenericSubsets),"\n");
+    # GenericSubsets := GenericSubsets{Positions(List(GenericSubsets,S->not(ForAny(Combinations(S,rL),T->RankFktnL(T)<rL))),true)};
+    # Print(Length(GenericSubsets),"\n");
+    # ls := List(GenericSubsets,S->Length(LSubsetGeneratedByS(L,S)));
+    # ml := Maximum(ls);
     # GenericSubsets := GenericSubsets{Positions(List(GenericSubsets,S->Length(LSubsetGeneratedByS(L,S))),ml)};        
-    # Print(Length(GenericSubsets),"\n");;
+    # Print(Length(GenericSubsets),"\n");
     # GenSet := Random(GenericSubsets);
     # if LIsGenSet(L,GenSet) then
     #     return GenSet;
-    # fi;;
+    # fi;
     GenSet := Random(LBases(L));
     isGenSet := false;
     while isGenSet=false do
@@ -166,8 +166,8 @@ local GenSs,MaxLenGenSs, isGenSet,GenSet,GenSetNew, NewGenSets, ls, ml,l,Atoms,R
             return GenSetNew;
         elif Length(LSubsetGeneratedByS(L,GenSetNew)) > Length(LSubsetGeneratedByS(L,GenSet)) then
             GenSet := GenSetNew;
-        fi;;
-    od;;
+        fi;
+    od;
     
     return fail;
 end);
@@ -214,8 +214,8 @@ InstallMethod(LIsIndependentSubset,
     [IsGeomLattice, IsList],
 function(L,S)
 local rkFkt;
-    rkFkt := LRankFunction(L);;
-    return Length(S)=rkFkt(S);;
+    rkFkt := LRankFunction(L);
+    return Length(S)=rkFkt(S);
 end);
 
 InstallMethod(LBasisCircuitInMat,
@@ -225,28 +225,28 @@ local rL, k, InMat, Atoms, S, BasisCircuitInVec;
 
     BasisCircuitInVec := function(L,B,k)
     local IncVec, e, rL, T, i;
-        rL := LRank(L);;
-        IncVec := 0*[1..rL];;
+        rL := LRank(L);
+        IncVec := 0*[1..rL];
         for i in [1..rL] do
-            e := B[i];;
-            T := Union(Difference(B,[e]),[k]);;
+            e := B[i];
+            T := Union(Difference(B,[e]),[k]);
             if LIsIndependentSubset(L,T)=true then
-                IncVec[i] := 1;;
-            fi;;
-        od;;
-        return IncVec;;
+                IncVec[i] := 1;
+            fi;
+        od;
+        return IncVec;
     end;
 
     rL := LRank(L);
     Atoms := LAtoms(L);
-    S := Difference(Atoms,B);;
-    InMat := NullMat(Length(Atoms),rL);;
-    InMat{B} := IdentityMat(rL);;
+    S := Difference(Atoms,B);
+    InMat := NullMat(Length(Atoms),rL);
+    InMat{B} := IdentityMat(rL);
     for k in S do
-        InMat[k] := BasisCircuitInVec(L,B,k);;
-    od;;
+        InMat[k] := BasisCircuitInVec(L,B,k);
+    od;
     
-    return InMat;;
+    return InMat;
 end);
 
 
@@ -255,55 +255,55 @@ InstallMethod(LGenSetIndeterminateMat,
 function(L,GenSet,K)
 local rkFkt, e, EMat,rL ,B, A, S,D, D1,D2, Atoms, Vars, R, eR, IndPair, m, var, Det, PL, Pe, Le,i;
 
-    rL := LRank(L);;
-    rkFkt := LRankFunction(L);;
+    rL := LRank(L);
+    rkFkt := LRankFunction(L);
 
-    B := Combinations(GenSet,rL);;
-    B := B[Position(List(B,x->rkFkt(x)=rL),true)];;
+    B := Combinations(GenSet,rL);
+    B := B[Position(List(B,x->rkFkt(x)=rL),true)];
     
     Atoms := LAtoms(L);
-    A := LBasisCircuitInMat(L,B);;  
-    S := Difference(GenSet,B);;
-    D1 := A{S};;
-    m:=0;;
-    Vars := [];;
+    A := LBasisCircuitInMat(L,B);  
+    S := Difference(GenSet,B);
+    D1 := A{S};
+    m:=0;
+    Vars := [];
 
     for IndPair in Cartesian([1..Length(D1)],[1..Length(D1[1])]) do
         if D1[IndPair[1]][IndPair[2]] = 1 and 
             (1 in D1[IndPair[1]]{[1..IndPair[2]-1]}) and 
             (1 in D1{[1..IndPair[1]-1]}[IndPair[2]]) then
-            m:=m+1;;
+            m:=m+1;
             var := X(K, Concatenation("a",String(m)));
-            Add(Vars,var);;
-            D1[IndPair[1]][IndPair[2]] := var;;
-        fi;;
-    od;;
-    R:=PolynomialRing(K,Vars);;
-    # EMat:=IdentityMat(rL, R);;
-    eR := One(R);;
-    # eR := EMat[1][1];;
+            Add(Vars,var);
+            D1[IndPair[1]][IndPair[2]] := var;
+        fi;
+    od;
+    R:=PolynomialRing(K,Vars);
+    # EMat:=IdentityMat(rL, R);
+    eR := One(R);
+    # eR := EMat[1][1];
     
-    Det := DeterminantMatDivFree;;
+    Det := DeterminantMatDivFree;
     
-    S:=Difference(Atoms,GenSet);;
-    i:=1;;
+    S:=Difference(Atoms,GenSet);
+    i:=1;
     while S<>[] do
-        e:=S[i];;
-        PL := GenPointAndLineOfEltFromGenSet(L,GenSet,e);;
+        e:=S[i];
+        PL := GenPointAndLineOfEltFromGenSet(L,GenSet,e);
         if PL<>fail then
-            Pe := PL[1];;
-            Le := PL[2];;
+            Pe := PL[1];
+            Le := PL[2];
 #             
-            A[e] := Det(Concatenation([eR*A[Le[2]]],eR*A{Pe}))*A[Le[1]] - Det(Concatenation([eR*A[Le[1]]],eR*A{Pe}))*A[Le[2]];;
-            S:=Difference(S,[e]);;
-            GenSet := Union(GenSet,[e]);;
-            i:=1;;
+            A[e] := Det(Concatenation([eR*A[Le[2]]],eR*A{Pe}))*A[Le[1]] - Det(Concatenation([eR*A[Le[1]]],eR*A{Pe}))*A[Le[2]];
+            S:=Difference(S,[e]);
+            GenSet := Union(GenSet,[e]);
+            i:=1;
         else
-            i := i+1;;
-        fi;;
-    od;;
+            i := i+1;
+        fi;
+    od;
     
-    return rec(IndMat := eR*A, PRing := R);;
+    return rec(IndMat := eR*A, PRing := R);
 end);
 
 
@@ -390,10 +390,10 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
         return fail;
     fi;
 
-    GenSet := LGenSet(L);;
-    # GenSet := List([1..20],x->LFindGenSet(L));;
-    # ml := Minimum(List(GenSet,x->Length(x)));;
-    # GenSet := GenSet[Position(List(GenSet,x->Length(x)),ml)];;
+    GenSet := LGenSet(L);
+    # GenSet := List([1..20],x->LFindGenSet(L));
+    # ml := Minimum(List(GenSet,x->Length(x)));
+    # GenSet := GenSet[Position(List(GenSet,x->Length(x)),ml)];
 
     rkL := LRank(L);
     A := LGenSetIndeterminateMat(L,GenSet,K);
@@ -402,26 +402,26 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     eR := One(VarRing);
     Det := Determinant;
     Bs := LBases(L);
-    DepSs := LDependentSubsets(L,LRank(L));;
+    DepSs := LDependentSubsets(L,LRank(L));
 
-    GenMinors := List(DepSs,S->Det(IMat{S}));;
+    GenMinors := List(DepSs,S->Det(IMat{S}));
     Add(GenMinors, Zero(A.PRing));
     IdealVanishingMinors := Ideal(VarRing,GenMinors);
 
-    SetTermOrdering(VarRing,"dp");;
+    SetTermOrdering(VarRing,"dp");
     SingularSetBaseRing( VarRing );
     SingularLibrary( "primdec.lib" );
-    IdealVanishingMinors := SingularInterface("std",[IdealVanishingMinors],"ideal");;
-    IdealVanishingMinors := SingularInterface("radical",[IdealVanishingMinors],"ideal");;
+    IdealVanishingMinors := SingularInterface("std",[IdealVanishingMinors],"ideal");
+    IdealVanishingMinors := SingularInterface("radical",[IdealVanishingMinors],"ideal");
     sI := SingularInterface("std",[IdealVanishingMinors],"ideal");
 
     if GeneratorsOfIdeal(sI) = [eR] then
-        IsRepresentable := false;;
+        IsRepresentable := false;
     else
-        IsRepresentable := true;;
-    fi;;
+        IsRepresentable := true;
+    fi;
 
-    ff := [];;
+    ff := [];
     for B in Bs do
         f := Det(IMat{B});
         if not(IsUnit(VarRing,f)) then
@@ -435,8 +435,8 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     for f in ff do
         if SingularInterface("reduce",[f,sI],"poly")=0*eR then
             IsRepresentable := false;
-        fi;;
-    od;;
+        fi;
+    od;
     NonVanishingMinors := ff;
     IdealNonVanishingMinors := Ideal(VarRing,[eR*Product(ff)]);
     IdealNonVanishingMinors := SingularInterface("std",[IdealNonVanishingMinors],"ideal");
@@ -449,11 +449,11 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     if X(K,"a1") in IndeterminatesOfPolynomialRing(VarRing) then
         dim := SingularInterface("dim",[IdealVanishingMinors],"int");
     else
-        dim := 0;;
-    fi;;
+        dim := 0;
+    fi;
     if IsRepresentable=false then
-        IMat := [];;
-    fi;;
+        IMat := [];
+    fi;
 
     type := NewType(RealizationSpaceOfGeomLatticeFamily,
                     IsRealizationSpaceOfGeomLatticeRep);
@@ -500,25 +500,25 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     eR := One(VarRing);
     Det := Determinant;
     Bs := LBases(L);
-    DepSs := LDependentSubsets(L,LRank(L));;
-    GenMinors := List(DepSs,S->Det(IMat{S}));;
+    DepSs := LDependentSubsets(L,LRank(L));
+    GenMinors := List(DepSs,S->Det(IMat{S}));
     Add(GenMinors, Zero(A.PRing));
     IdealVanishingMinors := Ideal(VarRing,GenMinors);
 
-    SetTermOrdering(VarRing,"dp");;
+    SetTermOrdering(VarRing,"dp");
     SingularSetBaseRing( VarRing );
     SingularLibrary( "primdec.lib" );
-    IdealVanishingMinors := SingularInterface("std",[IdealVanishingMinors],"ideal");;
-    IdealVanishingMinors := SingularInterface("radical",[IdealVanishingMinors],"ideal");;
+    IdealVanishingMinors := SingularInterface("std",[IdealVanishingMinors],"ideal");
+    IdealVanishingMinors := SingularInterface("radical",[IdealVanishingMinors],"ideal");
     sI := SingularInterface("std",[IdealVanishingMinors],"ideal");
 
     if GeneratorsOfIdeal(sI) = [eR] then
-        IsRepresentable := false;;
+        IsRepresentable := false;
     else
-        IsRepresentable := true;;
-    fi;;
+        IsRepresentable := true;
+    fi;
 
-    ff := [eR];;
+    ff := [eR];
     for B in Bs do
         f := Det(IMat{B});
         if not(IsUnit(VarRing,f)) then
@@ -532,8 +532,8 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     for f in ff do
         if SingularInterface("reduce",[f,sI],"poly")=0*eR then
             IsRepresentable := false;
-        fi;;
-    od;;
+        fi;
+    od;
     NonVanishingMinors := ff;
     IdealNonVanishingMinors := Ideal(VarRing,[Product(ff)]);
     IdealNonVanishingMinors := SingularInterface("std",[IdealNonVanishingMinors],"ideal");
@@ -544,11 +544,11 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     if X(K,"a1") in IndeterminatesOfPolynomialRing(VarRing) then
         dim := SingularInterface("dim",[sI],"int");
     else
-        dim := 0;;
-    fi;;
+        dim := 0;
+    fi;
     if IsRepresentable=false then
-        IMat := [];;
-    fi;;
+        IMat := [];
+    fi;
 
     type := NewType(RealizationSpaceOfGeomLatticeFamily,
                     IsRealizationSpaceOfGeomLatticeRep);

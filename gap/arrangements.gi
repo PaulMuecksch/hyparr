@@ -126,7 +126,7 @@ local k;
     Print("[ ",LkFlats(L)(1),",\n");
     for k in [2..LRank(L)-1] do
         Print("  ",LkFlats(L)(k),",\n");
-    od;;
+    od;
     Print("  ",LkFlats(L)(LRank(L))," ]");
 end);
 
@@ -234,9 +234,9 @@ local rkFkt, atoms, Bs, rL;
     rkFkt := LRankFunction(L);
     rL := LRank(L);
     atoms := LAtoms(L);
-    Bs := Combinations(atoms,rL);;
-    Bs := Bs{Positions(List(Bs,B->rkFkt(B)=rL),true)};;
-    return Bs;;
+    Bs := Combinations(atoms,rL);
+    Bs := Bs{Positions(List(Bs,B->rkFkt(B)=rL),true)};
+    return Bs;
 end);
 
 
@@ -803,15 +803,15 @@ end);
 InstallGlobalFunction(NewHsThroughIntersections,
 function(A)
 local L,Cs,NewHs;
-    L := IntersectionLattice(A);;
-    Cs := Set(CandidatesLinesPointsNewH(L),x->Set(x,y->Set(y)));;
+    L := IntersectionLattice(A);
+    Cs := Set(CandidatesLinesPointsNewH(L),x->Set(x,y->Set(y)));
 
     if Cs=[] then
         return fail;
-    fi;;
+    fi;
     
-    NewHs:= List(Cs, c-> NullspaceMat( TransposedMat(Concatenation(List(c,y->NullspaceMat(TransposedMat(Roots(A){y}))))))[1] );;
-    return NewHs;;
+    NewHs:= List(Cs, c-> NullspaceMat( TransposedMat(Concatenation(List(c,y->NullspaceMat(TransposedMat(Roots(A){y}))))))[1] );
+    return NewHs;
 end);
 
 

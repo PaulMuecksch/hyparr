@@ -505,7 +505,7 @@ end);
 
 InstallGlobalFunction(ResPart,
 function(P,h)
-local Ares, Pres;;
+local Ares, Pres;
     Pres := P{Positions(List(P,B->not(h in B)),true)};
     Pres := List(Pres,B->Roots(Arr(List(B, hh-> Roots(HArrRestriction(Arr([hh]),[h]))[1]))));
     return Pres;
@@ -523,16 +523,16 @@ function(A,P,h)
 local Ares,Ares2,Pres,Pred,hi;
     if not(h in Roots(A)) then
         return fail;
-    fi;;
+    fi;
     Ares := HArrRestriction(A,[h]);
     Pred := P{Positions(List(P,B->not(h in B)),true)};
     Ares2 := HArrRestriction(Arr(Concatenation(Pred)),[h]);
     if Length(Roots(Ares))=Length(Roots(Ares2)) 
         and Length(Roots(Ares2))=Sum(List(Pred,x->Length(x))) then
-        return true;;
-    fi;;
+        return true;
+    fi;
     
-    return false;;
+    return false;
 end);
 
 InstallGlobalFunction(IsIndFactorization,
@@ -540,52 +540,52 @@ function(P)
 local h,Hs,Pres, Pdel, IsFactPartH;
     
     IsFactPartH := function(A,P)
-        return IsFactPart(A,List(P,B->List(B,h->Position(Roots(A),h))));;
+        return IsFactPart(A,List(P,B->List(B,h->Position(Roots(A),h))));
     end;
 
-	Hs := Concatenation(P);;
+	Hs := Concatenation(P);
 	if Rank(Hs)<=2 and IsFactPartH(Arr(Hs),P) then
-        return true;;
+        return true;
     fi;
     
     for h in Hs do
-        Pres := ResPart(P,h);;
-        Pdel := DelPart(P,h);;
+        Pres := ResPart(P,h);
+        Pdel := DelPart(P,h);
         if ResMapIsBij(Arr(Hs),P,h) and IsIndFactorization(Pdel) and IsIndFactorization(Pres) then
-            return true;;
-        fi;;
-    od;;
+            return true;
+        fi;
+    od;
     
-    return false;;
+    return false;
 end);
 
-BindGlobal("IndFact_up_or_down","down");;
+BindGlobal("IndFact_up_or_down","down");
 
 InstallMethod(HArrInductiveFactorizations,
     [IsHyperplaneArrangement],
 function(A)
-local FactsA,IndFacts,P;;
+local FactsA,IndFacts,P;
     FactsA:=HArrFactorizations(A);
-    IndFacts:=[];;
+    IndFacts:=[];
     for P in FactsA do
         if IsIndFactorization(List(P,B->List(B,h->Roots(A)[h]))) then
             Add(IndFacts,P);
-        fi;;
-    od;;
+        fi;
+    od;
     return IndFacts;
 end);
 
 InstallMethod(HArrIsInductivelyFactored,
     [IsHyperplaneArrangement],
 function(A)
-local FactsA,P;;
-    FactsA:=HArrFactorizations(A);;
+local FactsA,P;
+    FactsA:=HArrFactorizations(A);
     for P in FactsA do
         if IsIndFactorization(List(P,B->List(B,h->Roots(A)[h]))) then
-            return [P,true];;
-        fi;;
-    od;;
-    return false;;
+            return [P,true];
+        fi;
+    od;
+    return false;
 end);
 
 ##  This program is free software: you can redistribute it and/or modify
