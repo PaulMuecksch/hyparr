@@ -2174,7 +2174,7 @@ A list
 {
   
 
- For a hyperplane arrangements $\mathcal{A}$ in $\mathbb{C}^\ell$, the following provides functions to compute complexes which have the
+ For a hyperplane arrangement $\mathcal{A}$ in $\mathbb{C}^\ell$, the following provides functions to compute complexes which have the
 homotopy type of the complement manifold $\mathbb{C}^\ell \setminus \bigcup_{H \in \mathcal{A}}H$. 
 \section{\textcolor{Chapter }{Complexes and face posets}}\label{Chapter_Complements_of_complex_arrangements_Section_Complexes_and_face_posets}
 \logpage{[ 7, 1, 0 ]}
@@ -2301,7 +2301,16 @@ A \texttt{FacePoset}
 
  Constructs the complex described by Bjoener and Ziegler in \cite{BjoeZie1992_CombStrat} oibtained from the $s^{(1)}$\texttt{\symbol{45}}stratification of a complex hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}} which has the homotopy type of the complement. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@A:=AGpql(3,3,3);|
+  <HyperplaneArrangement: 9 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@Cs1:=BZs1Complex(A);|
+  <FacePoset of dimension 4 with f-vector [ 194, 1004, 1560, 812, 62 ]>
+  !gapprompt@gap>| !gapinput@Cs1CW := FPtoCWCpx(Cs1);|
+  Regular CW-complex of dimension 4
+  !gapprompt@gap>| !gapinput@List([0..4],x->Length(Homology(Cs1CW,x)));|
+  [ 1, 9, 24, 16, 0 ]
+  !gapprompt@gap>| !gapinput@CharPoly(A);|
+  t^3-9*t^2+24*t-16
 \end{Verbatim}
  }
 
@@ -2320,11 +2329,17 @@ A \texttt{FacePoset}
 
  Constructs the complex described by Bjoener and Ziegler in \cite{BjoeZie1992_CombStrat} oibtained from the $s^{(2)}$\texttt{\symbol{45}}stratification of a complex hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}} which has the homotopy type of the complement. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
+  !gapprompt@gap>| !gapinput@A:=AGpql(3,3,2);|
+  <HyperplaneArrangement: 3 hyperplanes in 2-space>
+  !gapprompt@gap>| !gapinput@Cs2:=BZs2Complex(A);|
+  <FacePoset of dimension 4 with f-vector [ 52, 132, 96, 16, 0 ]>
 \end{Verbatim}
  }
 
- }
+ Be aware that both functions \texttt{BZs1Complex} and \texttt{BZs2Complex} may take a considerable amount of time computing the complex for
+non\texttt{\symbol{45}}real arrangements since oriented matroid complexes in
+double dimension and double number of hyperplanes need to be computed. For a
+real arrangement, the $s^{(1)}$\texttt{\symbol{45}}complex is isomorphic to the Salvetti complex. }
 
  }
 

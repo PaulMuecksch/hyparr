@@ -1,7 +1,7 @@
   
   [1X7 [33X[0;0YComplements of complex arrangements[133X[101X
   
-  [33X[0;0YFor  a hyperplane arrangements [23X\mathcal{A}[123X in [23X\mathbb{C}^\ell[123X, the following
+  [33X[0;0YFor  a  hyperplane arrangement [23X\mathcal{A}[123X in [23X\mathbb{C}^\ell[123X, the following
   provides  functions to compute complexes which have the homotopy type of the
   complement manifold [23X\mathbb{C}^\ell \setminus \bigcup_{H \in \mathcal{A}}H[123X.[133X
   
@@ -95,7 +95,16 @@
   has the homotopy type of the complement.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(3,3,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XCs1:=BZs1Complex(A);[127X[104X
+    [4X[28X<FacePoset of dimension 4 with f-vector [ 194, 1004, 1560, 812, 62 ]>[128X[104X
+    [4X[25Xgap>[125X [27XCs1CW := FPtoCWCpx(Cs1);[127X[104X
+    [4X[28XRegular CW-complex of dimension 4[128X[104X
+    [4X[25Xgap>[125X [27XList([0..4],x->Length(Homology(Cs1CW,x)));[127X[104X
+    [4X[28X[ 1, 9, 24, 16, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XCharPoly(A);[127X[104X
+    [4X[28Xt^3-9*t^2+24*t-16[128X[104X
   [4X[32X[104X
   
   [1X7.1-6 BZs2Complex[101X
@@ -108,6 +117,15 @@
   has the homotopy type of the complement.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(3,3,2);[127X[104X
+    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
+    [4X[25Xgap>[125X [27XCs2:=BZs2Complex(A);[127X[104X
+    [4X[28X<FacePoset of dimension 4 with f-vector [ 52, 132, 96, 16, 0 ]>[128X[104X
   [4X[32X[104X
+  
+  [33X[0;0YBe  aware  that  both  functions  [10XBZs1Complex[110X  and  [10XBZs2Complex[110X  may  take a
+  considerable  amount of time computing the complex for non-real arrangements
+  since  oriented  matroid  complexes in double dimension and double number of
+  hyperplanes need to be computed. For a real arrangement, the [23Xs^{(1)}[123X-complex
+  is isomorphic to the Salvetti complex.[133X
   

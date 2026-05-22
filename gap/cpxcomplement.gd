@@ -3,7 +3,7 @@
 #
 #! @Chapter Complements of complex arrangements
 #!
-#! For a hyperplane arrangements $\mathcal{A}$ in $\mathbb{C}^\ell$, the following provides functions to
+#! For a hyperplane arrangement $\mathcal{A}$ in $\mathbb{C}^\ell$, the following provides functions to
 #! compute complexes which have the homotopy type of the complement manifold $\mathbb{C}^\ell \setminus \bigcup_{H \in \mathcal{A}}H$.
 
 
@@ -110,7 +110,16 @@ DeclareGlobalFunction("s2Tos1");
 #! oibtained from the $s^{(1)}$-stratification
 #! of a complex hyperplane arrangement <A>A</A> which has the homotopy type of the complement. 
 #! @BeginExampleSession
-#! 
+#! gap> A:=AGpql(3,3,3);
+#! <HyperplaneArrangement: 9 hyperplanes in 3-space>
+#! gap> Cs1:=BZs1Complex(A);
+#! <FacePoset of dimension 4 with f-vector [ 194, 1004, 1560, 812, 62 ]>
+#! gap> Cs1CW := FPtoCWCpx(Cs1);
+#! Regular CW-complex of dimension 4
+#! gap> List([0..4],x->Length(Homology(Cs1CW,x)));
+#! [ 1, 9, 24, 16, 0 ]
+#! gap> CharPoly(A);
+#! t^3-9*t^2+24*t-16
 #! @EndExampleSession
 DeclareAttribute("BZs1Complex", IsHyperplaneArrangement);
 
@@ -122,6 +131,15 @@ DeclareAttribute("BZs1Complex", IsHyperplaneArrangement);
 #! oibtained from the $s^{(2)}$-stratification
 #! of a complex hyperplane arrangement <A>A</A> which has the homotopy type of the complement. 
 #! @BeginExampleSession
-#! 
+#! gap> A:=AGpql(3,3,2);
+#! <HyperplaneArrangement: 3 hyperplanes in 2-space>
+#! gap> Cs2:=BZs2Complex(A);
+#! <FacePoset of dimension 4 with f-vector [ 52, 132, 96, 16, 0 ]>
 #! @EndExampleSession
 DeclareAttribute("BZs2Complex", IsHyperplaneArrangement);
+
+#! Be aware that
+#! both functions <C>BZs1Complex</C> and <C>BZs2Complex</C> may take a considerable amount of time
+#! computing the complex for non-real arrangements since oriented matroid complexes in double dimension 
+#! and double number of hyperplanes need to be computed. 
+#! For a real arrangement, the $s^{(1)}$-complex is isomorphic to the Salvetti complex.

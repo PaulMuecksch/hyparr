@@ -36,7 +36,7 @@
 
 <h3>7 <span class="Heading">Complements of complex arrangements</span></h3>
 
-<p>For a hyperplane arrangements <span class="Math">\mathcal{A}</span> in <span class="Math">\mathbb{C}^\ell</span>, the following provides functions to compute complexes which have the homotopy type of the complement manifold <span class="Math">\mathbb{C}^\ell \setminus \bigcup_{H \in \mathcal{A}}H</span>.</p>
+<p>For a hyperplane arrangement <span class="Math">\mathcal{A}</span> in <span class="Math">\mathbb{C}^\ell</span>, the following provides functions to compute complexes which have the homotopy type of the complement manifold <span class="Math">\mathbb{C}^\ell \setminus \bigcup_{H \in \mathcal{A}}H</span>.</p>
 
 <p><a id="X819196B286D1D1C8" name="X819196B286D1D1C8"></a></p>
 
@@ -138,7 +138,16 @@
 
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(3,3,3);</span>
+&lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cs1:=BZs1Complex(A);</span>
+&lt;FacePoset of dimension 4 with f-vector [ 194, 1004, 1560, 812, 62 ]&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cs1CW := FPtoCWCpx(Cs1);</span>
+Regular CW-complex of dimension 4
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List([0..4],x-&gt;Length(Homology(Cs1CW,x)));</span>
+[ 1, 9, 24, 16, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CharPoly(A);</span>
+t^3-9*t^2+24*t-16
 </pre></div>
 
 <p><a id="X829EC45C854F4995" name="X829EC45C854F4995"></a></p>
@@ -152,8 +161,13 @@
 
 
 <div class="example"><pre>
-
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(3,3,2);</span>
+&lt;HyperplaneArrangement: 3 hyperplanes in 2-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cs2:=BZs2Complex(A);</span>
+&lt;FacePoset of dimension 4 with f-vector [ 52, 132, 96, 16, 0 ]&gt;
 </pre></div>
+
+<p>Be aware that both functions <code class="code">BZs1Complex</code> and <code class="code">BZs2Complex</code> may take a considerable amount of time computing the complex for non-real arrangements since oriented matroid complexes in double dimension and double number of hyperplanes need to be computed. For a real arrangement, the <span class="Math">s^{(1)}</span>-complex is isomorphic to the Salvetti complex.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap6.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap8.html">[Next Chapter]</a>&nbsp;  </div>
