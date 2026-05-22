@@ -13,6 +13,8 @@ Some things you can do with this package:
   * Determine freeness properties of arrangements.
 
   * Determine invariants of oriented matroids.
+
+  * Construct complexes which have the homotopy type of the complement of a complex arrangement.
   
   * Construct the Milnor fiber complex of a real hyperplane arrangement and compute homotopy invariants.
 
