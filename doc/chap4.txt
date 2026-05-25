@@ -131,7 +131,22 @@
     [4X[28X  [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ][128X[104X
   [4X[32X[104X
   
-  [1X4.2-6 TopeGraph[101X
+  [1X4.2-6 OMTopes[101X
+  
+  [33X[1;0Y[29X[2XOMTopes[102X( [3XOM[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YReturns the set of topes, i.e., the maximal covectors of [3XOM[103X[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
+    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XOMTopes(O);[127X[104X
+    [4X[28X[ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], [128X[104X
+    [4X[28X    [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X4.2-7 TopeGraph[101X
   
   [33X[1;0Y[29X[2XTopeGraph[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA graph[133X
@@ -152,7 +167,7 @@
     [4X[28X[ [ 1, 3 ], [ 1, 5 ], [ 2, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ] ][128X[104X
   [4X[32X[104X
   
-  [1X4.2-7 OMCovectors[101X
+  [1X4.2-8 OMCovectors[101X
   
   [33X[1;0Y[29X[2XOMCovectors[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA list of lists[133X
@@ -172,7 +187,7 @@
     [4X[28X  [ [ 0, 0, 0 ] ] ][128X[104X
   [4X[32X[104X
   
-  [1X4.2-8 OMChirotope[101X
+  [1X4.2-9 OMChirotope[101X
   
   [33X[1;0Y[29X[2XOMChirotope[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA function[133X
@@ -188,7 +203,7 @@
     [4X[28X[ 1, 1, 1 ][128X[104X
   [4X[32X[104X
   
-  [1X4.2-9 OMRankFunction[101X
+  [1X4.2-10 OMRankFunction[101X
   
   [33X[1;0Y[29X[2XOMRankFunction[102X( [3XOM[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA function[133X
@@ -308,7 +323,16 @@
     [4X[28X[ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ][128X[104X
     [4X[25Xgap>[125X [27XOMLocalizationRk(O,[1,2,3,5],3);[127X[104X
     [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
-    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X4.4-4 OMTConvexClosure[101X
+  
+  [33X[1;0Y[29X[2XOMTConvexClosure[102X( [3XOM[103X, [3XTs[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA list of topes (sign vectors)[133X
+  
+  [33X[0;0YComputes the convex closure of the set of topes [3XTs[103X in [3XOM[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
   [4X[32X[104X
   
   

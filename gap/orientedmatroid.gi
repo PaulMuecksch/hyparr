@@ -446,11 +446,90 @@ end);
 
 ####################################################################################################
 
+InstallMethod(OMTopes, 
+    [ IsOrientedMatroid ],
+function(OM)
+    return OMCovectors(OM)[1];
+end);
+
+####################################################################################################
+## Convex closure
+####################################################################################################
+
+InstallGlobalFunction(CommonHalfspaces,
+function(OM,Ts)
+local CHs,GSet;
+    GSet := OMGroundSet(OM);
+    if Ts=[] then
+        return [];
+    fi;
+    CHs := Intersection(List(Combinations(Ts,2),tp->Difference(GSet,SeparatingSet(tp[1],tp[2]))));
+    if CHs=[] then
+        return [[],[]];
+    else
+        return [CHs,Ts[1]{CHs}];
+    fi;
+end);
+
+InstallMethod(OMTConvexClosure, 
+    [ IsOrientedMatroid, IsList ],
+function(OM, Ts)
+local CHs, GSet;
+    GSet := OMGroundSet(OM);
+    if Ts=[] then
+        return [];
+    fi;
+    CHs := CommonHalfspaces(OM, Ts);
+    if CHs[1]=[] then
+        return OMTopes(OM);
+    else
+        return OMTopes(OM){Positions(List(OMTopes(OM),T->T{CHs[1]}),CHs[2])};
+    fi;
+end);
+
+InstallMethod(OMTConvexClosureOpenSubcomplex,
+[ IsOrientedMatroid, IsList ],
+function(OM, Ts)
+local CTs,CVsC,CVsCk,CHs,k;
+    if Ts=[] then
+        return [];
+    fi;
+    CTs:=OMTConvexClosure(OM,Ts);
+    CHs:=CommonHalfspaces(OM,Ts);
+    CVsC:=[CTs];;
+    for k in [2..OMRank(OM)+1] do
+        CVsCk:=[];
+        CVsCk:=OMCovectors(OM)[k]{Positions(List(OMCovectors(OM)[k],c->(true in List(CTs,T->OrderCovec(c,T))) and not(0 in c{CHs[1]})),true )};
+        Add(CVsC,CVsCk);
+    od;
+    return CVsC;
+end);
+
+InstallMethod(OMAdjacentTs,
+    [IsOrientedMatroid, IsList],
+function(OM,Cs)
+    return OMTopes(OM){Positions(List(OMTopes(OM),T->true in List(Cs,c->OrderCovec(c,T))),true)};
+end);
+
+# InstallMethod(OMCVsIsTight,
+#     [IsOrientedMatroid, IsList],
+# function(OM,Cs)
+# local TOSubCs, mrk;
+#     TOSubCs := OMTConvexClosureOpenSubcomplex(OMTopes(O){Positions(List(OMTopes(O),T->true in List(Cs,c->OrderCovec(c,T))),true)});
+
+#     return ;
+# end);
+
+
+
+
+####################################################################################################
+
 InstallMethod(TopeGraph, 
     [ IsOrientedMatroid ],
 function(OM)
 local n, i,j, G, GraphMat,TGraph,x,y,Topes;
-    Topes := OMCovectors(OM)[1];
+    Topes := OMTopes(OM);
     n:= Length(Topes);
 	GraphMat:=NullMat(n,n);
 	for i in [1..n] do

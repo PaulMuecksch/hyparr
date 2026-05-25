@@ -9,7 +9,7 @@
                                     0.26.05
   
   
-                                  19 May 2026
+                                  22 May 2026
   
   
                                   Paul Mücksch
@@ -84,10 +84,11 @@
       4.2-3 OMLForms
       4.2-4 OMGeomLattice
       4.2-5 OMCocircuits
-      4.2-6 TopeGraph
-      4.2-7 OMCovectors
-      4.2-8 OMChirotope
-      4.2-9 OMRankFunction
+      4.2-6 OMTopes
+      4.2-7 TopeGraph
+      4.2-8 OMCovectors
+      4.2-9 OMChirotope
+      4.2-10 OMRankFunction
     4.3 [33X[0;0YProperties[133X
       4.3-1 OMIsLinear
       4.3-2 HasSimpleSimplex
@@ -96,6 +97,7 @@
       4.4-1 IsLEquiv
       4.4-2 HasSimpleSimplexRk
       4.4-3 OMLocalizationRk
+      4.4-4 OMTConvexClosure
     4.5 [33X[0;0YGlobal methods[133X
       4.5-1 OMOperation
       4.5-2 OrderCovec
@@ -143,6 +145,8 @@
       7.1-4 FPOrder
       7.1-5 BZs1Complex
       7.1-6 BZs2Complex
+    7.2 [33X[0;0YNon-$K(\pi,1)$ arrangements[133X
+      7.2-1 CCSimpleTriangle
   8 [33X[0;0YMilnor fibers[133X
     8.1 [33X[0;0YComplexes[133X
       8.1-1 MilnorFiberComplex

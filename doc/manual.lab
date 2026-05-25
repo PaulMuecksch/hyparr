@@ -86,16 +86,18 @@
 \makelabel{hyparr:OMLForms for IsOrientedMatroid}{4.2.3}{X86AAB8F480E92ABB}
 \makelabel{hyparr:OMGeomLattice for IsOrientedMatroid}{4.2.4}{X81CC016D818B3068}
 \makelabel{hyparr:OMCocircuits for IsOrientedMatroid}{4.2.5}{X83F110A97A80B140}
-\makelabel{hyparr:TopeGraph for IsOrientedMatroid}{4.2.6}{X7B35E88A79675D1E}
-\makelabel{hyparr:OMCovectors for IsOrientedMatroid}{4.2.7}{X7B2D2370811476C9}
-\makelabel{hyparr:OMChirotope for IsOrientedMatroid}{4.2.8}{X854947857F5E5D29}
-\makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{4.2.9}{X7EE8B82D792A4A64}
+\makelabel{hyparr:OMTopes for IsOrientedMatroid}{4.2.6}{X7A786DEC83707791}
+\makelabel{hyparr:TopeGraph for IsOrientedMatroid}{4.2.7}{X7B35E88A79675D1E}
+\makelabel{hyparr:OMCovectors for IsOrientedMatroid}{4.2.8}{X7B2D2370811476C9}
+\makelabel{hyparr:OMChirotope for IsOrientedMatroid}{4.2.9}{X854947857F5E5D29}
+\makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{4.2.10}{X7EE8B82D792A4A64}
 \makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{4.3.1}{X86B70496781D3884}
 \makelabel{hyparr:HasSimpleSimplex for IsOrientedMatroid}{4.3.2}{X7D5893807BB9785E}
 \makelabel{hyparr:HasSimpleTriangle for IsOrientedMatroid}{4.3.3}{X80F069657B2045C0}
 \makelabel{hyparr:IsLEquiv for IsOrientedMatroid,IsOrientedMatroid}{4.4.1}{X7EE74EA57A779612}
 \makelabel{hyparr:HasSimpleSimplexRk for IsOrientedMatroid, IsInt}{4.4.2}{X81DBFBF67AC497C4}
 \makelabel{hyparr:OMLocalizationRk for IsOrientedMatroid, IsList, IsInt}{4.4.3}{X7C0D5D2A7C058B20}
+\makelabel{hyparr:OMTConvexClosure for IsOrientedMatroid, IsList}{4.4.4}{X7E089A4D797A257A}
 \makelabel{hyparr:OMOperation}{4.5.1}{X7A515BDC8582FFE6}
 \makelabel{hyparr:OrderCovec}{4.5.2}{X801F6A9B7A0A53F5}
 \makelabel{hyparr:IsOMEquiv}{4.5.3}{X80CB9A9C8135A314}
@@ -129,6 +131,7 @@
 \makelabel{hyparr:FPOrder for IsFacePoset}{7.1.4}{X7E28E057841D6ECD}
 \makelabel{hyparr:BZs1Complex for IsHyperplaneArrangement}{7.1.5}{X84D0C3E38464136B}
 \makelabel{hyparr:BZs2Complex for IsHyperplaneArrangement}{7.1.6}{X829EC45C854F4995}
+\makelabel{hyparr:CCSimpleTriangle for IsHyperplaneArrangement}{7.2.1}{X7ACB507C792584A4}
 \makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{8.1.1}{X794B90A67B153E6F}
 \makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{8.1.2}{X7D30E85086B93DB0}
 \makelabel{hyparr:FPtoCWCpx}{8.1.3}{X7BBA6F967E493B5D}

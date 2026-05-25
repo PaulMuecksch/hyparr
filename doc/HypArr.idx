@@ -38,18 +38,20 @@
 \indexentry{OMLForms@\texttt  {OMLForms}!for IsOrientedMatroid|hyperpage}{16}
 \indexentry{OMGeomLattice@\texttt  {OMGeomLattice}!for IsOrientedMatroid|hyperpage}{16}
 \indexentry{OMCocircuits@\texttt  {OMCocircuits}!for IsOrientedMatroid|hyperpage}{17}
+\indexentry{OMTopes@\texttt  {OMTopes}!for IsOrientedMatroid|hyperpage}{17}
 \indexentry{TopeGraph@\texttt  {TopeGraph}!for IsOrientedMatroid|hyperpage}{17}
-\indexentry{OMCovectors@\texttt  {OMCovectors}!for IsOrientedMatroid|hyperpage}{17}
+\indexentry{OMCovectors@\texttt  {OMCovectors}!for IsOrientedMatroid|hyperpage}{18}
 \indexentry{OMChirotope@\texttt  {OMChirotope}!for IsOrientedMatroid|hyperpage}{18}
 \indexentry{OMRankFunction@\texttt  {OMRankFunction}!for IsOrientedMatroid|hyperpage}{18}
 \indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{18}
-\indexentry{HasSimpleSimplex@\texttt  {HasSimpleSimplex}!for IsOrientedMatroid|hyperpage}{18}
+\indexentry{HasSimpleSimplex@\texttt  {HasSimpleSimplex}!for IsOrientedMatroid|hyperpage}{19}
 \indexentry{HasSimpleTriangle@\texttt  {HasSimpleTriangle}!for IsOrientedMatroid|hyperpage}{19}
 \indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{19}
-\indexentry{HasSimpleSimplexRk@\texttt  {HasSimpleSimplexRk}!for IsOrientedMatroid, IsInt|hyperpage}{19}
+\indexentry{HasSimpleSimplexRk@\texttt  {HasSimpleSimplexRk}!for IsOrientedMatroid, IsInt|hyperpage}{20}
 \indexentry{OMLocalizationRk@\texttt  {OMLocalizationRk}!for IsOrientedMatroid, IsList, IsInt|hyperpage}{20}
+\indexentry{OMTConvexClosure@\texttt  {OMTConvexClosure}!for IsOrientedMatroid, IsList|hyperpage}{20}
 \indexentry{OMOperation@\texttt  {OMOperation}|hyperpage}{20}
-\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{20}
+\indexentry{OrderCovec@\texttt  {OrderCovec}|hyperpage}{21}
 \indexentry{IsOMEquiv@\texttt  {IsOMEquiv}|hyperpage}{21}
 \indexentry{SeparatingSet@\texttt  {SeparatingSet}|hyperpage}{21}
 \indexentry{DerModule@\texttt  {DerModule}!for IsHyperplaneArrangement|hyperpage}{22}
@@ -81,6 +83,7 @@
 \indexentry{FPOrder@\texttt  {FPOrder}!for IsFacePoset|hyperpage}{33}
 \indexentry{BZs1Complex@\texttt  {BZs1Complex}!for IsHyperplaneArrangement|hyperpage}{33}
 \indexentry{BZs2Complex@\texttt  {BZs2Complex}!for IsHyperplaneArrangement|hyperpage}{34}
+\indexentry{CCSimpleTriangle@\texttt  {CCSimpleTriangle}!for IsHyperplaneArrangement|hyperpage}{34}
 \indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsOrientedMatroid|hyperpage}{35}
 \indexentry{MilnorFiberComplex@\texttt  {MilnorFiberComplex}!for IsHyperplaneArrangement|hyperpage}{35}
 \indexentry{FPtoCWCpx@\texttt  {FPtoCWCpx}|hyperpage}{36}

@@ -11,6 +11,8 @@
 
   \indexspace
 
+  \item \texttt  {CCSimpleTriangle}
+    \subitem for IsHyperplaneArrangement, \hyperpage{34}
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {CharPolySplits}, \hyperpage{51}
@@ -97,9 +99,9 @@
     \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{11}
     \subitem for IsHyperplaneArrangement, IsList, \hyperpage{11}
   \item \texttt  {HasSimpleSimplex}
-    \subitem for IsOrientedMatroid, \hyperpage{18}
+    \subitem for IsOrientedMatroid, \hyperpage{19}
   \item \texttt  {HasSimpleSimplexRk}
-    \subitem for IsOrientedMatroid, IsInt, \hyperpage{19}
+    \subitem for IsOrientedMatroid, IsInt, \hyperpage{20}
   \item \texttt  {HasSimpleTriangle}
     \subitem for IsOrientedMatroid, \hyperpage{19}
   \item \texttt  {HyperplaneArrangement}
@@ -190,7 +192,7 @@
   \item \texttt  {OMCocircuits}
     \subitem for IsOrientedMatroid, \hyperpage{17}
   \item \texttt  {OMCovectors}
-    \subitem for IsOrientedMatroid, \hyperpage{17}
+    \subitem for IsOrientedMatroid, \hyperpage{18}
   \item \texttt  {OMGeomLattice}
     \subitem for IsOrientedMatroid, \hyperpage{16}
   \item \texttt  {OMGroundSet}
@@ -210,7 +212,11 @@
     \subitem for IsOrientedMatroid, \hyperpage{18}
   \item \texttt  {OMSupportsFalkWeights}
     \subitem for IsOrientedMatroid, IsInt, \hyperpage{29}
-  \item \texttt  {OrderCovec}, \hyperpage{20}
+  \item \texttt  {OMTConvexClosure}
+    \subitem for IsOrientedMatroid, IsList, \hyperpage{20}
+  \item \texttt  {OMTopes}
+    \subitem for IsOrientedMatroid, \hyperpage{17}
+  \item \texttt  {OrderCovec}, \hyperpage{21}
   \item \texttt  {OrientedMatroid}
     \subitem for IsList, \hyperpage{15}
 

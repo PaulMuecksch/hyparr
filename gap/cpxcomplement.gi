@@ -321,3 +321,53 @@ local Strat2,S2Comp,St,BZs2Cpx,BZs2OF, FCpx, type;
         )
     );
 end);
+
+InstallMethod(CCSimpleTriangle,
+    [IsHyperplaneArrangement],
+function(A)
+local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, n, HNotInB;
+    n := Length(Roots(A));
+    if Rank(Roots(A))<>3 or Rank(Roots(A))=n then
+        return false;
+    fi;
+    L:=IntersectionLattice(A);;
+    PotSimpTs:=LBases(L){Positions(List(LBases(L),B->not(false in List(Combinations(B,2),x->x in LkFlats(L)(2)))),true)};
+    A2 := CCToRR2Arr(A);
+    OA2 := OM(A2);
+    for B in PotSimpTs do
+        HNotInB := Difference([1..n],B)[1];
+        Bi1 := [B[1],B[2],B[1]+n,B[2]+n];
+        Bi2 := [B[1],B[3],B[1]+n,B[3]+n];
+        Bi3 := [B[2],B[3],B[2]+n,B[3]+n];
+        CVs5:=OMCovectors(OA2)[6];; 
+        CsBi1 := CVs5{Positions(List(CVs5,x->x{Bi1}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
+        CsBi2 := CVs5{Positions(List(CVs5,x->x{Bi2}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
+        CsBi3 := CVs5{Positions(List(CVs5,x->x{Bi3}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
+        for CsB in Cartesian(CsBi1,CsBi2,CsBi3) do
+            OCsB := OMTConvexClosureOpenSubcomplex(OA2, OMTopes(OA2){Positions(List(OMTopes(OA2),T->true in List(CsB,c->OrderCovec(c,T))),true)});
+            if not( true in List(OCsB[5],c->c{Bi1}<>[0,0,0,0] and c{Bi2}<>[0,0,0,0] and c{Bi3}<>[0,0,0,0] and c{[HNotInB,HNotInB+n]}=[1,0]
+                    and true in List(LkFlats(L)(2),m->IsSubset(Concatenation(m,m+List(m,y->n)),SVZeroSet(c)))) ) then
+                Print(B,"\n");
+                return true;
+            fi;
+        od;
+    od;
+    return false;
+end);
+
+
+
+
+##  This program is free software: you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation, either version 3 of the License, or
+##  (at your option) any later version.
+##
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+##

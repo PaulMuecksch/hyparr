@@ -129,3 +129,20 @@
   hyperplanes need to be computed. For a real arrangement, the [23Xs^{(1)}[123X-complex
   is isomorphic to the Salvetti complex.[133X
   
+  
+  [1X7.2 [33X[0;0YNon-$K(\pi,1)$ arrangements[133X[101X
+  
+  [33X[0;0YThe following is experimental and needs to be tested further.[133X
+  
+  [1X7.2-1 CCSimpleTriangle[101X
+  
+  [33X[1;0Y[29X[2XCCSimpleTriangle[102X( [3XA[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YTests  if  there is a convex open subset of the ambient space, such that the
+  arrangement  restricted  to  this convex open subset is a "simple triangle".
+  This implies that the arrangement is not [23XK(\pi,1)[123X.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  

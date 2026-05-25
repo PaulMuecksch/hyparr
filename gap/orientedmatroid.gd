@@ -146,6 +146,22 @@ DeclareAttribute("OMGeomLattice", IsOrientedMatroid);
 #! @EndExampleSession
 DeclareAttribute("OMCocircuits", IsOrientedMatroid);
 
+
+
+#! @Arguments OM
+#! @Returns A list
+#! @Description
+#! Returns the set of topes, i.e., the maximal covectors of <A>OM</A>
+#! @BeginExampleSession
+#! gap> O := OrientedMatroid([[1,0],[0,1],[1,1]]);
+#! <OrientedMatroid: 3 elements, rank 2>
+#! gap> OMTopes(O);
+#! [ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], 
+#!     [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ]
+#! @EndExampleSession
+DeclareAttribute("OMTopes", IsOrientedMatroid);
+
+
 #! @Arguments OM
 #! @Returns A graph
 #! @Description
@@ -321,13 +337,24 @@ DeclareOperation("HasSimpleSimplexRk", [IsOrientedMatroid, IsInt]);
 #! [ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ]
 #! gap> OMLocalizationRk(O,[1,2,3,5],3);
 #! <OrientedMatroid: 4 elements, rank 3>
-#! 
 #! @EndExampleSession
 DeclareOperation("OMLocalizationRk", [IsOrientedMatroid, IsList, IsInt]);
 
+DeclareGlobalFunction("CommonHalfspaces");
 
+#! @Arguments OM, Ts
+#! @Returns A list of topes (sign vectors)
+#! @Description
+#! Computes the convex closure of the set of topes <A>Ts</A> in <A>OM</A>. 
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("OMTConvexClosure",[IsOrientedMatroid, IsList]);
 
+DeclareOperation("OMTConvexClosureOpenSubcomplex",[IsOrientedMatroid, IsList]);
 
+DeclareOperation("OMAdjacentTs",[IsOrientedMatroid, IsList]);
+
+# DeclareOperation("OMCVsIsTight",[IsOrienteMatroid, IsList]);
 
 #################################
 ##

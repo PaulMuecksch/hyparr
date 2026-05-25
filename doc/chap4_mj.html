@@ -38,10 +38,11 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X86AAB8F480E92ABB">4.2-3 OMLForms</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X81CC016D818B3068">4.2-4 OMGeomLattice</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X83F110A97A80B140">4.2-5 OMCocircuits</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B35E88A79675D1E">4.2-6 TopeGraph</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B2D2370811476C9">4.2-7 OMCovectors</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X854947857F5E5D29">4.2-8 OMChirotope</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7EE8B82D792A4A64">4.2-9 OMRankFunction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7A786DEC83707791">4.2-6 OMTopes</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B35E88A79675D1E">4.2-7 TopeGraph</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7B2D2370811476C9">4.2-8 OMCovectors</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X854947857F5E5D29">4.2-9 OMChirotope</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7EE8B82D792A4A64">4.2-10 OMRankFunction</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X871597447BB998A1">4.3 <span class="Heading">Properties</span></a>
 </span>
@@ -56,6 +57,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7EE74EA57A779612">4.4-1 IsLEquiv</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X81DBFBF67AC497C4">4.4-2 HasSimpleSimplexRk</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7C0D5D2A7C058B20">4.4-3 OMLocalizationRk</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7E089A4D797A257A">4.4-4 OMTConvexClosure</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4_mj.html#X80841F8D80722081">4.5 <span class="Heading">Global methods</span></a>
 </span>
@@ -217,9 +219,27 @@
   [ -1, 0, -1 ], [ -1, 1, 0 ], [ 1, -1, 0 ] ]
 </pre></div>
 
+<p><a id="X7A786DEC83707791" name="X7A786DEC83707791"></a></p>
+
+<h5>4.2-6 OMTopes</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMTopes</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A list</p>
+
+<p>Returns the set of topes, i.e., the maximal covectors of <var class="Arg">OM</var></p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O := OrientedMatroid([[1,0],[0,1],[1,1]]);</span>
+&lt;OrientedMatroid: 3 elements, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMTopes(O);</span>
+[ [ -1, 1, -1 ], [ 1, -1, 1 ], [ -1, -1, -1 ], 
+    [ 1, 1, 1 ], [ -1, 1, 1 ], [ 1, -1, -1 ] ]
+</pre></div>
+
 <p><a id="X7B35E88A79675D1E" name="X7B35E88A79675D1E"></a></p>
 
-<h5>4.2-6 TopeGraph</h5>
+<h5>4.2-7 TopeGraph</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; TopeGraph</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A graph</p>
@@ -241,7 +261,7 @@ true
 
 <p><a id="X7B2D2370811476C9" name="X7B2D2370811476C9"></a></p>
 
-<h5>4.2-7 OMCovectors</h5>
+<h5>4.2-8 OMCovectors</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMCovectors</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A list of lists</p>
@@ -262,7 +282,7 @@ true
 
 <p><a id="X854947857F5E5D29" name="X854947857F5E5D29"></a></p>
 
-<h5>4.2-8 OMChirotope</h5>
+<h5>4.2-9 OMChirotope</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMChirotope</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A function</p>
@@ -280,7 +300,7 @@ function( S ) ... end
 
 <p><a id="X7EE8B82D792A4A64" name="X7EE8B82D792A4A64"></a></p>
 
-<h5>4.2-9 OMRankFunction</h5>
+<h5>4.2-10 OMRankFunction</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMRankFunction</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: A function</p>
@@ -412,7 +432,19 @@ true
 [ [ 1, 2, 3, 5 ], [ 1, 2, 4 ], [ 1, 3, 4 ], [ 2, 3, 4 ], [ 1, 4, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMLocalizationRk(O,[1,2,3,5],3);</span>
 &lt;OrientedMatroid: 4 elements, rank 3&gt;
+</pre></div>
 
+<p><a id="X7E089A4D797A257A" name="X7E089A4D797A257A"></a></p>
+
+<h5>4.4-4 OMTConvexClosure</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMTConvexClosure</code>( <var class="Arg">OM</var>, <var class="Arg">Ts</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: A list of topes (sign vectors)</p>
+
+<p>Computes the convex closure of the set of topes <var class="Arg">Ts</var> in <var class="Arg">OM</var>.</p>
+
+
+<div class="example"><pre>
 </pre></div>
 
 <p><a id="X80841F8D80722081" name="X80841F8D80722081"></a></p>

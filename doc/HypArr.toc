@@ -51,21 +51,23 @@
 \contentsline {subsection}{\numberline {4.2.3}\textcolor {Chapter }{OMLForms (for IsOrientedMatroid)}}{16}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}\textcolor {Chapter }{OMGeomLattice (for IsOrientedMatroid)}}{16}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}\textcolor {Chapter }{OMCocircuits (for IsOrientedMatroid)}}{17}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}\textcolor {Chapter }{TopeGraph (for IsOrientedMatroid)}}{17}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}\textcolor {Chapter }{OMCovectors (for IsOrientedMatroid)}}{17}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}\textcolor {Chapter }{OMChirotope (for IsOrientedMatroid)}}{18}{subsection.4.2.8}%
-\contentsline {subsection}{\numberline {4.2.9}\textcolor {Chapter }{OMRankFunction (for IsOrientedMatroid)}}{18}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.6}\textcolor {Chapter }{OMTopes (for IsOrientedMatroid)}}{17}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}\textcolor {Chapter }{TopeGraph (for IsOrientedMatroid)}}{17}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}\textcolor {Chapter }{OMCovectors (for IsOrientedMatroid)}}{18}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}\textcolor {Chapter }{OMChirotope (for IsOrientedMatroid)}}{18}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}\textcolor {Chapter }{OMRankFunction (for IsOrientedMatroid)}}{18}{subsection.4.2.10}%
 \contentsline {section}{\numberline {4.3}\textcolor {Chapter }{Properties}}{18}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}\textcolor {Chapter }{OMIsLinear (for IsOrientedMatroid)}}{18}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}\textcolor {Chapter }{HasSimpleSimplex (for IsOrientedMatroid)}}{18}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}\textcolor {Chapter }{HasSimpleSimplex (for IsOrientedMatroid)}}{19}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}\textcolor {Chapter }{HasSimpleTriangle (for IsOrientedMatroid)}}{19}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}\textcolor {Chapter }{Operations}}{19}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}\textcolor {Chapter }{IsLEquiv (for IsOrientedMatroid,IsOrientedMatroid)}}{19}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}\textcolor {Chapter }{HasSimpleSimplexRk (for IsOrientedMatroid, IsInt)}}{19}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}\textcolor {Chapter }{HasSimpleSimplexRk (for IsOrientedMatroid, IsInt)}}{20}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}\textcolor {Chapter }{OMLocalizationRk (for IsOrientedMatroid, IsList, IsInt)}}{20}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}\textcolor {Chapter }{OMTConvexClosure (for IsOrientedMatroid, IsList)}}{20}{subsection.4.4.4}%
 \contentsline {section}{\numberline {4.5}\textcolor {Chapter }{Global methods}}{20}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}\textcolor {Chapter }{OMOperation}}{20}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}\textcolor {Chapter }{OrderCovec}}{20}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}\textcolor {Chapter }{OrderCovec}}{21}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}\textcolor {Chapter }{IsOMEquiv}}{21}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}\textcolor {Chapter }{SeparatingSet}}{21}{subsection.4.5.4}%
 \contentsline {chapter}{\numberline {5}\textcolor {Chapter }{Free arrangements}}{22}{chapter.5}%
@@ -108,6 +110,8 @@
 \contentsline {subsection}{\numberline {7.1.4}\textcolor {Chapter }{FPOrder (for IsFacePoset)}}{33}{subsection.7.1.4}%
 \contentsline {subsection}{\numberline {7.1.5}\textcolor {Chapter }{BZs1Complex (for IsHyperplaneArrangement)}}{33}{subsection.7.1.5}%
 \contentsline {subsection}{\numberline {7.1.6}\textcolor {Chapter }{BZs2Complex (for IsHyperplaneArrangement)}}{34}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}\textcolor {Chapter }{Non\texttt {\symbol {45}}\$K(\texttt {\symbol {92}}pi,1)\$ arrangements}}{34}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}\textcolor {Chapter }{CCSimpleTriangle (for IsHyperplaneArrangement)}}{34}{subsection.7.2.1}%
 \contentsline {chapter}{\numberline {8}\textcolor {Chapter }{Milnor fibers}}{35}{chapter.8}%
 \contentsline {section}{\numberline {8.1}\textcolor {Chapter }{Complexes}}{35}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{35}{subsection.8.1.1}%

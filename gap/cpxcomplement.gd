@@ -143,3 +143,33 @@ DeclareAttribute("BZs2Complex", IsHyperplaneArrangement);
 #! computing the complex for non-real arrangements since oriented matroid complexes in double dimension 
 #! and double number of hyperplanes need to be computed. 
 #! For a real arrangement, the $s^{(1)}$-complex is isomorphic to the Salvetti complex.
+
+#! @Section Non-$K(\pi,1)$ arrangements
+
+#! The following is experimental and needs to be tested further.
+
+#! @Arguments A
+#! @Returns true or false
+#! @Description
+#! Tests if there is a convex open subset of the ambient space, such that 
+#! the arrangement restricted to this convex open subset is a "simple triangle".
+#! This implies that the arrangement is not $K(\pi,1)$.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("CCSimpleTriangle",[IsHyperplaneArrangement]);
+
+
+
+##  This program is free software: you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation, either version 3 of the License, or
+##  (at your option) any later version.
+##
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+##
