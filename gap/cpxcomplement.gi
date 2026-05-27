@@ -325,7 +325,7 @@ end);
 InstallMethod(CCSimpleTriangle,
     [IsHyperplaneArrangement],
 function(A)
-local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, n, HNotInB;
+local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, n, HsNotInB, HNotInB;
     n := Length(Roots(A));
     if Rank(Roots(A))<>3 or Rank(Roots(A))=n then
         return false;
@@ -335,7 +335,8 @@ local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, O
     A2 := CCToRR2Arr(A);
     OA2 := OM(A2);
     for B in PotSimpTs do
-        HNotInB := Difference([1..n],B)[1];
+        HsNotInB := Difference([1..n],B);
+        HNotInB := HsNotInB[1];
         Bi1 := [B[1],B[2],B[1]+n,B[2]+n];
         Bi2 := [B[1],B[3],B[1]+n,B[3]+n];
         Bi3 := [B[2],B[3],B[2]+n,B[3]+n];
@@ -345,8 +346,17 @@ local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, O
         CsBi3 := CVs5{Positions(List(CVs5,x->x{Bi3}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
         for CsB in Cartesian(CsBi1,CsBi2,CsBi3) do
             OCsB := OMTConvexClosureOpenSubcomplex(OA2, OMTopes(OA2){Positions(List(OMTopes(OA2),T->true in List(CsB,c->OrderCovec(c,T))),true)});
-            if not( true in List(OCsB[5],c->c{Bi1}<>[0,0,0,0] and c{Bi2}<>[0,0,0,0] and c{Bi3}<>[0,0,0,0] and c{[HNotInB,HNotInB+n]}=[1,0]
-                    and true in List(LkFlats(L)(2),m->IsSubset(Concatenation(m,m+List(m,y->n)),SVZeroSet(c)))) ) then
+            if not( ForAny( OCsB[5],
+                    c-> c{Bi1}<>[0,0,0,0] 
+                        and 
+                        c{Bi2}<>[0,0,0,0] 
+                        and 
+                        c{Bi3}<>[0,0,0,0] 
+                        and 
+                        c{[HNotInB,HNotInB+n]}=[1,0]
+                        and 
+                        ForAny( HsNotInB, h->c{[h,h+n]}=[0,0] ) 
+                        ) ) then
                 Print(B,"\n");
                 return true;
             fi;
