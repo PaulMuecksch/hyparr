@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  25 MAY 2026 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  27 MAY 2026 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,62 +637,62 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7DE8E16C7C
 2D387B}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2517 \hyperdef{L}{X7DE8E16C7C2D387B}{}
+l.2522 \hyperdef{L}{X7DE8E16C7C2D387B}{}
                                         
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2550 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.2555 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                          [37
 
 ] [38]
 Chapter 10.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\char' on input line 2618.
+(hyperref)                removing `\char' on input line 2623.
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2618.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2623.
 
 pdfTeX warning (ext4): destination with the same identifier (name{L.X80841F8D80
 722081}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2625 \hyperdef{L}{X80841F8D80722081}{}
+l.2630 \hyperdef{L}{X80841F8D80722081}{}
                                          [39
 
 ]
-<./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf, id=666, 250.97162pt x 471.3
+<./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf, id=667, 250.97162pt x 471.3
 2385pt>
 File: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf Graphic file (type pdf)
 
 <use ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf  use
-d on input line 2698.
+d on input line 2703.
 (pdftex.def)             Requested size: 250.971pt x 471.3227pt.
  [40] [41 <./LaTeX_Examples/LaTeXDrawProjPicture_Example.pdf>] [42]
-<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=701, 242.6656pt x 185.
+<./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf, id=702, 242.6656pt x 185.
 33842pt>
 File: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf Graphic file (type pd
 f)
 <use ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf  u
-sed on input line 2804.
+sed on input line 2809.
 (pdftex.def)             Requested size: 242.665pt x 185.33797pt.
  [43 <./LaTeX_Examples/LaTeXDrawSpherePicture_Example.pdf>] [44]
-<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=725, 242.22194pt x 187.201
+<./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf, id=726, 242.22194pt x 187.201
 39pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf  used 
-on input line 2918.
+on input line 2923.
 (pdftex.def)             Requested size: 242.22133pt x 187.20091pt.
-<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=726, 216.7287pt x 190.4435pt>
+<./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf, id=727, 216.7287pt x 190.4435pt>
 File: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf Graphic file (type pdf)
 <use ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>
 Package pdftex.def Info: ./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf  used on in
-put line 2927.
+put line 2932.
 (pdftex.def)             Requested size: 216.72816pt x 190.44302pt.
  [45 <./LaTeX_Examples/LaTeXDrawTopeGraph_Example.pdf>]
 [46 <./LaTeX_Examples/LaTeXDrawTopeGraph_H3.pdf>]
@@ -702,11 +702,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2975 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.2980 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                          [47
 
 ] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 3169--3172
+Underfull \hbox (badness 10000) in paragraph at lines 3174--3177
 
  []
 
@@ -715,26 +715,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X871597447B
 B998A1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3183 \hyperdef{L}{X871597447BB998A1}{}
+l.3188 \hyperdef{L}{X871597447BB998A1}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3214--3217
+Underfull \hbox (badness 10000) in paragraph at lines 3219--3222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3228--3231
+Underfull \hbox (badness 10000) in paragraph at lines 3233--3236
 
  []
 
 [49] [50]
 Chapter 12.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3288--3291
+Underfull \hbox (badness 10000) in paragraph at lines 3293--3296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3300--3303
+Underfull \hbox (badness 10000) in paragraph at lines 3305--3308
 
  []
 
@@ -745,24 +745,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3312 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.3317 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3373--3376
+Underfull \hbox (badness 10000) in paragraph at lines 3378--3381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3390--3393
+Underfull \hbox (badness 10000) in paragraph at lines 3395--3398
 
  []
 
 [52]
-Underfull \hbox (badness 10000) in paragraph at lines 3407--3410
+Underfull \hbox (badness 10000) in paragraph at lines 3412--3415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3424--3427
+Underfull \hbox (badness 10000) in paragraph at lines 3429--3432
 
  []
 
@@ -826,10 +826,10 @@ ve/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (58 pages, 467590 bytes).
+Output written on HypArr.pdf (58 pages, 467781 bytes).
 PDF statistics:
- 1187 PDF objects out of 1200 (max. 8388607)
- 1061 compressed objects within 11 object streams
+ 1188 PDF objects out of 1200 (max. 8388607)
+ 1062 compressed objects within 11 object streams
  395 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

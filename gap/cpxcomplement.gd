@@ -146,15 +146,19 @@ DeclareAttribute("BZs2Complex", IsHyperplaneArrangement);
 
 #! @Section Non-$K(\pi,1)$ arrangements
 
-#! The following is experimental and needs to be tested further.
-
 #! @Arguments A
 #! @Returns true or false
 #! @Description
 #! Tests if there is a convex open subset of the ambient space, such that 
-#! the arrangement restricted to this convex open subset is a "simple triangle".
+#! the arrangement restricted to this convex open subset is a "simple triangle",
+#! see also <Ref Attr="HasSimpleTriangle" Label="for IsOrientedMatroid" Style="Text"/>.
 #! This implies that the arrangement is not $K(\pi,1)$.
 #! @BeginExampleSession
+#! gap> A:=Arr([ [ E(4), E(4), E(4) ], [ 0, E(4), 1 ], [ 1, 0, 1 ], [ 1, 0, 0 ] ]);
+#! <HyperplaneArrangement: 4 hyperplanes in 3-space>
+#! gap> CCSimpleTriangle(A);
+#! [ 1, 2, 3 ]
+#! true
 #! @EndExampleSession
 DeclareOperation("CCSimpleTriangle",[IsHyperplaneArrangement]);
 

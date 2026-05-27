@@ -157,16 +157,21 @@ gap> Cs2:=BZs2Complex(A);
 <Section Label="Chapter_Complements_of_complex_arrangements_Section_Non-Kpi1_arrangements">
 <Heading>Non-$K(\pi,1)$ arrangements</Heading>
 
- The following is experimental and needs to be tested further.
 <ManSection>
   <Oper Arg="A" Name="CCSimpleTriangle" Label="for IsHyperplaneArrangement"/>
  <Returns>true or false
 </Returns>
  <Description>
  Tests if there is a convex open subset of the ambient space, such that 
- the arrangement restricted to this convex open subset is a "simple triangle".
+ the arrangement restricted to this convex open subset is a "simple triangle",
+ see also <Ref Attr="HasSimpleTriangle" Label="for IsOrientedMatroid" Style="Text"/>.
  This implies that the arrangement is not <Math>K(\pi,1)</Math>.
 <Example><![CDATA[
+gap> A:=Arr([ [ E(4), E(4), E(4) ], [ 0, E(4), 1 ], [ 1, 0, 1 ], [ 1, 0, 0 ] ]);
+<HyperplaneArrangement: 4 hyperplanes in 3-space>
+gap> CCSimpleTriangle(A);
+[ 1, 2, 3 ]
+true
 ]]></Example>
 
 

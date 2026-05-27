@@ -2386,7 +2386,7 @@ real arrangement, the $s^{(1)}$\texttt{\symbol{45}}complex is isomorphic to the 
 \logpage{[ 7, 2, 0 ]}
 \hyperdef{L}{X7EAADDF781F29169}{}
 {
-  The following is experimental and needs to be tested further. 
+  
 
 \subsection{\textcolor{Chapter }{CCSimpleTriangle (for IsHyperplaneArrangement)}}
 \logpage{[ 7, 2, 1 ]}\nobreak
@@ -2400,9 +2400,14 @@ true or false
 
 
  Tests if there is a convex open subset of the ambient space, such that the
-arrangement restricted to this convex open subset is a "simple triangle". This
-implies that the arrangement is not $K(\pi,1)$. 
+arrangement restricted to this convex open subset is a "simple triangle", see
+also \texttt{HasSimpleTriangle} (\ref{HasSimpleTriangle:for IsOrientedMatroid}). This implies that the arrangement is not $K(\pi,1)$. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@A:=Arr([ [ E(4), E(4), E(4) ], [ 0, E(4), 1 ], [ 1, 0, 1 ], [ 1, 0, 0 ] ]);|
+  <HyperplaneArrangement: 4 hyperplanes in 3-space>
+  !gapprompt@gap>| !gapinput@CCSimpleTriangle(A);|
+  [ 1, 2, 3 ]
+  true
 \end{Verbatim}
  }
 
