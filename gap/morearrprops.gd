@@ -224,7 +224,7 @@ DeclareOperation("OMBoundedCpx", [IsOrientedMatroid, IsInt]);
 #!  This implies, that the Salvetti complex (see <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>)
 #!  is apsherical.
 #!  The functionality of the <B>cddinterface</B> package is used, 
-#!  to determine solotions of a system of linear inequalities.
+#!  to determine solutions of a system of linear inequalities.
 #!  
 #!  If the algorithm determines a suitable weight system for <A>OM</A>,
 #!  each list element consists of a weight, and a corner, i.e. a pair of

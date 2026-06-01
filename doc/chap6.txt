@@ -213,7 +213,7 @@
   [33X[0;0YOnly  for  oriented  matroids  of  rank 3. Determines, whether [3XOM[103X supports a
   system of weights as described by M. Falk in [Fal95]. This implies, that the
   Salvetti   complex   (see   [2XSalvettiComplex[102X   ([14X7.1-1[114X))  is  apsherical.  The
-  functionality of the [12Xcddinterface[112X package is used, to determine solotions of
+  functionality of the [12Xcddinterface[112X package is used, to determine solutions of
   a system of linear inequalities.[133X
   
   [33X[0;0YIf  the  algorithm  determines  a  suitable  weight system for [3XOM[103X, each list

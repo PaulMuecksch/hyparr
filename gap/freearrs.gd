@@ -146,8 +146,7 @@ DeclareAttribute("HArrIsFree", IsHyperplaneArrangement);
 #! @Arguments A
 #! @Returns true or false
 #! @Description
-#!  Determines, if <A>A</A> is locally free, i.e. if the derivation module
-#!  of all proper localizations are free.
+#!  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are free.
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareAttribute("HArrIsLocallyFree", IsHyperplaneArrangement);
@@ -179,8 +178,7 @@ DeclareSynonym("IsIF",IsInductivelyFree);
 #! @Arguments A
 #! @Returns true or false
 #! @Description
-#!  Determines, if <A>A</A> is locally free, i.e. if the derivation module
-#!  of all proper localizations are inductively free.
+#!  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are inductively free.
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareProperty("IsLocallyInductivelyFree", IsHyperplaneArrangement);
@@ -209,8 +207,7 @@ DeclareSynonym("IsDF",IsDivisionallyFree);
 #! @Arguments A
 #! @Returns true or false
 #! @Description
-#!  Determines, if <A>A</A> is locally free, i.e. if the derivation module
-#!  of all proper localizations are divisionallys free.
+#!  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are divisionallys free.
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareProperty("IsLocallyDivisionallyFree", IsHyperplaneArrangement);

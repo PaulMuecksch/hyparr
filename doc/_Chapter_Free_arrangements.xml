@@ -173,8 +173,7 @@ false
  <Returns>true or false
 </Returns>
  <Description>
-  Determines, if <A>A</A> is locally free, i.e. if the derivation module
-  of all proper localizations are free.
+  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are free.
 <Example><![CDATA[
 ]]></Example>
 
@@ -212,8 +211,7 @@ true
  <Returns>true or false
 </Returns>
  <Description>
-  Determines, if <A>A</A> is locally free, i.e. if the derivation module
-  of all proper localizations are inductively free.
+  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are inductively free.
 <Example><![CDATA[
 ]]></Example>
 
@@ -249,8 +247,7 @@ false
  <Returns>true or false
 </Returns>
  <Description>
-  Determines, if <A>A</A> is locally free, i.e. if the derivation module
-  of all proper localizations are divisionallys free.
+  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are divisionallys free.
 <Example><![CDATA[
 ]]></Example>
 

@@ -141,8 +141,7 @@
   [33X[1;0Y[29X[2XHArrIsLocallyFree[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
-  [33X[0;0YDetermines,  if  [3XA[103X  is  locally  free,  i.e. if the derivation module of all
-  proper localizations are free.[133X
+  [33X[0;0YDetermines, if [3XA[103X is locally free, i.e. if all proper localizations are free.[133X
   
   [4X[32X  Example  [32X[104X
   [4X[32X[104X
@@ -169,8 +168,8 @@
   [33X[1;0Y[29X[2XIsLocallyInductivelyFree[102X( [3XA[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
-  [33X[0;0YDetermines,  if  [3XA[103X  is  locally  free,  i.e. if the derivation module of all
-  proper localizations are inductively free.[133X
+  [33X[0;0YDetermines,  if  [3XA[103X  is  locally  free,  i.e. if all proper localizations are
+  inductively free.[133X
   
   [4X[32X  Example  [32X[104X
   [4X[32X[104X
@@ -198,8 +197,8 @@
   [33X[1;0Y[29X[2XIsLocallyDivisionallyFree[102X( [3XA[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
-  [33X[0;0YDetermines,  if  [3XA[103X  is  locally  free,  i.e. if the derivation module of all
-  proper localizations are divisionallys free.[133X
+  [33X[0;0YDetermines,  if  [3XA[103X  is  locally  free,  i.e. if all proper localizations are
+  divisionallys free.[133X
   
   [4X[32X  Example  [32X[104X
   [4X[32X[104X
