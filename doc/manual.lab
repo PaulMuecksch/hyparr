@@ -109,8 +109,11 @@
 \makelabel{hyparr:DerModProjDim for IsDerivationModule}{5.1.5}{X81D05AA282B2B62E}
 \makelabel{hyparr:DerModIsFree for IsDerivationModule}{5.1.6}{X81110BE983107955}
 \makelabel{hyparr:HArrIsFree for IsHyperplaneArrangement}{5.1.7}{X7C55194B8304FDAC}
+\makelabel{hyparr:HArrIsLocallyFree for IsHyperplaneArrangement}{5.1.8}{X7AEFB15E81DAF0DE}
 \makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{5.2.1}{X80F4D6247CAA1BDA}
-\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{5.2.2}{X85DAC6FC78DDED6D}
+\makelabel{hyparr:IsLocallyInductivelyFree for IsHyperplaneArrangement}{5.2.2}{X841E21C3818B1703}
+\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{5.2.3}{X85DAC6FC78DDED6D}
+\makelabel{hyparr:IsLocallyDivisionallyFree for IsHyperplaneArrangement}{5.2.4}{X79A356807BB94334}
 \makelabel{hyparr:LIsModularPair for IsGeomLattice, IsList, IsList}{6.1.1}{X78E6E11179F7ECB5}
 \makelabel{hyparr:LIsModularFlat for IsGeomLattice, IsList}{6.1.2}{X7FECD913876C637C}
 \makelabel{hyparr:LModularFlatsRk for IsGeomLattice, IsInt}{6.1.3}{X8271B52F816053DB}

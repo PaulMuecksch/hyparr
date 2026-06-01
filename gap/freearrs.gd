@@ -142,6 +142,16 @@ DeclareAttribute("DerModIsFree", IsDerivationModule);
 #! @EndExampleSession
 DeclareAttribute("HArrIsFree", IsHyperplaneArrangement);
 
+
+#! @Arguments A
+#! @Returns true or false
+#! @Description
+#!  Determines, if <A>A</A> is locally free, i.e. if the derivation module
+#!  of all proper localizations are free.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareAttribute("HArrIsLocallyFree", IsHyperplaneArrangement);
+
 # DeclareSynonym("DerMod",DAModule);
 
 
@@ -167,6 +177,17 @@ DeclareProperty("IsInductivelyFree", IsHyperplaneArrangement);
 DeclareSynonym("IsIF",IsInductivelyFree);
 
 #! @Arguments A
+#! @Returns true or false
+#! @Description
+#!  Determines, if <A>A</A> is locally free, i.e. if the derivation module
+#!  of all proper localizations are inductively free.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareProperty("IsLocallyInductivelyFree", IsHyperplaneArrangement);
+
+DeclareSynonym("IsLocIF",IsLocallyInductivelyFree);
+
+#! @Arguments A
 #! @Returns true or false.
 #! @Description
 #! Determines whether the arrangement <A>A</A> is <E>divisionally free</E>.
@@ -183,6 +204,18 @@ DeclareSynonym("IsIF",IsInductivelyFree);
 DeclareProperty("IsDivisionallyFree", IsHyperplaneArrangement);
 
 DeclareSynonym("IsDF",IsDivisionallyFree);
+
+
+#! @Arguments A
+#! @Returns true or false
+#! @Description
+#!  Determines, if <A>A</A> is locally free, i.e. if the derivation module
+#!  of all proper localizations are divisionallys free.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareProperty("IsLocallyDivisionallyFree", IsHyperplaneArrangement);
+
+DeclareSynonym("IsLocDF",IsLocallyDivisionallyFree);
 
 
 

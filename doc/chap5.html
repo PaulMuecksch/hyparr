@@ -32,12 +32,15 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X81D05AA282B2B62E">5.1-5 DerModProjDim</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X81110BE983107955">5.1-6 DerModIsFree</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7C55194B8304FDAC">5.1-7 HArrIsFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X7AEFB15E81DAF0DE">5.1-8 HArrIsLocallyFree</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap5.html#X82FF317F7EFD52AF">5.2 <span class="Heading">Freeness properties</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X80F4D6247CAA1BDA">5.2-1 IsInductivelyFree</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X85DAC6FC78DDED6D">5.2-2 IsDivisionallyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X841E21C3818B1703">5.2-2 IsLocallyInductivelyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X85DAC6FC78DDED6D">5.2-3 IsDivisionallyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap5.html#X79A356807BB94334">5.2-4 IsLocallyDivisionallyFree</a></span>
 </div></div>
 </div>
 
@@ -193,6 +196,19 @@ true
 false
 </pre></div>
 
+<p><a id="X7AEFB15E81DAF0DE" name="X7AEFB15E81DAF0DE"></a></p>
+
+<h5>5.1-8 HArrIsLocallyFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsLocallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines, if <var class="Arg">A</var> is locally free, i.e. if the derivation module of all proper localizations are free.</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
 <p><a id="X82FF317F7EFD52AF" name="X82FF317F7EFD52AF"></a></p>
 
 <h4>5.2 <span class="Heading">Freeness properties</span></h4>
@@ -214,9 +230,22 @@ false
 true
 </pre></div>
 
+<p><a id="X841E21C3818B1703" name="X841E21C3818B1703"></a></p>
+
+<h5>5.2-2 IsLocallyInductivelyFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyInductivelyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines, if <var class="Arg">A</var> is locally free, i.e. if the derivation module of all proper localizations are inductively free.</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
 <p><a id="X85DAC6FC78DDED6D" name="X85DAC6FC78DDED6D"></a></p>
 
-<h5>5.2-2 IsDivisionallyFree</h5>
+<h5>5.2-3 IsDivisionallyFree</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDivisionallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
@@ -233,6 +262,19 @@ true
 &lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDivisionallyFree(A);</span>
 false
+</pre></div>
+
+<p><a id="X79A356807BB94334" name="X79A356807BB94334"></a></p>
+
+<h5>5.2-4 IsLocallyDivisionallyFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyDivisionallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines, if <var class="Arg">A</var> is locally free, i.e. if the derivation module of all proper localizations are divisionallys free.</p>
+
+
+<div class="example"><pre>
 </pre></div>
 
 

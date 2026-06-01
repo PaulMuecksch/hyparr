@@ -325,7 +325,7 @@ end);
 InstallMethod(CCSimpleTriangle,
     [IsHyperplaneArrangement],
 function(A)
-local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, n, HsNotInB, HNotInB;
+local A2, L, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, n, HsNotInB, HNotInB;
     n := Length(Roots(A));
     if Rank(Roots(A))<>3 or Rank(Roots(A))=n then
         return false;
@@ -333,19 +333,18 @@ local A2, L, OA2, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, O
     L:=IntersectionLattice(A);;
     PotSimpTs:=LBases(L){Positions(List(LBases(L),B->not(false in List(Combinations(B,2),x->x in LkFlats(L)(2)))),true)};
     A2 := CCToRR2Arr(A);
-    OA2 := OM(A2);
     for B in PotSimpTs do
         HsNotInB := Difference([1..n],B);
         HNotInB := HsNotInB[1];
         Bi1 := [B[1],B[2],B[1]+n,B[2]+n];
         Bi2 := [B[1],B[3],B[1]+n,B[3]+n];
         Bi3 := [B[2],B[3],B[2]+n,B[3]+n];
-        CVs5:=OMCovectors(OA2)[6];; 
+        CVs5:=OMCovectors(OM(A2))[6];; 
         CsBi1 := CVs5{Positions(List(CVs5,x->x{Bi1}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
         CsBi2 := CVs5{Positions(List(CVs5,x->x{Bi2}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
         CsBi3 := CVs5{Positions(List(CVs5,x->x{Bi3}=[0,0,0,0] and x{[HNotInB,HNotInB+n]}=[1,0]),true)};
         for CsB in Cartesian(CsBi1,CsBi2,CsBi3) do
-            OCsB := OMTConvexClosureOpenSubcomplex(OA2, OMTopes(OA2){Positions(List(OMTopes(OA2),T->true in List(CsB,c->OrderCovec(c,T))),true)});
+            OCsB := OMTConvexClosureOpenSubcomplex(OM(A2), OMTopes(OM(A2)){Positions(List(OMTopes(OM(A2)),T->true in List(CsB,c->OrderCovec(c,T))),true)});
             if not( ForAny( OCsB[5],
                     c-> c{Bi1}<>[0,0,0,0] 
                         and 

@@ -6,10 +6,10 @@
                   [1X Computations with hyperplane arrangements [101X
   
   
-                                    0.26.05
+                                    0.26.06
   
   
-                                  27 May 2026
+                                  1 June 2026
   
   
                                   Paul Mücksch
@@ -113,9 +113,12 @@
       5.1-5 DerModProjDim
       5.1-6 DerModIsFree
       5.1-7 HArrIsFree
+      5.1-8 HArrIsLocallyFree
     5.2 [33X[0;0YFreeness properties[133X
       5.2-1 IsInductivelyFree
-      5.2-2 IsDivisionallyFree
+      5.2-2 IsLocallyInductivelyFree
+      5.2-3 IsDivisionallyFree
+      5.2-4 IsLocallyDivisionallyFree
   6 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
   matroids[133X
     6.1 [33X[0;0YSupersolvable arrangements[133X

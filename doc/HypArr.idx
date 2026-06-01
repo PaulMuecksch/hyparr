@@ -61,8 +61,11 @@
 \indexentry{DerModProjDim@\texttt  {DerModProjDim}!for IsDerivationModule|hyperpage}{23}
 \indexentry{DerModIsFree@\texttt  {DerModIsFree}!for IsDerivationModule|hyperpage}{23}
 \indexentry{HArrIsFree@\texttt  {HArrIsFree}!for IsHyperplaneArrangement|hyperpage}{24}
+\indexentry{HArrIsLocallyFree@\texttt  {HArrIsLocallyFree}!for IsHyperplaneArrangement|hyperpage}{24}
 \indexentry{IsInductivelyFree@\texttt  {IsInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{24}
-\indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{24}
+\indexentry{IsLocallyInductivelyFree@\texttt  {IsLocallyInductivelyFree}!for IsHyperplaneArrangement|hyperpage}{25}
+\indexentry{IsDivisionallyFree@\texttt  {IsDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{25}
+\indexentry{IsLocallyDivisionallyFree@\texttt  {IsLocallyDivisionallyFree}!for IsHyperplaneArrangement|hyperpage}{25}
 \indexentry{LIsModularPair@\texttt  {LIsModularPair}!for IsGeomLattice, IsList, IsList|hyperpage}{26}
 \indexentry{LIsModularFlat@\texttt  {LIsModularFlat}!for IsGeomLattice, IsList|hyperpage}{26}
 \indexentry{LModularFlatsRk@\texttt  {LModularFlatsRk}!for IsGeomLattice, IsInt|hyperpage}{27}
@@ -92,8 +95,8 @@
 \indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{37}
 \indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{38}
 \indexentry{LaTeXDrawProjPicture@\texttt  {LaTeXDrawProjPicture}|hyperpage}{39}
-\indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{41}
-\indexentry{LaTeXDrawTopeGraph@\texttt  {LaTeXDrawTopeGraph}|hyperpage}{43}
+\indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{42}
+\indexentry{LaTeXDrawTopeGraph@\texttt  {LaTeXDrawTopeGraph}|hyperpage}{44}
 \indexentry{LRealizationSpace@\texttt  {LRealizationSpace}!for IsGeomLattice, IsInt|hyperpage}{47}
 \indexentry{LGenSet@\texttt  {LGenSet}!for IsGeomLattice|hyperpage}{47}
 \indexentry{RSLattice@\texttt  {RSLattice}!for IsRealizationSpaceOfGeomLattice|hyperpage}{48}

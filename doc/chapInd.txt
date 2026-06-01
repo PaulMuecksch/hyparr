@@ -39,6 +39,7 @@
   [2XHArrIsGeneric[102X, for IsHyperplaneArrangement 2.3-3 
   [2XHArrIsInductivelyFactored[102X, for IsHyperplaneArrangement 6.5-3 
   [2XHArrIsIrreducible[102X, for IsHyperplaneArrangement 2.3-2 
+  [2XHArrIsLocallyFree[102X, for IsHyperplaneArrangement 5.1-8 
   [2XHArrIsSimplicial[102X, for IsHyperplaneArrangement and IsReal 6.3-1 
   [2XHArrIsSupersolvable[102X, for IsHyperplaneArrangement 6.1-5 
   [2XHArrRestriction[102X, for IsHyperplaneArrangement, IsInt 2.6-4 
@@ -48,11 +49,13 @@
   [2XHasSimpleTriangle[102X, for IsOrientedMatroid 4.3-3 
   [2XHyperplaneArrangement[102X, for IsList 2.1-1 
   [2XIntersectionLattice[102X, for IsHyperplaneArrangement 2.2-4 
-  [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 5.2-2 
+  [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 5.2-3 
   [2XIsFormal[102X, for IsHyperplaneArrangement 6.2-1 
   [2XIsInductivelyFree[102X, for IsHyperplaneArrangement 5.2-1 
   [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.6-2 
       for IsOrientedMatroid,IsOrientedMatroid 4.4-1 
+  [2XIsLocallyDivisionallyFree[102X, for IsHyperplaneArrangement 5.2-4 
+  [2XIsLocallyInductivelyFree[102X, for IsHyperplaneArrangement 5.2-2 
   [2XIsOMEquiv[102X 4.5-3 
   [2XIsReal[102X, for IsHyperplaneArrangement 2.3-1 
   [2XLaTeXDrawProjPicture[102X 10.1-1 

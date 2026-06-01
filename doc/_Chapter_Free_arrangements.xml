@@ -168,6 +168,21 @@ false
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="A" Name="HArrIsLocallyFree" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+  Determines, if <A>A</A> is locally free, i.e. if the derivation module
+  of all proper localizations are free.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
 </Section>
 
 
@@ -193,6 +208,21 @@ true
 
 
 <ManSection>
+  <Prop Arg="A" Name="IsLocallyInductivelyFree" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+  Determines, if <A>A</A> is locally free, i.e. if the derivation module
+  of all proper localizations are inductively free.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Prop Arg="A" Name="IsDivisionallyFree" Label="for IsHyperplaneArrangement"/>
  <Returns>true or false.
 </Returns>
@@ -207,6 +237,21 @@ gap> A:=AGpql(3,3,3);
 <HyperplaneArrangement: 9 hyperplanes in 3-space>
 gap> IsDivisionallyFree(A);
 false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="A" Name="IsLocallyDivisionallyFree" Label="for IsHyperplaneArrangement"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+  Determines, if <A>A</A> is locally free, i.e. if the derivation module
+  of all proper localizations are divisionallys free.
+<Example><![CDATA[
 ]]></Example>
 
 

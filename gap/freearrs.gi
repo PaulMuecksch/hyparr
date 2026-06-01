@@ -66,6 +66,17 @@ function(A)
 end);
 
 
+InstallMethod(HArrIsLocallyFree,
+	[IsHyperplaneArrangement],
+function(A)
+local L,Lk;
+	L:=IntersectionLattice(A);
+	Lk := LkFlats(L)(LRank(L)-1);
+	return not(false in ForAny(Lk,m-> HArrIsFree(Arr(Roots(A){m}))));
+end);
+
+
+
 InstallMethod(ViewObj,
     [IsDerivationModule],
 function(D)
@@ -261,6 +272,15 @@ local p,dim,i,j,r,AoH,AResH,tAoH,tAResH,c,expAoH,expAResH,expA,x,t;
 	return A!.IsInductivelyFree;
 end);
 
+InstallMethod(IsLocallyInductivelyFree,
+	[IsHyperplaneArrangement],
+function(A)
+local L,Lk;
+	L:=IntersectionLattice(A);
+	Lk := LkFlats(L)(LRank(L)-1);
+	return not(false in ForAny(Lk,m-> IsInductivelyFree(Arr(Roots(A){m}))));
+end);
+
 ####################################################################################################
 ## Test if the arrangement A is divisionally free
 ####################################################################################################
@@ -299,6 +319,15 @@ local AA,expAA,expA,h,n;
     A!.IsDivisionallyFree := false;
 	A!.IsInductivelyFree := false;
     return false;    
+end);
+
+InstallMethod(IsLocallyDivisionallyFree,
+	[IsHyperplaneArrangement],
+function(A)
+local L,Lk;
+	L:=IntersectionLattice(A);
+	Lk := LkFlats(L)(LRank(L)-1);
+	return not(false in ForAny(Lk,m-> IsDivisionallyFree(Arr(Roots(A){m}))));
 end);
 
 ####################################################################################################

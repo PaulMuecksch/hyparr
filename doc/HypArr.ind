@@ -91,6 +91,8 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{31}
   \item \texttt  {HArrIsIrreducible}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
+  \item \texttt  {HArrIsLocallyFree}
+    \subitem for IsHyperplaneArrangement, \hyperpage{24}
   \item \texttt  {HArrIsSimplicial}
     \subitem for IsHyperplaneArrangement and IsReal, \hyperpage{29}
   \item \texttt  {HArrIsSupersolvable}
@@ -112,7 +114,7 @@
   \item \texttt  {IntersectionLattice}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
   \item \texttt  {IsDivisionallyFree}
-    \subitem for IsHyperplaneArrangement, \hyperpage{24}
+    \subitem for IsHyperplaneArrangement, \hyperpage{25}
   \item \texttt  {IsFormal}
     \subitem for IsHyperplaneArrangement, \hyperpage{28}
   \item \texttt  {IsInductivelyFree}
@@ -121,6 +123,10 @@
     \subitem for IsHyperplaneArrangement,IsHyperplaneArrangement, 
 		\hyperpage{10}
     \subitem for IsOrientedMatroid,IsOrientedMatroid, \hyperpage{19}
+  \item \texttt  {IsLocallyDivisionallyFree}
+    \subitem for IsHyperplaneArrangement, \hyperpage{25}
+  \item \texttt  {IsLocallyInductivelyFree}
+    \subitem for IsHyperplaneArrangement, \hyperpage{25}
   \item \texttt  {IsOMEquiv}, \hyperpage{21}
   \item \texttt  {IsReal}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
@@ -128,8 +134,8 @@
   \indexspace
 
   \item \texttt  {LaTeXDrawProjPicture}, \hyperpage{39}
-  \item \texttt  {LaTeXDrawSpherePicture}, \hyperpage{41}
-  \item \texttt  {LaTeXDrawTopeGraph}, \hyperpage{43}
+  \item \texttt  {LaTeXDrawSpherePicture}, \hyperpage{42}
+  \item \texttt  {LaTeXDrawTopeGraph}, \hyperpage{44}
   \item \texttt  {LAtoms}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LAutGroup}
