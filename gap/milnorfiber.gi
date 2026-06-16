@@ -157,6 +157,55 @@ local PSet,OF,FaceCpxC, MFCpx, d, IncFs, F, CWFCpx;
     return CWFCpx;
 end);
 
+MaxChains := function(FP)
+local gSet, mC,mCn,mCs,mCsn, h,i,rs, Vs, ofun;
+    gSet:=FPGroundSet(FP);
+    ofun := FPOrder(FP);
+    h := Length(gSet);
+    Vs:=Concatenation(gSet);
+    mCsn := List(gSet[h],x->[Position(Vs,x)]);
+    for i in Reversed([1..h-1]) do
+        mCs := [];
+        for mC in mCsn do
+            for rs in gSet[i] do
+                if ofun(Vs[mC[h-i]],rs)=true then
+                    mCn := Concatenation(mC,[Position(Vs,rs)]);
+                    Add(mCs,mCn);
+                fi;;
+            od;;
+        od;;
+        mCsn:=ShallowCopy(mCs);
+    od;;
+    
+    return mCsn;
+end;
+
+
+InstallGlobalFunction(FPtoSCpx,
+function(FP)
+local OF, PSet, h, i,rs, Vs,mC,mCn,mCs,mCsn;
+    PSet:=FPGroundSet(FP);
+    OF:=FPOrder(FP);
+    h := Length(PSet);
+    Vs := Concatenation(PSet);
+    mCsn := List(PSet[1],x->[Position(Vs,x)]);
+    for i in [2..h] do
+        mCs := [];
+        for mC in mCsn do
+            for rs in PSet[i] do
+                if OF(Vs[mC[i-1]],rs)=true then
+                    mCn := Concatenation(mC,[Position(Vs,rs)]);
+                    Add(mCs,mCn);
+                fi;;
+            od;;
+        od;;
+        mCsn:=ShallowCopy(mCs);
+    od;;
+    
+    # return mCsn;
+    return SimplicialComplex(mCsn);
+end);
+
 
 
 ##  This program is free software: you can redistribute it and/or modify

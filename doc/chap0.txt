@@ -160,7 +160,9 @@
     8.1 [33X[0;0YComplexes[133X
       8.1-1 MilnorFiberComplex
       8.1-2 MilnorFiberComplex
-      8.1-3 FPtoCWCpx
+    8.2 [33X[0;0Y(Co)homology[133X
+      8.2-1 FPtoCWCpx
+      8.2-2 FPtoSCpx
   9 [33X[0;0YTope posets[133X
     9.1 [33X[0;0YOperations[133X
       9.1-1 TopePoset

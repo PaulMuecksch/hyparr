@@ -53,6 +53,12 @@ gap> MCpx:=MilnorFiberComplex(A);
 </ManSection>
 
 
+</Section>
+
+
+<Section Label="Chapter_Milnor_fibers_Section_Cohomology">
+<Heading>(Co)homology</Heading>
+
 <ManSection>
   <Func Arg="FP" Name="FPtoCWCpx" />
  <Returns>HAP CW Complex
@@ -71,6 +77,25 @@ gap> Homology(MCW,0);
 [ 0 ]
 gap> Homology(MCW,1);
 [ 0, 0, 0, 0, 0, 0, 0 ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Func Arg="FP" Name="FPtoSCpx" />
+ <Returns>Simplicial complex
+</Returns>
+ <Description>
+ Constructs the order complex of the <C>FacePoset</C> 
+ given as the set of maximal simplices, i.e. chains in <A>FP</A>.
+<Example><![CDATA[
+gap> MFP:=MilnorFiberComplex(AGpql(2,2,3));
+<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+gap> SMF:=FPtoSCpx(MFP);
+Simplicial complex of dimension 2.
 ]]></Example>
 
 

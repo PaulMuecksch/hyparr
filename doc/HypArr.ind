@@ -53,6 +53,7 @@
   \item \texttt  {FPOrder}
     \subitem for IsFacePoset, \hyperpage{33}
   \item \texttt  {FPtoCWCpx}, \hyperpage{36}
+  \item \texttt  {FPtoSCpx}, \hyperpage{36}
 
   \indexspace
 

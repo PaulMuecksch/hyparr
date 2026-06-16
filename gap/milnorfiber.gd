@@ -44,6 +44,15 @@ DeclareAttribute("MilnorFiberComplex", IsOrientedMatroid);
 #! @EndExampleSession
 DeclareAttribute("MilnorFiberComplex", IsHyperplaneArrangement);
 
+
+#################################
+##
+#! @Section (Co)homology
+##
+#################################
+
+DeclareAttribute("MFModPCohomRing", IsOrientedMatroid);
+
 #################################
 ##
 # @Section Global methods
@@ -75,6 +84,20 @@ DeclareGlobalFunction("MCpxOF");
 #! [ 0, 0, 0, 0, 0, 0, 0 ]
 #! @EndExampleSession
 DeclareGlobalFunction("FPtoCWCpx");
+
+
+#! @Arguments FP
+#! @Returns Simplicial complex
+#! @Description
+#! Constructs the order complex of the <C>FacePoset</C> 
+#! given as the set of maximal simplices, i.e. chains in <A>FP</A>.
+#! @BeginExampleSession
+#! gap> MFP:=MilnorFiberComplex(AGpql(2,2,3));
+#! <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
+#! gap> SMF:=FPtoSCpx(MFP);
+#! Simplicial complex of dimension 2.
+#! @EndExampleSession
+DeclareGlobalFunction("FPtoSCpx");
 
 
 
