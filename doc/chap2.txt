@@ -224,42 +224,49 @@
   
   [33X[0;0YReturns a function extracting the flats of rank [23Xk[123X in [3XL[103X.[133X
   
-  [1X2.4-5 LRankFunction[101X
+  [1X2.4-5 LCircuits[101X
+  
+  [33X[1;0Y[29X[2XLCircuits[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of lists[133X
+  
+  [33X[0;0YGives the circuits of [3XL[103X.[133X
+  
+  [1X2.4-6 LRankFunction[101X
   
   [33X[1;0Y[29X[2XLRankFunction[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA function[133X
   
   [33X[0;0YReturns the rank function of the geometric lattice [3XL[103X.[133X
   
-  [1X2.4-6 LGraph[101X
+  [1X2.4-7 LGraph[101X
   
   [33X[1;0Y[29X[2XLGraph[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya graph[133X
   
   [33X[0;0YConstructs the directed graph of the Hasse diagram of L.[133X
   
-  [1X2.4-7 LAutGroup[101X
+  [1X2.4-8 LAutGroup[101X
   
   [33X[1;0Y[29X[2XLAutGroup[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group[133X
   
   [33X[0;0YComputes the autmorphism group of L as a subgroup of [10XSym(LAtoms(L))[110X.[133X
   
-  [1X2.4-8 LMoebius[101X
+  [1X2.4-9 LMoebius[101X
   
   [33X[1;0Y[29X[2XLMoebius[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yfunction[133X
   
   [33X[0;0YReturns the Moebius function of [3XL[103X.[133X
   
-  [1X2.4-9 LCharPoly[101X
+  [1X2.4-10 LCharPoly[101X
   
   [33X[1;0Y[29X[2XLCharPoly[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yfunction[133X
   
   [33X[0;0YComputes the characteristic polynomial of [3XL[103X.[133X
   
-  [1X2.4-10 LBases[101X
+  [1X2.4-11 LBases[101X
   
   [33X[1;0Y[29X[2XLBases[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist of bases[133X
@@ -267,7 +274,6 @@
   [33X[0;0YDetermines the subsets of [10XLAtoms(L)[110X which are bases.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   
@@ -324,7 +330,27 @@
   
   [1X2.6 [33X[0;0YOperations[133X[101X
   
-  [1X2.6-1 LIsIsomorphic[101X
+  [1X2.6-1 LBsOfFlat[101X
+  
+  [33X[1;0Y[29X[2XLBsOfFlat[102X( [3XL[103X, [3Xm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist of bases of m[133X
+  
+  [33X[0;0YComputes the bases of [3Xm[103X in [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X2.6-2 LBaseCircuit[101X
+  
+  [33X[1;0Y[29X[2XLBaseCircuit[102X( [3XL[103X, [3XB[103X, [3Xe[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist[133X
+  
+  [33X[0;0YDetermines the circuit contained in [10XUnion(B,[e])[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X2.6-3 LIsIsomorphic[101X
   
   [33X[1;0Y[29X[2XLIsIsomorphic[102X( [3XLA[103X, [3XLB[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
@@ -342,7 +368,7 @@
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
-  [1X2.6-2 IsLEquiv[101X
+  [1X2.6-4 IsLEquiv[101X
   
   [33X[1;0Y[29X[2XIsLEquiv[102X( [3XA[103X, [3XB[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
@@ -363,7 +389,7 @@
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
   
-  [1X2.6-3 Essentialization[101X
+  [1X2.6-5 Essentialization[101X
   
   [33X[1;0Y[29X[2XEssentialization[102X( [3XA[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -382,7 +408,7 @@
     [4X[28X[ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ][128X[104X
   [4X[32X[104X
   
-  [1X2.6-4 HArrRestriction[101X
+  [1X2.6-6 HArrRestriction[101X
   
   [33X[1;0Y[29X[2XHArrRestriction[102X( [3XA[103X, [3Xi[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -390,7 +416,7 @@
   [33X[0;0YComputes  the  [13Xrestriction[113X  of  the  arrangement [3XA[103X to the [3Xi[103X-th hyperplane of
   [10XRoots(A)[110X.[133X
   
-  [1X2.6-5 HArrRestriction[101X
+  [1X2.6-7 HArrRestriction[101X
   
   [33X[1;0Y[29X[2XHArrRestriction[102X( [3XA[103X, [3XS[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
@@ -398,14 +424,14 @@
   [33X[0;0YComputes  the [13Xrestriction[113X of the arrangement [3XA[103X to the subspace orthogonal to
   the vectors in [10XS[110X.[133X
   
-  [1X2.6-6 HArrAddition[101X
+  [1X2.6-8 HArrAddition[101X
   
   [33X[1;0Y[29X[2XHArrAddition[102X( [3XA[103X, [3Xh[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
   
   [33X[0;0YComputes the [13Xaddition[113X of the arrangement [3XA[103X with respect to hyperplane [3Xh[103X.[133X
   
-  [1X2.6-7 HArrDeletion[101X
+  [1X2.6-9 HArrDeletion[101X
   
   [33X[1;0Y[29X[2XHArrDeletion[102X( [3XA[103X, [3Xi[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X

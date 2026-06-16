@@ -90,6 +90,25 @@ gap> A:=ConnectedSubgraphArr([[1,2],[1,3],[2,3]]); Roots(A);
 </ManSection>
 
 
+<ManSection>
+  <Oper Arg="Es" Name="GraphicArr" Label="for IsList"/>
+ <Returns>A hyperplane arrangement.
+</Returns>
+ <Description>
+  Generates the graphic arrangement
+  of the graph with edges <A>Es</A>.
+<P/>
+ Let <Math>G = (V,E)</Math> be an undirected graph with vertex set <Math>V = [\ell]</Math> and edge set <Math>E</Math>. 
+ The graphic arrangement has hyperplanes 
+ <Display> \{ \{x_i=x_j\} \mid \{i,j\} \in E\}.</Display>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

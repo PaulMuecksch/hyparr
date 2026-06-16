@@ -33,16 +33,18 @@
 \makelabel{hyparr:Tope posets}{9}{X7D123BFB84BF8125}
 \makelabel{hyparr:Operations}{9.1}{X7DE8E16C7C2D387B}
 \makelabel{hyparr:Attributes}{9.2}{X7C701DBF7BAE649A}
-\makelabel{hyparr:Visualization of real 3-arrangements}{10}{X867FB7CC79AC1DED}
-\makelabel{hyparr:Global methods}{10.1}{X80841F8D80722081}
-\makelabel{hyparr:Realization spaces of geometric lattices}{11}{X82EB57AB7B1A0B2D}
-\makelabel{hyparr:Construction}{11.1}{X7F6278CD87400D49}
-\makelabel{hyparr:Attributes}{11.2}{X7C701DBF7BAE649A}
-\makelabel{hyparr:Properties}{11.3}{X871597447BB998A1}
-\makelabel{hyparr:Further (auxillary) Operations}{11.4}{X8252A2A9867F3059}
-\makelabel{hyparr:Greedy search for arrangements}{12}{X85C6C672870D19BD}
-\makelabel{hyparr:Constructions}{12.1}{X836F56D77AA04554}
+\makelabel{hyparr:Varchenko-Gelfand algebra}{10}{X7D2C92907D8D1C24}
+\makelabel{hyparr:Construction}{10.1}{X7F6278CD87400D49}
+\makelabel{hyparr:Visualization of real 3-arrangements}{11}{X867FB7CC79AC1DED}
+\makelabel{hyparr:Global methods}{11.1}{X80841F8D80722081}
+\makelabel{hyparr:Realization spaces of geometric lattices}{12}{X82EB57AB7B1A0B2D}
+\makelabel{hyparr:Construction}{12.1}{X7F6278CD87400D49}
 \makelabel{hyparr:Attributes}{12.2}{X7C701DBF7BAE649A}
+\makelabel{hyparr:Properties}{12.3}{X871597447BB998A1}
+\makelabel{hyparr:Further (auxillary) Operations}{12.4}{X8252A2A9867F3059}
+\makelabel{hyparr:Greedy search for arrangements}{13}{X85C6C672870D19BD}
+\makelabel{hyparr:Constructions}{13.1}{X836F56D77AA04554}
+\makelabel{hyparr:Attributes}{13.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:References}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
@@ -61,36 +63,41 @@
 \makelabel{hyparr:LAtoms for IsGeomLattice}{2.4.2}{X83946B69829FDA91}
 \makelabel{hyparr:LRank for IsGeomLattice}{2.4.3}{X86823DA184430088}
 \makelabel{hyparr:LkFlats for IsGeomLattice}{2.4.4}{X8255DDFF86DBA263}
-\makelabel{hyparr:LRankFunction for IsGeomLattice}{2.4.5}{X807645CC7B8E3782}
-\makelabel{hyparr:LGraph for IsGeomLattice}{2.4.6}{X79A909F786A94A47}
-\makelabel{hyparr:LAutGroup for IsGeomLattice}{2.4.7}{X7E1203CB7969B4A0}
-\makelabel{hyparr:LMoebius for IsGeomLattice}{2.4.8}{X80A93EFA7EC0496A}
-\makelabel{hyparr:LCharPoly for IsGeomLattice}{2.4.9}{X83B3C4237FD0B9AA}
-\makelabel{hyparr:LBases for IsGeomLattice}{2.4.10}{X84CE9FBB8328238A}
+\makelabel{hyparr:LCircuits for IsGeomLattice}{2.4.5}{X79E7FFC57EA88B25}
+\makelabel{hyparr:LRankFunction for IsGeomLattice}{2.4.6}{X807645CC7B8E3782}
+\makelabel{hyparr:LGraph for IsGeomLattice}{2.4.7}{X79A909F786A94A47}
+\makelabel{hyparr:LAutGroup for IsGeomLattice}{2.4.8}{X7E1203CB7969B4A0}
+\makelabel{hyparr:LMoebius for IsGeomLattice}{2.4.9}{X80A93EFA7EC0496A}
+\makelabel{hyparr:LCharPoly for IsGeomLattice}{2.4.10}{X83B3C4237FD0B9AA}
+\makelabel{hyparr:LBases for IsGeomLattice}{2.4.11}{X84CE9FBB8328238A}
 \makelabel{hyparr:LIsIrreducible for IsGeomLattice}{2.5.1}{X85C9C1F47977DAD5}
 \makelabel{hyparr:LIsBoolean for IsGeomLattice}{2.5.2}{X8444E8837E952FE4}
 \makelabel{hyparr:LIsGeneric for IsGeomLattice}{2.5.3}{X7ACA5D857F2A0913}
-\makelabel{hyparr:LIsIsomorphic for IsGeomLattice,IsGeomLattice}{2.6.1}{X83FBDD9A843D6DC7}
-\makelabel{hyparr:IsLEquiv for IsHyperplaneArrangement,IsHyperplaneArrangement}{2.6.2}{X8367DC267DCC0635}
-\makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.6.3}{X7BD35FA07804BB70}
-\makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsInt}{2.6.4}{X844F12CE82E65BFC}
-\makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsList}{2.6.5}{X78D9B1217862EF28}
-\makelabel{hyparr:HArrAddition for IsHyperplaneArrangement, IsList}{2.6.6}{X826DE7F27A79AF95}
-\makelabel{hyparr:HArrDeletion for IsHyperplaneArrangement, IsInt}{2.6.7}{X7F207BE684694078}
+\makelabel{hyparr:LBsOfFlat for IsGeomLattice, IsList}{2.6.1}{X796101CA7ABE629F}
+\makelabel{hyparr:LBaseCircuit for IsGeomLattice,IsList,IsInt}{2.6.2}{X8121D57E7CFC5D2F}
+\makelabel{hyparr:LIsIsomorphic for IsGeomLattice,IsGeomLattice}{2.6.3}{X83FBDD9A843D6DC7}
+\makelabel{hyparr:IsLEquiv for IsHyperplaneArrangement,IsHyperplaneArrangement}{2.6.4}{X8367DC267DCC0635}
+\makelabel{hyparr:Essentialization for IsHyperplaneArrangement}{2.6.5}{X7BD35FA07804BB70}
+\makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsInt}{2.6.6}{X844F12CE82E65BFC}
+\makelabel{hyparr:HArrRestriction for IsHyperplaneArrangement, IsList}{2.6.7}{X78D9B1217862EF28}
+\makelabel{hyparr:HArrAddition for IsHyperplaneArrangement, IsList}{2.6.8}{X826DE7F27A79AF95}
+\makelabel{hyparr:HArrDeletion for IsHyperplaneArrangement, IsInt}{2.6.9}{X7F207BE684694078}
 \makelabel{hyparr:AGpql}{3.1.1}{X858205A37B7EB5FA}
 \makelabel{hyparr:SsS3}{3.1.2}{X81AD6CA97F71ED33}
 \makelabel{hyparr:ConnectedSubgraphArr for IsList}{3.1.3}{X82DB5C6F83FDC443}
+\makelabel{hyparr:GraphicArr for IsList}{3.1.4}{X7FCCA2A1867439E3}
 \makelabel{hyparr:OrientedMatroid for IsList}{4.1.1}{X82EE52377B03CC80}
 \makelabel{hyparr:OMRank for IsOrientedMatroid}{4.2.1}{X7E30B85C7CE42908}
 \makelabel{hyparr:OMGroundSet for IsOrientedMatroid}{4.2.2}{X78C0E4A0861CAD2F}
 \makelabel{hyparr:OMLForms for IsOrientedMatroid}{4.2.3}{X86AAB8F480E92ABB}
 \makelabel{hyparr:OMGeomLattice for IsOrientedMatroid}{4.2.4}{X81CC016D818B3068}
 \makelabel{hyparr:OMCocircuits for IsOrientedMatroid}{4.2.5}{X83F110A97A80B140}
-\makelabel{hyparr:OMTopes for IsOrientedMatroid}{4.2.6}{X7A786DEC83707791}
-\makelabel{hyparr:TopeGraph for IsOrientedMatroid}{4.2.7}{X7B35E88A79675D1E}
-\makelabel{hyparr:OMCovectors for IsOrientedMatroid}{4.2.8}{X7B2D2370811476C9}
-\makelabel{hyparr:OMChirotope for IsOrientedMatroid}{4.2.9}{X854947857F5E5D29}
-\makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{4.2.10}{X7EE8B82D792A4A64}
+\makelabel{hyparr:OMCircuits for IsOrientedMatroid}{4.2.6}{X81FAB9007F648019}
+\makelabel{hyparr:OMTopes for IsOrientedMatroid}{4.2.7}{X7A786DEC83707791}
+\makelabel{hyparr:TopeGraph for IsOrientedMatroid}{4.2.8}{X7B35E88A79675D1E}
+\makelabel{hyparr:OMCovectors for IsOrientedMatroid}{4.2.9}{X7B2D2370811476C9}
+\makelabel{hyparr:OMChirotope for IsOrientedMatroid}{4.2.10}{X854947857F5E5D29}
+\makelabel{hyparr:OMRankFunction for IsOrientedMatroid}{4.2.11}{X7EE8B82D792A4A64}
 \makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{4.3.1}{X86B70496781D3884}
 \makelabel{hyparr:HasSimpleSimplex for IsOrientedMatroid}{4.3.2}{X7D5893807BB9785E}
 \makelabel{hyparr:HasSimpleTriangle for IsOrientedMatroid}{4.3.3}{X80F069657B2045C0}
@@ -103,17 +110,18 @@
 \makelabel{hyparr:IsOMEquiv}{4.5.3}{X80CB9A9C8135A314}
 \makelabel{hyparr:SeparatingSet}{4.5.4}{X793FF1428136B222}
 \makelabel{hyparr:DerModule for IsHyperplaneArrangement}{5.1.1}{X783314398329E3BE}
-\makelabel{hyparr:DerModGenerators for IsDerivationModule}{5.1.2}{X7B6780568674988A}
-\makelabel{hyparr:DerModPRing for IsDerivationModule}{5.1.3}{X8174C2FD82AA2B81}
-\makelabel{hyparr:DerModDegreeSequence for IsDerivationModule}{5.1.4}{X78A309B97E68E70F}
-\makelabel{hyparr:DerModProjDim for IsDerivationModule}{5.1.5}{X81D05AA282B2B62E}
-\makelabel{hyparr:DerModIsFree for IsDerivationModule}{5.1.6}{X81110BE983107955}
-\makelabel{hyparr:HArrIsFree for IsHyperplaneArrangement}{5.1.7}{X7C55194B8304FDAC}
-\makelabel{hyparr:HArrIsLocallyFree for IsHyperplaneArrangement}{5.1.8}{X7AEFB15E81DAF0DE}
-\makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{5.2.1}{X80F4D6247CAA1BDA}
-\makelabel{hyparr:IsLocallyInductivelyFree for IsHyperplaneArrangement}{5.2.2}{X841E21C3818B1703}
-\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{5.2.3}{X85DAC6FC78DDED6D}
-\makelabel{hyparr:IsLocallyDivisionallyFree for IsHyperplaneArrangement}{5.2.4}{X79A356807BB94334}
+\makelabel{hyparr:DerPModule for IsHyperplaneArrangement, IsInt}{5.1.2}{X7E91FED384460819}
+\makelabel{hyparr:DerModGenerators for IsDerivationModule}{5.1.3}{X7B6780568674988A}
+\makelabel{hyparr:DerModPRing for IsDerivationModule}{5.1.4}{X8174C2FD82AA2B81}
+\makelabel{hyparr:DerModDegreeSequence for IsDerivationModule}{5.1.5}{X78A309B97E68E70F}
+\makelabel{hyparr:DerModProjDim for IsDerivationModule}{5.1.6}{X81D05AA282B2B62E}
+\makelabel{hyparr:DerModIsFree for IsDerivationModule}{5.2.1}{X81110BE983107955}
+\makelabel{hyparr:HArrIsFree for IsHyperplaneArrangement}{5.2.2}{X7C55194B8304FDAC}
+\makelabel{hyparr:HArrIsLocallyFree for IsHyperplaneArrangement}{5.2.3}{X7AEFB15E81DAF0DE}
+\makelabel{hyparr:IsInductivelyFree for IsHyperplaneArrangement}{5.2.4}{X80F4D6247CAA1BDA}
+\makelabel{hyparr:IsLocallyInductivelyFree for IsHyperplaneArrangement}{5.2.5}{X841E21C3818B1703}
+\makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{5.2.6}{X85DAC6FC78DDED6D}
+\makelabel{hyparr:IsLocallyDivisionallyFree for IsHyperplaneArrangement}{5.2.7}{X79A356807BB94334}
 \makelabel{hyparr:LIsModularPair for IsGeomLattice, IsList, IsList}{6.1.1}{X78E6E11179F7ECB5}
 \makelabel{hyparr:LIsModularFlat for IsGeomLattice, IsList}{6.1.2}{X7FECD913876C637C}
 \makelabel{hyparr:LModularFlatsRk for IsGeomLattice, IsInt}{6.1.3}{X8271B52F816053DB}
@@ -142,29 +150,30 @@
 \makelabel{hyparr:TPGroundSet for IsTopePoset}{9.2.1}{X81854C4D816A501A}
 \makelabel{hyparr:TPBaseTope for IsTopePoset}{9.2.2}{X82CEA0EB7B0AF294}
 \makelabel{hyparr:TPRankPoly for IsTopePoset}{9.2.3}{X8258DD9D78DDA4C6}
-\makelabel{hyparr:LaTeXDrawProjPicture}{10.1.1}{X78621314826E390B}
-\makelabel{hyparr:LaTeXDrawSpherePicture}{10.1.2}{X786A445B7D28CCF6}
-\makelabel{hyparr:LaTeXDrawTopeGraph}{10.1.3}{X80A3836987B539A6}
-\makelabel{hyparr:LRealizationSpace for IsGeomLattice, IsInt}{11.1.1}{X7F6CF5007E699D5D}
-\makelabel{hyparr:LGenSet for IsGeomLattice}{11.2.1}{X7A65C85187E4D34B}
-\makelabel{hyparr:RSLattice for IsRealizationSpaceOfGeomLattice}{11.2.2}{X8070EC1580B975D7}
-\makelabel{hyparr:RSCharacteristic for IsRealizationSpaceOfGeomLattice}{11.2.3}{X7C7870A785D8894E}
-\makelabel{hyparr:RSDefField for IsRealizationSpaceOfGeomLattice}{11.2.4}{X877A2CF98702D72D}
-\makelabel{hyparr:RSCoeffMat for IsRealizationSpaceOfGeomLattice}{11.2.5}{X7D89A3E87AE33F30}
-\makelabel{hyparr:RSDimension for IsRealizationSpaceOfGeomLattice}{11.2.6}{X7CD7DC23844DAB58}
-\makelabel{hyparr:RSPRing for IsRealizationSpaceOfGeomLattice}{11.2.7}{X7FE8075E860D45B1}
-\makelabel{hyparr:RSIdealMinors for IsRealizationSpaceOfGeomLattice}{11.2.8}{X8495A2627D020F1B}
-\makelabel{hyparr:RSNonMinors for IsRealizationSpaceOfGeomLattice}{11.2.9}{X78DA8570821E4775}
-\makelabel{hyparr:RSEvalPoint for IsRealizationSpaceOfGeomLattice}{11.2.10}{X81A7EF29810F3103}
-\makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{11.3.1}{X781923918754E3CE}
-\makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{11.4.1}{X800FB3BB86AD2F1A}
-\makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{11.4.2}{X84F182B783389C2B}
-\makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt}{12.1.1}{X84821A5B843965BA}
-\makelabel{hyparr:CharPolySplits}{12.1.2}{X86BF30D17A33874E}
-\makelabel{hyparr:DistMSetInvL}{12.1.3}{X81A9CF1C804C8B60}
-\makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{12.2.1}{X87BDEC467DE8A782}
-\makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{12.2.2}{X830ABDC2827862CD}
-\makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{12.2.3}{X7BDEEF027FB60AB3}
-\makelabel{hyparr:GreedySearchNOfHs for IsHArrGreedySearch}{12.2.4}{X7D09885B7C69A621}
-\makelabel{hyparr:GreedySearchTargetFct for IsHArrGreedySearch}{12.2.5}{X81F9A4827A5ABC5D}
-\makelabel{hyparr:GreedySearchMaxIterations for IsHArrGreedySearch}{12.2.6}{X83296B32854C2647}
+\makelabel{hyparr:VGAlgebra for IsOrientedMatroid, IsField}{10.1.1}{X83D9D94F8524E138}
+\makelabel{hyparr:LaTeXDrawProjPicture}{11.1.1}{X78621314826E390B}
+\makelabel{hyparr:LaTeXDrawSpherePicture}{11.1.2}{X786A445B7D28CCF6}
+\makelabel{hyparr:LaTeXDrawTopeGraph}{11.1.3}{X80A3836987B539A6}
+\makelabel{hyparr:LRealizationSpace for IsGeomLattice, IsInt}{12.1.1}{X7F6CF5007E699D5D}
+\makelabel{hyparr:LGenSet for IsGeomLattice}{12.2.1}{X7A65C85187E4D34B}
+\makelabel{hyparr:RSLattice for IsRealizationSpaceOfGeomLattice}{12.2.2}{X8070EC1580B975D7}
+\makelabel{hyparr:RSCharacteristic for IsRealizationSpaceOfGeomLattice}{12.2.3}{X7C7870A785D8894E}
+\makelabel{hyparr:RSDefField for IsRealizationSpaceOfGeomLattice}{12.2.4}{X877A2CF98702D72D}
+\makelabel{hyparr:RSCoeffMat for IsRealizationSpaceOfGeomLattice}{12.2.5}{X7D89A3E87AE33F30}
+\makelabel{hyparr:RSDimension for IsRealizationSpaceOfGeomLattice}{12.2.6}{X7CD7DC23844DAB58}
+\makelabel{hyparr:RSPRing for IsRealizationSpaceOfGeomLattice}{12.2.7}{X7FE8075E860D45B1}
+\makelabel{hyparr:RSIdealMinors for IsRealizationSpaceOfGeomLattice}{12.2.8}{X8495A2627D020F1B}
+\makelabel{hyparr:RSNonMinors for IsRealizationSpaceOfGeomLattice}{12.2.9}{X78DA8570821E4775}
+\makelabel{hyparr:RSEvalPoint for IsRealizationSpaceOfGeomLattice}{12.2.10}{X81A7EF29810F3103}
+\makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{12.3.1}{X781923918754E3CE}
+\makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{12.4.1}{X800FB3BB86AD2F1A}
+\makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{12.4.2}{X84F182B783389C2B}
+\makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat}{13.1.1}{X852F55B38601271B}
+\makelabel{hyparr:CharPolySplits}{13.1.2}{X86BF30D17A33874E}
+\makelabel{hyparr:DistMSetInvL}{13.1.3}{X81A9CF1C804C8B60}
+\makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{13.2.1}{X87BDEC467DE8A782}
+\makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{13.2.2}{X830ABDC2827862CD}
+\makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{13.2.3}{X7BDEEF027FB60AB3}
+\makelabel{hyparr:GreedySearchNOfHs for IsHArrGreedySearch}{13.2.4}{X7D09885B7C69A621}
+\makelabel{hyparr:GreedySearchTargetFct for IsHArrGreedySearch}{13.2.5}{X81F9A4827A5ABC5D}
+\makelabel{hyparr:GreedySearchMaxIterations for IsHArrGreedySearch}{13.2.6}{X83296B32854C2647}

@@ -27,6 +27,7 @@ AutoDoc( rec(
                 "gap/cpxcomplement.gd", 
                 "gap/milnorfiber.gd",
                 "gap/topeposet.gd",
+                "gap/vgalgebra.gd",
                 "gap/drawarrs.gd",
                 "gap/realizationspace.gd",
                 "gap/greedy.gi"

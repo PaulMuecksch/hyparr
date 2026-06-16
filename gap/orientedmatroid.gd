@@ -17,7 +17,7 @@ DeclareRepresentation(
     IsOrientedMatroid,
     ["rank","GroundSet","lforms","chirotope",
     "chirocore","cocircuits","covectors","rkfct",
-    "lattice","topegraph","salcpx"]
+    "lattice","topegraph","salcpx","circuits"]
 );
 
 
@@ -146,6 +146,17 @@ DeclareAttribute("OMGeomLattice", IsOrientedMatroid);
 #! @EndExampleSession
 DeclareAttribute("OMCocircuits", IsOrientedMatroid);
 
+
+#! @Arguments OM
+#! @Returns A list
+#! @Description
+#! Computes the (signed) circuits of the oriented matroid OM.
+#! 
+#! The result is a list of sign vectors.
+#!
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareAttribute("OMCircuits", IsOrientedMatroid);
 
 
 #! @Arguments OM
@@ -398,6 +409,12 @@ DeclareGlobalFunction("SVPlusSet");
 # @Description
 # Computes
 DeclareGlobalFunction("SVMinusSet");
+
+# @Arguments 
+# @Returns 
+# @Description
+# Computes
+DeclareGlobalFunction("SVIsOrthogonal");
 
 
 #! @Arguments sv1, sv2

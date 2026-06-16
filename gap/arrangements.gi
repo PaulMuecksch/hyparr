@@ -192,6 +192,53 @@ local RkFct;
     return RkFct;
 end);
 
+
+InstallMethod(LBsOfFlat,
+    [ IsGeomLattice, IsList ],
+function(L,m)
+local Bs, B,e,r,rkL;
+    rkL:=LRankFunction(L);
+    r:=rkL(m);
+    Bs:=Combinations(m,r);
+    Bs:=Bs{Positions(List(Bs,B->rkL(B)=r),true)};;
+    return Bs;
+end);
+
+InstallMethod(LBaseCircuit,
+    [IsGeomLattice,IsList,IsInt],
+function(L,B,e)
+local i,ig,ct,ctn,rkL;
+    rkL:=LRankFunction(L);
+    ct:=Union(B,[e]);
+    for i in [1..Length(B)-1] do
+        ig:=Position(List(B,g->rkL(Difference(ct,[g]))<rkL(ct)),true);
+        # Print(ct," ",ig,"\n");
+        if ig<>fail then
+            ct:=Difference(ct,B{[ig]});
+        else
+            return ct;
+        fi;
+    od;
+end);
+
+InstallMethod(LCircuits,
+    [IsGeomLattice],
+function(L)
+local rkL, Circs, Bs, B, e, c;
+    rkL:=LRankFunction(L);
+    Circs := [];
+    Bs := LBases(L);
+    for B in Bs do
+        for e in Difference(LAtoms(L),B) do
+            c:=LBaseCircuit(L,B,e);
+            if not(c in Circs) then
+                Add(Circs,c);
+            fi;;
+        od;
+    od;
+    return Circs;
+end);
+
 InstallMethod(LGraph,
     [IsGeomLattice],
 function(L)
@@ -355,7 +402,6 @@ end);
 InstallMethod(IntersectionLattice,
     [IsHyperplaneArrangement],
 function(A)
-
     local R, Rt, r, Ls, type, L;
 
     if IsBound(A!.lattice) then
@@ -391,7 +437,7 @@ function(A)
     );
 
     A!.lattice := L;
-    return L;
+    return A!.lattice;
 
 end);
 
@@ -417,7 +463,12 @@ end);
 InstallMethod( CharPoly,
     [ IsHyperplaneArrangement ],
 function(A)
-    local dim,t,r,q,v,rn,An,AA,x,z,ns;
+    local dim,t,r,q,v,rn,An,AA,x,z,ns, chi;
+
+
+    if IsBound(A!.charpoly) then
+        return A!.charpoly;
+    fi;
 
 	r:=ShallowCopy(Roots(A));
 	q:=Size(r);
@@ -426,19 +477,22 @@ function(A)
 	t:=X(Rationals,"t");
 
 	if dim=0 then
-		return 0*t;
+        chi := 0*t;
 	elif q=2 then
-		return t^dim-2*t^(dim-1)+t^(dim-2);
+		chi:= t^dim-2*t^(dim-1)+t^(dim-2);
 	elif q=1 then
-		return t^dim-t^(dim-1);
+		chi := t^dim-t^(dim-1);
 	else
 		AA := HyperplaneArrangement(r{[2..q]});
 		An := HArrRestriction(A,1);
-	    return CharPoly(AA) - CharPoly(An);
+	    chi := CharPoly(AA) - CharPoly(An);
     fi;
+
+    A!.charpoly:=chi;
+    return A!.charpoly;
 end);
 
-## Factorization of an rational Polynomial
+## Factorization of a rational Polynomial
 
 BindGlobal("facQ",
 function(g)
@@ -464,7 +518,7 @@ InstallMethod(HArrIsIrreducible,
     [IsHyperplaneArrangement],
 function(A)
 local f,t;
-	f :=CharPoly(A);
+	f := CharPoly(A);
 	t := IndeterminateOfUnivariateRationalFunction(f);
 	if f mod t = 0*t or f mod (t-1)^2 = 0*t then
 		return false;
@@ -689,7 +743,7 @@ end);
 InstallMethod( HArrAddition,
 	[IsHyperplaneArrangement, IsList],
 function(A,h)
-local AA,Lo,Ln,L,type,Rt;
+local AA,Lo,Ln,L,type,Rt, CharPolyAA;
     if Length(h)<>Dimension(A) or ForAny(h,x->not(x in HArrDefField(A))) then
         Print("New hyperplane ",h," is not in the ambient space!\n");
         return fail;
@@ -715,16 +769,81 @@ local AA,Lo,Ln,L,type,Rt;
                 atoms := Concatenation(Ln[1])
             )
         );
-        AA!.lattice := L;
+        SetIntersectionLattice(AA,L);
+        # AA!.lattice := L;
     fi;
 
+    if Tester(CharPoly)(A) then
+        CharPolyAA:= CharPoly(A) - CharPoly(HArrRestriction(AA,[h]));
+        SetCharPoly(AA,CharPolyAA);
+        # AA!.charpoly := CharPolyAA;
+    fi;;
+
     return AA;
+end);
+
+InstallGlobalFunction(LDelH,
+function(L,h)
+local Ls,LDel, LDels,g, LPerm, n, k, Lk, Xk, XkDel, rkFkt, type;
+    Ls:=LGroundSet(L);
+    n := Length(Ls[1]);
+    if h = n then
+        g:=(1);
+    else
+        g := Product(List([h+1..n],x->(x,x-1)));
+    fi;;
+    LPerm := List(Ls,Lk->List(Lk,x->List(x,y->y^g)));
+    LDels:=[];
+    rkFkt := S->LRankFunction(L)(List(S,x->x^(g^(-1))));
+    for k in [1..Length(LPerm)] do
+        Lk:=[];
+        for Xk in LPerm[k] do
+            XkDel := Difference(Xk,[n]);
+            if rkFkt(XkDel)=rkFkt(Xk) then
+                Add(Lk,Set(XkDel));
+            fi;;
+        od;;
+        if Lk<>[] then
+            Add(LDels,Set(Lk));
+        fi;;
+    od;;
+
+    type := NewType(GeomLatticeFamily,
+                    IsGeomLatticeRep);
+    LDel:= Objectify(type,
+        rec(
+            grGroundSet := LDels,
+            rank := Length(LDels),
+            atoms := Concatenation(LDels[1])
+        )
+    );
+    
+    return LDel;
 end);
 
 InstallMethod( HArrDeletion,
 	[IsHyperplaneArrangement, IsInt],
 function(A,i)
-    return Arr(Roots(A){Concatenation([1..i-1],[i+1..Length(Roots(A))])});
+local ADel, LDel, L, CharPolyADel;
+
+    ADel := Arr(Roots(A){Concatenation([1..i-1],[i+1..Length(Roots(A))])});
+
+    if Tester(IntersectionLattice)(A) then
+        L:=IntersectionLattice(A);
+        LDel := LDelH(L,i);
+        SetIntersectionLattice(ADel,LDel);
+        # ADel!.lattice := LDel;
+    fi;
+
+
+    if Tester(CharPoly)(A) then
+        CharPolyADel:= CharPoly(A) + CharPoly(HArrRestriction(A,i));
+        SetCharPoly(ADel,CharPolyADel);
+        # ADel!.charpoly := CharPolyADel;;
+    fi;;
+
+
+    return ADel;
 end);
 
 
@@ -798,6 +917,26 @@ local dim,x,y;
 
 	return List([1..dim],x->(-1)^(x+1)*Determinant(List(m,y->y{Concatenation([1..(x-1)],[(x+1)..dim])})));
 
+end);
+
+## Combinations of coatoms and lines giving new hyperplanes
+InstallMethod(CandidatesLinesPointsNewH,
+    [IsGeomLattice],
+function(L)
+local d, SpPs, Cs, c, Lts, Pts;
+    d := LRank(L);
+    Pts := ShallowCopy(LkFlats(L)(d-1)); 
+    Lts := ShallowCopy(LkFlats(L)(2)); 
+    SpPs :=[];
+    # Cs:=Concatenation(List(ShallowCopy(Pts),x->List(ShallowCopy(Lts),y->[x,y])));
+    Cs := Cartesian(Pts,Lts);
+    for c in Cs do
+        if Intersection(c)=[] then
+            Add(SpPs,c);
+        fi;
+    od;
+    
+    return SpPs;
 end);
 
 InstallGlobalFunction(NewHsThroughIntersections,

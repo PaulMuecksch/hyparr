@@ -259,6 +259,13 @@ DeclareAttribute("LRank", IsGeomLattice);
 #! Returns a function extracting the flats of rank $k$ in <A>L</A>.
 DeclareAttribute("LkFlats", IsGeomLattice);
 
+
+#! @Arguments L
+#! @Returns a list of lists
+#! @Description
+#! Gives the circuits of <A>L</A>.
+DeclareAttribute("LCircuits", IsGeomLattice);
+
 #! @Arguments L
 #! @Returns A function
 #! @Description
@@ -297,9 +304,10 @@ DeclareAttribute("LCharPoly", IsGeomLattice);
 #! @Description
 #! Determines the subsets of <C>LAtoms(L)</C> which are bases.
 #! @BeginExampleSession
-#! 
 #! @EndExampleSession
 DeclareAttribute("LBases", IsGeomLattice);
+
+
 
 
 #################################
@@ -361,6 +369,23 @@ DeclareProperty("LIsGeneric", IsGeomLattice );
 ##
 #################################
 
+#! @Arguments L, m
+#! @Returns list of bases of m
+#! @Description
+#! Computes the bases of <A>m</A> in <A>L</A>.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("LBsOfFlat",[IsGeomLattice, IsList]);
+
+#! @Arguments L,B,e
+#! @Returns list
+#! @Description
+#! Determines the circuit contained in <C>Union(B,[e])</C>.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("LBaseCircuit", [IsGeomLattice,IsList,IsInt]);
+
+
 #! @Arguments LA, LB
 #! @Returns true or false
 #! @Description
@@ -419,11 +444,14 @@ DeclareOperation( "Essentialization", [IsHyperplaneArrangement]);
 
 DeclareOperation( "LLocalizationRk", [IsGeomLattice, IsList, IsInt]);
 
+DeclareOperation("CandidatesLinesPointsNewH",[IsGeomLattice]);
+
 # some auxillary functions
 DeclareGlobalFunction( "HypArr_PWLinInd" );
 DeclareGlobalFunction( "HypArr_wg" );
 DeclareGlobalFunction( "HypArr_wg3" );
 DeclareGlobalFunction( "HypArr_AddHToL" );
+DeclareGlobalFunction( "LDelH" );
 DeclareGlobalFunction( "tnow");
 DeclareGlobalFunction("cj");
 DeclareGlobalFunction("NewHsThroughIntersections");

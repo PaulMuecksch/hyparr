@@ -497,8 +497,23 @@ a function
 
  
 
-\subsection{\textcolor{Chapter }{LRankFunction (for IsGeomLattice)}}
+\subsection{\textcolor{Chapter }{LCircuits (for IsGeomLattice)}}
 \logpage{[ 2, 4, 5 ]}\nobreak
+\hyperdef{L}{X79E7FFC57EA88B25}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LCircuits({\mdseries\slshape L})\index{LCircuits@\texttt{LCircuits}!for IsGeomLattice}
+\label{LCircuits:for IsGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list of lists 
+
+
+
+ Gives the circuits of \mbox{\texttt{\mdseries\slshape L}}. }
+
+ 
+
+\subsection{\textcolor{Chapter }{LRankFunction (for IsGeomLattice)}}
+\logpage{[ 2, 4, 6 ]}\nobreak
 \hyperdef{L}{X807645CC7B8E3782}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LRankFunction({\mdseries\slshape L})\index{LRankFunction@\texttt{LRankFunction}!for IsGeomLattice}
 \label{LRankFunction:for IsGeomLattice}
@@ -513,7 +528,7 @@ A function
  
 
 \subsection{\textcolor{Chapter }{LGraph (for IsGeomLattice)}}
-\logpage{[ 2, 4, 6 ]}\nobreak
+\logpage{[ 2, 4, 7 ]}\nobreak
 \hyperdef{L}{X79A909F786A94A47}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LGraph({\mdseries\slshape L})\index{LGraph@\texttt{LGraph}!for IsGeomLattice}
 \label{LGraph:for IsGeomLattice}
@@ -528,7 +543,7 @@ a graph
  
 
 \subsection{\textcolor{Chapter }{LAutGroup (for IsGeomLattice)}}
-\logpage{[ 2, 4, 7 ]}\nobreak
+\logpage{[ 2, 4, 8 ]}\nobreak
 \hyperdef{L}{X7E1203CB7969B4A0}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LAutGroup({\mdseries\slshape L})\index{LAutGroup@\texttt{LAutGroup}!for IsGeomLattice}
 \label{LAutGroup:for IsGeomLattice}
@@ -543,7 +558,7 @@ a group
  
 
 \subsection{\textcolor{Chapter }{LMoebius (for IsGeomLattice)}}
-\logpage{[ 2, 4, 8 ]}\nobreak
+\logpage{[ 2, 4, 9 ]}\nobreak
 \hyperdef{L}{X80A93EFA7EC0496A}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LMoebius({\mdseries\slshape L})\index{LMoebius@\texttt{LMoebius}!for IsGeomLattice}
 \label{LMoebius:for IsGeomLattice}
@@ -558,7 +573,7 @@ function
  
 
 \subsection{\textcolor{Chapter }{LCharPoly (for IsGeomLattice)}}
-\logpage{[ 2, 4, 9 ]}\nobreak
+\logpage{[ 2, 4, 10 ]}\nobreak
 \hyperdef{L}{X83B3C4237FD0B9AA}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LCharPoly({\mdseries\slshape L})\index{LCharPoly@\texttt{LCharPoly}!for IsGeomLattice}
 \label{LCharPoly:for IsGeomLattice}
@@ -573,7 +588,7 @@ function
  
 
 \subsection{\textcolor{Chapter }{LBases (for IsGeomLattice)}}
-\logpage{[ 2, 4, 10 ]}\nobreak
+\logpage{[ 2, 4, 11 ]}\nobreak
 \hyperdef{L}{X84CE9FBB8328238A}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LBases({\mdseries\slshape L})\index{LBases@\texttt{LBases}!for IsGeomLattice}
 \label{LBases:for IsGeomLattice}
@@ -585,7 +600,6 @@ list of bases
 
  Determines the subsets of \texttt{LAtoms(L)} which are bases. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  
 \end{Verbatim}
  }
 
@@ -677,8 +691,44 @@ are boolean.
 {
   
 
-\subsection{\textcolor{Chapter }{LIsIsomorphic (for IsGeomLattice,IsGeomLattice)}}
+\subsection{\textcolor{Chapter }{LBsOfFlat (for IsGeomLattice, IsList)}}
 \logpage{[ 2, 6, 1 ]}\nobreak
+\hyperdef{L}{X796101CA7ABE629F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LBsOfFlat({\mdseries\slshape L, m})\index{LBsOfFlat@\texttt{LBsOfFlat}!for IsGeomLattice, IsList}
+\label{LBsOfFlat:for IsGeomLattice, IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list of bases of m 
+
+
+
+ Computes the bases of \mbox{\texttt{\mdseries\slshape m}} in \mbox{\texttt{\mdseries\slshape L}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LBaseCircuit (for IsGeomLattice,IsList,IsInt)}}
+\logpage{[ 2, 6, 2 ]}\nobreak
+\hyperdef{L}{X8121D57E7CFC5D2F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LBaseCircuit({\mdseries\slshape L, B, e})\index{LBaseCircuit@\texttt{LBaseCircuit}!for IsGeomLattice,IsList,IsInt}
+\label{LBaseCircuit:for IsGeomLattice,IsList,IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+list 
+
+
+
+ Determines the circuit contained in \texttt{Union(B,[e])}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LIsIsomorphic (for IsGeomLattice,IsGeomLattice)}}
+\logpage{[ 2, 6, 3 ]}\nobreak
 \hyperdef{L}{X83FBDD9A843D6DC7}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsIsomorphic({\mdseries\slshape LA, LB})\index{LIsIsomorphic@\texttt{LIsIsomorphic}!for IsGeomLattice,IsGeomLattice}
 \label{LIsIsomorphic:for IsGeomLattice,IsGeomLattice}
@@ -706,7 +756,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}
-\logpage{[ 2, 6, 2 ]}\nobreak
+\logpage{[ 2, 6, 4 ]}\nobreak
 \hyperdef{L}{X8367DC267DCC0635}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsLEquiv({\mdseries\slshape A, B})\index{IsLEquiv@\texttt{IsLEquiv}!for IsHyperplaneArrangement,IsHyperplaneArrangement}
 \label{IsLEquiv:for IsHyperplaneArrangement,IsHyperplaneArrangement}
@@ -736,7 +786,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{Essentialization (for IsHyperplaneArrangement)}}
-\logpage{[ 2, 6, 3 ]}\nobreak
+\logpage{[ 2, 6, 5 ]}\nobreak
 \hyperdef{L}{X7BD35FA07804BB70}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{Essentialization({\mdseries\slshape A})\index{Essentialization@\texttt{Essentialization}!for IsHyperplaneArrangement}
 \label{Essentialization:for IsHyperplaneArrangement}
@@ -762,7 +812,7 @@ becomes essential.
  
 
 \subsection{\textcolor{Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsInt)}}
-\logpage{[ 2, 6, 4 ]}\nobreak
+\logpage{[ 2, 6, 6 ]}\nobreak
 \hyperdef{L}{X844F12CE82E65BFC}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrRestriction({\mdseries\slshape A, i})\index{HArrRestriction@\texttt{HArrRestriction}!for IsHyperplaneArrangement, IsInt}
 \label{HArrRestriction:for IsHyperplaneArrangement, IsInt}
@@ -777,7 +827,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsList)}}
-\logpage{[ 2, 6, 5 ]}\nobreak
+\logpage{[ 2, 6, 7 ]}\nobreak
 \hyperdef{L}{X78D9B1217862EF28}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrRestriction({\mdseries\slshape A, S})\index{HArrRestriction@\texttt{HArrRestriction}!for IsHyperplaneArrangement, IsList}
 \label{HArrRestriction:for IsHyperplaneArrangement, IsList}
@@ -792,7 +842,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{HArrAddition (for IsHyperplaneArrangement, IsList)}}
-\logpage{[ 2, 6, 6 ]}\nobreak
+\logpage{[ 2, 6, 8 ]}\nobreak
 \hyperdef{L}{X826DE7F27A79AF95}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrAddition({\mdseries\slshape A, h})\index{HArrAddition@\texttt{HArrAddition}!for IsHyperplaneArrangement, IsList}
 \label{HArrAddition:for IsHyperplaneArrangement, IsList}
@@ -807,7 +857,7 @@ A hyperplane arrangement.
  
 
 \subsection{\textcolor{Chapter }{HArrDeletion (for IsHyperplaneArrangement, IsInt)}}
-\logpage{[ 2, 6, 7 ]}\nobreak
+\logpage{[ 2, 6, 9 ]}\nobreak
 \hyperdef{L}{X7F207BE684694078}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrDeletion({\mdseries\slshape A, i})\index{HArrDeletion@\texttt{HArrDeletion}!for IsHyperplaneArrangement, IsInt}
 \label{HArrDeletion:for IsHyperplaneArrangement, IsInt}
@@ -918,6 +968,28 @@ A hyperplane arrangement.
   <HyperplaneArrangement: 7 hyperplanes in 3-space>
   [ [ 1, 1, 1 ], [ 0, 1, 1 ], [ 0, 0, 1 ], [ 0, 1, 0 ], 
     [ 1, 0, 1 ], [ 1, 0, 0 ], [ 1, 1, 0 ] ]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{GraphicArr (for IsList)}}
+\logpage{[ 3, 1, 4 ]}\nobreak
+\hyperdef{L}{X7FCCA2A1867439E3}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GraphicArr({\mdseries\slshape Es})\index{GraphicArr@\texttt{GraphicArr}!for IsList}
+\label{GraphicArr:for IsList}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+A hyperplane arrangement. 
+
+
+
+ Generates the graphic arrangement of the graph with edges \mbox{\texttt{\mdseries\slshape Es}}. 
+
+ Let $G = (V,E)$ be an undirected graph with vertex set $V = [\ell]$ and edge set $E$. The graphic arrangement has hyperplanes 
+\[ \{ \{x_i=x_j\} \mid \{i,j\} \in E\}.\]
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
 \end{Verbatim}
  }
 
@@ -1113,8 +1185,30 @@ A list
 
  
 
-\subsection{\textcolor{Chapter }{OMTopes (for IsOrientedMatroid)}}
+\subsection{\textcolor{Chapter }{OMCircuits (for IsOrientedMatroid)}}
 \logpage{[ 4, 2, 6 ]}\nobreak
+\hyperdef{L}{X81FAB9007F648019}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCircuits({\mdseries\slshape OM})\index{OMCircuits@\texttt{OMCircuits}!for IsOrientedMatroid}
+\label{OMCircuits:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list 
+
+
+
+ Computes the (signed) circuits of the oriented matroid OM. 
+
+ The result is a list of sign vectors. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMTopes (for IsOrientedMatroid)}}
+\logpage{[ 4, 2, 7 ]}\nobreak
 \hyperdef{L}{X7A786DEC83707791}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMTopes({\mdseries\slshape OM})\index{OMTopes@\texttt{OMTopes}!for IsOrientedMatroid}
 \label{OMTopes:for IsOrientedMatroid}
@@ -1137,7 +1231,7 @@ A list
  
 
 \subsection{\textcolor{Chapter }{TopeGraph (for IsOrientedMatroid)}}
-\logpage{[ 4, 2, 7 ]}\nobreak
+\logpage{[ 4, 2, 8 ]}\nobreak
 \hyperdef{L}{X7B35E88A79675D1E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{TopeGraph({\mdseries\slshape OM})\index{TopeGraph@\texttt{TopeGraph}!for IsOrientedMatroid}
 \label{TopeGraph:for IsOrientedMatroid}
@@ -1165,7 +1259,7 @@ element.
  
 
 \subsection{\textcolor{Chapter }{OMCovectors (for IsOrientedMatroid)}}
-\logpage{[ 4, 2, 8 ]}\nobreak
+\logpage{[ 4, 2, 9 ]}\nobreak
 \hyperdef{L}{X7B2D2370811476C9}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMCovectors({\mdseries\slshape OM})\index{OMCovectors@\texttt{OMCovectors}!for IsOrientedMatroid}
 \label{OMCovectors:for IsOrientedMatroid}
@@ -1193,7 +1287,7 @@ faces of dimension $k-1$.
  
 
 \subsection{\textcolor{Chapter }{OMChirotope (for IsOrientedMatroid)}}
-\logpage{[ 4, 2, 9 ]}\nobreak
+\logpage{[ 4, 2, 10 ]}\nobreak
 \hyperdef{L}{X854947857F5E5D29}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMChirotope({\mdseries\slshape OM})\index{OMChirotope@\texttt{OMChirotope}!for IsOrientedMatroid}
 \label{OMChirotope:for IsOrientedMatroid}
@@ -1216,7 +1310,7 @@ A function
  
 
 \subsection{\textcolor{Chapter }{OMRankFunction (for IsOrientedMatroid)}}
-\logpage{[ 4, 2, 10 ]}\nobreak
+\logpage{[ 4, 2, 11 ]}\nobreak
 \hyperdef{L}{X7EE8B82D792A4A64}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMRankFunction({\mdseries\slshape OM})\index{OMRankFunction@\texttt{OMRankFunction}!for IsOrientedMatroid}
 \label{OMRankFunction:for IsOrientedMatroid}
@@ -1537,8 +1631,26 @@ Derivation module
 
  
 
-\subsection{\textcolor{Chapter }{DerModGenerators (for IsDerivationModule)}}
+\subsection{\textcolor{Chapter }{DerPModule (for IsHyperplaneArrangement, IsInt)}}
 \logpage{[ 5, 1, 2 ]}\nobreak
+\hyperdef{L}{X7E91FED384460819}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerPModule({\mdseries\slshape A, p[, mult]})\index{DerPModule@\texttt{DerPModule}!for IsHyperplaneArrangement, IsInt}
+\label{DerPModule:for IsHyperplaneArrangement, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+Derivation module 
+
+
+
+ Computes the \emph{(multi) p\texttt{\symbol{45}}derivation module} $D^p(A)$ ($D^p(A,m)$) of the arrangement \mbox{\texttt{\mdseries\slshape A}} (with multiplicities given as a list by \mbox{\texttt{\mdseries\slshape mult}}). 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{DerModGenerators (for IsDerivationModule)}}
+\logpage{[ 5, 1, 3 ]}\nobreak
 \hyperdef{L}{X7B6780568674988A}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModGenerators({\mdseries\slshape D})\index{DerModGenerators@\texttt{DerModGenerators}!for IsDerivationModule}
 \label{DerModGenerators:for IsDerivationModule}
@@ -1567,7 +1679,7 @@ list
  
 
 \subsection{\textcolor{Chapter }{DerModPRing (for IsDerivationModule)}}
-\logpage{[ 5, 1, 3 ]}\nobreak
+\logpage{[ 5, 1, 4 ]}\nobreak
 \hyperdef{L}{X8174C2FD82AA2B81}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModPRing({\mdseries\slshape D})\index{DerModPRing@\texttt{DerModPRing}!for IsDerivationModule}
 \label{DerModPRing:for IsDerivationModule}
@@ -1587,7 +1699,7 @@ Polynomial ring
  
 
 \subsection{\textcolor{Chapter }{DerModDegreeSequence (for IsDerivationModule)}}
-\logpage{[ 5, 1, 4 ]}\nobreak
+\logpage{[ 5, 1, 5 ]}\nobreak
 \hyperdef{L}{X78A309B97E68E70F}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModDegreeSequence({\mdseries\slshape D})\index{DerModDegreeSequence@\texttt{DerModDegreeSequence}!for IsDerivationModule}
 \label{DerModDegreeSequence:for IsDerivationModule}
@@ -1609,7 +1721,7 @@ list
  
 
 \subsection{\textcolor{Chapter }{DerModProjDim (for IsDerivationModule)}}
-\logpage{[ 5, 1, 5 ]}\nobreak
+\logpage{[ 5, 1, 6 ]}\nobreak
 \hyperdef{L}{X81D05AA282B2B62E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModProjDim({\mdseries\slshape D})\index{DerModProjDim@\texttt{DerModProjDim}!for IsDerivationModule}
 \label{DerModProjDim:for IsDerivationModule}
@@ -1632,14 +1744,21 @@ A non\texttt{\symbol{45}}negative integer
 \end{Verbatim}
  }
 
+ }
+
  
+\section{\textcolor{Chapter }{Freeness properties}}\label{Chapter_Free_arrangements_Section_Freeness_properties}
+\logpage{[ 5, 2, 0 ]}
+\hyperdef{L}{X82FF317F7EFD52AF}{}
+{
+  
 
 \subsection{\textcolor{Chapter }{DerModIsFree (for IsDerivationModule)}}
-\logpage{[ 5, 1, 6 ]}\nobreak
+\logpage{[ 5, 2, 1 ]}\nobreak
 \hyperdef{L}{X81110BE983107955}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DerModIsFree({\mdseries\slshape D})\index{DerModIsFree@\texttt{DerModIsFree}!for IsDerivationModule}
 \label{DerModIsFree:for IsDerivationModule}
-}\hfill{\scriptsize (attribute)}}\\
+}\hfill{\scriptsize (property)}}\\
 \textbf{\indent Returns:\ }
 true or false 
 
@@ -1661,11 +1780,11 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{HArrIsFree (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 1, 7 ]}\nobreak
+\logpage{[ 5, 2, 2 ]}\nobreak
 \hyperdef{L}{X7C55194B8304FDAC}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsFree({\mdseries\slshape A})\index{HArrIsFree@\texttt{HArrIsFree}!for IsHyperplaneArrangement}
 \label{HArrIsFree:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (attribute)}}\\
+}\hfill{\scriptsize (property)}}\\
 \textbf{\indent Returns:\ }
 true or false 
 
@@ -1688,11 +1807,11 @@ ring of the ambient space.
  
 
 \subsection{\textcolor{Chapter }{HArrIsLocallyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 1, 8 ]}\nobreak
+\logpage{[ 5, 2, 3 ]}\nobreak
 \hyperdef{L}{X7AEFB15E81DAF0DE}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrIsLocallyFree({\mdseries\slshape A})\index{HArrIsLocallyFree@\texttt{HArrIsLocallyFree}!for IsHyperplaneArrangement}
 \label{HArrIsLocallyFree:for IsHyperplaneArrangement}
-}\hfill{\scriptsize (attribute)}}\\
+}\hfill{\scriptsize (property)}}\\
 \textbf{\indent Returns:\ }
 true or false 
 
@@ -1703,17 +1822,10 @@ true or false
 \end{Verbatim}
  }
 
- }
-
  
-\section{\textcolor{Chapter }{Freeness properties}}\label{Chapter_Free_arrangements_Section_Freeness_properties}
-\logpage{[ 5, 2, 0 ]}
-\hyperdef{L}{X82FF317F7EFD52AF}{}
-{
-  
 
 \subsection{\textcolor{Chapter }{IsInductivelyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 2, 1 ]}\nobreak
+\logpage{[ 5, 2, 4 ]}\nobreak
 \hyperdef{L}{X80F4D6247CAA1BDA}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsInductivelyFree({\mdseries\slshape A})\index{IsInductivelyFree@\texttt{IsInductivelyFree}!for IsHyperplaneArrangement}
 \label{IsInductivelyFree:for IsHyperplaneArrangement}
@@ -1735,7 +1847,7 @@ true or false.
  
 
 \subsection{\textcolor{Chapter }{IsLocallyInductivelyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 2, 2 ]}\nobreak
+\logpage{[ 5, 2, 5 ]}\nobreak
 \hyperdef{L}{X841E21C3818B1703}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsLocallyInductivelyFree({\mdseries\slshape A})\index{IsLocallyInductivelyFree@\texttt{IsLocallyInductivelyFree}!for IsHyperplaneArrangement}
 \label{IsLocallyInductivelyFree:for IsHyperplaneArrangement}
@@ -1753,7 +1865,7 @@ true or false
  
 
 \subsection{\textcolor{Chapter }{IsDivisionallyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 2, 3 ]}\nobreak
+\logpage{[ 5, 2, 6 ]}\nobreak
 \hyperdef{L}{X85DAC6FC78DDED6D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsDivisionallyFree({\mdseries\slshape A})\index{IsDivisionallyFree@\texttt{IsDivisionallyFree}!for IsHyperplaneArrangement}
 \label{IsDivisionallyFree:for IsHyperplaneArrangement}
@@ -1779,7 +1891,7 @@ true or false.
  
 
 \subsection{\textcolor{Chapter }{IsLocallyDivisionallyFree (for IsHyperplaneArrangement)}}
-\logpage{[ 5, 2, 4 ]}\nobreak
+\logpage{[ 5, 2, 7 ]}\nobreak
 \hyperdef{L}{X79A356807BB94334}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{IsLocallyDivisionallyFree({\mdseries\slshape A})\index{IsLocallyDivisionallyFree@\texttt{IsLocallyDivisionallyFree}!for IsHyperplaneArrangement}
 \label{IsLocallyDivisionallyFree:for IsHyperplaneArrangement}
@@ -2674,19 +2786,53 @@ A polynomial.
  }
 
    
-\chapter{\textcolor{Chapter }{Visualization of real 3\texttt{\symbol{45}}arrangements}}\label{Chapter_Visualization_of_real_3-arrangements}
+\chapter{\textcolor{Chapter }{Varchenko\texttt{\symbol{45}}Gelfand algebra}}\label{Chapter_Varchenko-Gelfand_algebra}
 \logpage{[ 10, 0, 0 ]}
+\hyperdef{L}{X7D2C92907D8D1C24}{}
+{
+  
+
+ 
+\section{\textcolor{Chapter }{Construction}}\label{Chapter_Varchenko-Gelfand_algebra_Section_Construction}
+\logpage{[ 10, 1, 0 ]}
+\hyperdef{L}{X7F6278CD87400D49}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{VGAlgebra (for IsOrientedMatroid, IsField)}}
+\logpage{[ 10, 1, 1 ]}\nobreak
+\hyperdef{L}{X83D9D94F8524E138}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{VGAlgebra({\mdseries\slshape OM, field})\index{VGAlgebra@\texttt{VGAlgebra}!for IsOrientedMatroid, IsField}
+\label{VGAlgebra:for IsOrientedMatroid, IsField}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+Varchenko\texttt{\symbol{45}}Gelfand albgera 
+
+
+
+ Constructs the Varchenko\texttt{\symbol{45}}Gelfand algebra of \mbox{\texttt{\mdseries\slshape OM}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{Visualization of real 3\texttt{\symbol{45}}arrangements}}\label{Chapter_Visualization_of_real_3-arrangements}
+\logpage{[ 11, 0, 0 ]}
 \hyperdef{L}{X867FB7CC79AC1DED}{}
 {
   
 \section{\textcolor{Chapter }{Global methods}}\label{Chapter_Visualization_of_real_3-arrangements_Section_Global_methods}
-\logpage{[ 10, 1, 0 ]}
+\logpage{[ 11, 1, 0 ]}
 \hyperdef{L}{X80841F8D80722081}{}
 {
   
 
 \subsection{\textcolor{Chapter }{LaTeXDrawProjPicture}}
-\logpage{[ 10, 1, 1 ]}\nobreak
+\logpage{[ 11, 1, 1 ]}\nobreak
 \hyperdef{L}{X78621314826E390B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawProjPicture({\mdseries\slshape A[, DrawOptions]})\index{LaTeXDrawProjPicture@\texttt{LaTeXDrawProjPicture}}
 \label{LaTeXDrawProjPicture}
@@ -2762,7 +2908,7 @@ arrangement obtained by intersecting \mbox{\texttt{\mdseries\slshape A}} with th
  
 
 \subsection{\textcolor{Chapter }{LaTeXDrawSpherePicture}}
-\logpage{[ 10, 1, 2 ]}\nobreak
+\logpage{[ 11, 1, 2 ]}\nobreak
 \hyperdef{L}{X786A445B7D28CCF6}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawSpherePicture({\mdseries\slshape A})\index{LaTeXDrawSpherePicture@\texttt{LaTeXDrawSpherePicture}}
 \label{LaTeXDrawSpherePicture}
@@ -2868,7 +3014,7 @@ and added via
  
 
 \subsection{\textcolor{Chapter }{LaTeXDrawTopeGraph}}
-\logpage{[ 10, 1, 3 ]}\nobreak
+\logpage{[ 11, 1, 3 ]}\nobreak
 \hyperdef{L}{X80A3836987B539A6}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LaTeXDrawTopeGraph({\mdseries\slshape A})\index{LaTeXDrawTopeGraph@\texttt{LaTeXDrawTopeGraph}}
 \label{LaTeXDrawTopeGraph}
@@ -2990,20 +3136,20 @@ their duals.
 
    
 \chapter{\textcolor{Chapter }{Realization spaces of geometric lattices}}\label{Chapter_Realization_spaces_of_geometric_lattices}
-\logpage{[ 11, 0, 0 ]}
+\logpage{[ 12, 0, 0 ]}
 \hyperdef{L}{X82EB57AB7B1A0B2D}{}
 {
   
 
  The computation of the realization space uses the \textsc{singular} package to call functions from \textsc{Singular} \cite{DGPS_Singular4}. Our implementation is an adaptation of the algorithm described in \cite[Algorithm 3.9]{Cuntz2022_Greedy} for geometric lattices of arbitrary rank. 
 \section{\textcolor{Chapter }{Construction}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Construction}
-\logpage{[ 11, 1, 0 ]}
+\logpage{[ 12, 1, 0 ]}
 \hyperdef{L}{X7F6278CD87400D49}{}
 {
   
 
 \subsection{\textcolor{Chapter }{LRealizationSpace (for IsGeomLattice, IsInt)}}
-\logpage{[ 11, 1, 1 ]}\nobreak
+\logpage{[ 12, 1, 1 ]}\nobreak
 \hyperdef{L}{X7F6CF5007E699D5D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LRealizationSpace({\mdseries\slshape L, char[, GenSetL]})\index{LRealizationSpace@\texttt{LRealizationSpace}!for IsGeomLattice, IsInt}
 \label{LRealizationSpace:for IsGeomLattice, IsInt}
@@ -3030,13 +3176,13 @@ RealizationSpaceOfGeometricLattice
 
  
 \section{\textcolor{Chapter }{Attributes}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Attributes}
-\logpage{[ 11, 2, 0 ]}
+\logpage{[ 12, 2, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {
   
 
 \subsection{\textcolor{Chapter }{LGenSet (for IsGeomLattice)}}
-\logpage{[ 11, 2, 1 ]}\nobreak
+\logpage{[ 12, 2, 1 ]}\nobreak
 \hyperdef{L}{X7A65C85187E4D34B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LGenSet({\mdseries\slshape L})\index{LGenSet@\texttt{LGenSet}!for IsGeomLattice}
 \label{LGenSet:for IsGeomLattice}
@@ -3058,7 +3204,7 @@ a set
  
 
 \subsection{\textcolor{Chapter }{RSLattice (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 2 ]}\nobreak
+\logpage{[ 12, 2, 2 ]}\nobreak
 \hyperdef{L}{X8070EC1580B975D7}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSLattice({\mdseries\slshape RS})\index{RSLattice@\texttt{RSLattice}!for IsRealizationSpaceOfGeomLattice}
 \label{RSLattice:for IsRealizationSpaceOfGeomLattice}
@@ -3078,7 +3224,7 @@ a geometric lattice
  
 
 \subsection{\textcolor{Chapter }{RSCharacteristic (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 3 ]}\nobreak
+\logpage{[ 12, 2, 3 ]}\nobreak
 \hyperdef{L}{X7C7870A785D8894E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCharacteristic({\mdseries\slshape RS})\index{RSCharacteristic@\texttt{RSCharacteristic}!for IsRealizationSpaceOfGeomLattice}
 \label{RSCharacteristic:for IsRealizationSpaceOfGeomLattice}
@@ -3098,7 +3244,7 @@ a geometric lattice
  
 
 \subsection{\textcolor{Chapter }{RSDefField (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 4 ]}\nobreak
+\logpage{[ 12, 2, 4 ]}\nobreak
 \hyperdef{L}{X877A2CF98702D72D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDefField({\mdseries\slshape RS})\index{RSDefField@\texttt{RSDefField}!for IsRealizationSpaceOfGeomLattice}
 \label{RSDefField:for IsRealizationSpaceOfGeomLattice}
@@ -3118,7 +3264,7 @@ a field
  
 
 \subsection{\textcolor{Chapter }{RSCoeffMat (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 5 ]}\nobreak
+\logpage{[ 12, 2, 5 ]}\nobreak
 \hyperdef{L}{X7D89A3E87AE33F30}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSCoeffMat({\mdseries\slshape RS})\index{RSCoeffMat@\texttt{RSCoeffMat}!for IsRealizationSpaceOfGeomLattice}
 \label{RSCoeffMat:for IsRealizationSpaceOfGeomLattice}
@@ -3140,7 +3286,7 @@ a matrix
  
 
 \subsection{\textcolor{Chapter }{RSDimension (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 6 ]}\nobreak
+\logpage{[ 12, 2, 6 ]}\nobreak
 \hyperdef{L}{X7CD7DC23844DAB58}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSDimension({\mdseries\slshape RS})\index{RSDimension@\texttt{RSDimension}!for IsRealizationSpaceOfGeomLattice}
 \label{RSDimension:for IsRealizationSpaceOfGeomLattice}
@@ -3160,7 +3306,7 @@ a non\texttt{\symbol{45}}negative integer
  
 
 \subsection{\textcolor{Chapter }{RSPRing (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 7 ]}\nobreak
+\logpage{[ 12, 2, 7 ]}\nobreak
 \hyperdef{L}{X7FE8075E860D45B1}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSPRing({\mdseries\slshape RS})\index{RSPRing@\texttt{RSPRing}!for IsRealizationSpaceOfGeomLattice}
 \label{RSPRing:for IsRealizationSpaceOfGeomLattice}
@@ -3180,7 +3326,7 @@ a polynomial ring
  
 
 \subsection{\textcolor{Chapter }{RSIdealMinors (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 8 ]}\nobreak
+\logpage{[ 12, 2, 8 ]}\nobreak
 \hyperdef{L}{X8495A2627D020F1B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIdealMinors({\mdseries\slshape RS})\index{RSIdealMinors@\texttt{RSIdealMinors}!for IsRealizationSpaceOfGeomLattice}
 \label{RSIdealMinors:for IsRealizationSpaceOfGeomLattice}
@@ -3202,7 +3348,7 @@ atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
  
 
 \subsection{\textcolor{Chapter }{RSNonMinors (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 9 ]}\nobreak
+\logpage{[ 12, 2, 9 ]}\nobreak
 \hyperdef{L}{X78DA8570821E4775}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSNonMinors({\mdseries\slshape RS})\index{RSNonMinors@\texttt{RSNonMinors}!for IsRealizationSpaceOfGeomLattice}
 \label{RSNonMinors:for IsRealizationSpaceOfGeomLattice}
@@ -3223,7 +3369,7 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
  
 
 \subsection{\textcolor{Chapter }{RSEvalPoint (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 2, 10 ]}\nobreak
+\logpage{[ 12, 2, 10 ]}\nobreak
 \hyperdef{L}{X81A7EF29810F3103}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSEvalPoint({\mdseries\slshape RS})\index{RSEvalPoint@\texttt{RSEvalPoint}!for IsRealizationSpaceOfGeomLattice}
 \label{RSEvalPoint:for IsRealizationSpaceOfGeomLattice}
@@ -3238,13 +3384,13 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
 
  
 \section{\textcolor{Chapter }{Properties}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Properties}
-\logpage{[ 11, 3, 0 ]}
+\logpage{[ 12, 3, 0 ]}
 \hyperdef{L}{X871597447BB998A1}{}
 {
   
 
 \subsection{\textcolor{Chapter }{RSIsNonEmpty (for IsRealizationSpaceOfGeomLattice)}}
-\logpage{[ 11, 3, 1 ]}\nobreak
+\logpage{[ 12, 3, 1 ]}\nobreak
 \hyperdef{L}{X781923918754E3CE}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{RSIsNonEmpty({\mdseries\slshape RS})\index{RSIsNonEmpty@\texttt{RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice}
 \label{RSIsNonEmpty:for IsRealizationSpaceOfGeomLattice}
@@ -3262,13 +3408,13 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
 
  
 \section{\textcolor{Chapter }{Further (auxillary) Operations}}\label{Chapter_Realization_spaces_of_geometric_lattices_Section_Further_auxillary_Operations}
-\logpage{[ 11, 4, 0 ]}
+\logpage{[ 12, 4, 0 ]}
 \hyperdef{L}{X8252A2A9867F3059}{}
 {
   
 
 \subsection{\textcolor{Chapter }{LSubsetGeneratedByS (for IsGeomLattice,IsList)}}
-\logpage{[ 11, 4, 1 ]}\nobreak
+\logpage{[ 12, 4, 1 ]}\nobreak
 \hyperdef{L}{X800FB3BB86AD2F1A}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LSubsetGeneratedByS({\mdseries\slshape L, S})\index{LSubsetGeneratedByS@\texttt{LSubsetGeneratedByS}!for IsGeomLattice,IsList}
 \label{LSubsetGeneratedByS:for IsGeomLattice,IsList}
@@ -3282,7 +3428,7 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
  
 
 \subsection{\textcolor{Chapter }{LIsGenSet (for IsGeomLattice,IsList)}}
-\logpage{[ 11, 4, 2 ]}\nobreak
+\logpage{[ 12, 4, 2 ]}\nobreak
 \hyperdef{L}{X84F182B783389C2B}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsGenSet({\mdseries\slshape L, S})\index{LIsGenSet@\texttt{LIsGenSet}!for IsGeomLattice,IsList}
 \label{LIsGenSet:for IsGeomLattice,IsList}
@@ -3299,22 +3445,22 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
 
    
 \chapter{\textcolor{Chapter }{Greedy search for arrangements}}\label{Chapter_Greedy_search_for_arrangements}
-\logpage{[ 12, 0, 0 ]}
+\logpage{[ 13, 0, 0 ]}
 \hyperdef{L}{X85C6C672870D19BD}{}
 {
   This is an implementation of a basic greedy algorithm to construct
 arrangements satisfying a certain property, based on \cite{Cuntz2022_Greedy}. A variant was used in \cite{MMR2024_CombFormality} to construct an arrangement which is $4$\texttt{\symbol{45}}formal with a restriction which is not $3$\texttt{\symbol{45}}formal. 
 \section{\textcolor{Chapter }{Constructions}}\label{Chapter_Greedy_search_for_arrangements_Section_Constructions}
-\logpage{[ 12, 1, 0 ]}
+\logpage{[ 13, 1, 0 ]}
 \hyperdef{L}{X836F56D77AA04554}{}
 {
   
 
-\subsection{\textcolor{Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt)}}
-\logpage{[ 12, 1, 1 ]}\nobreak
-\hyperdef{L}{X84821A5B843965BA}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrGreedySearch({\mdseries\slshape NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations})\index{HArrGreedySearch@\texttt{HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt}
-\label{HArrGreedySearch:for IsInt,IsInt,IsField,IsFunction,IsInt}
+\subsection{\textcolor{Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat)}}
+\logpage{[ 13, 1, 1 ]}\nobreak
+\hyperdef{L}{X852F55B38601271B}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{HArrGreedySearch({\mdseries\slshape NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat})\index{HArrGreedySearch@\texttt{HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat}
+\label{HArrGreedySearch:for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
 A hyperplane arrangement 
@@ -3329,6 +3475,7 @@ minimize, and such that value=0 means the arrangement satisfies the desired
 property. 
 \item  \mbox{\texttt{\mdseries\slshape MaxNoIterations}} is the maximal number of steps to be carried out in the search (one step =
 exchanging a hyperplane). 
+\item  \mbox{\texttt{\mdseries\slshape heat}} is a margin for the target function 
 \end{itemize}
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
@@ -3342,7 +3489,7 @@ exchanging a hyperplane).
  
 
 \subsection{\textcolor{Chapter }{CharPolySplits}}
-\logpage{[ 12, 1, 2 ]}\nobreak
+\logpage{[ 13, 1, 2 ]}\nobreak
 \hyperdef{L}{X86BF30D17A33874E}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{CharPolySplits({\mdseries\slshape A})\index{CharPolySplits@\texttt{CharPolySplits}}
 \label{CharPolySplits}
@@ -3354,7 +3501,7 @@ exchanging a hyperplane).
  
 
 \subsection{\textcolor{Chapter }{DistMSetInvL}}
-\logpage{[ 12, 1, 3 ]}\nobreak
+\logpage{[ 13, 1, 3 ]}\nobreak
 \hyperdef{L}{X81A9CF1C804C8B60}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{DistMSetInvL({\mdseries\slshape A, B})\index{DistMSetInvL@\texttt{DistMSetInvL}}
 \label{DistMSetInvL}
@@ -3367,13 +3514,13 @@ exchanging a hyperplane).
 
  
 \section{\textcolor{Chapter }{Attributes}}\label{Chapter_Greedy_search_for_arrangements_Section_Attributes}
-\logpage{[ 12, 2, 0 ]}
+\logpage{[ 13, 2, 0 ]}
 \hyperdef{L}{X7C701DBF7BAE649A}{}
 {
   
 
 \subsection{\textcolor{Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}
-\logpage{[ 12, 2, 1 ]}\nobreak
+\logpage{[ 13, 2, 1 ]}\nobreak
 \hyperdef{L}{X87BDEC467DE8A782}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchRun({\mdseries\slshape GS})\index{GreedySearchRun@\texttt{GreedySearchRun}!for IsHArrGreedySearch}
 \label{GreedySearchRun:for IsHArrGreedySearch}
@@ -3409,7 +3556,7 @@ a function
  
 
 \subsection{\textcolor{Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}
-\logpage{[ 12, 2, 2 ]}\nobreak
+\logpage{[ 13, 2, 2 ]}\nobreak
 \hyperdef{L}{X830ABDC2827862CD}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchGF({\mdseries\slshape GS})\index{GreedySearchGF@\texttt{GreedySearchGF}!for IsHArrGreedySearch}
 \label{GreedySearchGF:for IsHArrGreedySearch}
@@ -3427,7 +3574,7 @@ a field
  
 
 \subsection{\textcolor{Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}
-\logpage{[ 12, 2, 3 ]}\nobreak
+\logpage{[ 13, 2, 3 ]}\nobreak
 \hyperdef{L}{X7BDEEF027FB60AB3}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchDimension({\mdseries\slshape GS})\index{GreedySearchDimension@\texttt{GreedySearchDimension}!for IsHArrGreedySearch}
 \label{GreedySearchDimension:for IsHArrGreedySearch}
@@ -3444,7 +3591,7 @@ a field
  
 
 \subsection{\textcolor{Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}
-\logpage{[ 12, 2, 4 ]}\nobreak
+\logpage{[ 13, 2, 4 ]}\nobreak
 \hyperdef{L}{X7D09885B7C69A621}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchNOfHs({\mdseries\slshape GS})\index{GreedySearchNOfHs@\texttt{GreedySearchNOfHs}!for IsHArrGreedySearch}
 \label{GreedySearchNOfHs:for IsHArrGreedySearch}
@@ -3461,7 +3608,7 @@ a field
  
 
 \subsection{\textcolor{Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}
-\logpage{[ 12, 2, 5 ]}\nobreak
+\logpage{[ 13, 2, 5 ]}\nobreak
 \hyperdef{L}{X81F9A4827A5ABC5D}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchTargetFct({\mdseries\slshape GS})\index{GreedySearchTargetFct@\texttt{GreedySearchTargetFct}!for IsHArrGreedySearch}
 \label{GreedySearchTargetFct:for IsHArrGreedySearch}
@@ -3478,7 +3625,7 @@ a field
  
 
 \subsection{\textcolor{Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}
-\logpage{[ 12, 2, 6 ]}\nobreak
+\logpage{[ 13, 2, 6 ]}\nobreak
 \hyperdef{L}{X83296B32854C2647}{}
 {\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{GreedySearchMaxIterations({\mdseries\slshape GS})\index{GreedySearchMaxIterations@\texttt{GreedySearchMaxIterations}!for IsHArrGreedySearch}
 \label{GreedySearchMaxIterations:for IsHArrGreedySearch}

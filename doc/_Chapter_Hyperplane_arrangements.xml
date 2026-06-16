@@ -293,6 +293,16 @@ true
 
 
 <ManSection>
+  <Attr Arg="L" Name="LCircuits" Label="for IsGeomLattice"/>
+ <Returns>a list of lists
+</Returns>
+ <Description>
+ Gives the circuits of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="L" Name="LRankFunction" Label="for IsGeomLattice"/>
  <Returns>A function
 </Returns>
@@ -350,7 +360,6 @@ true
  <Description>
  Determines the subsets of <C>LAtoms(L)</C> which are bases.
 <Example><![CDATA[
-
 ]]></Example>
 
 
@@ -428,6 +437,34 @@ false
 
 <Section Label="Chapter_Hyperplane_arrangements_Section_Operations">
 <Heading>Operations</Heading>
+
+<ManSection>
+  <Oper Arg="L, m" Name="LBsOfFlat" Label="for IsGeomLattice, IsList"/>
+ <Returns>list of bases of m
+</Returns>
+ <Description>
+ Computes the bases of <A>m</A> in <A>L</A>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="L,B,e" Name="LBaseCircuit" Label="for IsGeomLattice,IsList,IsInt"/>
+ <Returns>list
+</Returns>
+ <Description>
+ Determines the circuit contained in <C>Union(B,[e])</C>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
 
 <ManSection>
   <Oper Arg="LA, LB" Name="LIsIsomorphic" Label="for IsGeomLattice,IsGeomLattice"/>

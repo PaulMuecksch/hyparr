@@ -403,6 +403,62 @@ local G,Vs, Es, fn, s1,s2,s3, str;
     return str;
 end);
 
+
+InstallGlobalFunction(LDrawHasseDiagram,
+function(L)
+local r, Lks,Lk, m, 
+	sOut, k, T, R, nT, nR, xT,yT,kx,ky;
+# local sOut,CR,r1,r2,OF,E,Pn,pik,
+#     h,xh,yh,k,hh;;
+    r := LRank(L);
+    Lks := List([1..r],k->LkFlats(L)(k));
+
+    sOut:="\\begin{tikzpicture}[scale=1.0]\n";;
+
+    
+    for Lk in Lks do
+        for m in Lk do
+            ky := Position(Lks,Lk);
+            kx := Position(Lk,m);
+            nT := Length(Concatenation(Lks{[1..(ky-1)]}))+kx;;
+            # if label=true then
+            #     xT:=-0.5*Length(Lk)+kx;;
+            #     yT:=ky;;
+            #     sOut:=Concatenation(sOut,"\\node (",String(nT),") at (",String(xT),",",String(yT),") {$",String(nT),"$};\n");;
+            #     sOut:=Concatenation(sOut, "\\draw (",String(xT),",",String(yT),") circle[radius=8pt];\n");;
+            # else
+                xT:=0.5*Length(Lk)-kx;;
+                yT:=0.75*ky;;
+                sOut:=Concatenation(sOut,"\\node (",String(nT),") at (",String(xT),",",String(yT),") {};\n");;
+                sOut:=Concatenation(sOut, "\\draw (",String(xT),",",String(yT),") circle[radius=2pt];\n");;
+            # fi;
+        od;;
+    od;;
+    sOut:=Concatenation(sOut,"\n");;
+    
+   for k in [2..Length(Lks)] do
+        for T in Lks[k] do
+            for R in Lks[k-1] do
+                if IsSubset(T,R)=true then
+                    nT := Length(Concatenation(Lks{[1..(k-1)]}))+Position(Lks[k],T);;
+                    nR := Length(Concatenation(Lks{[1..(k-2)]}))+Position(Lks[k-1],R);;
+                    # if label=true then
+                        sOut:=Concatenation(sOut,"\\draw [shorten <=8pt, shorten >=8pt] ($(",String(nT),")$) -- ($(",String(nR),")$); \n");;
+                    # else
+                        sOut:=Concatenation(sOut,"\\draw  [shorten <=2pt, shorten >=2pt] ($(",String(nT),")$) -- ($(",String(nR),")$); \n");;
+                    # fi;;
+                fi;;
+            od;;
+        od;;
+    od;;
+    
+    
+	sOut:=Concatenation(sOut, "\\end{tikzpicture}\n");;
+            
+    return sOut;;
+
+end);
+
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

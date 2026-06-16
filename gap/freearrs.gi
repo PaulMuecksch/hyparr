@@ -72,7 +72,7 @@ function(A)
 local L,Lk;
 	L:=IntersectionLattice(A);
 	Lk := LkFlats(L)(LRank(L)-1);
-	return not(false in ForAny(Lk,m-> HArrIsFree(Arr(Roots(A){m}))));
+	return not( ForAny(Lk,m-> HArrIsFree(Arr(Roots(A){m}))=false));
 end);
 
 
@@ -195,15 +195,228 @@ local MatDAm, DA, PRing, ModGenDA, DefField, r, type;
 		);
 end);
 
+
+
+####################################################################################################
+## Compuation of the D^p(A,m)-module
+
+BindGlobal("MatrixDpAmult",
+function(A,p,mult)
+local PRing, DefField, e, r, n, VarsPRing, PSubs, KmSubs,
+      N, q, M, allinds, i, h, K, j, J, col, posJ,
+      row, avec, alphaPow, idxAux;
+
+    n := Length(Roots(A));
+
+    if n <> Length(mult) then
+        Print("Length of multiplicity vector not correct!\n");
+        return fail;
+    fi;
+
+    r := Dimension(A);
+
+    if p < 1 or p > r then
+        Print("The exterior degree is out of range!\n");
+        return fail;
+    fi;
+
+    DefField := HArrDefField(A);
+    PRing := PolynomialRing(DefField,r);
+    VarsPRing := IndeterminatesOfPolynomialRing(PRing);
+    e := VarsPRing[1]^0;
+
+    PSubs := Combinations([1..r],p);
+    KmSubs := Combinations([1..r],p-1);
+
+    N := Length(PSubs);
+    q := Length(KmSubs);
+
+    allinds := [1..r];
+    M := [];
+
+    for i in [1..n] do
+        avec := e*Roots(A)[i];
+        alphaPow := LFormFromVector(PRing,Roots(A)[i])^mult[i];
+
+        for h in [1..q] do
+            K := KmSubs[h];
+            row := List([1..N+n*q], u -> 0*e);
+
+            for j in Difference(allinds,K) do
+                J := Set(Concatenation(K,[j]));
+                col := Position(PSubs,J);
+                posJ := Position(J,j);
+
+                row[col] := row[col] + ((-1)^(posJ-1))*avec[j];
+            od;
+
+            idxAux := N + (i-1)*q + h;
+            row[idxAux] := alphaPow;
+
+            Add(M,row);
+        od;
+    od;
+
+    return M;
+end);
+
+# Then compute the syzygy module and project to the first
+# coordinates:
+
+InstallMethod(DerPModule,
+	[IsHyperplaneArrangement, IsInt],
+function(A,p)
+local MatDp, Dp, PRing, ModGenDp, DefField, r, n,
+      PSubs, N, type, e, mult;
+
+    r := Dimension(A);
+    n := Length(Roots(A));
+	mult := List([1..n],x->1);;
+    DefField := HArrDefField(A);
+
+    if p < 1 or p > r then
+        Print("The exterior degree is out of range!\n");
+        return fail;
+    fi;
+
+    PRing := PolynomialRing(DefField,r);
+    SetTermOrdering(PRing,"dp");
+    SingularSetBaseRing(PRing);
+
+    PSubs := Combinations([1..r],p);
+    N := Length(PSubs);
+
+    if Roots(A) = [] then
+        e := IndeterminatesOfPolynomialRing(PRing)[1]^0;
+
+        type := NewType(DerivationModuleFamily,
+                         IsDerivationModuleRep);
+
+        return Objectify(type,
+            rec(
+                pring := PRing,
+                gens := e*IdentityMat(N),
+                basis := PSubs,
+                deffield := DefField
+            )
+        );
+    fi;
+
+    MatDp := MatrixDpAmult(A,p,mult);
+
+    ModGenDp :=
+        SingularInterface(
+            "syz",
+            [SingularInterface("module",[MatDp],"module")],
+            "matrix"
+        );
+
+    ModGenDp := List(TransposedMat(ModGenDp), x -> x{[1..N]});
+
+    ModGenDp :=
+        TransposedMat(
+            SingularInterface(
+                "minbase",
+                [TransposedMat(ModGenDp)],
+                "matrix"
+            )
+        );
+
+    type := NewType(DerivationModuleFamily,
+                     IsDerivationModuleRep);
+
+    return Objectify(type,
+        rec(
+            pring := PRing,
+            gens := ModGenDp,
+            basis := PSubs,
+            deffield := DefField
+        )
+    );
+end);
+
+
+InstallMethod(DerPModule,
+	[IsHyperplaneArrangement, IsInt, IsList],
+function(A,p,mult)
+local MatDp, Dp, PRing, ModGenDp, DefField, r, n,
+      PSubs, N, type, e;
+
+    r := Dimension(A);
+    n := Length(Roots(A));
+    DefField := HArrDefField(A);
+
+    if p < 1 or p > r then
+        Print("The exterior degree is out of range!\n");
+        return fail;
+    fi;
+
+    PRing := PolynomialRing(DefField,r);
+    SetTermOrdering(PRing,"dp");
+    SingularSetBaseRing(PRing);
+
+    PSubs := Combinations([1..r],p);
+    N := Length(PSubs);
+
+    if Roots(A) = [] then
+        e := IndeterminatesOfPolynomialRing(PRing)[1]^0;
+
+        type := NewType(DerivationModuleFamily,
+                         IsDerivationModuleRep);
+
+        return Objectify(type,
+            rec(
+                pring := PRing,
+                gens := e*IdentityMat(N),
+                basis := PSubs,
+                deffield := DefField
+            )
+        );
+    fi;
+
+    MatDp := MatrixDpAmult(A,p,mult);
+
+    ModGenDp :=
+        SingularInterface(
+            "syz",
+            [SingularInterface("module",[MatDp],"module")],
+            "matrix"
+        );
+
+    ModGenDp := List(TransposedMat(ModGenDp), x -> x{[1..N]});
+
+    ModGenDp :=
+        TransposedMat(
+            SingularInterface(
+                "minbase",
+                [TransposedMat(ModGenDp)],
+                "matrix"
+            )
+        );
+
+    type := NewType(DerivationModuleFamily,
+                     IsDerivationModuleRep);
+
+    return Objectify(type,
+        rec(
+            pring := PRing,
+            gens := ModGenDp,
+            basis := PSubs,
+            deffield := DefField
+        )
+    );
+end);
+
+
 ####################################################################################################
 ## Test if the arrangement is inductively free
 InstallMethod(IsInductivelyFree,
     [ IsHyperplaneArrangement ],
 function(A)
 local p,dim,i,j,r,AoH,AResH,tAoH,tAResH,c,expAoH,expAResH,expA,x,t;  
-	if IsBound(A!.IsInductivelyFree) then
-		return A!.IsInductivelyFree;
-	fi;
+	# if IsBound(A!.IsInductivelyFree) then
+	# 	return A!.IsInductivelyFree;
+	# fi;
 		
 	dim:=Dimension(A);
 	# t:=X(Rationals,"t");
@@ -211,20 +424,21 @@ local p,dim,i,j,r,AoH,AResH,tAoH,tAResH,c,expAoH,expAResH,expA,x,t;
 	expA := ExpArr(A);
 	# if Length(expA)<>dim then
 	if expA=fail then
-		A!.IsInductivelyFree := false;
-		return A!.IsInductivelyFree;
+		SetIsInductivelyFree(A,false);
+		return false;
 	fi;
 	
 	c:=Length(Roots(A));
 	if dim=2 or c<=2 then
-		A!.IsInductivelyFree:=true;
-        A!.IsDivisionallyFree := true;
-		return A!.IsInductivelyFree;
+		SetIsInductivelyFree(A,true);
+        SetIsDivisionallyFree(A,true);
+		return true;
 	fi;
 	r:=ShallowCopy(Roots(A));
 	
 	for i in [1..c] do
-		AoH:=Arr(r{Concatenation([1..(i-1)],[(i+1)..c])});
+		# AoH:=Arr(r{Concatenation([1..(i-1)],[(i+1)..c])});
+        AoH := HArrDeletion(A,i);
 		AResH := HArrRestriction(A,i);
 
 		expAResH := ExpArr(AResH);				
@@ -236,40 +450,18 @@ local p,dim,i,j,r,AoH,AResH,tAoH,tAResH,c,expAoH,expAResH,expA,x,t;
 				if tAoH then
 					tAResH:=IsInductivelyFree(AResH);
 					if tAResH then
-						# if p<>0 then
-						# 	Print("  exp(A-{H}):",expAoH,"-> exp(A)",expA,", H:",Roots(A)[i],"\n");
-						# fi;
-						A!.IsInductivelyFree := true;
-                        A!.IsDivisionallyFree := true;
-						return A!.IsInductivelyFree;
-					# else
-					# 	if IsDivisionallyFree(AResH) then
-					# 		Print("Divisionall free but not inductively free: ",AResH!.roots,"\n");
-					# 	fi;
-					# 	# if p <> 0 then
-					# 	# 	Print("AResH nicht IF.\n");
-					# 	# fi;
+						SetIsInductivelyFree(A,true);
+                        SetIsDivisionallyFree(A,true);
+						return true;
 					fi;
-				# else
-					
-				# 	if IsDF(AoH) then
-				# 		Print("DF but not IF: ",AoH.roots,"\n");
-				# 	fi;
-				# 	if p <> 0 then
-				# 		Print("AoH nicht IF.\n");
-				# 	fi;
-				fi;					
-				#if IsInductivelyFree(AoH) and IsInductivelyFree(AResH) then
-				#	A.IsInductivelyFree := true;
-				#	return A.IsInductivelyFree;
-				#fi;
+                fi;
 			fi;
 		fi;
 	od;
 	
-	A!.IsInductivelyFree := false;
+	SetIsInductivelyFree(A,false);
 	
-	return A!.IsInductivelyFree;
+	return false;
 end);
 
 InstallMethod(IsLocallyInductivelyFree,
@@ -278,7 +470,7 @@ function(A)
 local L,Lk;
 	L:=IntersectionLattice(A);
 	Lk := LkFlats(L)(LRank(L)-1);
-	return not(false in ForAny(Lk,m-> IsInductivelyFree(Arr(Roots(A){m}))));
+	return not( ForAny(Lk,m-> IsInductivelyFree(Arr(Roots(A){m}))=false));
 end);
 
 ####################################################################################################
@@ -290,9 +482,9 @@ InstallMethod(IsDivisionallyFree,
     [ IsHyperplaneArrangement ],function(A)
 local AA,expAA,expA,h,n;
 
-    if IsBound(A!.IsDivisionallyFree) then
-        return A!.IsDivisionallyFree;
-    fi;
+    # if IsBound(A!.IsDivisionallyFree) then
+    #     return A!.IsDivisionallyFree;
+    # fi;
 
     if Roots(A)=[] or Rank(Roots(A))<=2 then
         return true;
@@ -311,13 +503,13 @@ local AA,expAA,expA,h,n;
         expAA:=ExpArr(AA);
         if expAA<>fail then
             if IsSubMultiSet(expA,expAA) and IsDivisionallyFree(AA) then
-                A!.IsDivisionallyFree := true;
-                return A!.IsDivisionallyFree;
+                SetIsDivisionallyFree(A,true);
+                return true;
             fi;
         fi;
     od;
-    A!.IsDivisionallyFree := false;
-	A!.IsInductivelyFree := false;
+    SetIsDivisionallyFree(A,false);
+	SetIsInductivelyFree(A,false);
     return false;    
 end);
 
@@ -327,7 +519,7 @@ function(A)
 local L,Lk;
 	L:=IntersectionLattice(A);
 	Lk := LkFlats(L)(LRank(L)-1);
-	return not(false in ForAny(Lk,m-> IsDivisionallyFree(Arr(Roots(A){m}))));
+	return not( ForAny(Lk,m-> IsDivisionallyFree(Arr(Roots(A){m}))=false));
 end);
 
 ####################################################################################################

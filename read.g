@@ -21,4 +21,5 @@ ReadPackage("hyparr","gap/topeposet.gi");
 ReadPackage("hyparr","gap/drawarrs.gi");
 ReadPackage("hyparr","gap/realizationspace.gi");
 ReadPackage("hyparr","gap/greedy.gi");
+ReadPackage("hyparr","gap/vgalgebra.gi");
 

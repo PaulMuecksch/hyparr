@@ -169,6 +169,23 @@ gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]); OMCocircuits(O);
 
 
 <ManSection>
+  <Attr Arg="OM" Name="OMCircuits" Label="for IsOrientedMatroid"/>
+ <Returns>A list
+</Returns>
+ <Description>
+ Computes the (signed) circuits of the oriented matroid OM.
+<P/>
+ The result is a list of sign vectors.
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="OM" Name="OMTopes" Label="for IsOrientedMatroid"/>
  <Returns>A list
 </Returns>

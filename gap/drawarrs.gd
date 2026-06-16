@@ -278,6 +278,8 @@ DeclareGlobalFunction("LaTeXDrawSpherePicture");
 #! 
 DeclareGlobalFunction("LaTeXDrawTopeGraph");
 
+DeclareGlobalFunction("LDrawHasseDiagram");
+
 
 #! Both functions <C>LaTexDrawSpherePicture</C> and <C>LaTeXDrawTopeGraph</C> combined
 #! can be used to draw nice pictures of oriented matroid complexes and their duals.

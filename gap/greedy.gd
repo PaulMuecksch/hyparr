@@ -39,14 +39,13 @@ DeclareOperation("ViewObject", [IsHArrGreedySearchPair]);
 #################################################
 
 DeclareOperation("RandomArrOverGF",[IsInt,IsInt,IsField]);
-DeclareOperation("CandidatesLinesPointsNewH",[IsGeomLattice]);
 DeclareOperation("RandomNewHThroughPoints",[IsHyperplaneArrangement]);
 DeclareOperation("RandomNewHThroughIntersections",[IsHyperplaneArrangement]);
 DeclareOperation("RandomNewH",[IsHyperplaneArrangement]);
 DeclareOperation("ExchangeRandomH",[IsHyperplaneArrangement]);
 DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
 
-#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations
+#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat
 #! @Returns A hyperplane arrangement
 #! @Description
 #!  Constructs a greedy search for arrangements over <A>GField</A> with <A>NumberOfHs</A>
@@ -56,13 +55,14 @@ DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
 #!      and such that value=0 means the arrangement satisfies the desired property.
 #!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
 #!      (one step = exchanging a hyperplane).
+#!  * <A>heat</A> is a margin for the target function 
 #! @BeginExampleSession
 #! gap> HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
 #! GreedySearch over GF(17) for arrangements:
 #!  - of rank 3
 #!  - with 13 hyperplanes.
 #! @EndExampleSession
-DeclareOperation("HArrGreedySearch",[IsInt,IsInt,IsField,IsFunction,IsInt]);
+DeclareOperation("HArrGreedySearch",[IsInt,IsInt,IsField,IsFunction,IsInt, IsRat]);
 
 DeclareOperation("HArrGreedySearchPair",[IsInt,IsInt,IsField,IsFunction,IsFunction,IsInt]);
 

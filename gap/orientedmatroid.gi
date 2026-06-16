@@ -374,6 +374,35 @@ function(OM)
     return OM!.cocircuits;
 end);
 
+
+####################################################################################################
+
+
+InstallMethod(OMCircuits, 
+    [ IsOrientedMatroid ],
+function(OM)
+local CoCs, c, s, Circs, SCircs, vc, n;
+    Circs := LCircuits(OMGeomLattice(OM));
+    CoCs := OMCocircuits(OM);
+    n:=Length(OMGroundSet(OM));
+    SCircs:=[];
+    for c in Circs do
+        vc := [1..n]*0;
+        for s in Cartesian(List(c,x->[1,-1])) do
+            vc{c} := s;
+            if ForAll(CoCs,cc->SVIsOrthogonal(vc,cc)) then
+                Add(SCircs,vc);
+                Add(SCircs,-vc);
+                break;
+            fi;;
+        od;
+    od;
+
+    OM!.circuits := SCircs;
+    return OM!.circuits;
+end);
+
+
 ####################################################################################################
 
 # The main function computing the covectors 
@@ -392,7 +421,8 @@ local ACs,GSet,L,Lk,r,n,m,mm,CsRkk,CsRkkp,k,Csinm,c,cn,i,cp,Fcn;
     n:=Length(LAtoms(L));
     GSet:=LAtoms(L);
     CsRkk:=OMCocircuits(OM);
-    ACs := Concatenation([[List(GSet,x->0)]],[CsRkk]);
+    # ACs := Concatenation([[List(GSet,x->0)]],[CsRkk]);
+    ACs := Concatenation([[List(GSet,x->0)]],[ShallowCopy(CsRkk)]);
     CsRkk:=CsRkk{List([0..Length(CsRkk)/2-1],x->2*x+1)};
     for k in Reversed([1..r-2]) do
         CsRkkp:=[];
@@ -787,6 +817,13 @@ InstallGlobalFunction(SVMinusSet,
 function(sv)
     return Positions(sv,-1);
 end);  
+
+InstallGlobalFunction(SVIsOrthogonal,
+function(sv1,sv2)
+    return (SeparatingSet(sv1,sv2)<>[] and SeparatingSet(sv1,-sv2)<>[])
+        or (SeparatingSet(sv1,sv2)=[] and SeparatingSet(sv1,-sv2)=[]);
+end);  
+
 
 InstallGlobalFunction(OrderCovec,
 function(sv1,sv2)

@@ -40,6 +40,21 @@ gap> D:=DerModule(A,[2,1,3,4]);
 
 
 <ManSection>
+  <Oper Arg="A, p [, mult]" Name="DerPModule" Label="for IsHyperplaneArrangement, IsInt"/>
+ <Returns>Derivation module
+</Returns>
+ <Description>
+  Computes the <E>(multi) p-derivation module</E> <Math>D^p(A)</Math> (<Math>D^p(A,m)</Math>) of the arrangement <A>A</A>
+  (with multiplicities given as a list by <A>mult</A>).
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
   <Attr Arg="D" Name="DerModGenerators" Label="for IsDerivationModule"/>
  <Returns>list
 </Returns>
@@ -122,8 +137,14 @@ gap> DerModProjDim(D);
 </ManSection>
 
 
+</Section>
+
+
+<Section Label="Chapter_Free_arrangements_Section_Freeness_properties">
+<Heading>Freeness properties</Heading>
+
 <ManSection>
-  <Attr Arg="D" Name="DerModIsFree" Label="for IsDerivationModule"/>
+  <Prop Arg="D" Name="DerModIsFree" Label="for IsDerivationModule"/>
  <Returns>true or false
 </Returns>
  <Description>
@@ -146,7 +167,7 @@ false
 
 
 <ManSection>
-  <Attr Arg="A" Name="HArrIsFree" Label="for IsHyperplaneArrangement"/>
+  <Prop Arg="A" Name="HArrIsFree" Label="for IsHyperplaneArrangement"/>
  <Returns>true or false
 </Returns>
  <Description>
@@ -169,7 +190,7 @@ false
 
 
 <ManSection>
-  <Attr Arg="A" Name="HArrIsLocallyFree" Label="for IsHyperplaneArrangement"/>
+  <Prop Arg="A" Name="HArrIsLocallyFree" Label="for IsHyperplaneArrangement"/>
  <Returns>true or false
 </Returns>
  <Description>
@@ -181,12 +202,6 @@ false
  </Description>
 </ManSection>
 
-
-</Section>
-
-
-<Section Label="Chapter_Free_arrangements_Section_Freeness_properties">
-<Heading>Freeness properties</Heading>
 
 <ManSection>
   <Prop Arg="A" Name="IsInductivelyFree" Label="for IsHyperplaneArrangement"/>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Varchenko-Gelfand_algebra">
+<Heading>Varchenko-Gelfand algebra</Heading>
+
+<P/>
+<Section Label="Chapter_Varchenko-Gelfand_algebra_Section_Construction">
+<Heading>Construction</Heading>
+
+<ManSection>
+  <Oper Arg="OM, field" Name="VGAlgebra" Label="for IsOrientedMatroid, IsField"/>
+ <Returns>Varchenko-Gelfand albgera
+</Returns>
+ <Description>
+  Constructs the Varchenko-Gelfand algebra of <A>OM</A>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

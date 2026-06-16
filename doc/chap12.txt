@@ -1,117 +1,174 @@
   
-  [1X12 [33X[0;0YGreedy search for arrangements[133X[101X
+  [1X12 [33X[0;0YRealization spaces of geometric lattices[133X[101X
   
-  [33X[0;0YThis  is  an  implementation  of  a  basic  greedy  algorithm  to  construct
-  arrangements  satisfying a certain property, based on [Cun22]. A variant was
-  used  in  [MMR24]  to  construct  an  arrangement  which  is [23X4[123X-formal with a
-  restriction which is not [23X3[123X-formal.[133X
+  [33X[0;0YThe  computation  of the realization space uses the [12Xsingular[112X package to call
+  functions from [12XSingular[112X [DGPS24]. Our implementation is an adaptation of the
+  algorithm  described  in  [Cun22,  Algorithm  3.9] for geometric lattices of
+  arbitrary rank.[133X
   
   
-  [1X12.1 [33X[0;0YConstructions[133X[101X
+  [1X12.1 [33X[0;0YConstruction[133X[101X
   
-  [1X12.1-1 HArrGreedySearch[101X
+  [1X12.1-1 LRealizationSpace[101X
   
-  [33X[1;0Y[29X[2XHArrGreedySearch[102X( [3XNumberOfHs[103X, [3Xdim[103X, [3XGField[103X, [3XPropTargetFct[103X, [3XMaxNoIterations[103X ) [32X operation[133X
-  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement[133X
+  [33X[1;0Y[29X[2XLRealizationSpace[102X( [3XL[103X, [3Xchar[103X[, [3XGenSetL[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YRealizationSpaceOfGeometricLattice[133X
   
-  [33X[0;0YConstructs  a  greedy  search  for  arrangements over [3XGField[103X with [3XNumberOfHs[103X
-  hyperplanes in dimension [3Xdim[103X.[133X
-  
-  [30X    [33X[0;6Y[3XPropTargetFct[103X  should  be a function taking a hyperplane arragement as
-        argument, returning a non-negative real number, which the search tries
-        to minimize, and such that value=0 means the arrangement satisfies the
-        desired property.[133X
-  
-  [30X    [33X[0;6Y[3XMaxNoIterations[103X  is  the  maximal number of steps to be carried out in
-        the search (one step = exchanging a hyperplane).[133X
+  [33X[0;0YComputes  the realization space of the geometric lattice [3XL[103X in characteristic
+  [3Xchar[103X.  Optionally,  a  generating set of [3XL[103X (as a subset of [10XLAtoms(L)[110X) can be
+  given. Otherwise, the algorithm tries to find a small one.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XHArrGreedySearch(13,3,GF(17),CharPolySplits,400);[127X[104X
-    [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
-    [4X[28X - of rank 3[128X[104X
-    [4X[28X - with 13 hyperplanes.[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(3,3,3));[127X[104X
+    [4X[28X<Geometric lattice: 9 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XRS:=LRealizationSpace(L,0);[127X[104X
+    [4X[28X<RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true>[128X[104X
+    [4X[25Xgap>[125X [27XS:=LGenSet(L);[127X[104X
+    [4X[28X[ 2, 3, 4, 6, 8 ][128X[104X
+    [4X[25Xgap>[125X [27XRS:=LRealizationSpace(L,0,S);[127X[104X
+    [4X[28X<RealizationSpaceOfGeomLattice: in characteristic 0, non-empty: true[128X[104X
   [4X[32X[104X
-  
-  [1X12.1-2 CharPolySplits[101X
-  
-  [33X[1;0Y[29X[2XCharPolySplits[102X( [3XA[103X ) [32X function[133X
-  
-  [33X[0;0YA  target/score function for splitting of the characteristic polynomial of [3XA[103X
-  over [23X\mathbb{Z}[123X.[133X
-  
-  [1X12.1-3 DistMSetInvL[101X
-  
-  [33X[1;0Y[29X[2XDistMSetInvL[102X( [3XA[103X, [3XB[103X ) [32X function[133X
-  
-  [33X[0;0YA  target/score  function  for  comparing  [10XMSetInvL(B)[110X  and [10XMSetInvL(B)[110X (see
-  [2XMSetInvL[102X ([14X2.2-7[114X)).[133X
   
   
   [1X12.2 [33X[0;0YAttributes[133X[101X
   
-  [1X12.2-1 GreedySearchRun[101X
+  [1X12.2-1 LGenSet[101X
   
-  [33X[1;0Y[29X[2XGreedySearchRun[102X( [3XGS[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Ya function[133X
+  [33X[1;0Y[29X[2XLGenSet[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya set[133X
   
-  [33X[0;0YRun the search algorithm of [3XGS[103X which will return an arrangement or [10Xfail[110X.[133X
+  [33X[0;0YComputes  some  generating  set  of  [3XL[103X,  see [Cun22, Def.3.4] resp. [GMRS26,
+  Def.4.2].[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XGS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);[127X[104X
-    [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
-    [4X[28X - of rank 3[128X[104X
-    [4X[28X - with 13 hyperplanes.[128X[104X
-    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GS)();[127X[104X
-    [4X[28X227 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
-    [4X[28X[ 1, 6, 6 ][128X[104X
-    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XA:=GreedySearchRun(GS)();[127X[104X
-    [4X[28X358 Iterations - <HyperplaneArrangement: 13 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XExpArr(A);[127X[104X
-    [4X[28X[ 1, 6, 6 ][128X[104X
-    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
-    [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XHArrIsFree(A);[127X[104X
-    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(3,3,3));[127X[104X
+    [4X[28X<Geometric lattice: 9 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XLGenSet(L);[127X[104X
+    [4X[28X[ 2, 3, 4, 6, 8 ][128X[104X
   [4X[32X[104X
   
-  [1X12.2-2 GreedySearchGF[101X
+  [1X12.2-2 RSLattice[101X
   
-  [33X[1;0Y[29X[2XGreedySearchGF[102X( [3XGS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSLattice[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya geometric lattice[133X
+  
+  [33X[0;0YReturns the geometric lattice of the realization space [3XRS[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSLattice(RS);[127X[104X
+    [4X[28X<Geometric lattice: 9 atoms, rank 3>[128X[104X
+  [4X[32X[104X
+  
+  [1X12.2-3 RSCharacteristic[101X
+  
+  [33X[1;0Y[29X[2XRSCharacteristic[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Y0 or a prime number[133X
+  
+  [33X[0;0YReturns the characteristic of the reliation space [3XRS[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSCharacteristic(RS);[127X[104X
+    [4X[28X0[128X[104X
+  [4X[32X[104X
+  
+  [1X12.2-4 RSDefField[101X
+  
+  [33X[1;0Y[29X[2XRSDefField[102X( [3XRS[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya field[133X
   
-  [33X[0;0YThe Galois field over which to search for arrangements.[133X
+  [33X[0;0YReturns the field over which the realization space [3XRS[103X is defined.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSDefField(RS);[127X[104X
+    [4X[28XRationals[128X[104X
   [4X[32X[104X
   
-  [1X12.2-3 GreedySearchDimension[101X
+  [1X12.2-5 RSCoeffMat[101X
   
-  [33X[1;0Y[29X[2XGreedySearchDimension[102X( [3XGS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSCoeffMat[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya matrix[133X
+  
+  [33X[0;0YReturns the coefficient matrix of [3XRS[103X with entries in [10XRSPRing(RS)[110X.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSCoeffMat(RS);[127X[104X
+    [4X[28X[ [ a1-1, a1, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ], [128X[104X
+    [4X[28X  [ 1, 1, a1 ], [ 1, 1, 1 ], [ 0, 1, -a1^2+a1 ], [128X[104X
+    [4X[28X  [ 1, 0, a1 ], [ -a1+1, -a1, -a1^2 ] ][128X[104X
   [4X[32X[104X
   
-  [1X12.2-4 GreedySearchNOfHs[101X
+  [1X12.2-6 RSDimension[101X
   
-  [33X[1;0Y[29X[2XGreedySearchNOfHs[102X( [3XGS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSDimension[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya non-negative integer[133X
+  
+  [33X[0;0YReturns the dimension of [3XRS[103X.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSDimension(RS);[127X[104X
+    [4X[28X0[128X[104X
   [4X[32X[104X
   
-  [1X12.2-5 GreedySearchTargetFct[101X
+  [1X12.2-7 RSPRing[101X
   
-  [33X[1;0Y[29X[2XGreedySearchTargetFct[102X( [3XGS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSPRing[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya polynomial ring[133X
+  
+  [33X[0;0YThe   polynomial   ring  over  which  the  representing  coefficient  matrix
+  [10XRSCoeffMat(RS)[110X of [3XRS[103X is defined.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSPRing(RS);[127X[104X
+    [4X[28XRationals[a1][128X[104X
   [4X[32X[104X
   
-  [1X12.2-6 GreedySearchMaxIterations[101X
+  [1X12.2-8 RSIdealMinors[101X
   
-  [33X[1;0Y[29X[2XGreedySearchMaxIterations[102X( [3XGS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRSIdealMinors[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yan ideal[133X
+  
+  [33X[0;0YReturns  the  ideal of equations which have to satisfied due to the dependcy
+  of atoms in [10XRSLattice(RS)[110X over [10XRSDefField(RS)[110X.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XI:=RSIdealMinors(RS); GeneratorsOfIdeal(I);[127X[104X
+    [4X[28X<two-sided ideal in Rationals[a1], (1 generator)>[128X[104X
+    [4X[28X[ a1^2-a1+1 ][128X[104X
   [4X[32X[104X
+  
+  [1X12.2-9 RSNonMinors[101X
+  
+  [33X[1;0Y[29X[2XRSNonMinors[102X( [3XRS[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of polynomials[133X
+  
+  [33X[0;0YGives  a  list  of  polynomials  which  should not vanish due to independent
+  subsets of atoms in [10XRSLattice(RS)[110X over [10XRSDefField(RS)[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XRSNonMinors(RS);[127X[104X
+    [4X[28X[ a1^3-a1^2, a1^3, -a1^3+2*a1^2-a1, -2*a1^2+2*a1-1 ][128X[104X
+  [4X[32X[104X
+  
+  [1X12.2-10 RSEvalPoint[101X
+  
+  [33X[1;0Y[29X[2XRSEvalPoint[102X( [3XRS[103X ) [32X attribute[133X
+  
+  
+  [1X12.3 [33X[0;0YProperties[133X[101X
+  
+  [1X12.3-1 RSIsNonEmpty[101X
+  
+  [33X[1;0Y[29X[2XRSIsNonEmpty[102X( [3XRS[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Y[9Xtrue[109X or [9Xfalse[109X[133X
+  
+  
+  [1X12.4 [33X[0;0YFurther (auxillary) Operations[133X[101X
+  
+  [1X12.4-1 LSubsetGeneratedByS[101X
+  
+  [33X[1;0Y[29X[2XLSubsetGeneratedByS[102X( [3XL[103X, [3XS[103X ) [32X operation[133X
+  
+  [1X12.4-2 LIsGenSet[101X
+  
+  [33X[1;0Y[29X[2XLIsGenSet[102X( [3XL[103X, [3XS[103X ) [32X operation[133X
   

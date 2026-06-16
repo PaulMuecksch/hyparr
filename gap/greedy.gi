@@ -111,30 +111,14 @@ local L,d,Pts,Cs1,G,CsO,NewH;
     return NewH;
 end);
 
-## Combinations of coatoms and lines giving new hyperplanes
-InstallMethod(CandidatesLinesPointsNewH,
-    [IsGeomLattice],
-function(L)
-local d, SpPs, Cs, c, Lts, Pts;
-    d := LRank(L);
-    Pts := ShallowCopy(LkFlats(L)(d-1)); 
-    Lts := ShallowCopy(LkFlats(L)(2)); 
-    SpPs :=[];
-    # Cs:=Concatenation(List(ShallowCopy(Pts),x->List(ShallowCopy(Lts),y->[x,y])));
-    Cs := Cartesian(Pts,Lts);
-    for c in Cs do
-        if Intersection(c)=[] then
-            Add(SpPs,c);
-        fi;
-    od;
-    
-    return SpPs;
-end);
 
 InstallMethod(RandomNewHThroughIntersections,
     [IsHyperplaneArrangement],
 function(A)
 local L,Cs1,G,CsO,NewH, PLPair, Point, Line;
+    if Rank(Roots(A))=3 then
+        return RandomNewHThroughPoints(A);
+    fi;
     L := IntersectionLattice(A);
     Cs1 := Set(CandidatesLinesPointsNewH(L),x->Set(x,y->Set(y)));
 
@@ -157,7 +141,7 @@ local IsNewH, NewH, d, F, i,q;
     i:=1;
     while not(IsNewH) or i<10 do
         NewH := List([1..d],x->Random([0..q-1])*Z(q));
-        if not(true in List(Roots(A),v->Rank([v,NewH])=1)) then
+        if not(ForAny(Roots(A),v->Rank([v,NewH])=1)) then
             IsNewH:=true;
             return NewH;
         fi;
@@ -180,8 +164,9 @@ local ANew,PossibleNewHs,OldH,NewH,Ln, Rn, n, h;
     if NewH = fail then
         return fail;
     fi;
-    Rn := Roots(A){Difference([1..n],[h])};
-    ANew := Arr(Concatenation(Rn,[NewH]));       
+    ANew:=HArrAddition(HArrDeletion(A,h),NewH);
+    # Rn := Roots(A){Difference([1..n],[h])};
+    # ANew := Arr(Concatenation(Rn,[NewH]));       
     return ANew;
 end);
 
@@ -199,15 +184,16 @@ local ANew,NewH,Ln, Rn, n, h;
     if NewH = fail then
         return fail;
     fi;
-    Rn := Roots(A){Difference([1..n],[h])};
-    ANew := Arr(Concatenation(Rn,[NewH]));        
+    ANew:=HArrAddition(HArrDeletion(A,h),NewH);
+    # Rn := Roots(A){Difference([1..n],[h])};
+    # ANew := Arr(Concatenation(Rn,[NewH]));        
     return ANew;
 end);
 
 
 InstallMethod(HArrGreedySearch,
-    [IsInt,IsInt,IsField,IsFunction,IsInt],
-function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations)
+    [IsInt,IsInt,IsField,IsFunction,IsInt,IsRat],
+function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations, heat)
 local RunSearch,PropP, type;
 
     PropP := PropTargetFct;
@@ -229,7 +215,7 @@ local RunSearch,PropP, type;
             if PropP(ANew)=0 then
                 Print(i," Iterations - ");
                 return ANew;
-            elif PropP(ANew)<PropP(AOld) then
+            elif PropP(ANew)<PropP(AOld)+heat then
                 AOld := ANew;
                 k:=1;
             # else

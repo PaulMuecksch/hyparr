@@ -21,4 +21,5 @@ ReadPackage("hyparr","gap/topeposet.gd");
 ReadPackage("hyparr","gap/drawarrs.gd");
 ReadPackage("hyparr","gap/realizationspace.gd");
 ReadPackage("hyparr","gap/greedy.gd");
+ReadPackage("hyparr","gap/vgalgebra.gd");
 

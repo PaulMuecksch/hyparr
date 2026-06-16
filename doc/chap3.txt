@@ -82,3 +82,21 @@
     [4X[28X  [ 1, 0, 1 ], [ 1, 0, 0 ], [ 1, 1, 0 ] ][128X[104X
   [4X[32X[104X
   
+  [1X3.1-4 GraphicArr[101X
+  
+  [33X[1;0Y[29X[2XGraphicArr[102X( [3XEs[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA hyperplane arrangement.[133X
+  
+  [33X[0;0YGenerates the graphic arrangement of the graph with edges [3XEs[103X.[133X
+  
+  [33X[0;0YLet [23XG = (V,E)[123X be an undirected graph with vertex set [23XV = [\ell][123X and edge set
+  [23XE[123X. The graphic arrangement has hyperplanes[133X
+  
+  
+  [24X[33X[0;6Y\{ \{x_i=x_j\} \mid \{i,j\} \in E\}.[133X
+  
+  [124X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  

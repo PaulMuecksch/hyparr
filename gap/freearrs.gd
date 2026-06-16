@@ -47,6 +47,17 @@ DeclareOperation("DerModule",[IsHyperplaneArrangement]);
 
 DeclareOperation("DerModule",[IsHyperplaneArrangement, IsList]);
 
+#! @Arguments A, p [, mult]
+#! @Returns Derivation module
+#! @Description
+#!  Computes the <E>(multi) p-derivation module</E> $D^p(A)$ ($D^p(A,m)$) of the arrangement <A>A</A>
+#!  (with multiplicities given as a list by <A>mult</A>).
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("DerPModule",[IsHyperplaneArrangement, IsInt]);
+
+DeclareOperation("DerPModule",[IsHyperplaneArrangement, IsInt, IsList]);
+
 # DeclareAttribute("HArrDerModule", IsHyperplaneArrangement);
 
 #! @Arguments D
@@ -108,6 +119,17 @@ DeclareAttribute("DerModDegreeSequence",IsDerivationModule);
 #! @EndExampleSession
 DeclareAttribute("DerModProjDim", IsDerivationModule);
 
+
+# DeclareSynonym("DerMod",DAModule);
+
+
+#################################
+##
+#! @Section Freeness properties
+##
+#################################
+
+
 #! @Arguments D
 #! @Returns true or false
 #! @Description
@@ -123,7 +145,7 @@ DeclareAttribute("DerModProjDim", IsDerivationModule);
 #! gap> D:=DerModule(A); DerModIsFree(D);
 #! false
 #! @EndExampleSession
-DeclareAttribute("DerModIsFree", IsDerivationModule);
+DeclareProperty("DerModIsFree", IsDerivationModule);
 
 #! @Arguments A
 #! @Returns true or false
@@ -140,7 +162,7 @@ DeclareAttribute("DerModIsFree", IsDerivationModule);
 #! gap> HArrIsFree(A);
 #! false
 #! @EndExampleSession
-DeclareAttribute("HArrIsFree", IsHyperplaneArrangement);
+DeclareProperty("HArrIsFree", IsHyperplaneArrangement);
 
 
 #! @Arguments A
@@ -149,16 +171,7 @@ DeclareAttribute("HArrIsFree", IsHyperplaneArrangement);
 #!  Determines, if <A>A</A> is locally free, i.e. if all proper localizations are free.
 #! @BeginExampleSession
 #! @EndExampleSession
-DeclareAttribute("HArrIsLocallyFree", IsHyperplaneArrangement);
-
-# DeclareSynonym("DerMod",DAModule);
-
-
-#################################
-##
-#! @Section Freeness properties
-##
-#################################
+DeclareProperty("HArrIsLocallyFree", IsHyperplaneArrangement);
 
 
 #! @Arguments A
