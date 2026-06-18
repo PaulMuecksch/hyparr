@@ -16,7 +16,7 @@ DeclareCategory("IsHArrGreedySearchPair", IsComponentObjectRep and IsAttributeSt
 DeclareRepresentation(
     "IsHArrGreedySearchRep", 
     IsHArrGreedySearch,
-    ["gf","dim","nhs","targetfct","maxiter","runsearch"]
+    ["gf","dim","nhs","targetfct","maxiter","runsearch","startA", "fixSA"]
 );
 
 # Declare the representation
@@ -38,14 +38,14 @@ DeclareOperation("ViewObject", [IsHArrGreedySearchPair]);
 ##
 #################################################
 
-DeclareOperation("RandomArrOverGF",[IsInt,IsInt,IsField]);
+DeclareOperation("RandomArrOverGF",[IsInt,IsInt,IsField,IsList]);
 DeclareOperation("RandomNewHThroughPoints",[IsHyperplaneArrangement]);
 DeclareOperation("RandomNewHThroughIntersections",[IsHyperplaneArrangement]);
 DeclareOperation("RandomNewH",[IsHyperplaneArrangement]);
-DeclareOperation("ExchangeRandomH",[IsHyperplaneArrangement]);
-DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
+DeclareOperation("ExchangeRandomH",[IsHyperplaneArrangement,IsList]);
+DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement,IsList]);
 
-#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat
+#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat[,StartSubArr, FixSubArr]
 #! @Returns A hyperplane arrangement
 #! @Description
 #!  Constructs a greedy search for arrangements over <A>GField</A> with <A>NumberOfHs</A>
@@ -56,6 +56,8 @@ DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
 #!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
 #!      (one step = exchanging a hyperplane).
 #!  * <A>heat</A> is a margin for the target function 
+#!  * <E>optional</E> <A>StartArr</A> an arrangement from which to start the search 
+#!   and <A>FixSubArr</A> a subarrangement of <A>StartArr</A> which should stay fixed during the search.
 #! @BeginExampleSession
 #! gap> HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);
 #! GreedySearch over GF(17) for arrangements:
@@ -64,9 +66,65 @@ DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
 #! @EndExampleSession
 DeclareOperation("HArrGreedySearch",[IsInt,IsInt,IsField,IsFunction,IsInt, IsRat]);
 
+#! @Arguments opts
+#! @Returns A hyperplane arrangement
+#! @Description
+#!  Constructs a greedy search for arrangements.
+#!  <A>opts</A> should be a record spezifying the following:
+#! 
+#!  * <A>NumberOfHs</A> number of hyperplanes,
+#!  * <A>dim</A> dimension,
+#!  * <A>GField</A> Galois field,
+#!  * <A>PropTargetFct</A> should be a function taking a hyperplane arragement as argument,
+#!      returning a non-negative real number, which the search tries to minimize,
+#!      and such that value=0 means the arrangement satisfies the desired property.
+#!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
+#!      (one step = exchanging a hyperplane).
+#!  * <A>heat</A> is a margin for the target function 
+#!  * <A>StartArr</A> an arrangement from which to start the search 
+#!  * and <A>FixSubArr</A> a subarrangement (list of indices) which should stay fixed during the search.
+#! 
+#! @BeginExampleSession
+#! gap> GField:=GF(13);; AFix:=[1..4];; Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x->One(GField))]));; P:=CharPolySplits;;
+#! gap> opts:=rec(
+#! >     NumberOfHs:=15,
+#! >     dim:=3,
+#! >     GField:=GF(13),
+#! >     PropTargetFct:=P,
+#! >     MaxNoIterations:=1000,
+#! >     heat := -1/8,
+#! >     StartArr := Astart,
+#! >     FixSubArr := AFix
+#! > );;
+#! gap> GSn:=HArrGreedySearchSubArr(opts); GSRun:=GreedySearchRun(GSn);;
+#! GreedySearch over GF(13) for arrangements:
+#!  - of rank 3
+#!  - with 15 hyperplanes.
+#! gap> A:=GSRun();
+#! 260 Iterations - <HyperplaneArrangement: 15 hyperplanes in 3-space>
+#! gap> Print(A);
+#! HyperplaneArrangement defined by
+#! [ [   Z(13)^0,   0*Z(13),   0*Z(13) ],
+#!   [   0*Z(13),   Z(13)^0,   0*Z(13) ],
+#!   [   0*Z(13),   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^0,   Z(13)^0,   Z(13)^0 ],
+#!   [   Z(13)^5,   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^8,   Z(13)^0,   0*Z(13) ],
+#!   [   Z(13)^8,   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^2,   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^9,   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^9,   Z(13)^0,   0*Z(13) ],
+#!   [   Z(13)^5,   Z(13)^4,   Z(13)^0 ],
+#!   [   Z(13)^0,   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^6,   0*Z(13),   Z(13)^0 ],
+#!   [   Z(13)^2,  Z(13)^10,   Z(13)^0 ],
+#!   [   Z(13)^0,   Z(13)^4,   Z(13)^0 ] ]
+#! @EndExampleSession
+DeclareOperation("HArrGreedySearchSubArr",[IsRecord]);
+
 DeclareOperation("HArrGreedySearchPair",[IsInt,IsInt,IsField,IsFunction,IsFunction,IsInt]);
 
-DeclareOperation("RandArrOverGF",[IsInt,IsInt,IsField]);
+# DeclareOperation("RandArrOverGF",[IsInt,IsInt,IsField, IsList]);
 
 #! @Arguments A
 #! @Description

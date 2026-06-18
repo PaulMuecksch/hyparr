@@ -78,11 +78,15 @@ InstallMethod(GreedySearchRun,
 ## Greedy search algo single
 
 InstallMethod(RandomArrOverGF,
-    [IsInt,IsInt,IsField],
-function(dim,NumberOfHs,GField)
+    [IsInt,IsInt,IsField, IsList],
+function(dim,NumberOfHs,GField,RAs)
 local Hs,i,R,h;
     Hs := Points(PG(dim-1,GField));
-    R:=Concatenation(One(GField)*IdentityMat(dim),[List([1..dim],x->One(GField))]);
+    if RAs<>[] then
+        R:=ShallowCopy(RAs);
+    else
+        R:=Concatenation(One(GField)*IdentityMat(dim),[List([1..dim],x->One(GField))]);
+    fi;
     while Length(R)<NumberOfHs do
         h:=Coordinates(Random(Hs));
         if not(true in List(R,ht->Rank([h,ht])=1)) then
@@ -151,14 +155,14 @@ local IsNewH, NewH, d, F, i,q;
 end);
 
 InstallMethod(ExchangeRandomH,
-    [IsHyperplaneArrangement],
-function(A)
+    [IsHyperplaneArrangement,IsList],
+function(A,fixS)
 local ANew,PossibleNewHs,OldH,NewH,Ln, Rn, n, h;
     n := Length(Roots(A));
     # if n>=Dimension(A)+1 then
     #     h := Random([Dimension(A)+1..n]);
     # else
-        h := Random([1..n]);
+        h := Random(Difference([1..n],fixS));
     # fi;
     NewH := RandomNewHThroughIntersections(A);
     if NewH = fail then
@@ -171,14 +175,14 @@ local ANew,PossibleNewHs,OldH,NewH,Ln, Rn, n, h;
 end);
 
 InstallMethod(ExchangeRandomH2,
-    [IsHyperplaneArrangement],
-function(A)
+    [IsHyperplaneArrangement,IsList],
+function(A,fixS)
 local ANew,NewH,Ln, Rn, n, h;
     n := Length(Roots(A));
     # if n>=Dimension(A)+1 then
     #     h := Random([Dimension(A)+1..n]);
     # else
-        h := Random([1..n]);
+        h := Random(Difference([1..n],fixS));
     # fi;
     NewH := RandomNewH(A);
     if NewH = fail then
@@ -200,12 +204,12 @@ local RunSearch,PropP, type;
 
     RunSearch := function()
     local k,AOld,ANew,i;
-        AOld := RandomArrOverGF(dim,NumberOfHs,GField);
+        AOld := RandomArrOverGF(dim,NumberOfHs,GField,[]);
         k:=1;
         for i in [1..MaxNoIterations] do
-            ANew := ExchangeRandomH(AOld);
+            ANew := ExchangeRandomH(AOld,[]);
             if ANew=fail then
-                ANew := ExchangeRandomH2(AOld);
+                ANew := ExchangeRandomH2(AOld,[]);
                 if ANew=fail then
                     Print(i," Iterations - ");
                     Print("Target function value: ",PropP(AOld),"\n");
@@ -244,6 +248,79 @@ local RunSearch,PropP, type;
             tagetfct := PropTargetFct,
             maxiter := MaxNoIterations,
             runsearch := RunSearch
+        )
+    );
+
+end);
+
+InstallMethod(HArrGreedySearchSubArr,
+    [IsRecord],
+    # [IsInt,IsInt,IsField,IsFunction,IsInt,IsRat,IsHyperplaneArrangement, IsList],
+# function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations, heat, StartArr, FixSubArr)
+function(opts)
+local RunSearch,PropP, type, ns;
+
+    if HArrDefField(opts.StartArr)<>opts.GField then
+        Print("Def field of Start arrangement different from search field!");
+        return fail;
+    fi;
+
+    ns := Length(Roots(opts.StartArr));
+    if opts.NumberOfHs < ns or Dimension(opts.StartArr)<>opts.dim then
+        Print("Dimension or number of hyperplanes of Start arrangment so not fit!");
+        return fail;
+    fi;
+
+    PropP := opts.PropTargetFct;
+
+    RunSearch := function()
+    local k,AOld,ANew,i;
+        AOld := RandomArrOverGF(opts.dim,opts.NumberOfHs,opts.GField,Roots(opts.StartArr));
+        k:=1;
+        for i in [1..opts.MaxNoIterations] do
+            ANew := ExchangeRandomH(AOld,opts.FixSubArr);
+            if ANew=fail then
+                ANew := ExchangeRandomH2(AOld,opts.FixSubArr);
+                if ANew=fail then
+                    Print(i," Iterations - ");
+                    Print("Target function value: ",PropP(AOld),"\n");
+                    return fail;
+                fi;
+            fi;
+            if PropP(ANew)=0 then
+                Print(i," Iterations - ");
+                return ANew;
+            # elif PropP(ANew)<PropP(AOld)+heat then
+            elif PropP(ANew)/PropP(AOld) < 1-opts.heat then
+                AOld := ANew;
+                k:=1;
+            # else
+            #     k:=k+1;
+            fi;
+            # if k>=MaxNoIterations/4 then
+            # if k>=50 then
+            #     k:=1;
+            #     AOld := ANew;
+            # fi;
+        od;
+        Print("Target function value: ",PropP(ANew),"\n");
+        return fail;
+
+    end;
+
+    type := NewType(HArrGreedySearchFamily,
+                    IsHArrGreedySearchRep);
+
+    return Objectify(type,
+        rec(
+            gf := opts.GField,
+            dim := opts.dim,
+            nhs := opts.NumberOfHs,
+            tagetfct := opts.PropTargetFct,
+            maxiter := opts.MaxNoIterations,
+            runsearch := RunSearch,
+            startA := opts.StartArr,
+            fixSA := opts.FixSubArr
         )
     );
 

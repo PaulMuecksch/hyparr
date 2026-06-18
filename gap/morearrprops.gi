@@ -462,7 +462,7 @@ function(A)
 local n, expA,P,FPs;
 	expA := ExpArr(A);
 	if expA=fail then
-		return false;
+		return [];
 	fi;
 	
 	n:=Length(Roots(A));
@@ -580,6 +580,7 @@ InstallMethod(HArrIsInductivelyFactored,
 function(A)
 local FactsA,P;
     FactsA:=HArrFactorizations(A);
+    # if FactsA = fail 
     for P in FactsA do
         if IsIndFactorization(List(P,B->List(B,h->Roots(A)[h]))) then
             return [P,true];

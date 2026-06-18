@@ -12,7 +12,7 @@
 <Heading>Constructions</Heading>
 
 <ManSection>
-  <Oper Arg="NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat" Name="HArrGreedySearch" Label="for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat"/>
+  <Oper Arg="NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat[,StartSubArr, FixSubArr]" Name="HArrGreedySearch" Label="for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat"/>
  <Returns>A hyperplane arrangement
 </Returns>
  <Description>
@@ -31,12 +31,96 @@
 <Item>
 <A>heat</A> is a margin for the target function 
 </Item>
+<Item>
+<E>optional</E> <A>StartArr</A> an arrangement from which to start the search 
+   and <A>FixSubArr</A> a subarrangement of <A>StartArr</A> which should stay fixed during the search.
+</Item>
 </List>
 <Example><![CDATA[
 gap> HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);
 GreedySearch over GF(17) for arrangements:
  - of rank 3
  - with 13 hyperplanes.
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="opts" Name="HArrGreedySearchSubArr" Label="for IsRecord"/>
+ <Returns>A hyperplane arrangement
+</Returns>
+ <Description>
+  Constructs a greedy search for arrangements.
+  <A>opts</A> should be a record spezifying the following:
+<P/>
+<List>
+<Item>
+<A>NumberOfHs</A> number of hyperplanes,
+</Item>
+<Item>
+<A>dim</A> dimension,
+</Item>
+<Item>
+<A>GField</A> Galois field,
+</Item>
+<Item>
+<A>PropTargetFct</A> should be a function taking a hyperplane arragement as argument,
+      returning a non-negative real number, which the search tries to minimize,
+      and such that value=0 means the arrangement satisfies the desired property.
+</Item>
+<Item>
+<A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
+      (one step = exchanging a hyperplane).
+</Item>
+<Item>
+<A>heat</A> is a margin for the target function 
+</Item>
+<Item>
+<A>StartArr</A> an arrangement from which to start the search 
+</Item>
+<Item>
+and <A>FixSubArr</A> a subarrangement (list of indices) which should stay fixed during the search.
+</Item>
+</List>
+<P/>
+<Example><![CDATA[
+gap> GField:=GF(13);; AFix:=[1..4];; Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x->One(GField))]));; P:=CharPolySplits;;
+gap> opts:=rec(
+>     NumberOfHs:=15,
+>     dim:=3,
+>     GField:=GF(13),
+>     PropTargetFct:=P,
+>     MaxNoIterations:=1000,
+>     heat := -1/8,
+>     StartArr := Astart,
+>     FixSubArr := AFix
+> );;
+gap> GSn:=HArrGreedySearchSubArr(opts); GSRun:=GreedySearchRun(GSn);;
+GreedySearch over GF(13) for arrangements:
+ - of rank 3
+ - with 15 hyperplanes.
+gap> A:=GSRun();
+260 Iterations - <HyperplaneArrangement: 15 hyperplanes in 3-space>
+gap> Print(A);
+HyperplaneArrangement defined by
+[ [   Z(13)^0,   0*Z(13),   0*Z(13) ],
+  [   0*Z(13),   Z(13)^0,   0*Z(13) ],
+  [   0*Z(13),   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^0,   Z(13)^0,   Z(13)^0 ],
+  [   Z(13)^5,   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^8,   Z(13)^0,   0*Z(13) ],
+  [   Z(13)^8,   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^2,   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^9,   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^9,   Z(13)^0,   0*Z(13) ],
+  [   Z(13)^5,   Z(13)^4,   Z(13)^0 ],
+  [   Z(13)^0,   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^6,   0*Z(13),   Z(13)^0 ],
+  [   Z(13)^2,  Z(13)^10,   Z(13)^0 ],
+  [   Z(13)^0,   Z(13)^4,   Z(13)^0 ] ]
 ]]></Example>
 
 

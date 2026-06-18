@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  18 JUN 2026 07:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  18 JUN 2026 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -753,41 +753,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 3527--3532
 .95 NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 3559--3562
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3571--3574
-
- []
-
 [52
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
-AE649A}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3583 \hyperdef{L}{X7C701DBF7BAE649A}{}
-                                        
-Underfull \hbox (badness 10000) in paragraph at lines 3644--3647
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3661--3664
+Underfull \hbox (badness 10000) in paragraph at lines 3631--3634
 
  []
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 3678--3681
+Underfull \hbox (badness 10000) in paragraph at lines 3643--3646
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3695--3698
+pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
+AE649A}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3655 \hyperdef{L}{X7C701DBF7BAE649A}{}
+                                        
+Underfull \hbox (badness 10000) in paragraph at lines 3716--3719
+
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 3733--3736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3750--3753
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3767--3770
 
  []
 
@@ -795,28 +795,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 3695--3698
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [54]
+ [55]
 Underfull \hbox (badness 10000) in paragraph at lines 44--44
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
  []
 
-[55
+[56
 
-]) [56] (./HypArr.ind [57
+]) [57] (./HypArr.ind [58
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 []| \T1/ptm/m/n/10.95 for IsHy-per-plan-eAr-range-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[58] [59]) (./HypArr.aux)
+[59] [60] [61
+
+]) (./HypArr.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -827,10 +829,10 @@ Package rerunfilecheck Info: File `HypArr.brf' has not changed.
 (rerunfilecheck)             Checksum: 44BAD947F4141D5B74D76380DB11CD23;1129.
  ) 
 Here is how much of TeX's memory you used:
- 12461 strings out of 467533
- 196176 string characters out of 5422138
- 618878 words of memory out of 5000000
- 40735 multiletter control sequences out of 15000+600000
+ 12466 strings out of 467533
+ 196263 string characters out of 5422138
+ 618965 words of memory out of 5000000
+ 40736 multiletter control sequences out of 15000+600000
  694358 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,7n,93p,491b,872s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -852,10 +854,10 @@ type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (59 pages, 489429 bytes).
+Output written on HypArr.pdf (61 pages, 492207 bytes).
 PDF statistics:
- 1265 PDF objects out of 1440 (max. 8388607)
- 1134 compressed objects within 12 object streams
- 427 named destinations out of 1000 (max. 500000)
+ 1277 PDF objects out of 1440 (max. 8388607)
+ 1144 compressed objects within 12 object streams
+ 431 named destinations out of 1000 (max. 500000)
  405 words of extra memory for PDF output out of 10000 (max. 10000000)
 
