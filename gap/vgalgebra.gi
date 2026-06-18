@@ -9,52 +9,67 @@ BindGlobal("VGAlgebraFamily",
 
 InstallMethod(VGField,
 	[IsVGAlgebra],
-VGA->VGA!.gfield);
+VGA->VGA!.field);
 
 InstallMethod(VGGenerators,
 	[IsVGAlgebra],
 VGA->VGA!.gens);
 
-InstallMethod(VGSpace,
-	[IsVGAlgebra],
-VGA->VGA!.space);
+# InstallMethod(VGSpace,
+# 	[IsVGAlgebra],
+# VGA->VGA!.space);
 
-InstallMethod(VGSingularQRing,
-	[IsVGAlgebra],
-VGA->VGA!.sqring);
+# InstallMethod(VGSingularQRing,
+# 	[IsVGAlgebra],
+# VGA->VGA!.sqring);
 
 InstallMethod(VGPRing,
 	[IsVGAlgebra],
 VGA->VGA!.pring);
 
+InstallMethod(VGgrAlgebraPresentation,
+    [IsVGAlgebra],
+VGA -> VGA!.grAPres);
+
+
 InstallMethod(ViewObj,
     [ IsVGAlgebra ],
 function(VGA)
-    Print("<Varchenko-Gelfand Algbra: ",
+    Print("<Varchenko-Gelfand Algebra: ",
           Length(VGGenerators(VGA)), " generators over ",
           VGField(VGA), ">");
 end);
 
 InstallMethod(VGAlgebra,
     [IsOrientedMatroid, IsField],
-function(OM, K)
-local gset, gc, c, PRing,vars, gI, IdealVG, SQRing, type;
-    gset:=OMGroundSet(OM);
+function(O, K)
+local gset, gc, c, cSupp, PRing,vars, gI, IdealVG, homIdeal, hgI, hIdealVG, VGPresentation, SQRing, type;
+    gset:=OMGroundSet(O);
     vars := List(gset,i->X(K, Concatenation("e",String(i))));
     PRing := PolynomialRing(K,vars);
     gI:=List([1..Length(gset)],i->vars[i]^2-vars[i]);
 
-    for c in OMCircuits(OM) do
-        gc := Product(List(SVPlusSet(c),i->vars[i]))*Product(List(SVMinusSet(c),i->vars[i]-1))
-            - Product(List(SVMinusSet(c),i->vars[i]))*Product(List(SVPlusSet(c),i->vars[i]-1));
-        Add(gI,gc);
+    # for c in OMCircuits(O) do
+    #     gc := Product(List(SVPlusSet(c),i->vars[i]))*Product(List(SVMinusSet(c),i->vars[i]-1))
+    #         - Product(List(SVMinusSet(c),i->vars[i]))*Product(List(SVPlusSet(c),i->vars[i]-1));
+    #     Add(gI,gc);
+    # od;
+    # IdealVG :=  Ideal(PRing,gI);
+
+    hgI := List([1..Length(gset)],i->vars[i]^2);
+    for c in OMCircuits(O) do
+        cSupp := Difference(gset,SVZeroSet(c));
+        gc := Sum(List(cSupp,p-> c[p]*Product(List(Difference(cSupp,[p]),i->vars[i]))));
+        Add(hgI,gc);
     od;
-    IdealVG :=  Ideal(PRing,gI);
+    hIdealVG :=  Ideal(PRing,gI);
+
+    VGPresentation := GradedAlgebraPresentation(PRing,hgI,List(vars,x->1));
 
     SetTermOrdering(PRing,"dp");
 	SingularSetBaseRing(PRing);
-    IdealVG := SingularInterface("std",[IdealVG],"ideal");
-    SQRing := SingularInterface("qring",[IdealVG],"ring" );
+    hIdealVG := SingularInterface("std",[hIdealVG],"ideal");
+    # SQRing := SingularInterface("qring",[IdealVG],"ring" );
     # SQRing := PRing;
 
     type := NewType(VGAlgebraFamily,
@@ -64,10 +79,12 @@ local gset, gc, c, PRing,vars, gI, IdealVG, SQRing, type;
         rec(
             field := K,
             space := [],
-            ideal := IdealVG,
-			gens := GeneratorsOfIdeal(IdealVG),
+            ideal := hIdealVG,
+			# gens := GeneratorsOfIdeal(hIdealVG),
+            gens := hgI,
             pring := PRing,
-            sqring := SQRing
+            grAPres := VGPresentation
+            # sqring := SQRing
         )
     );
 

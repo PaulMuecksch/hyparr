@@ -134,7 +134,8 @@ local ks,sigma, ns, T, QT, TopesSigma;
     return List(ks,k->[TopesSigma{Positions(List(TopesSigma,R->Length(SeparatingSet(T,R))=k),true)},T,sigma]);
 end);
 
-InstallGlobalFunction(FPtoCWCpx,
+InstallMethod(FPtoCWCpx,
+    [IsFacePoset],
 function(FP)
 local PSet,OF,FaceCpxC, MFCpx, d, IncFs, F, CWFCpx;
     PSet := FPGroundSet(FP);
@@ -181,7 +182,8 @@ local gSet, mC,mCn,mCs,mCsn, h,i,rs, Vs, ofun;
 end;
 
 
-InstallGlobalFunction(FPtoSCpx,
+InstallMethod(FPtoSCpx,
+    [IsFacePoset],
 function(FP)
 local OF, PSet, h, i,rs, Vs,mC,mCn,mCs,mCsn;
     PSet:=FPGroundSet(FP);
@@ -204,6 +206,19 @@ local OF, PSet, h, i,rs, Vs,mC,mCn,mCs,mCsn;
     
     # return mCsn;
     return SimplicialComplex(mCsn);
+end);
+
+InstallMethod(MFModPCohomRing,
+    [IsOrientedMatroid,IsInt],
+function(O,p)
+    return CohomologyRing( FPtoSCpx(MilnorFiberComplex(O)), p );
+end);
+
+
+InstallMethod(MFModPCohomRing,
+    [IsHyperplaneArrangement,IsInt],
+function(A,p)
+    return CohomologyRing( FPtoSCpx(MilnorFiberComplex(A)), p );
 end);
 
 

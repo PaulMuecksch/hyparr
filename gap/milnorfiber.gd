@@ -47,18 +47,9 @@ DeclareAttribute("MilnorFiberComplex", IsHyperplaneArrangement);
 
 #################################
 ##
-#! @Section (Co)homology
+#! @Section Functions for (Co)homology computations
 ##
 #################################
-
-DeclareAttribute("MFModPCohomRing", IsOrientedMatroid);
-
-#################################
-##
-# @Section Global methods
-##
-#################################
-
 
 DeclareGlobalFunction("rkSubDivCodim1");
 
@@ -83,7 +74,7 @@ DeclareGlobalFunction("MCpxOF");
 #! gap> Homology(MCW,1);
 #! [ 0, 0, 0, 0, 0, 0, 0 ]
 #! @EndExampleSession
-DeclareGlobalFunction("FPtoCWCpx");
+DeclareOperation("FPtoCWCpx", [IsFacePoset]);
 
 
 #! @Arguments FP
@@ -97,9 +88,21 @@ DeclareGlobalFunction("FPtoCWCpx");
 #! gap> SMF:=FPtoSCpx(MFP);
 #! Simplicial complex of dimension 2.
 #! @EndExampleSession
-DeclareGlobalFunction("FPtoSCpx");
+DeclareOperation("FPtoSCpx", [IsFacePoset]);
 
+#! @Arguments OM,p
+#! @Returns HAP mod-p cohomology
+#! @Description
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("MFModPCohomRing", [IsOrientedMatroid, IsInt]);
 
+#! @Arguments A,p
+#! @Returns HAP mod-p cohomology
+#! @Description
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("MFModPCohomRing", [IsHyperplaneArrangement, IsInt]);
 
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

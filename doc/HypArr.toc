@@ -125,9 +125,11 @@
 \contentsline {section}{\numberline {8.1}\textcolor {Chapter }{Complexes}}{35}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}\textcolor {Chapter }{MilnorFiberComplex (for IsOrientedMatroid)}}{35}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}\textcolor {Chapter }{MilnorFiberComplex (for IsHyperplaneArrangement)}}{35}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}\textcolor {Chapter }{(Co)homology}}{36}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}\textcolor {Chapter }{FPtoCWCpx}}{36}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}\textcolor {Chapter }{FPtoSCpx}}{36}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.2}\textcolor {Chapter }{Functions for (Co)homology computations}}{36}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}\textcolor {Chapter }{FPtoCWCpx (for IsFacePoset)}}{36}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}\textcolor {Chapter }{FPtoSCpx (for IsFacePoset)}}{36}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}\textcolor {Chapter }{MFModPCohomRing (for IsOrientedMatroid, IsInt)}}{36}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}\textcolor {Chapter }{MFModPCohomRing (for IsHyperplaneArrangement, IsInt)}}{36}{subsection.8.2.4}%
 \contentsline {chapter}{\numberline {9}\textcolor {Chapter }{Tope posets}}{37}{chapter.9}%
 \contentsline {section}{\numberline {9.1}\textcolor {Chapter }{Operations}}{37}{section.9.1}%
 \contentsline {subsection}{\numberline {9.1.1}\textcolor {Chapter }{TopePoset (for IsOrientedMatroid, IsList)}}{37}{subsection.9.1.1}%

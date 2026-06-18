@@ -56,11 +56,11 @@ gap> MCpx:=MilnorFiberComplex(A);
 </Section>
 
 
-<Section Label="Chapter_Milnor_fibers_Section_Cohomology">
-<Heading>(Co)homology</Heading>
+<Section Label="Chapter_Milnor_fibers_Section_Functions_for_Cohomology_computations">
+<Heading>Functions for (Co)homology computations</Heading>
 
 <ManSection>
-  <Func Arg="FP" Name="FPtoCWCpx" />
+  <Oper Arg="FP" Name="FPtoCWCpx" Label="for IsFacePoset"/>
  <Returns>HAP CW Complex
 </Returns>
  <Description>
@@ -85,7 +85,7 @@ gap> Homology(MCW,1);
 
 
 <ManSection>
-  <Func Arg="FP" Name="FPtoSCpx" />
+  <Oper Arg="FP" Name="FPtoSCpx" Label="for IsFacePoset"/>
  <Returns>Simplicial complex
 </Returns>
  <Description>
@@ -96,6 +96,32 @@ gap> MFP:=MilnorFiberComplex(AGpql(2,2,3));
 <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
 gap> SMF:=FPtoSCpx(MFP);
 Simplicial complex of dimension 2.
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="OM,p" Name="MFModPCohomRing" Label="for IsOrientedMatroid, IsInt"/>
+ <Returns>HAP mod-p cohomology
+</Returns>
+ <Description>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="A,p" Name="MFModPCohomRing" Label="for IsHyperplaneArrangement, IsInt"/>
+ <Returns>HAP mod-p cohomology
+</Returns>
+ <Description>
+<Example><![CDATA[
 ]]></Example>
 
 

@@ -49,11 +49,11 @@
   [4X[32X[104X
   
   
-  [1X8.2 [33X[0;0Y(Co)homology[133X[101X
+  [1X8.2 [33X[0;0YFunctions for (Co)homology computations[133X[101X
   
   [1X8.2-1 FPtoCWCpx[101X
   
-  [33X[1;0Y[29X[2XFPtoCWCpx[102X( [3XFP[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XFPtoCWCpx[102X( [3XFP[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YHAP CW Complex[133X
   
   [33X[0;0YConverts  a  [12XHypArr[112X  [10XFacePoset[110X  into  a  [12XHAP[112X  [10XRegularCWComplex[110X  for  further
@@ -74,7 +74,7 @@
   
   [1X8.2-2 FPtoSCpx[101X
   
-  [33X[1;0Y[29X[2XFPtoSCpx[102X( [3XFP[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XFPtoSCpx[102X( [3XFP[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YSimplicial complex[133X
   
   [33X[0;0YConstructs  the  order  complex of the [10XFacePoset[110X given as the set of maximal
@@ -85,5 +85,21 @@
     [4X[28X<FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>[128X[104X
     [4X[25Xgap>[125X [27XSMF:=FPtoSCpx(MFP);[127X[104X
     [4X[28XSimplicial complex of dimension 2.[128X[104X
+  [4X[32X[104X
+  
+  [1X8.2-3 MFModPCohomRing[101X
+  
+  [33X[1;0Y[29X[2XMFModPCohomRing[102X( [3XOM[103X, [3Xp[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YHAP mod-p cohomology[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X8.2-4 MFModPCohomRing[101X
+  
+  [33X[1;0Y[29X[2XMFModPCohomRing[102X( [3XA[103X, [3Xp[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YHAP mod-p cohomology[133X
+  
+  [4X[32X  Example  [32X[104X
   [4X[32X[104X
   

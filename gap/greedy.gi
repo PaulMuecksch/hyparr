@@ -155,8 +155,8 @@ InstallMethod(ExchangeRandomH,
 function(A)
 local ANew,PossibleNewHs,OldH,NewH,Ln, Rn, n, h;
     n := Length(Roots(A));
-    # if n>=Dimension(A)+2 then
-    #     h := Random([Dimension(A)+2..n]);
+    # if n>=Dimension(A)+1 then
+    #     h := Random([Dimension(A)+1..n]);
     # else
         h := Random([1..n]);
     # fi;
@@ -175,8 +175,8 @@ InstallMethod(ExchangeRandomH2,
 function(A)
 local ANew,NewH,Ln, Rn, n, h;
     n := Length(Roots(A));
-    # if n>=Dimension(A)+2 then
-    #     h := Random([Dimension(A)+2..n]);
+    # if n>=Dimension(A)+1 then
+    #     h := Random([Dimension(A)+1..n]);
     # else
         h := Random([1..n]);
     # fi;
@@ -215,7 +215,8 @@ local RunSearch,PropP, type;
             if PropP(ANew)=0 then
                 Print(i," Iterations - ");
                 return ANew;
-            elif PropP(ANew)<PropP(AOld)+heat then
+            # elif PropP(ANew)<PropP(AOld)+heat then
+            elif PropP(ANew)/PropP(AOld) < 1-heat then
                 AOld := ANew;
                 k:=1;
             # else

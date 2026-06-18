@@ -30,7 +30,7 @@
 \makelabel{hyparr:Complexes and face posets}{7.1}{X819196B286D1D1C8}
 \makelabel{hyparr:Milnor fibers}{8}{X80236F007DAFE4C2}
 \makelabel{hyparr:Complexes}{8.1}{X79C388D385DB7CD1}
-\makelabel{hyparr:(Co)homology}{8.2}{X8366544182D95745}
+\makelabel{hyparr:Functions for (Co)homology computations}{8.2}{X876C9A8C7D1EBC64}
 \makelabel{hyparr:Tope posets}{9}{X7D123BFB84BF8125}
 \makelabel{hyparr:Operations}{9.1}{X7DE8E16C7C2D387B}
 \makelabel{hyparr:Attributes}{9.2}{X7C701DBF7BAE649A}
@@ -146,8 +146,10 @@
 \makelabel{hyparr:CCSimpleTriangle for IsHyperplaneArrangement}{7.2.1}{X7ACB507C792584A4}
 \makelabel{hyparr:MilnorFiberComplex for IsOrientedMatroid}{8.1.1}{X794B90A67B153E6F}
 \makelabel{hyparr:MilnorFiberComplex for IsHyperplaneArrangement}{8.1.2}{X7D30E85086B93DB0}
-\makelabel{hyparr:FPtoCWCpx}{8.2.1}{X7BBA6F967E493B5D}
-\makelabel{hyparr:FPtoSCpx}{8.2.2}{X789BCFB57A2E7F05}
+\makelabel{hyparr:FPtoCWCpx for IsFacePoset}{8.2.1}{X7F3FC67D80A1CC6F}
+\makelabel{hyparr:FPtoSCpx for IsFacePoset}{8.2.2}{X8500A99C823F5FE5}
+\makelabel{hyparr:MFModPCohomRing for IsOrientedMatroid, IsInt}{8.2.3}{X7EAF6CE0851F5CEC}
+\makelabel{hyparr:MFModPCohomRing for IsHyperplaneArrangement, IsInt}{8.2.4}{X8743737483C35366}
 \makelabel{hyparr:TopePoset for IsOrientedMatroid, IsList}{9.1.1}{X804189147ADFB6A2}
 \makelabel{hyparr:TPGroundSet for IsTopePoset}{9.2.1}{X81854C4D816A501A}
 \makelabel{hyparr:TPBaseTope for IsTopePoset}{9.2.2}{X82CEA0EB7B0AF294}

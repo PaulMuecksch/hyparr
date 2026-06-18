@@ -22,8 +22,8 @@
   [2XExpArr[102X, for IsHyperplaneArrangement 2.2-6 
   [2XFPGroundSet[102X, for IsFacePoset 7.1-3 
   [2XFPOrder[102X, for IsFacePoset 7.1-4 
-  [2XFPtoCWCpx[102X 8.2-1 
-  [2XFPtoSCpx[102X 8.2-2 
+  [2XFPtoCWCpx[102X, for IsFacePoset 8.2-1 
+  [2XFPtoSCpx[102X, for IsFacePoset 8.2-2 
   [2XGraphicArr[102X, for IsList 3.1-4 
   [2XGreedySearchDimension[102X, for IsHArrGreedySearch 13.2-3 
   [2XGreedySearchGF[102X, for IsHArrGreedySearch 13.2-2 
@@ -89,6 +89,8 @@
   [2XLRankFunction[102X, for IsGeomLattice 2.4-6 
   [2XLRealizationSpace[102X, for IsGeomLattice, IsInt 12.1-1 
   [2XLSubsetGeneratedByS[102X, for IsGeomLattice,IsList 12.4-1 
+  [2XMFModPCohomRing[102X, for IsHyperplaneArrangement, IsInt 8.2-4 
+      for IsOrientedMatroid, IsInt 8.2-3 
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 8.1-2 
       for IsOrientedMatroid 8.1-1 
   [2XMSetInvL[102X, for IsHyperplaneArrangement 2.2-7 

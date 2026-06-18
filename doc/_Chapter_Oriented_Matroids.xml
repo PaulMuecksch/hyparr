@@ -12,7 +12,7 @@
 <Heading>Construction of oriented matroids</Heading>
 
 <ManSection>
-  <Oper Arg="R or A or [CCs,c] or [n,r,ChiroCoreList]" Name="OrientedMatroid" Label="for IsList"/>
+  <Oper Arg="R or A or [CCs,c] or [r,n,ChiroCoreList]" Name="OrientedMatroid" Label="for IsList"/>
  <Returns>An oriented matroid OM.
 </Returns>
  <Description>

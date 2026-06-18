@@ -1016,7 +1016,7 @@ associated cell complexes and invariants. See \cite{BLSWZ1999_OrientedMatroids}.
 \subsection{\textcolor{Chapter }{OrientedMatroid (for IsList)}}
 \logpage{[ 4, 1, 1 ]}\nobreak
 \hyperdef{L}{X82EE52377B03CC80}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape R, or, A, or[, CCs, c], or[, n, r, ChiroCoreList]})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsList}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OrientedMatroid({\mdseries\slshape R, or, A, or[, CCs, c], or[, r, n, ChiroCoreList]})\index{OrientedMatroid@\texttt{OrientedMatroid}!for IsList}
 \label{OrientedMatroid:for IsList}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
@@ -2648,18 +2648,18 @@ of Milnor fiber of the arrangement \mbox{\texttt{\mdseries\slshape A}}.
  }
 
  
-\section{\textcolor{Chapter }{(Co)homology}}\label{Chapter_Milnor_fibers_Section_Cohomology}
+\section{\textcolor{Chapter }{Functions for (Co)homology computations}}\label{Chapter_Milnor_fibers_Section_Functions_for_Cohomology_computations}
 \logpage{[ 8, 2, 0 ]}
-\hyperdef{L}{X8366544182D95745}{}
+\hyperdef{L}{X876C9A8C7D1EBC64}{}
 {
   
 
-\subsection{\textcolor{Chapter }{FPtoCWCpx}}
+\subsection{\textcolor{Chapter }{FPtoCWCpx (for IsFacePoset)}}
 \logpage{[ 8, 2, 1 ]}\nobreak
-\hyperdef{L}{X7BBA6F967E493B5D}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}}
-\label{FPtoCWCpx}
-}\hfill{\scriptsize (function)}}\\
+\hyperdef{L}{X7F3FC67D80A1CC6F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoCWCpx({\mdseries\slshape FP})\index{FPtoCWCpx@\texttt{FPtoCWCpx}!for IsFacePoset}
+\label{FPtoCWCpx:for IsFacePoset}
+}\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
 HAP CW Complex 
 
@@ -2682,12 +2682,12 @@ HAP CW Complex
 
  
 
-\subsection{\textcolor{Chapter }{FPtoSCpx}}
+\subsection{\textcolor{Chapter }{FPtoSCpx (for IsFacePoset)}}
 \logpage{[ 8, 2, 2 ]}\nobreak
-\hyperdef{L}{X789BCFB57A2E7F05}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoSCpx({\mdseries\slshape FP})\index{FPtoSCpx@\texttt{FPtoSCpx}}
-\label{FPtoSCpx}
-}\hfill{\scriptsize (function)}}\\
+\hyperdef{L}{X8500A99C823F5FE5}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{FPtoSCpx({\mdseries\slshape FP})\index{FPtoSCpx@\texttt{FPtoSCpx}!for IsFacePoset}
+\label{FPtoSCpx:for IsFacePoset}
+}\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
 Simplicial complex 
 
@@ -2699,6 +2699,42 @@ Simplicial complex
   <FacePoset of dimension 2 with f-vector [ 12, 60, 60 ]>
   !gapprompt@gap>| !gapinput@SMF:=FPtoSCpx(MFP);|
   Simplicial complex of dimension 2.
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{MFModPCohomRing (for IsOrientedMatroid, IsInt)}}
+\logpage{[ 8, 2, 3 ]}\nobreak
+\hyperdef{L}{X7EAF6CE0851F5CEC}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MFModPCohomRing({\mdseries\slshape OM, p})\index{MFModPCohomRing@\texttt{MFModPCohomRing}!for IsOrientedMatroid, IsInt}
+\label{MFModPCohomRing:for IsOrientedMatroid, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+HAP mod\texttt{\symbol{45}}p cohomology 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{MFModPCohomRing (for IsHyperplaneArrangement, IsInt)}}
+\logpage{[ 8, 2, 4 ]}\nobreak
+\hyperdef{L}{X8743737483C35366}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{MFModPCohomRing({\mdseries\slshape A, p})\index{MFModPCohomRing@\texttt{MFModPCohomRing}!for IsHyperplaneArrangement, IsInt}
+\label{MFModPCohomRing:for IsHyperplaneArrangement, IsInt}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+HAP mod\texttt{\symbol{45}}p cohomology 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
 \end{Verbatim}
  }
 
@@ -3508,7 +3544,7 @@ exchanging a hyperplane).
 \end{itemize}
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@HArrGreedySearch(13,3,GF(17),CharPolySplits,400);|
+  !gapprompt@gap>| !gapinput@HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);|
   GreedySearch over GF(17) for arrangements:
    - of rank 3
    - with 13 hyperplanes.
@@ -3561,7 +3597,7 @@ a function
 
  Run the search algorithm of \mbox{\texttt{\mdseries\slshape GS}} which will return an arrangement or \texttt{fail}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);|
+  !gapprompt@gap>| !gapinput@GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);|
   GreedySearch over GF(17) for arrangements:
    - of rank 3
    - with 13 hyperplanes.

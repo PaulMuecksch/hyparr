@@ -16,7 +16,7 @@ DeclareCategory("IsVGAlgebra", IsComponentObjectRep and IsAttributeStoringRep );
 DeclareRepresentation(
     "IsVGAlgebraRep",
     IsVGAlgebra,
-    ["field","space", "ideal", "gens", "pring", "sqring"]
+    ["field", "ideal", "gens", "pring", "grAPres"]
 );
 
 DeclareOperation("ViewObject", [ IsVGAlgebra ]);
@@ -33,8 +33,8 @@ DeclareAttribute("VGField",IsVGAlgebra);
 
 DeclareAttribute("VGGenerators",IsVGAlgebra);
 
-DeclareAttribute("VGSpace",IsVGAlgebra);
+# DeclareAttribute("VGSpace",IsVGAlgebra);
 
 DeclareAttribute("VGPRing",IsVGAlgebra);
 
-DeclareAttribute("VGSingularQRing",IsVGAlgebra);
+DeclareAttribute("VGgrAlgebraPresentation",IsVGAlgebra);

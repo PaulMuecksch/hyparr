@@ -28,7 +28,7 @@
   [30X    [33X[0;6Y[3Xheat[103X is a margin for the target function[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XHArrGreedySearch(13,3,GF(17),CharPolySplits,400);[127X[104X
+    [4X[25Xgap>[125X [27XHArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);[127X[104X
     [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
     [4X[28X - of rank 3[128X[104X
     [4X[28X - with 13 hyperplanes.[128X[104X
@@ -59,7 +59,7 @@
   [33X[0;0YRun the search algorithm of [3XGS[103X which will return an arrangement or [10Xfail[110X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XGS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);[127X[104X
+    [4X[25Xgap>[125X [27XGS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);[127X[104X
     [4X[28XGreedySearch over GF(17) for arrangements:[128X[104X
     [4X[28X - of rank 3[128X[104X
     [4X[28X - with 13 hyperplanes.[128X[104X

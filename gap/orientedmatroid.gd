@@ -27,7 +27,7 @@ DeclareRepresentation(
 ##
 #################################
 
-#! @Arguments R or A or [CCs,c] or [n,r,ChiroCoreList]
+#! @Arguments R or A or [CCs,c] or [r,n,ChiroCoreList]
 #! @Returns An oriented matroid OM.
 #! @Description
 #!  Constructs am oriented matroid from 

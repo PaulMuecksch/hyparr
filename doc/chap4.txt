@@ -10,7 +10,7 @@
   
   [1X4.1-1 OrientedMatroid[101X
   
-  [33X[1;0Y[29X[2XOrientedMatroid[102X( [3XR[103X, [3Xor[103X, [3XA[103X, [3Xor[103X[, [3XCCs[103X, [3Xc[103X], [3Xor[103X[, [3Xn[103X, [3Xr[103X, [3XChiroCoreList[103X] ) [32X operation[133X
+  [33X[1;0Y[29X[2XOrientedMatroid[102X( [3XR[103X, [3Xor[103X, [3XA[103X, [3Xor[103X[, [3XCCs[103X, [3Xc[103X], [3Xor[103X[, [3Xr[103X, [3Xn[103X, [3XChiroCoreList[103X] ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn oriented matroid OM.[133X
   
   [33X[0;0YConstructs am oriented matroid from[133X

@@ -52,8 +52,10 @@
     \subitem for IsFacePoset, \hyperpage{32}
   \item \texttt  {FPOrder}
     \subitem for IsFacePoset, \hyperpage{33}
-  \item \texttt  {FPtoCWCpx}, \hyperpage{36}
-  \item \texttt  {FPtoSCpx}, \hyperpage{36}
+  \item \texttt  {FPtoCWCpx}
+    \subitem for IsFacePoset, \hyperpage{36}
+  \item \texttt  {FPtoSCpx}
+    \subitem for IsFacePoset, \hyperpage{36}
 
   \indexspace
 
@@ -195,6 +197,9 @@
 
   \indexspace
 
+  \item \texttt  {MFModPCohomRing}
+    \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{36}
+    \subitem for IsOrientedMatroid, IsInt, \hyperpage{36}
   \item \texttt  {MilnorFiberComplex}
     \subitem for IsHyperplaneArrangement, \hyperpage{35}
     \subitem for IsOrientedMatroid, \hyperpage{35}

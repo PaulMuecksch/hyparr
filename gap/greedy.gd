@@ -57,7 +57,7 @@ DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement]);
 #!      (one step = exchanging a hyperplane).
 #!  * <A>heat</A> is a margin for the target function 
 #! @BeginExampleSession
-#! gap> HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
+#! gap> HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);
 #! GreedySearch over GF(17) for arrangements:
 #!  - of rank 3
 #!  - with 13 hyperplanes.
@@ -93,7 +93,7 @@ DeclareGlobalFunction("CoeffDistCharPolyExp");
 #! @Description
 #!  Run the search algorithm of <A>GS</A> which will return an arrangement or <C>fail</C>.
 #! @BeginExampleSession
-#! gap> GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400);
+#! gap> GS:=HArrGreedySearch(13,3,GF(17),CharPolySplits,400,0);
 #! GreedySearch over GF(17) for arrangements:
 #!  - of rank 3
 #!  - with 13 hyperplanes.
