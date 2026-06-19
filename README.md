@@ -10,7 +10,7 @@ such as discrete and algebraic geometry, topology, combinatorics, etc..
 
 Some things you can do with this package:
 
-  * Determine freeness properties of arrangements.
+  * Determine freeness properties of arrangements and analyze the structure of (higher) derivation modules.
 
   * Determine invariants of oriented matroids.
 
@@ -36,7 +36,25 @@ Clone the git repository to your pkg folder
 
  * The documentation is in the `doc` subdirectory. 
 
+## Dependencies
+
+This package requires GAP version >= 4.12
+
+The following other GAP packages are needed:
+
+ * grape >= 4.0
+
+ * hap >= 1.5
+
+ * fining >= 1.0
+
+The following additional GAP packages are not required, but suggested::
+
+ * cddintereface >= 2025
+
+
 ## Documentation
+
 To create the documentation:
     
     gap makedoc.g

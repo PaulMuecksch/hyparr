@@ -6,12 +6,12 @@
 #! The following describes functions to analyse freeness
 #! properties of arrangements such as  <E>inductive freeness</E> due to
 #! H. Terao <Cite Key="Terao1980_FreeI"/> and  <E>divisionell freeness</E> due to T. Abe <Cite Key="Abe16_DivFree"/>.
-#!
+#! Moreover, generators and projective dimension of higher derivation modules can be computed.
 
 
 #################################
 ##
-#! @Section Module of logarithmic vector fields aka derivation modules of arrangements
+#! @Section Module of logarithmic vector fields aka derivation modules
 ##
 #################################
 
