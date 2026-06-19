@@ -26,8 +26,8 @@ entries :=
       "operations", "X7DE8E16C7C2D387B" ], [ "\033[1X\033[33X\033[0;-2YGlobal methods\033[133X\033[101X", "4.5", [ 4, 5, 0 ], 350, 21, 
       "global methods", "X80841F8D80722081" ], [ "\033[1X\033[33X\033[0;-2YFree arrangements\033[133X\033[101X", "5", [ 5, 0, 0 ], 1, 22, 
       "free arrangements", "X84CDDA0382B013CF" ], 
-  [ "\033[1X\033[33X\033[0;-2YModule of logarithmic vector fields aka derivation modules of arrangements\033[133X\033[101X", "5.1", 
-      [ 5, 1, 0 ], 8, 22, "module of logarithmic vector fields aka derivation modules of arrangements", "X875DF181804D1224" ], 
+  [ "\033[1X\033[33X\033[0;-2YModule of logarithmic vector fields aka derivation modules\033[133X\033[101X", "5.1", [ 5, 1, 0 ], 9, 22, 
+      "module of logarithmic vector fields aka derivation modules", "X7AFAFACD7E918BFC" ], 
   [ "\033[1X\033[33X\033[0;-2YFreeness properties\033[133X\033[101X", "5.2", [ 5, 2, 0 ], 113, 24, "freeness properties", "X82FF317F7EFD52AF" ]
     , [ "\033[1X\033[33X\033[0;-2YFurther properties of arrangements, geometric lattices, and oriented matroids\033[133X\033[101X", "6", 
       [ 6, 0, 0 ], 1, 26, "further properties of arrangements geometric lattices and oriented matroids", "X7E898D0F86EF9F1E" ], 

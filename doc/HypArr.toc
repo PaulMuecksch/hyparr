@@ -76,7 +76,7 @@
 \contentsline {subsection}{\numberline {4.5.3}\textcolor {Chapter }{IsOMEquiv}}{21}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}\textcolor {Chapter }{SeparatingSet}}{21}{subsection.4.5.4}%
 \contentsline {chapter}{\numberline {5}\textcolor {Chapter }{Free arrangements}}{22}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\textcolor {Chapter }{Module of logarithmic vector fields aka derivation modules of arrangements}}{22}{section.5.1}%
+\contentsline {section}{\numberline {5.1}\textcolor {Chapter }{Module of logarithmic vector fields aka derivation modules}}{22}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}\textcolor {Chapter }{DerModule (for IsHyperplaneArrangement)}}{22}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}\textcolor {Chapter }{DerPModule (for IsHyperplaneArrangement, IsInt)}}{22}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}\textcolor {Chapter }{DerModGenerators (for IsDerivationModule)}}{23}{subsection.5.1.3}%

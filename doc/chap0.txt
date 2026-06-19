@@ -109,8 +109,7 @@
       4.5-3 IsOMEquiv
       4.5-4 SeparatingSet
   5 [33X[0;0YFree arrangements[133X
-    5.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules of
-    arrangements[133X
+    5.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules[133X
       5.1-1 DerModule
       5.1-2 DerPModule
       5.1-3 DerModGenerators

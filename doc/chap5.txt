@@ -3,11 +3,11 @@
   
   [33X[0;0YThe   following  describes  functions  to  analyse  freeness  properties  of
   arrangements  such  as  [13Xinductive  freeness[113X  due  to  H.  Terao  [Ter80] and
-  [13Xdivisionell freeness[113X due to T. Abe [Abe16].[133X
+  [13Xdivisionell  freeness[113X  due  to  T.  Abe  [Abe16].  Moreover,  generators and
+  projective dimension of higher derivation modules can be computed.[133X
   
   
-  [1X5.1   [33X[0;0YModule   of  logarithmic  vector  fields  aka  derivation  modules  of[101X
-  [1Xarrangements[133X[101X
+  [1X5.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules[133X[101X
   
   [33X[0;0YThe functions in this section all use the [12Xsingular[112X package to call functions
   from [12XSingular[112X [DGPS24] for commutative algebra calculations.[133X
