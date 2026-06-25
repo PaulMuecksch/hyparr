@@ -13,20 +13,25 @@
   underlying matroid structe or geometric lattice.[133X
   
   [33X[0;0YDepending  on  this  size of [3XL[103X this might take a considerable amount of time
-  and there may be many orientations depending on the sparsety of relations in
-  [3XL[103X.  The algorithm reformulates the problem of determining orientations to an
-  SAT-instance  and  then uses an SAT-solver (currently PicoSAT as a standard)
-  to solve.[133X
+  and there may be many orientations depending on the sparsity of relations in
+  [3XL[103X.[133X
+  
+  [33X[0;0YThe  algorithm  converts  the  problem  of  determining  orientations  to an
+  SAT-instance and then uses an SAT-solver (currently PicoSAT) to solve.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);[127X[104X
-    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
-    [4X[28X<Geometric lattice: 6 atoms, rank 3>[128X[104X
-    [4X[28X16[128X[104X
-    [4X[25Xgap>[125X [27XOMs:=FindOrientations(L);[127X[104X
-    [4X[28X[ <OrientedMatroid: 6 elements, rank 3>, [128X[104X
-    [4X[28X  <OrientedMatroid: 6 elements, rank 3>, [128X[104X
-    [4X[28X  <OrientedMatroid: 6 elements, rank 3>, [128X[104X
-    [4X[28X  <OrientedMatroid: 6 elements, rank 3> ][128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);[127X[104X
+    [4X[28X<HyperplaneArrangement: 16 hyperplanes in 4-space>[128X[104X
+    [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
+    [4X[28X1138[128X[104X
+    [4X[25Xgap>[125X [27XOMs:=LFindOrientations(L);[127X[104X
+    [4X[28X[ <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
+    [4X[28X  <OrientedMatroid: 16 elements, rank 4> ][128X[104X
   [4X[32X[104X
   

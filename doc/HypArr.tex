@@ -3533,19 +3533,25 @@ A list of oriented matroids
  Computes all oriented matroids (up to some isomorphisms) which have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structe or geometric lattice. 
 
  Depending on this size of \mbox{\texttt{\mdseries\slshape L}} this might take a considerable amount of time and there may be many
-orientations depending on the sparsety of relations in \mbox{\texttt{\mdseries\slshape L}}. The algorithm reformulates the problem of determining orientations to an
+orientations depending on the sparsity of relations in \mbox{\texttt{\mdseries\slshape L}}. 
+
+ The algorithm converts the problem of determining orientations to an
 SAT\texttt{\symbol{45}}instance and then uses an SAT\texttt{\symbol{45}}solver
-(currently PicoSAT as a standard) to solve. 
+(currently PicoSAT) to solve. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
-  !gapprompt@gap>| !gapinput@A:=AGpql(2,2,3); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);|
-  <HyperplaneArrangement: 6 hyperplanes in 3-space>
-  <Geometric lattice: 6 atoms, rank 3>
-  16
-  !gapprompt@gap>| !gapinput@OMs:=FindOrientations(L);|
-  [ <OrientedMatroid: 6 elements, rank 3>, 
-    <OrientedMatroid: 6 elements, rank 3>, 
-    <OrientedMatroid: 6 elements, rank 3>, 
-    <OrientedMatroid: 6 elements, rank 3> ]
+  !gapprompt@gap>| !gapinput@A:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);|
+  <HyperplaneArrangement: 16 hyperplanes in 4-space>
+  <Geometric lattice: 16 atoms, rank 4>
+  1138
+  !gapprompt@gap>| !gapinput@OMs:=LFindOrientations(L);|
+  [ <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4>, 
+    <OrientedMatroid: 16 elements, rank 4> ]
 \end{Verbatim}
  }
 

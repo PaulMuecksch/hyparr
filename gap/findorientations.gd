@@ -21,19 +21,24 @@ DeclareGlobalFunction("PicoSATOrientations");
 #! as underlying matroid structe or geometric lattice.
 #!
 #! Depending on this size of <A>L</A> this might take a considerable amount of time
-#! and there may be many orientations depending on the sparsety of relations in <A>L</A>.
-#! The algorithm reformulates the problem of determining orientations to
-#! an SAT-instance and then uses an SAT-solver (currently PicoSAT as a standard) to solve.
+#! and there may be many orientations depending on the sparsity of relations in <A>L</A>.
+#! 
+#! The algorithm converts the problem of determining orientations to
+#! an SAT-instance and then uses an SAT-solver (currently PicoSAT) to solve.
 #! @BeginExampleSession
-#! gap> A:=AGpql(2,2,3); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);
-#! <HyperplaneArrangement: 6 hyperplanes in 3-space>
-#! <Geometric lattice: 6 atoms, rank 3>
-#! 16
-#! gap> OMs:=FindOrientations(L);
-#! [ <OrientedMatroid: 6 elements, rank 3>, 
-#!   <OrientedMatroid: 6 elements, rank 3>, 
-#!   <OrientedMatroid: 6 elements, rank 3>, 
-#!   <OrientedMatroid: 6 elements, rank 3> ]
+#! gap> A:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);
+#! <HyperplaneArrangement: 16 hyperplanes in 4-space>
+#! <Geometric lattice: 16 atoms, rank 4>
+#! 1138
+#! gap> OMs:=LFindOrientations(L);
+#! [ <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4>, 
+#!   <OrientedMatroid: 16 elements, rank 4> ]
 #! @EndExampleSession
 DeclareOperation("LFindOrientations",[IsGeomLattice]);
 

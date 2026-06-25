@@ -47,19 +47,25 @@
 
 <p>Computes all oriented matroids (up to some isomorphisms) which have <var class="Arg">L</var> as underlying matroid structe or geometric lattice.</p>
 
-<p>Depending on this size of <var class="Arg">L</var> this might take a considerable amount of time and there may be many orientations depending on the sparsety of relations in <var class="Arg">L</var>. The algorithm reformulates the problem of determining orientations to an SAT-instance and then uses an SAT-solver (currently PicoSAT as a standard) to solve.</p>
+<p>Depending on this size of <var class="Arg">L</var> this might take a considerable amount of time and there may be many orientations depending on the sparsity of relations in <var class="Arg">L</var>.</p>
+
+<p>The algorithm converts the problem of determining orientations to an SAT-instance and then uses an SAT-solver (currently PicoSAT) to solve.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);</span>
-&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
-&lt;Geometric lattice: 6 atoms, rank 3&gt;
-16
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMs:=FindOrientations(L);</span>
-[ &lt;OrientedMatroid: 6 elements, rank 3&gt;, 
-  &lt;OrientedMatroid: 6 elements, rank 3&gt;, 
-  &lt;OrientedMatroid: 6 elements, rank 3&gt;, 
-  &lt;OrientedMatroid: 6 elements, rank 3&gt; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);</span>
+&lt;HyperplaneArrangement: 16 hyperplanes in 4-space&gt;
+&lt;Geometric lattice: 16 atoms, rank 4&gt;
+1138
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMs:=LFindOrientations(L);</span>
+[ &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt;, 
+  &lt;OrientedMatroid: 16 elements, rank 4&gt; ]
 </pre></div>
 
 
