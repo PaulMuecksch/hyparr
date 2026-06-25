@@ -43,9 +43,11 @@
 \makelabel{hyparr:Attributes}{12.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Properties}{12.3}{X871597447BB998A1}
 \makelabel{hyparr:Further (auxillary) Operations}{12.4}{X8252A2A9867F3059}
-\makelabel{hyparr:Greedy search for arrangements}{13}{X85C6C672870D19BD}
-\makelabel{hyparr:Constructions}{13.1}{X836F56D77AA04554}
-\makelabel{hyparr:Attributes}{13.2}{X7C701DBF7BAE649A}
+\makelabel{hyparr:Orientations of matroids}{13}{X78A5D36F82F13592}
+\makelabel{hyparr:Find orientations of a given geometric lattice}{13.1}{X7A4B1FE280D3839F}
+\makelabel{hyparr:Greedy search for arrangements}{14}{X85C6C672870D19BD}
+\makelabel{hyparr:Constructions}{14.1}{X836F56D77AA04554}
+\makelabel{hyparr:Attributes}{14.2}{X7C701DBF7BAE649A}
 \makelabel{hyparr:Bibliography}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:References}{Bib}{X7A6F98FD85F02BFE}
 \makelabel{hyparr:Index}{Ind}{X83A0356F839C696F}
@@ -172,13 +174,14 @@
 \makelabel{hyparr:RSIsNonEmpty for IsRealizationSpaceOfGeomLattice}{12.3.1}{X781923918754E3CE}
 \makelabel{hyparr:LSubsetGeneratedByS for IsGeomLattice,IsList}{12.4.1}{X800FB3BB86AD2F1A}
 \makelabel{hyparr:LIsGenSet for IsGeomLattice,IsList}{12.4.2}{X84F182B783389C2B}
-\makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat}{13.1.1}{X852F55B38601271B}
-\makelabel{hyparr:HArrGreedySearchSubArr for IsRecord}{13.1.2}{X7FAE7279845BA698}
-\makelabel{hyparr:CharPolySplits}{13.1.3}{X86BF30D17A33874E}
-\makelabel{hyparr:DistMSetInvL}{13.1.4}{X81A9CF1C804C8B60}
-\makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{13.2.1}{X87BDEC467DE8A782}
-\makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{13.2.2}{X830ABDC2827862CD}
-\makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{13.2.3}{X7BDEEF027FB60AB3}
-\makelabel{hyparr:GreedySearchNOfHs for IsHArrGreedySearch}{13.2.4}{X7D09885B7C69A621}
-\makelabel{hyparr:GreedySearchTargetFct for IsHArrGreedySearch}{13.2.5}{X81F9A4827A5ABC5D}
-\makelabel{hyparr:GreedySearchMaxIterations for IsHArrGreedySearch}{13.2.6}{X83296B32854C2647}
+\makelabel{hyparr:LFindOrientations for IsGeomLattice}{13.1.1}{X7ABF890779955AEC}
+\makelabel{hyparr:HArrGreedySearch for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat}{14.1.1}{X852F55B38601271B}
+\makelabel{hyparr:HArrGreedySearchSubArr for IsRecord}{14.1.2}{X7FAE7279845BA698}
+\makelabel{hyparr:CharPolySplits}{14.1.3}{X86BF30D17A33874E}
+\makelabel{hyparr:DistMSetInvL}{14.1.4}{X81A9CF1C804C8B60}
+\makelabel{hyparr:GreedySearchRun for IsHArrGreedySearch}{14.2.1}{X87BDEC467DE8A782}
+\makelabel{hyparr:GreedySearchGF for IsHArrGreedySearch}{14.2.2}{X830ABDC2827862CD}
+\makelabel{hyparr:GreedySearchDimension for IsHArrGreedySearch}{14.2.3}{X7BDEEF027FB60AB3}
+\makelabel{hyparr:GreedySearchNOfHs for IsHArrGreedySearch}{14.2.4}{X7D09885B7C69A621}
+\makelabel{hyparr:GreedySearchTargetFct for IsHArrGreedySearch}{14.2.5}{X81F9A4827A5ABC5D}
+\makelabel{hyparr:GreedySearchMaxIterations for IsHArrGreedySearch}{14.2.6}{X83296B32854C2647}

@@ -15,7 +15,7 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{34}
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
-  \item \texttt  {CharPolySplits}, \hyperpage{54}
+  \item \texttt  {CharPolySplits}, \hyperpage{55}
   \item \texttt  {ConnectedSubgraphArr}
     \subitem for IsList, \hyperpage{14}
 
@@ -37,7 +37,7 @@
     \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{22}
   \item \texttt  {Dimension}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
-  \item \texttt  {DistMSetInvL}, \hyperpage{54}
+  \item \texttt  {DistMSetInvL}, \hyperpage{55}
 
   \indexspace
 
@@ -62,17 +62,17 @@
   \item \texttt  {GraphicArr}
     \subitem for IsList, \hyperpage{14}
   \item \texttt  {GreedySearchDimension}
-    \subitem for IsHArrGreedySearch, \hyperpage{54}
+    \subitem for IsHArrGreedySearch, \hyperpage{55}
   \item \texttt  {GreedySearchGF}
-    \subitem for IsHArrGreedySearch, \hyperpage{54}
+    \subitem for IsHArrGreedySearch, \hyperpage{55}
   \item \texttt  {GreedySearchMaxIterations}
-    \subitem for IsHArrGreedySearch, \hyperpage{55}
+    \subitem for IsHArrGreedySearch, \hyperpage{56}
   \item \texttt  {GreedySearchNOfHs}
-    \subitem for IsHArrGreedySearch, \hyperpage{55}
+    \subitem for IsHArrGreedySearch, \hyperpage{56}
   \item \texttt  {GreedySearchRun}
-    \subitem for IsHArrGreedySearch, \hyperpage{54}
-  \item \texttt  {GreedySearchTargetFct}
     \subitem for IsHArrGreedySearch, \hyperpage{55}
+  \item \texttt  {GreedySearchTargetFct}
+    \subitem for IsHArrGreedySearch, \hyperpage{56}
 
   \indexspace
 
@@ -86,9 +86,9 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{30}
   \item \texttt  {HArrGreedySearch}
     \subitem for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat, 
-		\hyperpage{52}
+		\hyperpage{53}
   \item \texttt  {HArrGreedySearchSubArr}
-    \subitem for IsRecord, \hyperpage{52}
+    \subitem for IsRecord, \hyperpage{53}
   \item \texttt  {HArrInductiveFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{31}
   \item \texttt  {HArrIsFactored}
@@ -160,6 +160,8 @@
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LCircuits}
     \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LFindOrientations}
+    \subitem for IsGeomLattice, \hyperpage{52}
   \item \texttt  {LGenSet}
     \subitem for IsGeomLattice, \hyperpage{48}
   \item \texttt  {LGraph}

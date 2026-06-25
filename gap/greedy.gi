@@ -1,7 +1,7 @@
 #
 # HypArr: Greedy search for arrangements
 #
-#$ Implementations
+## Implementations
 
 ## for single arrangement
 

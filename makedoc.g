@@ -30,7 +30,8 @@ AutoDoc( rec(
                 "gap/vgalgebra.gd",
                 "gap/drawarrs.gd",
                 "gap/realizationspace.gd",
-                "gap/greedy.gi"
+                "gap/greedy.gi",
+                "gap/findorientations.gd"
                 ] 
                 ),
             gapdoc := rec(
