@@ -12,7 +12,7 @@
  <Returns>A list of oriented matroids
 </Returns>
  <Description>
- Computes all oriented matroids (up to some isomorphisms) which have <A>L</A>
+ Computes all oriented matroids (up to OM-isomorphisms) which have <A>L</A>
  as underlying matroid structe or geometric lattice.
 <P/>
  Depending on this size of <A>L</A> this might take a considerable amount of time
@@ -26,14 +26,7 @@ gap> A:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);
 <Geometric lattice: 16 atoms, rank 4>
 1138
 gap> OMs:=LFindOrientations(L);
-[ <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4>, 
-  <OrientedMatroid: 16 elements, rank 4> ]
+[ <OrientedMatroid: 16 elements, rank 4> ]
 ]]></Example>
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  25 JUN 2026 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  26 JUN 2026 04:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,7 +752,7 @@ Chapter 13.
 ]
 Chapter 14.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3578--3583
+Underfull \hbox (badness 10000) in paragraph at lines 3572--3577
 []$\OML/ztmcm/m/it/10.95 .$\T1/cmtt/m/n/10.95 HArrGreedySearch(\T1/cmtt/m/sl/10
 .95 NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations,
  []
@@ -760,12 +760,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3578--3583
 [53
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3682--3685
+Underfull \hbox (badness 10000) in paragraph at lines 3676--3679
 
  []
 
 [54]
-Underfull \hbox (badness 10000) in paragraph at lines 3694--3697
+Underfull \hbox (badness 10000) in paragraph at lines 3688--3691
 
  []
 
@@ -774,24 +774,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3706 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.3700 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3770
+Underfull \hbox (badness 10000) in paragraph at lines 3761--3764
 
  []
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 3784--3787
+Underfull \hbox (badness 10000) in paragraph at lines 3778--3781
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3801--3804
+Underfull \hbox (badness 10000) in paragraph at lines 3795--3798
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3818--3821
+Underfull \hbox (badness 10000) in paragraph at lines 3812--3815
 
  []
 
@@ -858,7 +858,7 @@ type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (62 pages, 494128 bytes).
+Output written on HypArr.pdf (62 pages, 493982 bytes).
 PDF statistics:
  1299 PDF objects out of 1440 (max. 8388607)
  1165 compressed objects within 12 object streams

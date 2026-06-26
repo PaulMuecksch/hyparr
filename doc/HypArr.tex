@@ -3530,7 +3530,8 @@ A list of oriented matroids
 
 
 
- Computes all oriented matroids (up to some isomorphisms) which have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structe or geometric lattice. 
+ Computes all oriented matroids (up to OM\texttt{\symbol{45}}isomorphisms)
+which have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structe or geometric lattice. 
 
  Depending on this size of \mbox{\texttt{\mdseries\slshape L}} this might take a considerable amount of time and there may be many
 orientations depending on the sparsity of relations in \mbox{\texttt{\mdseries\slshape L}}. 
@@ -3544,14 +3545,7 @@ SAT\texttt{\symbol{45}}instance and then uses an SAT\texttt{\symbol{45}}solver
   <Geometric lattice: 16 atoms, rank 4>
   1138
   !gapprompt@gap>| !gapinput@OMs:=LFindOrientations(L);|
-  [ <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4>, 
-    <OrientedMatroid: 16 elements, rank 4> ]
+  [ <OrientedMatroid: 16 elements, rank 4> ]
 \end{Verbatim}
  }
 

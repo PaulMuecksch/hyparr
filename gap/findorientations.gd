@@ -17,7 +17,7 @@ DeclareGlobalFunction("PicoSATOrientations");
 #! @Arguments L
 #! @Returns A list of oriented matroids
 #! @Description
-#! Computes all oriented matroids (up to some isomorphisms) which have <A>L</A>
+#! Computes all oriented matroids (up to OM-isomorphisms) which have <A>L</A>
 #! as underlying matroid structe or geometric lattice.
 #!
 #! Depending on this size of <A>L</A> this might take a considerable amount of time
@@ -31,14 +31,7 @@ DeclareGlobalFunction("PicoSATOrientations");
 #! <Geometric lattice: 16 atoms, rank 4>
 #! 1138
 #! gap> OMs:=LFindOrientations(L);
-#! [ <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4>, 
-#!   <OrientedMatroid: 16 elements, rank 4> ]
+#! [ <OrientedMatroid: 16 elements, rank 4> ]
 #! @EndExampleSession
 DeclareOperation("LFindOrientations",[IsGeomLattice]);
 

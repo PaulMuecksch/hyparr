@@ -9,7 +9,7 @@
   [33X[1;0Y[29X[2XLFindOrientations[102X( [3XL[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YA list of oriented matroids[133X
   
-  [33X[0;0YComputes  all  oriented  matroids  (up to some isomorphisms) which have [3XL[103X as
+  [33X[0;0YComputes  all  oriented  matroids  (up  to  OM-isomorphisms) which have [3XL[103X as
   underlying matroid structe or geometric lattice.[133X
   
   [33X[0;0YDepending  on  this  size of [3XL[103X this might take a considerable amount of time
@@ -25,13 +25,6 @@
     [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
     [4X[28X1138[128X[104X
     [4X[25Xgap>[125X [27XOMs:=LFindOrientations(L);[127X[104X
-    [4X[28X[ <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4>, [128X[104X
-    [4X[28X  <OrientedMatroid: 16 elements, rank 4> ][128X[104X
+    [4X[28X[ <OrientedMatroid: 16 elements, rank 4> ][128X[104X
   [4X[32X[104X
   

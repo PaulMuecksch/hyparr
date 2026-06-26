@@ -272,12 +272,24 @@ end);
 InstallMethod(LFindOrientations,
     [IsGeomLattice],
 function(L)
-local Bases, BsIDs, chiros, r,n;
+local Bases, BsIDs, chiros, r,n,
+    G, ActionOnChi, OrbitsOnChiros, UBs;
     r := LRank(L);
     n := Length(LAtoms(L));
     Bases := LBases(L);
-    BsIDs:=List(Bases,B->Position(Combinations([1..n],r),B));
+    UBs := Combinations([1..n],r);
+    BsIDs:=List(Bases,B->Position(UBs,B));
     chiros := List(PicoSATOrientations(r,n,Bases),s->BsSIDsToChi(r,n,BsIDs, s));
+    G:=LAutGroup(L);
+    ActionOnChi := function(chi, g)
+    local PSignB;
+        PSignB := B->SignPerm(PermList(List([1..Length(B)],x->Position(OnSets(B,g),B[x]^g))));
+        return List(UBs,B->PSignB(B)*chi[Position(UBs,OnSets(B,g))]);
+    end;
+
+    OrbitsOnChiros := Orbits(G,chiros,ActionOnChi);
+    chiros := List(OrbitsOnChiros,Orb->Orb[1]);;
+
     return List(chiros,chi->OM(r,n,chi));
 end);
 
