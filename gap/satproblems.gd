@@ -36,14 +36,14 @@ DeclareOperation("SATProblem",[IsInt,IsList, IsBool]);
 ##
 #################################
 
-#! @Arguments SP
+#! @Arguments SProb
 #! @Returns an integer
 #! @Description
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareAttribute("SATnvariables",IsSATProblem);
 
-#! @Arguments SP
+#! @Arguments SProb
 #! @Returns a list
 #! @Description
 #! @BeginExampleSession
@@ -51,21 +51,21 @@ DeclareAttribute("SATnvariables",IsSATProblem);
 DeclareAttribute("SATClauses",IsSATProblem);
 
 
-#! @Arguments SP
+#! @Arguments SProb
 #! @Returns a list
 #! @Description
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareAttribute("SATallSolutions",IsSATProblem, "mutable");
 
-#! @Arguments SP
+#! @Arguments SProb
 #! @Returns a string
 #! @Description
 #! @BeginExampleSession
 #! @EndExampleSession
 DeclareAttribute("SATCNFStr",IsSATProblem);
 
-#! @Arguments SP
+#! @Arguments SProb
 #! @Returns a list
 #! @Description
 #! @BeginExampleSession
@@ -80,7 +80,7 @@ DeclareAttribute("SATSolutions",IsSATProblem, "mutable");
 ##
 #################################
 
-#! @Arguments SP, all
+#! @Arguments SProb, all
 #! @Returns 
 #! @Description
 DeclareOperation("SATSolve",[IsSATProblem]);

@@ -22,7 +22,7 @@
 <Heading>Attributes</Heading>
 
 <ManSection>
-  <Attr Arg="SP" Name="SATnvariables" Label="for IsSATProblem"/>
+  <Attr Arg="SProb" Name="SATnvariables" Label="for IsSATProblem"/>
  <Returns>an integer
 </Returns>
  <Description>
@@ -35,7 +35,7 @@
 
 
 <ManSection>
-  <Attr Arg="SP" Name="SATClauses" Label="for IsSATProblem"/>
+  <Attr Arg="SProb" Name="SATClauses" Label="for IsSATProblem"/>
  <Returns>a list
 </Returns>
  <Description>
@@ -48,7 +48,7 @@
 
 
 <ManSection>
-  <Attr Arg="SP" Name="SATallSolutions" Label="for IsSATProblem"/>
+  <Attr Arg="SProb" Name="SATallSolutions" Label="for IsSATProblem"/>
  <Returns>a list
 </Returns>
  <Description>
@@ -61,7 +61,7 @@
 
 
 <ManSection>
-  <Attr Arg="SP" Name="SATCNFStr" Label="for IsSATProblem"/>
+  <Attr Arg="SProb" Name="SATCNFStr" Label="for IsSATProblem"/>
  <Returns>a string
 </Returns>
  <Description>
@@ -74,7 +74,7 @@
 
 
 <ManSection>
-  <Attr Arg="SP" Name="SATSolutions" Label="for IsSATProblem"/>
+  <Attr Arg="SProb" Name="SATSolutions" Label="for IsSATProblem"/>
  <Returns>a list
 </Returns>
  <Description>
@@ -93,7 +93,7 @@
 <Heading>Operations</Heading>
 
 <ManSection>
-  <Oper Arg="SP, all" Name="SATSolve" Label="for IsSATProblem"/>
+  <Oper Arg="SProb, all" Name="SATSolve" Label="for IsSATProblem"/>
  <Description>
 <P/>
  </Description>
