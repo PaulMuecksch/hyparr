@@ -3513,25 +3513,61 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
 \hyperdef{L}{X78A5D36F82F13592}{}
 {
   
-\section{\textcolor{Chapter }{Find orientations of a given geometric lattice}}\label{Chapter_Orientations_of_matroids_Section_Find_orientations_of_a_given_geometric_lattice}
+\section{\textcolor{Chapter }{Orientations of a given geometric lattice}}\label{Chapter_Orientations_of_matroids_Section_Orientations_of_a_given_geometric_lattice}
 \logpage{[ 13, 1, 0 ]}
-\hyperdef{L}{X7A4B1FE280D3839F}{}
+\hyperdef{L}{X84E5EBA6832C666D}{}
 {
   
 
-\subsection{\textcolor{Chapter }{LFindOrientations (for IsGeomLattice)}}
+\subsection{\textcolor{Chapter }{LIsOrientable (for IsGeomLattice)}}
 \logpage{[ 13, 1, 1 ]}\nobreak
-\hyperdef{L}{X7ABF890779955AEC}{}
-{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LFindOrientations({\mdseries\slshape L})\index{LFindOrientations@\texttt{LFindOrientations}!for IsGeomLattice}
-\label{LFindOrientations:for IsGeomLattice}
+\hyperdef{L}{X7A3AD70F7F7E3F72}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LIsOrientable({\mdseries\slshape L})\index{LIsOrientable@\texttt{LIsOrientable}!for IsGeomLattice}
+\label{LIsOrientable:for IsGeomLattice}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false 
+
+
+
+ Determines if there is an oriented matroid with geometric lattice \mbox{\texttt{\mdseries\slshape L}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LOrientations (for IsGeomLattice)}}
+\logpage{[ 13, 1, 2 ]}\nobreak
+\hyperdef{L}{X8537D293872C671D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LOrientations({\mdseries\slshape L})\index{LOrientations@\texttt{LOrientations}!for IsGeomLattice}
+\label{LOrientations:for IsGeomLattice}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+A list of oriented matroids 
+
+
+
+ Returns oriented matroids with geometric lattice \mbox{\texttt{\mdseries\slshape L}}. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LFindOrientations (for IsGeomLattice, IsBool)}}
+\logpage{[ 13, 1, 3 ]}\nobreak
+\hyperdef{L}{X808394DF7EABC46F}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LFindOrientations({\mdseries\slshape L, findall})\index{LFindOrientations@\texttt{LFindOrientations}!for IsGeomLattice, IsBool}
+\label{LFindOrientations:for IsGeomLattice, IsBool}
 }\hfill{\scriptsize (operation)}}\\
 \textbf{\indent Returns:\ }
 A list of oriented matroids 
 
 
 
- Computes all oriented matroids (up to OM\texttt{\symbol{45}}isomorphisms)
-which have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structe or geometric lattice. 
+ Computes oriented matroids (up to OM\texttt{\symbol{45}}isomorphisms) which
+have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structe or geometric lattice. If \mbox{\texttt{\mdseries\slshape findall}} is \texttt{true} then all orientations are computed, else at most one orientation is computed. 
 
  Depending on this size of \mbox{\texttt{\mdseries\slshape L}} this might take a considerable amount of time and there may be many
 orientations depending on the sparsity of relations in \mbox{\texttt{\mdseries\slshape L}}. 
@@ -3539,12 +3575,14 @@ orientations depending on the sparsity of relations in \mbox{\texttt{\mdseries\s
  The algorithm converts the problem of determining orientations to an
 SAT\texttt{\symbol{45}}instance and then uses an SAT\texttt{\symbol{45}}solver
 (currently PicoSAT) to solve. 
+
+ 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);|
   <HyperplaneArrangement: 16 hyperplanes in 4-space>
   <Geometric lattice: 16 atoms, rank 4>
   1138
-  !gapprompt@gap>| !gapinput@OMs:=LFindOrientations(L);|
+  !gapprompt@gap>| !gapinput@OMs:=LFindOrientations(L,true);|
   [ <OrientedMatroid: 16 elements, rank 4> ]
 \end{Verbatim}
  }
@@ -3819,6 +3857,152 @@ a field
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
 \end{Verbatim}
+ }
+
+ }
+
+ }
+
+   
+\chapter{\textcolor{Chapter }{SAT\texttt{\symbol{45}}problems}}\label{Chapter_SAT-problems}
+\logpage{[ 15, 0, 0 ]}
+\hyperdef{L}{X7F4B54F17F02C87A}{}
+{
+  
+\section{\textcolor{Chapter }{Construction}}\label{Chapter_SAT-problems_Section_Construction}
+\logpage{[ 15, 1, 0 ]}
+\hyperdef{L}{X7F6278CD87400D49}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{SATProblem (for IsInt,IsList, IsBool)}}
+\logpage{[ 15, 1, 1 ]}\nobreak
+\hyperdef{L}{X8325C9BE7B1AE194}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATProblem({\mdseries\slshape nvar, clauseslist, allsols})\index{SATProblem@\texttt{SATProblem}!for IsInt,IsList, IsBool}
+\label{SATProblem:for IsInt,IsList, IsBool}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Attributes}}\label{Chapter_SAT-problems_Section_Attributes}
+\logpage{[ 15, 2, 0 ]}
+\hyperdef{L}{X7C701DBF7BAE649A}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{SATnvariables (for IsSATProblem)}}
+\logpage{[ 15, 2, 1 ]}\nobreak
+\hyperdef{L}{X7961716A7BCAB83D}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATnvariables({\mdseries\slshape SP})\index{SATnvariables@\texttt{SATnvariables}!for IsSATProblem}
+\label{SATnvariables:for IsSATProblem}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+an integer 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{SATClauses (for IsSATProblem)}}
+\logpage{[ 15, 2, 2 ]}\nobreak
+\hyperdef{L}{X7FC1350D7934CCD0}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATClauses({\mdseries\slshape SP})\index{SATClauses@\texttt{SATClauses}!for IsSATProblem}
+\label{SATClauses:for IsSATProblem}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{SATallSolutions (for IsSATProblem)}}
+\logpage{[ 15, 2, 3 ]}\nobreak
+\hyperdef{L}{X8747AFEB7CB555F7}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATallSolutions({\mdseries\slshape SP})\index{SATallSolutions@\texttt{SATallSolutions}!for IsSATProblem}
+\label{SATallSolutions:for IsSATProblem}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{SATCNFStr (for IsSATProblem)}}
+\logpage{[ 15, 2, 4 ]}\nobreak
+\hyperdef{L}{X817951A68604C611}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATCNFStr({\mdseries\slshape SP})\index{SATCNFStr@\texttt{SATCNFStr}!for IsSATProblem}
+\label{SATCNFStr:for IsSATProblem}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a string 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{SATSolutions (for IsSATProblem)}}
+\logpage{[ 15, 2, 5 ]}\nobreak
+\hyperdef{L}{X7D6D3D74877E934E}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATSolutions({\mdseries\slshape SP})\index{SATSolutions@\texttt{SATSolutions}!for IsSATProblem}
+\label{SATSolutions:for IsSATProblem}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list 
+
+
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
+
+ }
+
+ 
+\section{\textcolor{Chapter }{Operations}}\label{Chapter_SAT-problems_Section_Operations}
+\logpage{[ 15, 3, 0 ]}
+\hyperdef{L}{X7DE8E16C7C2D387B}{}
+{
+  
+
+\subsection{\textcolor{Chapter }{SATSolve (for IsSATProblem)}}
+\logpage{[ 15, 3, 1 ]}\nobreak
+\hyperdef{L}{X7C02B5F779D88902}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{SATSolve({\mdseries\slshape SP, all})\index{SATSolve@\texttt{SATSolve}!for IsSATProblem}
+\label{SATSolve:for IsSATProblem}
+}\hfill{\scriptsize (operation)}}\\
+
+
+ 
+
  }
 
  }

@@ -161,7 +161,7 @@
   \item \texttt  {LCircuits}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LFindOrientations}
-    \subitem for IsGeomLattice, \hyperpage{52}
+    \subitem for IsGeomLattice, IsBool, \hyperpage{52}
   \item \texttt  {LGenSet}
     \subitem for IsGeomLattice, \hyperpage{48}
   \item \texttt  {LGraph}
@@ -182,6 +182,8 @@
     \subitem for IsGeomLattice, IsList, \hyperpage{26}
   \item \texttt  {LIsModularPair}
     \subitem for IsGeomLattice, IsList, IsList, \hyperpage{26}
+  \item \texttt  {LIsOrientable}
+    \subitem for IsGeomLattice, \hyperpage{52}
   \item \texttt  {LIsSupersolvable}
     \subitem for IsGeomLattice, \hyperpage{27}
   \item \texttt  {LkFlats}
@@ -190,6 +192,8 @@
     \subitem for IsGeomLattice, IsInt, \hyperpage{27}
   \item \texttt  {LMoebius}
     \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LOrientations}
+    \subitem for IsGeomLattice, \hyperpage{52}
   \item \texttt  {LRank}
     \subitem for IsGeomLattice, \hyperpage{8}
   \item \texttt  {LRankFunction}
@@ -279,6 +283,20 @@
   \item \texttt  {SalvettiComplex}
     \subitem for IsHyperplaneArrangement, \hyperpage{32}
     \subitem for IsOrientedMatroid, \hyperpage{32}
+  \item \texttt  {SATallSolutions}
+    \subitem for IsSATProblem, \hyperpage{57}
+  \item \texttt  {SATClauses}
+    \subitem for IsSATProblem, \hyperpage{57}
+  \item \texttt  {SATCNFStr}
+    \subitem for IsSATProblem, \hyperpage{57}
+  \item \texttt  {SATnvariables}
+    \subitem for IsSATProblem, \hyperpage{57}
+  \item \texttt  {SATProblem}
+    \subitem for IsInt,IsList, IsBool, \hyperpage{57}
+  \item \texttt  {SATSolutions}
+    \subitem for IsSATProblem, \hyperpage{58}
+  \item \texttt  {SATSolve}
+    \subitem for IsSATProblem, \hyperpage{58}
   \item \texttt  {SeparatingSet}, \hyperpage{21}
   \item \texttt  {SsS3}, \hyperpage{13}
 

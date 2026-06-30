@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (HypArr) - Chapter 15: SAT-problems</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap15"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap14.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap15_mj.html">[MathJax on]</a></p>
+<p><a id="X7F4B54F17F02C87A" name="X7F4B54F17F02C87A"></a></p>
+<div class="ChapSects"><a href="chap15.html#X7F4B54F17F02C87A">15 <span class="Heading">SAT-problems</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7F6278CD87400D49">15.1 <span class="Heading">Construction</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X8325C9BE7B1AE194">15.1-1 SATProblem</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7C701DBF7BAE649A">15.2 <span class="Heading">Attributes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X7961716A7BCAB83D">15.2-1 SATnvariables</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X7FC1350D7934CCD0">15.2-2 SATClauses</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X8747AFEB7CB555F7">15.2-3 SATallSolutions</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X817951A68604C611">15.2-4 SATCNFStr</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X7D6D3D74877E934E">15.2-5 SATSolutions</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap15.html#X7DE8E16C7C2D387B">15.3 <span class="Heading">Operations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap15.html#X7C02B5F779D88902">15.3-1 SATSolve</a></span>
+</div></div>
+</div>
+
+<h3>15 <span class="Heading">SAT-problems</span></h3>
+
+<p><a id="X7F6278CD87400D49" name="X7F6278CD87400D49"></a></p>
+
+<h4>15.1 <span class="Heading">Construction</span></h4>
+
+<p><a id="X8325C9BE7B1AE194" name="X8325C9BE7B1AE194"></a></p>
+
+<h5>15.1-1 SATProblem</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATProblem</code>( <var class="Arg">nvar</var>, <var class="Arg">clauseslist</var>, <var class="Arg">allsols</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
+
+<h4>15.2 <span class="Heading">Attributes</span></h4>
+
+<p><a id="X7961716A7BCAB83D" name="X7961716A7BCAB83D"></a></p>
+
+<h5>15.2-1 SATnvariables</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATnvariables</code>( <var class="Arg">SP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: an integer</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X7FC1350D7934CCD0" name="X7FC1350D7934CCD0"></a></p>
+
+<h5>15.2-2 SATClauses</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATClauses</code>( <var class="Arg">SP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a list</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X8747AFEB7CB555F7" name="X8747AFEB7CB555F7"></a></p>
+
+<h5>15.2-3 SATallSolutions</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATallSolutions</code>( <var class="Arg">SP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a list</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X817951A68604C611" name="X817951A68604C611"></a></p>
+
+<h5>15.2-4 SATCNFStr</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATCNFStr</code>( <var class="Arg">SP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a string</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X7D6D3D74877E934E" name="X7D6D3D74877E934E"></a></p>
+
+<h5>15.2-5 SATSolutions</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATSolutions</code>( <var class="Arg">SP</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: a list</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X7DE8E16C7C2D387B" name="X7DE8E16C7C2D387B"></a></p>
+
+<h4>15.3 <span class="Heading">Operations</span></h4>
+
+<p><a id="X7C02B5F779D88902" name="X7C02B5F779D88902"></a></p>
+
+<h5>15.3-1 SATSolve</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SATSolve</code>( <var class="Arg">SP</var>, <var class="Arg">all</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap14.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

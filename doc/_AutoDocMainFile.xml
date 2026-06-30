@@ -15,3 +15,4 @@
 <#Include SYSTEM "_Chapter_Realization_spaces_of_geometric_lattices.xml">
 <#Include SYSTEM "_Chapter_Orientations_of_matroids.xml">
 <#Include SYSTEM "_Chapter_Greedy_search_for_arrangements.xml">
+<#Include SYSTEM "_Chapter_SAT-problems.xml">

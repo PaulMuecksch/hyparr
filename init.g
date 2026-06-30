@@ -23,4 +23,5 @@ ReadPackage("hyparr","gap/realizationspace.gd");
 ReadPackage("hyparr","gap/greedy.gd");
 ReadPackage("hyparr","gap/vgalgebra.gd");
 ReadPackage("hyparr","gap/findorientations.gd");
+ReadPackage("hyparr","gap/satproblems.gd");
 

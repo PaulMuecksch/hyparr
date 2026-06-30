@@ -199,8 +199,10 @@
       12.4-1 LSubsetGeneratedByS
       12.4-2 LIsGenSet
   13 [33X[0;0YOrientations of matroids[133X
-    13.1 [33X[0;0YFind orientations of a given geometric lattice[133X
-      13.1-1 LFindOrientations
+    13.1 [33X[0;0YOrientations of a given geometric lattice[133X
+      13.1-1 LIsOrientable
+      13.1-2 LOrientations
+      13.1-3 LFindOrientations
   14 [33X[0;0YGreedy search for arrangements[133X
     14.1 [33X[0;0YConstructions[133X
       14.1-1 HArrGreedySearch
@@ -214,6 +216,17 @@
       14.2-4 GreedySearchNOfHs
       14.2-5 GreedySearchTargetFct
       14.2-6 GreedySearchMaxIterations
+  15 [33X[0;0YSAT-problems[133X
+    15.1 [33X[0;0YConstruction[133X
+      15.1-1 SATProblem
+    15.2 [33X[0;0YAttributes[133X
+      15.2-1 SATnvariables
+      15.2-2 SATClauses
+      15.2-3 SATallSolutions
+      15.2-4 SATCNFStr
+      15.2-5 SATSolutions
+    15.3 [33X[0;0YOperations[133X
+      15.3-1 SATSolve
   
   
   [32X

@@ -3,8 +3,14 @@
 #
 ## Implementations
 
+
+#########################################################################
+## SAT for oriented matroid oriented
+#########################################################################
+
+
 InstallGlobalFunction(BasesToCNF,
-function(r,n,Bs)
+function(r,n,Bs,computeall)
 local zv, zv2, BsSet, varOf, inBs,
     CNFStr, cn, clauses, SignSUV,
     S, abcd, a,b,c,d,
@@ -13,14 +19,7 @@ local zv, zv2, BsSet, varOf, inBs,
     s_ab, s_cd, s_ac, s_bd, s_ad, s_bc,
     sv, sv_full, sv_4term, sv_4term_ac,
     F, B0, e_r, e_r1, i, k, base, IBi, 
-    ClausesToCNFStr;
-
-    ClausesToCNFStr :=function(nvar,cl)
-    local str;
-        str := JoinStringsWithSeparator( List(cl,c-> JoinStringsWithSeparator(List(c,x->String(x))," "))," 0\n");
-        str := Concatenation("p cnf ", String(nvar), " ", String(Length(cl)),"\n",str, " 0\n");
-        return str;
-    end;
+    SProb;
 
     # BsSet := Set(Combinations([1..n],r){BsIDs});
     BsSet := Set(Bs);
@@ -183,46 +182,33 @@ local zv, zv2, BsSet, varOf, inBs,
             fi;
         od;
     od;
-    CNFStr := ClausesToCNFStr(Length(Bs),clauses);
+    # CNFStr := ClausesToCNFStr(Length(Bs),clauses);
     # Print(zv, " ", Binomial(n,r-2)*Binomial(n-r+2,4),"\n");
     # Print(zv2, "\n");
-    return rec( cnfstr := CNFStr, nvar := Length(Bs), nclauses := Length(clauses) );
+    # return rec( cnfstr := CNFStr, nvar := Length(Bs), nclauses := Length(clauses) );
+    # return rec( nvar := Length(Bs), clauses := clauses );
+    return SATProblem(Length(Bs), clauses, computeall);
 end);
 
-# extract the solutions from the text output of an SAT-solver
 
-InstallGlobalFunction(ParseSATSolutions,
-function(text)
-local pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
+InstallGlobalFunction( SATOrientations,
+function(r,n,Bs,computeall)
+local SProb, sols;
+# local UBs, BsIs, cnf, cnfstr, picosat, TempDir, cnffile, strresult, 
+#     out, sols; 
 
-    pss:= Positions(text,'s');
-    pss := Filtered(pss,x->text{[x..x+12]} = "s SATISFIABLE");
+#     UBs:=Combinations([1..n],r);;
+#     BsIs:=List(Bs,x->Position(UBs,x));;
 
-    pse := Positions(text,'c');
-    pse := Filtered(pse,x->text{[x..x+12]} = "c initialized");
-    pse := pse{[2..Length(pse)]};;
+    # cnf := BasesToCNF(r,n,Bs);;
 
-    slist:=[];;
+    # sols := SolveSAT(cnf.nvar, cnf.clauses);
 
-    for i in [1..Length(pss)] do
-        ps:=pss[i]+14;
-        pe := pse[i]-3;
-        tn := text{[ps..pe]};
-        # Print(tn,"\n\n");;
-        pslb := Union([1],Positions(tn,'\n'),[Length(tn)+1]);;
-        sls := [];;
-        for j in [1..Length(pslb)-1] do
-            tnn := tn{[pslb[j]+1..pslb[j+1]-1]};
-            sl := [];
-            pws := Union(Positions(tnn,' '),[Length(tnn)+1]);
-            # pws := Positions(tnn,' ');
-            # Print(Positions(tnn,' '),"\n",Positions(tn,'\n') ,"\n\n");;
-            Add(sls,List([1..Length(pws)-1],x->Int(tnn{[pws[x]+1..pws[x+1]-1]})));
-        od;
-        Add(slist,Concatenation(sls));
-    od;;
+    SProb := BasesToCNF(r,n,Bs,computeall);
+    sols := SATSolve(SProb);
 
-    return List(slist,s->s{[1..Length(s)-1]});
+    return sols;
+
 end);
 
 # convert the SAT-solutions to lists giving chirotope cores
@@ -242,36 +228,33 @@ local chi, i;
     return chi;
 end);
 
-InstallGlobalFunction( PicoSATOrientations,
-function(r,n,Bs)
-local UBs, BsIs, cnf, picosat, TempDir, cnffile, strresult, 
-    out, sols; 
-
-    UBs:=Combinations([1..n],r);;
-    BsIs:=List(Bs,x->Position(UBs,x));;
-
-    cnf := BasesToCNF(r,n,Bs);;
-    picosat := PathSystemProgram("picosat");
-    TempDir:=DirectoryTemporary();
-    cnffile := Filename(TempDir,"cnfpico");
-    PrintTo(cnffile,cnf.cnfstr);
-
-    strresult:="";; 
-    out := OutputTextString(strresult,true);
-
-    Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v","--all"]);;
-
-    sols := ParseSATSolutions(strresult);
-
-    return sols;
-
-end);
 
 #########################################################################
 
-InstallMethod(LFindOrientations,
+InstallMethod(LIsOrientable,
     [IsGeomLattice],
 function(L)
+local Bases, BsIDs, chiros, r,n,
+    G, ActionOnChi, OrbitsOnChiros, UBs;
+    if HasLOrientations then
+        return LOrientations(L)<>[];
+    fi;
+
+    r := LRank(L);
+    n := Length(LAtoms(L));
+    Bases := LBases(L);
+    return SATOrientations(r,n,Bases,false)<>[];
+end);
+
+InstallMethod(LOrientations,
+    [IsGeomLattice],
+function(L)
+    return LFindOrientations(L,true);
+end);
+
+InstallMethod(LFindOrientations,
+    [IsGeomLattice, IsBool],
+function(L,findall)
 local Bases, BsIDs, chiros, r,n,
     G, ActionOnChi, OrbitsOnChiros, UBs;
     r := LRank(L);
@@ -279,18 +262,24 @@ local Bases, BsIDs, chiros, r,n,
     Bases := LBases(L);
     UBs := Combinations([1..n],r);
     BsIDs:=List(Bases,B->Position(UBs,B));
-    chiros := List(PicoSATOrientations(r,n,Bases),s->BsSIDsToChi(r,n,BsIDs, s));
-    G:=LAutGroup(L);
-    ActionOnChi := function(chi, g)
-    local PSignB;
-        PSignB := B->SignPerm(PermList(List([1..Length(B)],x->Position(OnSets(B,g),B[x]^g))));
-        return List(UBs,B->PSignB(B)*chi[Position(UBs,OnSets(B,g))]);
-    end;
+    if findall=false then
+        chiros := List(SATOrientations(r,n,Bases,false),s->BsSIDsToChi(r,n,BsIDs, s));
+    else
+        chiros := List(SATOrientations(r,n,Bases,findall),s->BsSIDsToChi(r,n,BsIDs, s));
+        G:=LAutGroup(L);
+        ActionOnChi := function(chi, g)
+        local PSignB;
+            PSignB := B->SignPerm(PermList(List([1..Length(B)],x->Position(OnSets(B,g),B[x]^g))));
+            return List(UBs,B->PSignB(B)*chi[Position(UBs,OnSets(B,g))]);
+        end;
 
-    OrbitsOnChiros := Orbits(G,chiros,ActionOnChi);
-    chiros := List(OrbitsOnChiros,Orb->Orb[1]);;
+        OrbitsOnChiros := Orbits(G,chiros,ActionOnChi);
+        chiros := List(OrbitsOnChiros,Orb->Orb[1]);;
+    fi;;
 
-    return List(chiros,chi->OM(r,n,chi));
+    SetLOrientations(L,List(chiros,chi->OM(r,n,chi)));    
+
+    return LOrientations(L);
 end);
 
 # p cnf 3 2

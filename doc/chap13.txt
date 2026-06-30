@@ -2,15 +2,36 @@
   [1X13 [33X[0;0YOrientations of matroids[133X[101X
   
   
-  [1X13.1 [33X[0;0YFind orientations of a given geometric lattice[133X[101X
+  [1X13.1 [33X[0;0YOrientations of a given geometric lattice[133X[101X
   
-  [1X13.1-1 LFindOrientations[101X
+  [1X13.1-1 LIsOrientable[101X
   
-  [33X[1;0Y[29X[2XLFindOrientations[102X( [3XL[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XLIsOrientable[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines if there is an oriented matroid with geometric lattice [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X13.1-2 LOrientations[101X
+  
+  [33X[1;0Y[29X[2XLOrientations[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10YA list of oriented matroids[133X
   
-  [33X[0;0YComputes  all  oriented  matroids  (up  to  OM-isomorphisms) which have [3XL[103X as
-  underlying matroid structe or geometric lattice.[133X
+  [33X[0;0YReturns oriented matroids with geometric lattice [3XL[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
+  [1X13.1-3 LFindOrientations[101X
+  
+  [33X[1;0Y[29X[2XLFindOrientations[102X( [3XL[103X, [3Xfindall[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA list of oriented matroids[133X
+  
+  [33X[0;0YComputes   oriented  matroids  (up  to  OM-isomorphisms)  which  have  [3XL[103X  as
+  underlying matroid structe or geometric lattice. If [3Xfindall[103X is [10Xtrue[110X then all
+  orientations are computed, else at most one orientation is computed.[133X
   
   [33X[0;0YDepending  on  this  size of [3XL[103X this might take a considerable amount of time
   and there may be many orientations depending on the sparsity of relations in
@@ -24,7 +45,7 @@
     [4X[28X<HyperplaneArrangement: 16 hyperplanes in 4-space>[128X[104X
     [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
     [4X[28X1138[128X[104X
-    [4X[25Xgap>[125X [27XOMs:=LFindOrientations(L);[127X[104X
+    [4X[25Xgap>[125X [27XOMs:=LFindOrientations(L,true);[127X[104X
     [4X[28X[ <OrientedMatroid: 16 elements, rank 4> ][128X[104X
   [4X[32X[104X
   

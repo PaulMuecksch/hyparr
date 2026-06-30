@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_SAT-problems">
+<Heading>SAT-problems</Heading>
+
+<Section Label="Chapter_SAT-problems_Section_Construction">
+<Heading>Construction</Heading>
+
+<ManSection>
+  <Oper Arg="nvar,clauseslist, allsols" Name="SATProblem" Label="for IsInt,IsList, IsBool"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_SAT-problems_Section_Attributes">
+<Heading>Attributes</Heading>
+
+<ManSection>
+  <Attr Arg="SP" Name="SATnvariables" Label="for IsSATProblem"/>
+ <Returns>an integer
+</Returns>
+ <Description>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="SP" Name="SATClauses" Label="for IsSATProblem"/>
+ <Returns>a list
+</Returns>
+ <Description>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="SP" Name="SATallSolutions" Label="for IsSATProblem"/>
+ <Returns>a list
+</Returns>
+ <Description>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="SP" Name="SATCNFStr" Label="for IsSATProblem"/>
+ <Returns>a string
+</Returns>
+ <Description>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="SP" Name="SATSolutions" Label="for IsSATProblem"/>
+ <Returns>a list
+</Returns>
+ <Description>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_SAT-problems_Section_Operations">
+<Heading>Operations</Heading>
+
+<ManSection>
+  <Oper Arg="SP, all" Name="SATSolve" Label="for IsSATProblem"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

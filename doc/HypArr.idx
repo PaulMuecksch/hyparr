@@ -121,7 +121,9 @@
 \indexentry{RSIsNonEmpty@\texttt  {RSIsNonEmpty}!for IsRealizationSpaceOfGeomLattice|hyperpage}{50}
 \indexentry{LSubsetGeneratedByS@\texttt  {LSubsetGeneratedByS}!for IsGeomLattice,IsList|hyperpage}{50}
 \indexentry{LIsGenSet@\texttt  {LIsGenSet}!for IsGeomLattice,IsList|hyperpage}{51}
-\indexentry{LFindOrientations@\texttt  {LFindOrientations}!for IsGeomLattice|hyperpage}{52}
+\indexentry{LIsOrientable@\texttt  {LIsOrientable}!for IsGeomLattice|hyperpage}{52}
+\indexentry{LOrientations@\texttt  {LOrientations}!for IsGeomLattice|hyperpage}{52}
+\indexentry{LFindOrientations@\texttt  {LFindOrientations}!for IsGeomLattice, IsBool|hyperpage}{52}
 \indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat|hyperpage}{53}
 \indexentry{HArrGreedySearchSubArr@\texttt  {HArrGreedySearchSubArr}!for IsRecord|hyperpage}{53}
 \indexentry{CharPolySplits@\texttt  {CharPolySplits}|hyperpage}{55}
@@ -132,3 +134,10 @@
 \indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{56}
 \indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{56}
 \indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{56}
+\indexentry{SATProblem@\texttt  {SATProblem}!for IsInt,IsList, IsBool|hyperpage}{57}
+\indexentry{SATnvariables@\texttt  {SATnvariables}!for IsSATProblem|hyperpage}{57}
+\indexentry{SATClauses@\texttt  {SATClauses}!for IsSATProblem|hyperpage}{57}
+\indexentry{SATallSolutions@\texttt  {SATallSolutions}!for IsSATProblem|hyperpage}{57}
+\indexentry{SATCNFStr@\texttt  {SATCNFStr}!for IsSATProblem|hyperpage}{57}
+\indexentry{SATSolutions@\texttt  {SATSolutions}!for IsSATProblem|hyperpage}{58}
+\indexentry{SATSolve@\texttt  {SATSolve}!for IsSATProblem|hyperpage}{58}

@@ -4,28 +4,59 @@
 <Chapter Label="Chapter_Orientations_of_matroids">
 <Heading>Orientations of matroids</Heading>
 
-<Section Label="Chapter_Orientations_of_matroids_Section_Find_orientations_of_a_given_geometric_lattice">
-<Heading>Find orientations of a given geometric lattice</Heading>
+<Section Label="Chapter_Orientations_of_matroids_Section_Orientations_of_a_given_geometric_lattice">
+<Heading>Orientations of a given geometric lattice</Heading>
 
 <ManSection>
-  <Oper Arg="L" Name="LFindOrientations" Label="for IsGeomLattice"/>
+  <Prop Arg="L" Name="LIsOrientable" Label="for IsGeomLattice"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+ Determines if there is an oriented matroid with geometric lattice <A>L</A>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LOrientations" Label="for IsGeomLattice"/>
  <Returns>A list of oriented matroids
 </Returns>
  <Description>
- Computes all oriented matroids (up to OM-isomorphisms) which have <A>L</A>
+ Returns oriented matroids with geometric lattice <A>L</A>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="L, findall" Name="LFindOrientations" Label="for IsGeomLattice, IsBool"/>
+ <Returns>A list of oriented matroids
+</Returns>
+ <Description>
+ Computes oriented matroids (up to OM-isomorphisms) which have <A>L</A>
  as underlying matroid structe or geometric lattice.
+ If <A>findall</A> is <C>true</C> then all orientations are computed,
+ else at most one orientation is computed.
 <P/>
  Depending on this size of <A>L</A> this might take a considerable amount of time
  and there may be many orientations depending on the sparsity of relations in <A>L</A>.
 <P/>
  The algorithm converts the problem of determining orientations to
  an SAT-instance and then uses an SAT-solver (currently PicoSAT) to solve.
+<P/>
 <Example><![CDATA[
 gap> A:=AGpql(2,1,4); L:=IntersectionLattice(A); Bs:=LBases(L);; Length(Bs);
 <HyperplaneArrangement: 16 hyperplanes in 4-space>
 <Geometric lattice: 16 atoms, rank 4>
 1138
-gap> OMs:=LFindOrientations(L);
+gap> OMs:=LFindOrientations(L,true);
 [ <OrientedMatroid: 16 elements, rank 4> ]
 ]]></Example>
 
