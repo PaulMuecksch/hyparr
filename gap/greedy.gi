@@ -197,7 +197,7 @@ end);
 
 InstallMethod(HArrGreedySearch,
     [IsInt,IsInt,IsField,IsFunction,IsInt,IsRat],
-function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations, heat)
+function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations, tmp)
 local RunSearch,PropP, type;
 
     PropP := PropTargetFct;
@@ -219,8 +219,8 @@ local RunSearch,PropP, type;
             if PropP(ANew)=0 then
                 Print(i," Iterations - ");
                 return ANew;
-            # elif PropP(ANew)<PropP(AOld)+heat then
-            elif PropP(ANew)/PropP(AOld) < 1-heat then
+            # elif PropP(ANew)<PropP(AOld)+tmp then
+            elif PropP(ANew)/PropP(AOld) < 1-tmp then
                 AOld := ANew;
                 k:=1;
             # else
@@ -256,7 +256,7 @@ end);
 InstallMethod(HArrGreedySearchSubArr,
     [IsRecord],
     # [IsInt,IsInt,IsField,IsFunction,IsInt,IsRat,IsHyperplaneArrangement, IsList],
-# function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations, heat, StartArr, FixSubArr)
+# function(NumberOfHs,dim,GField,PropTargetFct,MaxNoIterations, tmp, StartArr, FixSubArr)
 function(opts)
 local RunSearch,PropP, type, ns;
 
@@ -290,8 +290,8 @@ local RunSearch,PropP, type, ns;
             if PropP(ANew)=0 then
                 Print(i," Iterations - ");
                 return ANew;
-            # elif PropP(ANew)<PropP(AOld)+heat then
-            elif PropP(ANew)/PropP(AOld) < 1-opts.heat then
+            # elif PropP(ANew)<PropP(AOld)+tmp then
+            elif PropP(ANew)/PropP(AOld) < 1-opts.tmp then
                 AOld := ANew;
                 k:=1;
             # else

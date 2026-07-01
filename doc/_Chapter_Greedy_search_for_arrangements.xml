@@ -12,7 +12,7 @@
 <Heading>Constructions</Heading>
 
 <ManSection>
-  <Oper Arg="NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat[,StartSubArr, FixSubArr]" Name="HArrGreedySearch" Label="for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat"/>
+  <Oper Arg="NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, tmp" Name="HArrGreedySearch" Label="for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat"/>
  <Returns>A hyperplane arrangement
 </Returns>
  <Description>
@@ -29,7 +29,7 @@
       (one step = exchanging a hyperplane).
 </Item>
 <Item>
-<A>heat</A> is a margin for the target function 
+<A>tmp</A> is a margin for the target function 
 </Item>
 <Item>
 <E>optional</E> <A>StartArr</A> an arrangement from which to start the search 
@@ -76,25 +76,21 @@ GreedySearch over GF(17) for arrangements:
       (one step = exchanging a hyperplane).
 </Item>
 <Item>
-<A>heat</A> is a margin for the target function 
-</Item>
-<Item>
-<A>StartArr</A> an arrangement from which to start the search 
-</Item>
-<Item>
-and <A>FixSubArr</A> a subarrangement (list of indices) which should stay fixed during the search.
+<A>tmp</A> is a margin for the target function.
 </Item>
 </List>
 <P/>
 <Example><![CDATA[
-gap> GField:=GF(13);; AFix:=[1..4];; Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x->One(GField))]));; P:=CharPolySplits;;
+gap> GField:=GF(13);; AFix:=[1..4];; 
+gap> Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x->One(GField))]));; 
+gap> P:=CharPolySplits;;
 gap> opts:=rec(
 >     NumberOfHs:=15,
 >     dim:=3,
 >     GField:=GF(13),
 >     PropTargetFct:=P,
 >     MaxNoIterations:=1000,
->     heat := -1/8,
+>     tmp := -1/8,
 >     StartArr := Astart,
 >     FixSubArr := AFix
 > );;

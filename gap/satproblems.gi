@@ -62,6 +62,8 @@ local type;
     );
 end);
 
+SATSolsCUTOFF := 100;
+
 # extract the solutions from the text output of an SAT-solver
 InstallGlobalFunction(ParseSATSolutions,
 function(text)
@@ -69,6 +71,9 @@ local pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
 
     pss:= Positions(text,'s');
     pss := Filtered(pss,x->text{[x..x+12]} = "s SATISFIABLE");
+    if Length(pss)>SATSolsCUTOFF then
+        pss:=pss{[1..SATSolsCUTOFF]};;
+    fi;;
 
     pse:=[];;
     for ps in pss do

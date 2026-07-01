@@ -54,7 +54,7 @@
 
 <h5>14.1-1 HArrGreedySearch</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrGreedySearch</code>( <var class="Arg">NumberOfHs</var>, <var class="Arg">dim</var>, <var class="Arg">GField</var>, <var class="Arg">PropTargetFct</var>, <var class="Arg">MaxNoIterations</var>, <var class="Arg">heat</var>[, <var class="Arg">StartSubArr</var>, <var class="Arg">FixSubArr</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrGreedySearch</code>( <var class="Arg">NumberOfHs</var>, <var class="Arg">dim</var>, <var class="Arg">GField</var>, <var class="Arg">PropTargetFct</var>, <var class="Arg">MaxNoIterations</var>, <var class="Arg">tmp</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A hyperplane arrangement</p>
 
 <p>Constructs a greedy search for arrangements over <var class="Arg">GField</var> with <var class="Arg">NumberOfHs</var> hyperplanes in dimension <var class="Arg">dim</var>.</p>
@@ -67,7 +67,7 @@
 <li><p><var class="Arg">MaxNoIterations</var> is the maximal number of steps to be carried out in the search (one step = exchanging a hyperplane).</p>
 
 </li>
-<li><p><var class="Arg">heat</var> is a margin for the target function</p>
+<li><p><var class="Arg">tmp</var> is a margin for the target function</p>
 
 </li>
 <li><p><em>optional</em> <var class="Arg">StartArr</var> an arrangement from which to start the search and <var class="Arg">FixSubArr</var> a subarrangement of <var class="Arg">StartArr</var> which should stay fixed during the search.</p>
@@ -108,26 +108,22 @@ GreedySearch over GF(17) for arrangements:
 <li><p><var class="Arg">MaxNoIterations</var> is the maximal number of steps to be carried out in the search (one step = exchanging a hyperplane).</p>
 
 </li>
-<li><p><var class="Arg">heat</var> is a margin for the target function</p>
-
-</li>
-<li><p><var class="Arg">StartArr</var> an arrangement from which to start the search</p>
-
-</li>
-<li><p>and <var class="Arg">FixSubArr</var> a subarrangement (list of indices) which should stay fixed during the search.</p>
+<li><p><var class="Arg">tmp</var> is a margin for the target function.</p>
 
 </li>
 </ul>
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GField:=GF(13);; AFix:=[1..4];; Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x-&gt;One(GField))]));; P:=CharPolySplits;;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GField:=GF(13);; AFix:=[1..4];; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x-&gt;One(GField))]));; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">P:=CharPolySplits;;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">opts:=rec(</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    NumberOfHs:=15,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    dim:=3,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    GField:=GF(13),</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    PropTargetFct:=P,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    MaxNoIterations:=1000,</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    heat := -1/8,</span>
+<span class="GAPprompt">&gt;</span> <span class="GAPinput">    tmp := -1/8,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    StartArr := Astart,</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">    FixSubArr := AFix</span>
 <span class="GAPprompt">&gt;</span> <span class="GAPinput">);;</span>

@@ -45,7 +45,7 @@ DeclareOperation("RandomNewH",[IsHyperplaneArrangement]);
 DeclareOperation("ExchangeRandomH",[IsHyperplaneArrangement,IsList]);
 DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement,IsList]);
 
-#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, heat[,StartSubArr, FixSubArr]
+#! @Arguments NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations, tmp
 #! @Returns A hyperplane arrangement
 #! @Description
 #!  Constructs a greedy search for arrangements over <A>GField</A> with <A>NumberOfHs</A>
@@ -55,7 +55,7 @@ DeclareOperation("ExchangeRandomH2",[IsHyperplaneArrangement,IsList]);
 #!      and such that value=0 means the arrangement satisfies the desired property.
 #!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
 #!      (one step = exchanging a hyperplane).
-#!  * <A>heat</A> is a margin for the target function 
+#!  * <A>tmp</A> is a margin for the target function 
 #!  * <E>optional</E> <A>StartArr</A> an arrangement from which to start the search 
 #!   and <A>FixSubArr</A> a subarrangement of <A>StartArr</A> which should stay fixed during the search.
 #! @BeginExampleSession
@@ -80,19 +80,19 @@ DeclareOperation("HArrGreedySearch",[IsInt,IsInt,IsField,IsFunction,IsInt, IsRat
 #!      and such that value=0 means the arrangement satisfies the desired property.
 #!  * <A>MaxNoIterations</A> is the maximal number of steps to be carried out in the search 
 #!      (one step = exchanging a hyperplane).
-#!  * <A>heat</A> is a margin for the target function 
-#!  * <A>StartArr</A> an arrangement from which to start the search 
-#!  * and <A>FixSubArr</A> a subarrangement (list of indices) which should stay fixed during the search.
+#!  * <A>tmp</A> is a margin for the target function.
 #! 
 #! @BeginExampleSession
-#! gap> GField:=GF(13);; AFix:=[1..4];; Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x->One(GField))]));; P:=CharPolySplits;;
+#! gap> GField:=GF(13);; AFix:=[1..4];; 
+#! gap> Astart:=Arr(Concatenation(One(GField)*IdentityMat(3),[List([1..3],x->One(GField))]));; 
+#! gap> P:=CharPolySplits;;
 #! gap> opts:=rec(
 #! >     NumberOfHs:=15,
 #! >     dim:=3,
 #! >     GField:=GF(13),
 #! >     PropTargetFct:=P,
 #! >     MaxNoIterations:=1000,
-#! >     heat := -1/8,
+#! >     tmp := -1/8,
 #! >     StartArr := Astart,
 #! >     FixSubArr := AFix
 #! > );;

@@ -236,7 +236,7 @@ InstallMethod(LIsOrientable,
 function(L)
 local Bases, BsIDs, chiros, r,n,
     G, ActionOnChi, OrbitsOnChiros, UBs;
-    if HasLOrientations then
+    if HasLOrientations(L) then
         return LOrientations(L)<>[];
     fi;
 
