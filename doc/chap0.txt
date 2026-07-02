@@ -6,10 +6,10 @@
                   [1X Computations with hyperplane arrangements [101X
   
   
-                                    0.26.06
+                                    0.26.07
   
   
-                                  25 June 2026
+                                  2 July 2026
   
   
                                   Paul Mücksch
@@ -203,30 +203,30 @@
       13.1-1 LIsOrientable
       13.1-2 LOrientations
       13.1-3 LFindOrientations
-  14 [33X[0;0YGreedy search for arrangements[133X
-    14.1 [33X[0;0YConstructions[133X
-      14.1-1 HArrGreedySearch
-      14.1-2 HArrGreedySearchSubArr
-      14.1-3 CharPolySplits
-      14.1-4 DistMSetInvL
+  14 [33X[0;0YSAT-problems[133X
+    14.1 [33X[0;0YConstruction[133X
+      14.1-1 SATProblem
     14.2 [33X[0;0YAttributes[133X
-      14.2-1 GreedySearchRun
-      14.2-2 GreedySearchGF
-      14.2-3 GreedySearchDimension
-      14.2-4 GreedySearchNOfHs
-      14.2-5 GreedySearchTargetFct
-      14.2-6 GreedySearchMaxIterations
-  15 [33X[0;0YSAT-problems[133X
-    15.1 [33X[0;0YConstruction[133X
-      15.1-1 SATProblem
+      14.2-1 SATnvariables
+      14.2-2 SATClauses
+      14.2-3 SATallSolutions
+      14.2-4 SATCNFStr
+      14.2-5 SATSolutions
+    14.3 [33X[0;0YOperations[133X
+      14.3-1 SATSolve
+  15 [33X[0;0YGreedy search for arrangements[133X
+    15.1 [33X[0;0YConstructions[133X
+      15.1-1 HArrGreedySearch
+      15.1-2 HArrGreedySearchSubArr
+      15.1-3 CharPolySplits
+      15.1-4 DistMSetInvL
     15.2 [33X[0;0YAttributes[133X
-      15.2-1 SATnvariables
-      15.2-2 SATClauses
-      15.2-3 SATallSolutions
-      15.2-4 SATCNFStr
-      15.2-5 SATSolutions
-    15.3 [33X[0;0YOperations[133X
-      15.3-1 SATSolve
+      15.2-1 GreedySearchRun
+      15.2-2 GreedySearchGF
+      15.2-3 GreedySearchDimension
+      15.2-4 GreedySearchNOfHs
+      15.2-5 GreedySearchTargetFct
+      15.2-6 GreedySearchMaxIterations
   
   
   [32X

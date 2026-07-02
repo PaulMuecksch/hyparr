@@ -169,29 +169,29 @@
 \contentsline {subsection}{\numberline {13.1.1}\textcolor {Chapter }{LIsOrientable (for IsGeomLattice)}}{52}{subsection.13.1.1}%
 \contentsline {subsection}{\numberline {13.1.2}\textcolor {Chapter }{LOrientations (for IsGeomLattice)}}{52}{subsection.13.1.2}%
 \contentsline {subsection}{\numberline {13.1.3}\textcolor {Chapter }{LFindOrientations (for IsGeomLattice, IsBool)}}{52}{subsection.13.1.3}%
-\contentsline {chapter}{\numberline {14}\textcolor {Chapter }{Greedy search for arrangements}}{54}{chapter.14}%
-\contentsline {section}{\numberline {14.1}\textcolor {Chapter }{Constructions}}{54}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat)}}{54}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}\textcolor {Chapter }{HArrGreedySearchSubArr (for IsRecord)}}{54}{subsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.1.3}\textcolor {Chapter }{CharPolySplits}}{56}{subsection.14.1.3}%
-\contentsline {subsection}{\numberline {14.1.4}\textcolor {Chapter }{DistMSetInvL}}{56}{subsection.14.1.4}%
-\contentsline {section}{\numberline {14.2}\textcolor {Chapter }{Attributes}}{56}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{56}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{56}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{56}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{57}{subsection.14.2.4}%
-\contentsline {subsection}{\numberline {14.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{57}{subsection.14.2.5}%
-\contentsline {subsection}{\numberline {14.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{57}{subsection.14.2.6}%
-\contentsline {chapter}{\numberline {15}\textcolor {Chapter }{SAT\texttt {\symbol {45}}problems}}{58}{chapter.15}%
-\contentsline {section}{\numberline {15.1}\textcolor {Chapter }{Construction}}{58}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}\textcolor {Chapter }{SATProblem (for IsInt,IsList, IsBool)}}{58}{subsection.15.1.1}%
+\contentsline {chapter}{\numberline {14}\textcolor {Chapter }{SAT\texttt {\symbol {45}}problems}}{54}{chapter.14}%
+\contentsline {section}{\numberline {14.1}\textcolor {Chapter }{Construction}}{54}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}\textcolor {Chapter }{SATProblem (for IsInt,IsList, IsBool)}}{54}{subsection.14.1.1}%
+\contentsline {section}{\numberline {14.2}\textcolor {Chapter }{Attributes}}{54}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}\textcolor {Chapter }{SATnvariables (for IsSATProblem)}}{54}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}\textcolor {Chapter }{SATClauses (for IsSATProblem)}}{54}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}\textcolor {Chapter }{SATallSolutions (for IsSATProblem)}}{54}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}\textcolor {Chapter }{SATCNFStr (for IsSATProblem)}}{54}{subsection.14.2.4}%
+\contentsline {subsection}{\numberline {14.2.5}\textcolor {Chapter }{SATSolutions (for IsSATProblem)}}{55}{subsection.14.2.5}%
+\contentsline {section}{\numberline {14.3}\textcolor {Chapter }{Operations}}{55}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}\textcolor {Chapter }{SATSolve (for IsSATProblem)}}{55}{subsection.14.3.1}%
+\contentsline {chapter}{\numberline {15}\textcolor {Chapter }{Greedy search for arrangements}}{56}{chapter.15}%
+\contentsline {section}{\numberline {15.1}\textcolor {Chapter }{Constructions}}{56}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat)}}{56}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}\textcolor {Chapter }{HArrGreedySearchSubArr (for IsRecord)}}{56}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.3}\textcolor {Chapter }{CharPolySplits}}{58}{subsection.15.1.3}%
+\contentsline {subsection}{\numberline {15.1.4}\textcolor {Chapter }{DistMSetInvL}}{58}{subsection.15.1.4}%
 \contentsline {section}{\numberline {15.2}\textcolor {Chapter }{Attributes}}{58}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}\textcolor {Chapter }{SATnvariables (for IsSATProblem)}}{58}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}\textcolor {Chapter }{SATClauses (for IsSATProblem)}}{58}{subsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.2.3}\textcolor {Chapter }{SATallSolutions (for IsSATProblem)}}{58}{subsection.15.2.3}%
-\contentsline {subsection}{\numberline {15.2.4}\textcolor {Chapter }{SATCNFStr (for IsSATProblem)}}{58}{subsection.15.2.4}%
-\contentsline {subsection}{\numberline {15.2.5}\textcolor {Chapter }{SATSolutions (for IsSATProblem)}}{59}{subsection.15.2.5}%
-\contentsline {section}{\numberline {15.3}\textcolor {Chapter }{Operations}}{59}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}\textcolor {Chapter }{SATSolve (for IsSATProblem)}}{59}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{58}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{58}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{58}{subsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{59}{subsection.15.2.4}%
+\contentsline {subsection}{\numberline {15.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{59}{subsection.15.2.5}%
+\contentsline {subsection}{\numberline {15.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{59}{subsection.15.2.6}%
 \contentsline {chapter}{References}{61}{chapter*.2}%
 \contentsline {chapter}{Index}{62}{section*.3}%

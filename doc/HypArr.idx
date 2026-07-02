@@ -124,20 +124,20 @@
 \indexentry{LIsOrientable@\texttt  {LIsOrientable}!for IsGeomLattice|hyperpage}{52}
 \indexentry{LOrientations@\texttt  {LOrientations}!for IsGeomLattice|hyperpage}{52}
 \indexentry{LFindOrientations@\texttt  {LFindOrientations}!for IsGeomLattice, IsBool|hyperpage}{52}
-\indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat|hyperpage}{54}
-\indexentry{HArrGreedySearchSubArr@\texttt  {HArrGreedySearchSubArr}!for IsRecord|hyperpage}{54}
-\indexentry{CharPolySplits@\texttt  {CharPolySplits}|hyperpage}{56}
-\indexentry{DistMSetInvL@\texttt  {DistMSetInvL}|hyperpage}{56}
-\indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{56}
-\indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{56}
-\indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{56}
-\indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{57}
-\indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{57}
-\indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{57}
-\indexentry{SATProblem@\texttt  {SATProblem}!for IsInt,IsList, IsBool|hyperpage}{58}
-\indexentry{SATnvariables@\texttt  {SATnvariables}!for IsSATProblem|hyperpage}{58}
-\indexentry{SATClauses@\texttt  {SATClauses}!for IsSATProblem|hyperpage}{58}
-\indexentry{SATallSolutions@\texttt  {SATallSolutions}!for IsSATProblem|hyperpage}{58}
-\indexentry{SATCNFStr@\texttt  {SATCNFStr}!for IsSATProblem|hyperpage}{58}
-\indexentry{SATSolutions@\texttt  {SATSolutions}!for IsSATProblem|hyperpage}{59}
-\indexentry{SATSolve@\texttt  {SATSolve}!for IsSATProblem|hyperpage}{59}
+\indexentry{SATProblem@\texttt  {SATProblem}!for IsInt,IsList, IsBool|hyperpage}{54}
+\indexentry{SATnvariables@\texttt  {SATnvariables}!for IsSATProblem|hyperpage}{54}
+\indexentry{SATClauses@\texttt  {SATClauses}!for IsSATProblem|hyperpage}{54}
+\indexentry{SATallSolutions@\texttt  {SATallSolutions}!for IsSATProblem|hyperpage}{54}
+\indexentry{SATCNFStr@\texttt  {SATCNFStr}!for IsSATProblem|hyperpage}{54}
+\indexentry{SATSolutions@\texttt  {SATSolutions}!for IsSATProblem|hyperpage}{55}
+\indexentry{SATSolve@\texttt  {SATSolve}!for IsSATProblem|hyperpage}{55}
+\indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat|hyperpage}{56}
+\indexentry{HArrGreedySearchSubArr@\texttt  {HArrGreedySearchSubArr}!for IsRecord|hyperpage}{56}
+\indexentry{CharPolySplits@\texttt  {CharPolySplits}|hyperpage}{58}
+\indexentry{DistMSetInvL@\texttt  {DistMSetInvL}|hyperpage}{58}
+\indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{58}
+\indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{58}
+\indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{58}
+\indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{59}
+\indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{59}
+\indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{59}
