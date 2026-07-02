@@ -4,6 +4,8 @@
 <Chapter Label="Chapter_Orientations_of_matroids">
 <Heading>Orientations of matroids</Heading>
 
+ This chapter describes functions to compute orientations of a given matroid or geometric lattice.
+ For this, an SAT-problem is formulated and solved.
 <Section Label="Chapter_Orientations_of_matroids_Section_Orientations_of_a_given_geometric_lattice">
 <Heading>Orientations of a given geometric lattice</Heading>
 
@@ -41,11 +43,11 @@
 </Returns>
  <Description>
  Computes oriented matroids (up to OM-isomorphisms) which have <A>L</A>
- as underlying matroid structe or geometric lattice.
+ as underlying matroid structure or geometric lattice.
  If <A>findall</A> is <C>true</C> then all orientations are computed,
  else at most one orientation is computed.
 <P/>
- Depending on this size of <A>L</A> this might take a considerable amount of time
+ Depending on the size of <A>L</A> this might take a considerable amount of time
  and there may be many orientations depending on the sparsity of relations in <A>L</A>.
 <P/>
  The algorithm converts the problem of determining orientations to

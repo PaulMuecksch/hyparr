@@ -15,7 +15,7 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{34}
   \item \texttt  {CharPoly}
     \subitem for IsHyperplaneArrangement, \hyperpage{6}
-  \item \texttt  {CharPolySplits}, \hyperpage{55}
+  \item \texttt  {CharPolySplits}, \hyperpage{56}
   \item \texttt  {ConnectedSubgraphArr}
     \subitem for IsList, \hyperpage{14}
 
@@ -37,7 +37,7 @@
     \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{22}
   \item \texttt  {Dimension}
     \subitem for IsHyperplaneArrangement, \hyperpage{5}
-  \item \texttt  {DistMSetInvL}, \hyperpage{55}
+  \item \texttt  {DistMSetInvL}, \hyperpage{56}
 
   \indexspace
 
@@ -62,17 +62,17 @@
   \item \texttt  {GraphicArr}
     \subitem for IsList, \hyperpage{14}
   \item \texttt  {GreedySearchDimension}
-    \subitem for IsHArrGreedySearch, \hyperpage{55}
+    \subitem for IsHArrGreedySearch, \hyperpage{56}
   \item \texttt  {GreedySearchGF}
-    \subitem for IsHArrGreedySearch, \hyperpage{55}
+    \subitem for IsHArrGreedySearch, \hyperpage{56}
   \item \texttt  {GreedySearchMaxIterations}
-    \subitem for IsHArrGreedySearch, \hyperpage{56}
+    \subitem for IsHArrGreedySearch, \hyperpage{57}
   \item \texttt  {GreedySearchNOfHs}
-    \subitem for IsHArrGreedySearch, \hyperpage{56}
+    \subitem for IsHArrGreedySearch, \hyperpage{57}
   \item \texttt  {GreedySearchRun}
-    \subitem for IsHArrGreedySearch, \hyperpage{55}
-  \item \texttt  {GreedySearchTargetFct}
     \subitem for IsHArrGreedySearch, \hyperpage{56}
+  \item \texttt  {GreedySearchTargetFct}
+    \subitem for IsHArrGreedySearch, \hyperpage{57}
 
   \indexspace
 
@@ -86,9 +86,9 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{30}
   \item \texttt  {HArrGreedySearch}
     \subitem for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat, 
-		\hyperpage{53}
+		\hyperpage{54}
   \item \texttt  {HArrGreedySearchSubArr}
-    \subitem for IsRecord, \hyperpage{53}
+    \subitem for IsRecord, \hyperpage{54}
   \item \texttt  {HArrInductiveFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{31}
   \item \texttt  {HArrIsFactored}
@@ -284,19 +284,19 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{32}
     \subitem for IsOrientedMatroid, \hyperpage{32}
   \item \texttt  {SATallSolutions}
-    \subitem for IsSATProblem, \hyperpage{57}
+    \subitem for IsSATProblem, \hyperpage{58}
   \item \texttt  {SATClauses}
-    \subitem for IsSATProblem, \hyperpage{57}
+    \subitem for IsSATProblem, \hyperpage{58}
   \item \texttt  {SATCNFStr}
-    \subitem for IsSATProblem, \hyperpage{57}
+    \subitem for IsSATProblem, \hyperpage{58}
   \item \texttt  {SATnvariables}
-    \subitem for IsSATProblem, \hyperpage{57}
+    \subitem for IsSATProblem, \hyperpage{58}
   \item \texttt  {SATProblem}
-    \subitem for IsInt,IsList, IsBool, \hyperpage{57}
+    \subitem for IsInt,IsList, IsBool, \hyperpage{58}
   \item \texttt  {SATSolutions}
-    \subitem for IsSATProblem, \hyperpage{58}
+    \subitem for IsSATProblem, \hyperpage{59}
   \item \texttt  {SATSolve}
-    \subitem for IsSATProblem, \hyperpage{58}
+    \subitem for IsSATProblem, \hyperpage{59}
   \item \texttt  {SeparatingSet}, \hyperpage{21}
   \item \texttt  {SsS3}, \hyperpage{13}
 

@@ -36,6 +36,8 @@
 
 <h3>13 <span class="Heading">Orientations of matroids</span></h3>
 
+<p>This chapter describes functions to compute orientations of a given matroid or geometric lattice. For this, an SAT-problem is formulated and solved.</p>
+
 <p><a id="X84E5EBA6832C666D" name="X84E5EBA6832C666D"></a></p>
 
 <h4>13.1 <span class="Heading">Orientations of a given geometric lattice</span></h4>
@@ -73,9 +75,9 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LFindOrientations</code>( <var class="Arg">L</var>, <var class="Arg">findall</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: A list of oriented matroids</p>
 
-<p>Computes oriented matroids (up to OM-isomorphisms) which have <var class="Arg">L</var> as underlying matroid structe or geometric lattice. If <var class="Arg">findall</var> is <code class="code">true</code> then all orientations are computed, else at most one orientation is computed.</p>
+<p>Computes oriented matroids (up to OM-isomorphisms) which have <var class="Arg">L</var> as underlying matroid structure or geometric lattice. If <var class="Arg">findall</var> is <code class="code">true</code> then all orientations are computed, else at most one orientation is computed.</p>
 
-<p>Depending on this size of <var class="Arg">L</var> this might take a considerable amount of time and there may be many orientations depending on the sparsity of relations in <var class="Arg">L</var>.</p>
+<p>Depending on the size of <var class="Arg">L</var> this might take a considerable amount of time and there may be many orientations depending on the sparsity of relations in <var class="Arg">L</var>.</p>
 
 <p>The algorithm converts the problem of determining orientations to an SAT-instance and then uses an SAT-solver (currently PicoSAT) to solve.</p>
 

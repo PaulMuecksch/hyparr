@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  1 JUL 2026 22:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.4.19)  2 JUL 2026 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,23 +749,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 3497--3500
 Chapter 13.
 [52
 
-]
+] [53]
 Chapter 14.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3610--3615
+Underfull \hbox (badness 10000) in paragraph at lines 3612--3617
 []$\OML/ztmcm/m/it/10.95 .$\T1/cmtt/m/n/10.95 HArrGreedySearch(\T1/cmtt/m/sl/10
 .95 NumberOfHs, dim, GField, PropTargetFct, MaxNoIterations,
  []
 
-[53
+[54
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 3714--3717
+Underfull \hbox (badness 10000) in paragraph at lines 3716--3719
 
  []
 
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 3726--3729
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 3728--3731
 
  []
 
@@ -774,41 +774,41 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3738 \hyperdef{L}{X7C701DBF7BAE649A}{}
+l.3740 \hyperdef{L}{X7C701DBF7BAE649A}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3799--3802
-
- []
-
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 3816--3819
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3833--3836
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3850--3853
+Underfull \hbox (badness 10000) in paragraph at lines 3801--3804
 
  []
 
 [56]
+Underfull \hbox (badness 10000) in paragraph at lines 3818--3821
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3835--3838
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3852--3855
+
+ []
+
+[57]
 Chapter 15.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\char' on input line 3867.
+(hyperref)                removing `\char' on input line 3869.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7F6278CD87
 400D49}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3874 \hyperdef{L}{X7F6278CD87400D49}{}
+l.3876 \hyperdef{L}{X7F6278CD87400D49}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3881--3884
+Underfull \hbox (badness 10000) in paragraph at lines 3883--3886
 
  []
 
@@ -817,17 +817,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{L.X7C701DBF7B
 AE649A}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3895 \hyperdef{L}{X7C701DBF7BAE649A}{}
-                                         [57
+l.3897 \hyperdef{L}{X7C701DBF7BAE649A}{}
+                                         [58
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{L.X7DE8E16C7C
 2D387B}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3992 \hyperdef{L}{X7DE8E16C7C2D387B}{}
+l.3994 \hyperdef{L}{X7DE8E16C7C2D387B}{}
                                         
-Underfull \hbox (badness 10000) in paragraph at lines 3999--4002
+Underfull \hbox (badness 10000) in paragraph at lines 4001--4004
 
  []
 
@@ -835,15 +835,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 3999--4002
 \tf@brf=\write8
 \openout8 = `HypArr.brf'.
 
- [58]
+ [59]
 Underfull \hbox (badness 10000) in paragraph at lines 44--44
 []\T1/ptm/m/n/10.95 G. El-lis.  HAP, Ho-mo-log-i-cal Al-ge-bra Pro-gram-ming, V
 er-sion 1.75.
  []
 
-[59
+[60
 
-]) [60] (./HypArr.ind [61
+]) [61] (./HypArr.ind [62
 
 
 ]
@@ -856,7 +856,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--135
 \T1/ptm/m/n/10.95 ment,IsHyperplaneArrangement,
  []
 
-[62] [63] [64
+[63] [64] [65
 
 ]) (./HypArr.aux)
  ***********
@@ -866,11 +866,11 @@ L3 programming layer <2026-01-19>
 Package rerunfilecheck Info: File `HypArr.out' has not changed.
 (rerunfilecheck)             Checksum: 592A4DF8EEB9729CB9481092BEB6E155;8864.
 Package rerunfilecheck Info: File `HypArr.brf' has not changed.
-(rerunfilecheck)             Checksum: D12DECA00C80B6A81B4EA599908619F3;1129.
+(rerunfilecheck)             Checksum: D194A42532F383BDEE57102442C40398;1129.
  ) 
 Here is how much of TeX's memory you used:
- 12520 strings out of 467533
- 197427 string characters out of 5422138
+ 12521 strings out of 467533
+ 197434 string characters out of 5422138
  620150 words of memory out of 5000000
  40758 multiletter control sequences out of 15000+600000
  694358 words of font info for 120 fonts, out of 8000000 for 9000
@@ -894,10 +894,10 @@ type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HypArr.pdf (64 pages, 497118 bytes).
+Output written on HypArr.pdf (65 pages, 497579 bytes).
 PDF statistics:
- 1361 PDF objects out of 1440 (max. 8388607)
- 1224 compressed objects within 13 object streams
- 463 named destinations out of 1000 (max. 500000)
+ 1365 PDF objects out of 1440 (max. 8388607)
+ 1227 compressed objects within 13 object streams
+ 464 named destinations out of 1000 (max. 500000)
  453 words of extra memory for PDF output out of 10000 (max. 10000000)
 

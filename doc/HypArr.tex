@@ -3512,7 +3512,9 @@ of atoms in \texttt{RSLattice(RS)} over \texttt{RSDefField(RS)}.
 \logpage{[ 13, 0, 0 ]}
 \hyperdef{L}{X78A5D36F82F13592}{}
 {
-  
+  This chapter describes functions to compute orientations of a given matroid or
+geometric lattice. For this, an SAT\texttt{\symbol{45}}problem is formulated
+and solved. 
 \section{\textcolor{Chapter }{Orientations of a given geometric lattice}}\label{Chapter_Orientations_of_matroids_Section_Orientations_of_a_given_geometric_lattice}
 \logpage{[ 13, 1, 0 ]}
 \hyperdef{L}{X84E5EBA6832C666D}{}
@@ -3567,9 +3569,9 @@ A list of oriented matroids
 
 
  Computes oriented matroids (up to OM\texttt{\symbol{45}}isomorphisms) which
-have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structe or geometric lattice. If \mbox{\texttt{\mdseries\slshape findall}} is \texttt{true} then all orientations are computed, else at most one orientation is computed. 
+have \mbox{\texttt{\mdseries\slshape L}} as underlying matroid structure or geometric lattice. If \mbox{\texttt{\mdseries\slshape findall}} is \texttt{true} then all orientations are computed, else at most one orientation is computed. 
 
- Depending on this size of \mbox{\texttt{\mdseries\slshape L}} this might take a considerable amount of time and there may be many
+ Depending on the size of \mbox{\texttt{\mdseries\slshape L}} this might take a considerable amount of time and there may be many
 orientations depending on the sparsity of relations in \mbox{\texttt{\mdseries\slshape L}}. 
 
  The algorithm converts the problem of determining orientations to an

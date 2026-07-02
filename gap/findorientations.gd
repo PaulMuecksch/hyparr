@@ -3,6 +3,9 @@
 #
 #! @Chapter Orientations of matroids
 
+#! This chapter describes functions to compute orientations of a given matroid or geometric lattice.
+#! For this, an SAT-problem is formulated and solved.
+
 DeclareGlobalFunction("BasesToCNF");
 DeclareGlobalFunction("BsSIDsToChi");
 
@@ -32,11 +35,11 @@ DeclareAttribute("LOrientations",IsGeomLattice,"mutable");
 #! @Returns A list of oriented matroids
 #! @Description
 #! Computes oriented matroids (up to OM-isomorphisms) which have <A>L</A>
-#! as underlying matroid structe or geometric lattice.
+#! as underlying matroid structure or geometric lattice.
 #! If <A>findall</A> is <C>true</C> then all orientations are computed,
 #! else at most one orientation is computed.
 #!
-#! Depending on this size of <A>L</A> this might take a considerable amount of time
+#! Depending on the size of <A>L</A> this might take a considerable amount of time
 #! and there may be many orientations depending on the sparsity of relations in <A>L</A>.
 #! 
 #! The algorithm converts the problem of determining orientations to
