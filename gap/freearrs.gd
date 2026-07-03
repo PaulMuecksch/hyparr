@@ -246,7 +246,7 @@ DeclareProperty("IsMATFree", IsHyperplaneArrangement);
 #! @Arguments A
 #! @Returns list, or fail
 #! @Description
-#! Returns a chain of subsets of <C>Roots(A)</C> witnessing that <A>A</A> is
+#! Returns an ordered partition of <C>Roots(A)</C> witnessing that <A>A</A> is
 #! <E>MAT-free</E> (see <Ref Prop="IsMATFree" Label="for IsHyperplaneArrangement" Style="Text"/>), i.e. a list
 #! $[B_1,\ldots,B_k]$ of pairwise disjoint independent sets of hyperplanes
 #! partitioning <C>Roots(A)</C>, such that at each step the arrangement defined by
