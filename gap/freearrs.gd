@@ -228,6 +228,39 @@ DeclareProperty("IsLocallyDivisionallyFree", IsHyperplaneArrangement);
 DeclareSynonym("IsLocDF",IsLocallyDivisionallyFree);
 
 
+#! @Arguments A
+#! @Returns true or false.
+#! @Description
+#! Determines whether the arrangement <A>A</A> is <E>MAT-free</E>, i.e. whether it can be
+#! built up from the empty arrangement by successively adding, at each step, an independent
+#! set of hyperplanes as permitted by the <E>Multiple Addition Theorem</E> due to
+#! T. Abe, M. Barakat, M. Cuntz, T. Hoge and H. Terao <Cite Key="ABCHT16_FreeIdealWeyl"/>.
+#! @BeginExampleSession
+#! gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+#! <HyperplaneArrangement: 5 hyperplanes in 3-space>
+#! gap> IsMATFree(A);
+#! true
+#! @EndExampleSession
+DeclareProperty("IsMATFree", IsHyperplaneArrangement);
+
+#! @Arguments A
+#! @Returns list, or fail
+#! @Description
+#! Returns a chain of subsets of <C>Roots(A)</C> witnessing that <A>A</A> is
+#! <E>MAT-free</E> (see <Ref Prop="IsMATFree" Label="for IsHyperplaneArrangement" Style="Text"/>), i.e. a list
+#! $[B_1,\ldots,B_k]$ of pairwise disjoint independent sets of hyperplanes
+#! partitioning <C>Roots(A)</C>, such that at each step the arrangement defined by
+#! $B_1\cup\cdots\cup B_i$ arises from the one defined by $B_1\cup\cdots\cup B_{i-1}$
+#! by the Multiple Addition Theorem.
+#! Returns <K>fail</K> if <A>A</A> is not MAT-free.
+#! @BeginExampleSession
+#! gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+#! <HyperplaneArrangement: 5 hyperplanes in 3-space>
+#! gap> MATFreePart(A);
+#! [ [ [ 0, 1, 0 ], [ 1, 1, 0 ], [ 1, 1, 1 ] ], [ [ 1, 0, 0 ], [ 0, 0, 1 ] ] ]
+#! @EndExampleSession
+DeclareAttribute("MATFreePart", IsHyperplaneArrangement);
+
 
 #################################
 # some auxillary functions

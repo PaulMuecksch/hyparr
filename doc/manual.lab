@@ -129,6 +129,8 @@
 \makelabel{hyparr:IsLocallyInductivelyFree for IsHyperplaneArrangement}{5.2.5}{X841E21C3818B1703}
 \makelabel{hyparr:IsDivisionallyFree for IsHyperplaneArrangement}{5.2.6}{X85DAC6FC78DDED6D}
 \makelabel{hyparr:IsLocallyDivisionallyFree for IsHyperplaneArrangement}{5.2.7}{X79A356807BB94334}
+\makelabel{hyparr:IsMATFree for IsHyperplaneArrangement}{5.2.8}{X7887420678D0B8B4}
+\makelabel{hyparr:MATFreePart for IsHyperplaneArrangement}{5.2.9}{X7B7DB39B7DD8EFD1}
 \makelabel{hyparr:LIsModularPair for IsGeomLattice, IsList, IsList}{6.1.1}{X78E6E11179F7ECB5}
 \makelabel{hyparr:LIsModularFlat for IsGeomLattice, IsList}{6.1.2}{X7FECD913876C637C}
 \makelabel{hyparr:LModularFlatsRk for IsGeomLattice, IsInt}{6.1.3}{X8271B52F816053DB}

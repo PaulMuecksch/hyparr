@@ -60,6 +60,7 @@
       for IsOrientedMatroid,IsOrientedMatroid 4.4-1 
   [2XIsLocallyDivisionallyFree[102X, for IsHyperplaneArrangement 5.2-7 
   [2XIsLocallyInductivelyFree[102X, for IsHyperplaneArrangement 5.2-5 
+  [2XIsMATFree[102X, for IsHyperplaneArrangement 5.2-8 
   [2XIsOMEquiv[102X 4.5-3 
   [2XIsReal[102X, for IsHyperplaneArrangement 2.3-1 
   [2XLaTeXDrawProjPicture[102X 11.1-1 
@@ -93,6 +94,7 @@
   [2XLRankFunction[102X, for IsGeomLattice 2.4-6 
   [2XLRealizationSpace[102X, for IsGeomLattice, IsInt 12.1-1 
   [2XLSubsetGeneratedByS[102X, for IsGeomLattice,IsList 12.4-1 
+  [2XMATFreePart[102X, for IsHyperplaneArrangement 5.2-9 
   [2XMFModPCohomRing[102X, for IsHyperplaneArrangement, IsInt 8.2-4 
       for IsOrientedMatroid, IsInt 8.2-3 
   [2XMilnorFiberComplex[102X, for IsHyperplaneArrangement 8.1-2 

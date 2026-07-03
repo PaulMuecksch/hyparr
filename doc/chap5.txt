@@ -214,3 +214,39 @@
   [4X[32X  Example  [32X[104X
   [4X[32X[104X
   
+  [1X5.2-8 IsMATFree[101X
+  
+  [33X[1;0Y[29X[2XIsMATFree[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines  whether  the  arrangement  [3XA[103X is [13XMAT-free[113X, i.e. whether it can be
+  built up from the empty arrangement by successively adding, at each step, an
+  independent set of hyperplanes as permitted by the [13XMultiple Addition Theorem[113X
+  due to T. Abe, M. Barakat, M. Cuntz, T. Hoge and H. Terao [ttt+16].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XIsMATFree(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X5.2-9 MATFreePart[101X
+  
+  [33X[1;0Y[29X[2XMATFreePart[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ylist, or fail[133X
+  
+  [33X[0;0YReturns  a  chain  of subsets of [10XRoots(A)[110X witnessing that [3XA[103X is [13XMAT-free[113X (see
+  [2XIsMATFree[102X  ([14X5.2-8[114X)),  i.e.  a  list  [23X[B_1,\ldots,B_k][123X  of  pairwise disjoint
+  independent  sets  of  hyperplanes  partitioning [10XRoots(A)[110X, such that at each
+  step  the  arrangement  defined by [23XB_1\cup\cdots\cup B_i[123X arises from the one
+  defined  by  [23XB_1\cup\cdots\cup  B_{i-1}[123X  by  the  Multiple Addition Theorem.
+  Returns [9Xfail[109X if [3XA[103X is not MAT-free.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XMATFreePart(A);[127X[104X
+    [4X[28X[ [ [ 0, 1, 0 ], [ 1, 1, 0 ], [ 1, 1, 1 ] ], [ [ 1, 0, 0 ], [ 0, 0, 1 ] ] ][128X[104X
+  [4X[32X[104X
+  

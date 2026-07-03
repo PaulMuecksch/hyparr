@@ -452,6 +452,7 @@ local p,dim,i,j,r,AoH,AResH,tAoH,tAResH,c,expAoH,expAResH,expA,x,t;
 					if tAResH then
 						SetIsInductivelyFree(A,true);
                         SetIsDivisionallyFree(A,true);
+                        SetHArrIsFree(A,true);
 						return true;
 					fi;
                 fi;
@@ -504,6 +505,7 @@ local AA,expAA,expA,h,n;
         if expAA<>fail then
             if IsSubMultiSet(expA,expAA) and IsDivisionallyFree(AA) then
                 SetIsDivisionallyFree(A,true);
+                SetHArrIsFree(A,true);
                 return true;
             fi;
         fi;
@@ -521,6 +523,104 @@ local L,Lk;
 	Lk := LkFlats(L)(LRank(L)-1);
 	return not( ForAny(Lk,m-> IsDivisionallyFree(Arr(Roots(A){m}))=false));
 end);
+
+####################################################################################################
+## Test if the arrangement A is MAT-free
+####################################################################################################
+
+InstallMethod(IsMATFree,
+    [ IsHyperplaneArrangement ],
+function(A)
+local MATChainRec, chain;
+
+	# Recursively searches for a step of the Multiple Addition Theorem
+	# reducing An to a smaller arrangement, and returns the resulting
+	# chain of added hyperplane-sets, or fail if no such step exists.
+	MATChainRec := function(An)
+	local ell,n,expAn,q,d,expAA,B,S,AA,i,t1,t2,t3,part,nn;
+
+		ell := Dimension(An);
+		n := Length(Roots(An));
+
+		expAn := ExpArr(An);
+		if expAn = fail then
+			return fail;
+		fi;
+		expAn := ShallowCopy(expAn);
+		Sort(expAn);
+		expAn := Reversed(expAn);
+
+		q := 1;
+		while q<ell and expAn[q]=expAn[q+1] do
+			q := q+1;
+		od;
+		d := expAn[q]-1;
+
+		expAA := ShallowCopy(expAn);
+		expAA{[1..q]} := List([1..q],x->d);
+
+		for B in Combinations([1..n],q) do
+			S := Difference([1..n],B);
+			t1 := Rank(Roots(An){B})=q;
+			t2 := true;
+			t3 := true;
+
+			if t1 and q>1 then
+				for i in S do # B has to span a flat that is not met by any other hyperplane
+					if Rank(Concatenation(Roots(An){[i]},Roots(An){B}))=q then
+						t2 := false;
+					fi;
+				od;
+			fi;
+
+			if t1 and t2 then
+				for i in B do # the multirestriction to each hyperplane in B has to have the same size
+					nn := Length(Roots(HArrRestriction(
+						Arr(Concatenation(Roots(An){S},Roots(An){[i]})),
+						Length(S)+1)));
+					if d<>n-q-nn then
+						t3 := false;
+					fi;
+				od;
+			fi;
+
+			if t1 and t2 and t3 then
+				if d=0 then
+					return [ Roots(An){B} ];
+				fi;
+
+				AA := Arr(Roots(An){S});
+				AA!.exp := expAA;
+				part := MATChainRec(AA);
+				if part<>fail then
+					Add(part,Roots(An){B});
+					return part;
+				fi;
+			fi;
+		od;
+
+		return fail;
+	end;
+
+	chain := MATChainRec(A);
+
+	if chain=fail then
+		SetMATFreePart(A,fail);
+		return false;
+	fi;
+
+	SetMATFreePart(A,chain);
+    SetHArrIsFree(A,true);
+	return true;
+end);
+
+InstallMethod(MATFreePart,
+    [ IsHyperplaneArrangement ],
+function(A)
+	IsMATFree(A);
+	return MATFreePart(A);
+end);
+
 
 ####################################################################################################
 # Global auxillary functions

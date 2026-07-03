@@ -124,6 +124,8 @@
       5.2-5 IsLocallyInductivelyFree
       5.2-6 IsDivisionallyFree
       5.2-7 IsLocallyDivisionallyFree
+      5.2-8 IsMATFree
+      5.2-9 MATFreePart
   6 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
   matroids[133X
     6.1 [33X[0;0YSupersolvable arrangements[133X

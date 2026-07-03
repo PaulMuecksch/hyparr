@@ -67,10 +67,11 @@ SATSolsCUTOFF := 100;
 # extract the solutions from the text output of an SAT-solver
 InstallGlobalFunction(ParseSATSolutions,
 function(text)
-local pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
+local text_cutoff, pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
+    text_cutoff := text{[1..10000*SATSolsCUTOFF]};;
 
-    pss:= Positions(text,'s');
-    pss := Filtered(pss,x->text{[x..x+12]} = "s SATISFIABLE");
+    pss:= Positions(text_cutoff,'s');
+    pss := Filtered(pss,x->text_cutoff{[x..x+12]} = "s SATISFIABLE");
     if Length(pss)>SATSolsCUTOFF then
         pss:=pss{[1..SATSolsCUTOFF]};;
     fi;;
@@ -78,7 +79,7 @@ local pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
     pse:=[];;
     for ps in pss do
         i:=ps;
-        while text{[i-1,i]}<>" 0" do
+        while text_cutoff{[i-1,i]}<>" 0" do
             i:=i+1;
         od;
         Add(pse,i);
@@ -93,7 +94,7 @@ local pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
     for i in [1..Length(pss)] do
         ps:=pss[i]+14;
         pe := pse[i];
-        tn := text{[ps..pe]};
+        tn := text_cutoff{[ps..pe]};
         # Print(tn,"\n\n");;
         pslb := Union([1],Positions(tn,'\n'),[Length(tn)+1]);;
         sls := [];;
