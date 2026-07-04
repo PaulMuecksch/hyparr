@@ -8,8 +8,6 @@
 BindGlobal("OrientedMatroidFamily",
     NewFamily("OrientedMatroidFamily"));
 
-
-
 # Implement the oriented matroid constructor
 
 InstallMethod(OrientedMatroid,
@@ -92,8 +90,11 @@ function(Cs,c)
                 rank := r
             )
         );
+    elif c="wd" then
+        n := Maximum(Concatenation(Cs));
+        return OrientedMatroid(3, n, ChiroCoreFromWD(Cs));
     fi;
-    Print("Argument c not cv'!\n");
+    Print("Argument c not 'cv' or 'wd'!\n");
     return fail;
     # elif c="cc" then
 end);
@@ -669,6 +670,230 @@ end);
 
 
 ####################################################################################################
+## Wiring diagrams
+####################################################################################################
+
+BindGlobal("WDReverseI",
+function(np,I)
+local npn;
+    npn := ShallowCopy(np);
+    npn{I} := Reversed(np{I});
+    return npn;
+end);
+
+BindGlobal("WDChangeSignsTope",
+function(T,I)
+local i, Tn;
+    Tn := ShallowCopy(T);
+    for i in I do
+        Tn[i] := Tn[i]*(-1);
+    od;
+    return Tn;
+end);
+
+BindGlobal("WDChangeTsCrossing",
+function(Ts,nperm,ab)
+local Tsn, a, b, k;
+    a := ab[1];
+    b := ab[2];
+    Tsn := List(Ts,T->ShallowCopy(T));
+    for k in [a..b-1] do
+        Tsn[k] := WDChangeSignsTope(Ts[b+a-k-1],nperm{[a..b]});
+    od;
+    return Tsn;
+end);
+
+InstallGlobalFunction(WiringDiagramToTopes,
+function(WD)
+local Ts, Tsn, B, n, ab, T, TsFin, nperm;
+    n := Maximum(Concatenation(WD));
+    B := List([1..n],x->1);
+    Ts := Concatenation([B],List([2..n],x->WDChangeSignsTope(B,[2..x])));
+
+    Tsn := List(Ts,T->ShallowCopy(T));
+
+    nperm := [1..n];
+
+    for ab in WD do
+        nperm := WDReverseI(nperm,[ab[1]..ab[2]]);
+        Tsn := WDChangeTsCrossing(Tsn,nperm,ab);
+        Ts := Concatenation(Ts,Tsn);
+    od;
+    TsFin := ShallowCopy(Ts);
+    for T in Ts do
+        if not(-T in Ts) then
+            Add(TsFin,-T);
+        fi;
+    od;
+
+    return Set(TsFin);
+end);
+
+BindGlobal("IsParallelPair",
+function(e1,e2,Cs)
+local k,c;;
+    k:=[0,0];;
+    for c in Cs do
+        if c[e1]=0 or c[e2]=0 then
+            return false;;
+        fi;;
+        if c[e1]=c[e2] then
+            k[1]:=1;
+        elif c[e1]=-c[e2] then
+            k[2]:=1;;
+        fi;;
+        if k=[1,1] then
+            return false;;
+        fi;;
+    od;;
+    return true;;
+end);
+
+BindGlobal("ParallelClasses",
+function(Cs,SameSupport)
+local rPrl,SuppCs,ep,Ps;
+    
+    if SameSupport=false then
+        SuppCs:=Intersection(List(Cs,c->SVSupport(c)));;
+    else
+        SuppCs:=SVSupport([1..Length(Cs[1])]);;
+    fi;
+    rPrl := List(SuppCs,x->Tuple([x,x]));
+    Ps := Combinations(SuppCs,2);
+    Ps := Ps{Positions(List(Ps,ep->IsParallelPair(ep[1],ep[2],Cs)),true)};
+    rPrl := Concatenation(rPrl,Concatenation(List(Ps,x->[Tuple(x),Tuple(Reversed(x))])) );
+    return List(EquivalenceClasses(BinaryRelationByElements(Domain(SuppCs),rPrl)),x->List(x));
+#     
+end);
+
+BindGlobal("LowerCells",
+function(UCells)
+local LCells,relSupp,Ps,PartUCells,Block,ParallelClassesBlock,
+    xy,Sxy,c1,c2,c,
+    lUCs,PsSupp,k,cSupp;
+    
+    LCells := [];;
+    
+    c:=UCells[1];;
+    if Length(c)=Length(SVSupport(c)) then
+        PartUCells := [UCells];;
+    else
+        PartUCells := [[c]];;
+        PsSupp := List(PartUCells,x->SVSupport(x[1]));;
+        lUCs := Length(UCells);;
+        for c in UCells{[2..lUCs]} do
+            cSupp := SVSupport(c);;
+            if not(cSupp in PsSupp) then
+                Add(PartUCells,[]);;
+                Add(PartUCells[Length(PartUCells)],c);
+                Add(PsSupp,SVSupport(c));;
+            else
+                k:=Position(PsSupp,cSupp);;
+                Add(PartUCells[k],c);;
+            fi;;
+        od;;            
+        
+    fi;;
+    
+    for Block in PartUCells do
+        ParallelClassesBlock := ParallelClasses(Block,true);;
+        for xy in Combinations(Block,2) do
+            Sxy := SeparatingSet(xy[1],xy[2]);;
+            if Sxy in ParallelClassesBlock then
+                c1 := ShallowCopy(xy[1]);
+                c2 := ShallowCopy(xy[2]);
+                c1{Sxy} := 0*[1..Length(Sxy)];
+                c2{Sxy} := 0*[1..Length(Sxy)];
+                if not(c1 in LCells) then
+                    Add(LCells,c1);
+                    Add(LCells,-c1);
+                fi;;
+                if not(c2 in LCells) then
+                    Add(LCells,c2);
+                    Add(LCells,-c2);
+                fi;;
+            fi;
+        od;
+    od;;
+    
+    return LCells; 
+end);
+
+
+InstallGlobalFunction(WiringDiagramToCovectors,
+function(WD)
+local Ts, CovecsFromTopes;
+
+    CovecsFromTopes := function(Topes)
+    local CVs, n,k,TCs;;
+        n:=Length(Topes[1]);;
+        CVs:= [Topes];;
+        for k in [1..n] do
+            TCs:=LowerCells(CVs[k]);;
+            if 0*[1..n] in TCs then
+                Add(CVs,[0*[1..n]]);;
+                return CVs;;
+            else
+                Add(CVs,TCs);;
+            fi;;
+        od;
+        return CVs;;
+    end;;
+
+    Ts := WiringDiagramToTopes(WD);
+    return CovecsFromTopes(Ts);
+end);
+
+# Derives the rank 3 chirotope (as a ChiroCoreList, indexed by
+# Combinations([1..n],3)) from a wiring diagram WD. For a triple {i,j,k}
+# (i<j<k), the sign is determined by which of the pairs (i,j) or (j,k)
+# (the two pairs adjacent in the initial order i,j,k) crosses first;
+# the triple is dependent (chirotope value 0) if all three ever cross
+# simultaneously in a single event.
+InstallGlobalFunction(ChiroCoreFromWD,
+function(WD)
+local n, Bs, ChiroCore, B, i, j, k, ord, nperm, ab, blk, common,
+    x, y, posx, posy, collinear, firstpair, tmp;
+    n := Maximum(Concatenation(WD));
+    Bs := Combinations([1..n],3);
+    ChiroCore := [];
+    for B in Bs do
+        i := B[1]; j := B[2]; k := B[3];
+        ord := [i,j,k];
+        nperm := [1..n];
+        collinear := false;
+        firstpair := fail;
+        for ab in WD do
+            blk := nperm{[ab[1]..ab[2]]};
+            common := Intersection(blk,B);
+            if Length(common)=3 then
+                collinear := true;
+            elif Length(common)=2 then
+                x := common[1]; y := common[2];
+                if firstpair = fail then
+                    firstpair := Set([x,y]);
+                fi;
+                posx := Position(ord,x); posy := Position(ord,y);
+                tmp := ord[posx]; ord[posx] := ord[posy]; ord[posy] := tmp;
+            fi;
+            nperm := WDReverseI(nperm,[ab[1]..ab[2]]);
+            if collinear then
+                break;
+            fi;
+        od;
+        if collinear then
+            Add(ChiroCore,0);
+        elif firstpair = Set([j,k]) then
+            Add(ChiroCore,1);
+        else
+            Add(ChiroCore,-1);
+        fi;
+    od;
+    return ChiroCore;
+end);
+
+
+####################################################################################################
 # Global auxillary functions
 ####################################################################################################
 
@@ -807,6 +1032,10 @@ function(sv)
     return Positions(sv,0);
 end);  
 
+InstallGlobalFunction(SVSupport,
+function(sv)
+    return Positions(List(sv,x->x<>0),true);
+end);  
 
 InstallGlobalFunction(SVPlusSet,
 function(sv)

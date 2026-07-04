@@ -108,6 +108,8 @@
       4.5-2 OrderCovec
       4.5-3 IsOMEquiv
       4.5-4 SeparatingSet
+      4.5-5 WiringDiagramToTopes
+      4.5-6 WiringDiagramToCovectors
   5 [33X[0;0YFree arrangements[133X
     5.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules[133X
       5.1-1 DerModule

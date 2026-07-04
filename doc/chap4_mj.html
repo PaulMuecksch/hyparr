@@ -67,6 +67,8 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X801F6A9B7A0A53F5">4.5-2 OrderCovec</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X80CB9A9C8135A314">4.5-3 IsOMEquiv</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X793FF1428136B222">4.5-4 SeparatingSet</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X78055B5084101318">4.5-5 WiringDiagramToTopes</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4_mj.html#X7E91F7C8860F63C5">4.5-6 WiringDiagramToCovectors</a></span>
 </div></div>
 </div>
 
@@ -85,7 +87,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OrientedMatroid</code>( <var class="Arg">R</var>, <var class="Arg">or</var>, <var class="Arg">A</var>, <var class="Arg">or</var>[, <var class="Arg">CCs</var>, <var class="Arg">c</var>], <var class="Arg">or</var>[, <var class="Arg">r</var>, <var class="Arg">n</var>, <var class="Arg">ChiroCoreList</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: An oriented matroid OM.</p>
 
-<p>Constructs am oriented matroid from</p>
+<p>Constructs an oriented matroid from</p>
 
 
 <ul>
@@ -98,7 +100,10 @@
 <li><p>a list of lists <var class="Arg">CVs</var> of signed covectors and a string <code class="code">c="cv"</code>,</p>
 
 </li>
-<li><p>intergers <var class="Arg">n,r</var> giving the size of the groundset and the rank and a list <var class="Arg">ChiroCoreList</var> <span class="SimpleMath">\(\subseteq \{0,1,-1\}^m (m = \binom{n}{r})\)</span> presenting the chirotope</p>
+<li><p>a wiring diagram <var class="Arg">WD</var> and a string <code class="code">c="wd"</code>, see <code class="func">WiringDiagramToTopes</code> (<a href="chap4_mj.html#X78055B5084101318"><span class="RefLink">4.5-5</span></a>) for the format of <var class="Arg">WD</var>,</p>
+
+</li>
+<li><p>integers <var class="Arg">n,r</var> giving the size of the groundset and the rank and a list <var class="Arg">ChiroCoreList</var> <span class="SimpleMath">\(\subseteq \{0,1,-1\}^m (m = \binom{n}{r})\)</span> presenting the chirotope</p>
 
 </li>
 </ul>
@@ -114,6 +119,8 @@
 &lt;OrientedMatroid: 2 elements, rank 2&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrientedMatroid(2,3,[1,1,1]);</span>
 &lt;OrientedMatroid: 3 elements, rank 2&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OrientedMatroid([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]],"wd");</span>
+&lt;OrientedMatroid: 4 elements, rank 3&gt;
 </pre></div>
 
 <p><a id="X7C701DBF7BAE649A" name="X7C701DBF7BAE649A"></a></p>
@@ -167,7 +174,7 @@
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A := AGpql(2,2,3); OM := OrientedMatroid(A);</span>
 &lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMLForms(O);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMLForms(OM);</span>
 [ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
 </pre></div>
@@ -417,7 +424,7 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HasSimpleSimplexRk</code>( <var class="Arg">OM</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
 
-<p>Returns whether the oriented matroid <var class="Arg">OM</var> has a localiazion of rank <var class="Arg">k</var> with a simple Simplex. If this is true for <span class="SimpleMath">\(k \geq 3\)</span> then its Salvetti complex can not be <span class="SimpleMath">\(K(\pi,1)\)</span>.</p>
+<p>Returns whether the oriented matroid <var class="Arg">OM</var> has a localization of rank <var class="Arg">k</var> with a simple Simplex. If this is true for <span class="SimpleMath">\(k \geq 3\)</span> then its Salvetti complex can not be <span class="SimpleMath">\(K(\pi,1)\)</span>.</p>
 
 
 <div class="example"><pre>
@@ -512,6 +519,36 @@ true
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SeparatingSet</code>( <var class="Arg">arg</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>The separating set of two sign vectors.</p>
+
+<p><a id="X78055B5084101318" name="X78055B5084101318"></a></p>
+
+<h5>4.5-5 WiringDiagramToTopes</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WiringDiagramToTopes</code>( <var class="Arg">WD</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A list of sign vectors</p>
+
+<p>Computes the topes of the rank <span class="SimpleMath">\(3\)</span> oriented matroid represented by the wiring diagram <var class="Arg">WD</var>.</p>
+
+<p>A wiring diagram <var class="Arg">WD</var> is a list of crossing events <code class="code">[a,b]</code>. Reading the events in order, and starting from the identity permutation <code class="code">nperm=[1..n]</code> of the groundset (<code class="code">n</code> being the largest label occurring in <var class="Arg">WD</var>), each event <code class="code">[a,b]</code> means that the wires currently occupying positions <code class="code">a..b</code> of <code class="code">nperm</code> cross at a common point, i.e. <code class="code">nperm{[a..b]}</code> forms a rank <span class="SimpleMath">\(2\)</span> flat (a line), after which <code class="code">nperm{[a..b]}</code> is reversed.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length(WiringDiagramToTopes([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]]));</span>
+14
+</pre></div>
+
+<p><a id="X7E91F7C8860F63C5" name="X7E91F7C8860F63C5"></a></p>
+
+<h5>4.5-6 WiringDiagramToCovectors</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; WiringDiagramToCovectors</code>( <var class="Arg">WD</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<p>Returns: A list of sign vectors</p>
+
+<p>Computes the covectors of the rank <span class="SimpleMath">\(3\)</span> oriented matroid represented by the wiring diagram <var class="Arg">WD</var>.</p>
+
+
+<div class="example"><pre>
+</pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap5_mj.html">[Next Chapter]</a>&nbsp;  </div>

@@ -13,7 +13,7 @@
   [33X[1;0Y[29X[2XOrientedMatroid[102X( [3XR[103X, [3Xor[103X, [3XA[103X, [3Xor[103X[, [3XCCs[103X, [3Xc[103X], [3Xor[103X[, [3Xr[103X, [3Xn[103X, [3XChiroCoreList[103X] ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10YAn oriented matroid OM.[133X
   
-  [33X[0;0YConstructs am oriented matroid from[133X
+  [33X[0;0YConstructs an oriented matroid from[133X
   
   [30X    [33X[0;6Ya  list  [3XR[103X  of  vectors  representing  defining  linear  forms of real
         hyperplanes,[133X
@@ -22,7 +22,10 @@
   
   [30X    [33X[0;6Ya list of lists [3XCVs[103X of signed covectors and a string [10Xc="cv"[110X,[133X
   
-  [30X    [33X[0;6Yintergers [3Xn,r[103X giving the size of the groundset and the rank and a list
+  [30X    [33X[0;6Ya  wiring  diagram  [3XWD[103X  and  a string [10Xc="wd"[110X, see [2XWiringDiagramToTopes[102X
+        ([14X4.5-5[114X) for the format of [3XWD[103X,[133X
+  
+  [30X    [33X[0;6Yintegers  [3Xn,r[103X giving the size of the groundset and the rank and a list
         [3XChiroCoreList[103X [23X\subseteq \{0,1,-1\}^m (m = \binom{n}{r})[123X presenting the
         chirotope[133X
   
@@ -37,6 +40,8 @@
     [4X[28X<OrientedMatroid: 2 elements, rank 2>[128X[104X
     [4X[25Xgap>[125X [27XOrientedMatroid(2,3,[1,1,1]);[127X[104X
     [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
+    [4X[25Xgap>[125X [27XOrientedMatroid([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]],"wd");[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
   [4X[32X[104X
   
   
@@ -81,7 +86,7 @@
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XA := AGpql(2,2,3); OM := OrientedMatroid(A);[127X[104X
     [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
-    [4X[25Xgap>[125X [27XOMLForms(O);[127X[104X
+    [4X[25Xgap>[125X [27XOMLForms(OM);[127X[104X
     [4X[28X[ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], [128X[104X
     [4X[28X  [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ][128X[104X
   [4X[32X[104X
@@ -306,7 +311,7 @@
   [33X[1;0Y[29X[2XHasSimpleSimplexRk[102X( [3XOM[103X, [3Xk[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
-  [33X[0;0YReturns  whether  the oriented matroid [3XOM[103X has a localiazion of rank [3Xk[103X with a
+  [33X[0;0YReturns  whether the oriented matroid [3XOM[103X has a localization of rank [3Xk[103X with a
   simple  Simplex.  If this is true for [23Xk \geq 3[123X then its Salvetti complex can
   not be [23XK(\pi,1)[123X.[133X
   
@@ -390,4 +395,35 @@
   [33X[1;0Y[29X[2XSeparatingSet[102X( [3Xarg[103X ) [32X function[133X
   
   [33X[0;0YThe separating set of two sign vectors.[133X
+  
+  [1X4.5-5 WiringDiagramToTopes[101X
+  
+  [33X[1;0Y[29X[2XWiringDiagramToTopes[102X( [3XWD[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list of sign vectors[133X
+  
+  [33X[0;0YComputes  the topes of the rank [22X3[122X oriented matroid represented by the wiring
+  diagram [3XWD[103X.[133X
+  
+  [33X[0;0YA  wiring  diagram [3XWD[103X is a list of crossing events [10X[a,b][110X. Reading the events
+  in  order,  and  starting  from the identity permutation [10Xnperm=[1..n][110X of the
+  groundset  ([10Xn[110X  being  the  largest  label occurring in [3XWD[103X), each event [10X[a,b][110X
+  means  that the wires currently occupying positions [10Xa..b[110X of [10Xnperm[110X cross at a
+  common  point,  i.e. [10Xnperm{[a..b]}[110X forms a rank [22X2[122X flat (a line), after which
+  [10Xnperm{[a..b]}[110X is reversed.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLength(WiringDiagramToTopes([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]]));[127X[104X
+    [4X[28X14[128X[104X
+  [4X[32X[104X
+  
+  [1X4.5-6 WiringDiagramToCovectors[101X
+  
+  [33X[1;0Y[29X[2XWiringDiagramToCovectors[102X( [3XWD[103X ) [32X function[133X
+  [6XReturns:[106X  [33X[0;10YA list of sign vectors[133X
+  
+  [33X[0;0YComputes  the  covectors  of  the rank [22X3[122X oriented matroid represented by the
+  wiring diagram [3XWD[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
   

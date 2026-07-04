@@ -116,6 +116,8 @@
 \makelabel{hyparr:OrderCovec}{4.5.2}{X801F6A9B7A0A53F5}
 \makelabel{hyparr:IsOMEquiv}{4.5.3}{X80CB9A9C8135A314}
 \makelabel{hyparr:SeparatingSet}{4.5.4}{X793FF1428136B222}
+\makelabel{hyparr:WiringDiagramToTopes}{4.5.5}{X78055B5084101318}
+\makelabel{hyparr:WiringDiagramToCovectors}{4.5.6}{X7E91F7C8860F63C5}
 \makelabel{hyparr:DerModule for IsHyperplaneArrangement}{5.1.1}{X783314398329E3BE}
 \makelabel{hyparr:DerPModule for IsHyperplaneArrangement, IsInt}{5.1.2}{X7E91FED384460819}
 \makelabel{hyparr:DerModGenerators for IsDerivationModule}{5.1.3}{X7B6780568674988A}

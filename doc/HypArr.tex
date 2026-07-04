@@ -1024,12 +1024,13 @@ An oriented matroid OM.
 
 
 
- Constructs am oriented matroid from 
+ Constructs an oriented matroid from 
 \begin{itemize}
 \item  a list \mbox{\texttt{\mdseries\slshape R}} of vectors representing defining linear forms of real hyperplanes, 
 \item  a real hyperplane arrangement \mbox{\texttt{\mdseries\slshape A}}, 
 \item  a list of lists \mbox{\texttt{\mdseries\slshape CVs}} of signed covectors and a string \texttt{c="cv"}, 
-\item  intergers \mbox{\texttt{\mdseries\slshape n,r}} giving the size of the groundset and the rank and a list \mbox{\texttt{\mdseries\slshape ChiroCoreList}} $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ presenting the chirotope 
+\item  a wiring diagram \mbox{\texttt{\mdseries\slshape WD}} and a string \texttt{c="wd"}, see \texttt{WiringDiagramToTopes} (\ref{WiringDiagramToTopes}) for the format of \mbox{\texttt{\mdseries\slshape WD}}, 
+\item  integers \mbox{\texttt{\mdseries\slshape n,r}} giving the size of the groundset and the rank and a list \mbox{\texttt{\mdseries\slshape ChiroCoreList}} $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ presenting the chirotope 
 \end{itemize}
  
 
@@ -1043,6 +1044,8 @@ An oriented matroid OM.
   <OrientedMatroid: 2 elements, rank 2>
   !gapprompt@gap>| !gapinput@OrientedMatroid(2,3,[1,1,1]);|
   <OrientedMatroid: 3 elements, rank 2>
+  !gapprompt@gap>| !gapinput@OrientedMatroid([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]],"wd");|
+  <OrientedMatroid: 4 elements, rank 3>
 \end{Verbatim}
  }
 
@@ -1115,7 +1118,7 @@ the internal component \texttt{OM!.lforms} is not bound, \texttt{fail} is return
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A := AGpql(2,2,3); OM := OrientedMatroid(A);|
   <OrientedMatroid: 6 elements, rank 3>
-  !gapprompt@gap>| !gapinput@OMLForms(O);|
+  !gapprompt@gap>| !gapinput@OMLForms(OM);|
   [ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
     [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
 \end{Verbatim}
@@ -1449,7 +1452,7 @@ true or false
 
 
 
- Returns whether the oriented matroid \mbox{\texttt{\mdseries\slshape OM}} has a localiazion of rank \mbox{\texttt{\mdseries\slshape k}} with a simple Simplex. If this is true for $k \geq 3$ then its Salvetti complex can not be $K(\pi,1)$. 
+ Returns whether the oriented matroid \mbox{\texttt{\mdseries\slshape OM}} has a localization of rank \mbox{\texttt{\mdseries\slshape k}} with a simple Simplex. If this is true for $k \geq 3$ then its Salvetti complex can not be $K(\pi,1)$. 
 
  
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
@@ -1581,6 +1584,48 @@ true or false
 
 
  The separating set of two sign vectors. }
+
+ 
+
+\subsection{\textcolor{Chapter }{WiringDiagramToTopes}}
+\logpage{[ 4, 5, 5 ]}\nobreak
+\hyperdef{L}{X78055B5084101318}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{WiringDiagramToTopes({\mdseries\slshape WD})\index{WiringDiagramToTopes@\texttt{WiringDiagramToTopes}}
+\label{WiringDiagramToTopes}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A list of sign vectors 
+
+
+
+ Computes the topes of the rank $3$ oriented matroid represented by the wiring diagram \mbox{\texttt{\mdseries\slshape WD}}. 
+
+ A wiring diagram \mbox{\texttt{\mdseries\slshape WD}} is a list of crossing events \texttt{[a,b]}. Reading the events in order, and starting from the identity permutation \texttt{nperm=[1..n]} of the groundset (\texttt{n} being the largest label occurring in \mbox{\texttt{\mdseries\slshape WD}}), each event \texttt{[a,b]} means that the wires currently occupying positions \texttt{a..b} of \texttt{nperm} cross at a common point, i.e. \texttt{nperm\texttt{\symbol{123}}[a..b]\texttt{\symbol{125}}} forms a rank $2$ flat (a line), after which \texttt{nperm\texttt{\symbol{123}}[a..b]\texttt{\symbol{125}}} is reversed. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@Length(WiringDiagramToTopes([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]]));|
+  14
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{WiringDiagramToCovectors}}
+\logpage{[ 4, 5, 6 ]}\nobreak
+\hyperdef{L}{X7E91F7C8860F63C5}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{WiringDiagramToCovectors({\mdseries\slshape WD})\index{WiringDiagramToCovectors@\texttt{WiringDiagramToCovectors}}
+\label{WiringDiagramToCovectors}
+}\hfill{\scriptsize (function)}}\\
+\textbf{\indent Returns:\ }
+A list of sign vectors 
+
+
+
+ Computes the covectors of the rank $3$ oriented matroid represented by the wiring diagram \mbox{\texttt{\mdseries\slshape WD}}. 
+
+ 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+\end{Verbatim}
+ }
 
  }
 

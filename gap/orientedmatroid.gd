@@ -30,16 +30,18 @@ DeclareRepresentation(
 #! @Arguments R or A or [CCs,c] or [r,n,ChiroCoreList]
 #! @Returns An oriented matroid OM.
 #! @Description
-#!  Constructs am oriented matroid from 
+#!  Constructs an oriented matroid from
 #!  * a list <A>R</A> of vectors
 #!      representing defining linear forms of real hyperplanes,
 #!  * a real hyperplane arrangement <A>A</A>,
 #  * a list <A>CCs</A> of signed cocircuits and a string <C>c="cc"</C>,
 #!  * a list of lists <A>CVs</A> of signed covectors and a string <C>c="cv"</C>,
-#!  * intergers <A>n,r</A> giving the size of the groundset and the rank and
-#!      a list <A>ChiroCoreList</A> $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$ 
+#!  * a wiring diagram <A>WD</A> and a string <C>c="wd"</C>,
+#!      see <Ref Func="WiringDiagramToTopes"/> for the format of <A>WD</A>,
+#!  * integers <A>n,r</A> giving the size of the groundset and the rank and
+#!      a list <A>ChiroCoreList</A> $\subseteq \{0,1,-1\}^m (m = \binom{n}{r})$
 #!      presenting the chirotope
-#! 
+#!
 #!  of the oriented matroid.
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,2,3); OM:=OrientedMatroid(Roots(A));
@@ -50,6 +52,8 @@ DeclareRepresentation(
 #! <OrientedMatroid: 2 elements, rank 2>
 #! gap> OrientedMatroid(2,3,[1,1,1]);
 #! <OrientedMatroid: 3 elements, rank 2>
+#! gap> OrientedMatroid([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]],"wd");
+#! <OrientedMatroid: 4 elements, rank 3>
 #! @EndExampleSession
 DeclareOperation("OrientedMatroid", [IsList]);
 
@@ -98,7 +102,7 @@ DeclareAttribute("OMGroundSet", IsOrientedMatroid);
 #! @BeginExampleSession
 #! gap> A := AGpql(2,2,3); OM := OrientedMatroid(A);
 #! <OrientedMatroid: 6 elements, rank 3>
-#! gap> OMLForms(O);
+#! gap> OMLForms(OM);
 #! [ [ 1, 1, 0 ], [ 1, -1, 0 ], [ 1, 0, 1 ], 
 #!   [ 1, 0, -1 ], [ 0, 1, 1 ], [ 0, 1, -1 ] ]
 #! @EndExampleSession
@@ -320,7 +324,7 @@ DeclareOperation("IsLEquiv", [IsOrientedMatroid,IsOrientedMatroid]);
 #! @Returns true or false
 #! @Description
 #! Returns whether the oriented matroid <A>OM</A>
-#! has a localiazion of rank <A>k</A> with a simple Simplex.
+#! has a localization of rank <A>k</A> with a simple Simplex.
 #! If this is true for $k \geq 3$ then its Salvetti complex can not be $K(\pi,1)$.
 #!
 #! @BeginExampleSession
@@ -365,7 +369,7 @@ DeclareOperation("OMTConvexClosureOpenSubcomplex",[IsOrientedMatroid, IsList]);
 
 DeclareOperation("OMAdjacentTs",[IsOrientedMatroid, IsList]);
 
-# DeclareOperation("OMCVsIsTight",[IsOrienteMatroid, IsList]);
+# DeclareOperation("OMCVsIsTight",[IsOrientedMatroid, IsList]);
 
 #################################
 ##
@@ -397,6 +401,12 @@ DeclareGlobalFunction("pos");
 # @Description
 # Computes
 DeclareGlobalFunction("SVZeroSet");
+
+# @Arguments 
+# @Returns 
+# @Description
+# Computes
+DeclareGlobalFunction("SVSupport");
 
 # @Arguments 
 # @Returns 
@@ -466,6 +476,37 @@ DeclareGlobalFunction("IsOMEquiv");
 DeclareGlobalFunction("SeparatingSet");
 
 DeclareGlobalFunction("ChirotopeFromChiroCore");
+
+DeclareGlobalFunction("ChiroCoreFromWD");
+
+#! @Arguments WD
+#! @Returns A list of sign vectors
+#! @Description
+#! Computes the topes of the rank <M>3</M> oriented matroid represented
+#! by the wiring diagram <A>WD</A>.
+#!
+#! A wiring diagram <A>WD</A> is a list of crossing events <C>[a,b]</C>.
+#! Reading the events in order, and starting from the identity permutation
+#! <C>nperm=[1..n]</C> of the groundset (<C>n</C> being the largest label
+#! occurring in <A>WD</A>), each event <C>[a,b]</C> means that the wires
+#! currently occupying positions <C>a..b</C> of <C>nperm</C> cross at a
+#! common point, i.e. <C>nperm{[a..b]}</C> forms a rank <M>2</M> flat
+#! (a line), after which <C>nperm{[a..b]}</C> is reversed.
+#! @BeginExampleSession
+#! gap> Length(WiringDiagramToTopes([[1,2],[2,3],[1,2],[3,4],[2,3],[1,2]]));
+#! 14
+#! @EndExampleSession
+DeclareGlobalFunction("WiringDiagramToTopes");
+
+#! @Arguments WD
+#! @Returns A list of sign vectors
+#! @Description
+#! Computes the covectors of the rank <M>3</M> oriented matroid represented
+#! by the wiring diagram <A>WD</A>.
+#!
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareGlobalFunction("WiringDiagramToCovectors");
 
 
 

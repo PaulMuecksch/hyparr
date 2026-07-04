@@ -147,6 +147,8 @@
   [2XTPGroundSet[102X, for IsTopePoset 9.2-1 
   [2XTPRankPoly[102X, for IsTopePoset 9.2-3 
   [2XVGAlgebra[102X, for IsOrientedMatroid, IsField 10.1-1 
+  [2XWiringDiagramToCovectors[102X 4.5-6 
+  [2XWiringDiagramToTopes[102X 4.5-5 
   
   
   -------------------------------------------------------
