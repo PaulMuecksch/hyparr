@@ -121,21 +121,31 @@ InstallMethod(SATSolve,
     [IsSATProblem],
 function(SProb)
 local cnfstr, picosat, TempDir, cnffile, strresult, 
-    out, sols;
+    out, sols, inputstrn;
 
     picosat := PathSystemProgram("picosat");
     cnfstr := SATCNFStr(SProb);
-    TempDir:=DirectoryTemporary();
-    cnffile := Filename(TempDir,"cnfpico");
-    PrintTo(cnffile,cnfstr);
+    # TempDir:=DirectoryTemporary();
+    TempDir:=DirectoryCurrent();
+    # cnffile := Filename(TempDir,"cnfpico");
+    # PrintTo(cnffile,cnfstr);
+    inputstrn := InputTextString(cnfstr);
     strresult:="";; 
     out := OutputTextString(strresult,true);
 
+    # if SATallSolutions(SProb) then
+    #     Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v","--all"]);;
+    # else
+    #     Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v"]);;
+    # fi; 
+
     if SATallSolutions(SProb) then
-        Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v","--all"]);;
+        Process(TempDir, picosat, inputstrn, out, ["-v","--all"]);;
     else
-        Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v"]);;
+        Process(TempDir, picosat, inputstrn, out, ["-v"]);;
     fi; 
+
+    # RemoveFile(cnffile);
     
     sols := ParseSATSolutions(strresult);
 
