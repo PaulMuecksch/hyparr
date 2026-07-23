@@ -1,6 +1,22 @@
 \begin{theindex}
 
   \item \texttt  {AGpql}, \hyperpage{13}
+  \item \texttt  {AomotoBasis}
+    \subitem for IsAomotoComplex, \hyperpage{58}
+  \item \texttt  {AomotoBettiNumbers}
+    \subitem for IsAomotoComplex, \hyperpage{58}
+  \item \texttt  {AomotoCohomology}
+    \subitem for IsAomotoComplex, \hyperpage{58}
+  \item \texttt  {AomotoComplex}
+    \subitem for IsGeomLattice, IsList, \hyperpage{57}
+  \item \texttt  {AomotoDifferentials}
+    \subitem for IsAomotoComplex, \hyperpage{58}
+  \item \texttt  {AomotoField}
+    \subitem for IsAomotoComplex, \hyperpage{58}
+  \item \texttt  {AomotoLattice}
+    \subitem for IsAomotoComplex, \hyperpage{57}
+  \item \texttt  {AomotoWeights}
+    \subitem for IsAomotoComplex, \hyperpage{58}
 
   \indexspace
 
@@ -14,8 +30,8 @@
   \item \texttt  {CCSimpleTriangle}
     \subitem for IsHyperplaneArrangement, \hyperpage{36}
   \item \texttt  {CharPoly}
-    \subitem for IsHyperplaneArrangement, \hyperpage{6}
-  \item \texttt  {CharPolySplits}, \hyperpage{60}
+    \subitem for IsHyperplaneArrangement, \hyperpage{7}
+  \item \texttt  {CharPolySplits}, \hyperpage{63}
   \item \texttt  {ConnectedSubgraphArr}
     \subitem for IsList, \hyperpage{14}
 
@@ -36,13 +52,13 @@
   \item \texttt  {DerPModule}
     \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{23}
   \item \texttt  {Dimension}
-    \subitem for IsHyperplaneArrangement, \hyperpage{5}
-  \item \texttt  {DistMSetInvL}, \hyperpage{60}
+    \subitem for IsHyperplaneArrangement, \hyperpage{6}
+  \item \texttt  {DistMSetInvL}, \hyperpage{63}
 
   \indexspace
 
   \item \texttt  {Essentialization}
-    \subitem for IsHyperplaneArrangement, \hyperpage{11}
+    \subitem for IsHyperplaneArrangement, \hyperpage{12}
   \item \texttt  {ExpArr}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
 
@@ -59,20 +75,22 @@
 
   \indexspace
 
+  \item \texttt  {GeomLattice}
+    \subitem for IsList, \hyperpage{5}
   \item \texttt  {GraphicArr}
     \subitem for IsList, \hyperpage{14}
   \item \texttt  {GreedySearchDimension}
-    \subitem for IsHArrGreedySearch, \hyperpage{60}
+    \subitem for IsHArrGreedySearch, \hyperpage{63}
   \item \texttt  {GreedySearchGF}
-    \subitem for IsHArrGreedySearch, \hyperpage{60}
+    \subitem for IsHArrGreedySearch, \hyperpage{63}
   \item \texttt  {GreedySearchMaxIterations}
-    \subitem for IsHArrGreedySearch, \hyperpage{61}
+    \subitem for IsHArrGreedySearch, \hyperpage{64}
   \item \texttt  {GreedySearchNOfHs}
-    \subitem for IsHArrGreedySearch, \hyperpage{61}
+    \subitem for IsHArrGreedySearch, \hyperpage{64}
   \item \texttt  {GreedySearchRun}
-    \subitem for IsHArrGreedySearch, \hyperpage{60}
+    \subitem for IsHArrGreedySearch, \hyperpage{63}
   \item \texttt  {GreedySearchTargetFct}
-    \subitem for IsHArrGreedySearch, \hyperpage{61}
+    \subitem for IsHArrGreedySearch, \hyperpage{64}
 
   \indexspace
 
@@ -86,9 +104,9 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{32}
   \item \texttt  {HArrGreedySearch}
     \subitem for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat, 
-		\hyperpage{58}
+		\hyperpage{61}
   \item \texttt  {HArrGreedySearchSubArr}
-    \subitem for IsRecord, \hyperpage{58}
+    \subitem for IsRecord, \hyperpage{61}
   \item \texttt  {HArrInductiveFactorizations}
     \subitem for IsHyperplaneArrangement, \hyperpage{33}
   \item \texttt  {HArrIsFactored}
@@ -100,7 +118,7 @@
   \item \texttt  {HArrIsInductivelyFactored}
     \subitem for IsHyperplaneArrangement, \hyperpage{33}
   \item \texttt  {HArrIsIrreducible}
-    \subitem for IsHyperplaneArrangement, \hyperpage{7}
+    \subitem for IsHyperplaneArrangement, \hyperpage{8}
   \item \texttt  {HArrIsLocallyFree}
     \subitem for IsHyperplaneArrangement, \hyperpage{25}
   \item \texttt  {HArrIsSimplicial}
@@ -108,7 +126,7 @@
   \item \texttt  {HArrIsSupersolvable}
     \subitem for IsHyperplaneArrangement, \hyperpage{29}
   \item \texttt  {HArrRestriction}
-    \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{11}
+    \subitem for IsHyperplaneArrangement, IsInt, \hyperpage{12}
     \subitem for IsHyperplaneArrangement, IsList, \hyperpage{12}
   \item \texttt  {HasSimpleSimplex}
     \subitem for IsOrientedMatroid, \hyperpage{19}
@@ -122,7 +140,7 @@
   \indexspace
 
   \item \texttt  {IntersectionLattice}
-    \subitem for IsHyperplaneArrangement, \hyperpage{6}
+    \subitem for IsHyperplaneArrangement, \hyperpage{7}
   \item \texttt  {IsDivisionallyFree}
     \subitem for IsHyperplaneArrangement, \hyperpage{26}
   \item \texttt  {IsFormal}
@@ -141,7 +159,7 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{26}
   \item \texttt  {IsOMEquiv}, \hyperpage{21}
   \item \texttt  {IsReal}
-    \subitem for IsHyperplaneArrangement, \hyperpage{7}
+    \subitem for IsHyperplaneArrangement, \hyperpage{8}
 
   \indexspace
 
@@ -153,15 +171,17 @@
   \item \texttt  {LAutGroup}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LBaseCircuit}
-    \subitem for IsGeomLattice,IsList,IsInt, \hyperpage{10}
+    \subitem for IsGeomLattice,IsList,IsInt, \hyperpage{11}
   \item \texttt  {LBases}
-    \subitem for IsGeomLattice, \hyperpage{9}
+    \subitem for IsGeomLattice, \hyperpage{10}
+  \item \texttt  {LBrokenCircuits}
+    \subitem for IsGeomLattice, \hyperpage{56}
   \item \texttt  {LBsOfFlat}
-    \subitem for IsGeomLattice, IsList, \hyperpage{10}
+    \subitem for IsGeomLattice, IsList, \hyperpage{11}
   \item \texttt  {LCharPoly}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LCircuits}
-    \subitem for IsGeomLattice, \hyperpage{8}
+    \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LFindOrientations}
     \subitem for IsGeomLattice, IsBool, \hyperpage{54}
   \item \texttt  {LGenSet}
@@ -177,7 +197,7 @@
   \item \texttt  {LIsGenSet}
     \subitem for IsGeomLattice,IsList, \hyperpage{53}
   \item \texttt  {LIsIrreducible}
-    \subitem for IsGeomLattice, \hyperpage{9}
+    \subitem for IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsIsomorphic}
     \subitem for IsGeomLattice,IsGeomLattice, \hyperpage{11}
   \item \texttt  {LIsModularFlat}
@@ -189,15 +209,19 @@
   \item \texttt  {LIsSupersolvable}
     \subitem for IsGeomLattice, \hyperpage{29}
   \item \texttt  {LkFlats}
-    \subitem for IsGeomLattice, \hyperpage{8}
+    \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LModularFlatsRk}
     \subitem for IsGeomLattice, IsInt, \hyperpage{29}
   \item \texttt  {LMoebius}
     \subitem for IsGeomLattice, \hyperpage{9}
+  \item \texttt  {LNBCSets}
+    \subitem for IsGeomLattice, \hyperpage{56}
   \item \texttt  {LOrientations}
     \subitem for IsGeomLattice, \hyperpage{54}
+  \item \texttt  {LOrlikSolomonBetti}
+    \subitem for IsGeomLattice, \hyperpage{57}
   \item \texttt  {LRank}
-    \subitem for IsGeomLattice, \hyperpage{8}
+    \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LRankFunction}
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LRealizationSpace}
@@ -288,19 +312,19 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{34}
     \subitem for IsOrientedMatroid, \hyperpage{34}
   \item \texttt  {SATallSolutions}
-    \subitem for IsSATProblem, \hyperpage{56}
+    \subitem for IsSATProblem, \hyperpage{59}
   \item \texttt  {SATClauses}
-    \subitem for IsSATProblem, \hyperpage{56}
+    \subitem for IsSATProblem, \hyperpage{59}
   \item \texttt  {SATCNFStr}
-    \subitem for IsSATProblem, \hyperpage{56}
+    \subitem for IsSATProblem, \hyperpage{59}
   \item \texttt  {SATnvariables}
-    \subitem for IsSATProblem, \hyperpage{56}
+    \subitem for IsSATProblem, \hyperpage{59}
   \item \texttt  {SATProblem}
-    \subitem for IsInt,IsList, IsBool, \hyperpage{56}
+    \subitem for IsInt,IsList, IsBool, \hyperpage{59}
   \item \texttt  {SATSolutions}
-    \subitem for IsSATProblem, \hyperpage{57}
+    \subitem for IsSATProblem, \hyperpage{60}
   \item \texttt  {SATSolve}
-    \subitem for IsSATProblem, \hyperpage{57}
+    \subitem for IsSATProblem, \hyperpage{60}
   \item \texttt  {SeparatingSet}, \hyperpage{21}
   \item \texttt  {SsS3}, \hyperpage{13}
 

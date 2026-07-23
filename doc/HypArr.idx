@@ -1,34 +1,35 @@
 \indexentry{HyperplaneArrangement@\texttt  {HyperplaneArrangement}!for IsList|hyperpage}{5}
-\indexentry{Dimension@\texttt  {Dimension}!for IsHyperplaneArrangement|hyperpage}{5}
+\indexentry{GeomLattice@\texttt  {GeomLattice}!for IsList|hyperpage}{5}
+\indexentry{Dimension@\texttt  {Dimension}!for IsHyperplaneArrangement|hyperpage}{6}
 \indexentry{Roots@\texttt  {Roots}!for IsHyperplaneArrangement|hyperpage}{6}
 \indexentry{HArrDefField@\texttt  {HArrDefField}!for IsHyperplaneArrangement|hyperpage}{6}
-\indexentry{IntersectionLattice@\texttt  {IntersectionLattice}!for IsHyperplaneArrangement|hyperpage}{6}
-\indexentry{CharPoly@\texttt  {CharPoly}!for IsHyperplaneArrangement|hyperpage}{6}
+\indexentry{IntersectionLattice@\texttt  {IntersectionLattice}!for IsHyperplaneArrangement|hyperpage}{7}
+\indexentry{CharPoly@\texttt  {CharPoly}!for IsHyperplaneArrangement|hyperpage}{7}
 \indexentry{ExpArr@\texttt  {ExpArr}!for IsHyperplaneArrangement|hyperpage}{7}
 \indexentry{MSetInvL@\texttt  {MSetInvL}!for IsHyperplaneArrangement|hyperpage}{7}
-\indexentry{IsReal@\texttt  {IsReal}!for IsHyperplaneArrangement|hyperpage}{7}
-\indexentry{HArrIsIrreducible@\texttt  {HArrIsIrreducible}!for IsHyperplaneArrangement|hyperpage}{7}
+\indexentry{IsReal@\texttt  {IsReal}!for IsHyperplaneArrangement|hyperpage}{8}
+\indexentry{HArrIsIrreducible@\texttt  {HArrIsIrreducible}!for IsHyperplaneArrangement|hyperpage}{8}
 \indexentry{HArrIsGeneric@\texttt  {HArrIsGeneric}!for IsHyperplaneArrangement|hyperpage}{8}
 \indexentry{LGroundSet@\texttt  {LGroundSet}!for IsGeomLattice|hyperpage}{8}
 \indexentry{LAtoms@\texttt  {LAtoms}!for IsGeomLattice|hyperpage}{8}
-\indexentry{LRank@\texttt  {LRank}!for IsGeomLattice|hyperpage}{8}
-\indexentry{LkFlats@\texttt  {LkFlats}!for IsGeomLattice|hyperpage}{8}
-\indexentry{LCircuits@\texttt  {LCircuits}!for IsGeomLattice|hyperpage}{8}
+\indexentry{LRank@\texttt  {LRank}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LkFlats@\texttt  {LkFlats}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LCircuits@\texttt  {LCircuits}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LRankFunction@\texttt  {LRankFunction}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LGraph@\texttt  {LGraph}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LAutGroup@\texttt  {LAutGroup}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LMoebius@\texttt  {LMoebius}!for IsGeomLattice|hyperpage}{9}
 \indexentry{LCharPoly@\texttt  {LCharPoly}!for IsGeomLattice|hyperpage}{9}
-\indexentry{LBases@\texttt  {LBases}!for IsGeomLattice|hyperpage}{9}
-\indexentry{LIsIrreducible@\texttt  {LIsIrreducible}!for IsGeomLattice|hyperpage}{9}
+\indexentry{LBases@\texttt  {LBases}!for IsGeomLattice|hyperpage}{10}
+\indexentry{LIsIrreducible@\texttt  {LIsIrreducible}!for IsGeomLattice|hyperpage}{10}
 \indexentry{LIsBoolean@\texttt  {LIsBoolean}!for IsGeomLattice|hyperpage}{10}
 \indexentry{LIsGeneric@\texttt  {LIsGeneric}!for IsGeomLattice|hyperpage}{10}
-\indexentry{LBsOfFlat@\texttt  {LBsOfFlat}!for IsGeomLattice, IsList|hyperpage}{10}
-\indexentry{LBaseCircuit@\texttt  {LBaseCircuit}!for IsGeomLattice,IsList,IsInt|hyperpage}{10}
+\indexentry{LBsOfFlat@\texttt  {LBsOfFlat}!for IsGeomLattice, IsList|hyperpage}{11}
+\indexentry{LBaseCircuit@\texttt  {LBaseCircuit}!for IsGeomLattice,IsList,IsInt|hyperpage}{11}
 \indexentry{LIsIsomorphic@\texttt  {LIsIsomorphic}!for IsGeomLattice,IsGeomLattice|hyperpage}{11}
 \indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsHyperplaneArrangement,IsHyperplaneArrangement|hyperpage}{11}
-\indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{11}
-\indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsInt|hyperpage}{11}
+\indexentry{Essentialization@\texttt  {Essentialization}!for IsHyperplaneArrangement|hyperpage}{12}
+\indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsInt|hyperpage}{12}
 \indexentry{HArrRestriction@\texttt  {HArrRestriction}!for IsHyperplaneArrangement, IsList|hyperpage}{12}
 \indexentry{HArrAddition@\texttt  {HArrAddition}!for IsHyperplaneArrangement, IsList|hyperpage}{12}
 \indexentry{HArrDeletion@\texttt  {HArrDeletion}!for IsHyperplaneArrangement, IsInt|hyperpage}{12}
@@ -128,20 +129,31 @@
 \indexentry{LIsOrientable@\texttt  {LIsOrientable}!for IsGeomLattice|hyperpage}{54}
 \indexentry{LOrientations@\texttt  {LOrientations}!for IsGeomLattice|hyperpage}{54}
 \indexentry{LFindOrientations@\texttt  {LFindOrientations}!for IsGeomLattice, IsBool|hyperpage}{54}
-\indexentry{SATProblem@\texttt  {SATProblem}!for IsInt,IsList, IsBool|hyperpage}{56}
-\indexentry{SATnvariables@\texttt  {SATnvariables}!for IsSATProblem|hyperpage}{56}
-\indexentry{SATClauses@\texttt  {SATClauses}!for IsSATProblem|hyperpage}{56}
-\indexentry{SATallSolutions@\texttt  {SATallSolutions}!for IsSATProblem|hyperpage}{56}
-\indexentry{SATCNFStr@\texttt  {SATCNFStr}!for IsSATProblem|hyperpage}{56}
-\indexentry{SATSolutions@\texttt  {SATSolutions}!for IsSATProblem|hyperpage}{57}
-\indexentry{SATSolve@\texttt  {SATSolve}!for IsSATProblem|hyperpage}{57}
-\indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat|hyperpage}{58}
-\indexentry{HArrGreedySearchSubArr@\texttt  {HArrGreedySearchSubArr}!for IsRecord|hyperpage}{58}
-\indexentry{CharPolySplits@\texttt  {CharPolySplits}|hyperpage}{60}
-\indexentry{DistMSetInvL@\texttt  {DistMSetInvL}|hyperpage}{60}
-\indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{60}
-\indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{60}
-\indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{60}
-\indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{61}
-\indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{61}
-\indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{61}
+\indexentry{LBrokenCircuits@\texttt  {LBrokenCircuits}!for IsGeomLattice|hyperpage}{56}
+\indexentry{LNBCSets@\texttt  {LNBCSets}!for IsGeomLattice|hyperpage}{56}
+\indexentry{LOrlikSolomonBetti@\texttt  {LOrlikSolomonBetti}!for IsGeomLattice|hyperpage}{57}
+\indexentry{AomotoComplex@\texttt  {AomotoComplex}!for IsGeomLattice, IsList|hyperpage}{57}
+\indexentry{AomotoLattice@\texttt  {AomotoLattice}!for IsAomotoComplex|hyperpage}{57}
+\indexentry{AomotoField@\texttt  {AomotoField}!for IsAomotoComplex|hyperpage}{58}
+\indexentry{AomotoWeights@\texttt  {AomotoWeights}!for IsAomotoComplex|hyperpage}{58}
+\indexentry{AomotoBasis@\texttt  {AomotoBasis}!for IsAomotoComplex|hyperpage}{58}
+\indexentry{AomotoDifferentials@\texttt  {AomotoDifferentials}!for IsAomotoComplex|hyperpage}{58}
+\indexentry{AomotoBettiNumbers@\texttt  {AomotoBettiNumbers}!for IsAomotoComplex|hyperpage}{58}
+\indexentry{AomotoCohomology@\texttt  {AomotoCohomology}!for IsAomotoComplex|hyperpage}{58}
+\indexentry{SATProblem@\texttt  {SATProblem}!for IsInt,IsList, IsBool|hyperpage}{59}
+\indexentry{SATnvariables@\texttt  {SATnvariables}!for IsSATProblem|hyperpage}{59}
+\indexentry{SATClauses@\texttt  {SATClauses}!for IsSATProblem|hyperpage}{59}
+\indexentry{SATallSolutions@\texttt  {SATallSolutions}!for IsSATProblem|hyperpage}{59}
+\indexentry{SATCNFStr@\texttt  {SATCNFStr}!for IsSATProblem|hyperpage}{59}
+\indexentry{SATSolutions@\texttt  {SATSolutions}!for IsSATProblem|hyperpage}{60}
+\indexentry{SATSolve@\texttt  {SATSolve}!for IsSATProblem|hyperpage}{60}
+\indexentry{HArrGreedySearch@\texttt  {HArrGreedySearch}!for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat|hyperpage}{61}
+\indexentry{HArrGreedySearchSubArr@\texttt  {HArrGreedySearchSubArr}!for IsRecord|hyperpage}{61}
+\indexentry{CharPolySplits@\texttt  {CharPolySplits}|hyperpage}{63}
+\indexentry{DistMSetInvL@\texttt  {DistMSetInvL}|hyperpage}{63}
+\indexentry{GreedySearchRun@\texttt  {GreedySearchRun}!for IsHArrGreedySearch|hyperpage}{63}
+\indexentry{GreedySearchGF@\texttt  {GreedySearchGF}!for IsHArrGreedySearch|hyperpage}{63}
+\indexentry{GreedySearchDimension@\texttt  {GreedySearchDimension}!for IsHArrGreedySearch|hyperpage}{63}
+\indexentry{GreedySearchNOfHs@\texttt  {GreedySearchNOfHs}!for IsHArrGreedySearch|hyperpage}{64}
+\indexentry{GreedySearchTargetFct@\texttt  {GreedySearchTargetFct}!for IsHArrGreedySearch|hyperpage}{64}
+\indexentry{GreedySearchMaxIterations@\texttt  {GreedySearchMaxIterations}!for IsHArrGreedySearch|hyperpage}{64}

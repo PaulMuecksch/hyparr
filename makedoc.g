@@ -32,6 +32,7 @@ AutoDoc( rec(
                 "gap/realizationspace.gd",
                 "gap/greedy.gi",
                 "gap/findorientations.gd",
+                "gap/aomoto.gd",
                 "gap/satproblems.gd"
                 ] 
                 ),

@@ -68,7 +68,11 @@ SATSolsCUTOFF := 100;
 InstallGlobalFunction(ParseSATSolutions,
 function(text)
 local text_cutoff, pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
-    text_cutoff := text{[1..10000*SATSolsCUTOFF]};;
+    if Length(text) >= 10000*SATSolsCUTOFF then
+        text_cutoff := text{[1..10000*SATSolsCUTOFF]};;
+    else
+        text_cutoff := text;;
+    fi;;
 
     pss:= Positions(text_cutoff,'s');
     pss := Filtered(pss,x->text_cutoff{[x..x+12]} = "s SATISFIABLE");

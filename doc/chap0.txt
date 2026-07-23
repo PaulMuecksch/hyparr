@@ -35,44 +35,46 @@
   2 [33X[0;0YHyperplane arrangements[133X
     2.1 [33X[0;0YConstruction of arrangements of hyperplanes[133X
       2.1-1 HyperplaneArrangement
-    2.2 [33X[0;0YAttributes of arrangements[133X
-      2.2-1 Dimension
-      2.2-2 Roots
-      2.2-3 HArrDefField
-      2.2-4 IntersectionLattice
-      2.2-5 CharPoly
-      2.2-6 ExpArr
-      2.2-7 MSetInvL
-    2.3 [33X[0;0YProperties of arrangements[133X
-      2.3-1 IsReal
-      2.3-2 HArrIsIrreducible
-      2.3-3 HArrIsGeneric
-    2.4 [33X[0;0YAttributes of geometric lattices[133X
-      2.4-1 LGroundSet
-      2.4-2 LAtoms
-      2.4-3 LRank
-      2.4-4 LkFlats
-      2.4-5 LCircuits
-      2.4-6 LRankFunction
-      2.4-7 LGraph
-      2.4-8 LAutGroup
-      2.4-9 LMoebius
-      2.4-10 LCharPoly
-      2.4-11 LBases
-    2.5 [33X[0;0YProperties of geometric lattices[133X
-      2.5-1 LIsIrreducible
-      2.5-2 LIsBoolean
-      2.5-3 LIsGeneric
-    2.6 [33X[0;0YOperations[133X
-      2.6-1 LBsOfFlat
-      2.6-2 LBaseCircuit
-      2.6-3 LIsIsomorphic
-      2.6-4 IsLEquiv
-      2.6-5 Essentialization
-      2.6-6 HArrRestriction
-      2.6-7 HArrRestriction
-      2.6-8 HArrAddition
-      2.6-9 HArrDeletion
+    2.2 [33X[0;0YConstruction of geometric lattices[133X
+      2.2-1 GeomLattice
+    2.3 [33X[0;0YAttributes of arrangements[133X
+      2.3-1 Dimension
+      2.3-2 Roots
+      2.3-3 HArrDefField
+      2.3-4 IntersectionLattice
+      2.3-5 CharPoly
+      2.3-6 ExpArr
+      2.3-7 MSetInvL
+    2.4 [33X[0;0YProperties of arrangements[133X
+      2.4-1 IsReal
+      2.4-2 HArrIsIrreducible
+      2.4-3 HArrIsGeneric
+    2.5 [33X[0;0YAttributes of geometric lattices[133X
+      2.5-1 LGroundSet
+      2.5-2 LAtoms
+      2.5-3 LRank
+      2.5-4 LkFlats
+      2.5-5 LCircuits
+      2.5-6 LRankFunction
+      2.5-7 LGraph
+      2.5-8 LAutGroup
+      2.5-9 LMoebius
+      2.5-10 LCharPoly
+      2.5-11 LBases
+    2.6 [33X[0;0YProperties of geometric lattices[133X
+      2.6-1 LIsIrreducible
+      2.6-2 LIsBoolean
+      2.6-3 LIsGeneric
+    2.7 [33X[0;0YOperations[133X
+      2.7-1 LBsOfFlat
+      2.7-2 LBaseCircuit
+      2.7-3 LIsIsomorphic
+      2.7-4 IsLEquiv
+      2.7-5 Essentialization
+      2.7-6 HArrRestriction
+      2.7-7 HArrRestriction
+      2.7-8 HArrAddition
+      2.7-9 HArrDeletion
   3 [33X[0;0YSpecial arrangements[133X
     3.1 [33X[0;0YGlobal methods[133X
       3.1-1 AGpql
@@ -207,30 +209,45 @@
       13.1-1 LIsOrientable
       13.1-2 LOrientations
       13.1-3 LFindOrientations
-  14 [33X[0;0YSAT-problems[133X
-    14.1 [33X[0;0YConstruction[133X
-      14.1-1 SATProblem
-    14.2 [33X[0;0YAttributes[133X
-      14.2-1 SATnvariables
-      14.2-2 SATClauses
-      14.2-3 SATallSolutions
-      14.2-4 SATCNFStr
-      14.2-5 SATSolutions
-    14.3 [33X[0;0YOperations[133X
-      14.3-1 SATSolve
-  15 [33X[0;0YGreedy search for arrangements[133X
-    15.1 [33X[0;0YConstructions[133X
-      15.1-1 HArrGreedySearch
-      15.1-2 HArrGreedySearchSubArr
-      15.1-3 CharPolySplits
-      15.1-4 DistMSetInvL
+  14 [33X[0;0YThe Aomoto complex[133X
+    14.1 [33X[0;0YOrlik–Solomon combinatorics of geometric lattices[133X
+      14.1-1 LBrokenCircuits
+      14.1-2 LNBCSets
+      14.1-3 LOrlikSolomonBetti
+    14.2 [33X[0;0YConstruction of the Aomoto complex[133X
+      14.2-1 AomotoComplex
+    14.3 [33X[0;0YAttributes of the Aomoto complex[133X
+      14.3-1 AomotoLattice
+      14.3-2 AomotoField
+      14.3-3 AomotoWeights
+      14.3-4 AomotoBasis
+      14.3-5 AomotoDifferentials
+      14.3-6 AomotoBettiNumbers
+      14.3-7 AomotoCohomology
+  15 [33X[0;0YSAT-problems[133X
+    15.1 [33X[0;0YConstruction[133X
+      15.1-1 SATProblem
     15.2 [33X[0;0YAttributes[133X
-      15.2-1 GreedySearchRun
-      15.2-2 GreedySearchGF
-      15.2-3 GreedySearchDimension
-      15.2-4 GreedySearchNOfHs
-      15.2-5 GreedySearchTargetFct
-      15.2-6 GreedySearchMaxIterations
+      15.2-1 SATnvariables
+      15.2-2 SATClauses
+      15.2-3 SATallSolutions
+      15.2-4 SATCNFStr
+      15.2-5 SATSolutions
+    15.3 [33X[0;0YOperations[133X
+      15.3-1 SATSolve
+  16 [33X[0;0YGreedy search for arrangements[133X
+    16.1 [33X[0;0YConstructions[133X
+      16.1-1 HArrGreedySearch
+      16.1-2 HArrGreedySearchSubArr
+      16.1-3 CharPolySplits
+      16.1-4 DistMSetInvL
+    16.2 [33X[0;0YAttributes[133X
+      16.2-1 GreedySearchRun
+      16.2-2 GreedySearchGF
+      16.2-3 GreedySearchDimension
+      16.2-4 GreedySearchNOfHs
+      16.2-5 GreedySearchTargetFct
+      16.2-6 GreedySearchMaxIterations
   
   
   [32X

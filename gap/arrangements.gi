@@ -91,6 +91,50 @@ function(r)
     );
 end);
 
+# Implement the geometric lattice constructor
+
+InstallMethod(GeomLattice,
+    "for a list of lists of lists giving the ground set",
+    [IsList],
+function(gs)
+
+    local Ls, k, type;
+
+    if ForAny(gs, x -> not(IsList(x)) or ForAny(x, y -> not(IsList(y)))) then
+        Print("Argument must be a list of lists of lists!\n");
+        return fail;
+    fi;
+
+    # normalize the flats: each flat is a set of indices of atoms
+    Ls := List(gs, Lk -> List(Lk, Set));
+
+    if ForAny(Ls, Lk -> ForAny(Lk, m -> ForAny(m, e -> not(IsPosInt(e))))) then
+        Print("The flats must be given by lists of positive integers!\n");
+        return fail;
+    fi;
+
+    type := NewType(GeomLatticeFamily,
+                    IsGeomLatticeRep);
+
+    if Ls = [] then
+        return Objectify(type,
+            rec(
+                grGroundSet := Ls,
+                rank := 0,
+                atoms := []
+            )
+        );
+    fi;
+
+    return Objectify(type,
+        rec(
+            grGroundSet := Ls,
+            rank := Length(Ls),
+            atoms := Set(Concatenation(Ls[1]))
+        )
+    );
+end);
+
 InstallMethod(ViewObj,
     "for hyperplane arrangements",
     [IsHyperplaneArrangement],

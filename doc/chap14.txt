@@ -1,60 +1,169 @@
   
-  [1X14 [33X[0;0YSAT-problems[133X[101X
+  [1X14 [33X[0;0YThe Aomoto complex[133X[101X
+  
+  [33X[0;0YLet  [23XL[123X  be  a  geometric lattice (for instance the intersection lattice of a
+  hyperplane  arrangement,  see  [2XIntersectionLattice[102X  ([14X2.3-4[114X))  with  atom set
+  [23X\{1,\dots,n\}[123X      and     rank     [23Xr[123X.     Its     [13XOrlik–Solomon     algebra[113X
+  [23XA^\bullet(L)=\bigoplus_{p=0}^{r}  A^p(L)[123X  is  the  quotient  of the exterior
+  algebra  on  generators  [23Xe_1,\dots,e_n[123X  (one  per atom) by the Orlik–Solomon
+  ideal  generated  by  the  boundaries [23X\partial e_C[123X of the circuits [23XC[123X of [23XL[123X. A
+  monomial  basis  of  [23XA^p(L)[123X  is given by the [13Xno broken circuit[113X (nbc) sets of
+  size [23Xp[123X.[133X
+  
+  [33X[0;0YGiven  a  weight  vector  [23X\lambda=(\lambda_1,\dots,\lambda_n)[123X  one forms the
+  element [23Xa_\lambda=\sum_i \lambda_i e_i \in A^1(L)[123X. Since [23Xa_\lambda^2=0[123X, left
+  multiplication by [23Xa_\lambda[123X turns [23XA^\bullet(L)[123X into a cochain complex[133X
   
   
-  [1X14.1 [33X[0;0YConstruction[133X[101X
+  [24X[33X[0;6Y0        \to        A^0(L)        \xrightarrow{a_\lambda\wedge}       A^1(L)
+  \xrightarrow{a_\lambda\wedge}  \cdots  \xrightarrow{a_\lambda\wedge}  A^r(L)
+  \to 0,[133X
   
-  [1X14.1-1 SATProblem[101X
+  [124X
   
-  [33X[1;0Y[29X[2XSATProblem[102X( [3Xnvar[103X, [3Xclauseslist[103X, [3Xallsols[103X ) [32X operation[133X
+  [33X[0;0Ythe  [13XAomoto  complex[113X  [23X(A^\bullet(L),a_\lambda\wedge-)[123X. Its cohomology is the
+  combinatorial  (Aomoto)  approximation  of the cohomology of the arrangement
+  complement  with  coefficients  in  the  rank  one  local  system defined by
+  [23X\lambda[123X.[133X
   
   
-  [1X14.2 [33X[0;0YAttributes[133X[101X
+  [1X14.1 [33X[0;0YOrlik–Solomon combinatorics of geometric lattices[133X[101X
   
-  [1X14.2-1 SATnvariables[101X
+  [1X14.1-1 LBrokenCircuits[101X
   
-  [33X[1;0Y[29X[2XSATnvariables[102X( [3XSProb[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Yan integer[133X
+  [33X[1;0Y[29X[2XLBrokenCircuits[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya set of lists[133X
+  
+  [33X[0;0YReturns the set of [13Xbroken circuits[113X of the geometric lattice [3XL[103X, i.e. the sets
+  [23XC\setminus\{\min  C\}[123X  where  [23XC[123X ranges over the circuits of [3XL[103X (see [2XLCircuits[102X
+  ([14X2.5-5[114X)).[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);;[127X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);;[127X[104X
+    [4X[25Xgap>[125X [27XLBrokenCircuits(L);[127X[104X
+    [4X[28X[ [ 2 .. 4 ] ][128X[104X
   [4X[32X[104X
   
-  [1X14.2-2 SATClauses[101X
+  [1X14.1-2 LNBCSets[101X
   
-  [33X[1;0Y[29X[2XSATClauses[102X( [3XSProb[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLNBCSets[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of lists[133X
+  
+  [33X[0;0YReturns  the  no broken circuit (nbc) sets of [3XL[103X arranged by cardinality. The
+  entry  at  position  [23Xp+1[123X  is  the  list  of  all  nbc  sets  of  size [23Xp[123X, for
+  [23Xp=0,\dots,\mathtt{LRank}(L)[123X.  The  nbc sets of size [23Xp[123X index a monomial basis
+  of the degree [23Xp[123X part [23XA^p(L)[123X of the Orlik–Solomon algebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);;[127X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);;[127X[104X
+    [4X[25Xgap>[125X [27XLNBCSets(L);[127X[104X
+    [4X[28X[ [ [  ] ], [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ],[128X[104X
+    [4X[28X  [ [ 1, 2 ], [ 1, 3 ], [ 1, 4 ], [ 2, 3 ], [ 2, 4 ], [ 3, 4 ] ],[128X[104X
+    [4X[28X  [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 4 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X14.1-3 LOrlikSolomonBetti[101X
+  
+  [33X[1;0Y[29X[2XLOrlikSolomonBetti[102X( [3XL[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of non-negative integers[133X
+  
+  [33X[0;0YReturns   the   dimensions  [23X\dim_K  A^p(L)[123X  of  the  graded  pieces  of  the
+  Orlik–Solomon algebra of [3XL[103X, i.e. the coefficients of the Poincare polynomial
+  of [3XL[103X. The entry at position [23Xp+1[123X equals the number of nbc sets of size [23Xp[123X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);;[127X[104X
+    [4X[25Xgap>[125X [27XLOrlikSolomonBetti(IntersectionLattice(A));[127X[104X
+    [4X[28X[ 1, 4, 6, 3 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.2 [33X[0;0YConstruction of the Aomoto complex[133X[101X
+  
+  [1X14.2-1 AomotoComplex[101X
+  
+  [33X[1;0Y[29X[2XAomotoComplex[102X( [3XL[103X, [3Xlambda[103X[, [3XK[103X] ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan object of type [10XIsAomotoComplex[110X[133X
+  
+  [33X[0;0YConstructs the Aomoto complex of the geometric lattice [3XL[103X with respect to the
+  weight vector [3Xlambda[103X. The list [3Xlambda[103X must contain one weight per atom of [3XL[103X,
+  i.e.  [10XLength(lambda)=Length(LAtoms(L))[110X,  the weight [10Xlambda[i][110X being attached
+  to the atom [10XLAtoms(L)[i][110X.[133X
+  
+  [33X[0;0YThe  optional third argument [3XK[103X specifies the field over which the complex is
+  formed; if omitted, the field of rationals [10XRationals[110X is used. The entries of
+  [3Xlambda[103X are coerced into [3XK[103X.[133X
+  
+  [33X[0;0YThe  differentials  of  the complex are returned as matrices with respect to
+  the nbc monomial bases (see [2XLNBCSets[102X ([14X14.1-2[114X)).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);;[127X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);;[127X[104X
+    [4X[25Xgap>[125X [27XAC:=AomotoComplex(L,[1,1,1,-3]);[127X[104X
+    [4X[28X<Aomoto complex of a rank 3 geometric lattice over Rationals, ranks [ 1, 4, 6, 3 ]>[128X[104X
+    [4X[25Xgap>[125X [27XAomotoCohomology(AC);[127X[104X
+    [4X[28X[ 0, 0, 1, 1 ][128X[104X
+  [4X[32X[104X
+  
+  
+  [1X14.3 [33X[0;0YAttributes of the Aomoto complex[133X[101X
+  
+  [1X14.3-1 AomotoLattice[101X
+  
+  [33X[1;0Y[29X[2XAomotoLattice[102X( [3XAC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Yan object of type [10XIsGeomLattice[110X[133X
+  
+  [33X[0;0YReturns the geometric lattice underlying the Aomoto complex [3XAC[103X.[133X
+  
+  [1X14.3-2 AomotoField[101X
+  
+  [33X[1;0Y[29X[2XAomotoField[102X( [3XAC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya field[133X
+  
+  [33X[0;0YReturns the coefficient field of the Aomoto complex [3XAC[103X.[133X
+  
+  [1X14.3-3 AomotoWeights[101X
+  
+  [33X[1;0Y[29X[2XAomotoWeights[102X( [3XAC[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list[133X
   
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
+  [33X[0;0YReturns the weight vector defining the differential of [3XAC[103X.[133X
   
-  [1X14.2-3 SATallSolutions[101X
+  [1X14.3-4 AomotoBasis[101X
   
-  [33X[1;0Y[29X[2XSATallSolutions[102X( [3XSProb[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Ya list[133X
+  [33X[1;0Y[29X[2XAomotoBasis[102X( [3XAC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of lists[133X
   
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
+  [33X[0;0YReturns  the  nbc  monomial  bases  of  the graded pieces of [3XAC[103X, arranged by
+  degree (see [2XLNBCSets[102X ([14X14.1-2[114X)).[133X
   
-  [1X14.2-4 SATCNFStr[101X
+  [1X14.3-5 AomotoDifferentials[101X
   
-  [33X[1;0Y[29X[2XSATCNFStr[102X( [3XSProb[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Ya string[133X
+  [33X[1;0Y[29X[2XAomotoDifferentials[102X( [3XAC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of matrices[133X
   
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
+  [33X[0;0YReturns  the  differentials  of [3XAC[103X. The entry at position [23Xk[123X is the matrix of
+  the  map  [23Xa_\lambda\wedge-\colon  A^{k-1}(L)\to A^{k}(L)[123X with respect to the
+  nbc  bases,  for [23Xk=1,\dots,\mathtt{LRank}(L)[123X. A vector of coordinates in the
+  source basis is mapped by right multiplication with this matrix.[133X
   
-  [1X14.2-5 SATSolutions[101X
+  [1X14.3-6 AomotoBettiNumbers[101X
   
-  [33X[1;0Y[29X[2XSATSolutions[102X( [3XSProb[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10Ya list[133X
+  [33X[1;0Y[29X[2XAomotoBettiNumbers[102X( [3XAC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of non-negative integers[133X
   
-  [4X[32X  Example  [32X[104X
-  [4X[32X[104X
+  [33X[0;0YReturns  the  dimensions  of the graded pieces [23XA^p(L)[123X of the Aomoto complex,
+  i.e. the Orlik–Solomon Betti numbers of the underlying lattice.[133X
   
+  [1X14.3-7 AomotoCohomology[101X
   
-  [1X14.3 [33X[0;0YOperations[133X[101X
+  [33X[1;0Y[29X[2XAomotoCohomology[102X( [3XAC[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10Ya list of non-negative integers[133X
   
-  [1X14.3-1 SATSolve[101X
-  
-  [33X[1;0Y[29X[2XSATSolve[102X( [3XSProb[103X, [3Xall[103X ) [32X operation[133X
+  [33X[0;0YReturns the dimensions of the cohomology of the Aomoto complex [3XAC[103X. The entry
+  at   position   [23Xp+1[123X   is   [23X\dim_K   H^p(A^\bullet(L),a_\lambda\wedge-)[123X,  for
+  [23Xp=0,\dots,\mathtt{LRank}(L)[123X.[133X
   

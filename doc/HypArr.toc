@@ -2,44 +2,46 @@
 \contentsline {chapter}{\numberline {2}\textcolor {Chapter }{Hyperplane arrangements}}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}\textcolor {Chapter }{Construction of arrangements of hyperplanes}}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}\textcolor {Chapter }{HyperplaneArrangement (for IsList)}}{5}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Attributes of arrangements}}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{Dimension (for IsHyperplaneArrangement)}}{5}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}\textcolor {Chapter }{Roots (for IsHyperplaneArrangement)}}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}\textcolor {Chapter }{HArrDefField (for IsHyperplaneArrangement)}}{6}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}\textcolor {Chapter }{IntersectionLattice (for IsHyperplaneArrangement)}}{6}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}\textcolor {Chapter }{CharPoly (for IsHyperplaneArrangement)}}{6}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}\textcolor {Chapter }{ExpArr (for IsHyperplaneArrangement)}}{7}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}\textcolor {Chapter }{MSetInvL (for IsHyperplaneArrangement)}}{7}{subsection.2.2.7}%
-\contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Properties of arrangements}}{7}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{IsReal (for IsHyperplaneArrangement)}}{7}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}\textcolor {Chapter }{HArrIsIrreducible (for IsHyperplaneArrangement)}}{7}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}\textcolor {Chapter }{HArrIsGeneric (for IsHyperplaneArrangement)}}{8}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}\textcolor {Chapter }{Attributes of geometric lattices}}{8}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}\textcolor {Chapter }{LGroundSet (for IsGeomLattice)}}{8}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}\textcolor {Chapter }{LAtoms (for IsGeomLattice)}}{8}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}\textcolor {Chapter }{LRank (for IsGeomLattice)}}{8}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}\textcolor {Chapter }{LkFlats (for IsGeomLattice)}}{8}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}\textcolor {Chapter }{LCircuits (for IsGeomLattice)}}{8}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}\textcolor {Chapter }{LRankFunction (for IsGeomLattice)}}{9}{subsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.4.7}\textcolor {Chapter }{LGraph (for IsGeomLattice)}}{9}{subsection.2.4.7}%
-\contentsline {subsection}{\numberline {2.4.8}\textcolor {Chapter }{LAutGroup (for IsGeomLattice)}}{9}{subsection.2.4.8}%
-\contentsline {subsection}{\numberline {2.4.9}\textcolor {Chapter }{LMoebius (for IsGeomLattice)}}{9}{subsection.2.4.9}%
-\contentsline {subsection}{\numberline {2.4.10}\textcolor {Chapter }{LCharPoly (for IsGeomLattice)}}{9}{subsection.2.4.10}%
-\contentsline {subsection}{\numberline {2.4.11}\textcolor {Chapter }{LBases (for IsGeomLattice)}}{9}{subsection.2.4.11}%
-\contentsline {section}{\numberline {2.5}\textcolor {Chapter }{Properties of geometric lattices}}{9}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}\textcolor {Chapter }{LIsIrreducible (for IsGeomLattice)}}{9}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}\textcolor {Chapter }{LIsBoolean (for IsGeomLattice)}}{10}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}\textcolor {Chapter }{LIsGeneric (for IsGeomLattice)}}{10}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}\textcolor {Chapter }{Operations}}{10}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}\textcolor {Chapter }{LBsOfFlat (for IsGeomLattice, IsList)}}{10}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}\textcolor {Chapter }{LBaseCircuit (for IsGeomLattice,IsList,IsInt)}}{10}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}\textcolor {Chapter }{LIsIsomorphic (for IsGeomLattice,IsGeomLattice)}}{11}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}\textcolor {Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}{11}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}\textcolor {Chapter }{Essentialization (for IsHyperplaneArrangement)}}{11}{subsection.2.6.5}%
-\contentsline {subsection}{\numberline {2.6.6}\textcolor {Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsInt)}}{11}{subsection.2.6.6}%
-\contentsline {subsection}{\numberline {2.6.7}\textcolor {Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsList)}}{12}{subsection.2.6.7}%
-\contentsline {subsection}{\numberline {2.6.8}\textcolor {Chapter }{HArrAddition (for IsHyperplaneArrangement, IsList)}}{12}{subsection.2.6.8}%
-\contentsline {subsection}{\numberline {2.6.9}\textcolor {Chapter }{HArrDeletion (for IsHyperplaneArrangement, IsInt)}}{12}{subsection.2.6.9}%
+\contentsline {section}{\numberline {2.2}\textcolor {Chapter }{Construction of geometric lattices}}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}\textcolor {Chapter }{GeomLattice (for IsList)}}{5}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}\textcolor {Chapter }{Attributes of arrangements}}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}\textcolor {Chapter }{Dimension (for IsHyperplaneArrangement)}}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}\textcolor {Chapter }{Roots (for IsHyperplaneArrangement)}}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}\textcolor {Chapter }{HArrDefField (for IsHyperplaneArrangement)}}{6}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}\textcolor {Chapter }{IntersectionLattice (for IsHyperplaneArrangement)}}{7}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}\textcolor {Chapter }{CharPoly (for IsHyperplaneArrangement)}}{7}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}\textcolor {Chapter }{ExpArr (for IsHyperplaneArrangement)}}{7}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}\textcolor {Chapter }{MSetInvL (for IsHyperplaneArrangement)}}{7}{subsection.2.3.7}%
+\contentsline {section}{\numberline {2.4}\textcolor {Chapter }{Properties of arrangements}}{8}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}\textcolor {Chapter }{IsReal (for IsHyperplaneArrangement)}}{8}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}\textcolor {Chapter }{HArrIsIrreducible (for IsHyperplaneArrangement)}}{8}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}\textcolor {Chapter }{HArrIsGeneric (for IsHyperplaneArrangement)}}{8}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}\textcolor {Chapter }{Attributes of geometric lattices}}{8}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}\textcolor {Chapter }{LGroundSet (for IsGeomLattice)}}{8}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}\textcolor {Chapter }{LAtoms (for IsGeomLattice)}}{8}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}\textcolor {Chapter }{LRank (for IsGeomLattice)}}{9}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}\textcolor {Chapter }{LkFlats (for IsGeomLattice)}}{9}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}\textcolor {Chapter }{LCircuits (for IsGeomLattice)}}{9}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}\textcolor {Chapter }{LRankFunction (for IsGeomLattice)}}{9}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.7}\textcolor {Chapter }{LGraph (for IsGeomLattice)}}{9}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}\textcolor {Chapter }{LAutGroup (for IsGeomLattice)}}{9}{subsection.2.5.8}%
+\contentsline {subsection}{\numberline {2.5.9}\textcolor {Chapter }{LMoebius (for IsGeomLattice)}}{9}{subsection.2.5.9}%
+\contentsline {subsection}{\numberline {2.5.10}\textcolor {Chapter }{LCharPoly (for IsGeomLattice)}}{9}{subsection.2.5.10}%
+\contentsline {subsection}{\numberline {2.5.11}\textcolor {Chapter }{LBases (for IsGeomLattice)}}{10}{subsection.2.5.11}%
+\contentsline {section}{\numberline {2.6}\textcolor {Chapter }{Properties of geometric lattices}}{10}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}\textcolor {Chapter }{LIsIrreducible (for IsGeomLattice)}}{10}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}\textcolor {Chapter }{LIsBoolean (for IsGeomLattice)}}{10}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}\textcolor {Chapter }{LIsGeneric (for IsGeomLattice)}}{10}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}\textcolor {Chapter }{Operations}}{11}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}\textcolor {Chapter }{LBsOfFlat (for IsGeomLattice, IsList)}}{11}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}\textcolor {Chapter }{LBaseCircuit (for IsGeomLattice,IsList,IsInt)}}{11}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}\textcolor {Chapter }{LIsIsomorphic (for IsGeomLattice,IsGeomLattice)}}{11}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}\textcolor {Chapter }{IsLEquiv (for IsHyperplaneArrangement,IsHyperplaneArrangement)}}{11}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}\textcolor {Chapter }{Essentialization (for IsHyperplaneArrangement)}}{12}{subsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.7.6}\textcolor {Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsInt)}}{12}{subsection.2.7.6}%
+\contentsline {subsection}{\numberline {2.7.7}\textcolor {Chapter }{HArrRestriction (for IsHyperplaneArrangement, IsList)}}{12}{subsection.2.7.7}%
+\contentsline {subsection}{\numberline {2.7.8}\textcolor {Chapter }{HArrAddition (for IsHyperplaneArrangement, IsList)}}{12}{subsection.2.7.8}%
+\contentsline {subsection}{\numberline {2.7.9}\textcolor {Chapter }{HArrDeletion (for IsHyperplaneArrangement, IsInt)}}{12}{subsection.2.7.9}%
 \contentsline {chapter}{\numberline {3}\textcolor {Chapter }{Special arrangements}}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\textcolor {Chapter }{Global methods}}{13}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}\textcolor {Chapter }{AGpql}}{13}{subsection.3.1.1}%
@@ -173,29 +175,44 @@
 \contentsline {subsection}{\numberline {13.1.1}\textcolor {Chapter }{LIsOrientable (for IsGeomLattice)}}{54}{subsection.13.1.1}%
 \contentsline {subsection}{\numberline {13.1.2}\textcolor {Chapter }{LOrientations (for IsGeomLattice)}}{54}{subsection.13.1.2}%
 \contentsline {subsection}{\numberline {13.1.3}\textcolor {Chapter }{LFindOrientations (for IsGeomLattice, IsBool)}}{54}{subsection.13.1.3}%
-\contentsline {chapter}{\numberline {14}\textcolor {Chapter }{SAT\texttt {\symbol {45}}problems}}{56}{chapter.14}%
-\contentsline {section}{\numberline {14.1}\textcolor {Chapter }{Construction}}{56}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}\textcolor {Chapter }{SATProblem (for IsInt,IsList, IsBool)}}{56}{subsection.14.1.1}%
-\contentsline {section}{\numberline {14.2}\textcolor {Chapter }{Attributes}}{56}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}\textcolor {Chapter }{SATnvariables (for IsSATProblem)}}{56}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}\textcolor {Chapter }{SATClauses (for IsSATProblem)}}{56}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}\textcolor {Chapter }{SATallSolutions (for IsSATProblem)}}{56}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}\textcolor {Chapter }{SATCNFStr (for IsSATProblem)}}{56}{subsection.14.2.4}%
-\contentsline {subsection}{\numberline {14.2.5}\textcolor {Chapter }{SATSolutions (for IsSATProblem)}}{57}{subsection.14.2.5}%
-\contentsline {section}{\numberline {14.3}\textcolor {Chapter }{Operations}}{57}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}\textcolor {Chapter }{SATSolve (for IsSATProblem)}}{57}{subsection.14.3.1}%
-\contentsline {chapter}{\numberline {15}\textcolor {Chapter }{Greedy search for arrangements}}{58}{chapter.15}%
-\contentsline {section}{\numberline {15.1}\textcolor {Chapter }{Constructions}}{58}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat)}}{58}{subsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.1.2}\textcolor {Chapter }{HArrGreedySearchSubArr (for IsRecord)}}{58}{subsection.15.1.2}%
-\contentsline {subsection}{\numberline {15.1.3}\textcolor {Chapter }{CharPolySplits}}{60}{subsection.15.1.3}%
-\contentsline {subsection}{\numberline {15.1.4}\textcolor {Chapter }{DistMSetInvL}}{60}{subsection.15.1.4}%
-\contentsline {section}{\numberline {15.2}\textcolor {Chapter }{Attributes}}{60}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{60}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{60}{subsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{60}{subsection.15.2.3}%
-\contentsline {subsection}{\numberline {15.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{61}{subsection.15.2.4}%
-\contentsline {subsection}{\numberline {15.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{61}{subsection.15.2.5}%
-\contentsline {subsection}{\numberline {15.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{61}{subsection.15.2.6}%
-\contentsline {chapter}{References}{63}{chapter*.2}%
-\contentsline {chapter}{Index}{64}{section*.3}%
+\contentsline {chapter}{\numberline {14}\textcolor {Chapter }{The Aomoto complex}}{56}{chapter.14}%
+\contentsline {section}{\numberline {14.1}\textcolor {Chapter }{Orlik{\textendash }Solomon combinatorics of geometric lattices}}{56}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}\textcolor {Chapter }{LBrokenCircuits (for IsGeomLattice)}}{56}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}\textcolor {Chapter }{LNBCSets (for IsGeomLattice)}}{56}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}\textcolor {Chapter }{LOrlikSolomonBetti (for IsGeomLattice)}}{57}{subsection.14.1.3}%
+\contentsline {section}{\numberline {14.2}\textcolor {Chapter }{Construction of the Aomoto complex}}{57}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}\textcolor {Chapter }{AomotoComplex (for IsGeomLattice, IsList)}}{57}{subsection.14.2.1}%
+\contentsline {section}{\numberline {14.3}\textcolor {Chapter }{Attributes of the Aomoto complex}}{57}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}\textcolor {Chapter }{AomotoLattice (for IsAomotoComplex)}}{57}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}\textcolor {Chapter }{AomotoField (for IsAomotoComplex)}}{58}{subsection.14.3.2}%
+\contentsline {subsection}{\numberline {14.3.3}\textcolor {Chapter }{AomotoWeights (for IsAomotoComplex)}}{58}{subsection.14.3.3}%
+\contentsline {subsection}{\numberline {14.3.4}\textcolor {Chapter }{AomotoBasis (for IsAomotoComplex)}}{58}{subsection.14.3.4}%
+\contentsline {subsection}{\numberline {14.3.5}\textcolor {Chapter }{AomotoDifferentials (for IsAomotoComplex)}}{58}{subsection.14.3.5}%
+\contentsline {subsection}{\numberline {14.3.6}\textcolor {Chapter }{AomotoBettiNumbers (for IsAomotoComplex)}}{58}{subsection.14.3.6}%
+\contentsline {subsection}{\numberline {14.3.7}\textcolor {Chapter }{AomotoCohomology (for IsAomotoComplex)}}{58}{subsection.14.3.7}%
+\contentsline {chapter}{\numberline {15}\textcolor {Chapter }{SAT\texttt {\symbol {45}}problems}}{59}{chapter.15}%
+\contentsline {section}{\numberline {15.1}\textcolor {Chapter }{Construction}}{59}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}\textcolor {Chapter }{SATProblem (for IsInt,IsList, IsBool)}}{59}{subsection.15.1.1}%
+\contentsline {section}{\numberline {15.2}\textcolor {Chapter }{Attributes}}{59}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}\textcolor {Chapter }{SATnvariables (for IsSATProblem)}}{59}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}\textcolor {Chapter }{SATClauses (for IsSATProblem)}}{59}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}\textcolor {Chapter }{SATallSolutions (for IsSATProblem)}}{59}{subsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.2.4}\textcolor {Chapter }{SATCNFStr (for IsSATProblem)}}{59}{subsection.15.2.4}%
+\contentsline {subsection}{\numberline {15.2.5}\textcolor {Chapter }{SATSolutions (for IsSATProblem)}}{60}{subsection.15.2.5}%
+\contentsline {section}{\numberline {15.3}\textcolor {Chapter }{Operations}}{60}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}\textcolor {Chapter }{SATSolve (for IsSATProblem)}}{60}{subsection.15.3.1}%
+\contentsline {chapter}{\numberline {16}\textcolor {Chapter }{Greedy search for arrangements}}{61}{chapter.16}%
+\contentsline {section}{\numberline {16.1}\textcolor {Chapter }{Constructions}}{61}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}\textcolor {Chapter }{HArrGreedySearch (for IsInt,IsInt,IsField,IsFunction,IsInt, IsRat)}}{61}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}\textcolor {Chapter }{HArrGreedySearchSubArr (for IsRecord)}}{61}{subsection.16.1.2}%
+\contentsline {subsection}{\numberline {16.1.3}\textcolor {Chapter }{CharPolySplits}}{63}{subsection.16.1.3}%
+\contentsline {subsection}{\numberline {16.1.4}\textcolor {Chapter }{DistMSetInvL}}{63}{subsection.16.1.4}%
+\contentsline {section}{\numberline {16.2}\textcolor {Chapter }{Attributes}}{63}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}\textcolor {Chapter }{GreedySearchRun (for IsHArrGreedySearch)}}{63}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}\textcolor {Chapter }{GreedySearchGF (for IsHArrGreedySearch)}}{63}{subsection.16.2.2}%
+\contentsline {subsection}{\numberline {16.2.3}\textcolor {Chapter }{GreedySearchDimension (for IsHArrGreedySearch)}}{63}{subsection.16.2.3}%
+\contentsline {subsection}{\numberline {16.2.4}\textcolor {Chapter }{GreedySearchNOfHs (for IsHArrGreedySearch)}}{64}{subsection.16.2.4}%
+\contentsline {subsection}{\numberline {16.2.5}\textcolor {Chapter }{GreedySearchTargetFct (for IsHArrGreedySearch)}}{64}{subsection.16.2.5}%
+\contentsline {subsection}{\numberline {16.2.6}\textcolor {Chapter }{GreedySearchMaxIterations (for IsHArrGreedySearch)}}{64}{subsection.16.2.6}%
+\contentsline {chapter}{References}{66}{chapter*.2}%
+\contentsline {chapter}{Index}{67}{section*.3}%

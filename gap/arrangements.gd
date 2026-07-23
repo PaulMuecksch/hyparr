@@ -71,6 +71,39 @@ DeclareSynonym("Arr",HyperplaneArrangement);
 
 #################################
 ##
+#! @Section Construction of geometric lattices
+##
+#################################
+
+#! @Arguments gs
+#! @Returns An object of type <C>IsGeomLattice</C>.
+#! @Description
+#!  Constructs a geometric lattice from a list <A>gs</A> of lists of lists
+#!  giving its ground set (see <Ref Attr="LGroundSet" Label="for IsGeomLattice" Style="Text"/>).
+#!
+#!  The entry <C>gs[k]</C> contains all flats of rank $k$, where each flat is
+#!  given by the list of the indices of the atoms below it.
+#!
+#!  The flats are converted into sets of positive integers, the rank of the
+#!  lattice is the number of levels <C>Length(gs)</C> and the atoms are read
+#!  off from the first level <C>gs[1]</C>.
+#!
+#!  No check is performed whether <A>gs</A> really defines a geometric lattice.
+#!
+#! @BeginExampleSession
+#! gap> L:=GeomLattice([[[1],[2],[3]],[[1,2],[1,3],[2,3]],[[1,2,3]]]);
+#! <Geometric lattice: 3 atoms, rank 3>
+#! gap> LGroundSet(L);
+#! [ [ [ 1 ], [ 2 ], [ 3 ] ],
+#!   [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
+#!   [ [ 1, 2, 3 ] ] ]
+#! gap> LCharPoly(L);
+#! t^3-3*t^2+3*t-1
+#! @EndExampleSession
+DeclareOperation("GeomLattice", [ IsList ]);
+
+#################################
+##
 #! @Section Attributes of arrangements
 ##
 #################################
