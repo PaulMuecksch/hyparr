@@ -292,6 +292,18 @@ DeclareProperty("HasSimpleSimplex", IsOrientedMatroid);
 DeclareProperty("HasSimpleTriangle", IsOrientedMatroid);
 
 
+#! @Arguments OM
+#! @Returns a list of integers, or fail
+#! @Description
+#! Returns <E>exponents</E> of the arrangement $\mathcal{A}$ if
+#! the characteristic polynomial factors over the integers.
+#! @BeginExampleSession
+#! gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);; Exp(O);
+#! [ 1, 2 ]
+#! @EndExampleSession
+DeclareAttribute("OMExp", IsOrientedMatroid);
+
+
 #################################
 ##
 #! @Section Operations

@@ -22,6 +22,7 @@ ReadPackage("hyparr","gap/drawarrs.gi");
 ReadPackage("hyparr","gap/realizationspace.gi");
 ReadPackage("hyparr","gap/greedy.gi");
 ReadPackage("hyparr","gap/vgalgebra.gi");
+ReadPackage("hyparr","gap/aomoto.gi");
 ReadPackage("hyparr","gap/findorientations.gi");
 ReadPackage("hyparr","gap/satproblems.gi");
 

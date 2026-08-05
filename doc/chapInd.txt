@@ -87,6 +87,7 @@
   [2XLGenSet[102X, for IsGeomLattice 12.2-1 
   [2XLGraph[102X, for IsGeomLattice 2.5-7 
   [2XLGroundSet[102X, for IsGeomLattice 2.5-1 
+  [2XLHasGenericAtom[102X, for IsGeomLattice 2.6-4 
   [2XLIsBoolean[102X, for IsGeomLattice 2.6-2 
   [2XLIsGeneric[102X, for IsGeomLattice 2.6-3 
   [2XLIsGenSet[102X, for IsGeomLattice,IsList 12.4-2 
@@ -117,6 +118,7 @@
   [2XOMCircuits[102X, for IsOrientedMatroid 4.2-6 
   [2XOMCocircuits[102X, for IsOrientedMatroid 4.2-5 
   [2XOMCovectors[102X, for IsOrientedMatroid 4.2-9 
+  [2XOMExp[102X, for IsOrientedMatroid 4.3-4 
   [2XOMGeomLattice[102X, for IsOrientedMatroid 4.2-4 
   [2XOMGroundSet[102X, for IsOrientedMatroid 4.2-2 
   [2XOMIsLinear[102X, for IsOrientedMatroid 4.3-1 

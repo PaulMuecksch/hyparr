@@ -255,7 +255,7 @@ end);
 InstallMethod(LFindOrientations,
     [IsGeomLattice, IsBool],
 function(L,findall)
-local Bases, BsIDs, chiros, r,n,
+local Bases, BsIDs, chiros, r,n, OMs, EqRel,
     G, ActionOnChi, OrbitsOnChiros, UBs;
     r := LRank(L);
     n := Length(LAtoms(L));
@@ -264,20 +264,32 @@ local Bases, BsIDs, chiros, r,n,
     BsIDs:=List(Bases,B->Position(UBs,B));
     if findall=false then
         chiros := List(SATOrientations(r,n,Bases,false),s->BsSIDsToChi(r,n,BsIDs, s));
+        OMs := List(chiros,chi->OM(r,n,chi));
     else
         chiros := List(SATOrientations(r,n,Bases,findall),s->BsSIDsToChi(r,n,BsIDs, s));
         G:=LAutGroup(L);
-        ActionOnChi := function(chi, g)
-        local PSignB;
-            PSignB := B->SignPerm(PermList(List([1..Length(B)],x->Position(OnSets(B,g),B[x]^g))));
-            return List(UBs,B->PSignB(B)*chi[Position(UBs,OnSets(B,g))]);
-        end;
+        if Size(G)<=100000 then
+            ActionOnChi := function(chi, g)
+            local PSignB;
+                PSignB := B->SignPerm(PermList(List([1..Length(B)],x->Position(OnSets(B,g),B[x]^g))));
+                return List(UBs,B->PSignB(B)*chi[Position(UBs,OnSets(B,g))]);
+            end;
 
-        OrbitsOnChiros := Orbits(G,chiros,ActionOnChi);
-        chiros := List(OrbitsOnChiros,Orb->Orb[1]);;
+            OrbitsOnChiros := Orbits(G,chiros,ActionOnChi);
+            chiros := List(OrbitsOnChiros,Orb->Orb[1]);;
+            OMs := List(chiros,chi->OM(r,n,chi));   
+        else
+            OMs := List(chiros,chi->OM(r,n,chi));  
+            EqRel := Combinations([1..Length(OMs)],2);
+            EqRel := Filtered(EqRel,x->IsOMEquiv(OMs[x[1]],OMs[x[2]]));
+            EqRel := EquivalenceRelationByPairs(Domain([1..Length(OMs)]),EqRel);
+            OMs := List(EquivalenceClasses(EqRel),c->OMs[Representative(c)]);
+        fi;
     fi;;
 
-    SetLOrientations(L,List(chiros,chi->OM(r,n,chi)));    
+    
+
+    SetLOrientations(L,OMs);    
 
     return LOrientations(L);
 end);

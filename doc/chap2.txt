@@ -358,6 +358,17 @@
     [4X[28Xfalse[128X[104X
   [4X[32X[104X
   
+  [1X2.6-4 LHasGenericAtom[101X
+  
+  [33X[1;0Y[29X[2XLHasGenericAtom[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines,  if  L has a generic atom, that is, an element of the ground set
+  such that all hyperplanes containing it are boolean.[133X
+  
+  [4X[32X  Example  [32X[104X
+  [4X[32X[104X
+  
   
   [1X2.7 [33X[0;0YOperations[133X[101X
   

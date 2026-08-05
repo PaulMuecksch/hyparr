@@ -471,6 +471,21 @@ false
 </ManSection>
 
 
+<ManSection>
+  <Prop Arg="L" Name="LHasGenericAtom" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L has a generic atom,
+ that is, an element of the ground set such that all hyperplanes containing it are boolean.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

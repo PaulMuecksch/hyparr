@@ -659,6 +659,23 @@ local r, Lk, rfct;
 	return true;
 end);
 
+InstallMethod(LHasGenericAtom,
+    [IsGeomLattice],
+function(L)
+local r, Lk, Lka, rfct, a;
+	r := LRank(L);
+	Lk := LkFlats(L)(r-1);
+	rfct := LRankFunction(L);
+	for a in LAtoms(L) do
+        Lka := Filtered(Lk,m->a in m);
+        if ForAll(Lka,m->Length(m)=rfct(m)) then
+            return true;
+        fi;
+	od;
+	return false;
+end);
+
+
 
 InstallMethod(HArrIsGeneric,
     [IsHyperplaneArrangement],

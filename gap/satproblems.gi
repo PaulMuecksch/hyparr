@@ -62,32 +62,32 @@ local type;
     );
 end);
 
-SATSolsCUTOFF := 100;
+BindGlobal("HypArr_SATSolsCUTOFF", 500);
 
 # extract the solutions from the text output of an SAT-solver
 InstallGlobalFunction(ParseSATSolutions,
 function(text)
-local text_cutoff, pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
-    if Length(text) >= 10000*SATSolsCUTOFF then
-        text_cutoff := text{[1..10000*SATSolsCUTOFF]};;
-    else
-        text_cutoff := text;;
-    fi;;
+local pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws, len;
+    len := Length(text);
 
-    pss:= Positions(text_cutoff,'s');
-    pss := Filtered(pss,x->text_cutoff{[x..x+12]} = "s SATISFIABLE");
-    if Length(pss)>SATSolsCUTOFF then
-        pss:=pss{[1..SATSolsCUTOFF]};;
-    fi;;
+    pss:= Positions(text,'s');
+    pss := Filtered(pss,x-> x+12 <= len and text{[x..x+12]} = "s SATISFIABLE");
 
+    # locate the terminating " 0" of each solution; a solution whose
+    # terminator is missing (output truncated) is discarded rather than
+    # scanned past the end of the string
     pse:=[];;
     for ps in pss do
-        i:=ps;
-        while text_cutoff{[i-1,i]}<>" 0" do
+        i:=ps+14;
+        while i <= len and text{[i-1,i]}<>" 0" do
             i:=i+1;
         od;
+        if i > len then
+            break;
+        fi;
         Add(pse,i);
     od;
+    pss := pss{[1..Length(pse)]};;
 
     # pse := Positions(text,'c');
     # pse := Filtered(pse,x->text{[x..x+12]} = "c initialized");
@@ -98,7 +98,7 @@ local text_cutoff, pss, pse, slist, i, ps, pe, tn, pslb, sls, sl, tnn, j, pws;
     for i in [1..Length(pss)] do
         ps:=pss[i]+14;
         pe := pse[i];
-        tn := text_cutoff{[ps..pe]};
+        tn := text{[ps..pe]};
         # Print(tn,"\n\n");;
         pslb := Union([1],Positions(tn,'\n'),[Length(tn)+1]);;
         sls := [];;
@@ -120,29 +120,28 @@ end);
 InstallMethod(SATSolve,
     [IsSATProblem],
 function(SProb)
-local cnfstr, picosat, TempDir, cnffile, strresult, 
-    out, sols, inputstrn;
+local cnfstr, picosat, picoenum, dir, cnffile, strresult, 
+    out, sols, inputstr;
 
     picosat := PathSystemProgram("picosat");
+    picoenum := Filename(DirectoriesPackagePrograms("hyparr"),"picoenum");
     cnfstr := SATCNFStr(SProb);
-    # TempDir:=DirectoryTemporary();
-    TempDir:=DirectoryCurrent();
-    # cnffile := Filename(TempDir,"cnfpico");
+    # dir:=DirectoryTemporary();
+    dir:=DirectoryCurrent();
+    # cnffile := Filename(dir,"cnfpico");
     # PrintTo(cnffile,cnfstr);
-    inputstrn := InputTextString(cnfstr);
+    inputstr := InputTextString(cnfstr);
     strresult:="";; 
     out := OutputTextString(strresult,true);
 
-    # if SATallSolutions(SProb) then
-    #     Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v","--all"]);;
-    # else
-    #     Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v"]);;
-    # fi; 
-
     if SATallSolutions(SProb) then
-        Process(TempDir, picosat, inputstrn, out, ["-v","--all"]);;
+        Process(dir, picoenum, inputstr, out, [String(HypArr_SATSolsCUTOFF)]);;
+        # Process(dir, picosat, inputstr, out, ["--all"]);;
+        # Process(dir, picosat, InputTextFile(cnffile), out, ["-v","--all"]);;
     else
-        Process(TempDir, picosat, inputstrn, out, ["-v"]);;
+        Process(dir, picoenum, inputstr, out, ["1"]);;
+        # Process(dir, picosat, inputstr, out, []);;
+        # Process(dir, picosat, InputTextFile(cnffile), out, ["-v"]);;
     fi; 
 
     # RemoveFile(cnffile);
@@ -155,37 +154,6 @@ local cnfstr, picosat, TempDir, cnffile, strresult,
 
     return sols;
 end);
-
-
-# InstallMethod(SATSolutions,
-#     [ SATProblem ],
-#     SProb -> SProb!.sols);
-
-
-#########################################################################
-
-InstallGlobalFunction(SolveSAT,
-function(nvar, ClausesList)
-local cnfstr, picosat, TempDir, cnffile, strresult, 
-    out, sols;
-
-    cnfstr := ClausesToCNFStr(nvar,ClausesList);
-
-    picosat := PathSystemProgram("picosat");
-    TempDir:=DirectoryTemporary();
-    cnffile := Filename(TempDir,"cnfpico");
-    PrintTo(cnffile,cnfstr);
-
-    strresult:="";; 
-    out := OutputTextString(strresult,true);
-
-    Process(TempDir, picosat, InputTextFile(cnffile), out, ["-v","--all"]);;
-
-    sols := ParseSATSolutions(strresult);
-
-    return sols;
-end);
-
 
 
 #########################################################################

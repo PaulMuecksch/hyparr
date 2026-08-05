@@ -63,8 +63,8 @@ local EvalFct;
             return fail;
         fi;
         genMinors := GeneratorsOfIdeal(RSIdealMinors(RS));
-        if ForAny(genMinors,f->Value(f,vars,p)<>Zero(RSDefField)) or
-            ForAny(RSNonMinors(RS),f->Value(f,vars,p)=Zero(RSDefField)) then
+        if ForAny(genMinors,f->Value(f,vars,p)<>Zero(RSDefField(RS))) or
+            ForAny(RSNonMinors(RS),f->Value(f,vars,p)=Zero(RSDefField(RS))) then
             return fail;
         fi;
         return Arr(List(RSCoeffMat(RS),v->List(v,x->Value(x,vars,p))));

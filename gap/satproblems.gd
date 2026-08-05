@@ -86,9 +86,14 @@ DeclareAttribute("SATSolutions",IsSATProblem, "mutable");
 DeclareOperation("SATSolve",[IsSATProblem]);
 
 
-DeclareGlobalFunction("SATOrientations");
+
+#################################
+##
+# @Section Global and auxillary functions
+##
+#################################
+
 DeclareGlobalFunction("ClausesToCNFStr");
-DeclareGlobalFunction("SolveSAT");
 DeclareGlobalFunction("ParseSATSolutions");
 
 

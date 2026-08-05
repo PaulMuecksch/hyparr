@@ -99,7 +99,7 @@
 \vfill
 
 {\Huge  0.26.07 \mbox{}}\\[1cm]
-{ 23 July 2026 \mbox{}}\\[1cm]
+{ 30 July 2026 \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Paul M{\"u}cksch\\
     \mbox{}}}\\
@@ -721,6 +721,25 @@ are boolean.
   <Geometric lattice: 5 atoms, rank 3>
   !gapprompt@gap>| !gapinput@LIsGeneric(L);|
   false
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{LHasGenericAtom (for IsGeomLattice)}}
+\logpage{[ 2, 6, 4 ]}\nobreak
+\hyperdef{L}{X87DA5D308705363C}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{LHasGenericAtom({\mdseries\slshape L})\index{LHasGenericAtom@\texttt{LHasGenericAtom}!for IsGeomLattice}
+\label{LHasGenericAtom:for IsGeomLattice}
+}\hfill{\scriptsize (property)}}\\
+\textbf{\indent Returns:\ }
+true or false. 
+
+
+
+ Determines, if L has a generic atom, that is, an element of the ground set
+such that all hyperplanes containing it are boolean. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
 \end{Verbatim}
  }
 
@@ -1443,6 +1462,26 @@ true or false.
  Checks all rank $3$ localizations for a simple simplex, i.e. a simple triangle. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   
+\end{Verbatim}
+ }
+
+ 
+
+\subsection{\textcolor{Chapter }{OMExp (for IsOrientedMatroid)}}
+\logpage{[ 4, 3, 4 ]}\nobreak
+\hyperdef{L}{X7A4EAD7B8656B78A}{}
+{\noindent\textcolor{FuncColor}{$\triangleright$\enspace\texttt{OMExp({\mdseries\slshape OM})\index{OMExp@\texttt{OMExp}!for IsOrientedMatroid}
+\label{OMExp:for IsOrientedMatroid}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+a list of integers, or fail 
+
+
+
+ Returns \emph{exponents} of the arrangement $\mathcal{A}$ if the characteristic polynomial factors over the integers. 
+\begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
+  !gapprompt@gap>| !gapinput@O:=OrientedMatroid([[1,0],[0,1],[1,1]]);; Exp(O);|
+  [ 1, 2 ]
 \end{Verbatim}
  }
 

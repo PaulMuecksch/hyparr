@@ -86,6 +86,7 @@
 \makelabel{hyparr:LIsIrreducible for IsGeomLattice}{2.6.1}{X85C9C1F47977DAD5}
 \makelabel{hyparr:LIsBoolean for IsGeomLattice}{2.6.2}{X8444E8837E952FE4}
 \makelabel{hyparr:LIsGeneric for IsGeomLattice}{2.6.3}{X7ACA5D857F2A0913}
+\makelabel{hyparr:LHasGenericAtom for IsGeomLattice}{2.6.4}{X87DA5D308705363C}
 \makelabel{hyparr:LBsOfFlat for IsGeomLattice, IsList}{2.7.1}{X796101CA7ABE629F}
 \makelabel{hyparr:LBaseCircuit for IsGeomLattice,IsList,IsInt}{2.7.2}{X8121D57E7CFC5D2F}
 \makelabel{hyparr:LIsIsomorphic for IsGeomLattice,IsGeomLattice}{2.7.3}{X83FBDD9A843D6DC7}
@@ -114,6 +115,7 @@
 \makelabel{hyparr:OMIsLinear for IsOrientedMatroid}{4.3.1}{X86B70496781D3884}
 \makelabel{hyparr:HasSimpleSimplex for IsOrientedMatroid}{4.3.2}{X7D5893807BB9785E}
 \makelabel{hyparr:HasSimpleTriangle for IsOrientedMatroid}{4.3.3}{X80F069657B2045C0}
+\makelabel{hyparr:OMExp for IsOrientedMatroid}{4.3.4}{X7A4EAD7B8656B78A}
 \makelabel{hyparr:IsLEquiv for IsOrientedMatroid,IsOrientedMatroid}{4.4.1}{X7EE74EA57A779612}
 \makelabel{hyparr:HasSimpleSimplexRk for IsOrientedMatroid, IsInt}{4.4.2}{X81DBFBF67AC497C4}
 \makelabel{hyparr:OMLocalizationRk for IsOrientedMatroid, IsList, IsInt}{4.4.3}{X7C0D5D2A7C058B20}

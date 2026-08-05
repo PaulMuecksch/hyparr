@@ -190,6 +190,8 @@
     \subitem for IsGeomLattice, \hyperpage{9}
   \item \texttt  {LGroundSet}
     \subitem for IsGeomLattice, \hyperpage{8}
+  \item \texttt  {LHasGenericAtom}
+    \subitem for IsGeomLattice, \hyperpage{11}
   \item \texttt  {LIsBoolean}
     \subitem for IsGeomLattice, \hyperpage{10}
   \item \texttt  {LIsGeneric}
@@ -254,6 +256,8 @@
     \subitem for IsOrientedMatroid, \hyperpage{17}
   \item \texttt  {OMCovectors}
     \subitem for IsOrientedMatroid, \hyperpage{18}
+  \item \texttt  {OMExp}
+    \subitem for IsOrientedMatroid, \hyperpage{19}
   \item \texttt  {OMGeomLattice}
     \subitem for IsOrientedMatroid, \hyperpage{16}
   \item \texttt  {OMGroundSet}

@@ -9,7 +9,7 @@
                                     0.26.07
   
   
-                                  23 July 2026
+                                  30 July 2026
   
   
                                   Paul Mücksch
@@ -65,6 +65,7 @@
       2.6-1 LIsIrreducible
       2.6-2 LIsBoolean
       2.6-3 LIsGeneric
+      2.6-4 LHasGenericAtom
     2.7 [33X[0;0YOperations[133X
       2.7-1 LBsOfFlat
       2.7-2 LBaseCircuit
@@ -100,6 +101,7 @@
       4.3-1 OMIsLinear
       4.3-2 HasSimpleSimplex
       4.3-3 HasSimpleTriangle
+      4.3-4 OMExp
     4.4 [33X[0;0YOperations[133X
       4.4-1 IsLEquiv
       4.4-2 HasSimpleSimplexRk

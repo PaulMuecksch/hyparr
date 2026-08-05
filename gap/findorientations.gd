@@ -9,6 +9,8 @@
 DeclareGlobalFunction("BasesToCNF");
 DeclareGlobalFunction("BsSIDsToChi");
 
+DeclareGlobalFunction("SATOrientations");
+
 #################################
 ##
 #! @Section Orientations of a given geometric lattice

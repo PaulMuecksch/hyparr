@@ -396,6 +396,16 @@ DeclareProperty("LIsBoolean", IsGeomLattice );
 #! @EndExampleSession
 DeclareProperty("LIsGeneric", IsGeomLattice );
 
+
+#! @Arguments L
+#! @Returns true or false.
+#! @Description
+#! Determines, if L has a generic atom,
+#! that is, an element of the ground set such that all hyperplanes containing it are boolean.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareProperty("LHasGenericAtom", IsGeomLattice );
+
 #################################
 ##
 #! @Section Operations

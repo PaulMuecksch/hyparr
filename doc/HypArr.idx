@@ -24,6 +24,7 @@
 \indexentry{LIsIrreducible@\texttt  {LIsIrreducible}!for IsGeomLattice|hyperpage}{10}
 \indexentry{LIsBoolean@\texttt  {LIsBoolean}!for IsGeomLattice|hyperpage}{10}
 \indexentry{LIsGeneric@\texttt  {LIsGeneric}!for IsGeomLattice|hyperpage}{10}
+\indexentry{LHasGenericAtom@\texttt  {LHasGenericAtom}!for IsGeomLattice|hyperpage}{11}
 \indexentry{LBsOfFlat@\texttt  {LBsOfFlat}!for IsGeomLattice, IsList|hyperpage}{11}
 \indexentry{LBaseCircuit@\texttt  {LBaseCircuit}!for IsGeomLattice,IsList,IsInt|hyperpage}{11}
 \indexentry{LIsIsomorphic@\texttt  {LIsIsomorphic}!for IsGeomLattice,IsGeomLattice|hyperpage}{11}
@@ -52,6 +53,7 @@
 \indexentry{OMIsLinear@\texttt  {OMIsLinear}!for IsOrientedMatroid|hyperpage}{19}
 \indexentry{HasSimpleSimplex@\texttt  {HasSimpleSimplex}!for IsOrientedMatroid|hyperpage}{19}
 \indexentry{HasSimpleTriangle@\texttt  {HasSimpleTriangle}!for IsOrientedMatroid|hyperpage}{19}
+\indexentry{OMExp@\texttt  {OMExp}!for IsOrientedMatroid|hyperpage}{19}
 \indexentry{IsLEquiv@\texttt  {IsLEquiv}!for IsOrientedMatroid,IsOrientedMatroid|hyperpage}{20}
 \indexentry{HasSimpleSimplexRk@\texttt  {HasSimpleSimplexRk}!for IsOrientedMatroid, IsInt|hyperpage}{20}
 \indexentry{OMLocalizationRk@\texttt  {OMLocalizationRk}!for IsOrientedMatroid, IsList, IsInt|hyperpage}{20}

@@ -670,6 +670,27 @@ end);
 
 
 ####################################################################################################
+## Exponents, i.e. the char.polynomial factors over Z and these are the roots
+####################################################################################################
+
+
+InstallMethod(OMExp,
+	[ IsOrientedMatroid ],
+function(O)
+local expO;
+	if IsBound(O!.exp) then
+		return O!.exp;
+	fi;
+    expO:=List(facQ(LCharPoly(OMGeomLattice(O))),x->-Value(x,0));
+    if Length(expO)<>OMRank(O) then
+        return fail;
+    fi;
+    return expO;
+end);
+
+
+
+####################################################################################################
 ## Wiring diagrams
 ####################################################################################################
 

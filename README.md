@@ -52,6 +52,8 @@ The following additional GAP packages are not required, but suggested::
 
  * cddintereface >= 2025
 
+ For the computations of orientations of a given geometric lattice, the SAT-solver picosat needs to be installed and 
+ the sourc-file /src/picoenum.c needs to be compiled.
 
 ## Documentation
 

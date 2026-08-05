@@ -32,6 +32,7 @@
 \contentsline {subsection}{\numberline {2.6.1}\textcolor {Chapter }{LIsIrreducible (for IsGeomLattice)}}{10}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}\textcolor {Chapter }{LIsBoolean (for IsGeomLattice)}}{10}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}\textcolor {Chapter }{LIsGeneric (for IsGeomLattice)}}{10}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}\textcolor {Chapter }{LHasGenericAtom (for IsGeomLattice)}}{11}{subsection.2.6.4}%
 \contentsline {section}{\numberline {2.7}\textcolor {Chapter }{Operations}}{11}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}\textcolor {Chapter }{LBsOfFlat (for IsGeomLattice, IsList)}}{11}{subsection.2.7.1}%
 \contentsline {subsection}{\numberline {2.7.2}\textcolor {Chapter }{LBaseCircuit (for IsGeomLattice,IsList,IsInt)}}{11}{subsection.2.7.2}%
@@ -67,6 +68,7 @@
 \contentsline {subsection}{\numberline {4.3.1}\textcolor {Chapter }{OMIsLinear (for IsOrientedMatroid)}}{19}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}\textcolor {Chapter }{HasSimpleSimplex (for IsOrientedMatroid)}}{19}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}\textcolor {Chapter }{HasSimpleTriangle (for IsOrientedMatroid)}}{19}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}\textcolor {Chapter }{OMExp (for IsOrientedMatroid)}}{19}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}\textcolor {Chapter }{Operations}}{20}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}\textcolor {Chapter }{IsLEquiv (for IsOrientedMatroid,IsOrientedMatroid)}}{20}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}\textcolor {Chapter }{HasSimpleSimplexRk (for IsOrientedMatroid, IsInt)}}{20}{subsection.4.4.2}%

@@ -361,6 +361,23 @@ true
 </ManSection>
 
 
+<ManSection>
+  <Attr Arg="OM" Name="OMExp" Label="for IsOrientedMatroid"/>
+ <Returns>a list of integers, or fail
+</Returns>
+ <Description>
+ Returns <E>exponents</E> of the arrangement <Math>\mathcal{A}</Math> if
+ the characteristic polynomial factors over the integers.
+<Example><![CDATA[
+gap> O:=OrientedMatroid([[1,0],[0,1],[1,1]]);; Exp(O);
+[ 1, 2 ]
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
 </Section>
 
 

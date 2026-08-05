@@ -79,6 +79,8 @@ DeclareAttribute("TPBaseTope", IsTopePoset);
 #! @EndExampleSession
 DeclareAttribute("TPRankPoly",IsTopePoset);
 
+DeclareAttribute("TopesFactTPRankPoly",IsOrientedMatroid);
+
 
 #################################
 ##
@@ -93,8 +95,12 @@ DeclareAttribute("TPRankPoly",IsTopePoset);
 ##
 #################################
 
+DeclareOperation("IsFactTPRankPolyExp", [IsTopePoset, IsList]);
+
 
 ##################################################################
+
+DeclareGlobalFunction("PTerm");
 
 # Declare display function for FacePoset objects
 DeclareOperation("ViewObject", [IsTopePoset]);
