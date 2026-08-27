@@ -142,7 +142,7 @@ true
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsSupersolvable</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Determines whether the geometric lattice <var class="Arg">L</var> is <em>supersolvable</em>.</p>
+<p>Determines if the geometric lattice <var class="Arg">L</var> is <em>supersolvable</em>.</p>
 
 
 <div class="example"><pre>
@@ -163,7 +163,7 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsSupersolvable</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Determines whether the arrangement <var class="Arg">A</var> is <em>supersolvable</em>.</p>
+<p>Determines if the arrangement <var class="Arg">A</var> is <em>supersolvable</em>.</p>
 
 
 <div class="example"><pre>
@@ -184,7 +184,7 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMIsSupersolvable</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Determines whether the oriented matroid <var class="Arg">OM</var> is <em>supersolvable</em>.</p>
+<p>Determines if the oriented matroid <var class="Arg">OM</var> is <em>supersolvable</em>.</p>
 
 
 <div class="example"><pre>
@@ -211,7 +211,7 @@ true
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFormal</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Determines whether the arrangement is <em>formal</em> in the sense of Falk-Randell <a href="chapBib.html#biBFalkRandell87_HomotopyArr">[FR87]</a>.</p>
+<p>Determines if the arrangement is <em>formal</em> in the sense of Falk-Randell <a href="chapBib.html#biBFalkRandell87_HomotopyArr">[FR87]</a>.</p>
 
 
 <div class="example"><pre>
@@ -257,7 +257,7 @@ false
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsSimplicial</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false.</p>
 
-<p>Determines whether the real arrangement <var class="Arg">A</var> is <em>simplicial</em>, i.e. if all chambers are simplicial.</p>
+<p>Determines if the real arrangement <var class="Arg">A</var> is <em>simplicial</em>, i.e. if all chambers are simplicial.</p>
 
 
 <div class="example"><pre>
@@ -296,7 +296,7 @@ true
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMSupportsFalkWeights</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Returns: list or fail</p>
 
-<p>Only for oriented matroids of rank 3. Determines, whether <var class="Arg">OM</var> supports a system of weights as described by M. Falk in <a href="chapBib.html#biBFalk1995_Kpi1Arrs">[Fal95]</a>. This implies, that the Salvetti complex (see <code class="func">SalvettiComplex</code> (<a href="chap7.html#X7ED4D5138012EB6C"><span class="RefLink">7.1-1</span></a>)) is apsherical. The functionality of the <strong class="button">cddinterface</strong> package is used, to determine solutions of a system of linear inequalities.</p>
+<p>Only for oriented matroids of rank 3. Determines, if <var class="Arg">OM</var> supports a system of weights as described by M. Falk in <a href="chapBib.html#biBFalk1995_Kpi1Arrs">[Fal95]</a>. This implies, that the Salvetti complex (see <code class="func">SalvettiComplex</code> (<a href="chap7.html#X7ED4D5138012EB6C"><span class="RefLink">7.1-1</span></a>)) is apsherical. The functionality of the <strong class="button">cddinterface</strong> package is used, to determine solutions of a system of linear inequalities.</p>
 
 <p>If the algorithm determines a suitable weight system for <var class="Arg">OM</var>, each list element consists of a weight, and a corner, i.e. a pair of a 2-cell and an adjacent vertex in the bounded complex, given as sign vectors.</p>
 

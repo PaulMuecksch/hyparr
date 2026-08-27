@@ -98,8 +98,8 @@
 {\Huge \textbf{ Computations with hyperplane arrangements \mbox{}}}\\
 \vfill
 
-{\Huge  0.26.07 \mbox{}}\\[1cm]
-{ 30 July 2026 \mbox{}}\\[1cm]
+{\Huge  0.26.08 \mbox{}}\\[1cm]
+{ 27 August 2026 \mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Paul M{\"u}cksch\\
     \mbox{}}}\\
@@ -2192,7 +2192,7 @@ true or false.
 
 
 
- Determines whether the geometric lattice \mbox{\texttt{\mdseries\slshape L}} is \emph{supersolvable}. 
+ Determines if the geometric lattice \mbox{\texttt{\mdseries\slshape L}} is \emph{supersolvable}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@L:=IntersectionLattice(AGpql(2,1,4));|
   <Geometric lattice: 16 atoms, rank 4>
@@ -2218,7 +2218,7 @@ true or false.
 
 
 
- Determines whether the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{supersolvable}. 
+ Determines if the arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{supersolvable}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=AGpql(2,1,4);|
   <HyperplaneArrangement: 16 hyperplanes in 4-space>
@@ -2244,7 +2244,7 @@ true or false.
 
 
 
- Determines whether the oriented matroid \mbox{\texttt{\mdseries\slshape OM}} is \emph{supersolvable}. 
+ Determines if the oriented matroid \mbox{\texttt{\mdseries\slshape OM}} is \emph{supersolvable}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@O:=OrientedMatroid(3,4,[1,1,1,1]);|
   <OrientedMatroid: 4 elements, rank 3>
@@ -2279,7 +2279,7 @@ true or false.
 
 
 
- Determines whether the arrangement is \emph{formal} in the sense of Falk\texttt{\symbol{45}}Randell \cite{FalkRandell87_HomotopyArr}. 
+ Determines if the arrangement is \emph{formal} in the sense of Falk\texttt{\symbol{45}}Randell \cite{FalkRandell87_HomotopyArr}. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A1 := Arr([|
   !gapprompt@>| !gapinput@    [1,0,0],|
@@ -2333,7 +2333,7 @@ true or false.
 
 
 
- Determines whether the real arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{simplicial}, i.e. if all chambers are simplicial. 
+ Determines if the real arrangement \mbox{\texttt{\mdseries\slshape A}} is \emph{simplicial}, i.e. if all chambers are simplicial. 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);|
   <HyperplaneArrangement: 5 hyperplanes in 3-space>
@@ -2384,7 +2384,7 @@ list or fail
 
 
 
- Only for oriented matroids of rank 3. Determines, whether \mbox{\texttt{\mdseries\slshape OM}} supports a system of weights as described by M. Falk in \cite{Falk1995_Kpi1Arrs}. This implies, that the Salvetti complex (see \texttt{SalvettiComplex} (\ref{SalvettiComplex:for IsOrientedMatroid})) is apsherical. The functionality of the \textsc{cddinterface} package is used, to determine solutions of a system of linear inequalities. 
+ Only for oriented matroids of rank 3. Determines, if \mbox{\texttt{\mdseries\slshape OM}} supports a system of weights as described by M. Falk in \cite{Falk1995_Kpi1Arrs}. This implies, that the Salvetti complex (see \texttt{SalvettiComplex} (\ref{SalvettiComplex:for IsOrientedMatroid})) is apsherical. The functionality of the \textsc{cddinterface} package is used, to determine solutions of a system of linear inequalities. 
 
  If the algorithm determines a suitable weight system for \mbox{\texttt{\mdseries\slshape OM}}, each list element consists of a weight, and a corner, i.e. a pair of a
 2\texttt{\symbol{45}}cell and an adjacent vertex in the bounded complex, given

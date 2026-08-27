@@ -91,7 +91,7 @@ gap> LModularFlatsRk(L,3);
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the geometric lattice <A>L</A> is <E>supersolvable</E>.
+ Determines if the geometric lattice <A>L</A> is <E>supersolvable</E>.
 <Example><![CDATA[
 gap> L:=IntersectionLattice(AGpql(2,1,4));
 <Geometric lattice: 16 atoms, rank 4>
@@ -113,7 +113,7 @@ false
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the arrangement <A>A</A> is <E>supersolvable</E>.
+ Determines if the arrangement <A>A</A> is <E>supersolvable</E>.
 <Example><![CDATA[
 gap> A:=AGpql(2,1,4);
 <HyperplaneArrangement: 16 hyperplanes in 4-space>
@@ -135,7 +135,7 @@ false
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the oriented matroid <A>OM</A> is <E>supersolvable</E>.
+ Determines if the oriented matroid <A>OM</A> is <E>supersolvable</E>.
 <Example><![CDATA[
 gap> O:=OrientedMatroid(3,4,[1,1,1,1]);
 <OrientedMatroid: 4 elements, rank 3>
@@ -165,7 +165,7 @@ true
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the arrangement is <E>formal</E>
+ Determines if the arrangement is <E>formal</E>
  in the sense of Falk-Randell <Cite Key="FalkRandell87_HomotopyArr"/>.
 <Example><![CDATA[
 gap> A1 := Arr([
@@ -215,7 +215,7 @@ false
  <Returns>true or false.
 </Returns>
  <Description>
- Determines whether the real arrangement <A>A</A> is <E>simplicial</E>,
+ Determines if the real arrangement <A>A</A> is <E>simplicial</E>,
  i.e. if all chambers are simplicial.
 <Example><![CDATA[
 gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);
@@ -260,7 +260,7 @@ true
 </Returns>
  <Description>
   Only for oriented matroids of rank 3.
-  Determines, whether <A>OM</A> supports a system of weights as described
+  Determines, if <A>OM</A> supports a system of weights as described
   by M. Falk in <Cite Key="Falk1995_Kpi1Arrs"/>.
   This implies, that the Salvetti complex (see <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>)
   is apsherical.
