@@ -89,3 +89,121 @@ local gset, gc, c, cSupp, PRing,vars, gI, IdealVG, homIdeal, hgI, hIdealVG, VGPr
     );
 
 end);
+
+############################
+## grVGAGraph
+#############################
+
+BindGlobal("CycOrderSignsRk2OM",
+function(Or2)
+local GSet,CycOrder, Signs, CVs, i, T, C1,C2, h;
+    GSet := OMGroundSet(Or2);
+    CVs:=OMCovectors(Or2);
+    h:=GSet[1];
+    CycOrder := [h];
+    Signs:=[1];
+    C1 := Filtered(CVs[2],D->SVZeroSet(D)=[h])[1];
+    for i in [2..Length(GSet)] do
+        if i mod 2 = 0 then
+            T:=Filtered(CVs[1],R->OrderCovec(C1,R) and R[h]=Signs[i-1])[1];
+            C2 := Filtered(CVs[2],D->OrderCovec(D,T) and D<>C1)[1];
+            h := SVZeroSet(C2)[1];
+            Add(CycOrder,h);
+            Add(Signs,T[h]);
+        else
+            T:=Filtered(CVs[1],R->OrderCovec(C1,R) and R[h]=-Signs[i-1])[1];
+            C2 := Filtered(CVs[2],D->OrderCovec(D,T) and D<>C1)[1];
+            h := SVZeroSet(C2)[1];
+            Add(CycOrder,h);
+            Add(Signs,-T[h]);
+        fi;
+        C1 := C2;
+    od;
+    return rec(cycorder := CycOrder, sgns:=Signs);
+end);
+
+# OMLocalizationRk(O,[1,2,3,5],3);
+
+InstallMethod(OMgrVGAGraph,
+    [IsOrientedMatroid],
+function(O)
+local Ts, HSFsP, HSFsM, GenHSFs, EgrVGAGraph, grVGAGraphColourClasses, grVGAGraph, L2s, V1, V2, V3,
+    h, m, hsf, ghsf, nTs, TSetToIVec, COLocm, OneVG, i;
+
+    Ts := OMTopes(O);
+    nTs := Length(Ts);
+    OneVG := List(Ts,x->1);
+    
+    TSetToIVec := function(S)
+    local I;
+        I:=IdentityMat(nTs);
+        return Sum(I{S});
+    end;
+
+    EgrVGAGraph := [];
+
+    L2s := LkFlats(OMGeomLattice(O))(2);
+    L2s := Filtered(L2s,x->Length(x) mod 2 = 1);
+
+    V1 := [1..Length(Ts)];
+    V2 := [Length(V1)+1..Length(V1)+2*Length(OMGroundSet(O))];
+    V3 := [Length(V1)+Length(V2)+1..Length(V1)+Length(V2)+2*Length(L2s)];
+
+    HSFsP:=[];;
+    HSFsM:=[];;
+    for h in OMGroundSet(O) do
+        hsf := Filtered([1..Length(Ts)],i->Ts[i][h]=1);
+        hsf :=  TSetToIVec( hsf );
+        Add(HSFsP,hsf);
+        Add(HSFsM,OneVG-hsf);
+    od;
+    # for h OMFGroundSet(O) do
+    #     hsf := Filtered([1..Length(Ts)],i->Ts[i][h]=-1);
+    #     hsf :=  TSetToIVec( hsf );
+    #     Add(HSFsM,hsf);
+    # od;
+    GenHSFs := [];
+    for m in L2s do
+        ghsf := -(Length(m)-1)/2*OneVG;
+        COLocm := CycOrderSignsRk2OM(OMLocalizationRk(O,m,2));
+        for i in [1..Length(m)] do
+            if COLocm.sgns[i]= 1 then
+                ghsf := ghsf + HSFsP[m[COLocm.cycorder[i]]];
+            else
+                ghsf := ghsf + HSFsM[m[COLocm.cycorder[i]]];
+            fi;
+        od;
+        Add(GenHSFs,ghsf);
+        Add(GenHSFs,OneVG-ghsf);
+    od;
+    
+    for i in V1 do
+        for hsf in HSFsP do
+            if hsf[i]=1 then
+                Add(EgrVGAGraph,[i,Length(V1)+Position(HSFsP,hsf)]);
+            fi;
+        od;
+        for hsf in HSFsM do
+            if hsf[i]=1 then
+                Add(EgrVGAGraph,[i,Length(V1)+Length(HSFsP)+Position(HSFsM,hsf)]);
+            fi;
+        od;
+        for ghsf in GenHSFs do
+            if ghsf[i]=1 then
+                Add(EgrVGAGraph,[i,Length(V1)+Length(V2)+Position(GenHSFs,ghsf)]);
+            fi;
+        od;
+    od;
+
+    return rec(graph:=SimpGraphFromEdgeSet(EgrVGAGraph), 
+    colourClasses := [V1,Union(V2,V3)]);
+
+    # GenHSFs := Union(List(L2s,m->OMLocalizationRk(O,m,2)))
+end);
+
+InstallMethod(OMgrVGAIsIsomorphic,
+    [IsOrientedMatroid, IsOrientedMatroid],
+function(O1,O2)
+    return IsIsomorphicGraph(   rec(graph:=ShallowCopy(OMgrVGAGraph(O1).graph), colourClasses := OMgrVGAGraph(O1).colourClasses),
+                                rec(graph:=ShallowCopy(OMgrVGAGraph(O2).graph), colourClasses := OMgrVGAGraph(O2).colourClasses) );
+end);

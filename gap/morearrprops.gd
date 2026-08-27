@@ -75,7 +75,7 @@ DeclareOperation( "LModularFlatsRk", [IsGeomLattice, IsInt]);
 #! @Arguments L
 #! @Returns true or false.
 #! @Description
-#! Determines whether the geometric lattice <A>L</A> is <E>supersolvable</E>.
+#! Determines if the geometric lattice <A>L</A> is <E>supersolvable</E>.
 #! @BeginExampleSession
 #! gap> L:=IntersectionLattice(AGpql(2,1,4));
 #! <Geometric lattice: 16 atoms, rank 4>
@@ -91,7 +91,7 @@ DeclareProperty("LIsSupersolvable", IsGeomLattice);
 #! @Arguments A
 #! @Returns true or false.
 #! @Description
-#! Determines whether the arrangement <A>A</A> is <E>supersolvable</E>.
+#! Determines if the arrangement <A>A</A> is <E>supersolvable</E>.
 #! @BeginExampleSession
 #! gap> A:=AGpql(2,1,4);
 #! <HyperplaneArrangement: 16 hyperplanes in 4-space>
@@ -107,7 +107,7 @@ DeclareProperty("HArrIsSupersolvable", IsHyperplaneArrangement);
 #! @Arguments OM
 #! @Returns true or false.
 #! @Description
-#! Determines whether the oriented matroid <A>OM</A> is <E>supersolvable</E>.
+#! Determines if the oriented matroid <A>OM</A> is <E>supersolvable</E>.
 #! @BeginExampleSession
 #! gap> O:=OrientedMatroid(3,4,[1,1,1,1]);
 #! <OrientedMatroid: 4 elements, rank 3>
@@ -131,7 +131,7 @@ DeclareProperty("OMIsSupersolvable", IsOrientedMatroid);
 #! @Arguments A
 #! @Returns true or false.
 #! @Description
-#! Determines whether the arrangement is <E>formal</E>
+#! Determines if the arrangement is <E>formal</E>
 #! in the sense of Falk-Randell <Cite Key="FalkRandell87_HomotopyArr"/>.
 #! @BeginExampleSession
 #! gap> A1 := Arr([
@@ -182,7 +182,7 @@ DeclareGlobalFunction("HArr_SpaceSFx");
 #! @Arguments A
 #! @Returns true or false.
 #! @Description
-#! Determines whether the real arrangement <A>A</A> is <E>simplicial</E>,
+#! Determines if the real arrangement <A>A</A> is <E>simplicial</E>,
 #! i.e. if all chambers are simplicial.
 #! @BeginExampleSession
 #! gap> A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);
@@ -219,7 +219,7 @@ DeclareOperation("OMBoundedCpx", [IsOrientedMatroid, IsInt]);
 #! @Returns list or fail
 #! @Description
 #!  Only for oriented matroids of rank 3.
-#!  Determines, whether <A>OM</A> supports a system of weights as described
+#!  Determines, if <A>OM</A> supports a system of weights as described
 #!  by M. Falk in <Cite Key="Falk1995_Kpi1Arrs"/>.
 #!  This implies, that the Salvetti complex (see <Ref Attr="SalvettiComplex" Label="for IsOrientedMatroid" Style="Text"/>)
 #!  is apsherical.

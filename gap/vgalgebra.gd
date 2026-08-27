@@ -38,3 +38,8 @@ DeclareAttribute("VGGenerators",IsVGAlgebra);
 DeclareAttribute("VGPRing",IsVGAlgebra);
 
 DeclareAttribute("VGgrAlgebraPresentation",IsVGAlgebra);
+
+## A graph characterization of the graded VG-Algebra
+DeclareAttribute("OMgrVGAGraph",IsOrientedMatroid);
+
+DeclareOperation("OMgrVGAIsIsomorphic",[IsOrientedMatroid, IsOrientedMatroid]);

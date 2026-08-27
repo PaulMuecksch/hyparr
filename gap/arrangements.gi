@@ -296,7 +296,7 @@ local GSet,B,n,G,i,j,k,GraphMat,GraphL,x,y;
 			for k in [(n[i+1]+1)..n[i+2]] do
 				if IsSubset(B[k],B[j]) then
 				    GraphMat[j][k]:=1;
-				    # GraphMat[k][j]:=1;
+				    GraphMat[k][j]:=1;
 				fi;
 		    	od;
 		od;
@@ -310,9 +310,12 @@ end);
 InstallMethod(LAutGroup,
     [IsGeomLattice],
 function(L)
-local G,GraphL;
-	GraphL:=ShallowCopy(LGraph(L));
-	G := AutGroupGraph(GraphL);
+local G,GraphL,GSet,n, cCls;
+    GSet := LGroundSet(L);
+	n:=Concatenation([0],List([1..Length(GSet)],y->Sum(List(GSet{[1..y]},x->Length(x)))));
+	cCls := List([1..Length(GSet)],i->[n[i]+1..n[i+1]]);
+    GraphL:=ShallowCopy(LGraph(L));
+	G := AutGroupGraph(GraphL,cCls);
 	G := Image(ActionHomomorphism(G,LAtoms(L)));
 	return G;
 end);
@@ -933,10 +936,18 @@ end);
 InstallMethod(LIsIsomorphic,
 	[IsGeomLattice, IsGeomLattice],
 function(LA,LB)
-local LGraphA,LGraphB;
+local LGraphA,LGraphB,
+    GSetA,nA, cClsA,
+    GSetB, nB, cClsB;
+    GSetA := LGroundSet(LA);
+	nA:=Concatenation([0],List([1..Length(GSetA)],y->Sum(List(GSetA{[1..y]},x->Length(x)))));
+	cClsA := List([1..Length(GSetA)],i->[nA[i]+1..nA[i+1]]);;
+    GSetB := LGroundSet(LB);
+	nB:=Concatenation([0],List([1..Length(GSetB)],y->Sum(List(GSetB{[1..y]},x->Length(x)))));
+	cClsB := List([1..Length(GSetB)],i->[nB[i]+1..nB[i+1]]);;
     LGraphA := ShallowCopy(LGraph(LA));
     LGraphB := ShallowCopy(LGraph(LB));
-    return IsIsomorphicGraph(LGraphA,LGraphB);
+    return IsIsomorphicGraph(rec(graph:=LGraphA,colourClasses:=cClsA) ,rec(graph:=LGraphB,colourClasses:=cClsB));
 end);
 
 InstallMethod(IsLEquiv,
