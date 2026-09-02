@@ -79,6 +79,8 @@ DeclareAttribute("TPBaseTope", IsTopePoset);
 #! @EndExampleSession
 DeclareAttribute("TPRankPoly",IsTopePoset);
 
+
+#!
 DeclareAttribute("TopesFactTPRankPoly",IsOrientedMatroid);
 
 
@@ -95,6 +97,7 @@ DeclareAttribute("TopesFactTPRankPoly",IsOrientedMatroid);
 ##
 #################################
 
+#!
 DeclareOperation("IsFactTPRankPolyExp", [IsTopePoset, IsList]);
 
 

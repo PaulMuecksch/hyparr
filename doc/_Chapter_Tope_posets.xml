@@ -85,8 +85,31 @@ t^2+2*t+1
 </ManSection>
 
 
+<P/>
+<ManSection>
+  <Attr Arg="arg" Name="TopesFactTPRankPoly" Label="for IsOrientedMatroid"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
 </Section>
 
+
+<Section Label="Chapter_Tope_posets_Section_Properties">
+<Heading>Properties</Heading>
+
+<P/>
+<ManSection>
+  <Oper Arg="arg1,arg2" Name="IsFactTPRankPolyExp" Label="for IsTopePoset, IsList"/>
+ <Description>
+<P/>
+ </Description>
+</ManSection>
+
+
+</Section>
 
 
 </Chapter>

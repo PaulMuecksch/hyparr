@@ -100,6 +100,17 @@ DeclareOperation( "ConnectedSubgraphArr" , [IsList]);
 #! @EndExampleSession
 DeclareOperation( "GraphicArr" , [IsList]);
 
+
+
+
+#! @Arguments n, k
+#! @Returns A hyperplane arrangement.
+#! @Description
+#!  Generates the cone over the <A>k</A>-extended Catalan arrangement in dimension <A>n</A>.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation( "ExCatArr" , [IsInt, IsInt]);
+
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by

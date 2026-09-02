@@ -49,6 +49,7 @@
 \contentsline {subsection}{\numberline {3.1.2}\textcolor {Chapter }{SsS3}}{13}{subsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.1.3}\textcolor {Chapter }{ConnectedSubgraphArr (for IsList)}}{14}{subsection.3.1.3}%
 \contentsline {subsection}{\numberline {3.1.4}\textcolor {Chapter }{GraphicArr (for IsList)}}{14}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}\textcolor {Chapter }{ExCatArr (for IsInt, IsInt)}}{14}{subsection.3.1.5}%
 \contentsline {chapter}{\numberline {4}\textcolor {Chapter }{Oriented Matroids}}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}\textcolor {Chapter }{Construction of oriented matroids}}{15}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}\textcolor {Chapter }{OrientedMatroid (for IsList)}}{15}{subsection.4.1.1}%
@@ -145,6 +146,9 @@
 \contentsline {subsection}{\numberline {9.2.1}\textcolor {Chapter }{TPGroundSet (for IsTopePoset)}}{39}{subsection.9.2.1}%
 \contentsline {subsection}{\numberline {9.2.2}\textcolor {Chapter }{TPBaseTope (for IsTopePoset)}}{39}{subsection.9.2.2}%
 \contentsline {subsection}{\numberline {9.2.3}\textcolor {Chapter }{TPRankPoly (for IsTopePoset)}}{40}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}\textcolor {Chapter }{TopesFactTPRankPoly (for IsOrientedMatroid)}}{40}{subsection.9.2.4}%
+\contentsline {section}{\numberline {9.3}\textcolor {Chapter }{Properties}}{40}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}\textcolor {Chapter }{IsFactTPRankPolyExp (for IsTopePoset, IsList)}}{40}{subsection.9.3.1}%
 \contentsline {chapter}{\numberline {10}\textcolor {Chapter }{Varchenko\texttt {\symbol {45}}Gelfand algebra}}{41}{chapter.10}%
 \contentsline {section}{\numberline {10.1}\textcolor {Chapter }{Construction}}{41}{section.10.1}%
 \contentsline {subsection}{\numberline {10.1.1}\textcolor {Chapter }{VGAlgebra (for IsOrientedMatroid, IsField)}}{41}{subsection.10.1.1}%

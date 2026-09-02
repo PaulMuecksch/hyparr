@@ -162,6 +162,30 @@ local G;
     return GraphicArrG(G);
 end);
 
+
+InstallMethod( ExCatArr,
+    [IsInt, IsInt],
+function(n,k)
+local CatA, m, R, In, T, Rn, r, i;
+    m:=n+1;;
+	In := IdentityMat(m);;
+	R:=Concatenation(List(Combinations([1..m],2),x->[In[x[1]]-In[x[2]]]));;
+	T:=Concatenation(List([1..m-1],x->In[x]-In[x+1]),[Sum(In)]);
+	R := R*T^(-1);;
+	R := R{[1..Length(R)]}{[1..n]};;
+
+    Rn:=List(ShallowCopy(R),x->Concatenation(x,[0]));
+	for r in ShallowCopy(R) do
+        for i in [-k..k] do
+            Add(Rn,Concatenation(r,[-i]));
+        od;;
+	od;
+	r:=[1..n]*0;
+	Add(Rn,Concatenation(r,[-1]));
+	return Arr(Rn);
+end);
+
+
 BindGlobal("IcosidodecahedralArr",
 Arr(
 	[[ 0, 0, 1 ],

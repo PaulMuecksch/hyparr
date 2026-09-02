@@ -38,6 +38,7 @@
 \indexentry{SsS3@\texttt  {SsS3}|hyperpage}{13}
 \indexentry{ConnectedSubgraphArr@\texttt  {ConnectedSubgraphArr}!for IsList|hyperpage}{14}
 \indexentry{GraphicArr@\texttt  {GraphicArr}!for IsList|hyperpage}{14}
+\indexentry{ExCatArr@\texttt  {ExCatArr}!for IsInt, IsInt|hyperpage}{14}
 \indexentry{OrientedMatroid@\texttt  {OrientedMatroid}!for IsList|hyperpage}{15}
 \indexentry{OMRank@\texttt  {OMRank}!for IsOrientedMatroid|hyperpage}{16}
 \indexentry{OMGroundSet@\texttt  {OMGroundSet}!for IsOrientedMatroid|hyperpage}{16}
@@ -110,6 +111,8 @@
 \indexentry{TPGroundSet@\texttt  {TPGroundSet}!for IsTopePoset|hyperpage}{39}
 \indexentry{TPBaseTope@\texttt  {TPBaseTope}!for IsTopePoset|hyperpage}{39}
 \indexentry{TPRankPoly@\texttt  {TPRankPoly}!for IsTopePoset|hyperpage}{40}
+\indexentry{TopesFactTPRankPoly@\texttt  {TopesFactTPRankPoly}!for IsOrientedMatroid|hyperpage}{40}
+\indexentry{IsFactTPRankPolyExp@\texttt  {IsFactTPRankPolyExp}!for IsTopePoset, IsList|hyperpage}{40}
 \indexentry{VGAlgebra@\texttt  {VGAlgebra}!for IsOrientedMatroid, IsField|hyperpage}{41}
 \indexentry{LaTeXDrawProjPicture@\texttt  {LaTeXDrawProjPicture}|hyperpage}{42}
 \indexentry{LaTeXDrawSpherePicture@\texttt  {LaTeXDrawSpherePicture}|hyperpage}{45}

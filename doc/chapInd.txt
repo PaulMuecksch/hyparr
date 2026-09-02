@@ -27,6 +27,7 @@
   [2XDimension[102X, for IsHyperplaneArrangement 2.3-1 
   [2XDistMSetInvL[102X 16.1-4 
   [2XEssentialization[102X, for IsHyperplaneArrangement 2.7-5 
+  [2XExCatArr[102X, for IsInt, IsInt 3.1-5 
   [2XExpArr[102X, for IsHyperplaneArrangement 2.3-6 
   [2XFPGroundSet[102X, for IsFacePoset 7.1-3 
   [2XFPOrder[102X, for IsFacePoset 7.1-4 
@@ -63,6 +64,7 @@
   [2XHyperplaneArrangement[102X, for IsList 2.1-1 
   [2XIntersectionLattice[102X, for IsHyperplaneArrangement 2.3-4 
   [2XIsDivisionallyFree[102X, for IsHyperplaneArrangement 5.2-6 
+  [2XIsFactTPRankPolyExp[102X, for IsTopePoset, IsList 9.3-1 
   [2XIsFormal[102X, for IsHyperplaneArrangement 6.2-1 
   [2XIsInductivelyFree[102X, for IsHyperplaneArrangement 5.2-4 
   [2XIsLEquiv[102X, for IsHyperplaneArrangement,IsHyperplaneArrangement 2.7-4 
@@ -157,6 +159,7 @@
   [2XSsS3[102X 3.1-2 
   [2XTopeGraph[102X, for IsOrientedMatroid 4.2-8 
   [2XTopePoset[102X, for IsOrientedMatroid, IsList 9.1-1 
+  [2XTopesFactTPRankPoly[102X, for IsOrientedMatroid 9.2-4 
   [2XTPBaseTope[102X, for IsTopePoset 9.2-2 
   [2XTPGroundSet[102X, for IsTopePoset 9.2-1 
   [2XTPRankPoly[102X, for IsTopePoset 9.2-3 

@@ -59,6 +59,8 @@
 
   \item \texttt  {Essentialization}
     \subitem for IsHyperplaneArrangement, \hyperpage{12}
+  \item \texttt  {ExCatArr}
+    \subitem for IsInt, IsInt, \hyperpage{14}
   \item \texttt  {ExpArr}
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
 
@@ -143,6 +145,8 @@
     \subitem for IsHyperplaneArrangement, \hyperpage{7}
   \item \texttt  {IsDivisionallyFree}
     \subitem for IsHyperplaneArrangement, \hyperpage{26}
+  \item \texttt  {IsFactTPRankPolyExp}
+    \subitem for IsTopePoset, IsList, \hyperpage{40}
   \item \texttt  {IsFormal}
     \subitem for IsHyperplaneArrangement, \hyperpage{30}
   \item \texttt  {IsInductivelyFree}
@@ -338,6 +342,8 @@
     \subitem for IsOrientedMatroid, \hyperpage{18}
   \item \texttt  {TopePoset}
     \subitem for IsOrientedMatroid, IsList, \hyperpage{39}
+  \item \texttt  {TopesFactTPRankPoly}
+    \subitem for IsOrientedMatroid, \hyperpage{40}
   \item \texttt  {TPBaseTope}
     \subitem for IsTopePoset, \hyperpage{39}
   \item \texttt  {TPGroundSet}
