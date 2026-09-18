@@ -6,10 +6,10 @@
                   [1X Computations with hyperplane arrangements [101X
   
   
-                                    0.26.08
+                                    0.26.09
   
   
-                                 27 August 2026
+                               17 September 2026
   
   
                                   Paul Mücksch

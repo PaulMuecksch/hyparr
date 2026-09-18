@@ -39,7 +39,7 @@ DeclareAttribute("VGPRing",IsVGAlgebra);
 
 DeclareAttribute("VGgrAlgebraPresentation",IsVGAlgebra);
 
-## A graph characterization of the graded VG-Algebra
-DeclareAttribute("OMgrVGAGraph",IsOrientedMatroid);
+## A graph characterization of the filtered VG-Algebra
+DeclareAttribute("OMfiltVGAGraph",IsOrientedMatroid);
 
-DeclareOperation("OMgrVGAIsIsomorphic",[IsOrientedMatroid, IsOrientedMatroid]);
+DeclareOperation("OMfiltVGAIsIsomorphic",[IsOrientedMatroid, IsOrientedMatroid]);
