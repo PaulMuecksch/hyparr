@@ -1,152 +1,336 @@
   
-  [1X7 [33X[0;0YComplements of complex arrangements[133X[101X
+  [1X7  [33X[0;0YFurther  properties  of  arrangements,  geometric  lattices, and oriented[101X
+  [1Xmatroids[133X[101X
   
-  [33X[0;0YFor  a  hyperplane arrangement [23X\mathcal{A}[123X in [23X\mathbb{C}^\ell[123X, the following
-  provides  functions to compute complexes which have the homotopy type of the
-  complement manifold [23X\mathbb{C}^\ell \setminus \bigcup_{H \in \mathcal{A}}H[123X.[133X
-  
-  
-  [1X7.1 [33X[0;0YComplexes and face posets[133X[101X
-  
-  [1X7.1-1 SalvettiComplex[101X
-  
-  [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XOM[103X, [3Xor[103X, [3XA[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YA [10XFacePoset[110X[133X
-  
-  [33X[0;0YConstructs the Salvetti complex [Sal87] associated with the oriented matroid
-  OM or the real hyperplane arrangement [3XA[103X.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XO := OrientedMatroid([[1,0],[0,1],[1,1]]);[127X[104X
-    [4X[28X<OrientedMatroid: 3 elements, rank 2>[128X[104X
-    [4X[25Xgap>[125X [27XSalvettiComplex(O);[127X[104X
-    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
-    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0],[0,1],[1,1]]);[127X[104X
-    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
-    [4X[25Xgap>[125X [27XSalvettiComplex(A);[127X[104X
-    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
-  [4X[32X[104X
-  
-  [1X7.1-2 SalvettiComplex[101X
-  
-  [33X[1;0Y[29X[2XSalvettiComplex[102X( [3XA[103X ) [32X attribute[133X
-  
-  [33X[0;0YSee [2XSalvettiComplex[102X ([14X7.1-1[114X).[133X
-  
-  [1X7.1-3 FPGroundSet[101X
-  
-  [33X[1;0Y[29X[2XFPGroundSet[102X( [3XFP[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YA list[133X
-  
-  [33X[0;0YReturns the ground set of the face poset FP.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XS := SalvettiComplex(O);[127X[104X
-    [4X[28X<FacePoset of dimension 2 with f-vector [ 6, 12, 6 ]>[128X[104X
-    [4X[25Xgap>[125X [27XFPGroundSet(S);[127X[104X
-    [4X[28X[[128X[104X
-    [4X[28X  [ [128X[104X
-    [4X[28X    [ [ -1, 1, -1 ], [ -1, 1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 1, -1, 1 ], [ 1, -1, 1 ] ], [128X[104X
-    [4X[28X    [ [ -1, -1, -1 ], [ -1, -1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 1, 1, 1 ], [ 1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ -1, 1, 1 ], [ -1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 1, -1, -1 ], [ 1, -1, -1 ] ][128X[104X
-    [4X[28X  ],[128X[104X
-    [4X[28X  [[128X[104X
-    [4X[28X    [ [ -1, 0, -1 ], [ -1, 1, -1 ] ], [128X[104X
-    [4X[28X    [ [ -1, 1, 0 ], [ -1, 1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 1, 0, 1 ], [ 1, -1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 1, -1, 0 ], [ 1, -1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 0, -1, -1 ], [ -1, -1, -1 ] ], [128X[104X
-    [4X[28X    [ [ -1, 0, -1 ], [ -1, -1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 1, 1 ], [ 1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 1, 0, 1 ], [ 1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 1, 1 ], [ -1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ -1, 1, 0 ], [ -1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 0, -1, -1 ], [ 1, -1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 1, -1, 0 ], [ 1, -1, -1 ] ][128X[104X
-    [4X[28X  ],[128X[104X
-    [4X[28X  [[128X[104X
-    [4X[28X    [ [ 0, 0, 0 ], [ -1, 1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 0, 0 ], [ 1, -1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 0, 0 ], [ -1, -1, -1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 0, 0 ], [ 1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 0, 0 ], [ -1, 1, 1 ] ], [128X[104X
-    [4X[28X    [ [ 0, 0, 0 ], [ 1, -1, -1 ] ][128X[104X
-    [4X[28X  ][128X[104X
-    [4X[28X][128X[104X
-  [4X[32X[104X
-  
-  [1X7.1-4 FPOrder[101X
-  
-  [33X[1;0Y[29X[2XFPOrder[102X( [3XFP[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YA function[133X
-  
-  [33X[0;0YReturns the order function of the face poset FP.[133X
-  
-  [1X7.1-5 BZs1Complex[101X
-  
-  [33X[1;0Y[29X[2XBZs1Complex[102X( [3XA[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YA [10XFacePoset[110X[133X
-  
-  [33X[0;0YConstructs  the complex described by Bjoener and Ziegler in [BZ92] oibtained
-  from  the [23Xs^{(1)}[123X-stratification of a complex hyperplane arrangement [3XA[103X which
-  has the homotopy type of the complement.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(3,3,3);[127X[104X
-    [4X[28X<HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XCs1:=BZs1Complex(A);[127X[104X
-    [4X[28X<FacePoset of dimension 4 with f-vector [ 194, 1004, 1560, 812, 62 ]>[128X[104X
-    [4X[25Xgap>[125X [27XCs1CW := FPtoCWCpx(Cs1);[127X[104X
-    [4X[28XRegular CW-complex of dimension 4[128X[104X
-    [4X[25Xgap>[125X [27XList([0..4],x->Length(Homology(Cs1CW,x)));[127X[104X
-    [4X[28X[ 1, 9, 24, 16, 0 ][128X[104X
-    [4X[25Xgap>[125X [27XCharPoly(A);[127X[104X
-    [4X[28Xt^3-9*t^2+24*t-16[128X[104X
-  [4X[32X[104X
-  
-  [1X7.1-6 BZs2Complex[101X
-  
-  [33X[1;0Y[29X[2XBZs2Complex[102X( [3XA[103X ) [32X attribute[133X
-  [6XReturns:[106X  [33X[0;10YA [10XFacePoset[110X[133X
-  
-  [33X[0;0YConstructs  the complex described by Bjoener and Ziegler in [BZ92] oibtained
-  from  the [23Xs^{(2)}[123X-stratification of a complex hyperplane arrangement [3XA[103X which
-  has the homotopy type of the complement.[133X
-  
-  [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=AGpql(3,3,2);[127X[104X
-    [4X[28X<HyperplaneArrangement: 3 hyperplanes in 2-space>[128X[104X
-    [4X[25Xgap>[125X [27XCs2:=BZs2Complex(A);[127X[104X
-    [4X[28X<FacePoset of dimension 4 with f-vector [ 52, 132, 96, 16, 0 ]>[128X[104X
-  [4X[32X[104X
-  
-  [33X[0;0YBe  aware  that  both  functions  [10XBZs1Complex[110X  and  [10XBZs2Complex[110X  may  take a
-  considerable  amount of time computing the complex for non-real arrangements
-  since  oriented  matroid  complexes in double dimension and double number of
-  hyperplanes need to be computed. For a real arrangement, the [23Xs^{(1)}[123X-complex
-  is isomorphic to the Salvetti complex.[133X
+  [33X[0;0YThe   following   describes  functions  to  analyse  further  properties  of
+  arrangements    such    as   [13Xformality[113X,   [13Xsupersolvability[113X,   [13Xsimpliciality[113X,
+  [13Xfactoredness[113X, [13Xinductive factoredness[113X ...[133X
   
   
-  [1X7.2 [33X[0;0YNon-$K(\pi,1)$ arrangements[133X[101X
+  [1X7.1 [33X[0;0YSupersolvable arrangements[133X[101X
   
-  [1X7.2-1 CCSimpleTriangle[101X
+  [1X7.1-1 LIsModularPair[101X
   
-  [33X[1;0Y[29X[2XCCSimpleTriangle[102X( [3XA[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XLIsModularPair[102X( [3XL[103X, [3Xm1[103X, [3Xm2[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
   
-  [33X[0;0YTests  if  there is a convex open subset of the ambient space, such that the
-  arrangement  restricted  to  this convex open subset is a "simple triangle",
-  see also [2XHasSimpleTriangle[102X ([14X4.3-3[114X). This implies that the arrangement is not
-  [23XK(\pi,1)[123X.[133X
+  [33X[0;0YDetermines if [3Xm1[103X and [3Xm2[103X form a modular pair in L.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27XA:=Arr([ [ E(4), E(4), E(4) ], [ 0, E(4), 1 ], [ 1, 0, 1 ], [ 1, 0, 0 ] ]);[127X[104X
-    [4X[28X<HyperplaneArrangement: 4 hyperplanes in 3-space>[128X[104X
-    [4X[25Xgap>[125X [27XCCSimpleTriangle(A);[127X[104X
-    [4X[28X[ 1, 2, 3 ][128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(A);[127X[104X
+    [4X[28X<Geometric lattice: 6 atoms, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XLGroundSet(L);[127X[104X
+    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], [128X[104X
+    [4X[28X [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], [128X[104X
+    [4X[28X   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2, 3, 4, 5, 6 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm1:=[1,2]; m2:= [5,6]; LIsModularPair(L,m1,m2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xm1:=[1,2]; m2:= [2,4,6]; LIsModularPair(L,m1,m2);[127X[104X
     [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-2 LIsModularFlat[101X
+  
+  [33X[1;0Y[29X[2XLIsModularFlat[102X( [3XL[103X, [3Xm[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermines if [3Xm[103X is a modular flat in L.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[28X<Geometric lattice: 6 atoms, rank 3>[128X[104X
+    [4X[28X[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], [128X[104X
+    [4X[28X [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], [128X[104X
+    [4X[28X   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], [128X[104X
+    [4X[28X  [ [ 1, 2, 3, 4, 5, 6 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27Xm1:=[1,2]; m2:= [2,4,6]; LIsModularFlat(L,m1); LIsModularFlat(L,m2);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-3 LModularFlatsRk[101X
+  
+  [33X[1;0Y[29X[2XLModularFlatsRk[102X( [3XL[103X, [3Xk[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist[133X
+  
+  [33X[0;0YDetermines the modular flats in [3XL[103X of rank [3Xk[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(2,1,4));[127X[104X
+    [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XLModularFlatsRk(L,3);[127X[104X
+    [4X[28X[ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], [128X[104X
+    [4X[28X  [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], [128X[104X
+    [4X[28X  [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], [128X[104X
+    [4X[28X  [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-4 LIsSupersolvable[101X
+  
+  [33X[1;0Y[29X[2XLIsSupersolvable[102X( [3XL[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines if the geometric lattice [3XL[103X is [13Xsupersolvable[113X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(2,1,4));[127X[104X
+    [4X[28X<Geometric lattice: 16 atoms, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XLIsSupersolvable(L);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XL:=IntersectionLattice(AGpql(2,2,4));[127X[104X
+    [4X[28X<Geometric lattice: 12 atoms, rank 4>[128X[104X
+    [4X[25Xgap>[125X [27XLIsSupersolvable(L);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-5 HArrIsSupersolvable[101X
+  
+  [33X[1;0Y[29X[2XHArrIsSupersolvable[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines if the arrangement [3XA[103X is [13Xsupersolvable[113X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,1,4);[127X[104X
+    [4X[28X<HyperplaneArrangement: 16 hyperplanes in 4-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,4); [127X[104X
+    [4X[28X<HyperplaneArrangement: 12 hyperplanes in 4-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsSupersolvable(A);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X7.1-6 OMIsSupersolvable[101X
+  
+  [33X[1;0Y[29X[2XOMIsSupersolvable[102X( [3XOM[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines if the oriented matroid [3XOM[103X is [13Xsupersolvable[113X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid(3,4,[1,1,1,1]);[127X[104X
+    [4X[28X<OrientedMatroid: 4 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XC:=List(Combinations(Roots(AGpql(2,2,3)),3),x->pos(Determinant(x)));[127X[104X
+    [4X[28X[ 1, 1, 1, 1, 0, -1, -1, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 1, -1, -1 ][128X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid(3,6,C);[127X[104X
+    [4X[28X<OrientedMatroid: 6 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.2 [33X[0;0YFormal arrangements[133X[101X
+  
+  [1X7.2-1 IsFormal[101X
+  
+  [33X[1;0Y[29X[2XIsFormal[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines if the arrangement is [13Xformal[113X in the sense of Falk-Randell [FR87].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA1 := Arr([[127X[104X
+    [4X[25X>[125X [27X    [1,0,0],[127X[104X
+    [4X[25X>[125X [27X    [0,1,0],[127X[104X
+    [4X[25X>[125X [27X    [0,0,1],[127X[104X
+    [4X[25X>[125X [27X    [1,1,1],[127X[104X
+    [4X[25X>[125X [27X    [2,1,1],[127X[104X
+    [4X[25X>[125X [27X    [2,3,1],[127X[104X
+    [4X[25X>[125X [27X    [2,3,4],[127X[104X
+    [4X[25X>[125X [27X    [3,0,5],[127X[104X
+    [4X[25X>[125X [27X    [3,4,5][127X[104X
+    [4X[25X>[125X [27X]);[127X[104X
+    [4X[25Xgap>[125X [27X[127X[104X
+    [4X[25Xgap>[125X [27XA2 := Arr([[127X[104X
+    [4X[25X>[125X [27X    [1,0,0],[127X[104X
+    [4X[25X>[125X [27X    [0,1,0],[127X[104X
+    [4X[25X>[125X [27X    [0,0,1],[127X[104X
+    [4X[25X>[125X [27X    [1,1,1],[127X[104X
+    [4X[25X>[125X [27X    [2,1,1],[127X[104X
+    [4X[25X>[125X [27X    [2,3,1],[127X[104X
+    [4X[25X>[125X [27X    [2,3,4],[127X[104X
+    [4X[25X>[125X [27X    [1,0,3],[127X[104X
+    [4X[25X>[125X [27X    [1,2,3][127X[104X
+    [4X[25X>[125X [27X]);[127X[104X
+    [4X[25Xgap>[125X [27XIsLEquiv(A1,A2);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsFormal(A1);[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsFormal(A2);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.3 [33X[0;0YSimplicial arrangements[133X[101X
+  
+  [1X7.3-1 HArrIsSimplicial[101X
+  
+  [33X[1;0Y[29X[2XHArrIsSimplicial[102X( [3XA[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false.[133X
+  
+  [33X[0;0YDetermines if the real arrangement [3XA[103X is [13Xsimplicial[113X, i.e. if all chambers are
+  simplicial.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);[127X[104X
+    [4X[28X<HyperplaneArrangement: 5 hyperplanes in 3-space>[128X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XA:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);[127X[104X
+    [4X[28X<HyperplaneArrangement: 6 hyperplanes in 3-space>[128X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.4 [33X[0;0YFalk's weight test[133X[101X
+  
+  [33X[0;0YThe following still needs to be tested further...[133X
+  
+  [1X7.4-1 OMBoundedCpx[101X
+  
+  [33X[1;0Y[29X[2XOMBoundedCpx[102X( [3XOM[103X, [3Xg[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist of list of sign vectors.[133X
+  
+  [33X[0;0YConstructs  the  complex of bounded cells of the affine part of the oriented
+  matroid [3XOM[103X with respect to the element [3Xg[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X7.4-2 OMSupportsFalkWeights[101X
+  
+  [33X[1;0Y[29X[2XOMSupportsFalkWeights[102X( [3XOM[103X, [3Xg[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Ylist or fail[133X
+  
+  [33X[0;0YOnly for oriented matroids of rank 3. Determines, if [3XOM[103X supports a system of
+  weights  as described by M. Falk in [Fal95]. This implies, that the Salvetti
+  complex  (see  [2XSalvettiComplex[102X  ([14X8.1-1[114X)) is apsherical. The functionality of
+  the  [12Xcddinterface[112X  package  is  used,  to determine solutions of a system of
+  linear inequalities.[133X
+  
+  [33X[0;0YIf  the  algorithm  determines  a  suitable  weight system for [3XOM[103X, each list
+  element  consists  of a weight, and a corner, i.e. a pair of a 2-cell and an
+  adjacent vertex in the bounded complex, given as sign vectors.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XO:=OrientedMatroid([127X[104X
+    [4X[25X>[125X [27X      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]][127X[104X
+    [4X[25X>[125X [27X);[127X[104X
+    [4X[28X<OrientedMatroid: 7 elements, rank 3>[128X[104X
+    [4X[25Xgap>[125X [27XOMIsSupersolvable(O);[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XOMSupportsFalkWeights(O,3);[127X[104X
+    [4X[28Xfail[128X[104X
+    [4X[25Xgap>[125X [27XOMSupportsFalkWeights(O,1);[127X[104X
+    [4X[28X[ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], [128X[104X
+    [4X[28X  [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], [128X[104X
+    [4X[28X  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] [128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.5 [33X[0;0YFactored arrangements[133X[101X
+  
+  [1X7.5-1 HArrIsFactored[101X
+  
+  [33X[1;0Y[29X[2XHArrIsFactored[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list or fail[133X
+  
+  [33X[0;0YDetermines if [3XA[103X is factored and if so returns some factorization.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,1,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsFactored(A);[127X[104X
+    [4X[28X[ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ][128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,4);[127X[104X
+    [4X[28X<HyperplaneArrangement: 12 hyperplanes in 4-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsFactored(A);[127X[104X
+    [4X[28Xfail[128X[104X
+  [4X[32X[104X
+  
+  [1X7.5-2 HArrFactorizations[101X
+  
+  [33X[1;0Y[29X[2XHArrFactorizations[102X( [3XA[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YComputes a list of all factorizations of [3XA[103X as partitions of [1..|[3XA[103X|].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,1,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrFactorizations(A);[127X[104X
+    [4X[28X[ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], [128X[104X
+    [4X[28X  [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], [128X[104X
+    [4X[28X  [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ][128X[104X
+  [4X[32X[104X
+  
+  [1X7.5-3 HArrIsInductivelyFactored[101X
+  
+  [33X[1;0Y[29X[2XHArrIsInductivelyFactored[102X( [3XA[103X ) [32X attribute[133X
+  [6XReturns:[106X  [33X[0;10YA list or fail[133X
+  
+  [33X[0;0YDetermines  if  [3XA[103X  is  inductively factored and if so returns some inductive
+  factorization.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,1,4);[127X[104X
+    [4X[28X<HyperplaneArrangement: 16 hyperplanes in 4-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsInductivelyFactored(A);[127X[104X
+    [4X[28X[ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ][128X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,2,4);[127X[104X
+    [4X[28X<HyperplaneArrangement: 12 hyperplanes in 4-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrIsInductivelyFactored(A);[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [1X7.5-4 HArrInductiveFactorizations[101X
+  
+  [33X[1;0Y[29X[2XHArrInductiveFactorizations[102X( [3XA[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10YA list[133X
+  
+  [33X[0;0YComputes  a  list  of  all  inductive  factorizations  of [3XA[103X as partitions of
+  [1..|[3XA[103X|].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XA:=AGpql(2,1,3);[127X[104X
+    [4X[28X<HyperplaneArrangement: 9 hyperplanes in 3-space>[128X[104X
+    [4X[25Xgap>[125X [27XHArrInductiveFactorizations(A);[127X[104X
+    [4X[28X[ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], [128X[104X
+    [4X[28X  [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], [128X[104X
+    [4X[28X  [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], [128X[104X
+    [4X[28X  [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ][128X[104X
   [4X[32X[104X
   

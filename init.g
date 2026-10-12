@@ -10,6 +10,7 @@
 ##
 #############################################################################
 
+ReadPackage("hyparr","gap/geomlattice.gd");
 ReadPackage("hyparr","gap/arrangements.gd");
 ReadPackage("hyparr","gap/specialarrs.gd");
 ReadPackage("hyparr","gap/orientedmatroid.gd");

@@ -118,7 +118,7 @@ end);
 
 
 InstallMethod(HArrIsSimplicial,
-    [IsHyperplaneArrangement and IsReal],
+    [IsHyperplaneArrangement],
 function(A)
 local l,t;#,rk;
     # if not(IsReal(A)) then

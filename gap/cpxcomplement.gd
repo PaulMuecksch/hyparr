@@ -103,6 +103,10 @@ DeclareAttribute("s1Strat",IsHyperplaneArrangement);
 DeclareAttribute("s2Strat",IsHyperplaneArrangement);
 DeclareGlobalFunction("s2Tos1");
 
+DeclareAttribute("s1StratN",IsHyperplaneArrangement);
+DeclareAttribute("s2StratN",IsHyperplaneArrangement);
+DeclareGlobalFunction("s2Tos1N");
+
 #! @Arguments A
 #! @Returns A <C>FacePoset</C>
 #! @Description
@@ -138,6 +142,8 @@ DeclareAttribute("BZs1Complex", IsHyperplaneArrangement);
 #! @EndExampleSession
 DeclareAttribute("BZs2Complex", IsHyperplaneArrangement);
 
+DeclareAttribute("LCombSimpleTriangles", IsGeomLattice);
+
 #! Be aware that
 #! both functions <C>BZs1Complex</C> and <C>BZs2Complex</C> may take a considerable amount of time
 #! computing the complex for non-real arrangements since oriented matroid complexes in double dimension 
@@ -161,6 +167,9 @@ DeclareAttribute("BZs2Complex", IsHyperplaneArrangement);
 #! true
 #! @EndExampleSession
 DeclareOperation("CCSimpleTriangle",[IsHyperplaneArrangement]);
+
+
+DeclareOperation("CCSimpleTriangleO",[IsHyperplaneArrangement]);
 
 
 

@@ -265,6 +265,15 @@ local s1Cpx,s1OF, type, ACs,ACs2,ACs2red,Cs,c,cr,k,CT;
 end);
 
 
+# InstallMethod( s1StratN,
+#     [IsHyperplaneArrangement],
+# function(A)
+# local LCoAtoms,CCCocircs;
+#     L:=IntersectionLattice(A);;
+#     LCoAtoms:=LkFlats(L)(LRank(L)-1);
+# end);
+
+
 InstallMethod( BZs1Complex,
     [IsHyperplaneArrangement],
 function(A)
@@ -322,7 +331,76 @@ local Strat2,S2Comp,St,BZs2Cpx,BZs2OF, FCpx, type;
     );
 end);
 
+InstallMethod(LCombSimpleTriangles,
+    [IsGeomLattice],
+function(L)
+    return Filtered(LBases(L),B->not(false in List(Combinations(B,2),x->x in LkFlats(L)(2))));
+    # return LBases(L){Positions(List(LBases(L),B->not(false in List(Combinations(B,2),x->x in LkFlats(L)(2)))),true)};
+end);
+
 InstallMethod(CCSimpleTriangle,
+    [IsHyperplaneArrangement],
+function(A)
+local L, PotSimpTs, B, dcHs, ps,h, h2,H2,T,D,Rt, IntersectHTriangle;
+
+    IntersectHTriangle := function(aH)
+    local xh,yh,D, a,b,c, Im, Re, d, A,B,C;
+
+        Im := z -> 1/(2*E(4))*(z-cj(z));
+        Re := z -> 1/(2)*(z+cj(z));
+
+        a:=aH[1]; b:=aH[2]; c:=aH[3];
+        if a=0 and b=0 then
+            return false;
+        fi;;
+
+        D:=Im(cj(a)*b);
+
+        if D<>0 then
+            xh := Im(cj(b)*c)/D;
+            yh := Im(cj(c)*a)/D;
+            if CCToFloat(xh)>=0.0 and CCToFloat(yh)>=0.0 and CCToFloat(xh+yh)<=1.0 then
+                return true;
+            else
+                return false;
+            fi;
+        else
+            if a<>0 then 
+                d:=a;
+            else 
+                d:=b; 
+            fi;
+            C:=c/d;
+            if C<>cj(C) then
+                return false;
+            fi;
+            A:=a/d;
+            B:=b/d;
+            return Minimum(CCToFloat(C),CCToFloat(A+C),CCToFloat(B+C)) <= 0.0 and
+                0.0 <= Maximum(CCToFloat(C),CCToFloat(A+C),CCToFloat(B+C));
+        fi;
+    end;
+
+    L:=IntersectionLattice(A);;
+    PotSimpTs:=LCombSimpleTriangles(L);
+    for B in PotSimpTs do
+        dcHs := Difference(LAtoms(L),B);
+        for h in dcHs do
+            T:=Roots(A){Concatenation(B{[1,2]},[h])}^(-1);
+            D:=DiagonalMat(List((Roots(A)*T)[B[3]],x->1/x));
+            D[3][3] := -D[3][3];
+            # Rn:=Concatenation([[1,0,0],[0,1,0],[1,1,1],[0,0,1]],(Roots(A)*T*D){Difference([1..Length(Roots(A))],Concatenation(B{[1,2]},[h],[B[3]]))});
+            Rt:=(Roots(A)*T*D){Difference([1..Length(Roots(A))],Concatenation(B{[1,2]},[h],[B[3]]))};
+            if ForAll(Rt,h2->IntersectHTriangle(h2)=false) then
+                Print(B,"\n");
+                return true;
+            fi;
+        od;
+    od;
+    return false;
+end);;
+
+InstallMethod(CCSimpleTriangleO,
     [IsHyperplaneArrangement],
 function(A)
 local A2, L, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, n, HsNotInB, HNotInB;
@@ -330,8 +408,12 @@ local A2, L, PotSimpTs, B, Bi1, Bi2, Bi3, CVs5, CsBi1, CsBi2, CsBi3, CsB, OCsB, 
     if Rank(Roots(A))<>3 or Rank(Roots(A))=n then
         return false;
     fi;
+    if IsReal(A) then
+        return HasSimpleTriangle(OM(A));
+    fi;
     L:=IntersectionLattice(A);;
-    PotSimpTs:=LBases(L){Positions(List(LBases(L),B->not(false in List(Combinations(B,2),x->x in LkFlats(L)(2)))),true)};
+    # PotSimpTs:=LBases(L){Positions(List(LBases(L),B->not(false in List(Combinations(B,2),x->x in LkFlats(L)(2)))),true)};
+    PotSimpTs:=LCombSimpleTriangles(L);
     A2 := CCToRR2Arr(A);
     for B in PotSimpTs do
         HsNotInB := Difference([1..n],B);

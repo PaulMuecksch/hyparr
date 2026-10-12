@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is an automatically generated file. -->
+<Chapter Label="Chapter_Geometric_lattices_and_matroids">
+<Heading>Geometric lattices and matroids</Heading>
+
+<P/>
+<Section Label="Chapter_Geometric_lattices_and_matroids_Section_Construction_of_geometric_lattices">
+<Heading>Construction of geometric lattices</Heading>
+
+<ManSection>
+  <Oper Arg="gs" Name="GeomLattice" Label="for IsList"/>
+ <Returns>An object of type <C>IsGeomLattice</C>.
+</Returns>
+ <Description>
+  Constructs a geometric lattice from a list <A>gs</A> of lists of lists
+  giving its ground set (see <Ref Attr="LGroundSet" Label="for IsGeomLattice" Style="Text"/>).
+<P/>
+  The entry <C>gs[k]</C> contains all flats of rank <Math>k</Math>, where each flat is
+  given by the list of the indices of the atoms below it.
+<P/>
+  The flats are converted into sets of positive integers, the rank of the
+  lattice is the number of levels <C>Length(gs)</C> and the atoms are read
+  off from the first level <C>gs[1]</C>.
+<P/>
+  No check is performed whether <A>gs</A> really defines a geometric lattice.
+<P/>
+<Example><![CDATA[
+gap> L:=GeomLattice([[[1],[2],[3]],[[1,2],[1,3],[2,3]],[[1,2,3]]]);
+<Geometric lattice: 3 atoms, rank 3>
+gap> LGroundSet(L);
+[ [ [ 1 ], [ 2 ], [ 3 ] ],
+  [ [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ],
+  [ [ 1, 2, 3 ] ] ]
+gap> LCharPoly(L);
+t^3-3*t^2+3*t-1
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Geometric_lattices_and_matroids_Section_Attributes_of_geometric_lattices">
+<Heading>Attributes of geometric lattices</Heading>
+
+<ManSection>
+  <Attr Arg="L" Name="LGroundSet" Label="for IsGeomLattice"/>
+ <Returns>list of lists
+</Returns>
+ <Description>
+ Returns the ground set of the geometric lattice <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LAtoms" Label="for IsGeomLattice"/>
+ <Returns>list
+</Returns>
+ <Description>
+ Returns the set of atoms of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LRank" Label="for IsGeomLattice"/>
+ <Returns>a non-negative integer
+</Returns>
+ <Description>
+ Returns the rank of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LkFlats" Label="for IsGeomLattice"/>
+ <Returns>a function
+</Returns>
+ <Description>
+ Returns a function extracting the flats of rank <Math>k</Math> in <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LCircuits" Label="for IsGeomLattice"/>
+ <Returns>a list of lists
+</Returns>
+ <Description>
+ Gives the circuits of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LRankFunction" Label="for IsGeomLattice"/>
+ <Returns>A function
+</Returns>
+ <Description>
+ Returns the rank function of the geometric lattice <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LGraph" Label="for IsGeomLattice"/>
+ <Returns>a graph
+</Returns>
+ <Description>
+ Constructs the directed graph of the Hasse diagram of L.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LAutGroup" Label="for IsGeomLattice"/>
+ <Returns>a group
+</Returns>
+ <Description>
+ Computes the autmorphism group of L
+ as a subgroup of <C>Sym(LAtoms(L))</C>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LMoebius" Label="for IsGeomLattice"/>
+ <Returns>function
+</Returns>
+ <Description>
+ Returns the Moebius function of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LCharPoly" Label="for IsGeomLattice"/>
+ <Returns>function
+</Returns>
+ <Description>
+  Computes the characteristic polynomial of <A>L</A>.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LBases" Label="for IsGeomLattice"/>
+ <Returns>list of bases
+</Returns>
+ <Description>
+ Determines the subsets of <C>LAtoms(L)</C> which are bases.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Attr Arg="L" Name="LMSetInv" Label="for IsGeomLattice"/>
+ <Returns>An List of Lists of Lists.
+</Returns>
+ <Description>
+ Computes multiset invariants of the geometric lattice <A>L</A>.
+<P/>
+ For each level of the lattice, the function records how many
+ intersections occur with a given number of defining hyperplanes.
+<P/>
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Geometric_lattices_and_matroids_Section_Properties_of_geometric_lattices">
+<Heading>Properties of geometric lattices</Heading>
+
+<ManSection>
+  <Prop Arg="L" Name="LIsIrreducible" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is irreducible.
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="L" Name="LIsBoolean" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is a boolean lattice.
+<Example><![CDATA[
+gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[1,1]]));
+<Geometric lattice: 2 atoms, rank 2>
+gap> LIsBoolean(L);
+true
+gap> L:=IntersectionLattice(HyperplaneArrangement([[1,0],[0,1],[1,1]]));
+<Geometric lattice: 3 atoms, rank 2>
+gap> LIsBoolean(L);
+false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="L" Name="LIsGeneric" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L is generic, i.e. if L is irreducible 
+ and all proper intervals are boolean.
+<Example><![CDATA[
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);
+<HyperplaneArrangement: 4 hyperplanes in 3-space>
+gap> L:=IntersectionLattice(A);
+<Geometric lattice: 4 atoms, rank 3>
+gap> LIsGeneric(L);
+true
+gap> A := HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);
+<HyperplaneArrangement: 5 hyperplanes in 3-space>
+gap> L:=IntersectionLattice(A);
+<Geometric lattice: 5 atoms, rank 3>
+gap> LIsGeneric(L);
+false
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Prop Arg="L" Name="LHasGenericAtom" Label="for IsGeomLattice"/>
+ <Returns>true or false.
+</Returns>
+ <Description>
+ Determines, if L has a generic atom,
+ that is, an element of the ground set such that all hyperplanes containing it are boolean.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+<Section Label="Chapter_Geometric_lattices_and_matroids_Section_Operations">
+<Heading>Operations</Heading>
+
+<ManSection>
+  <Oper Arg="L, m" Name="LBsOfFlat" Label="for IsGeomLattice, IsList"/>
+ <Returns>list of bases of m
+</Returns>
+ <Description>
+ Computes the bases of <A>m</A> in <A>L</A>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="L,B,e" Name="LBaseCircuit" Label="for IsGeomLattice,IsList,IsInt"/>
+ <Returns>list
+</Returns>
+ <Description>
+ Determines the circuit contained in <C>Union(B,[e])</C>.
+<Example><![CDATA[
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+<ManSection>
+  <Oper Arg="LA, LB" Name="LIsIsomorphic" Label="for IsGeomLattice,IsGeomLattice"/>
+ <Returns>true or false
+</Returns>
+ <Description>
+ Determines if the geometric lattices <A>LA</A> and <A>LB</A> 
+ are isomorphic.
+<P/>
+<Example><![CDATA[
+gap> A:=HyperplaneArrangement([[1,0],[0,1],[1,1]]); B:=HyperplaneArrangement([[1,0],[1,1],[1,2]]);
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+<HyperplaneArrangement: 3 hyperplanes in 2-space>
+gap> LA:=IntersectionLattice(A); LB:=IntersectionLattice(B);
+<Geometric lattice: 3 atoms, rank 2>
+<Geometric lattice: 3 atoms, rank 2>
+gap> LIsIsomorphic(LA,LB);
+true
+]]></Example>
+
+
+ </Description>
+</ManSection>
+
+
+</Section>
+
+
+</Chapter>
+

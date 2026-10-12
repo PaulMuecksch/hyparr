@@ -6,10 +6,10 @@
                   [1X Computations with hyperplane arrangements [101X
   
   
-                                    0.26.09
+                                    0.26.10
   
   
-                               17 September 2026
+                                12 October 2026
   
   
                                   Paul Mücksch
@@ -35,225 +35,227 @@
   2 [33X[0;0YHyperplane arrangements[133X
     2.1 [33X[0;0YConstruction of arrangements of hyperplanes[133X
       2.1-1 HyperplaneArrangement
-    2.2 [33X[0;0YConstruction of geometric lattices[133X
-      2.2-1 GeomLattice
-    2.3 [33X[0;0YAttributes of arrangements[133X
-      2.3-1 Dimension
-      2.3-2 Roots
-      2.3-3 HArrDefField
-      2.3-4 IntersectionLattice
-      2.3-5 CharPoly
-      2.3-6 ExpArr
-      2.3-7 MSetInvL
-    2.4 [33X[0;0YProperties of arrangements[133X
-      2.4-1 IsReal
-      2.4-2 HArrIsIrreducible
-      2.4-3 HArrIsGeneric
-    2.5 [33X[0;0YAttributes of geometric lattices[133X
-      2.5-1 LGroundSet
-      2.5-2 LAtoms
-      2.5-3 LRank
-      2.5-4 LkFlats
-      2.5-5 LCircuits
-      2.5-6 LRankFunction
-      2.5-7 LGraph
-      2.5-8 LAutGroup
-      2.5-9 LMoebius
-      2.5-10 LCharPoly
-      2.5-11 LBases
-    2.6 [33X[0;0YProperties of geometric lattices[133X
-      2.6-1 LIsIrreducible
-      2.6-2 LIsBoolean
-      2.6-3 LIsGeneric
-      2.6-4 LHasGenericAtom
-    2.7 [33X[0;0YOperations[133X
-      2.7-1 LBsOfFlat
-      2.7-2 LBaseCircuit
-      2.7-3 LIsIsomorphic
-      2.7-4 IsLEquiv
-      2.7-5 Essentialization
-      2.7-6 HArrRestriction
-      2.7-7 HArrRestriction
-      2.7-8 HArrAddition
-      2.7-9 HArrDeletion
-  3 [33X[0;0YSpecial arrangements[133X
-    3.1 [33X[0;0YGlobal methods[133X
-      3.1-1 AGpql
-      3.1-2 SsS3
-      3.1-3 ConnectedSubgraphArr
-      3.1-4 GraphicArr
-      3.1-5 ExCatArr
-  4 [33X[0;0YOriented Matroids[133X
-    4.1 [33X[0;0YConstruction of oriented matroids[133X
-      4.1-1 OrientedMatroid
-    4.2 [33X[0;0YAttributes[133X
-      4.2-1 OMRank
-      4.2-2 OMGroundSet
-      4.2-3 OMLForms
-      4.2-4 OMGeomLattice
-      4.2-5 OMCocircuits
-      4.2-6 OMCircuits
-      4.2-7 OMTopes
-      4.2-8 TopeGraph
-      4.2-9 OMCovectors
-      4.2-10 OMChirotope
-      4.2-11 OMRankFunction
-    4.3 [33X[0;0YProperties[133X
-      4.3-1 OMIsLinear
-      4.3-2 HasSimpleSimplex
-      4.3-3 HasSimpleTriangle
-      4.3-4 OMExp
-    4.4 [33X[0;0YOperations[133X
-      4.4-1 IsLEquiv
-      4.4-2 HasSimpleSimplexRk
-      4.4-3 OMLocalizationRk
-      4.4-4 OMTConvexClosure
-    4.5 [33X[0;0YGlobal methods[133X
-      4.5-1 OMOperation
-      4.5-2 OrderCovec
-      4.5-3 IsOMEquiv
-      4.5-4 SeparatingSet
-      4.5-5 WiringDiagramToTopes
-      4.5-6 WiringDiagramToCovectors
-  5 [33X[0;0YFree arrangements[133X
-    5.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules[133X
-      5.1-1 DerModule
-      5.1-2 DerPModule
-      5.1-3 DerModGenerators
-      5.1-4 DerModPRing
-      5.1-5 DerModDegreeSequence
-      5.1-6 DerModProjDim
-    5.2 [33X[0;0YFreeness properties[133X
-      5.2-1 DerModIsFree
-      5.2-2 HArrIsFree
-      5.2-3 HArrIsLocallyFree
-      5.2-4 IsInductivelyFree
-      5.2-5 IsLocallyInductivelyFree
-      5.2-6 IsDivisionallyFree
-      5.2-7 IsLocallyDivisionallyFree
-      5.2-8 IsMATFree
-      5.2-9 MATFreePart
-  6 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
+    2.2 [33X[0;0YAttributes of arrangements[133X
+      2.2-1 Dimension
+      2.2-2 Roots
+      2.2-3 HArrDefField
+      2.2-4 IntersectionLattice
+      2.2-5 CharPoly
+      2.2-6 ExpArr
+      2.2-7 MSetInvL
+    2.3 [33X[0;0YProperties of arrangements[133X
+      2.3-1 IsReal
+      2.3-2 HArrIsIrreducible
+      2.3-3 HArrIsGeneric
+      2.3-4 Essentialization
+      2.3-5 HArrRestriction
+      2.3-6 HArrRestriction
+      2.3-7 HArrAddition
+      2.3-8 HArrDeletion
+      2.3-9 IsLEquiv
+  3 [33X[0;0YGeometric lattices and matroids[133X
+    3.1 [33X[0;0YConstruction of geometric lattices[133X
+      3.1-1 GeomLattice
+    3.2 [33X[0;0YAttributes of geometric lattices[133X
+      3.2-1 LGroundSet
+      3.2-2 LAtoms
+      3.2-3 LRank
+      3.2-4 LkFlats
+      3.2-5 LCircuits
+      3.2-6 LRankFunction
+      3.2-7 LGraph
+      3.2-8 LAutGroup
+      3.2-9 LMoebius
+      3.2-10 LCharPoly
+      3.2-11 LBases
+      3.2-12 LMSetInv
+    3.3 [33X[0;0YProperties of geometric lattices[133X
+      3.3-1 LIsIrreducible
+      3.3-2 LIsBoolean
+      3.3-3 LIsGeneric
+      3.3-4 LHasGenericAtom
+    3.4 [33X[0;0YOperations[133X
+      3.4-1 LBsOfFlat
+      3.4-2 LBaseCircuit
+      3.4-3 LIsIsomorphic
+  4 [33X[0;0YSpecial arrangements[133X
+    4.1 [33X[0;0YGlobal methods[133X
+      4.1-1 AGpql
+      4.1-2 SsS3
+      4.1-3 ConnectedSubgraphArr
+      4.1-4 GraphicArr
+      4.1-5 ExCatArr
+  5 [33X[0;0YOriented Matroids[133X
+    5.1 [33X[0;0YConstruction of oriented matroids[133X
+      5.1-1 OrientedMatroid
+    5.2 [33X[0;0YAttributes[133X
+      5.2-1 OMRank
+      5.2-2 OMGroundSet
+      5.2-3 OMLForms
+      5.2-4 OMGeomLattice
+      5.2-5 OMCocircuits
+      5.2-6 OMCircuits
+      5.2-7 OMTopes
+      5.2-8 TopeGraph
+      5.2-9 OMCovectors
+      5.2-10 OMChirotope
+      5.2-11 OMRankFunction
+    5.3 [33X[0;0YProperties[133X
+      5.3-1 OMIsLinear
+      5.3-2 HasSimpleSimplex
+      5.3-3 HasSimpleTriangle
+      5.3-4 OMExp
+    5.4 [33X[0;0YOperations[133X
+      5.4-1 IsLEquiv
+      5.4-2 HasSimpleSimplexRk
+      5.4-3 OMLocalizationRk
+      5.4-4 OMTConvexClosure
+    5.5 [33X[0;0YGlobal methods[133X
+      5.5-1 OMOperation
+      5.5-2 OrderCovec
+      5.5-3 IsOMEquiv
+      5.5-4 SeparatingSet
+      5.5-5 WiringDiagramToTopes
+      5.5-6 WiringDiagramToCovectors
+  6 [33X[0;0YFree arrangements[133X
+    6.1 [33X[0;0YModule of logarithmic vector fields aka derivation modules[133X
+      6.1-1 DerModule
+      6.1-2 DerPModule
+      6.1-3 DerModGenerators
+      6.1-4 DerModPRing
+      6.1-5 DerModDegreeSequence
+      6.1-6 DerModProjDim
+    6.2 [33X[0;0YFreeness properties[133X
+      6.2-1 DerModIsFree
+      6.2-2 HArrIsFree
+      6.2-3 HArrIsLocallyFree
+      6.2-4 IsInductivelyFree
+      6.2-5 IsLocallyInductivelyFree
+      6.2-6 IsDivisionallyFree
+      6.2-7 IsLocallyDivisionallyFree
+      6.2-8 IsMATFree
+      6.2-9 MATFreePart
+  7 [33X[0;0YFurther properties of arrangements, geometric lattices, and oriented
   matroids[133X
-    6.1 [33X[0;0YSupersolvable arrangements[133X
-      6.1-1 LIsModularPair
-      6.1-2 LIsModularFlat
-      6.1-3 LModularFlatsRk
-      6.1-4 LIsSupersolvable
-      6.1-5 HArrIsSupersolvable
-      6.1-6 OMIsSupersolvable
-    6.2 [33X[0;0YFormal arrangements[133X
-      6.2-1 IsFormal
-    6.3 [33X[0;0YSimplicial arrangements[133X
-      6.3-1 HArrIsSimplicial
-    6.4 [33X[0;0YFalk's weight test[133X
-      6.4-1 OMBoundedCpx
-      6.4-2 OMSupportsFalkWeights
-    6.5 [33X[0;0YFactored arrangements[133X
-      6.5-1 HArrIsFactored
-      6.5-2 HArrFactorizations
-      6.5-3 HArrIsInductivelyFactored
-      6.5-4 HArrInductiveFactorizations
-  7 [33X[0;0YComplements of complex arrangements[133X
-    7.1 [33X[0;0YComplexes and face posets[133X
-      7.1-1 SalvettiComplex
-      7.1-2 SalvettiComplex
-      7.1-3 FPGroundSet
-      7.1-4 FPOrder
-      7.1-5 BZs1Complex
-      7.1-6 BZs2Complex
-    7.2 [33X[0;0YNon-$K(\pi,1)$ arrangements[133X
-      7.2-1 CCSimpleTriangle
-  8 [33X[0;0YMilnor fibers[133X
-    8.1 [33X[0;0YComplexes[133X
-      8.1-1 MilnorFiberComplex
-      8.1-2 MilnorFiberComplex
-    8.2 [33X[0;0YFunctions for (Co)homology computations[133X
-      8.2-1 FPtoCWCpx
-      8.2-2 FPtoSCpx
-      8.2-3 MFModPCohomRing
-      8.2-4 MFModPCohomRing
-  9 [33X[0;0YTope posets[133X
-    9.1 [33X[0;0YOperations[133X
-      9.1-1 TopePoset
-    9.2 [33X[0;0YAttributes[133X
-      9.2-1 TPGroundSet
-      9.2-2 TPBaseTope
-      9.2-3 TPRankPoly
-      9.2-4 TopesFactTPRankPoly
-    9.3 [33X[0;0YProperties[133X
-      9.3-1 IsFactTPRankPolyExp
-  10 [33X[0;0YVarchenko-Gelfand algebra[133X
-    10.1 [33X[0;0YConstruction[133X
-      10.1-1 VGAlgebra
-  11 [33X[0;0YVisualization of real 3-arrangements[133X
-    11.1 [33X[0;0YGlobal methods[133X
-      11.1-1 LaTeXDrawProjPicture
-      11.1-2 LaTeXDrawSpherePicture
-      11.1-3 LaTeXDrawTopeGraph
-  12 [33X[0;0YRealization spaces of geometric lattices[133X
-    12.1 [33X[0;0YConstruction[133X
-      12.1-1 LRealizationSpace
-    12.2 [33X[0;0YAttributes[133X
-      12.2-1 LGenSet
-      12.2-2 RSLattice
-      12.2-3 RSCharacteristic
-      12.2-4 RSDefField
-      12.2-5 RSCoeffMat
-      12.2-6 RSDimension
-      12.2-7 RSPRing
-      12.2-8 RSIdealMinors
-      12.2-9 RSNonMinors
-      12.2-10 RSEvalPoint
-    12.3 [33X[0;0YProperties[133X
-      12.3-1 RSIsNonEmpty
-    12.4 [33X[0;0YFurther (auxillary) Operations[133X
-      12.4-1 LSubsetGeneratedByS
-      12.4-2 LIsGenSet
-  13 [33X[0;0YOrientations of matroids[133X
-    13.1 [33X[0;0YOrientations of a given geometric lattice[133X
-      13.1-1 LIsOrientable
-      13.1-2 LOrientations
-      13.1-3 LFindOrientations
-  14 [33X[0;0YThe Aomoto complex[133X
-    14.1 [33X[0;0YOrlik–Solomon combinatorics of geometric lattices[133X
-      14.1-1 LBrokenCircuits
-      14.1-2 LNBCSets
-      14.1-3 LOrlikSolomonBetti
-    14.2 [33X[0;0YConstruction of the Aomoto complex[133X
-      14.2-1 AomotoComplex
-    14.3 [33X[0;0YAttributes of the Aomoto complex[133X
-      14.3-1 AomotoLattice
-      14.3-2 AomotoField
-      14.3-3 AomotoWeights
-      14.3-4 AomotoBasis
-      14.3-5 AomotoDifferentials
-      14.3-6 AomotoBettiNumbers
-      14.3-7 AomotoCohomology
-  15 [33X[0;0YSAT-problems[133X
-    15.1 [33X[0;0YConstruction[133X
-      15.1-1 SATProblem
-    15.2 [33X[0;0YAttributes[133X
-      15.2-1 SATnvariables
-      15.2-2 SATClauses
-      15.2-3 SATallSolutions
-      15.2-4 SATCNFStr
-      15.2-5 SATSolutions
-    15.3 [33X[0;0YOperations[133X
-      15.3-1 SATSolve
-  16 [33X[0;0YGreedy search for arrangements[133X
-    16.1 [33X[0;0YConstructions[133X
-      16.1-1 HArrGreedySearch
-      16.1-2 HArrGreedySearchSubArr
-      16.1-3 CharPolySplits
-      16.1-4 DistMSetInvL
-    16.2 [33X[0;0YAttributes[133X
-      16.2-1 GreedySearchRun
-      16.2-2 GreedySearchGF
-      16.2-3 GreedySearchDimension
-      16.2-4 GreedySearchNOfHs
-      16.2-5 GreedySearchTargetFct
-      16.2-6 GreedySearchMaxIterations
+    7.1 [33X[0;0YSupersolvable arrangements[133X
+      7.1-1 LIsModularPair
+      7.1-2 LIsModularFlat
+      7.1-3 LModularFlatsRk
+      7.1-4 LIsSupersolvable
+      7.1-5 HArrIsSupersolvable
+      7.1-6 OMIsSupersolvable
+    7.2 [33X[0;0YFormal arrangements[133X
+      7.2-1 IsFormal
+    7.3 [33X[0;0YSimplicial arrangements[133X
+      7.3-1 HArrIsSimplicial
+    7.4 [33X[0;0YFalk's weight test[133X
+      7.4-1 OMBoundedCpx
+      7.4-2 OMSupportsFalkWeights
+    7.5 [33X[0;0YFactored arrangements[133X
+      7.5-1 HArrIsFactored
+      7.5-2 HArrFactorizations
+      7.5-3 HArrIsInductivelyFactored
+      7.5-4 HArrInductiveFactorizations
+  8 [33X[0;0YComplements of complex arrangements[133X
+    8.1 [33X[0;0YComplexes and face posets[133X
+      8.1-1 SalvettiComplex
+      8.1-2 SalvettiComplex
+      8.1-3 FPGroundSet
+      8.1-4 FPOrder
+      8.1-5 BZs1Complex
+      8.1-6 BZs2Complex
+    8.2 [33X[0;0YNon-$K(\pi,1)$ arrangements[133X
+      8.2-1 CCSimpleTriangle
+  9 [33X[0;0YMilnor fibers[133X
+    9.1 [33X[0;0YComplexes[133X
+      9.1-1 MilnorFiberComplex
+      9.1-2 MilnorFiberComplex
+    9.2 [33X[0;0YFunctions for (Co)homology computations[133X
+      9.2-1 FPtoCWCpx
+      9.2-2 FPtoSCpx
+      9.2-3 MFModPCohomRing
+      9.2-4 MFModPCohomRing
+  10 [33X[0;0YTope posets[133X
+    10.1 [33X[0;0YOperations[133X
+      10.1-1 TopePoset
+    10.2 [33X[0;0YAttributes[133X
+      10.2-1 TPGroundSet
+      10.2-2 TPBaseTope
+      10.2-3 TPRankPoly
+      10.2-4 TopesFactTPRankPoly
+    10.3 [33X[0;0YProperties[133X
+      10.3-1 IsFactTPRankPolyExp
+  11 [33X[0;0YVarchenko-Gelfand algebra[133X
+    11.1 [33X[0;0YConstruction[133X
+      11.1-1 VGAlgebra
+  12 [33X[0;0YVisualization of real 3-arrangements[133X
+    12.1 [33X[0;0YGlobal methods[133X
+      12.1-1 LaTeXDrawProjPicture
+      12.1-2 LaTeXDrawSpherePicture
+      12.1-3 LaTeXDrawTopeGraph
+  13 [33X[0;0YRealization spaces of geometric lattices[133X
+    13.1 [33X[0;0YConstruction[133X
+      13.1-1 LRealizationSpace
+    13.2 [33X[0;0YAttributes[133X
+      13.2-1 LGenSet
+      13.2-2 RSLattice
+      13.2-3 RSCharacteristic
+      13.2-4 RSDefField
+      13.2-5 RSCoeffMat
+      13.2-6 RSDimension
+      13.2-7 RSPRing
+      13.2-8 RSIdealMinors
+      13.2-9 RSNonMinors
+      13.2-10 RSEvalPoint
+    13.3 [33X[0;0YProperties[133X
+      13.3-1 RSIsNonEmpty
+    13.4 [33X[0;0YFurther (auxillary) Operations[133X
+      13.4-1 LSubsetGeneratedByS
+      13.4-2 LIsGenSet
+  14 [33X[0;0YGreedy search for arrangements[133X
+    14.1 [33X[0;0YConstructions[133X
+      14.1-1 HArrGreedySearch
+      14.1-2 HArrGreedySearchSubArr
+      14.1-3 CharPolySplits
+      14.1-4 DistMSetInvL
+    14.2 [33X[0;0YAttributes[133X
+      14.2-1 GreedySearchRun
+      14.2-2 GreedySearchGF
+      14.2-3 GreedySearchDimension
+      14.2-4 GreedySearchNOfHs
+      14.2-5 GreedySearchTargetFct
+      14.2-6 GreedySearchMaxIterations
+  15 [33X[0;0YOrientations of matroids[133X
+    15.1 [33X[0;0YOrientations of a given geometric lattice[133X
+      15.1-1 LIsOrientable
+      15.1-2 LOrientations
+      15.1-3 LFindOrientations
+  16 [33X[0;0YThe Aomoto complex[133X
+    16.1 [33X[0;0YOrlik–Solomon combinatorics of geometric lattices[133X
+      16.1-1 LBrokenCircuits
+      16.1-2 LNBCSets
+      16.1-3 LOrlikSolomonBetti
+    16.2 [33X[0;0YConstruction of the Aomoto complex[133X
+      16.2-1 AomotoComplex
+    16.3 [33X[0;0YAttributes of the Aomoto complex[133X
+      16.3-1 AomotoLattice
+      16.3-2 AomotoField
+      16.3-3 AomotoWeights
+      16.3-4 AomotoBasis
+      16.3-5 AomotoDifferentials
+      16.3-6 AomotoBettiNumbers
+      16.3-7 AomotoCohomology
+  17 [33X[0;0YSAT-problems[133X
+    17.1 [33X[0;0YConstruction[133X
+      17.1-1 SATProblem
+    17.2 [33X[0;0YAttributes[133X
+      17.2-1 SATnvariables
+      17.2-2 SATClauses
+      17.2-3 SATallSolutions
+      17.2-4 SATCNFStr
+      17.2-5 SATSolutions
+    17.3 [33X[0;0YOperations[133X
+      17.3-1 SATSolve
   
   
   [32X

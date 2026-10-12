@@ -1,0 +1,211 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{graphonsphere}[2026/10/12 Stable great-circle arcs]
+
+% Draw great-circle arcs on the unit sphere in tdplot_main_coords.
+\RequirePackage{tikz,tikz-3dplot}
+\usepgflibrary{fpu}
+
+% Public settings; the original commands and their arguments are retained.
+\providecommand{\samples}{10}
+\providecommand{\GCArcTolerance}{0.0001}
+% The tolerance applies to unit-vector cross products and horizon depths.
+% Zero vectors are invalid. Numerically antipodal endpoints are ambiguous
+% and are skipped with a warning; coincident endpoints give a constant path.
+% Drawing/clipping direction remains B -> A; midpoint parameter t is A -> B.
+
+\newif\ifgos@valid
+\newcommand{\gos@init}{%
+  \gos@validtrue
+  \pgfkeys{/pgf/fpu=true,/pgf/fpu/output format=fixed}%
+}
+
+% Normalize once, with scaling before squaring. FPU arithmetic also permits
+% very small/large coordinate magnitudes without TeX dimension overflow.
+% #4 is an internal prefix (A, B, T or P) for the three output macros.
+\newcommand{\gos@normalize}[4]{%
+  \pgfmathsetmacro{\gos@x}{#1}%
+  \pgfmathsetmacro{\gos@y}{#2}%
+  \pgfmathsetmacro{\gos@z}{#3}%
+  \pgfmathsetmacro{\gos@scale}{max(abs(\gos@x),abs(\gos@y),abs(\gos@z))}%
+  \pgfmathparse{\gos@scale>0}%
+  \ifdim\pgfmathresult pt>0pt
+    \pgfmathsetmacro{\gos@x}{\gos@x/\gos@scale}%
+    \pgfmathsetmacro{\gos@y}{\gos@y/\gos@scale}%
+    \pgfmathsetmacro{\gos@z}{\gos@z/\gos@scale}%
+    \pgfmathsetmacro{\gos@norm}{sqrt(\gos@x*\gos@x+\gos@y*\gos@y+\gos@z*\gos@z)}%
+    \expandafter\pgfmathsetmacro\csname gos@#4x\endcsname{\gos@x/\gos@norm}%
+    \expandafter\pgfmathsetmacro\csname gos@#4y\endcsname{\gos@y/\gos@norm}%
+    \expandafter\pgfmathsetmacro\csname gos@#4z\endcsname{\gos@z/\gos@norm}%
+  \else
+    \gos@validfalse
+    \PackageWarning{graphonsphere}{Zero vector: command skipped}%
+  \fi
+}
+
+% Unit A and a unit tangent T span the great-circle plane:
+% p(u) = A cos(u) + T sin(u), 0 <= u <= alpha < 180 degrees.
+% Construct T = normalize((A x B) x A), avoiding division by sin(alpha).
+\newcommand{\gos@prepare}[6]{%
+  \gos@init
+  \gos@normalize{#1}{#2}{#3}{A}%
+  \ifgos@valid
+    \gos@normalize{#4}{#5}{#6}{B}%
+  \fi
+  \ifgos@valid
+    \pgfkeys{/pgf/trig format=deg}%
+    \pgfmathsetmacro{\gos@cx}{\gos@Ay*\gos@Bz-\gos@Az*\gos@By}%
+    \pgfmathsetmacro{\gos@cy}{\gos@Az*\gos@Bx-\gos@Ax*\gos@Bz}%
+    \pgfmathsetmacro{\gos@cz}{\gos@Ax*\gos@By-\gos@Ay*\gos@Bx}%
+    \pgfmathsetmacro{\gos@crossnorm}{sqrt(\gos@cx*\gos@cx+\gos@cy*\gos@cy+\gos@cz*\gos@cz)}%
+    \pgfmathsetmacro{\gos@dot}{\gos@Ax*\gos@Bx+\gos@Ay*\gos@By+\gos@Az*\gos@Bz}%
+    \ifdim\gos@crossnorm pt>\GCArcTolerance pt
+      \gos@normalize{\gos@cy*\gos@Az-\gos@cz*\gos@Ay}%
+        {\gos@cz*\gos@Ax-\gos@cx*\gos@Az}%
+        {\gos@cx*\gos@Ay-\gos@cy*\gos@Ax}{T}%
+      % atan2 is scale invariant. Scaling avoids PGF's small-y shortcut.
+      \pgfmathsetmacro{\gos@alpha}{atan2(1000*\gos@crossnorm,1000*\gos@dot)}%
+    \else
+      \ifdim\gos@dot pt<0pt
+        \gos@validfalse
+        \PackageWarning{graphonsphere}{Numerically antipodal endpoints do not determine
+          a unique great-circle arc: command skipped}%
+      \else
+        \def\gos@alpha{0}%
+        \def\gos@Tx{0}\def\gos@Ty{0}\def\gos@Tz{0}%
+      \fi
+    \fi
+  \fi
+}
+
+% Unit vector towards the viewer; main coordinates must be set beforehand.
+\newcommand{\gos@view}{%
+  \@ifundefined{tdplotmaintheta}{%
+    \gos@validfalse
+    \PackageWarning{graphonsphere}{Call \string\tdplotsetmaincoords\space
+      before a front/back command: command skipped}%
+  }{%
+    \pgfkeys{/pgf/trig format=deg}%
+    \pgfmathsetmacro{\gos@vx}{sin(\tdplotmainphi)*sin(\tdplotmaintheta)}%
+    \pgfmathsetmacro{\gos@vy}{-cos(\tdplotmainphi)*sin(\tdplotmaintheta)}%
+    \pgfmathsetmacro{\gos@vz}{cos(\tdplotmaintheta)}%
+  }%
+}
+
+% One common path expression for drawing, clipping and visible subarcs.
+\newcommand{\gos@plot}[2]{%
+  plot[variable=\gos@u,domain=#1:#2,samples=\samples]
+    ({\gos@Ax*cos(\gos@u)+\gos@Tx*sin(\gos@u)},
+     {\gos@Ay*cos(\gos@u)+\gos@Ty*sin(\gos@u)},
+     {\gos@Az*cos(\gos@u)+\gos@Tz*sin(\gos@u)})%
+}
+
+% An interval without an interior horizon crossing has constant visibility.
+\newcommand{\gos@drawvisible}[3]{%
+  \pgfmathsetmacro{\gos@midangle}{((#1)+(#2))/2}%
+  \pgfmathsetmacro{\gos@depth}{\gos@depthA*cos(\gos@midangle)+\gos@depthT*sin(\gos@midangle)}%
+  \ifdim\gos@depth pt<-\GCArcTolerance pt
+    \draw[opacity=0.25,#3] \gos@plot{#1}{#2};%
+  \else
+    \draw[#3] \gos@plot{#1}{#2};%
+  \fi
+}
+
+\newcommand{\GCArcAB}[7]{%
+  \begingroup
+  \gos@prepare{#1}{#2}{#3}{#4}{#5}{#6}%
+  \pgfkeys{/pgf/fpu=false}%
+  \ifgos@valid
+    \draw[#7] \gos@plot{\gos@alpha}{0};%
+  \fi
+  \endgroup
+}
+
+% #7 is the fractional arc parameter t, rather than drawing options.
+\newcommand{\GCMidPointAB}[7]{%
+  \begingroup
+  \gos@prepare{#1}{#2}{#3}{#4}{#5}{#6}%
+  \ifgos@valid
+    \pgfmathsetmacro{\gos@u}{(#7)*\gos@alpha}%
+    \pgfkeys{/pgf/fpu=false}%
+    \node (mpAB) at
+      ({\gos@Ax*cos(\gos@u)+\gos@Tx*sin(\gos@u)},
+       {\gos@Ay*cos(\gos@u)+\gos@Ty*sin(\gos@u)},
+       {\gos@Az*cos(\gos@u)+\gos@Tz*sin(\gos@u)}) {};%
+    \filldraw (mpAB) circle[radius=0.3pt];%
+  \fi
+  \endgroup
+}
+
+\newcommand{\GCArcABfb}[7]{%
+  \begingroup
+  \gos@prepare{#1}{#2}{#3}{#4}{#5}{#6}%
+  \ifgos@valid \gos@view \fi
+  \ifgos@valid
+    \pgfmathsetmacro{\gos@depthA}{\gos@Ax*\gos@vx+\gos@Ay*\gos@vy+\gos@Az*\gos@vz}%
+    \pgfmathsetmacro{\gos@depthT}{\gos@Tx*\gos@vx+\gos@Ty*\gos@vy+\gos@Tz*\gos@vz}%
+    % Solve depthA cos(u) + depthT sin(u) = 0, modulo 180 degrees.
+    % There is at most one interior crossing on a non-antipodal minor arc.
+    \pgfmathsetmacro{\gos@depthmax}{max(abs(\gos@depthA),abs(\gos@depthT))}%
+    \def\gos@horizon{0}%
+    \ifdim\gos@depthmax pt>\GCArcTolerance pt
+      \pgfmathsetmacro{\gos@horizon}{atan2(-1000*\gos@depthA,1000*\gos@depthT)}%
+      \ifdim\gos@horizon pt<0pt
+        \pgfmathsetmacro{\gos@horizon}{\gos@horizon+180}%
+      \fi
+      \ifdim\gos@horizon pt=180pt \def\gos@horizon{0}\fi
+    \fi
+    \pgfkeys{/pgf/fpu=false}%
+    \ifdim\gos@horizon pt>0pt
+      \ifdim\gos@horizon pt<\gos@alpha pt
+        \gos@drawvisible{\gos@alpha}{\gos@horizon}{#7}%
+        \gos@drawvisible{\gos@horizon}{0}{#7}%
+      \else
+        \gos@drawvisible{\gos@alpha}{0}{#7}%
+      \fi
+    \else
+      \gos@drawvisible{\gos@alpha}{0}{#7}%
+    \fi
+  \fi
+  \endgroup
+}
+
+\newcommand{\POnSfb}[4]{%
+  \begingroup
+  \gos@init
+  \gos@normalize{#1}{#2}{#3}{P}%
+  \ifgos@valid \gos@view \fi
+  \ifgos@valid
+    \pgfmathsetmacro{\gos@depth}{\gos@Px*\gos@vx+\gos@Py*\gos@vy+\gos@Pz*\gos@vz}%
+    \pgfkeys{/pgf/fpu=false}%
+    \ifdim\gos@depth pt<-\GCArcTolerance pt
+      \filldraw[opacity=0.25,#4] (\gos@Px,\gos@Py,\gos@Pz) circle[radius=0.5pt];%
+    \else
+      \filldraw[#4] (\gos@Px,\gos@Py,\gos@Pz) circle[radius=0.5pt];%
+    \fi
+  \fi
+  \endgroup
+}
+
+\newcommand{\clipGCArcAB}[7]{%
+  \begingroup
+  \gos@prepare{#1}{#2}{#3}{#4}{#5}{#6}%
+  \pgfkeys{/pgf/fpu=false}%
+  \ifgos@valid
+    \clip[#7] \gos@plot{\gos@alpha}{0};%
+  \fi
+  \endgroup
+}
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program. If not, see <http://www.gnu.org/licenses/>.
+\endinput

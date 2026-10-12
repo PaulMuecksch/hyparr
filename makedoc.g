@@ -20,6 +20,7 @@ AutoDoc( rec(
             autodoc := rec(
             files := [
                 "gap/arrangements.gd", 
+                "gap/geomlattice.gd",
                 "gap/specialarrs.gd", 
                 "gap/orientedmatroid.gd", 
                 "gap/freearrs.gd", 
@@ -30,7 +31,7 @@ AutoDoc( rec(
                 "gap/vgalgebra.gd",
                 "gap/drawarrs.gd",
                 "gap/realizationspace.gd",
-                "gap/greedy.gi",
+                "gap/greedy.gd",
                 "gap/findorientations.gd",
                 "gap/aomoto.gd",
                 "gap/satproblems.gd"

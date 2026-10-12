@@ -10,8 +10,8 @@ SetPackageInfo( rec(
 
 PackageName := "HypArr",
 Subtitle := "Computations with hyperplane arrangements",
-Version := "0.26.09",
-Date := "17/09/2026", # dd/mm/yyyy format
+Version := "0.26.10",
+Date := "12/10/2026", # dd/mm/yyyy format
 License := "GPL-3.0-or-later",
 
 Persons := [

@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>GAP (HypArr) - Chapter 6: Further properties of arrangements, geometric lattices, and oriented matroids</title>
+<title>GAP (HypArr) - Chapter 6: Free arrangements</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
@@ -15,423 +15,323 @@
 <body class="chap6"  onload="jscontent()">
 
 
-<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chap17.html">17</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap5.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap7.html">[Next Chapter]</a>&nbsp;  </div>
 
 <p id="mathjaxlink" class="pcenter"><a href="chap6_mj.html">[MathJax on]</a></p>
-<p><a id="X7E898D0F86EF9F1E" name="X7E898D0F86EF9F1E"></a></p>
-<div class="ChapSects"><a href="chap6.html#X7E898D0F86EF9F1E">6 <span class="Heading">Further properties of arrangements, geometric lattices, and oriented matroids</span></a>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7B09D56B7A076E6B">6.1 <span class="Heading">Supersolvable arrangements</span></a>
+<p><a id="X84CDDA0382B013CF" name="X84CDDA0382B013CF"></a></p>
+<div class="ChapSects"><a href="chap6.html#X84CDDA0382B013CF">6 <span class="Heading">Free arrangements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X7AFAFACD7E918BFC">6.1 <span class="Heading">Module of logarithmic vector fields aka derivation modules</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X78E6E11179F7ECB5">6.1-1 LIsModularPair</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7FECD913876C637C">6.1-2 LIsModularFlat</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X8271B52F816053DB">6.1-3 LModularFlatsRk</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7D95D0F37E6FBFD6">6.1-4 LIsSupersolvable</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7DC90A0286D5664A">6.1-5 HArrIsSupersolvable</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X78B7232883025D41">6.1-6 OMIsSupersolvable</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X783314398329E3BE">6.1-1 DerModule</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7E91FED384460819">6.1-2 DerPModule</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7B6780568674988A">6.1-3 DerModGenerators</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X8174C2FD82AA2B81">6.1-4 DerModPRing</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X78A309B97E68E70F">6.1-5 DerModDegreeSequence</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X81D05AA282B2B62E">6.1-6 DerModProjDim</a></span>
 </div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X79BAC87F7C1CA4A1">6.2 <span class="Heading">Formal arrangements</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X82FF317F7EFD52AF">6.2 <span class="Heading">Freeness properties</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X808977C7824120DF">6.2-1 IsFormal</a></span>
-</div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X8070A6CF85A00A70">6.3 <span class="Heading">Simplicial arrangements</span></a>
-</span>
-<div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EEAC3257EC22C1B">6.3-1 HArrIsSimplicial</a></span>
-</div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X79A9BA6287B1A981">6.4 <span class="Heading">Falk's weight test</span></a>
-</span>
-<div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7F2F674F8273D120">6.4-1 OMBoundedCpx</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X87CE42827934F11F">6.4-2 OMSupportsFalkWeights</a></span>
-</div></div>
-<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap6.html#X81699B2D79E2F8CB">6.5 <span class="Heading">Factored arrangements</span></a>
-</span>
-<div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X87DEBDF185ACD970">6.5-1 HArrIsFactored</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7BA9ACDD7AB5FA7D">6.5-2 HArrFactorizations</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7F64D3DE8599E489">6.5-3 HArrIsInductivelyFactored</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7EB5E5DA797D0A61">6.5-4 HArrInductiveFactorizations</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X81110BE983107955">6.2-1 DerModIsFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7C55194B8304FDAC">6.2-2 HArrIsFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7AEFB15E81DAF0DE">6.2-3 HArrIsLocallyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X80F4D6247CAA1BDA">6.2-4 IsInductivelyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X841E21C3818B1703">6.2-5 IsLocallyInductivelyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X85DAC6FC78DDED6D">6.2-6 IsDivisionallyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X79A356807BB94334">6.2-7 IsLocallyDivisionallyFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7887420678D0B8B4">6.2-8 IsMATFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap6.html#X7B7DB39B7DD8EFD1">6.2-9 MATFreePart</a></span>
 </div></div>
 </div>
 
-<h3>6 <span class="Heading">Further properties of arrangements, geometric lattices, and oriented matroids</span></h3>
+<h3>6 <span class="Heading">Free arrangements</span></h3>
 
-<p>The following describes functions to analyse further properties of arrangements such as <em>formality</em>, <em>supersolvability</em>, <em>simpliciality</em>, <em>factoredness</em>, <em>inductive factoredness</em> ...</p>
+<p>The following describes functions to analyse freeness properties of arrangements such as <em>inductive freeness</em> due to H. Terao <a href="chapBib.html#biBTerao1980_FreeI">[Ter80]</a> and <em>divisionell freeness</em> due to T. Abe <a href="chapBib.html#biBAbe16_DivFree">[Abe16]</a>. Moreover, generators and projective dimension of higher derivation modules can be computed.</p>
 
-<p><a id="X7B09D56B7A076E6B" name="X7B09D56B7A076E6B"></a></p>
+<p><a id="X7AFAFACD7E918BFC" name="X7AFAFACD7E918BFC"></a></p>
 
-<h4>6.1 <span class="Heading">Supersolvable arrangements</span></h4>
+<h4>6.1 <span class="Heading">Module of logarithmic vector fields aka derivation modules</span></h4>
 
-<p><a id="X78E6E11179F7ECB5" name="X78E6E11179F7ECB5"></a></p>
+<p>The functions in this section all use the <strong class="button">singular</strong> package to call functions from <strong class="button">Singular</strong> <a href="chapBib.html#biBDGPS_Singular4">[DGPS24]</a> for commutative algebra calculations.</p>
 
-<h5>6.1-1 LIsModularPair</h5>
+<p><a id="X783314398329E3BE" name="X783314398329E3BE"></a></p>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsModularPair</code>( <var class="Arg">L</var>, <var class="Arg">m1</var>, <var class="Arg">m2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
+<h5>6.1-1 DerModule</h5>
 
-<p>Determines if <var class="Arg">m1</var> and <var class="Arg">m2</var> form a modular pair in L.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModule</code>( <var class="Arg">A</var>[, <var class="Arg">mult</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: Derivation module</p>
 
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3);</span>
-&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(A);</span>
-&lt;Geometric lattice: 6 atoms, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LGroundSet(L);</span>
-[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
- [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
-   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
-  [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2]; m2:= [5,6]; LIsModularPair(L,m1,m2);</span>
-false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2]; m2:= [2,4,6]; LIsModularPair(L,m1,m2);</span>
-true
-</pre></div>
-
-<p><a id="X7FECD913876C637C" name="X7FECD913876C637C"></a></p>
-
-<h5>6.1-2 LIsModularFlat</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsModularFlat</code>( <var class="Arg">L</var>, <var class="Arg">m</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: true or false</p>
-
-<p>Determines if <var class="Arg">m</var> is a modular flat in L.</p>
+<p>Computes the <em>(multi) derivation module</em> of the arrangement <var class="Arg">A</var> (with multiplicities given as a list by <var class="Arg">mult</var>).</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,3); L:=IntersectionLattice(A); LGroundSet(L);</span>
-&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
-&lt;Geometric lattice: 6 atoms, rank 3&gt;
-[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], 
- [ [ 1, 2 ], [ 1, 3, 6 ], [ 2, 3, 5 ], [ 1, 4, 5 ], 
-   [ 2, 4, 6 ], [ 3, 4 ], [ 5, 6 ] ], 
-  [ [ 1, 2, 3, 4, 5, 6 ] ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m1:=[1,2]; m2:= [2,4,6]; LIsModularFlat(L,m1); LIsModularFlat(L,m2);</span>
-false
-true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);</span>
+&lt;Derivation module
+  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+  with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A,[2,1,3,4]);</span>
+&lt;Derivation module
+  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+  with 4 generators&gt;
 </pre></div>
 
-<p><a id="X8271B52F816053DB" name="X8271B52F816053DB"></a></p>
+<p><a id="X7E91FED384460819" name="X7E91FED384460819"></a></p>
 
-<h5>6.1-3 LModularFlatsRk</h5>
+<h5>6.1-2 DerPModule</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LModularFlatsRk</code>( <var class="Arg">L</var>, <var class="Arg">k</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerPModule</code>( <var class="Arg">A</var>, <var class="Arg">p</var>[, <var class="Arg">mult</var>] )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: Derivation module</p>
+
+<p>Computes the <em>(multi) p-derivation module</em> <span class="Math">D^p(A)</span> (<span class="Math">D^p(A,m)</span>) of the arrangement <var class="Arg">A</var> (with multiplicities given as a list by <var class="Arg">mult</var>).</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X7B6780568674988A" name="X7B6780568674988A"></a></p>
+
+<h5>6.1-3 DerModGenerators</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModGenerators</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns: list</p>
 
-<p>Determines the modular flats in <var class="Arg">L</var> of rank <var class="Arg">k</var>.</p>
+<p>Returns the (minimal) generators of the module <var class="Arg">D</var>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,1,4));</span>
-&lt;Geometric lattice: 16 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LModularFlatsRk(L,3);</span>
-[ [ 1, 2, 3, 5, 6, 7, 8, 11, 12 ], 
-  [ 1, 2, 4, 5, 6, 9, 10, 13, 14 ], 
-  [ 1, 3, 4, 7, 8, 9, 10, 15, 16 ], 
-  [ 2, 3, 4, 11, 12, 13, 14, 15, 16 ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);</span>
+&lt;Derivation module
+  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+  with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DerModGenerators(D);</span>
+[ [ x_1, x_2, x_3 ], 
+  [ 0, -x_2*x_3, x_2*x_3 ], 
+  [ 0, x_2*x_3, x_1*x_3+x_3^2 ], 
+  [ 0, x_1*x_2+x_2^2+x_2*x_3, 0 ] ]
 </pre></div>
 
-<p><a id="X7D95D0F37E6FBFD6" name="X7D95D0F37E6FBFD6"></a></p>
+<p><a id="X8174C2FD82AA2B81" name="X8174C2FD82AA2B81"></a></p>
 
-<h5>6.1-4 LIsSupersolvable</h5>
+<h5>6.1-4 DerModPRing</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LIsSupersolvable</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModPRing</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: Polynomial ring</p>
 
-<p>Determines if the geometric lattice <var class="Arg">L</var> is <em>supersolvable</em>.</p>
+<p>Returns the defining polynomial ring of <var class="Arg">D</var>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,1,4));</span>
-&lt;Geometric lattice: 16 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsSupersolvable(L);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L:=IntersectionLattice(AGpql(2,2,4));</span>
-&lt;Geometric lattice: 12 atoms, rank 4&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LIsSupersolvable(L);</span>
-false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(AGpql(3,3,2)); DerModPRing(D);</span>
+&lt;field in characteristic 0&gt;[x_1,x_2]
 </pre></div>
 
-<p><a id="X7DC90A0286D5664A" name="X7DC90A0286D5664A"></a></p>
+<p><a id="X78A309B97E68E70F" name="X78A309B97E68E70F"></a></p>
 
-<h5>6.1-5 HArrIsSupersolvable</h5>
+<h5>6.1-5 DerModDegreeSequence</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsSupersolvable</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModDegreeSequence</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: list</p>
 
-<p>Determines if the arrangement <var class="Arg">A</var> is <em>supersolvable</em>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,4);</span>
-&lt;HyperplaneArrangement: 16 hyperplanes in 4-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsSupersolvable(A);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,4); </span>
-&lt;HyperplaneArrangement: 12 hyperplanes in 4-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsSupersolvable(A);</span>
-false
-</pre></div>
-
-<p><a id="X78B7232883025D41" name="X78B7232883025D41"></a></p>
-
-<h5>6.1-6 OMIsSupersolvable</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMIsSupersolvable</code>( <var class="Arg">OM</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
-
-<p>Determines if the oriented matroid <var class="Arg">OM</var> is <em>supersolvable</em>.</p>
+<p>Returns the sequence of degrees of (minimal) generators of the graded module <var class="Arg">D</var>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(3,4,[1,1,1,1]);</span>
-&lt;OrientedMatroid: 4 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
-false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C:=List(Combinations(Roots(AGpql(2,2,3)),3),x-&gt;pos(Determinant(x)));</span>
-[ 1, 1, 1, 1, 0, -1, -1, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 1, -1, -1 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(3,6,C);</span>
-&lt;OrientedMatroid: 6 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
-true
-</pre></div>
-
-<p><a id="X79BAC87F7C1CA4A1" name="X79BAC87F7C1CA4A1"></a></p>
-
-<h4>6.2 <span class="Heading">Formal arrangements</span></h4>
-
-<p><a id="X808977C7824120DF" name="X808977C7824120DF"></a></p>
-
-<h5>6.2-1 IsFormal</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFormal</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
-
-<p>Determines if the arrangement is <em>formal</em> in the sense of Falk-Randell <a href="chapBib.html#biBFalkRandell87_HomotopyArr">[FR87]</a>.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A1 := Arr([</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,0,0],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,1,0],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,0,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,1,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,1,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,4],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [3,0,5],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [3,4,5]</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">]);</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput"></span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A2 := Arr([</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,0,0],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,1,0],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [0,0,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,1,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,1,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,1],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [2,3,4],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,0,3],</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">    [1,2,3]</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">]);</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsLEquiv(A1,A2);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFormal(A1);</span>
-true
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFormal(A2);</span>
-false
-</pre></div>
-
-<p><a id="X8070A6CF85A00A70" name="X8070A6CF85A00A70"></a></p>
-
-<h4>6.3 <span class="Heading">Simplicial arrangements</span></h4>
-
-<p><a id="X7EEAC3257EC22C1B" name="X7EEAC3257EC22C1B"></a></p>
-
-<h5>6.3-1 HArrIsSimplicial</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsSimplicial</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>Returns: true or false.</p>
-
-<p>Determines if the real arrangement <var class="Arg">A</var> is <em>simplicial</em>, i.e. if all chambers are simplicial.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1]]); HArrIsSimplicial(A);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
 &lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DerModDegreeSequence(DerModule(A));</span>
+[ 1, 2, 2 ]
+</pre></div>
+
+<p><a id="X81D05AA282B2B62E" name="X81D05AA282B2B62E"></a></p>
+
+<h5>6.1-6 DerModProjDim</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModProjDim</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: A non-negative integer</p>
+
+<p>Computes the projective dimension of the module <var class="Arg">D</var>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A);</span>
+&lt;Derivation module
+  over PolynomialRing( Rationals, ["x_1", "x_2", "x_3"] )
+  with 4 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DerModProjDim(D);</span>
+1
+</pre></div>
+
+<p><a id="X82FF317F7EFD52AF" name="X82FF317F7EFD52AF"></a></p>
+
+<h4>6.2 <span class="Heading">Freeness properties</span></h4>
+
+<p><a id="X81110BE983107955" name="X81110BE983107955"></a></p>
+
+<h5>6.2-1 DerModIsFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DerModIsFree</code>( <var class="Arg">D</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines, if <var class="Arg">D</var> is a free module over <code class="code">DerModPRing(D)</code>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A); DerModIsFree(D);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">D:=DerModule(A); DerModIsFree(D);</span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[0,1,1],[1,1,1]]); HArrIsSimplicial(A);</span>
-&lt;HyperplaneArrangement: 6 hyperplanes in 3-space&gt;
+</pre></div>
+
+<p><a id="X7C55194B8304FDAC" name="X7C55194B8304FDAC"></a></p>
+
+<h5>6.2-2 HArrIsFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines, if <var class="Arg">A</var> is free, i.e. if the derivation module is a free module over the coordinate ring of the ambient space.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFree(A);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 4 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFree(A);</span>
+false
+</pre></div>
+
+<p><a id="X7AEFB15E81DAF0DE" name="X7AEFB15E81DAF0DE"></a></p>
+
+<h5>6.2-3 HArrIsLocallyFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsLocallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determines, if <var class="Arg">A</var> is locally free, i.e. if all proper localizations are free.</p>
+
+
+<div class="example"><pre>
+</pre></div>
+
+<p><a id="X80F4D6247CAA1BDA" name="X80F4D6247CAA1BDA"></a></p>
+
+<h5>6.2-4 IsInductivelyFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsInductivelyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines whether the arrangement <var class="Arg">A</var> is <em>inductively free</em>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsInductivelyFree(A);</span>
 true
 </pre></div>
 
-<p><a id="X79A9BA6287B1A981" name="X79A9BA6287B1A981"></a></p>
+<p><a id="X841E21C3818B1703" name="X841E21C3818B1703"></a></p>
 
-<h4>6.4 <span class="Heading">Falk's weight test</span></h4>
+<h5>6.2-5 IsLocallyInductivelyFree</h5>
 
-<p>The following still needs to be tested further...</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyInductivelyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
 
-<p><a id="X7F2F674F8273D120" name="X7F2F674F8273D120"></a></p>
-
-<h5>6.4-1 OMBoundedCpx</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMBoundedCpx</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: list of list of sign vectors.</p>
-
-<p>Constructs the complex of bounded cells of the affine part of the oriented matroid <var class="Arg">OM</var> with respect to the element <var class="Arg">g</var>.</p>
+<p>Determines, if <var class="Arg">A</var> is locally free, i.e. if all proper localizations are inductively free.</p>
 
 
 <div class="example"><pre>
-
 </pre></div>
 
-<p><a id="X87CE42827934F11F" name="X87CE42827934F11F"></a></p>
+<p><a id="X85DAC6FC78DDED6D" name="X85DAC6FC78DDED6D"></a></p>
 
-<h5>6.4-2 OMSupportsFalkWeights</h5>
+<h5>6.2-6 IsDivisionallyFree</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; OMSupportsFalkWeights</code>( <var class="Arg">OM</var>, <var class="Arg">g</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: list or fail</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDivisionallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
 
-<p>Only for oriented matroids of rank 3. Determines, if <var class="Arg">OM</var> supports a system of weights as described by M. Falk in <a href="chapBib.html#biBFalk1995_Kpi1Arrs">[Fal95]</a>. This implies, that the Salvetti complex (see <code class="func">SalvettiComplex</code> (<a href="chap7.html#X7ED4D5138012EB6C"><span class="RefLink">7.1-1</span></a>)) is apsherical. The functionality of the <strong class="button">cddinterface</strong> package is used, to determine solutions of a system of linear inequalities.</p>
-
-<p>If the algorithm determines a suitable weight system for <var class="Arg">OM</var>, each list element consists of a weight, and a corner, i.e. a pair of a 2-cell and an adjacent vertex in the bounded complex, given as sign vectors.</p>
+<p>Determines whether the arrangement <var class="Arg">A</var> is <em>divisionally free</em>.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">O:=OrientedMatroid(</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">      [[1,1,0],[1,-1,0],[1,0,1],[1,0,-1],[0,1,1],[0,1,-1],[0,0,1]]</span>
-<span class="GAPprompt">&gt;</span> <span class="GAPinput">);</span>
-&lt;OrientedMatroid: 7 elements, rank 3&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMIsSupersolvable(O);</span>
-false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMSupportsFalkWeights(O,3);</span>
-fail
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">OMSupportsFalkWeights(O,1);</span>
-[ [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
-  [ 0, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
-  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
-  [ 0, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
-  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 1, 1, 1, 0, 0, 0 ] ] ], 
-  [ 1/2, [ [ 1, 1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
-  [ 0, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 0, 1, 0, 1 ] ] ], 
-  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
-  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, 1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ], 
-  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 0, 1, 0, 1, -1 ] ] ], 
-  [ 0, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, -1, 0, 0, 1, 1, 0 ] ] ], 
-  [ 1/2, [ [ 1, -1, 1, 1, 1, 1, -1 ], [ 1, 0, 1, 1, 1, 1, 0 ] ] ] ] 
-</pre></div>
-
-<p><a id="X81699B2D79E2F8CB" name="X81699B2D79E2F8CB"></a></p>
-
-<h4>6.5 <span class="Heading">Factored arrangements</span></h4>
-
-<p><a id="X87DEBDF185ACD970" name="X87DEBDF185ACD970"></a></p>
-
-<h5>6.5-1 HArrIsFactored</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsFactored</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list or fail</p>
-
-<p>Determines if <var class="Arg">A</var> is factored and if so returns some factorization.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,3);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDivisionallyFree(A);</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(3,3,3);</span>
 &lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFactored(A);</span>
-[ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,4);</span>
-&lt;HyperplaneArrangement: 12 hyperplanes in 4-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsFactored(A);</span>
-fail
-</pre></div>
-
-<p><a id="X7BA9ACDD7AB5FA7D" name="X7BA9ACDD7AB5FA7D"></a></p>
-
-<h5>6.5-2 HArrFactorizations</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrFactorizations</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: A list</p>
-
-<p>Computes a list of all factorizations of <var class="Arg">A</var> as partitions of [1..|<var class="Arg">A</var>|].</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,3);</span>
-&lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrFactorizations(A);</span>
-[ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
-  [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], 
-  [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], 
-  [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
-  [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
-</pre></div>
-
-<p><a id="X7F64D3DE8599E489" name="X7F64D3DE8599E489"></a></p>
-
-<h5>6.5-3 HArrIsInductivelyFactored</h5>
-
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrIsInductivelyFactored</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>Returns: A list or fail</p>
-
-<p>Determines if <var class="Arg">A</var> is inductively factored and if so returns some inductive factorization.</p>
-
-
-<div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,4);</span>
-&lt;HyperplaneArrangement: 16 hyperplanes in 4-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsInductivelyFactored(A);</span>
-[ [ [ 1 ], [ 2, 5, 6 ], [ 3, 7, 8, 11, 12 ], [ 4, 9, 10, 13, 14, 15, 16 ] ], true ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,2,4);</span>
-&lt;HyperplaneArrangement: 12 hyperplanes in 4-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrIsInductivelyFactored(A);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsDivisionallyFree(A);</span>
 false
 </pre></div>
 
-<p><a id="X7EB5E5DA797D0A61" name="X7EB5E5DA797D0A61"></a></p>
+<p><a id="X79A356807BB94334" name="X79A356807BB94334"></a></p>
 
-<h5>6.5-4 HArrInductiveFactorizations</h5>
+<h5>6.2-7 IsLocallyDivisionallyFree</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; HArrInductiveFactorizations</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>Returns: A list</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyDivisionallyFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
 
-<p>Computes a list of all inductive factorizations of <var class="Arg">A</var> as partitions of [1..|<var class="Arg">A</var>|].</p>
+<p>Determines, if <var class="Arg">A</var> is locally free, i.e. if all proper localizations are divisionallys free.</p>
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=AGpql(2,1,3);</span>
-&lt;HyperplaneArrangement: 9 hyperplanes in 3-space&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">HArrInductiveFactorizations(A);</span>
-[ [ [ 1 ], [ 2, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 1 ], [ 2, 4, 5, 8, 9 ], [ 3, 6, 7 ] ], 
-  [ [ 2 ], [ 1, 4, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 2 ], [ 1, 4, 5, 6, 7 ], [ 3, 8, 9 ] ], 
-  [ [ 3 ], [ 1, 6, 7 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 3 ], [ 1, 4, 5, 6, 7 ], [ 2, 8, 9 ] ], 
-  [ [ 4 ], [ 1, 2, 5 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 5 ], [ 1, 2, 4 ], [ 3, 6, 7, 8, 9 ] ], 
-  [ [ 6 ], [ 1, 3, 7 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 7 ], [ 1, 3, 6 ], [ 2, 4, 5, 8, 9 ] ], 
-  [ [ 8 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 9 ] ], 
-  [ [ 9 ], [ 1, 4, 5, 6, 7 ], [ 2, 3, 8 ] ] ]
+</pre></div>
+
+<p><a id="X7887420678D0B8B4" name="X7887420678D0B8B4"></a></p>
+
+<h5>6.2-8 IsMATFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsMATFree</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false.</p>
+
+<p>Determines whether the arrangement <var class="Arg">A</var> is <em>MAT-free</em>, i.e. whether it can be built up from the empty arrangement by successively adding, at each step, an independent set of hyperplanes as permitted by the <em>Multiple Addition Theorem</em> due to T. Abe, M. Barakat, M. Cuntz, T. Hoge and H. Terao <a href="chapBib.html#biBABCHT16_FreeIdealWeyl">[ttt+16]</a>.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsMATFree(A);</span>
+true
+</pre></div>
+
+<p><a id="X7B7DB39B7DD8EFD1" name="X7B7DB39B7DD8EFD1"></a></p>
+
+<h5>6.2-9 MATFreePart</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MATFreePart</code>( <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Returns: list, or fail</p>
+
+<p>Returns an ordered partition of <code class="code">Roots(A)</code> witnessing that <var class="Arg">A</var> is <em>MAT-free</em> (see <code class="func">IsMATFree</code> (<a href="chap6.html#X7887420678D0B8B4"><span class="RefLink">6.2-8</span></a>)), i.e. a list <span class="Math">[B_1,\ldots,B_k]</span> of pairwise disjoint independent sets of hyperplanes partitioning <code class="code">Roots(A)</code>, such that at each step the arrangement defined by <span class="Math">B_1\cup\cdots\cup B_i</span> arises from the one defined by <span class="Math">B_1\cup\cdots\cup B_{i-1}</span> by the Multiple Addition Theorem. Returns <code class="keyw">fail</code> if <var class="Arg">A</var> is not MAT-free.</p>
+
+
+<div class="example"><pre>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">A:=HyperplaneArrangement([[1,0,0],[0,1,0],[0,0,1],[1,1,0],[1,1,1]]);</span>
+&lt;HyperplaneArrangement: 5 hyperplanes in 3-space&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">MATFreePart(A);</span>
+[ [ [ 0, 1, 0 ], [ 1, 1, 0 ], [ 1, 1, 1 ] ], [ [ 1, 0, 0 ], [ 0, 0, 1 ] ] ]
 </pre></div>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap5.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap7.html">[Next Chapter]</a>&nbsp;  </div>
 
 
-<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chap5.html">5</a>  <a href="chap6.html">6</a>  <a href="chap7.html">7</a>  <a href="chap8.html">8</a>  <a href="chap9.html">9</a>  <a href="chap10.html">10</a>  <a href="chap11.html">11</a>  <a href="chap12.html">12</a>  <a href="chap13.html">13</a>  <a href="chap14.html">14</a>  <a href="chap15.html">15</a>  <a href="chap16.html">16</a>  <a href="chap17.html">17</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

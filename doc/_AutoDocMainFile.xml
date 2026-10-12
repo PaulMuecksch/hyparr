@@ -3,6 +3,7 @@
 <!-- This is an automatically generated file. -->
 <#Include SYSTEM "_Chapter_Introduction.xml">
 <#Include SYSTEM "_Chapter_Hyperplane_arrangements.xml">
+<#Include SYSTEM "_Chapter_Geometric_lattices_and_matroids.xml">
 <#Include SYSTEM "_Chapter_Special_arrangements.xml">
 <#Include SYSTEM "_Chapter_Oriented_Matroids.xml">
 <#Include SYSTEM "_Chapter_Free_arrangements.xml">
@@ -13,7 +14,7 @@
 <#Include SYSTEM "_Chapter_Varchenko-Gelfand_algebra.xml">
 <#Include SYSTEM "_Chapter_Visualization_of_real_3-arrangements.xml">
 <#Include SYSTEM "_Chapter_Realization_spaces_of_geometric_lattices.xml">
+<#Include SYSTEM "_Chapter_Greedy_search_for_arrangements.xml">
 <#Include SYSTEM "_Chapter_Orientations_of_matroids.xml">
 <#Include SYSTEM "_Chapter_The_Aomoto_complex.xml">
 <#Include SYSTEM "_Chapter_SAT-problems.xml">
-<#Include SYSTEM "_Chapter_Greedy_search_for_arrangements.xml">
