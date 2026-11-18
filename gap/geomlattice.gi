@@ -460,6 +460,14 @@ local m,g,t,i,j,gset;
 	return L!.charpoly;
 end);
 
+
+InstallMethod(LIsLinear,
+    [IsGeomLattice], L->L!.islinear);
+
+
+InstallMethod(LLinSpaces,
+    [IsGeomLattice and LIsLinear], L->L!.linspaces);
+
 InstallMethod(LIsIrreducible,
     [IsGeomLattice],
 function(L)

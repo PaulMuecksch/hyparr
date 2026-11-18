@@ -137,6 +137,7 @@ DeclareSynonym( "LForms" ,Roots);
 #!   [ [ 1, 2, 3 ] ] ]
 #! @EndExampleSession
 DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement );
+# DeclareAttribute("IntersectionLattice", IsHyperplaneArrangement and IsRank3 );
 
 #! @Arguments A
 #! @Returns a univariate polynomial with integral coefficients.
@@ -191,12 +192,15 @@ DeclareAttribute("MSetInvL", IsHyperplaneArrangement );
 #################################
 
 
+DeclareProperty("IsRank3", IsHyperplaneArrangement );
+
 #! @Arguments A
 #! @Returns true or false.
 #! @Description
 #! Determines, if the hyperplane arrangement is defined over the reals, i.e.,
 #! if the entries of the defining linear forms are real.
 DeclareProperty("IsReal", IsHyperplaneArrangement );
+
 
 
 #! @Arguments A

@@ -116,6 +116,14 @@ function(OM)
     return LIsSupersolvable(OMGeomLattice(OM));
 end);
 
+InstallMethod(HArrSimplDefect,
+    [IsHyperplaneArrangement],
+function(A)
+local l,t;
+	l:=Dimension(A);
+	t:=X(Rationals,"t");
+    return l*Value(CharPoly(A),[t],[-1]) +2*Sum(List([1..Length(Roots(A))],y->Value(CharPoly(HArrRestriction(A,y)),[t],[-1])));
+end);
 
 InstallMethod(HArrIsSimplicial,
     [IsHyperplaneArrangement],

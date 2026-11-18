@@ -127,6 +127,11 @@ InstallMethod(IsReal,
     A -> not(ForAny(Roots(A),r->ForAny(r,x->x<>cj(x)))) );
 
 
+InstallMethod(IsRank3,
+    [IsHyperplaneArrangement],
+    A -> Rank(Roots(A))=3 and Dimension(A)=3);
+
+
 
 #####################################################################
 # HypArr_AddHToL(R, Lo, Hn)
@@ -151,9 +156,10 @@ InstallMethod(IsReal,
 #####################################################################
 
 InstallGlobalFunction(HypArr_AddHToL,
-function(R,Lo,Hn)
+# function(R,Lo,Hn)
+function(R,Lo,LinSpaces,Hn)
 
-    local Ln, m, k, i, n, r;
+    local lspaces,Ln, m, ms, k, i, n, r;
 
     # ------------------------------------------------------------
     # If the new hyperplane Hn is linearly dependent with an
@@ -161,7 +167,7 @@ function(R,Lo,Hn)
     # we do not change the lattice.
     # ------------------------------------------------------------
     if ForAny(R, x -> Rank([x,Hn]) = 1) then
-        return Lo;
+        return rec(lattice:=Lo,spaces := LinSpaces);
     fi;
 
     # ------------------------------------------------------------
@@ -169,7 +175,9 @@ function(R,Lo,Hn)
     # The lattice consists only of the hyperplane itself.
     # ------------------------------------------------------------
     if Lo=[] then
-        return [[[1]]];
+        AddDictionary(LinSpaces,[1],NullspaceMat(TransposedMat([Hn])));
+        return rec(lattice:=[[[1]]], spaces := LinSpaces);
+        # return [[[1]]];
     fi;
 
     # Make a copy of the lattice that we will modify
@@ -191,6 +199,8 @@ function(R,Lo,Hn)
             # a particular intersection
             m := ShallowCopy(Lo[k][i]);
 
+            ms := LookupDictionary(LinSpaces,m);
+
             # ----------------------------------------------------
             # Check if the intersection defined by m is already
             # contained in Hn.
@@ -200,9 +210,9 @@ function(R,Lo,Hn)
             # the new hyperplane index.
             # ----------------------------------------------------
             if Rank(R{m}) = Rank(Concatenation(R{m},[Hn])) then
-
+            # if ms*Hn = List([1..r-k],x->0) then
                 Add(Ln[k][i],n+1);
-
+                AddDictionary(LinSpaces,Ln[k][i],ms);
             else
 
                 # ------------------------------------------------
@@ -214,8 +224,13 @@ function(R,Lo,Hn)
                     # Check whether such an element already exists
                     if not( true in List(Lo[k+1],
                         x->IsSubset(x,m) and
+                        # LookupDictionary(LinSpace,x)*Hn = List([1..r-k-1],x->0)
                         Rank(R{x}) = Rank(Concatenation(R{x},[Hn])) ) ) then
-
+                        ms := NullspaceMat(TransposedMat(Concatenation(R{m},[Hn])));
+                        if ms = [] then
+                            ms := [0*Hn];
+                        fi; 
+                        AddDictionary(LinSpaces,Concatenation(m,[n+1]),ms);
                         Add(Ln[k+1],Concatenation(m,[n+1]));
                     fi;
 
@@ -223,6 +238,11 @@ function(R,Lo,Hn)
 
                     # If we are at the top level, create a new level
                     Add(Ln,[Concatenation(m,[n+1])]);
+                    ms := NullspaceMat(TransposedMat(Concatenation(R{m},[Hn])));
+                    if ms = [] then
+                        ms := [0*Hn];
+                    fi;
+                    AddDictionary(LinSpaces,Concatenation(m,[n+1]),ms);
 
                 fi;
             fi;
@@ -233,8 +253,9 @@ function(R,Lo,Hn)
     # Add the new hyperplane itself as a rank-1 element
     # ------------------------------------------------------------
     Add(Ln[1],[n+1]);
+    AddDictionary(LinSpaces,[n+1],NullspaceMat(TransposedMat([Hn])));
 
-    return Ln;
+    return rec(lattice:=Ln,spaces := LinSpaces);
 end);
 
 
@@ -243,7 +264,7 @@ end);
 InstallMethod(IntersectionLattice,
     [IsHyperplaneArrangement],
 function(A)
-    local R, Rt, r, Ls, type, L;
+    local R, Rt, r, Lrec, Ls, type, L, LSpaces;
 
     if IsBound(A!.lattice) then
         return A!.lattice;
@@ -254,6 +275,7 @@ function(A)
 
     # Ls = current intersection lattice
     Ls := [];
+    LSpaces := NewDictionary([],true);
 
     # Rt = hyperplanes already processed
     Rt := [];
@@ -262,7 +284,10 @@ function(A)
     # Add hyperplanes one by one and update the lattice
     # ------------------------------------------------------------
     for r in R do
-        Ls := HypArr_AddHToL(Rt, Ls, r);
+        # Ls := HypArr_AddHToL(Rt, Ls, LSpaces, r);
+        Lrec := HypArr_AddHToL(Rt, Ls,LSpaces, r);
+        Ls := Lrec.lattice;
+        LSpaces := Lrec.spaces;
         Add(Rt, r);
     od;
 
@@ -273,7 +298,9 @@ function(A)
         rec(
             grGroundSet := Ls,
 			rank := Length(Ls),
-			atoms := Concatenation(Ls[1])
+			atoms := Concatenation(Ls[1]),
+            islinear := true,
+            linspaces := LSpaces
         )
     );
 
@@ -470,7 +497,7 @@ end);
 InstallMethod( HArrAddition,
 	[IsHyperplaneArrangement, IsList],
 function(A,h)
-local AA,Lo,Ln,L,type,Rt, CharPolyAA;
+local LAA,AA,Lo,Ln, Lrec,L,type,Rt, CharPolyAA,LSpaces;
     if Length(h)<>Dimension(A) or ForAny(h,x->not(x in HArrDefField(A))) then
         Print("New hyperplane ",h," is not in the ambient space!\n");
         return fail;
@@ -485,15 +512,21 @@ local AA,Lo,Ln,L,type,Rt, CharPolyAA;
     AA := Arr(Rt);
 
     if Tester(IntersectionLattice)(A) then
-        Lo:=LGroundSet(IntersectionLattice(A));
-        Ln := HypArr_AddHToL(Roots(A), Lo, h);
+        LAA:=IntersectionLattice(A); 
+        Lo:=LGroundSet(LAA);
+        LSpaces := ShallowCopy(LLinSpaces(LAA));
+        Lrec := HypArr_AddHToL(Roots(A), Lo, LSpaces, h);
+        Ln := Lrec.lattice;
+        LSpaces := Lrec.spaces;
         type := NewType(GeomLatticeFamily,
                     IsGeomLatticeRep);
         L:= Objectify(type,
             rec(
                 grGroundSet := Ln,
                 rank := Length(Ln),
-                atoms := Concatenation(Ln[1])
+                atoms := Concatenation(Ln[1]),
+                islinear := true,
+                linspaces := LSpaces
             )
         );
         SetIntersectionLattice(AA,L);
@@ -626,7 +659,8 @@ local L,Cs,NewHs;
         return fail;
     fi;
     
-    NewHs:= List(Cs, c-> NullspaceMat( TransposedMat(Concatenation(List(c,y->NullspaceMat(TransposedMat(Roots(A){y}))))))[1] );
+    # NewHs:= List(Cs, c-> NullspaceMat( TransposedMat(Concatenation(List(c,y->NullspaceMat(TransposedMat(Roots(A){y}))))))[1] );
+    NewHs:= List(Cs, c-> NullspaceMat( TransposedMat(Concatenation(List(c,y->LookupDictionary(LLinSpaces(L),y) ))))[1] );
     return NewHs;
 end);
 

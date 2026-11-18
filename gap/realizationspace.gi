@@ -568,6 +568,58 @@ local type, ml, fI, eR,sI,rI, rkL, rkFkt, Bs, DepSs,
     );
 end);
 
+
+
+InstallMethod(LFindCFReal,
+[IsGeomLattice],
+function(L)
+local i,S,nvs,RS,gens,var,K,vs,As,kcf, NormalizeVector;
+
+    NormalizeVector := function(v)
+    local vi, i;
+        if v=List(v,x->0) then
+            return v;
+        fi;
+        for vi in v do
+            if vi<>0 then
+                return 1/vi*v;
+            fi;
+        od;
+    end;
+
+    As := [];;
+    i:=0;
+    S:=LAtoms(L);
+    nvs:=10;
+    while i<30 or nvs>1 do
+        S:=LFindGenSet(L);;
+        nvs:=Length(IndeterminatesOfPolynomialRing(LGenSetIndeterminateMat(L,S,Rationals).PRing));
+        i:=i+1;
+    od;
+    if nvs=1 then
+        RS:=LRealizationSpace(L,0,S); 
+        gens := GeneratorsOfIdeal(RSIdealMinors(RS)); 
+        if gens <> [Zero(RSPRing(RS))] then
+            var := IndeterminateOfUnivariateRationalFunction(gens[1]); 
+            kcf:=0;
+            vs:=[];
+            repeat
+                kcf:=kcf+1;
+                vs := RootsOfPolynomial(CF(kcf),gens[1]);
+            until Length(vs)=Degree(gens[1]) or kcf>50;
+            # for p in vs do
+            #     Add(As,RSEvalPoint(RS)([p]));
+            # od;;
+            return List(vs,p->Arr(List(Roots(RSEvalPoint(RS)([p])),v->NormalizeVector(v))));
+        else
+            return [Arr(List(Roots(RSEvalPoint(RS)([1])),v->NormalizeVector(v)))]; 
+        fi;
+    else
+        return [RSCoeffMat(RS),gens];
+    fi;
+    return fail;
+end);
+
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
 ##  the Free Software Foundation, either version 3 of the License, or

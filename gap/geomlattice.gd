@@ -19,7 +19,7 @@ DeclareCategory("IsGeomLattice", IsComponentObjectRep and IsAttributeStoringRep 
 DeclareRepresentation(
     "IsGeomLatticeRep",
     IsGeomLattice,
-    ["grGroundSet", "rank", "kFlats", "atoms", "charpoly", "moebius"]
+    ["grGroundSet", "rank", "kFlats", "atoms", "charpoly", "moebius", "islinear", "linspaces"]
 );
 
 
@@ -68,7 +68,7 @@ DeclareOperation("GeomLattice", [ IsList, IsString ]);
 #! @Arguments L
 #! @Returns list of lists
 #! @Description
-#! Returns the ground set of the geometric lattice <A>L</A>.
+#! Returns the ground set, i.e. the flats of the geometric lattice <A>L</A> as subsets of <C>LAtoms(L)</C>.
 DeclareAttribute("LGroundSet", IsGeomLattice);
 
 #! @Arguments L
@@ -149,12 +149,25 @@ DeclareAttribute("LBases", IsGeomLattice);
 #! @EndExampleSession
 DeclareAttribute("LMSetInv", IsGeomLattice );
 
+#! @Arguments L
+#! @Returns true or false.
+#! @Description
+#! Determines, if L is linear, i.e. is the intersection lattice of a hyperplane arrangement over some field.
+DeclareProperty("LIsLinear", IsGeomLattice );
+
+#! @Arguments L
+#! @Returns list of lists
+#! @Description
+#! Returns the subspaces given by a some bases corresponding to the flats of <A>L</A>.
+DeclareAttribute("LLinSpaces", IsGeomLattice and LIsLinear);
+
 
 #################################
 ##
 #! @Section Properties of geometric lattices
 ##
 #################################
+
 
 
 

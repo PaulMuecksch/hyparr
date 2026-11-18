@@ -178,6 +178,7 @@ DeclareGlobalFunction("HArr_SpaceSFx");
 ##
 #################################
 
+DeclareOperation("HArrSimplDefect",[IsHyperplaneArrangement]);
 
 #! @Arguments A
 #! @Returns true or false.

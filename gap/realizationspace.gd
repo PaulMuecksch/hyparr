@@ -163,6 +163,8 @@ DeclareAttribute("RSNonMinors",IsRealizationSpaceOfGeomLattice);
 DeclareAttribute("RSEvalPoint",IsRealizationSpaceOfGeomLattice);
 
 
+
+
 ###############################
 ##
 #! @Section Properties
@@ -185,6 +187,14 @@ DeclareOperation("LSubsetGeneratedByS",[IsGeomLattice,IsList]);
 
 #! @Arguments L,S
 DeclareOperation("LIsGenSet",[IsGeomLattice,IsList]);
+
+#! @Arguments L
+#! @Returns A list of realization over some cyclotomic field
+#! @Description
+#!  Computes realization the geometric lattice <A>L</A> over some cyclotomic field.
+#! @BeginExampleSession
+#! @EndExampleSession
+DeclareOperation("LFindCFReal",[IsGeomLattice]);
 
 DeclareOperation("LDependentSubsets", [IsGeomLattice, IsInt]);
 

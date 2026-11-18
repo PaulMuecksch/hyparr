@@ -134,6 +134,7 @@ local A,s,ip,Hind,disthv,DrawOptions,
 				return fail;
 			fi;
 		elif Length(arg)=2 then
+			A:=arg[1];
 			if IsRecord(arg[2]) then
 				DrawOptions:=arg[2];
 				if IsBound(DrawOptions.scale) then
